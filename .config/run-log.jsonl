@@ -1,0 +1,1 @@
+{"date":"2026-05-12","issue":1,"kind":"dry-run","sources_attempted":15,"sources_succeeded":11,"stories_in_issue":14,"hero_image":"https://upload.wikimedia.org/wikipedia/commons/b/bf/Glasswinged_butterfly_%28Greta_oto%29.jpg","errors":["openai.com/news returned 403","hn.algolia.com client-side render returned header-only","simonwillison.net/atom.xml returned 404"]}

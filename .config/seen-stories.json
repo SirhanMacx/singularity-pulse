@@ -1,5 +1,20 @@
 {
   "schema_version": 1,
   "window_days": 14,
-  "stories": []
+  "stories": [
+    {"date": "2026-05-12", "url": "https://www.anthropic.com/glasswing", "headline": "Project Glasswing"},
+    {"date": "2026-05-12", "url": "https://red.anthropic.com/2026/mythos-preview/", "headline": "Claude Mythos Preview"},
+    {"date": "2026-05-12", "url": "https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html", "headline": "Schneier on Mythos Preview"},
+    {"date": "2026-05-12", "url": "https://www.theringer.com/2026/05/06/tech/claude-mythos-anthropic-project-glasswing-cybersecurity-threat-ai", "headline": "Could Claude Mythos destroy the internet?"},
+    {"date": "2026-05-12", "url": "https://deepmind.google/discover/blog/", "headline": "AlphaEvolve scaling"},
+    {"date": "2026-05-12", "url": "https://www.anthropic.com/news", "headline": "Anthropic-SpaceX compute deal"},
+    {"date": "2026-05-12", "url": "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html", "headline": "CAISI pre-launch testing agreements"},
+    {"date": "2026-05-12", "url": "https://github.com/cactus-compute/needle", "headline": "Needle 26M distilled tool-calling"},
+    {"date": "2026-05-12", "url": "https://arxiv.org/abs/2605.10912", "headline": "WildClawBench"},
+    {"date": "2026-05-12", "url": "https://arxiv.org/abs/2605.10851", "headline": "Generalized Turing Test"},
+    {"date": "2026-05-12", "url": "https://arxiv.org/abs/2605.10828", "headline": "First Drop of Ink"},
+    {"date": "2026-05-12", "url": "https://neuralink.com/updates/", "headline": "Neuralink high-volume production"},
+    {"date": "2026-05-12", "url": "https://synchron.com/news", "headline": "Synchron 50+ patients"},
+    {"date": "2026-05-12", "url": "https://jack-clark.net/", "headline": "Import AI #455 — no-human AI R&D by 2028"}
+  ]
 }

@@ -1,27 +1,58 @@
 {
   "schema_version": 1,
-  "last_updated": null,
-  "issue_count": 0,
+  "last_updated": "2026-05-12T23:45:00Z",
+  "issue_count": 1,
   "compute": {
     "largest_announced_training_run_flops": null,
-    "largest_announced_training_run_model": null,
-    "largest_announced_training_run_date": null
+    "largest_announced_training_run_model": "Claude Mythos Preview (Anthropic, undisclosed)",
+    "largest_announced_training_run_date": "2026-04-07",
+    "notable_compute_deals": [
+      {"date": "2026-05-06", "deal": "Anthropic <- SpaceX compute partnership"}
+    ]
   },
   "benchmarks": {
     "MMLU": { "sota": null, "model": null, "date": null },
-    "GPQA-Diamond": { "sota": null, "model": null, "date": null },
-    "ARC-AGI": { "sota": null, "model": null, "date": null },
-    "SWE-bench-Verified": { "sota": null, "model": null, "date": null },
+    "GPQA-Diamond": { "sota": 94.1, "model": "Gemini 3.1 Pro Preview", "date": "2026-05-11" },
+    "ARC-AGI-2": { "sota": 52.9, "model": "GPT-5.2 Thinking", "date": "2026-05" },
+    "SWE-bench-Verified": { "sota": 80.9, "model": "Claude Opus 4.5", "date": "2026-05" },
+    "SWE-bench-Pro": { "sota": 64.3, "model": "Claude Opus 4.7", "date": "2026-05" },
+    "WildClawBench": { "sota": 62.2, "model": "Claude Opus 4.7 (OpenClaw)", "date": "2026-05-11" },
     "METR-autonomy-horizon-50pct-minutes": { "sota": null, "model": null, "date": null },
     "FrontierMath": { "sota": null, "model": null, "date": null },
     "AIME-2025": { "sota": null, "model": null, "date": null }
   },
-  "releases_last_30d": [],
+  "releases_last_30d": [
+    {"date": "2026-04-07", "model": "Claude Mythos Preview", "lab": "Anthropic", "notes": "Limited release under Project Glasswing"},
+    {"date": "2026-04", "model": "GPT-5.5", "lab": "OpenAI", "notes": "Cleared 32-step cyber-attack range"},
+    {"date": "2026-05", "model": "Gemini 3.1 Pro Preview", "lab": "Google DeepMind", "notes": "GPQA SOTA 94.1%"},
+    {"date": "2026-05", "model": "GLM-5", "lab": "Z.AI", "notes": "SWE-bench Verified 77.8%"},
+    {"date": "2026-04", "model": "Gemma 4", "lab": "Google DeepMind", "notes": "Open-weight, byte-for-byte capability claim"}
+  ],
   "arxiv_volume": {
     "cs_AI_yesterday": null,
     "cs_LG_yesterday": null,
     "cs_CL_yesterday": null,
-    "rolling_7d_avg": null
+    "rolling_7d_avg": null,
+    "sample_pulled": 20
   },
-  "history": []
+  "cyber_offense_milestones": [
+    {"date": "2026-04", "milestone": "Mythos Preview clears 32-step cyber-attack range"},
+    {"date": "2026-04", "milestone": "GPT-5.5 clears 32-step cyber-attack range (3 weeks after Mythos)"}
+  ],
+  "industry_moves": [
+    {"date": "2026-04-07", "move": "Project Glasswing launched with 12 partners (AWS/Apple/Broadcom/Cisco/CrowdStrike/Google/JPMorgan/Linux Foundation/Microsoft/NVIDIA/Palo Alto/Anthropic)"},
+    {"date": "2026-05-04", "move": "Anthropic + Blackstone + Hellman&Friedman + Goldman Sachs enterprise AI services JV"},
+    {"date": "2026-05-05", "move": "US Center for AI Standards & Innovation (CAISI) agreements with Microsoft, Google, xAI for pre-launch model testing"}
+  ],
+  "history": [
+    {
+      "date": "2026-05-12",
+      "issue": 1,
+      "top_signal": "Project Glasswing — Mythos Preview + cybersecurity asymmetry flip",
+      "stories_count": 6,
+      "papers_count": 3,
+      "voices_count": 3,
+      "adjacent_count": 2
+    }
+  ]
 }
