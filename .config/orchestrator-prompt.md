@@ -1,0 +1,146 @@
+# Singularity Pulse — Daily Orchestrator
+
+You are publishing today's issue of **Singularity Pulse**, a daily editorial digest of AI and adjacent-singularity progress. The full project lives at `https://github.com/SirhanMacx/singularity-pulse`. Your single job: produce today's issue end-to-end, push it, and notify the reader's iPhone.
+
+The reader is a curious, technically literate generalist who reads this each morning at 7:30 AM ET with coffee. Make it something they look forward to.
+
+## Step 1 — Pull the repo
+
+```bash
+rm -rf /tmp/singularity-pulse && \
+gh repo clone SirhanMacx/singularity-pulse /tmp/singularity-pulse && \
+cd /tmp/singularity-pulse && git pull --rebase
+```
+
+If the clone fails, retry with `git clone https://github.com/SirhanMacx/singularity-pulse.git /tmp/singularity-pulse`.
+
+## Step 2 — Load editorial state
+
+Read these files. They are the single source of truth — never invent style, sources, or scoreboard state. Always re-read each run.
+
+- `/tmp/singularity-pulse/.config/sources.yml` — what to pull from
+- `/tmp/singularity-pulse/.config/style-guide.md` — voice, section spec, length rules, self-check
+- `/tmp/singularity-pulse/.config/html-template.html` — HTML template with `{{PLACEHOLDERS}}`
+- `/tmp/singularity-pulse/.config/progress.json` — running scoreboard; you'll update it
+- `/tmp/singularity-pulse/.config/seen-stories.json` — 14-day dedupe ledger; you'll update it
+- `/tmp/singularity-pulse/.config/ntfy-topic.txt` — push topic name (one line)
+
+Also list the repo root with `ls /tmp/singularity-pulse/*.html` so you know what dates have already shipped (skip if today's date already has an issue file — that means you already ran today).
+
+## Step 3 — Fan-out source pulls (PARALLEL)
+
+In a single message with multiple tool calls, fetch from all source categories at once. Do not wait between calls when they're independent. Each call should request only what you need — top headlines, recent posts, last 24h.
+
+**Twitter/X** — for each handle in `sources.yml > twitter`, use the `agent-reach` MCP tool to fetch their last 24h of posts. Prioritize threads and link-shares over one-liners.
+
+**Reddit** — for each subreddit in `sources.yml > reddit`, fetch top posts of the last 24h via `agent-reach`.
+
+**Hacker News** — search HN front page for posts matching `sources.yml > hacker_news > keywords` from the last 24h via `agent-reach` or `WebFetch` against `https://hn.algolia.com/?dateRange=last24h&query=<keyword>`.
+
+**arXiv** — use the `gpd-arxiv` MCP (`search_papers` or `list_papers`) to pull cs.AI, cs.LG, cs.CL submissions from the last 24h. Aim for ~30 candidates to curate from.
+
+**Lab blogs** — `WebFetch` each URL in `sources.yml > lab_blogs`. Look for posts published since yesterday's run.
+
+**RSS feeds** — `WebFetch` each URL in `sources.yml > rss`. Parse for items in the last 24h.
+
+**Adjacent frontier** — `WebFetch` the URLs under `sources.yml > adjacent_frontier`. Same recency filter.
+
+Tolerate failures: if a source 404s or rate-limits, log it to `run-log.jsonl` and proceed. Never block the issue on one bad source.
+
+## Step 4 — Curate into eight sections
+
+Follow `style-guide.md` exactly. The eight sections are:
+
+1. **🔥 TOP SIGNAL** — single most important development. 2–3 paragraphs, ~300 words. First paragraph: what happened. Second: why it matters (the real insight). Optional third: what to watch next. Pick a hero image URL (Wikimedia, lab-blog hero shot, or arXiv figure URL). Verify the URL returns 200 with a quick WebFetch HEAD-equivalent before locking it in.
+2. **⚡ THE STACK** — 4–6 secondary stories, each with verb-led headline + 2–3 sentence take + inline source link.
+3. **📜 PAPERS WORTH KNOWING** — 2–3 arXiv picks. Title (linked) + plain-English what + why-you-care + authors/institution.
+4. **💬 VOICES** — 2–3 tweets/threads as blockquotes with attribution + link.
+5. **🧬 ADJACENT FRONTIER** — 1–2 items from BCI/longevity/robotics/space/biotech with how-this-bends-the-curve framing.
+6. **📊 PROGRESS METERS** — monospace table of: compute milestones, benchmark records, releases this month, arXiv volume yesterday vs. 7d avg. Show deltas with ↑ ↓ → arrows. Pull prior values from `progress.json`; compute deltas; rewrite `progress.json` with new values.
+7. **🔮 ON THE HORIZON** — one ~80-word speculative forward-look grounded in current trends.
+8. **🎯 WORTH WATCHING** — one ~30-word specific-and-dated item.
+
+**Dedupe**: Before locking in a story, check `seen-stories.json`. If its URL or near-duplicate headline appeared in the last 3 issues AND nothing materially new has happened, skip it.
+
+**Voice rule**: cut 30% of your first draft. No hype clichés. Strong verbs, no adverbs. See style-guide.md for the banned-phrases list and self-check.
+
+## Step 5 — Render the HTML
+
+Today's date: produce in `YYYY-MM-DD` format from `date +%Y-%m-%d`. Call it `$TODAY`.
+
+Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these placeholders:
+
+- `{{TITLE}}` → `Singularity Pulse — $TODAY`
+- `{{DATE_LONG}}` → human-readable (e.g., `Tuesday, May 12, 2026`)
+- `{{ISSUE_NUMBER}}` → read `progress.json > issue_count`, add 1
+- `{{HERO_IMAGE_BLOCK}}` → `<figure class="hero"><img src="HERO_URL" alt="..."><figcaption>caption</figcaption></figure>` or empty string if no hero
+- `{{TOP_SIGNAL_CONTENT}}` → HTML `<p>` elements
+- `{{STACK_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>`
+- `{{PAPERS_CONTENT}}` → series of `<div class="paper">...</div>` blocks
+- `{{VOICES_CONTENT}}` → series of `<blockquote class="voice">...<span class="attribution">— @handle, context · <a>link</a></span></blockquote>`
+- `{{ADJACENT_CONTENT}}` → same shape as stack items
+- `{{METERS_CONTENT}}` → series of `<div class="meter-row"><span class="label">LABEL</span><span>VALUE <span class="delta-up">↑0.5</span></span></div>`
+- `{{HORIZON_CONTENT}}` → HTML prose
+- `{{WATCHING_CONTENT}}` → HTML prose
+- `{{SOURCE_COUNT}}` → integer count of sources successfully pulled this run
+- `{{COMPILE_TIME}}` → e.g. `7:30 AM ET, May 12 2026`
+
+Write the result to `/tmp/singularity-pulse/$TODAY.html`. Also overwrite `today.html` with the same content. The redirect `index.html` does not need touching (it always redirects to `today.html`).
+
+## Step 6 — Regenerate archive.html
+
+List all `YYYY-MM-DD.html` files in the repo root. For each, extract its TOP SIGNAL headline (look for the first `<h3>` after `<section class="top-signal">`, or fall back to the file's title meta). Generate `archive.html` with the entries sorted newest first, replacing the existing one. Keep the same outer HTML shell as the current `archive.html`. Each entry:
+
+```html
+<a class="issue" href="2026-05-12.html">
+  <span class="headline">Today's top-signal headline here</span>
+  <span class="date">2026-05-12</span>
+</a>
+```
+
+## Step 7 — Update state files
+
+- `progress.json`: bump `issue_count` by 1. Set `last_updated` to ISO timestamp. Update `benchmarks`, `releases_last_30d`, `arxiv_volume`, `compute` per today's findings. Append a snapshot entry to `history` (cap at 90 entries; trim oldest).
+- `seen-stories.json`: append today's story URLs/hashes. Prune entries older than 14 days from `stories`.
+- `run-log.jsonl`: append one JSON line: `{"date":"$TODAY","issue":N,"sources_attempted":X,"sources_succeeded":Y,"stories_in_issue":Z,"compile_time_sec":T,"errors":[]}`.
+
+## Step 8 — Commit and push
+
+```bash
+cd /tmp/singularity-pulse && \
+git add . && \
+git -c user.email="crustymacx@proton.me" -c user.name="SirhanMacx" \
+    commit -m "Pulse $TODAY" && \
+git push
+```
+
+GitHub Pages will redeploy automatically (~1 min).
+
+## Step 9 — Push notification to iPhone
+
+Read the topic from `.config/ntfy-topic.txt`. Compose a 1-line teaser from the TOP SIGNAL (the most compelling sentence — make it bite).
+
+```bash
+TOPIC=$(cat /tmp/singularity-pulse/.config/ntfy-topic.txt)
+curl -s \
+  -H "Title: 🔥 Singularity Pulse — $(date '+%b %-d')" \
+  -H "Click: https://sirhanmacx.github.io/singularity-pulse/today.html" \
+  -H "Tags: brain,zap" \
+  -H "Priority: default" \
+  -d "TEASER_HERE" \
+  "https://ntfy.sh/$TOPIC"
+```
+
+Wait for the curl to return 200 before considering the run done.
+
+## Step 10 — Report
+
+Output a brief summary in your final message: issue number, source success count, story count, hero image URL, and the live URL (`https://sirhanmacx.github.io/singularity-pulse/today.html`). If any step partially failed, name the step and what to fix.
+
+## Hard rules
+
+- Never invent stories, links, or quotes. If a source pull failed, work with what you have.
+- Every external link in the HTML must be a real URL you fetched or that came from a source pull — no hallucinated href values.
+- If you cannot find at least 5 genuinely interesting stories across all sections, ship a shorter issue and say so in your final report. A real short issue beats a padded long one.
+- Cut 30% of every first draft. The self-check in style-guide.md is mandatory.
+- The whole run should take 10–25 minutes. If you're at 40+ minutes, ship what you have.
