@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<title>{{TITLE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #c2410c;
+    --rule: #e5e5e0;
+    --card: #ffffff;
+    --code-bg: #f4f1ec;
+    --quote-border: #c2410c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0a;
+      --fg: #f0f0ec;
+      --muted: #9a9a96;
+      --accent: #fb923c;
+      --rule: #2a2a28;
+      --card: #141413;
+      --code-bg: #1a1a18;
+      --quote-border: #fb923c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    font-size: 17px;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+  }
+  header.masthead {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  .nav-row a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+  }
+  .nav-row a:hover { color: var(--accent); border-color: var(--accent); }
+  .masthead .pulse-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 800;
+    font-size: 38px;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.05;
+  }
+  .masthead .date {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero {
+    margin: 0 -20px 28px;
+    position: relative;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hero figcaption {
+    font-size: 12px;
+    color: var(--muted);
+    font-style: italic;
+    padding: 8px 20px 0;
+  }
+  h2.section {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+    margin: 48px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2.section .emoji {
+    font-size: 30px;
+    line-height: 1;
+  }
+  h3.story {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 28px 0 8px;
+    line-height: 1.3;
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { opacity: 0.7; }
+  .top-signal p {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+  .top-signal p:first-of-type::first-letter {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 800;
+    font-size: 56px;
+    float: left;
+    line-height: 0.9;
+    padding: 6px 8px 0 0;
+    color: var(--accent);
+  }
+  .stack-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .stack-item:last-child { border-bottom: none; }
+  .stack-item h3 { margin: 0 0 6px; }
+  .stack-item p { margin: 0; color: var(--fg); }
+  .paper {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+  }
+  .paper .title {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 8px;
+    line-height: 1.35;
+  }
+  .paper .summary { margin: 0 0 8px; font-size: 15px; }
+  .paper .meta {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0;
+  }
+  blockquote.voice {
+    margin: 0 0 18px;
+    padding: 12px 18px;
+    border-left: 3px solid var(--quote-border);
+    background: var(--card);
+    font-size: 16px;
+    font-style: italic;
+  }
+  blockquote.voice .attribution {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .meters {
+    background: var(--code-bg);
+    padding: 20px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-x: auto;
+  }
+  .meters .meter-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .meters .label { color: var(--muted); }
+  .meters .delta-up { color: #16a34a; }
+  .meters .delta-down { color: #dc2626; }
+  .meters .delta-flat { color: var(--muted); }
+  .horizon {
+    font-size: 17px;
+    line-height: 1.65;
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+    font-style: italic;
+  }
+  .watching {
+    background: var(--card);
+    border: 1px dashed var(--rule);
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  footer.colophon {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .container { padding: 18px 16px 60px; }
+    .masthead .pulse-name { font-size: 30px; }
+    h2.section { font-size: 22px; margin-top: 36px; }
+    .top-signal p { font-size: 17px; }
+    .top-signal p:first-of-type::first-letter { font-size: 46px; }
+    .hero { margin: 0 -16px 24px; }
+    .hero figcaption { padding: 8px 16px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="masthead">
+  <div class="nav-row">
+    <a href="./archive.html">← archive</a>
+    <span>Issue #{{ISSUE_NUMBER}}</span>
+  </div>
+  <h1 class="pulse-name">Singularity Pulse</h1>
+  <div class="date">{{DATE_LONG}}</div>
+</header>
+
+{{HERO_IMAGE_BLOCK}}
+
+<section class="top-signal">
+<h2 class="section"><span class="emoji">🔥</span> TOP SIGNAL</h2>
+{{TOP_SIGNAL_CONTENT}}
+</section>
+
+<section class="stack">
+<h2 class="section"><span class="emoji">⚡</span> THE STACK</h2>
+{{STACK_CONTENT}}
+</section>
+
+<section class="papers">
+<h2 class="section"><span class="emoji">📜</span> PAPERS WORTH KNOWING</h2>
+{{PAPERS_CONTENT}}
+</section>
+
+<section class="voices">
+<h2 class="section"><span class="emoji">💬</span> VOICES</h2>
+{{VOICES_CONTENT}}
+</section>
+
+<section class="adjacent">
+<h2 class="section"><span class="emoji">🧬</span> ADJACENT FRONTIER</h2>
+{{ADJACENT_CONTENT}}
+</section>
+
+<section class="progress">
+<h2 class="section"><span class="emoji">📊</span> PROGRESS METERS</h2>
+<div class="meters">
+{{METERS_CONTENT}}
+</div>
+</section>
+
+<section class="horizon-wrap">
+<h2 class="section"><span class="emoji">🔮</span> ON THE HORIZON</h2>
+<div class="horizon">{{HORIZON_CONTENT}}</div>
+</section>
+
+<section class="watching-wrap">
+<h2 class="section"><span class="emoji">🎯</span> WORTH WATCHING</h2>
+<div class="watching">{{WATCHING_CONTENT}}</div>
+</section>
+
+<footer class="colophon">
+Compiled from {{SOURCE_COUNT}} sources at {{COMPILE_TIME}}. <br>
+<a href="./archive.html">Back catalog</a> · <a href="./">Today</a>
+</footer>
+
+</div>
+</body>
+</html>

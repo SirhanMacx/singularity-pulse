@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "last_updated": null,
+  "issue_count": 0,
+  "compute": {
+    "largest_announced_training_run_flops": null,
+    "largest_announced_training_run_model": null,
+    "largest_announced_training_run_date": null
+  },
+  "benchmarks": {
+    "MMLU": { "sota": null, "model": null, "date": null },
+    "GPQA-Diamond": { "sota": null, "model": null, "date": null },
+    "ARC-AGI": { "sota": null, "model": null, "date": null },
+    "SWE-bench-Verified": { "sota": null, "model": null, "date": null },
+    "METR-autonomy-horizon-50pct-minutes": { "sota": null, "model": null, "date": null },
+    "FrontierMath": { "sota": null, "model": null, "date": null },
+    "AIME-2025": { "sota": null, "model": null, "date": null }
+  },
+  "releases_last_30d": [],
+  "arxiv_volume": {
+    "cs_AI_yesterday": null,
+    "cs_LG_yesterday": null,
+    "cs_CL_yesterday": null,
+    "rolling_7d_avg": null
+  },
+  "history": []
+}

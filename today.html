@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Singularity Pulse — Awaiting First Issue</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #c2410c;
+    --rule: #e5e5e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0a;
+      --fg: #f0f0ec;
+      --muted: #9a9a96;
+      --accent: #fb923c;
+      --rule: #2a2a28;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+  .title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 800;
+    font-size: 42px;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+    line-height: 1.05;
+  }
+  .sub {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+  .pulse {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: pulse 2s ease-in-out infinite;
+    vertical-align: middle;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+  .card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-top: 32px;
+  }
+  .card h2 {
+    margin: 0 0 12px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 800;
+    font-size: 22px;
+  }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 20px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+  <p style="font-size:13px; color:var(--muted); margin:0 0 14px; text-transform:uppercase; letter-spacing:0.08em;"><span class="pulse"></span>SCHEDULED · 7:30 AM ET DAILY</p>
+  <h1 class="title">Singularity Pulse</h1>
+  <p class="sub">Daily editorial digest of AI and adjacent-singularity progress.</p>
+
+  <div class="card">
+    <h2>First issue lands tomorrow morning.</h2>
+    <p>The scheduled task fires at 7:30 AM ET. Your phone will ping via <code>ntfy.sh</code> with the headline and a tap-to-open link to that morning's digest.</p>
+    <p>Each issue covers:</p>
+    <ul>
+      <li><strong>🔥 Top Signal</strong> — the single most important development of the day</li>
+      <li><strong>⚡ The Stack</strong> — 4–6 punchy secondary stories</li>
+      <li><strong>📜 Papers Worth Knowing</strong> — 2–3 arXiv picks</li>
+      <li><strong>💬 Voices</strong> — must-read researcher takes</li>
+      <li><strong>🧬 Adjacent Frontier</strong> — BCI, longevity, robotics, space, biotech</li>
+      <li><strong>📊 Progress Meters</strong> — compute and benchmark scoreboard with deltas</li>
+      <li><strong>🔮 On the Horizon</strong> — one speculative forward-look</li>
+      <li><strong>🎯 Worth Watching</strong> — what's expected this week</li>
+    </ul>
+    <p>This URL — <a href="./">the root</a> — will always point to today's issue once it's running.</p>
+  </div>
+</div>
+</body>
+</html>

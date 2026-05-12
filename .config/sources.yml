@@ -1,0 +1,114 @@
+# Singularity Pulse — canonical source list
+# Edit any time. The orchestrator reads this fresh each run.
+
+twitter:
+  # Frontier-lab leadership
+  - sama              # Sam Altman (OpenAI CEO)
+  - demishassabis     # Demis Hassabis (DeepMind CEO)
+  - DarioAmodei       # Dario Amodei (Anthropic CEO)
+  - ylecun            # Yann LeCun (Meta Chief AI Scientist)
+  - gdb               # Greg Brockman (OpenAI President)
+  # Researchers worth reading
+  - karpathy          # Andrej Karpathy
+  - ilyasut           # Ilya Sutskever
+  - SebastienBubeck   # Sebastien Bubeck (Microsoft Research)
+  - jackclarkSF       # Jack Clark (Anthropic, Import AI)
+  - DrJimFan          # Jim Fan (NVIDIA, robotics + foundation models)
+  - jefrankle         # Jonathan Frankle (Databricks/MosaicML)
+  - aidan_mclau       # Aidan McLaughlin
+  - swyx              # Shawn Wang (Latent Space)
+  - simonw            # Simon Willison
+  # Curators/explainers
+  - AIExplainedYT     # AI Explained channel
+  - emollick          # Ethan Mollick (Wharton, applied AI)
+  - sundarpichai      # Sundar Pichai (Google)
+
+reddit:
+  - r/singularity
+  - r/MachineLearning
+  - r/LocalLLaMA
+  - r/agi
+  - r/OpenAI
+  - r/ArtificialIntelligence
+
+hacker_news:
+  # Filter front-page submissions matching any of:
+  keywords:
+    - "AI"
+    - "LLM"
+    - "AGI"
+    - "neural"
+    - "singularity"
+    - "transformer"
+    - "frontier model"
+    - "Anthropic"
+    - "OpenAI"
+    - "DeepMind"
+    - "inference"
+    - "alignment"
+
+arxiv:
+  categories:
+    - cs.AI
+    - cs.LG
+    - cs.CL
+  window_hours: 24
+  # Pick 2-3 with highest abstract-quality × novelty signal
+
+lab_blogs:
+  - https://www.anthropic.com/news
+  - https://openai.com/news/
+  - https://deepmind.google/discover/blog/
+  - https://ai.meta.com/blog/
+  - https://x.ai/news
+  - https://mistral.ai/news/
+  - https://www.cohere.com/research
+  - https://huggingface.co/blog
+
+rss:
+  - https://jack-clark.net/feed/         # Import AI
+  - https://simonwillison.net/atom.xml   # Simon Willison
+  - https://www.latent.space/feed        # Latent Space podcast notes
+  - https://www.alignmentforum.org/feed.xml  # Alignment Forum
+  - https://importai.substack.com/feed   # Jack Clark Substack mirror
+
+adjacent_frontier:
+  bci:
+    - https://neuralink.com/blog/
+    - https://www.synchron.com/post-content
+  robotics:
+    - https://bostondynamics.com/news/
+    - https://www.figure.ai/news
+  space:
+    - https://www.spacex.com/updates/
+    - https://blueorigin.com/news
+  longevity:
+    - https://altoslabs.com/news/
+    - https://retro.bio/news
+    - https://newlimit.com/news
+  biotech:
+    - https://www.isomorphiclabs.com/articles  # AlphaFold spinout
+
+# Editorial dedupe priorities (if a story appears in multiple sources, prefer):
+# 1. Primary lab blog post
+# 2. arXiv paper PDF
+# 3. Researcher tweet (for context/reaction)
+# 4. News aggregator (HN, Reddit) — last resort, for community signal only
+
+benchmarks_to_track:
+  # When a new score crosses any of these thresholds, lead with it.
+  - name: MMLU
+    current_sota_threshold: 92.0
+  - name: GPQA-Diamond
+    current_sota_threshold: 75.0
+  - name: ARC-AGI
+    current_sota_threshold: 85.0
+  - name: SWE-bench-Verified
+    current_sota_threshold: 80.0
+  - name: METR-autonomy-horizon-50pct
+    description: "Length of task an AI completes 50% as well as a human expert"
+    current_sota_minutes: 60
+  - name: FrontierMath
+    current_sota_threshold: 50.0
+  - name: AIME-2025
+    current_sota_threshold: 95.0
