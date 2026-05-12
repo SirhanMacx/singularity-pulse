@@ -23,7 +23,8 @@ Read these files. They are the single source of truth — never invent style, so
 - `/tmp/singularity-pulse/.config/html-template.html` — HTML template with `{{PLACEHOLDERS}}`
 - `/tmp/singularity-pulse/.config/progress.json` — running scoreboard; you'll update it
 - `/tmp/singularity-pulse/.config/seen-stories.json` — 14-day dedupe ledger; you'll update it
-- `/tmp/singularity-pulse/.config/ntfy-topic.txt` — push topic name (one line)
+
+The push notification topic name is embedded in your runtime SKILL.md (not in the public repo, for security). Use the value defined there.
 
 Also list the repo root with `ls /tmp/singularity-pulse/*.html` so you know what dates have already shipped (skip if today's date already has an issue file — that means you already ran today).
 
@@ -120,15 +121,16 @@ GitHub Pages will redeploy automatically (~1 min).
 
 Read the topic from `.config/ntfy-topic.txt`. Compose a 1-line teaser from the TOP SIGNAL (the most compelling sentence — make it bite).
 
+Use the ntfy topic value embedded in your runtime SKILL.md (variable `NTFY_TOPIC`). Then:
+
 ```bash
-TOPIC=$(cat /tmp/singularity-pulse/.config/ntfy-topic.txt)
 curl -s \
   -H "Title: 🔥 Singularity Pulse — $(date '+%b %-d')" \
   -H "Click: https://sirhanmacx.github.io/singularity-pulse/today.html" \
   -H "Tags: brain,zap" \
   -H "Priority: default" \
   -d "TEASER_HERE" \
-  "https://ntfy.sh/$TOPIC"
+  "https://ntfy.sh/$NTFY_TOPIC"
 ```
 
 Wait for the curl to return 200 before considering the run done.
