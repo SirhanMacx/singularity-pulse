@@ -10,6 +10,10 @@ Karpathy-meets-Stratechery. Direct, opinionated, technically literate, but reada
 
 ## Rules
 
+0. **HARD RECENCY RULE — last 24 hours, no exceptions.** Every news item, tweet, video, leak, rumor, and paper MUST have a publish date within the last 24 hours from your run time. If you cannot verify a date within 24h, the item gets cut. No "May 2026" vagueness, no "earlier this month," no cumulative-since-launch metrics passed off as news. The only acceptable exceptions: **PROGRESS METERS** (rolling state snapshot — current LMArena rank is "current" even if the score was set 2 days ago) and **BENCHMARK WARS table 1: LMArena top 10** (same — it's a now-state snapshot, not a story). Everything else: 24h or it's out.
+
+   Render a recency badge on every item: `<span class="ago">3h ago</span>` or `yesterday 8pm`. The reader must SEE freshness. If you can't put a badge on it, you can't ship it.
+
 1. **Cut 30% of the first draft.** Always.
 2. **Strong verbs, no adverbs.** "Shipped" beats "successfully released."
 3. **Numbers over adjectives.** "32k → 1M context" beats "much larger context window."
@@ -19,6 +23,22 @@ Karpathy-meets-Stratechery. Direct, opinionated, technically literate, but reada
 7. **Quote sparingly.** One per section max.
 8. **No "we" or "us."** Singular, observant voice.
 9. **One hero image per issue.** TOP SIGNAL gets it. Don't pad with stock visuals.
+
+## Recency enforcement (every item, every section)
+
+For each candidate item, verify the publish date BEFORE writing the take:
+
+- **arXiv papers** — `published` field in API response. Must be within 24h of run time.
+- **Lab blog posts** — date in URL or post header. Cut if older than 24h.
+- **News articles** — published date in metadata or article header. Verify it's the *original* publish, not the last-modified.
+- **Tweets** — open the status URL, confirm the timestamp. Tweets older than 24h DO NOT EMBED — find a fresher take from same researcher or skip.
+- **YouTube videos** — upload date must be within last 48h (channels don't post daily; 48h is the soft ceiling for "trending"). Older = skip.
+- **Leaks/rumors** — original sighting must be within 24h. If the rumor is older but resurfaced with new evidence today, cite the new evidence and date.
+- **Reddit/HN posts** — submission timestamp.
+
+**If today is genuinely slow** and you can't fill all 12 sections with fresh content: SHIP A SHORTER ISSUE. Drop empty sections explicitly with a 1-line "📭 Quiet day on X — nothing within 24h worth surfacing." Skip empty sections entirely is also fine. Padding with stale items is forbidden.
+
+**If a story is genuinely huge** and you reasonably expect the reader to want context the date-cut excludes (e.g., today's news is "Anthropic releases Mythos v2" and the reader hasn't heard of v1): you may include ONE contextual link out-of-window per issue, labeled `<span class="context">context</span>` and explicitly flagged in the prose. Use sparingly — once per issue, only when the new story is genuinely unparseable without it.
 
 ## Sections (in this order — 12 sections total, ~17-25 min total read)
 

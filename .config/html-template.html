@@ -173,6 +173,45 @@
   }
   .deeper a:hover { color: var(--accent); border-color: var(--accent); }
   .deeper a.done { color: var(--accent); border-bottom-style: solid; }
+  /* Recency badges — visible on every item */
+  .ago {
+    display: inline-block;
+    background: var(--code-bg);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+    letter-spacing: 0.02em;
+    vertical-align: 2px;
+    white-space: nowrap;
+  }
+  .ago.live { background: var(--accent); color: white; }
+  .ago.stale-warn { background: #fef3c7; color: #92400e; }
+  .context {
+    display: inline-block;
+    background: var(--code-bg);
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-left: 6px;
+    vertical-align: 2px;
+  }
+  .empty-section {
+    background: var(--code-bg);
+    padding: 16px 20px;
+    border-radius: 6px;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+  }
   @media (max-width: 600px) {
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }

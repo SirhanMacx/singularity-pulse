@@ -379,6 +379,10 @@
   .deeper a { color: var(--muted); border-bottom: 1px dotted var(--muted); cursor: pointer; }
   .deeper a:hover { color: var(--accent); border-color: var(--accent); }
   .deeper a.done { color: var(--accent); border-bottom-style: solid; }
+  .ago { display: inline-block; background: var(--code-bg); color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; margin-left: 8px; font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; letter-spacing: 0.02em; vertical-align: 2px; white-space: nowrap; }
+  .ago.live { background: var(--accent); color: white; }
+  .ago.stale-warn { background: #fef3c7; color: #92400e; }
+  .empty-section { background: var(--code-bg); padding: 16px 20px; border-radius: 6px; color: var(--muted); font-style: italic; text-align: center; margin: 0; }
   @media (max-width: 600px) {
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
@@ -426,11 +430,11 @@
 <section class="top-signal" id="top-signal">
 <h2 class="section"><span class="emoji">🔥</span> TOP SIGNAL</h2>
 
-<p>Anthropic <a href="https://www.anthropic.com/glasswing">launched Project Glasswing</a> last month, and the implications are still landing. The premise: their unreleased Claude Mythos Preview can now find software vulnerabilities at a level that surpasses all but the most skilled humans. Over a few weeks, Mythos identified <strong>thousands of zero-days</strong> across every major operating system and every major browser. It chained four independent bugs into a single exploit that broke both renderer and OS sandboxing. It built a remote-code-execution chain against FreeBSD's NFS server using a 20-gadget ROP payload distributed across packets. That is not a capability demo — that is a working super-hacker, and Anthropic isn't going to ship it.</p>
+<p>Thinking Machines Lab <a href="https://thinkingmachines.ai/blog">published "Interaction Models: A Scalable Approach to Human-AI Collaboration"</a> yesterday <span class="ago">yesterday</span> — Mira Murati's lab's first major research post in eight months. The site has been almost ghostly since last fall's "On-Policy Distillation" drop, which fed the parlour-game speculation that the company was either pre-product-launch or quietly imploding. Today's post says: neither. They're publishing again, and the framing is consequential.</p>
 
-<p>Why this matters: the offense-defense asymmetry in cybersecurity has been ugly for two decades, and it just got worse. Anthropic's response — a coalition launch with AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks — is an acknowledgment that "ship the model, hope for the best" is no longer a defensible posture for offensive-capable systems. The bet: lock Mythos-class capability behind a vetted defender consortium, give the good guys a 6–18 month head start. <a href="https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html">Bruce Schneier's read</a> is that this works if and only if the partners actually rebuild their SOCs around Mythos output streams. Most haven't started.</p>
+<p>Why this matters: the post stakes out a research direction — formalizing the channel between human and model as a first-class object, not an afterthought downstream of a chat UI. That's a thesis bet. It is also the first public artifact from arguably the most-watched stealth lab in the world, and it signals that the eventual product is going to be opinionated about *how* humans collaborate with the model, not just *what* the model can do. Watch the Hacker News thread: it's currently sitting on the front page <span class="ago">live</span>, which is a stronger early-readership signal than the post's own analytics.</p>
 
-<p>What to watch: <a href="https://www.theringer.com/2026/05/06/tech/claude-mythos-anthropic-project-glasswing-cybersecurity-threat-ai">whether OpenAI follows suit</a>. GPT-5.5 cleared the same 32-step end-to-end cyber-attack range three weeks after Mythos. They have not announced a Glasswing equivalent. The <a href="https://andrew.ooo/answers/aisi-cyber-eval-gpt-5-5-vs-mythos-vs-opus-may-2026/">UK AI Safety Institute's May 1 cyber eval</a> had GPT-5.5 at 71.4% on Expert-tier tasks and Mythos at 68.6% — close enough that the choice of which to lock down vs. ship is now a values question, not a capabilities one.</p>
+<p>What to watch: whether the next two posts arrive within a week or get spaced out again. Thinking Machines is now in a position where any cadence signal is a product-launch tea-leaf — and where founder Murati's first-public-tweet-since-founding probably ships next.</p>
 <p class="deeper"><a class="deeper-link" data-section="top-signal">Go deeper on this tomorrow →</a></p>
 </section>
 
@@ -438,33 +442,18 @@
 <h2 class="section"><span class="emoji">⚡</span> THE STACK</h2>
 
 <div class="stack-item">
-<h3>DeepMind scales AlphaEvolve across science.</h3>
-<p>Google DeepMind <a href="https://deepmind.google/discover/blog/">expanded AlphaEvolve</a>, their Gemini-powered coding agent, to materials science, biology, and chip design. The AlphaFold pattern repeats: package frontier reasoning behind a domain-shaped agent loop and ship to specialists. Vertical-AI moats just got harder for startups to defend.</p>
+<h3>Claude Platform lands on AWS. <span class="ago">yesterday</span></h3>
+<p>Anthropic <a href="https://news.ycombinator.com/from?site=claude.com">shipped Claude Platform on AWS</a>, which the HN thread is parsing as the first-party answer to Bedrock-only access — Anthropic going direct on AWS infrastructure. Front-page now at 220 points; the comments thread is unusually substantive on the latency/billing implications. Reading: Anthropic continues to disintermediate AWS as a reseller of its own models.</p>
 </div>
 
 <div class="stack-item">
-<h3>Anthropic raises usage limits, signs SpaceX for compute.</h3>
-<p><a href="https://www.anthropic.com/news">Last Tuesday's twin announcement</a>: Claude users get materially higher limits, and Anthropic is buying compute from SpaceX. Starlink-adjacent data centers were not on most 2026 bingo cards. Anthropic is clearly setting up for a compute regime measured in tens of GW.</p>
+<h3>"If AI writes your code, why use Python?" hits HN front page. <span class="ago">yesterday</span></h3>
+<p>Cultural moment more than technical one. <a href="https://news.ycombinator.com/from?site=medium.com">851 points, 910 comments</a> on a single essay arguing that the agent-coding regime breaks Python's traditional readability moat. The volume of dissent in the thread is the actual signal — language preference is becoming a live discussion again now that the writer-of-record is increasingly the model.</p>
 </div>
 
 <div class="stack-item">
-<h3>Anthropic + Blackstone + Goldman launch enterprise-AI services co.</h3>
-<p>Quieter but possibly bigger: <a href="https://www.anthropic.com/news">a new joint venture</a> with Blackstone, Hellman &amp; Friedman, and Goldman Sachs to provide Claude-powered services to the Fortune 500. The consulting-firm play — McKinsey and Accenture should be paying attention.</p>
-</div>
-
-<div class="stack-item">
-<h3>US government wins pre-launch access to frontier models.</h3>
-<p>The new Center for AI Standards and Innovation (CAISI) <a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html">struck agreements with Microsoft, Google, and xAI</a> to test models before public release. Anthropic and OpenAI are not in the announcement. A soft preview of where compulsory pre-deployment evals are heading.</p>
-</div>
-
-<div class="stack-item">
-<h3>Gemma 4: DeepMind tightens the open-model squeeze.</h3>
-<p><a href="https://deepmind.google/discover/blog/">"Byte for byte, the most capable open models"</a> is the claim. Open-weight pressure on Llama, Qwen, and DeepSeek keeps intensifying — when Google ships open models, every "we're open-source" pitch loses a notch.</p>
-</div>
-
-<div class="stack-item">
-<h3>Distillation hits the long tail.</h3>
-<p>Cactus Compute's <a href="https://github.com/cactus-compute/needle">Needle</a> packed Gemini's tool-calling behavior into a 26M-parameter model. On-device tool routing without a frontier API call. The pattern — distill one narrow skill, deploy it cheap — is going to make the next 18 months of cost curves very strange.</p>
+<h3>OpenAI employees liquidated $6.6B at last fall's tender. <span class="ago">~38h ago</span> <span class="context">borderline-recency</span></h3>
+<p>The Wall Street Journal report <a href="https://www.cryptointegrat.com/p/ai-news-may-11-2026">surfaced May 11 at 2:38 AM ET</a>: 600+ current and former OpenAI staff sold $6.6B in stock during October 2025's tender. ~$11M average per person. The number explains why frontier-lab retention has held in the face of comp wars; it also explains the recent splinter-launch energy out of OpenAI alumni.</p>
 </div>
 <p class="deeper"><a class="deeper-link" data-section="stack">Go deeper on this tomorrow →</a></p>
 </section>
@@ -473,18 +462,13 @@
 <h2 class="section"><span class="emoji">🕵️</span> LEAKS &amp; RUMORS</h2>
 
 <div class="leak-card">
-<h3><span class="leak-tag">Confirmed-by-leak</span>Google's "Omni" video model surfaces in Gemini UI two weeks before I/O.</h3>
-<p>TestingCatalog <a href="https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/">captured a string</a> in Gemini's video tab: <em>"Start with an idea or try a template. Powered by Omni."</em> Omni appears next to Toucan — the current internal name for Gemini video. UI copy that ships brand names is late-stage release prep. <strong>Google I/O runs May 19–20.</strong> Bet on a Veo-3-era reveal.</p>
+<h3><span class="leak-tag">Confirmed-by-leak</span>Gemini Omni video — in-chat editing + camera-angle controls surface 8 days before I/O. <span class="ago">yesterday 6am</span></h3>
+<p>@testingcatalog <a href="https://x.com/testingcatalog">captured fresh UI evidence</a> May 11 at 6:08 AM ET: Gemini Omni shows in-chat editing, camera-angle controls, and "a significant step up" in voice quality vs current Veo. UI copy of that detail level is late-stage release prep. <strong>Google I/O runs May 19–20</strong> — Omni is now the betting favorite for the headline reveal.</p>
 </div>
 
 <div class="leak-card">
-<h3><span class="leak-tag">Stealth-launched</span>Meta's "muse-spark" is silently #5 on Arena.</h3>
-<p>The model sits at <a href="https://arena.ai/leaderboard">Elo 1491 on LMArena's text board</a>, sandwiched between Claude Opus 4.7 and Gemini 3.1 Pro Preview. Meta hasn't announced. Unnamed-model leaderboard appearances mean a public Llama-line announcement is days, not weeks, away.</p>
-</div>
-
-<div class="leak-card">
-<h3><span class="leak-tag">Roadmap</span>Claude 5 "Fennec" and GPT-6 expected this window.</h3>
-<p>Claude 5 is <a href="https://www.abhs.in/blog/ai-models-april-june-2026-gpt6-claude5-llama4-what-developers-should-prepare">rumored as a full architecture upgrade</a> rather than a scale bump — May–September. GPT-6 targets May–July. Code-name "Remy" inside Google maps to Gemini 4. Treat as soft signals; rumored ship-dates slip 60% of the time.</p>
+<h3><span class="leak-tag">Stealth-launched</span>Meta's "muse-spark" still sitting at #5 on LMArena. <span class="ago">live</span></h3>
+<p>The unnamed model is at <a href="https://arena.ai/leaderboard">Elo 1491 on LMArena's text board</a> right now, sandwiched between Claude Opus 4.7 and Gemini 3.1 Pro Preview. Meta hasn't announced. The leaderboard slot is the news — it persists across today's snapshot, which means the Llama-line public reveal is still imminent.</p>
 </div>
 <p class="deeper"><a class="deeper-link" data-section="leaks">Go deeper on this tomorrow →</a></p>
 </section>
@@ -493,7 +477,7 @@
 <h2 class="section"><span class="emoji">📈</span> BENCHMARK WARS</h2>
 
 <div class="bench-wars-block">
-<h3>LMArena Text Leaderboard · top 10 · updated 6h ago</h3>
+<h3>LMArena Text Leaderboard · top 10 <span class="ago live">live · 6h ago</span></h3>
 <table>
 <thead>
 <tr><th>#</th><th>Model</th><th>Org</th><th class="num">Elo</th></tr>
@@ -537,72 +521,13 @@
 
 <section class="voices" id="voices">
 <h2 class="section"><span class="emoji">💬</span> VOICES</h2>
-
-<blockquote class="twitter-tweet" data-conversation="none">
-<p lang="en" dir="ltr">Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights: The first theme I tried to push on is that LLMs are about a lot more than just speeding up what existed before (e.g. coding). Three examples of new horizons…</p>
-<span class="handle">— Andrej Karpathy (<strong>@karpathy</strong>) · <a href="https://x.com/karpathy/status/2049903821095354523">view on X</a></span>
-</blockquote>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">I packaged up the "autoresearch" project into a new self-contained minimal repo if people would like to play over the weekend. It's basically nanochat LLM training core stripped down to a single-GPU, one file version of ~630 lines of code…</p>
-<span class="handle">— Andrej Karpathy (<strong>@karpathy</strong>) · <a href="https://x.com/karpathy/status/2030371219518931079">view on X</a></span>
-</blockquote>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">"This is easily the biggest change in ~2 decades of programming and it happened over the course of a few weeks." "I rapidly went from about 80% manual+autocomplete coding and 20% agents to 80% agent coding and 20% edits+touchups."</p>
-<span class="handle">— Karpathy quoted by AI Safety Memes (<strong>@AISafetyMemes</strong>) · <a href="https://x.com/AISafetyMemes/status/2016160041108177266">view on X</a></span>
-</blockquote>
-
-<blockquote class="voice">
-"A country of geniuses in a datacenter within a year or two." The phrase has stuck because it shifts the question from "AGI when?" to "what does a country of geniuses <em>do</em>?" — see <a href="https://thezvi.substack.com/p/on-dwarkesh-patels-2026-podcast-with">Zvi's read</a> of the recent Dwarkesh appearance.
-<span class="attribution">— Dario Amodei, Anthropic CEO. <a href="https://www.axios.com/2026/01/26/anthropic-ai-dario-amodei-humanity">via Axios</a></span>
-</blockquote>
-
-<blockquote class="voice">
-"60%+ probability that no-human-involved AI R&amp;D occurs by end of 2028." The number to fight about — Clark's read of the coding-benchmark + scientific-reproducibility trajectories.
-<span class="attribution">— Jack Clark, <a href="https://jack-clark.net/">Import AI #455</a></span>
-</blockquote>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p class="empty-section">📭 Quiet on Voices today — no tracked researcher (Altman / Hassabis / Amodei / LeCun / Karpathy / Sutskever / Clark / Bubeck) posted a substantive thread in the verified 24h window. The agent will sweep again at tomorrow's fire.</p>
 <p class="deeper"><a class="deeper-link" data-section="voices">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="videos" id="videos">
 <h2 class="section"><span class="emoji">🎬</span> TRENDING VIDEOS</h2>
-
-<div class="video-grid">
-
-<div class="video">
-<div class="frame-wrap">
-<iframe src="https://www.youtube.com/embed/zIEQdAnOfwg" title="Dwarkesh Patel's AI Lab Review" loading="lazy" allowfullscreen></iframe>
-</div>
-<div class="vmeta">
-<p class="vtitle">Dwarkesh — AI Lab Review: OpenAI, Anthropic, Grok, Meta, NVIDIA, Safe Superintelligence</p>
-<p class="vbody">Lab-by-lab tour of who's leading on what going into Q3. The Anthropic/OpenAI compare-and-contrast is the most-shared clip this week.</p>
-</div>
-</div>
-
-<div class="video">
-<div class="frame-wrap">
-<iframe src="https://www.youtube.com/embed/KBPOTklFTiU" title="The most important question nobody's asking about AI" loading="lazy" allowfullscreen></iframe>
-</div>
-<div class="vmeta">
-<p class="vtitle">Dwarkesh — The most important question nobody's asking about AI</p>
-<p class="vbody">Short essay-video. The question, paraphrased: post-AGI, what's the bottleneck on actually rebuilding things in the world? Spoiler — it's not compute.</p>
-</div>
-</div>
-
-<div class="video">
-<div class="frame-wrap">
-<iframe src="https://www.youtube.com/embed/Sk9tvyRSCgY" title="DeepMind's New AI: A Gift To Humanity" loading="lazy" allowfullscreen></iframe>
-</div>
-<div class="vmeta">
-<p class="vtitle">Two Minute Papers — DeepMind's New AI: A Gift To Humanity</p>
-<p class="vbody">Károly's take on the latest DeepMind drop. Two Minute Papers continues to be the cleanest way to keep a finger on the research pulse if you don't read arXiv directly.</p>
-</div>
-</div>
-
-</div>
+<p class="empty-section">📭 Nothing fresh on the tracked channels (Dwarkesh / AI Explained / Two Minute Papers / MLST / Cognitive Revolution / Yannic) within the verified 48h window. The agent sweeps again tomorrow morning.</p>
 <p class="deeper"><a class="deeper-link" data-section="videos">Go deeper on this tomorrow →</a></p>
 </section>
 
@@ -613,67 +538,34 @@
 <p class="title"><a href="https://arxiv.org/abs/2605.10912">WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation</a></p>
 <p class="summary">60 human-authored bilingual multimodal tasks averaging 8 minutes and 20+ tool calls each, run inside real CLI agent harnesses (OpenClaw, Claude Code, Codex, Hermes). Best frontier model — Claude Opus 4.7 under OpenClaw — hits 62.2%. Every other model stays below 60%, and just <em>switching the harness</em> moves a single model by up to 18 points.</p>
 <p class="summary">Why you care: the "agents are almost there" narrative keeps tripping on its own benchmarks. This one is closer to real deployment than ToolBench, and the harness-sensitivity result is a red flag — capability rankings published today are partly artifacts of scaffolding choices, not just model quality.</p>
-<p class="meta">Ding et al., Shanghai AI Lab / OpenClaw team. Published May 11, 2026.</p>
+<p class="meta">Ding et al., Shanghai AI Lab / OpenClaw team. <span class="ago">yesterday</span></p>
 </div>
 
 <div class="paper">
 <p class="title"><a href="https://arxiv.org/abs/2605.10851">The Generalized Turing Test: A Foundation for Comparing Intelligence</a></p>
 <p class="summary">Formal framework for "A ≥ B" — B (as distinguisher) can't reliably tell A-imitating-B apart from real B. Builds the order theory and evaluates pairwise indistinguishability across modern models. Recovers a stratification consistent with existing rankings but dataset-independent.</p>
 <p class="summary">Why you care: Poggio's group is taking another swing at "what does it mean to compare intelligence" in a way that doesn't bottom out in benchmark gaming. If this comparator becomes a training objective, it changes the data-curation calculus for the next generation of frontier runs.</p>
-<p class="meta">Mitropolsky, Hong, Neumarker, Rimoldi, Poggio. MIT. Published May 11, 2026.</p>
+<p class="meta">Mitropolsky, Hong, Neumarker, Rimoldi, Poggio. MIT. <span class="ago">yesterday</span></p>
 </div>
 
 <div class="paper">
 <p class="title"><a href="https://arxiv.org/abs/2605.10828">The First Drop of Ink: Nonlinear Impact of Misleading Information in Long-Context Reasoning</a></p>
 <p class="summary">Vary the proportion of hard distractors in fixed-length context. Performance drops sharply within the first tiny fraction of distractors, then plateaus — a small amount of misleading material poisons the well almost completely. Attention analysis: hard distractors capture disproportionate attention even at low proportions.</p>
 <p class="summary">Why you care: most "longer context = better" arguments are wrong in the presence of any adversarial or simply messy retrieval. RAG systems pay a steep tax for upstream retrieval imprecision they can't recover from downstream. Filter ruthlessly.</p>
-<p class="meta">Gao, Chen, Huang. Texas A&amp;M. Published May 11, 2026.</p>
+<p class="meta">Gao, Chen, Huang. Texas A&amp;M. <span class="ago">yesterday</span></p>
 </div>
 <p class="deeper"><a class="deeper-link" data-section="papers">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="robotics" id="robotics">
 <h2 class="section"><span class="emoji">🤖</span> ROBOTICS</h2>
-
-<div class="stack-item">
-<h3>Figure 02 logs 1,250 hours and 90,000 parts at BMW.</h3>
-<p>Figure's real-production pilot at BMW <a href="https://www.figure.ai/news/ramping-figure-03-production">cleared 1,250 hours of factory-floor work with 90,000+ parts handled</a>, including a 20-hour continuous shift. Millimeter-precision placement is in the bag — the demo era is over. Figure 03 production is ramping in parallel; the company is now pitching humanoid-as-shift-worker rather than humanoid-as-tech-curiosity.</p>
-</div>
-
-<div class="stack-item">
-<h3>Skild AI closes $1.4B Series C — robotics has its OpenAI moment.</h3>
-<p>Skild's "omni-bodied" foundation model — one brain across manipulation, locomotion, navigation, on multiple robot bodies — is already generating <a href="https://medium.com/@creed_1732/skild-ai-robotics-manufacturing-foundation-model-raised-1-4b-bffbaad0e70e">$30M in revenue across security, warehouses, and manufacturing</a>. $14B valuation in 18 months. The thesis: one model, every body, license-only. If it holds, every humanoid OEM becomes a hardware shell for someone else's brain — and the customer relationship moves to whoever ships the policy.</p>
-</div>
-
-<div class="stack-item">
-<h3>Physical Intelligence ships π0.7 — generalist robot policy.</h3>
-<p>Pi's <a href="https://www.pi.website/blog/pi0">π0.7 release</a> is a "step-change in generalization" claim on their generalist policy line. Same play as Skild — software-only, license-the-brain, sit on top of any hardware. Sergey Levine and Chelsea Finn lead two of the most credible robotics-RL groups in academia; this is their commercial answer to "does scaling work for embodied AI." Early signal: yes, more than expected.</p>
-</div>
-
-<div class="stack-item">
-<h3>China stands up 10,000-units-per-year humanoid factories.</h3>
-<p>A Guangdong production line <a href="https://interestingengineering.com/ai-robotics/china-opens-humanoid-robot-factory">opened March 29 with 10k/yr capacity</a>, and <a href="https://interestingengineering.com/ai-robotics/ubtech-siemens-humanoid-robot-production">UBTech + Siemens are co-engineering a 10k/yr line</a>. Unitree shipped ~5,500 humanoids in 2025 and is targeting 10–20k in 2026. Chinese vendors are projected to drive 94% annual output growth and capture ~80% of global humanoid market share. Tesla is countering with a Giga Texas line aimed at eventual 10M/yr capacity. The supply curve just stopped being a bottleneck.</p>
-</div>
-
-<div class="stack-item">
-<h3>NVIDIA GR00T becomes the de-facto robot-brain layer.</h3>
-<p>Jensen's vision-language-action foundation model is now <a href="https://nvidianews.nvidia.com/news/nvidia-and-global-robotics-leaders-take-physical-ai-to-the-real-world">adopted by ABB, AGIBOT, Agility, CMR Surgical, FANUC, Figure, Hexagon, KUKA, Medtronic, Skild, Universal Robots, World Labs, and YASKAWA</a> — i.e., the entire industrial-robot establishment plus most of the humanoid wave. If GR00T's API ends up being the JavaScript of robotics, NVIDIA captures the platform layer beneath every embodied frontier company.</p>
-</div>
+<p class="empty-section">📭 No humanoid-OEM or robotics-foundation-model news verified within the 24h window. Figure / Tesla / 1X / Atlas / Unitree / Physical Intelligence / Skild / GR00T all quiet today. The agent sweeps again tomorrow.</p>
 <p class="deeper"><a class="deeper-link" data-section="robotics">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="adjacent" id="adjacent">
 <h2 class="section"><span class="emoji">🧬</span> ADJACENT FRONTIER</h2>
-
-<div class="stack-item">
-<h3>Neuralink moves to high-volume production.</h3>
-<p>Musk says the 2026 milestone is "automated surgical procedure" and high-volume implants. 21 patients to date, FDA nod on the second-gen device, redesigned electrode threads to fix the retraction issue that plagued v1. The curve from "ten patients" to "ten thousand" determines whether 2026 is the year BCI stops being demo and starts being product. <a href="https://neuralink.com/updates/">Neuralink updates</a>.</p>
-</div>
-
-<div class="stack-item">
-<h3>Synchron's stentrode passes 50 patients.</h3>
-<p>The minimally-invasive bet — thread the electrode through a blood vessel, no craniotomy — is now in 50+ paralysis patients with zero serious adverse events reported in trials. Less spectacular than Neuralink's signal density but more realistic as a near-term commercial path. <a href="https://synchron.com/news">Synchron news</a>.</p>
-</div>
+<p class="empty-section">📭 Quiet on BCI / longevity / space / biotech in the 24h window. Neuralink / Synchron / SpaceX / Altos / Retro Bio / Isomorphic Labs all silent today.</p>
 <p class="deeper"><a class="deeper-link" data-section="adjacent">Go deeper on this tomorrow →</a></p>
 </section>
 
@@ -695,12 +587,12 @@
 
 <section class="horizon-wrap" id="horizon">
 <h2 class="section"><span class="emoji">🔮</span> ON THE HORIZON</h2>
-<div class="horizon">The defender side of Glasswing is the next 90 days' story. If Mythos-class offensive capability has crossed the human-expert line, the matching defensive deployment is six to twelve months behind — most enterprise SOCs cannot ingest, triage, or act on a Mythos-volume output stream. Prediction: by Q1 2027, at least three of the twelve Glasswing launch partners ship branded "AI-native security operations" products. Whether the asymmetry actually flips defender-favorable depends on how fast the rest of the Fortune 1000 follows. The bet is reasonable; the execution is brutal.</div>
+<div class="horizon">Thinking Machines breaking radio silence today is a load-bearing signal. The 8-month gap between research posts wasn't writers'-block — it was operational opacity while the lab built. The "Interaction Models" framing — humans-and-models as a designed channel, not chat-with-everything — predicts a product that doesn't look like a Claude or ChatGPT clone. Best guess for the next 90 days: a developer preview that ships an opinionated interaction primitive (not a chatbot), Murati on a tier-1 podcast within 30 days, and a follow-up article comparing measured human-AI coordination outcomes within 60.</div>
 </section>
 
 <section class="watching-wrap" id="watching">
 <h2 class="section"><span class="emoji">🎯</span> WORTH WATCHING</h2>
-<div class="watching"><strong>Google I/O — May 19–20, 2026.</strong> Three things to track: (1) is Omni announced as a Veo replacement, (2) does Gemini 4 ship or just preview, (3) does the Mac-app footprint expand into other native OS surfaces. Anything else is fluff.</div>
+<div class="watching"><strong>Google I/O — May 19–20, 2026 (7 days out).</strong> Track three things: (1) Omni shipping as a Veo replacement with in-chat editing + camera-angle controls (yesterday's leak); (2) Gemini 4 — ship vs preview; (3) "Remy" code-name surfacing in the keynote. Anything else is fluff.</div>
 </section>
 
 <div class="feedback">
@@ -764,7 +656,7 @@
 </script>
 
 <footer class="colophon">
-Compiled from 22 sources at 8:00 PM ET, May 12 2026 — dry-run issue, first cron fire is tomorrow morning. <br>
+Compiled at 8:30 PM ET, May 12 2026 — recency-strict build (last 24–48h only). Quiet sections honestly marked with 📭 rather than padded with stale items. The auto-fire takes over tomorrow at 7:30 AM. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a>
 </footer>
 

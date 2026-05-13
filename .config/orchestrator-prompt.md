@@ -81,6 +81,39 @@ In a single message with multiple tool calls, fetch from all source categories a
 
 Tolerate failures: if a source 404s or rate-limits, log it to `run-log.jsonl` and proceed. Never block the issue on one bad source.
 
+## Step 3.5 — RECENCY GATE (mandatory, ruthless)
+
+Before any item enters curation, verify its publish date is within the last 24 hours from your run start time. **No exceptions for any narrative section.**
+
+For each candidate:
+- **arXiv**: parse the `published` ISO timestamp from the API response. Cut anything older than 24h.
+- **Lab blog post**: open the post URL with WebFetch and extract the publish date from the article header or `<time>` element. Cut if older than 24h. Vague "May 2026" is a CUT signal — find the actual day or drop the item.
+- **News article**: verify date from the article's own metadata, not just the search result snippet.
+- **Tweet**: open the X status URL, confirm the timestamp shown on the tweet. Embed only if within 24h. If a researcher's only recent take is from weeks ago, find a *different* fresher voice or skip — don't include stale embeds.
+- **YouTube video**: upload date must be within 48h (channel-cadence allowance). Older = skip.
+- **Reddit/HN**: submission timestamp.
+
+Build two arrays during pulling: `fresh[]` (items with verified <24h date) and `stale[]` (everything else — logged in run-log but NEVER rendered into the issue).
+
+**If `fresh.length < 5` across all categories combined**: today is genuinely slow. Ship a shorter issue. Drop empty sections OR add a one-liner like `<p class="empty-section">📭 Quiet day on Voices — nothing within 24h worth embedding.</p>`. DO NOT pad with stale items to fill the template.
+
+The two exceptions:
+1. **Progress Meters** section — rolling-state snapshot (current SOTA, current LMArena #1). Acceptable to display current best even if record was set days ago. Frame as state, not as news.
+2. **Bench Wars Table 1: LMArena top 10** — same exception. It's a now-state snapshot.
+
+Every other section MUST be 24h-fresh items only.
+
+## Step 3.6 — Render recency badges
+
+Every rendered item must carry a `<span class="ago">` recency badge with the verified time-since-publish. Format:
+- `< 1h ago` → `<span class="ago">just now</span>`
+- `1–23h ago` → `<span class="ago">NNh ago</span>`
+- yesterday → `<span class="ago">yesterday Xpm/am ET</span>`
+
+For the rolling-state exceptions (Progress Meters, LMArena top 10), use `<span class="ago">live</span>` or `<span class="ago">updated NNh ago</span>`.
+
+The badge goes inline near the source link or item byline. Reader sees freshness at a glance.
+
 ## Step 4 — Curate into twelve sections
 
 Follow `style-guide.md` exactly. The twelve sections, in order:
