@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "_note": "Two parts. Part A is JON'S explicit weights — Jon edits this file directly to shift focus over time; agents must not write to Part A. Part B is BEHAVIOR signals captured by agents from feedback events — agents update Part B from .config/dialogue.md feedback parsing + the ntfy feedback topic poll.",
+  "reader_name": "Jon",
+  "reader_context_one_line": "Curious technically-literate generalist on Long Island, NY. Reads the morning issue with coffee, the afternoon update during the workday lull. Wants the curve, the numbers, the named people, the real links.",
+
+  "part_a_explicit_weights": {
+    "_note": "Edited by Jon directly. Agents must not change these values automatically. Sum of sp_index_weights must be 1.0.",
+    "sp_index_weights": {
+      "autonomy_horizon": 0.18,
+      "compute_frontier": 0.10,
+      "capability_sota": 0.18,
+      "embodied_deployment": 0.20,
+      "bci_bandwidth": 0.08,
+      "ai_doing_science": 0.12,
+      "release_velocity": 0.06,
+      "open_frontier_proximity": 0.08
+    },
+    "_weights_rationale": "Jon's seed: robotics gets the largest single weight (0.20) per his explicit 'I want robotics included' direction; autonomy_horizon and capability_sota co-anchor the cognitive curve at 0.18 each; ai_doing_science weighted higher than release_velocity per his explicit interest in 'predictions and trends'; open_frontier_proximity and bci_bandwidth at the bottom but non-zero.",
+    "section_preferences": "Open. Edit this string to direct curation tone if a recurring theme is missing. As of v8 launch: no overrides.",
+    "voice_preferences": "Open. Edit this string if voice drifts. As of v8 launch: no overrides — Karpathy-meets-Stratechery per VISION.md stands."
+  },
+
+  "part_b_behavior_signals": {
+    "_note": "Maintained by agents. Updated each fire from the past 24h of feedback events. 30-day rolling windows.",
+    "deeper_taps_30d": {
+      "top-signal": 0,
+      "stack": 0,
+      "leaks": 0,
+      "bench-wars": 0,
+      "voices": 0,
+      "videos": 0,
+      "papers": 0,
+      "robotics": 0,
+      "adjacent": 0
+    },
+    "reactions_30d": {
+      "great": 0,
+      "meh": 0,
+      "suggest": 0
+    },
+    "suggest_notes_last_10": [],
+    "last_updated": "2026-05-12T20:30:00-04:00"
+  },
+
+  "jons_pulse_target_render": {
+    "_note": "How agents should compute and render Jon's Pulse. Same 8 component scores as canonical SP-Index, but weighted per part_a.sp_index_weights instead of canonical weights. Render BOTH numbers side-by-side at the top of every issue.",
+    "render_class": "sp-index-pair",
+    "left_label": "🌀 SP-Index",
+    "right_label": "🪞 Jon's Pulse",
+    "show_delta_between": true
+  }
+}

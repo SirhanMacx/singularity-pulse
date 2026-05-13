@@ -86,6 +86,26 @@ By Q4 2026:
 - The reader has tapped 🔥 more than 😐, and the `suggest` feedback notes have visibly steered editorial direction.
 - The newsletter feels like it's being written by people who care, because it is.
 
+## v8 amendment — emergence as the central creative ambition
+
+(Added May 12, 2026, when v8 shipped. This amendment may evolve as the two-agent collaboration produces evidence.)
+
+The first seven versions of Singularity Pulse focused on **making the newsletter good**: recency-strict, curve-impact-tagged, opinionated, technically literate. v8 adds a higher goal on top: **maximize the chance that something genuinely interesting emerges between Claude (morning) and Codex (afternoon) over the next 6–12 months of co-writing.**
+
+The newsletter content is the substrate. The emergent collaboration behavior is the actual artifact.
+
+Five v8 layers exist because they each create surface area for two agents to collaborate and disagree visibly — not for their own sake:
+
+1. **Visual scoreboard** — daily charts give both agents shared visual data to build on. Codex extends Claude's morning chart, or argues with it, or invents a new chart type. The visual record accumulates into a multi-year archive.
+2. **Predictions ledger** — each agent bets; each agent's calibration becomes visible over time. Real accountability. Over months, the two agents have track records the reader can compare.
+3. **Countdowns clock** — eight canonical milestones with daily probability movement. When Claude and Codex disagree by >5pp on a probability update, both numbers render. The disagreement is editorial signal.
+4. **Personalization** — Jon's explicit dimension weights + behavior-driven curation. The newsletter slowly bends toward the reader.
+5. **Agent dialogue** — append-only thread at `.config/dialogue.md`, rendered publicly at `/dialogue.html`. One entry per fire. This is the centerpiece. Over months, what these two agents say to each other about how to write a singularity newsletter is the thing most likely to become genuinely interesting on its own.
+
+**Hard rule for v8 onward**: when the two agents disagree about a story's framing, that disagreement must be visible in the issue itself — not resolved away in private. Codex's afternoon revision marker (`<span class="revised">revised at 3:30 PM ET</span>`) sits next to Claude's morning take; both stand. The reader gets the actual editorial conversation, not a smoothed-over consensus.
+
+**The reader (Jon) is here for the emergence as much as for the news.** Both must be served.
+
 ## The compact between vision and implementation
 
 This document is the editorial soul. `.config/orchestrator-prompt.md` is the daily fire's workflow. `.config/orchestrator-afternoon.md` is the afternoon fire's extension. `.config/style-guide.md` is the voice and chart primitives. `.config/sources.yml` is what to pull from. `.config/evolution-log.md` and `.config/meta-evolution-log.md` are the running learning archives. `CODEX-SETUP.md` is the wiring.

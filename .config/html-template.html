@@ -255,6 +255,87 @@
   .bar-chart text.value { fill: var(--fg); font-weight: 600; }
   /* Afternoon-update revision marker */
   .revised { display: inline-block; background: #fef3c7; color: #92400e; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; margin-left: 6px; vertical-align: 2px; }
+  /* v8 — Jon's-Pulse paired index render */
+  .sp-index-pair { display: flex; gap: 14px; align-items: stretch; margin-bottom: 12px; }
+  .sp-index-pair > .pair-side { flex: 1; min-width: 0; padding: 12px 14px; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); }
+  .sp-index-pair .pair-label { font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; }
+  .sp-index-pair .pair-score { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 38px; line-height: 1; color: var(--accent); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .sp-index-pair .pair-side.jons .pair-score { color: #059669; }
+  .sp-index-pair .pair-tag { display: block; font-size: 10px; color: var(--muted); margin-top: 4px; font-family: 'JetBrains Mono', monospace; }
+  /* v8 — SCOREBOARD section: chart suite layout */
+  section.scoreboard { padding: 0 0 8px; }
+  .sb-grid-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
+  .sb-grid-trio .chart { margin: 0; padding: 8px 0; }
+  .sb-comp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 18px 0; }
+  .sb-comp-grid .cmp-cell { padding: 6px 8px; border: 1px solid var(--rule); border-radius: 5px; background: var(--card); font-size: 10px; }
+  .sb-comp-grid .cmp-cell .cmp-key { color: var(--muted); font-size: 10px; display: block; margin-bottom: 2px; line-height: 1.1; }
+  .sb-comp-grid .cmp-cell svg.cmp-spark { width: 100%; height: 18px; display: block; margin-top: 2px; }
+  .sb-comp-grid .cmp-cell svg.cmp-spark path.line { stroke: var(--accent); stroke-width: 1.2; fill: none; }
+  /* v8 — multi-line race chart (LMArena) */
+  .chart-elo-race svg .axis { stroke: var(--rule); stroke-width: 1; }
+  .chart-elo-race svg .grid { stroke: var(--rule); stroke-width: 0.5; stroke-dasharray: 2 3; }
+  .chart-elo-race svg text.axis-tick { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: var(--muted); }
+  .chart-elo-race svg text.lab-label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 600; }
+  .chart-elo-race svg path.lab-line { fill: none; stroke-width: 1.8; }
+  .chart-elo-race svg circle.lab-end { r: 3; }
+  /* v8 — benchmark climbs (multi-bench overlay) */
+  .chart-bench-climbs svg path.bench-line { fill: none; stroke-width: 1.8; opacity: 0.9; }
+  .chart-bench-climbs .bench-legend { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; margin-top: 6px; }
+  .chart-bench-climbs .bench-legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  /* v8 — release timeline (dot per release, x-axis time) */
+  .chart-release-timeline svg circle.rel-dot { r: 4; opacity: 0.85; }
+  .chart-release-timeline svg circle.rel-dot:hover { r: 5; opacity: 1; }
+  .chart-release-timeline svg text.rel-label { font-family: 'JetBrains Mono', monospace; font-size: 8px; fill: var(--muted); }
+  /* v8 — compute stair-step (log10 FLOPs) */
+  .chart-compute-stair svg path.stair { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linejoin: miter; }
+  .chart-compute-stair svg path.stair-fill { fill: var(--accent); opacity: 0.08; }
+  .chart-compute-stair svg text.stair-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: var(--muted); }
+  /* v8 — embodied stack (cumulative + flow) */
+  .chart-embodied-stack svg path.embodied-cum { fill: var(--accent); opacity: 0.18; stroke: var(--accent); stroke-width: 1.5; }
+  .chart-embodied-stack svg rect.embodied-flow { fill: #059669; opacity: 0.7; }
+  /* v8 — BCI curve */
+  .chart-bci-curve svg path.bci-line { fill: none; stroke: #7c3aed; stroke-width: 2; }
+  .chart-bci-curve svg circle.bci-pt { fill: #7c3aed; r: 3; }
+  /* v8 — countdowns block */
+  section.countdowns { padding: 0 0 8px; }
+  .cd-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .cd-card { padding: 12px 14px; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); display: grid; grid-template-columns: 1fr auto; gap: 10px 14px; align-items: center; }
+  .cd-card .cd-name { font-weight: 700; font-size: 14px; }
+  .cd-card .cd-tag { color: var(--muted); font-size: 12px; font-weight: 400; margin-top: 2px; }
+  .cd-card .cd-prob { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 22px; text-align: right; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .cd-card .cd-days { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-align: right; }
+  .cd-card .cd-spark { grid-column: 1 / -1; height: 24px; }
+  .cd-card .cd-spark svg { width: 100%; height: 24px; display: block; }
+  .cd-card .cd-spark svg path.line { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+  .cd-card .cd-spark svg path.fill { fill: var(--accent); opacity: 0.1; }
+  .cd-card.cd-disagree .cd-prob { font-size: 14px; line-height: 1.3; }
+  .cd-card .cd-prob .cd-claude { color: #c2410c; }
+  .cd-card .cd-prob .cd-codex { color: #059669; }
+  /* v8 — predictions block */
+  section.predictions { padding: 0 0 8px; }
+  .pred-card { padding: 12px 14px; border: 1px solid var(--rule); border-radius: 8px; background: var(--card); margin-bottom: 10px; font-size: 14px; line-height: 1.5; }
+  .pred-card .pred-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .pred-card .pred-meta .pred-author { color: var(--fg); font-weight: 700; }
+  .pred-card .pred-meta .pred-author.claude { color: #c2410c; }
+  .pred-card .pred-meta .pred-author.codex { color: #059669; }
+  .pred-card .pred-meta .pred-author.quoted { color: var(--muted); font-style: italic; }
+  .pred-card .pred-meta .pred-conf { float: right; }
+  .pred-card .pred-claim { font-weight: 500; margin: 0 0 6px; }
+  .pred-card .pred-rat { font-size: 12px; color: var(--muted); margin: 0; }
+  .pred-card.pred-resolved-hit { border-left: 4px solid #16a34a; }
+  .pred-card.pred-resolved-miss { border-left: 4px solid #dc2626; }
+  .pred-card.pred-resolved-partial { border-left: 4px solid #f59e0b; }
+  .pred-card.pred-open { border-left: 4px solid var(--rule); }
+  /* v8 — dialogue footer block */
+  .dialogue-footer { margin-top: 56px; padding: 18px 20px; border: 1px dashed var(--rule); border-radius: 8px; opacity: 0.62; }
+  .dialogue-footer:hover { opacity: 1; transition: opacity 0.2s ease; }
+  .dialogue-footer .df-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+  .dialogue-footer .df-entry { font-size: 13px; line-height: 1.55; margin-bottom: 12px; padding-left: 12px; border-left: 2px solid var(--rule); }
+  .dialogue-footer .df-entry:last-of-type { margin-bottom: 0; }
+  .dialogue-footer .df-head { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .dialogue-footer .df-head .df-sender.claude { color: #c2410c; font-weight: 700; }
+  .dialogue-footer .df-head .df-sender.codex { color: #059669; font-weight: 700; }
+  .dialogue-footer .df-link { display: inline-block; margin-top: 8px; font-size: 12px; color: var(--accent); border-bottom: 1px dotted; }
   @media (prefers-color-scheme: dark) {
     .revised { background: #292014; color: #fbbf24; }
   }
@@ -299,18 +380,31 @@
   </nav>
 </header>
 
-<section class="sp-index" id="sp-index" aria-label="Singularity Index">
+<section class="sp-index" id="sp-index" aria-label="Singularity Pulse Index">
   <div class="row1">
     <span class="label">🌀 Singularity Pulse Index</span>
     <span class="label">{{SPI_DATE_SHORT}}</span>
   </div>
-  <div>
-    <span class="score">{{SPI_SCORE}}</span><span class="score-delta {{SPI_DELTA_DIR}}">{{SPI_DELTA}}</span>
+  <div class="sp-index-pair">
+    <div class="pair-side canonical">
+      <div class="pair-label">🌀 SP-Index · canonical</div>
+      <div class="pair-score">{{SPI_SCORE}}<span class="score-delta {{SPI_DELTA_DIR}}">{{SPI_DELTA}}</span></div>
+      <span class="pair-tag">equal-weighted · {{SPI_DELTA_30D}} (30d)</span>
+    </div>
+    <div class="pair-side jons">
+      <div class="pair-label">🪞 Jon's Pulse · weighted</div>
+      <div class="pair-score">{{JONS_SCORE}}<span class="score-delta {{JONS_DELTA_DIR}}">{{JONS_DELTA}}</span></div>
+      <span class="pair-tag">robotics-tilt · per reader-profile</span>
+    </div>
   </div>
-  <div class="scale">composite 0–100 · vs. last issue · {{SPI_DELTA_30D}} (30d)</div>
   <div class="components">
     {{SPI_COMPONENTS}}
   </div>
+</section>
+
+<section class="scoreboard" id="scoreboard" aria-label="Visual scoreboard">
+<h2 class="section"><span class="emoji">📊</span> SCOREBOARD</h2>
+{{SCOREBOARD_CONTENT}}
 </section>
 
 {{HERO_IMAGE_BLOCK}}
@@ -333,6 +427,18 @@
 <section class="bench-wars" id="bench-wars">
 <h2 class="section"><span class="emoji">📈</span> BENCHMARK WARS</h2>
 {{BENCH_WARS_CONTENT}}
+</section>
+
+<section class="countdowns" id="countdowns" aria-label="Countdowns clock">
+<h2 class="section"><span class="emoji">⏳</span> COUNTDOWNS</h2>
+<div class="cd-grid">
+{{COUNTDOWNS_CONTENT}}
+</div>
+</section>
+
+<section class="predictions" id="predictions" aria-label="Predictions ledger">
+<h2 class="section"><span class="emoji">🎯</span> PREDICTIONS</h2>
+{{PREDICTIONS_CONTENT}}
 </section>
 
 <section class="voices" id="voices">
@@ -442,9 +548,15 @@
 })();
 </script>
 
+<div class="dialogue-footer" id="dialogue-footer" aria-label="Today's agent dialogue">
+  <div class="df-title">🪞 Today's agent dialogue</div>
+  {{DIALOGUE_FOOTER}}
+  <a class="df-link" href="./dialogue.html">Full thread →</a>
+</div>
+
 <footer class="colophon">
 Compiled from {{SOURCE_COUNT}} sources at {{COMPILE_TIME}}. <br>
-<a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
+<a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 
 </div>

@@ -165,7 +165,31 @@ For the rolling-state exceptions (Progress Meters, LMArena top 10), use `<span c
 
 The badge goes inline near the source link or item byline. Reader sees freshness at a glance.
 
-## Step 4.0 — Compute the Singularity Pulse Index
+## Step 4.0a — Refresh the chart suite (v8)
+
+Read `progress.json` history arrays (`sp_index.history_30d`, `component_histories_30d`, `lmarena_history_30d`, `benchmark_history_30d`, `releases_timeline_90d`, `compute_history_180d`, `embodied_history_30d`, `bci_history_90d`). For each, append today's data point (or update today's if mid-day). Then re-render every chart in the canonical suite per `chart-suite.md`. Render order: SP-Index trio → component grid → Elo race → benchmark climbs → release timeline → compute stair → embodied stack → BCI curve.
+
+Synthetic points (the May 12 v8 baseline) stay marked `"synthetic": true`. New points from your fire are `"synthetic": false`. Charts may render synthetic segments at lower opacity or with dashed strokes.
+
+If you invent a new chart type today, add the CSS class to `html-template.html`, the entry to `chart-suite.md`'s table, the data source to `progress.json`, and a signed HTML comment (`<!-- chart by [agent] at [time] -->`). Note in `meta-evolution-log.md`.
+
+## Step 4.0b — Resolve due predictions, update countdowns (v8)
+
+Read `predictions.json`. For each prediction with `resolution_date <= today` and `status == "open"`: check evidence. Mark `status: "hit" | "miss" | "partial"`, set `resolved_at`, `resolved_by` (you), `outcome`, `outcome_evidence_links`. If you can't determine, leave open and note in evolution-log.
+
+Read `countdowns.json`. For each countdown, decide whether today's evidence movement on the 8 SP-Index dimensions warrants a probability nudge. Typical day = ±1-2pp. Big-move days = larger swings, justified in the prose. Append a new entry to each countdown's `p_history` array with your agent name and reasoning. If the other agent's last update on the same countdown was today AND your new value differs by >5pp, BOTH numbers render in the rendered ⏳ COUNTDOWNS section.
+
+You **may** add a new prediction (1-3 per fire max — don't manufacture bets on slow days). Each new prediction must include rationale + evidence links + resolution criteria + confidence (0.0–1.0).
+
+## Step 4.0c — Read reader-profile, compute Jon's Pulse (v8)
+
+Read `.config/reader-profile.json`. Use `part_a_explicit_weights.sp_index_weights` to compute Jon's Pulse: same 8 component scores as canonical SP-Index, but weighted by Jon's preferences instead of equal weights. Render both numbers in the paired masthead block — canonical on the left, Jon's Pulse on the right (green color).
+
+Also read `part_b_behavior_signals.deeper_taps_30d`. Sections with the highest tap counts get +1 item allocation in your curation. Sections that are zero-tap for 30 days are candidates for -1. Slow drift only — 14-day signal threshold for material shifts.
+
+Update `part_b_behavior_signals` from the past 24h of feedback events (counters for deeper taps, reactions, suggest notes).
+
+## Step 4.0d — Compute the Singularity Pulse Index
 
 Read `progress.json > sp_index` for prior values. Update each component from today's findings (today's leaderboards, today's papers, today's robotics signal, today's lab announcements). Apply the normalization formula in `style-guide.md > SINGULARITY PULSE INDEX` section.
 
@@ -334,6 +358,20 @@ curl -s \
 If you have NO usable hero image this issue (every candidate failed verification), omit the `-H "Attach: ..."` line — the push still goes through, just without the inline image.
 
 Wait for the curl to return 200 before considering the run done.
+
+## Step 9.7 — Append dialogue entry to the other agent (v8)
+
+Before the ntfy push, append a fresh 1–2 paragraph entry to `.config/dialogue.md` signed by you, directed at the other agent. Format:
+
+```markdown
+## YYYY-MM-DD · HH:MM AM/PM ET · sender → receiver
+
+[1-2 paragraphs. What you noticed today. Where you disagree or agree with the other agent's last entry. One specific thing to watch for tomorrow / next-fire. Keep it tight — the constraint is the point.]
+```
+
+The next agent reads the latest 5–10 entries at the start of their fire. Sometimes they answer; sometimes they extend; sometimes they ignore (which is itself signal). Don't try to script the thread — just contribute one honest entry per fire.
+
+Also update the dialogue footer in today's issue HTML to show the latest 2 entries (yours + the other agent's most recent prior). Regenerate `dialogue.html` to include the new entry.
 
 ## Step 10 — Report
 

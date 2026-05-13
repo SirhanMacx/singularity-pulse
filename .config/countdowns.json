@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-05-12T20:30:00-04:00",
+  "_note": "Eight canonical singularity milestones. Each agent updates p_at_target daily based on evidence movement on the 8 SP-Index dimensions. Tiny moves (typical day) nudge 1–2pp. Big moves (rare day) swing more, justified in prose. When Claude and Codex disagree by >5pp on a single day's update, BOTH numbers render in the issue's COUNTDOWNS section.",
+  "countdowns": [
+    {
+      "id": "agi-metr-1mo",
+      "name": "AGI · METR 1-month autonomy",
+      "tagline": "AI completes 1-month tasks at 50% human reliability",
+      "target_date": "2028-12-31",
+      "p_at_target": 0.50,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.50, "evidence": "v8 baseline — METR last published Q1 2026 with ~1h horizon, doubling time ~5.7mo → 1mo by mid-2028 is plausible-not-certain", "synthetic": false}
+      ],
+      "resolution_criteria": "METR or successor benchmark publishes a 50%-completion result on a curated set of 1-month-wall-clock tasks with no human intervention beyond setup."
+    },
+    {
+      "id": "rsi",
+      "name": "RSI · AI trains AI better than humans",
+      "tagline": "AI-designed training run beats human-designed at frontier scale",
+      "target_date": "2027-12-31",
+      "p_at_target": 0.30,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.30, "evidence": "v8 baseline — Anthropic's automated-alignment-research signal (Import AI #454) + AlphaEvolve scale-out point in this direction, but no public training-run yet shows clear AI-designed > human-designed at frontier scale", "synthetic": false}
+      ],
+      "resolution_criteria": "A frontier-tier model (top-5 on LMArena) is publicly attributed to an AI-designed training pipeline (data mix, hyperparams, architecture choice), with the lab acknowledging the AI's contribution exceeded the humans-in-loop."
+    },
+    {
+      "id": "country-of-geniuses",
+      "name": "Country of Geniuses (Amodei)",
+      "tagline": "Datacenters running millions of Nobel-laureate-equivalent AI workers",
+      "target_date": "2027-01-31",
+      "p_at_target": 0.25,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.25, "evidence": "v8 baseline — Amodei framed his ~18-month window in Jan 2026, target ≈ mid-2027. 25% reflects: capability composite trending fast (GPQA 94, SWE-bench-Pro 64, autonomy 1h) BUT no public deployment yet at the scale he described.", "synthetic": false}
+      ],
+      "resolution_criteria": "A major lab publicly confirms running a population of AI agents at frontier-Nobel-laureate-equivalent capability on real research/economic tasks at scale (≥10k parallel instances doing independent novel work)."
+    },
+    {
+      "id": "asi",
+      "name": "ASI · superintelligence",
+      "tagline": "AI exceeds top human experts across every domain",
+      "target_date": "2030-12-31",
+      "p_at_target": 0.20,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.20, "evidence": "v8 baseline — broader claim than AGI. Currently no domain where AI demonstrably exceeds top human experts on novel work (vs. benchmark performance). 2030 horizon plausible if RSI lands first.", "synthetic": false}
+      ],
+      "resolution_criteria": "Peer-reviewed evidence that an AI system measurably exceeds top human expert performance on novel research tasks (not just benchmark performance) across 5+ disparate domains."
+    },
+    {
+      "id": "vinge-2030",
+      "name": "Vinge Singularity (2030 baseline)",
+      "tagline": "Vinge's 1993 prediction window closes",
+      "target_date": "2030-12-31",
+      "p_at_target": 0.10,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.10, "evidence": "v8 baseline — Vinge's 'between 2005 and 2030' framing. Probability low because the strict 'fall of the human era' framing is uncalibrated; loose readings (transformative AI) overlap with AGI/ASI countdowns above.", "synthetic": false}
+      ],
+      "resolution_criteria": "Subjective — broad consensus among AI safety researchers + policymakers that the post-Vinge era has begun. Track community sentiment surveys; resolve when ≥70% of named-researcher surveys agree."
+    },
+    {
+      "id": "kurzweil-2045",
+      "name": "Kurzweil Singularity (2045)",
+      "tagline": "Kurzweil's long-tail anchor",
+      "target_date": "2045-12-31",
+      "p_at_target": 0.55,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.55, "evidence": "v8 baseline — Kurzweil's 2045 has a 19-year runway from today. Given current curve velocity, >50% probability is reasonable, but the specific definition (merger of biological + digital intelligence) is harder to operationalize than AGI/ASI.", "synthetic": false}
+      ],
+      "resolution_criteria": "Combined human-AI cognition becomes the default mode of frontier intellectual work (BCI bandwidth + AI co-cognition deployed at >1M people scale, with measurable capability gains)."
+    },
+    {
+      "id": "robotic-turing",
+      "name": "First robotic Turing test pass",
+      "tagline": "Humanoid indistinguishable from human at a physical task",
+      "target_date": "2029-12-31",
+      "p_at_target": 0.35,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.35, "evidence": "v8 baseline — Figure 02 at BMW (5mm precision, 1250 hrs) + Physical Intelligence π0.7 + Skild Brain suggest the embodied-foundation-model stack is closing fast. 2029 horizon = 3.5 years; current capability gap is bigger than the AI Turing gap was 3 years pre-ChatGPT.", "synthetic": false}
+      ],
+      "resolution_criteria": "Humanoid completes a physical task (assembly, navigation, manipulation, social interaction) in a blind, time-bounded setting peer-witnessed by ≥3 independent observers who cannot distinguish from a human at the same task."
+    },
+    {
+      "id": "ai-nature-author",
+      "name": "AI co-authors Nature paper as primary author",
+      "tagline": "Editorial endorsement of an AI as first/corresponding author",
+      "target_date": "2028-12-31",
+      "p_at_target": 0.40,
+      "p_history": [
+        {"date": "2026-05-12", "agent": "claude", "p": 0.40, "evidence": "v8 baseline — AlphaEvolve scale-out, Thinking Machines' Interaction Models post, and Anthropic's automated-alignment-research direction all point at AI-doing-science crossing into recognizable research output. Nature specifically (not just preprints) is a hard gate; 2028 plausible.", "synthetic": false}
+      ],
+      "resolution_criteria": "Nature accepts a paper with an AI system listed as first or corresponding author, with the journal's editorial endorsement of the attribution. Preprints, lab whitepapers, and co-author lists with AI buried below human authors do NOT count."
+    }
+  ]
+}

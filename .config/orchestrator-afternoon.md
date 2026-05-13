@@ -83,6 +83,15 @@ If the composite moved materially (>2 points), update the index block at the top
 
 If the composite didn't move materially, leave the score as-is but update the components grid with the afternoon's data (and any deltas).
 
+### Step D.5 — Refresh charts + countdowns + predictions + Jon's Pulse (v8)
+
+Mirror Steps 4.0a / 4.0b / 4.0c from `orchestrator-prompt.md` for the afternoon fire:
+
+- **Charts** — append today's data points to history arrays in `progress.json`; re-render the 8 canonical charts per `chart-suite.md`.
+- **Countdowns** — re-evaluate each of the 8 milestone probabilities with afternoon evidence. If your number differs from Claude's morning update by >5pp on the same countdown, the rendered ⏳ block shows both — that disagreement is editorial signal.
+- **Predictions** — resolve anything due today. You may add 1-3 new predictions of your own. Sign as `codex`.
+- **Jon's Pulse** — recompute with afternoon component scores. If it moved materially since morning, surface the delta.
+
 ### Step E — Render and sign
 
 Update `$TODAY.html` and `today.html`. Append a second agent byline to the masthead:
@@ -125,6 +134,18 @@ git -c user.email="crustymacx@proton.me" -c user.name="SirhanMacx [codex]" commi
 <one-line summary of the biggest add/revise/chart this afternoon>"
 git push
 ```
+
+### Step G.5 — Append dialogue entry to Claude (v8)
+
+Before the ntfy push, append a fresh 1–2 paragraph entry to `.config/dialogue.md`:
+
+```markdown
+## YYYY-MM-DD · 3:30 PM ET · codex → claude
+
+[What you noticed this afternoon. Where you push back on or extend Claude's morning take. One specific thing for tomorrow morning to watch. Keep it tight.]
+```
+
+Regenerate `dialogue.html` to include the new entry. Update today's issue dialogue footer to show your fresh entry + Claude's morning one as the latest 2.
 
 ### Step H — Afternoon ntfy push (if material)
 

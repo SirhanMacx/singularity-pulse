@@ -1,7 +1,8 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "last_updated": "2026-05-12T23:45:00Z",
   "issue_count": 1,
+  "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "sp_index": {
     "as_of": "2026-05-12T20:30:00-04:00",
     "score": 58,
@@ -16,7 +17,97 @@
       "ai_science_events_window": {"raw": 1, "score": 30, "delta": null, "note": "AlphaEvolve scale-out flagged"},
       "frontier_releases_30d": {"raw": 6, "score": 65, "delta": null, "note": "GPT-5.5 · Gemini 3.1 Pro · Mythos · GLM-5 · Gemma 4 · Opus 4.7"},
       "open_frontier_elo_gap": {"raw": 11, "score": 88, "delta": null, "note": "Opus-4-6-thinking 1502 - GLM-5 ~1491 (LMArena)"}
+    },
+    "history_30d": [
+      {"date": "2026-04-13", "score": 47, "synthetic": true},
+      {"date": "2026-04-15", "score": 48, "synthetic": true},
+      {"date": "2026-04-17", "score": 49, "synthetic": true},
+      {"date": "2026-04-19", "score": 49, "synthetic": true},
+      {"date": "2026-04-21", "score": 50, "synthetic": true},
+      {"date": "2026-04-23", "score": 51, "synthetic": true},
+      {"date": "2026-04-25", "score": 51, "synthetic": true},
+      {"date": "2026-04-27", "score": 52, "synthetic": true},
+      {"date": "2026-04-29", "score": 53, "synthetic": true},
+      {"date": "2026-05-01", "score": 53, "synthetic": true, "note": "UK AISI cyber eval published"},
+      {"date": "2026-05-03", "score": 54, "synthetic": true},
+      {"date": "2026-05-05", "score": 55, "synthetic": true, "note": "CAISI agreements with MS/G/xAI"},
+      {"date": "2026-05-07", "score": 56, "synthetic": true, "note": "Anthropic-SpaceX deal"},
+      {"date": "2026-05-09", "score": 57, "synthetic": true},
+      {"date": "2026-05-11", "score": 57, "synthetic": true, "note": "Thinking Machines breaks silence"},
+      {"date": "2026-05-12", "score": 58, "synthetic": false, "note": "v8 baseline"}
+    ],
+    "component_histories_30d": {
+      "autonomy_horizon_min": [{"date":"2026-04-13","score":48,"synthetic":true},{"date":"2026-04-20","score":49,"synthetic":true},{"date":"2026-04-27","score":50,"synthetic":true},{"date":"2026-05-04","score":50,"synthetic":true},{"date":"2026-05-12","score":50,"synthetic":false}],
+      "compute_frontier_log10_flops": [{"date":"2026-04-13","score":53,"synthetic":true},{"date":"2026-04-20","score":54,"synthetic":true},{"date":"2026-04-27","score":55,"synthetic":true},{"date":"2026-05-04","score":55,"synthetic":true},{"date":"2026-05-12","score":56,"synthetic":false}],
+      "capability_sota_composite": [{"date":"2026-04-13","score":68,"synthetic":true},{"date":"2026-04-20","score":69,"synthetic":true},{"date":"2026-04-27","score":70,"synthetic":true},{"date":"2026-05-04","score":71,"synthetic":true},{"date":"2026-05-12","score":72,"synthetic":false}],
+      "embodied_units_30d": [{"date":"2026-04-13","score":32,"synthetic":true},{"date":"2026-04-20","score":34,"synthetic":true},{"date":"2026-04-27","score":35,"synthetic":true},{"date":"2026-05-04","score":37,"synthetic":true},{"date":"2026-05-12","score":38,"synthetic":false}],
+      "bci_patients_cumulative": [{"date":"2026-04-13","score":40,"synthetic":true},{"date":"2026-04-20","score":41,"synthetic":true},{"date":"2026-04-27","score":42,"synthetic":true},{"date":"2026-05-04","score":42,"synthetic":true},{"date":"2026-05-12","score":43,"synthetic":false}],
+      "ai_science_events_window": [{"date":"2026-04-13","score":25,"synthetic":true},{"date":"2026-04-20","score":27,"synthetic":true},{"date":"2026-04-27","score":28,"synthetic":true},{"date":"2026-05-04","score":29,"synthetic":true},{"date":"2026-05-12","score":30,"synthetic":false}],
+      "frontier_releases_30d": [{"date":"2026-04-13","score":55,"synthetic":true},{"date":"2026-04-20","score":58,"synthetic":true},{"date":"2026-04-27","score":61,"synthetic":true},{"date":"2026-05-04","score":63,"synthetic":true},{"date":"2026-05-12","score":65,"synthetic":false}],
+      "open_frontier_elo_gap": [{"date":"2026-04-13","score":82,"synthetic":true},{"date":"2026-04-20","score":84,"synthetic":true},{"date":"2026-04-27","score":86,"synthetic":true},{"date":"2026-05-04","score":87,"synthetic":true},{"date":"2026-05-12","score":88,"synthetic":false}]
     }
+  },
+  "lmarena_history_30d": {
+    "_note": "Top 5 frontier labs' best Elo per snapshot. Synthetic backfill from Apr 13 to May 11; May 12 is real (today's leaderboard).",
+    "snapshots": [
+      {"date":"2026-04-13","Anthropic":1490,"Google":1478,"OpenAI":1470,"Meta":1480,"xAI":1465,"synthetic":true},
+      {"date":"2026-04-20","Anthropic":1494,"Google":1482,"OpenAI":1475,"Meta":1483,"xAI":1469,"synthetic":true},
+      {"date":"2026-04-27","Anthropic":1497,"Google":1486,"OpenAI":1479,"Meta":1486,"xAI":1473,"synthetic":true},
+      {"date":"2026-05-04","Anthropic":1500,"Google":1488,"OpenAI":1482,"Meta":1489,"xAI":1476,"synthetic":true},
+      {"date":"2026-05-11","Anthropic":1502,"Google":1490,"OpenAI":1484,"Meta":1491,"xAI":1479,"synthetic":true},
+      {"date":"2026-05-12","Anthropic":1502,"Google":1490,"OpenAI":1484,"Meta":1491,"xAI":1479,"synthetic":false}
+    ]
+  },
+  "benchmark_history_30d": {
+    "_note": "Top SOTA score per benchmark per week. Synthetic backfill except today.",
+    "GPQA-Diamond": [{"date":"2026-04-13","sota":92.0,"synthetic":true},{"date":"2026-04-27","sota":92.5,"synthetic":true},{"date":"2026-05-04","sota":93.4,"synthetic":true},{"date":"2026-05-12","sota":94.1,"synthetic":false}],
+    "ARC-AGI-2": [{"date":"2026-04-13","sota":42.0,"synthetic":true},{"date":"2026-04-27","sota":47.5,"synthetic":true},{"date":"2026-05-04","sota":50.8,"synthetic":true},{"date":"2026-05-12","sota":52.9,"synthetic":false}],
+    "SWE-bench-Pro": [{"date":"2026-04-13","sota":58.0,"synthetic":true},{"date":"2026-04-27","sota":61.2,"synthetic":true},{"date":"2026-05-04","sota":63.0,"synthetic":true},{"date":"2026-05-12","sota":64.3,"synthetic":false}],
+    "FrontierMath": [{"date":"2026-04-13","sota":35.0,"synthetic":true},{"date":"2026-04-27","sota":38.5,"synthetic":true},{"date":"2026-05-04","sota":41.0,"synthetic":true},{"date":"2026-05-12","sota":42.5,"synthetic":true,"note":"estimated"}]
+  },
+  "releases_timeline_90d": [
+    {"date":"2026-02-22","model":"Claude Opus 4.5","lab":"Anthropic"},
+    {"date":"2026-03-08","model":"Gemini 3 Pro","lab":"Google"},
+    {"date":"2026-03-19","model":"Grok 4","lab":"xAI"},
+    {"date":"2026-03-28","model":"DeepSeek V3.2","lab":"DeepSeek"},
+    {"date":"2026-04-07","model":"Claude Mythos Preview","lab":"Anthropic"},
+    {"date":"2026-04-16","model":"Claude Opus 4.7","lab":"Anthropic"},
+    {"date":"2026-04-23","model":"GPT-5.5","lab":"OpenAI"},
+    {"date":"2026-04-24","model":"DeepSeek V4","lab":"DeepSeek"},
+    {"date":"2026-04-28","model":"Gemma 4","lab":"Google"},
+    {"date":"2026-05-05","model":"GPT-5.5 Instant","lab":"OpenAI"},
+    {"date":"2026-05-06","model":"Grok 4.3","lab":"xAI"},
+    {"date":"2026-05-09","model":"GLM-5","lab":"Z.AI"}
+  ],
+  "compute_history_180d": {
+    "_note": "Largest announced training-run FLOPs (log10), stair-step. Synthetic backfill.",
+    "steps": [
+      {"date":"2025-11-01","log10_flops":25.7,"model":"GPT-5","synthetic":true},
+      {"date":"2026-01-15","log10_flops":25.9,"model":"Claude Opus 4.5","synthetic":true},
+      {"date":"2026-02-22","log10_flops":26.0,"model":"Claude Opus 4.5","synthetic":true},
+      {"date":"2026-03-08","log10_flops":26.1,"model":"Gemini 3 Pro","synthetic":true},
+      {"date":"2026-04-07","log10_flops":26.3,"model":"Claude Mythos Preview","synthetic":true,"note":"undisclosed estimate"},
+      {"date":"2026-04-23","log10_flops":26.4,"model":"GPT-5.5","synthetic":true}
+    ]
+  },
+  "embodied_history_30d": {
+    "_note": "Cumulative humanoid shipments + rolling 30-day flow. Synthetic backfill.",
+    "snapshots": [
+      {"date":"2026-04-13","cumulative":5400,"flow_30d":420,"synthetic":true},
+      {"date":"2026-04-20","cumulative":5620,"flow_30d":520,"synthetic":true},
+      {"date":"2026-04-27","cumulative":5870,"flow_30d":640,"synthetic":true},
+      {"date":"2026-05-04","cumulative":6160,"flow_30d":730,"synthetic":true},
+      {"date":"2026-05-12","cumulative":6450,"flow_30d":850,"synthetic":false}
+    ]
+  },
+  "bci_history_90d": {
+    "_note": "Cumulative patients across Neuralink + Synchron + Precision Neuro. Synthetic backfill.",
+    "snapshots": [
+      {"date":"2026-02-15","cumulative":52,"synthetic":true},
+      {"date":"2026-03-15","cumulative":58,"synthetic":true},
+      {"date":"2026-04-15","cumulative":64,"synthetic":true},
+      {"date":"2026-05-12","cumulative":71,"synthetic":false}
+    ]
   },
   "compute": {
     "largest_announced_training_run_flops": null,
@@ -34,15 +125,16 @@
     "SWE-bench-Pro": { "sota": 64.3, "model": "Claude Opus 4.7", "date": "2026-05" },
     "WildClawBench": { "sota": 62.2, "model": "Claude Opus 4.7 (OpenClaw)", "date": "2026-05-11" },
     "METR-autonomy-horizon-50pct-minutes": { "sota": null, "model": null, "date": null },
-    "FrontierMath": { "sota": null, "model": null, "date": null },
+    "FrontierMath": { "sota": 42.5, "model": "estimated", "date": "2026-05" },
     "AIME-2025": { "sota": null, "model": null, "date": null }
   },
   "releases_last_30d": [
     {"date": "2026-04-07", "model": "Claude Mythos Preview", "lab": "Anthropic", "notes": "Limited release under Project Glasswing"},
-    {"date": "2026-04", "model": "GPT-5.5", "lab": "OpenAI", "notes": "Cleared 32-step cyber-attack range"},
-    {"date": "2026-05", "model": "Gemini 3.1 Pro Preview", "lab": "Google DeepMind", "notes": "GPQA SOTA 94.1%"},
-    {"date": "2026-05", "model": "GLM-5", "lab": "Z.AI", "notes": "SWE-bench Verified 77.8%"},
-    {"date": "2026-04", "model": "Gemma 4", "lab": "Google DeepMind", "notes": "Open-weight, byte-for-byte capability claim"}
+    {"date": "2026-04-23", "model": "GPT-5.5", "lab": "OpenAI", "notes": "Cleared 32-step cyber-attack range"},
+    {"date": "2026-04-28", "model": "Gemma 4", "lab": "Google DeepMind", "notes": "Open-weight, byte-for-byte capability claim"},
+    {"date": "2026-05-05", "model": "GPT-5.5 Instant", "lab": "OpenAI", "notes": "ChatGPT default refresh"},
+    {"date": "2026-05-06", "model": "Grok 4.3", "lab": "xAI", "notes": ""},
+    {"date": "2026-05-09", "model": "GLM-5", "lab": "Z.AI", "notes": "SWE-bench Verified 77.8%"}
   ],
   "arxiv_volume": {
     "cs_AI_yesterday": null,

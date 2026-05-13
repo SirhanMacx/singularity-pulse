@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-05-12T20:30:00-04:00",
+  "_note": "Append-only ledger of dated predictions made by either agent or quoted from researchers. Each fire MAY add predictions (not required — don't manufacture bets on slow days) and MUST check for predictions resolving today, marking hit/miss/partial with evidence. Calibration scores per agent computed by the weekly meta-cron after ~30 resolutions per agent.",
+  "predictions": [
+    {
+      "id": "p-2026-05-12-001",
+      "made_at": "2026-05-12T20:30:00-04:00",
+      "made_by": "claude",
+      "claim": "OpenAI announces a Glasswing-equivalent defender consortium / cybersecurity productization track within 30 days.",
+      "resolution_date": "2026-06-11",
+      "resolution_criteria": "Public press release or product page on openai.com OR a credible WSJ/Bloomberg/Information report citing on-record OpenAI sources naming a defender consortium.",
+      "confidence": 0.55,
+      "evidence_links_at_time_of_making": [
+        "https://www.anthropic.com/glasswing",
+        "https://andrew.ooo/answers/aisi-cyber-eval-gpt-5-5-vs-mythos-vs-opus-may-2026/"
+      ],
+      "rationale": "GPT-5.5 cleared the same 32-step cyber-attack range three weeks after Mythos and beats Mythos 71.4% vs 68.6% on UK AISI Expert-Cyber. OpenAI hasn't matched Glasswing structurally, but the gap is now competitive pressure not capability gap. 30-day horizon: aggressive but Sam Altman's product cadence has historically been 2-4 weeks behind Anthropic on capability-class moves.",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
+    },
+    {
+      "id": "p-2026-05-12-002",
+      "made_at": "2026-05-12T20:30:00-04:00",
+      "made_by": "claude",
+      "claim": "Google's Gemini Omni video model is announced as a Veo successor at Google I/O (May 19–20 2026) with in-chat editing and camera-angle controls.",
+      "resolution_date": "2026-05-21",
+      "resolution_criteria": "Public Google I/O keynote OR blog post on deepmind.google or blog.google announcing 'Omni' (or close-name variant) with the specific features.",
+      "confidence": 0.75,
+      "evidence_links_at_time_of_making": [
+        "https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/"
+      ],
+      "rationale": "TestingCatalog captured UI string 'Powered by Omni' next to Toucan in Gemini video tab on May 11. UI brand-name copy at this fidelity is late-stage release prep; I/O is 7 days out. The 25% chance it doesn't ship at I/O accounts for naming-change or delay scenarios.",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
+    },
+    {
+      "id": "p-2026-05-12-003",
+      "made_at": "2026-05-12T20:30:00-04:00",
+      "made_by": "claude",
+      "claim": "Meta's stealth-launched 'muse-spark' on LMArena gets a public Llama-line announcement within 7 days.",
+      "resolution_date": "2026-05-19",
+      "resolution_criteria": "ai.meta.com/blog or Zuckerberg/LeCun public statement attributing 'muse-spark' to a named Llama or Meta foundation model.",
+      "confidence": 0.65,
+      "evidence_links_at_time_of_making": [
+        "https://arena.ai/leaderboard"
+      ],
+      "rationale": "Stealth-launched anonymous models at top-10 LMArena positions have historically been announced within 7-14 days of leaderboard appearance (pattern from prior Llama, Gemini-preview, DeepSeek launches). muse-spark is at #5 today at Elo 1491 — top quartile of stealth-to-announce window. Google I/O is May 19–20; Meta has incentive to land before that.",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
+    },
+    {
+      "id": "p-2026-05-12-quoted-001",
+      "made_at": "2026-05-12T20:30:00-04:00",
+      "made_by": "quoted:DarioAmodei",
+      "claim": "A 'country of geniuses in a datacenter' by ~early 2027 (within 18 months of Jan 2026 framing).",
+      "resolution_date": "2027-07-26",
+      "resolution_criteria": "Same as countdown 'country-of-geniuses' in countdowns.json. We track this both as a countdown (probability-over-time) AND as a quoted prediction (single resolution).",
+      "confidence": "Amodei's stated framing — not pinned to a number publicly; tracked here as ~0.50 per the speaker's tone.",
+      "evidence_links_at_time_of_making": [
+        "https://www.axios.com/2026/01/26/anthropic-ai-dario-amodei-humanity"
+      ],
+      "rationale": "Captured as the load-bearing public prediction from the most-quoted frontier-lab CEO in 2026. Resolution will inform AGI/ASI countdowns by extension.",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
+    },
+    {
+      "id": "p-2026-05-12-quoted-002",
+      "made_at": "2026-05-12T20:30:00-04:00",
+      "made_by": "quoted:JackClark",
+      "claim": "60%+ probability that no-human-involved AI R&D occurs by end of 2028.",
+      "resolution_date": "2028-12-31",
+      "resolution_criteria": "Public attribution (paper, lab blog, peer-reviewed claim) that a frontier-tier research result was produced by AI systems with no human intervention at any stage from hypothesis-generation through write-up. Single instance suffices.",
+      "confidence": 0.60,
+      "evidence_links_at_time_of_making": [
+        "https://jack-clark.net/"
+      ],
+      "rationale": "Captured from Import AI #455 (May 4 2026). Clark's stated probability; we track it as our own prediction with same confidence + resolution. Connects directly to AI-Nature-author countdown above.",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
+    }
+  ],
+  "calibration_per_agent": {
+    "_note": "Computed by the weekly meta-cron after each agent has ≥30 resolved predictions. Until then, this section stays sparse.",
+    "claude": {"resolved": 0, "hit": 0, "miss": 0, "partial": 0, "within_band_pct": null},
+    "codex": {"resolved": 0, "hit": 0, "miss": 0, "partial": 0, "within_band_pct": null}
+  }
+}
