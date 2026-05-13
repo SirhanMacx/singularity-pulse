@@ -44,7 +44,9 @@ In a single message with multiple tool calls, fetch from all source categories a
 
 **RSS feeds** — `WebFetch` each URL in `sources.yml > rss`. Parse for items in the last 24h.
 
-**Adjacent frontier** — `WebFetch` the URLs under `sources.yml > adjacent_frontier`. Same recency filter.
+**Robotics** — `WebFetch` each URL under `sources.yml > robotics` (humanoid_companies, foundation_models, research_labs, autonomy). Robotics is now its own first-class section. Capture: production milestones (hours logged, units shipped, $/unit), foundation-model drops (π-series, Skild Brain, GR00T), and factory deployment news.
+
+**Adjacent frontier** — `WebFetch` the URLs under `sources.yml > adjacent_frontier`. (Robotics moved to its own section.) Same recency filter.
 
 **Rumor / leak accounts** — for each handle in `sources.yml > twitter_rumor_accounts` use `agent-reach` to pull their last 48h. These are the source for the LEAKS & RUMORS section. Particularly watch for: UI strings with brand names, code-name appearances in product copy, system-prompt leaks, anonymous-model appearances on leaderboards.
 
@@ -54,9 +56,9 @@ In a single message with multiple tool calls, fetch from all source categories a
 
 Tolerate failures: if a source 404s or rate-limits, log it to `run-log.jsonl` and proceed. Never block the issue on one bad source.
 
-## Step 4 — Curate into eleven sections
+## Step 4 — Curate into twelve sections
 
-Follow `style-guide.md` exactly. The eleven sections, in order:
+Follow `style-guide.md` exactly. The twelve sections, in order:
 
 1. **🔥 TOP SIGNAL** — single most important development. 2–3 paragraphs, ~300 words. P1: what happened. P2: why it matters. P3 (optional): what to watch. Pick hero image URL — verify 200 with WebFetch before locking.
 2. **⚡ THE STACK** — 4–6 secondary stories. Verb-led headline + 2–3 sentence take + inline source link.
@@ -65,10 +67,11 @@ Follow `style-guide.md` exactly. The eleven sections, in order:
 5. **💬 VOICES** — 3–5 items. Mix EMBEDDED TWEETS (`<blockquote class="twitter-tweet">` — widgets.js in the template renders these as cards) with plain blockquotes for non-Twitter quotes. Aim 2-3 embedded + 1-2 plain.
 6. **🎬 TRENDING VIDEOS** — 2–3 YouTube embeds (iframe to `https://www.youtube.com/embed/VIDEO_ID`). Title + 1-2 sentence why-it-matters caption per video.
 7. **📜 PAPERS WORTH KNOWING** — 2–3 arXiv picks. Title (linked) + plain-English what + why-you-care + authors.
-8. **🧬 ADJACENT FRONTIER** — 1–2 items from BCI/longevity/robotics/space/biotech.
-9. **📊 PROGRESS METERS** — 10-15 rows of monospace deltas. Pull prior values from `progress.json`, compute deltas with ↑↓→ arrows, rewrite `progress.json`.
-10. **🔮 ON THE HORIZON** — ~80-word speculative forward-look grounded in current trends.
-11. **🎯 WORTH WATCHING** — ~30-word specific-and-dated item.
+8. **🤖 ROBOTICS** — 2–4 items. Mix humanoid company news (Figure/Tesla/1X/Atlas/Unitree/Apptronik/Sanctuary/Agility/UBTech), foundation-model drops (Physical Intelligence π-series, Skild Brain, NVIDIA GR00T, DeepMind RT-line, World Labs), and scale signal (units shipped, factory capacity, revenue). Same `<div class="stack-item">` shape as THE STACK.
+9. **🧬 ADJACENT FRONTIER** — 1–2 items from BCI/longevity/space/biotech (robotics is now its own section).
+10. **📊 PROGRESS METERS** — 10-15 rows of monospace deltas. Pull prior values from `progress.json`, compute deltas with ↑↓→ arrows, rewrite `progress.json`.
+11. **🔮 ON THE HORIZON** — ~80-word speculative forward-look grounded in current trends.
+12. **🎯 WORTH WATCHING** — ~30-word specific-and-dated item.
 
 **Dedupe**: Before locking in a story, check `seen-stories.json`. If URL or near-duplicate headline appeared in last 3 issues AND nothing materially new — skip.
 
@@ -91,6 +94,7 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these place
 - `{{VOICES_CONTENT}}` → mix of `<blockquote class="twitter-tweet">` (embedded tweet cards — for real X status URLs) AND `<blockquote class="voice">` (plain). Embedded format: `<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Tweet text...</p><span class="handle">— Name (<strong>@handle</strong>) · <a href="https://x.com/handle/status/ID">view on X</a></span></blockquote>`. The `widgets.js` script is already in the template.
 - `{{VIDEOS_CONTENT}}` → series of `<div class="video"><div class="frame-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="..." loading="lazy" allowfullscreen></iframe></div><div class="vmeta"><p class="vtitle">Title</p><p class="vbody">1-2 sentences.</p></div></div>` blocks. Verify each VIDEO_ID embeds (some videos disable embedding).
 - `{{PAPERS_CONTENT}}` → series of `<div class="paper">...</div>` blocks
+- `{{ROBOTICS_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>` (same shape as stack)
 - `{{ADJACENT_CONTENT}}` → same shape as stack items
 - `{{METERS_CONTENT}}` → series of `<div class="meter-row"><span class="label">LABEL</span><span>VALUE <span class="delta-up">↑0.5</span></span></div>`
 - `{{HORIZON_CONTENT}}` → HTML prose

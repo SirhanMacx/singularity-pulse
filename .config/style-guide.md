@@ -20,7 +20,7 @@ Karpathy-meets-Stratechery. Direct, opinionated, technically literate, but reada
 8. **No "we" or "us."** Singular, observant voice.
 9. **One hero image per issue.** TOP SIGNAL gets it. Don't pad with stock visuals.
 
-## Sections (in this order — 11 sections total, ~15-22 min total read)
+## Sections (in this order — 12 sections total, ~17-25 min total read)
 
 ### 🔥 TOP SIGNAL (2–3 paragraphs, ~300 words)
 Most important development of the past 24 hours. P1: what happened (concrete, numbers). P2: why it matters (the real insight). P3 (optional): what to watch next. Picks ONE hero image — verify the URL returns 200 before locking.
@@ -69,8 +69,18 @@ arXiv picks from cs.AI/cs.LG/cs.CL, last 24h. Per paper:
 
 Skip incremental work. Look for new capability demos, surprising negatives, novel architectures, alignment findings, anything Karpathy or LeCun retweets.
 
+### 🤖 ROBOTICS (2–4 items)
+NEW SECTION. Embodied AI is the second curve of the singularity — track it as first-class signal. Pull from `sources.yml > robotics` (humanoid_companies, foundation_models, research_labs, autonomy). Mix:
+- **Humanoid company news** (Figure, Tesla Optimus, 1X, Boston Dynamics Atlas, Unitree, UBTech, Agility Digit, Apptronik, Sanctuary) — production milestones, factory pilots, hour counts, fleet deployments.
+- **Foundation model drops** (Physical Intelligence π-series, Skild Brain, NVIDIA GR00T, DeepMind RT-line, World Labs spatial) — these are the "GPT moment" for embodied AI.
+- **Scale signal** — units shipped, units deployed, $/unit, factory capacity, revenue. Robotics moves on industrial-scale numbers; report them.
+
+Each item: verb-led `<h3>` headline + 2-3 sentence take + inline source link. Same `.stack-item` shape as THE STACK. If a single robotics story is huge (e.g., a new foundation model release), give it a 4-5 sentence treatment.
+
+If today's robotics haul has nothing worth lifting, ship one item or skip the section entirely. Don't pad.
+
 ### 🧬 ADJACENT FRONTIER (1–2 items)
-BCI / longevity / robotics / space / biotech. Same punchy roundup format as STACK. Framing: how-this-bends-the-curve. Don't force it — better one good item than two padded ones.
+BCI / longevity / space / biotech. (Robotics moved to its own section above.) Same punchy roundup format as STACK. Framing: how-this-bends-the-curve. Don't force it — better one good item than two padded ones.
 
 ### 📊 PROGRESS METERS (10-15 rows)
 Monospace rows in `.meters`. Pull from `progress.json`. Each row: label + value + delta arrow.

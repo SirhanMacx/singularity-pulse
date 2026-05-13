@@ -24,6 +24,15 @@ twitter:
   - AIExplainedYT     # AI Explained channel
   - dwarkesh_sp       # Dwarkesh Patel
   - lexfridman        # Lex Fridman
+  # Robotics & embodied AI
+  - adcock_brett      # Brett Adcock (Figure AI CEO)
+  - ericjang11        # Eric Jang (1X Technologies VP AI)
+  - chris_paxton      # Chris Paxton (robotics researcher)
+  - DrJimFan          # Jim Fan (NVIDIA GR00T lead) — already above, kept here too
+  - svlevine          # Sergey Levine (Physical Intelligence cofounder)
+  - chelseafinn       # Chelsea Finn (Physical Intelligence cofounder)
+  - DeepakPathakAI    # Deepak Pathak (Skild AI cofounder)
+  - akhaliq           # AK — research paper curator (often surfaces robotics drops)
 
 # X/Twitter accounts to monitor specifically for LEAKS & RUMORS
 twitter_rumor_accounts:
@@ -107,22 +116,49 @@ leaderboards:
   - https://epoch.ai/benchmarks        # Epoch AI capability tracking
   - https://lmmarketcap.com/benchmarks
 
+# Robotics & embodied AI — now its own first-class section (🤖 ROBOTICS)
+# Pull from these every issue. At least one item per issue when signal exists.
+robotics:
+  humanoid_companies:
+    - https://www.figure.ai/news               # Figure 02 / 03 (BMW pilot, factory floor)
+    - https://bostondynamics.com/news/         # Atlas electric, Hyundai + DeepMind partnerships
+    - https://www.1x.tech/discover             # 1X Neo, Eve
+    - https://www.tesla.com/AI                 # Tesla Optimus
+    - https://agilityrobotics.com/news         # Digit (Amazon fulfillment)
+    - https://www.apptronik.com/news           # Apollo
+    - https://www.sanctuary.ai/news            # Phoenix
+    - https://www.unitree.com/news             # H1, G1, Go2
+    - https://www.kuavorobotics.com/           # Kuavo (China)
+    - https://www.ubtrobot.com/en/news/        # UBTech (Walker)
+  foundation_models:
+    - https://www.pi.website/blog              # Physical Intelligence (π0, π0.5, π0.7+)
+    - https://www.skild.ai/blogs               # Skild Brain
+    - https://developer.nvidia.com/isaac-gr00t # NVIDIA Project GR00T
+    - https://world-labs.ai/blog               # Fei-Fei Li's World Labs (spatial intelligence)
+  research_labs:
+    - https://www.google.com/intl/en_us/deepmind/research/  # DeepMind robotics (RT-2 line)
+    - https://covariant.ai/news                # Covariant
+    - https://www.anduril.com/articles/        # Defense robotics
+  autonomy:
+    - https://www.waymo.com/blog/              # AV — autonomous-driving signal
+    - https://www.figure.ai/news
+
 adjacent_frontier:
   bci:
     - https://neuralink.com/blog/
     - https://www.synchron.com/post-content
-  robotics:
-    - https://bostondynamics.com/news/
-    - https://www.figure.ai/news
+    - https://www.precisionneuro.io/news
   space:
     - https://www.spacex.com/updates/
     - https://blueorigin.com/news
+    - https://www.rocketlabusa.com/about/news/
   longevity:
     - https://altoslabs.com/news/
     - https://retro.bio/news
     - https://newlimit.com/news
   biotech:
     - https://www.isomorphiclabs.com/articles
+    - https://www.recursion.com/news
 
 # Editorial dedupe priorities (if a story appears in multiple sources, prefer):
 # 1. Primary lab blog post
