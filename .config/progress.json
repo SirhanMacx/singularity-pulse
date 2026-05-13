@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-12T23:45:00Z",
-  "issue_count": 1,
+  "last_updated": "2026-05-13T11:36:00Z",
+  "issue_count": 2,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "sp_index": {
     "as_of": "2026-05-12T20:30:00-04:00",
@@ -34,7 +34,8 @@
       {"date": "2026-05-07", "score": 56, "synthetic": true, "note": "Anthropic-SpaceX deal"},
       {"date": "2026-05-09", "score": 57, "synthetic": true},
       {"date": "2026-05-11", "score": 57, "synthetic": true, "note": "Thinking Machines breaks silence"},
-      {"date": "2026-05-12", "score": 58, "synthetic": false, "note": "v8 baseline"}
+      {"date": "2026-05-12", "score": 58, "synthetic": false, "note": "v8 baseline"},
+      {"date": "2026-05-13", "score": 59, "synthetic": false, "note": "Anthropic autonomous-agents preview + LongMemEval-V2/MEME memory ceiling — +1 net (autonomy productization up, dependency-reasoning wall confirmed)"}
     ],
     "component_histories_30d": {
       "autonomy_horizon_min": [{"date":"2026-04-13","score":48,"synthetic":true},{"date":"2026-04-20","score":49,"synthetic":true},{"date":"2026-04-27","score":50,"synthetic":true},{"date":"2026-05-04","score":50,"synthetic":true},{"date":"2026-05-12","score":50,"synthetic":false}],
@@ -161,6 +162,18 @@
       "papers_count": 3,
       "voices_count": 3,
       "adjacent_count": 2
+    },
+    {
+      "date": "2026-05-13",
+      "issue": 2,
+      "top_signal": "Anthropic ships autonomous-agents preview at the memory-ceiling wall (LongMemEval-V2 + MEME)",
+      "stories_count": 4,
+      "papers_count": 3,
+      "voices_count": 0,
+      "adjacent_count": 0,
+      "agent": "claude",
+      "fire_kind": "manual-morning",
+      "sp_index_delta": 1
     }
   ]
 }

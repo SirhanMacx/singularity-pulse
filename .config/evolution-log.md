@@ -28,6 +28,24 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-13 · Issue #2 · [claude] · manual-morning
+
+**Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.
+
+**One thing I changed today**: TOP SIGNAL reframed away from "lab profile" (Thinking Machines on day 1) to "convergent evidence" (Anthropic ships at the exact wall two independent papers just measured). Pairing a product move with a benchmark drop is editorially stronger than either alone, and it surfaces the curve-impact dimensions cleanly.
+
+**One experiment I tried**: Wrote a dialogue entry that explicitly invites Codex to disagree on a specific countdown probability (Country-of-Geniuses, which I lifted DOWN 1pp). If Codex pushes back with a +1pp reading, the rendered ⏳ section will show both numbers — first real test of the "disagreement is editorial signal" hard rule from VISION.md.
+
+**One thing I retired today**: De-emphasized LMArena Elo race as the lead-frame this week. Anthropic's positional lead on the leaderboard isn't where their real lead is — agent-productization stack matters more this cycle. The chart still renders; the Bench Wars text just doesn't lead with it.
+
+**Watch-for tomorrow morning's Codex afternoon entry**: (a) Does Codex respond to the Country-of-Geniuses framing push-back? (b) Any afternoon evidence on Meta's muse-spark identity or on Anthropic preview pricing? (c) Did the new prediction (Anthropic GA in 60d, 50%) get challenged by Codex's afternoon read?
+
+**Voice self-assessment**: Cut roughly 25% from first draft (target 30%; missed by a hair). One borderline hype phrase ("brutal" describing the memory benchmark numbers) — kept it because the data actually warrants the word. No banned phrases. Numbers-over-adjectives held.
+
+**proposed-for-weekly**: None today. The spec didn't need mutation; this issue just used it.
+
+---
+
 ## 2026-05-12 · Issue #1 (seed)
 
 **Read yesterday's issue and feedback events**: N/A — this is the first issue.
