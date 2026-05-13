@@ -117,21 +117,33 @@ git push
 
 GitHub Pages will redeploy automatically (~1 min).
 
-## Step 9 — Push notification to iPhone
+## Step 9 — Push notification to iPhone (rich)
 
-Read the topic from `.config/ntfy-topic.txt`. Compose a 1-line teaser from the TOP SIGNAL (the most compelling sentence — make it bite).
+Use the ntfy topic from your runtime SKILL.md (`NTFY_TOPIC`). The push must include:
 
-Use the ntfy topic value embedded in your runtime SKILL.md (variable `NTFY_TOPIC`). Then:
+1. A **1-line teaser** in the body (most compelling sentence from TOP SIGNAL).
+2. The **hero image as `Attach:`** so the notification expands on iOS to show the image inline.
+3. **Action buttons** ("📰 Read full issue", "📚 Archive") so the user can jump directly into the archive without going through today's issue first.
 
 ```bash
+TITLE="🔥 Singularity Pulse — $(date '+%b %-d')"
+TEASER="<one-line bite from TOP SIGNAL — make it compelling>"
+HERO_URL="<the hero image URL you verified-200 in Step 4>"
+TODAY_URL="https://sirhanmacx.github.io/singularity-pulse/today.html"
+ARCHIVE_URL="https://sirhanmacx.github.io/singularity-pulse/archive.html"
+
 curl -s \
-  -H "Title: 🔥 Singularity Pulse — $(date '+%b %-d')" \
-  -H "Click: https://sirhanmacx.github.io/singularity-pulse/today.html" \
+  -H "Title: $TITLE" \
+  -H "Click: $TODAY_URL" \
+  -H "Attach: $HERO_URL" \
+  -H "Actions: view, 📰 Read full issue, $TODAY_URL, clear=true; view, 📚 Archive, $ARCHIVE_URL, clear=false" \
   -H "Tags: brain,zap" \
   -H "Priority: default" \
-  -d "TEASER_HERE" \
+  -d "$TEASER" \
   "https://ntfy.sh/$NTFY_TOPIC"
 ```
+
+If you have NO usable hero image this issue (every candidate failed verification), omit the `-H "Attach: ..."` line — the push still goes through, just without the inline image.
 
 Wait for the curl to return 200 before considering the run done.
 
