@@ -366,6 +366,19 @@
     color: var(--muted);
     text-align: center;
   }
+  .feedback { margin-top: 48px; padding: 24px 20px; background: var(--card); border: 1px solid var(--rule); border-radius: 8px; text-align: center; }
+  .feedback h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 18px; margin: 0 0 6px; }
+  .feedback p.fb-sub { margin: 0 0 16px; font-size: 13px; color: var(--muted); }
+  .fb-buttons { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .fb-btn { appearance: none; border: 1px solid var(--rule); background: var(--bg); color: var(--fg); font-family: inherit; font-size: 14px; font-weight: 500; padding: 10px 16px; border-radius: 999px; cursor: pointer; transition: transform 0.1s ease, border-color 0.15s ease, background 0.15s ease; -webkit-tap-highlight-color: transparent; }
+  .fb-btn:hover { border-color: var(--accent); }
+  .fb-btn:active { transform: scale(0.96); }
+  .fb-btn.done { background: var(--accent); color: white; border-color: var(--accent); }
+  .fb-status { margin-top: 14px; font-size: 12px; color: var(--muted); min-height: 16px; }
+  .deeper { display: block; margin: 16px 0 0; font-size: 12px; color: var(--muted); text-align: right; }
+  .deeper a { color: var(--muted); border-bottom: 1px dotted var(--muted); cursor: pointer; }
+  .deeper a:hover { color: var(--accent); border-color: var(--accent); }
+  .deeper a.done { color: var(--accent); border-bottom-style: solid; }
   @media (max-width: 600px) {
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
@@ -418,6 +431,7 @@
 <p>Why this matters: the offense-defense asymmetry in cybersecurity has been ugly for two decades, and it just got worse. Anthropic's response — a coalition launch with AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks — is an acknowledgment that "ship the model, hope for the best" is no longer a defensible posture for offensive-capable systems. The bet: lock Mythos-class capability behind a vetted defender consortium, give the good guys a 6–18 month head start. <a href="https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html">Bruce Schneier's read</a> is that this works if and only if the partners actually rebuild their SOCs around Mythos output streams. Most haven't started.</p>
 
 <p>What to watch: <a href="https://www.theringer.com/2026/05/06/tech/claude-mythos-anthropic-project-glasswing-cybersecurity-threat-ai">whether OpenAI follows suit</a>. GPT-5.5 cleared the same 32-step end-to-end cyber-attack range three weeks after Mythos. They have not announced a Glasswing equivalent. The <a href="https://andrew.ooo/answers/aisi-cyber-eval-gpt-5-5-vs-mythos-vs-opus-may-2026/">UK AI Safety Institute's May 1 cyber eval</a> had GPT-5.5 at 71.4% on Expert-tier tasks and Mythos at 68.6% — close enough that the choice of which to lock down vs. ship is now a values question, not a capabilities one.</p>
+<p class="deeper"><a class="deeper-link" data-section="top-signal">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="stack" id="stack">
@@ -452,6 +466,7 @@
 <h3>Distillation hits the long tail.</h3>
 <p>Cactus Compute's <a href="https://github.com/cactus-compute/needle">Needle</a> packed Gemini's tool-calling behavior into a 26M-parameter model. On-device tool routing without a frontier API call. The pattern — distill one narrow skill, deploy it cheap — is going to make the next 18 months of cost curves very strange.</p>
 </div>
+<p class="deeper"><a class="deeper-link" data-section="stack">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="leaks" id="leaks">
@@ -471,6 +486,7 @@
 <h3><span class="leak-tag">Roadmap</span>Claude 5 "Fennec" and GPT-6 expected this window.</h3>
 <p>Claude 5 is <a href="https://www.abhs.in/blog/ai-models-april-june-2026-gpt6-claude5-llama4-what-developers-should-prepare">rumored as a full architecture upgrade</a> rather than a scale bump — May–September. GPT-6 targets May–July. Code-name "Remy" inside Google maps to Gemini 4. Treat as soft signals; rumored ship-dates slip 60% of the time.</p>
 </div>
+<p class="deeper"><a class="deeper-link" data-section="leaks">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="bench-wars" id="bench-wars">
@@ -516,6 +532,7 @@
 </div>
 
 <p style="font-size:13px; color:var(--muted); font-style:italic; margin-top:8px;">Vote-count matters more than headline rank — top 4 LMArena spots are inside the 95% CI of each other. Treat #1–4 as a statistical tie.</p>
+<p class="deeper"><a class="deeper-link" data-section="bench-wars">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="voices" id="voices">
@@ -547,6 +564,7 @@
 </blockquote>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p class="deeper"><a class="deeper-link" data-section="voices">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="videos" id="videos">
@@ -585,6 +603,7 @@
 </div>
 
 </div>
+<p class="deeper"><a class="deeper-link" data-section="videos">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="papers" id="papers">
@@ -610,6 +629,7 @@
 <p class="summary">Why you care: most "longer context = better" arguments are wrong in the presence of any adversarial or simply messy retrieval. RAG systems pay a steep tax for upstream retrieval imprecision they can't recover from downstream. Filter ruthlessly.</p>
 <p class="meta">Gao, Chen, Huang. Texas A&amp;M. Published May 11, 2026.</p>
 </div>
+<p class="deeper"><a class="deeper-link" data-section="papers">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="robotics" id="robotics">
@@ -639,6 +659,7 @@
 <h3>NVIDIA GR00T becomes the de-facto robot-brain layer.</h3>
 <p>Jensen's vision-language-action foundation model is now <a href="https://nvidianews.nvidia.com/news/nvidia-and-global-robotics-leaders-take-physical-ai-to-the-real-world">adopted by ABB, AGIBOT, Agility, CMR Surgical, FANUC, Figure, Hexagon, KUKA, Medtronic, Skild, Universal Robots, World Labs, and YASKAWA</a> — i.e., the entire industrial-robot establishment plus most of the humanoid wave. If GR00T's API ends up being the JavaScript of robotics, NVIDIA captures the platform layer beneath every embodied frontier company.</p>
 </div>
+<p class="deeper"><a class="deeper-link" data-section="robotics">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="adjacent" id="adjacent">
@@ -653,6 +674,7 @@
 <h3>Synchron's stentrode passes 50 patients.</h3>
 <p>The minimally-invasive bet — thread the electrode through a blood vessel, no craniotomy — is now in 50+ paralysis patients with zero serious adverse events reported in trials. Less spectacular than Neuralink's signal density but more realistic as a near-term commercial path. <a href="https://synchron.com/news">Synchron news</a>.</p>
 </div>
+<p class="deeper"><a class="deeper-link" data-section="adjacent">Go deeper on this tomorrow →</a></p>
 </section>
 
 <section class="progress" id="meters">
@@ -680,6 +702,66 @@
 <h2 class="section"><span class="emoji">🎯</span> WORTH WATCHING</h2>
 <div class="watching"><strong>Google I/O — May 19–20, 2026.</strong> Three things to track: (1) is Omni announced as a Veo replacement, (2) does Gemini 4 ship or just preview, (3) does the Mac-app footprint expand into other native OS surfaces. Anything else is fluff.</div>
 </section>
+
+<div class="feedback">
+  <h3>How was today's pulse?</h3>
+  <p class="fb-sub">One tap. The agent reads this before tomorrow's fire and adjusts.</p>
+  <div class="fb-buttons">
+    <button class="fb-btn" data-react="great">🔥 Great</button>
+    <button class="fb-btn" data-react="meh">😐 Meh</button>
+    <button class="fb-btn" data-react="suggest">💡 Suggestion</button>
+  </div>
+  <p class="fb-status" id="fb-status"></p>
+</div>
+
+<script>
+(function(){
+  var FEEDBACK_URL = 'https://ntfy.sh/singularity-pulse-feedback-e656bc7b9bf5';
+  var ISSUE = document.title || 'unknown-issue';
+
+  function post(payload, label){
+    return fetch(FEEDBACK_URL, {
+      method: 'POST',
+      body: payload,
+      headers: { 'Title': label }
+    });
+  }
+
+  document.querySelectorAll('.fb-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var react = btn.getAttribute('data-react');
+      var status = document.getElementById('fb-status');
+      var payload;
+      if (react === 'suggest') {
+        var note = prompt('What would make tomorrow’s issue better? (One sentence.)');
+        if (!note) return;
+        payload = 'overall:suggest | issue=' + ISSUE + ' | note=' + note;
+      } else {
+        payload = 'overall:' + react + ' | issue=' + ISSUE;
+      }
+      post(payload, '[' + react + '] ' + ISSUE).then(function(){
+        document.querySelectorAll('.fb-btn').forEach(function(b){ b.classList.remove('done'); });
+        btn.classList.add('done');
+        status.textContent = 'Thanks — logged. The next issue will reflect this.';
+      }).catch(function(){
+        status.textContent = 'Feedback failed to send. (Network blocked?)';
+      });
+    });
+  });
+
+  document.querySelectorAll('a.deeper-link').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var section = link.getAttribute('data-section');
+      var payload = 'section:' + section + ':deeper | issue=' + ISSUE;
+      post(payload, '[deeper] ' + section + ' | ' + ISSUE).then(function(){
+        link.textContent = 'Logged → tomorrow goes deeper on ' + section;
+        link.classList.add('done');
+      });
+    });
+  });
+})();
+</script>
 
 <footer class="colophon">
 Compiled from 22 sources at 8:00 PM ET, May 12 2026 — dry-run issue, first cron fire is tomorrow morning. <br>

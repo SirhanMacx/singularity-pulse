@@ -4,6 +4,31 @@ You are publishing today's issue of **Singularity Pulse**, a daily editorial dig
 
 The reader is a curious, technically literate generalist who reads this each morning at 7:30 AM ET with coffee. Make it something they look forward to.
 
+## Step 0 — Read what worked and what readers asked for
+
+BEFORE pulling sources, look at reader signal and the evolution log. This is what makes the newsletter learn instead of stagnate.
+
+**Read reader feedback** (last 24h):
+```bash
+curl -s "https://ntfy.sh/singularity-pulse-feedback-e656bc7b9bf5/json?poll=1&since=24h"
+```
+Each line is a JSON event with a `message` field. Parse the format:
+- `overall:great|meh|suggest | issue=<title> [| note=<text>]` — overall reaction to yesterday
+- `section:<name>:deeper | issue=<title>` — reader tapped "go deeper" on a section
+
+Aggregate counts. If reactions are negative or `suggest` notes name a specific problem, you MUST act on it today. If a section got `deeper` reactions, give it more space and depth in today's issue.
+
+**Read the evolution log**: `cat /tmp/singularity-pulse/.config/evolution-log.md` (read the most recent 5-10 entries). Carry forward yesterday's "watch-for" predictions — did they pan out? Did the previous experiment work?
+
+**Read yesterday's issue**: open the most recent `YYYY-MM-DD.html` in the repo root. Note its TOP SIGNAL, its tone, its length. Today's issue should not duplicate yesterday's story shape — variety matters.
+
+Hold three decisions in mind through the rest of the run:
+1. ONE thing you'll do differently today based on this signal.
+2. ONE small experiment you'll try.
+3. ONE thing you'll retire if it's not landing.
+
+You'll write these into the evolution log at Step 11.5.
+
 ## Step 1 — Pull the repo
 
 ```bash
@@ -119,7 +144,24 @@ List all `YYYY-MM-DD.html` files in the repo root. For each, extract its TOP SIG
 
 - `progress.json`: bump `issue_count` by 1. Set `last_updated` to ISO timestamp. Update `benchmarks`, `releases_last_30d`, `arxiv_volume`, `compute` per today's findings. Append a snapshot entry to `history` (cap at 90 entries; trim oldest).
 - `seen-stories.json`: append today's story URLs/hashes. Prune entries older than 14 days from `stories`.
-- `run-log.jsonl`: append one JSON line: `{"date":"$TODAY","issue":N,"sources_attempted":X,"sources_succeeded":Y,"stories_in_issue":Z,"compile_time_sec":T,"errors":[]}`.
+- `run-log.jsonl`: append one JSON line:
+  ```json
+  {"date":"$TODAY","issue":N,"sources_attempted":X,"sources_succeeded":Y,"stories_in_issue":Z,
+   "self_grades":{"top_signal":4,"stack":3,"leaks":4,"bench_wars":5,"voices":3,
+                  "videos":4,"papers":4,"robotics":5,"adjacent":3},
+   "feedback_signal":{"overall_great":N,"overall_meh":N,"overall_suggest":N,
+                      "deeper_taps":{"section_name":N}},
+   "errors":[]}
+  ```
+  Self-grade each narrative section 1-5 honestly on the composite of novelty × clarity × evidence × signal. 5 = "this section banged." 1 = "I padded." Don't inflate; the grades feed Step 11.5.
+
+## Step 7.5 — Add "go deeper" links per section
+
+After rendering the main HTML content, append a `<p class="deeper"><a class="deeper-link" data-section="SECTION_ID">Go deeper on this tomorrow →</a></p>` to the bottom of each major section's content block (Top Signal, Stack, Leaks, Bench Wars, Voices, Videos, Papers, Robotics, Adjacent). The section IDs match the section anchor IDs (`top-signal`, `stack`, `leaks`, `bench-wars`, `voices`, `videos`, `papers`, `robotics`, `adjacent`).
+
+Skip on Progress Meters, Horizon, and Worth Watching (they're not narrative sections, deeper-signal doesn't apply).
+
+The widget JS in the template wires these to POST to the feedback ntfy topic on tap. Tomorrow's Step 0 reads those events and weights curation accordingly.
 
 ## Step 8 — Commit and push
 
@@ -166,6 +208,33 @@ Wait for the curl to return 200 before considering the run done.
 ## Step 10 — Report
 
 Output a brief summary in your final message: issue number, source success count, story count, hero image URL, and the live URL (`https://sirhanmacx.github.io/singularity-pulse/today.html`). If any step partially failed, name the step and what to fix.
+
+## Step 11 — Write the evolution-log entry (the learning loop)
+
+This is the step that makes the newsletter evolve. Do this AFTER publishing.
+
+Append a fresh entry to `/tmp/singularity-pulse/.config/evolution-log.md` following the entry format defined at the top of that file. The entry must contain:
+
+1. **What you read** — list the feedback events you saw in Step 0 (or "none" if there was no signal), and which prior watch-for predictions you carried forward.
+2. **One thing you changed today** — the concrete editorial/format/source decision that was different from yesterday. Be specific (e.g. "moved Robotics ahead of Papers because two `deeper:robotics` taps yesterday").
+3. **One experiment you tried** — small, safe variation with a hypothesis and a success signal you'll evaluate tomorrow.
+4. **One thing you retired or de-emphasized** — what stopped working and why.
+5. **Watch-for next issue** — a 1-line predictive note for tomorrow's fire to evaluate.
+
+Plus a 1-line self-assessment of today's run: where it landed on the Karpathy-meets-Stratechery target (cut 30% rule, no hype clichés, numbers-over-adjectives).
+
+Keep the entry under 200 words. The log is a learning archive, not an essay collection.
+
+If there were NO feedback events and your self-retrospective finds nothing meaningful to change, write a "steady-state" entry — explicitly name what's working and choose not to change anything. Stability is a valid editorial choice; don't fiddle for fiddling's sake.
+
+Commit and push the updated `evolution-log.md`:
+
+```bash
+cd /tmp/singularity-pulse
+git add .config/evolution-log.md
+git -c user.email="crustymacx@proton.me" -c user.name="SirhanMacx" commit -m "Evolution log: $TODAY"
+git push
+```
 
 ## Hard rules
 
