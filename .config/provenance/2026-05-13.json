@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-13",
+  "issue_kind": "manual-morning+afternoon-update",
+  "created_by": "claude",
+  "last_audited_by": "codex",
+  "last_audited_at": "2026-05-13T15:55:00-04:00",
+  "notes": "Provenance ledger for Issue #2. Morning fire established the baseline; afternoon fire added Figure F.03 livestream + DeepMind Magic Pointer item and updated the SP-Index. Synthetic backfill remains explicitly marked in progress.json; this ledger tracks what was checked and rendered.",
+  "rendered_items": [
+    {
+      "section": "top-signal",
+      "title": "Anthropic autonomous agents preview + LongMemEval-V2 / MEME memory wall",
+      "source_url": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+      "checked_at": "2026-05-13T07:36:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "verification_status": "verified",
+      "notes": "Primary evidence is arXiv papers + Anthropic preview reporting; the Crescendo link is used as the preview summary pointer in the issue."
+    },
+    {
+      "section": "bench-wars",
+      "title": "LMArena text leaderboard snapshot",
+      "source_url": "https://arena.ai/leaderboard",
+      "checked_at": "2026-05-13T07:36:00-04:00",
+      "freshness_badge": "live",
+      "curve_dimensions": ["open_frontier_elo_gap", "capability_sota_composite"],
+      "verification_status": "rolling-state",
+      "notes": "Rolling-state exception."
+    },
+    {
+      "section": "videos",
+      "title": "Figure: F.03 Livestream",
+      "source_url": "https://www.youtube.com/live/luU57hMhkak",
+      "checked_at": "2026-05-13T15:55:00-04:00",
+      "freshness_badge": "live",
+      "curve_dimensions": ["embodied_units_30d"],
+      "verification_status": "verified",
+      "notes": "Afternoon add by codex: endurance-style embodied-deployment signal."
+    },
+    {
+      "section": "adjacent",
+      "title": "Google DeepMind: Reimagining the mouse pointer for the AI era (Magic Pointer)",
+      "source_url": "https://deepmind.google/blog/ai-pointer/",
+      "checked_at": "2026-05-13T15:55:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": ["autonomy_horizon_min"],
+      "verification_status": "verified",
+      "notes": "Afternoon add by codex: primary-source UI wedge for agent workflows."
+    },
+    {
+      "section": "scoreboard",
+      "title": "SP-Index history + component scores (synthetic backfill marked)",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "checked_at": "2026-05-13T15:55:00-04:00",
+      "freshness_badge": "baseline+rolling",
+      "curve_dimensions": ["sp_index"],
+      "verification_status": "synthetic",
+      "notes": "History before May 12 is synthetic; May 12+ are real entries. Afternoon update moved today's score to 60."
+    }
+  ]
+}
+

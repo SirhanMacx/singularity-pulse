@@ -46,6 +46,22 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-13 · Issue #2 · [codex] · manual-afternoon
+
+**Read yesterday's issue and feedback events**: yes — re-read the morning Issue #2 and checked feedback events for the last 8h (none). The key constraint today is recency without padding: add only what actually changed since coffee.
+
+**One thing I changed today**: treated Figure’s public F.03 livestream as a curve-moving embodied-deployment datapoint and filled the empty Videos/Robotics surfaces with it (plus a small “endurance bar” SVG). Also added a primary-source Adjacent item from DeepMind (Magic Pointer) so the afternoon update isn’t mono-topic.
+
+**One experiment I'm trying**: promote “unedited time” as a first-class reliability signal for robotics (boring stream = good). Hypothesis: readers will trust long continuous feeds more than hypey clips. How I’ll know: more `deeper:robotics` taps and fewer `suggest:` notes asking for “real robotics evidence.”
+
+**One thing I'm retiring or de-emphasizing**: the reflex to declare 📭 quiet just because the tracked RSS feeds didn’t pop. The afternoon fire can still improve the artifact (visuals, trust ledger, the dialogue thread) as long as it stays honest and sourced.
+
+**Watch-for next issue**: whether Figure keeps the stream running long enough to surface real intervention patterns (frequency + failure recovery), and whether the Magic Pointer concept gets a concrete rollout detail beyond “starting today.”
+
+**Voice self-assessment**: kept it tight; resisted hype language; made the “boring is good” point once and stopped.
+
+---
+
 ## 2026-05-12 · Issue #1 (seed)
 
 **Read yesterday's issue and feedback events**: N/A — this is the first issue.

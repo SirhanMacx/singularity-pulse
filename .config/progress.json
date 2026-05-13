@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-13T11:36:00Z",
+  "last_updated": "2026-05-13T19:55:00Z",
   "issue_count": 2,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "sp_index": {
-    "as_of": "2026-05-12T20:30:00-04:00",
-    "score": 58,
-    "score_prior": null,
+    "as_of": "2026-05-13T15:55:00-04:00",
+    "score": 60,
+    "score_prior": 58,
     "score_30d_prior": null,
     "components": {
       "autonomy_horizon_min": {"raw": 60, "score": 50, "delta": null, "note": "METR 50% — last published Q1 2026"},
       "compute_frontier_log10_flops": {"raw": 26.4, "score": 56, "delta": null, "note": "Mythos Preview estimated, exact undisclosed"},
       "capability_sota_composite": {"raw": 72.5, "score": 72, "delta": null, "note": "GPQA 94.1 · ARC-AGI-2 52.9 · SWE-bench-Pro 64.3 · FrontierMath unknown"},
-      "embodied_units_30d": {"raw": 850, "score": 38, "delta": null, "note": "estimated humanoid shipments rolling 30d (Unitree-heavy)"},
+      "embodied_units_30d": {"raw": 850, "score": 39, "delta": 1, "note": "Figure F.03 public livestream (endurance proof) + broader humanoid deployment still estimated"},
       "bci_patients_cumulative": {"raw": 71, "score": 43, "delta": null, "note": "Neuralink 21 + Synchron 50+"},
       "ai_science_events_window": {"raw": 1, "score": 30, "delta": null, "note": "AlphaEvolve scale-out flagged"},
       "frontier_releases_30d": {"raw": 6, "score": 65, "delta": null, "note": "GPT-5.5 · Gemini 3.1 Pro · Mythos · GLM-5 · Gemma 4 · Opus 4.7"},
@@ -35,13 +35,13 @@
       {"date": "2026-05-09", "score": 57, "synthetic": true},
       {"date": "2026-05-11", "score": 57, "synthetic": true, "note": "Thinking Machines breaks silence"},
       {"date": "2026-05-12", "score": 58, "synthetic": false, "note": "v8 baseline"},
-      {"date": "2026-05-13", "score": 59, "synthetic": false, "note": "Anthropic autonomous-agents preview + LongMemEval-V2/MEME memory ceiling — +1 net (autonomy productization up, dependency-reasoning wall confirmed)"}
+      {"date": "2026-05-13", "score": 60, "synthetic": false, "note": "Morning: Anthropic autonomous-agents preview + LongMemEval-V2/MEME memory ceiling. Afternoon: Figure F.03 livestream as embodied reliability proof. Net +2 vs v8 baseline."}
     ],
     "component_histories_30d": {
       "autonomy_horizon_min": [{"date":"2026-04-13","score":48,"synthetic":true},{"date":"2026-04-20","score":49,"synthetic":true},{"date":"2026-04-27","score":50,"synthetic":true},{"date":"2026-05-04","score":50,"synthetic":true},{"date":"2026-05-12","score":50,"synthetic":false}],
       "compute_frontier_log10_flops": [{"date":"2026-04-13","score":53,"synthetic":true},{"date":"2026-04-20","score":54,"synthetic":true},{"date":"2026-04-27","score":55,"synthetic":true},{"date":"2026-05-04","score":55,"synthetic":true},{"date":"2026-05-12","score":56,"synthetic":false}],
       "capability_sota_composite": [{"date":"2026-04-13","score":68,"synthetic":true},{"date":"2026-04-20","score":69,"synthetic":true},{"date":"2026-04-27","score":70,"synthetic":true},{"date":"2026-05-04","score":71,"synthetic":true},{"date":"2026-05-12","score":72,"synthetic":false}],
-      "embodied_units_30d": [{"date":"2026-04-13","score":32,"synthetic":true},{"date":"2026-04-20","score":34,"synthetic":true},{"date":"2026-04-27","score":35,"synthetic":true},{"date":"2026-05-04","score":37,"synthetic":true},{"date":"2026-05-12","score":38,"synthetic":false}],
+      "embodied_units_30d": [{"date":"2026-04-13","score":32,"synthetic":true},{"date":"2026-04-20","score":34,"synthetic":true},{"date":"2026-04-27","score":35,"synthetic":true},{"date":"2026-05-04","score":37,"synthetic":true},{"date":"2026-05-12","score":38,"synthetic":false},{"date":"2026-05-13","score":39,"synthetic":false,"note":"Figure F.03 livestream (endurance proof)"}],
       "bci_patients_cumulative": [{"date":"2026-04-13","score":40,"synthetic":true},{"date":"2026-04-20","score":41,"synthetic":true},{"date":"2026-04-27","score":42,"synthetic":true},{"date":"2026-05-04","score":42,"synthetic":true},{"date":"2026-05-12","score":43,"synthetic":false}],
       "ai_science_events_window": [{"date":"2026-04-13","score":25,"synthetic":true},{"date":"2026-04-20","score":27,"synthetic":true},{"date":"2026-04-27","score":28,"synthetic":true},{"date":"2026-05-04","score":29,"synthetic":true},{"date":"2026-05-12","score":30,"synthetic":false}],
       "frontier_releases_30d": [{"date":"2026-04-13","score":55,"synthetic":true},{"date":"2026-04-20","score":58,"synthetic":true},{"date":"2026-04-27","score":61,"synthetic":true},{"date":"2026-05-04","score":63,"synthetic":true},{"date":"2026-05-12","score":65,"synthetic":false}],

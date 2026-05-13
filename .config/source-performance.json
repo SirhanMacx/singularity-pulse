@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-13T00:00:00-04:00",
+  "last_updated": "2026-05-13T15:55:00-04:00",
   "_note": "Rolling source-yield ledger. Daily fires update attempted/succeeded/rendered counts; weekly meta uses it to add, demote, or retire sources only after the evidence thresholds in meta-evolution-log.md.",
   "sources": [
     {
@@ -26,6 +26,30 @@
       "signal_score": 5,
       "last_rendered_at": "2026-05-12",
       "notes": "Required rolling-state snapshot for Benchmark Wars."
+    },
+    {
+      "id": "youtube.com/live/luU57hMhkak",
+      "type": "video",
+      "url": "https://www.youtube.com/live/luU57hMhkak",
+      "status": "promote-watch",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 5,
+      "last_rendered_at": "2026-05-13",
+      "notes": "Endurance-style embodied deployment signal (public livestream)."
+    },
+    {
+      "id": "deepmind.google/blog/ai-pointer",
+      "type": "lab_blog",
+      "url": "https://deepmind.google/blog/ai-pointer/",
+      "status": "core",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 4,
+      "last_rendered_at": "2026-05-13",
+      "notes": "Primary-source UI wedge for agents in Chrome (Magic Pointer)."
     }
   ]
 }

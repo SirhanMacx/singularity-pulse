@@ -15,6 +15,9 @@
     {"date": "2026-05-12", "url": "https://arxiv.org/abs/2605.10828", "headline": "First Drop of Ink"},
     {"date": "2026-05-12", "url": "https://neuralink.com/updates/", "headline": "Neuralink high-volume production"},
     {"date": "2026-05-12", "url": "https://synchron.com/news", "headline": "Synchron 50+ patients"},
-    {"date": "2026-05-12", "url": "https://jack-clark.net/", "headline": "Import AI #455 — no-human AI R&D by 2028"}
+    {"date": "2026-05-12", "url": "https://jack-clark.net/", "headline": "Import AI #455 — no-human AI R&D by 2028"},
+    {"date": "2026-05-13", "url": "https://www.youtube.com/live/luU57hMhkak", "headline": "Figure: F.03 Livestream"},
+    {"date": "2026-05-13", "url": "https://deepmind.google/blog/ai-pointer/", "headline": "DeepMind: Reimagining the mouse pointer for the AI era (Magic Pointer)"},
+    {"date": "2026-05-13", "url": "https://www.reddit.com/r/accelerate/comments/1tbznwn/figure_ai_will_show_their_humanoid_robots/", "headline": "Community thread: Figure F.03 livestream"}
   ]
 }
