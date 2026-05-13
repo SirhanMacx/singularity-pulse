@@ -1,5 +1,7 @@
 # Singularity Pulse — Daily Orchestrator
 
+> **Read `VISION.md` at the repo root FIRST every fire.** That is the editorial soul of this newsletter. Everything below is implementation detail in service of it. If anything here contradicts the vision, the vision wins.
+
 > **TWO-FIRE / TWO-AGENT ARCHITECTURE.**
 >
 > **7:30 AM ET — Claude fires "Morning Pulse"** (singularity-pulse task). Fresh overnight signal. Sets the day's editorial baseline. Computes the morning Singularity Pulse Index.
