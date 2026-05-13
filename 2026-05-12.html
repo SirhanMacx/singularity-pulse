@@ -20,6 +20,8 @@
     --card: #ffffff;
     --code-bg: #f4f1ec;
     --quote-border: #c2410c;
+    --leak-bg: #fef3c7;
+    --leak-border: #f59e0b;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -31,6 +33,8 @@
       --card: #141413;
       --code-bg: #1a1a18;
       --quote-border: #fb923c;
+      --leak-bg: #292014;
+      --leak-border: #d97706;
     }
   }
   * { box-sizing: border-box; }
@@ -84,6 +88,20 @@
     margin-top: 6px;
     font-variant-numeric: tabular-nums;
   }
+  .toc {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .toc a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+  .toc a:hover { color: var(--accent); border-color: var(--accent); }
   .hero {
     margin: 0 -20px 28px;
     position: relative;
@@ -110,12 +128,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    scroll-margin-top: 12px;
   }
   h2.section .emoji {
     font-size: 30px;
     line-height: 1;
   }
-  h3.story, .stack-item h3 {
+  h3.story, .stack-item h3, .leak-card h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 19px;
@@ -165,21 +184,133 @@
     font-style: italic;
     margin: 0;
   }
-  blockquote.voice {
+  blockquote.twitter-tweet {
     margin: 0 0 18px;
-    padding: 12px 18px;
+    padding: 14px 18px;
     border-left: 3px solid var(--quote-border);
     background: var(--card);
+    border-radius: 0 6px 6px 0;
     font-size: 16px;
+    line-height: 1.55;
+  }
+  blockquote.twitter-tweet p {
+    margin: 0 0 12px;
     font-style: italic;
   }
-  blockquote.voice .attribution {
+  blockquote.twitter-tweet .handle {
     display: block;
-    margin-top: 10px;
     font-style: normal;
     font-size: 13px;
     color: var(--muted);
   }
+  blockquote.twitter-tweet .handle strong { color: var(--fg); }
+  .video-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 8px;
+  }
+  .video {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .video .frame-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #000;
+  }
+  .video iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .video .vmeta {
+    padding: 12px 16px;
+  }
+  .video .vtitle {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 4px;
+    line-height: 1.35;
+  }
+  .video .vbody {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .leak-card {
+    background: var(--leak-bg);
+    border-left: 4px solid var(--leak-border);
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border-radius: 0 6px 6px 0;
+  }
+  .leak-card h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+  }
+  .leak-card .leak-tag {
+    display: inline-block;
+    background: var(--leak-border);
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: 2px;
+  }
+  .leak-card p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .bench-wars-block {
+    background: var(--code-bg);
+    padding: 18px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 14px;
+  }
+  .bench-wars-block h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .bench-wars-block table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+    font-size: 13px;
+  }
+  .bench-wars-block th, .bench-wars-block td {
+    padding: 6px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+  }
+  .bench-wars-block th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .bench-wars-block td.num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .bench-wars-block .gold { color: #ca8a04; font-weight: 700; }
+  .bench-wars-block .silver { color: #6b7280; font-weight: 600; }
+  .bench-wars-block .bronze { color: #b45309; font-weight: 600; }
   .meters {
     background: var(--code-bg);
     padding: 20px;
@@ -198,6 +329,21 @@
   .meters .delta-up { color: #16a34a; }
   .meters .delta-down { color: #dc2626; }
   .meters .delta-flat { color: var(--muted); }
+  blockquote.voice {
+    margin: 0 0 18px;
+    padding: 12px 18px;
+    border-left: 3px solid var(--quote-border);
+    background: var(--card);
+    font-size: 16px;
+    font-style: italic;
+  }
+  blockquote.voice .attribution {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--muted);
+  }
   .horizon {
     font-size: 17px;
     line-height: 1.65;
@@ -228,6 +374,8 @@
     .top-signal p:first-of-type::first-letter { font-size: 46px; }
     .hero { margin: 0 -16px 24px; }
     .hero figcaption { padding: 8px 16px 0; }
+    .bench-wars-block table { font-size: 12px; }
+    .bench-wars-block th, .bench-wars-block td { padding: 5px 6px; }
   }
 </style>
 </head>
@@ -241,49 +389,62 @@
   </div>
   <h1 class="pulse-name">Singularity Pulse</h1>
   <div class="date">Tuesday, May 12, 2026</div>
+  <nav class="toc" aria-label="Table of contents">
+    <a href="#top-signal">🔥 Top Signal</a>
+    <a href="#stack">⚡ Stack</a>
+    <a href="#leaks">🕵️ Leaks</a>
+    <a href="#bench-wars">📈 Bench Wars</a>
+    <a href="#voices">💬 Voices</a>
+    <a href="#videos">🎬 Videos</a>
+    <a href="#papers">📜 Papers</a>
+    <a href="#adjacent">🧬 Adjacent</a>
+    <a href="#meters">📊 Meters</a>
+    <a href="#horizon">🔮 Horizon</a>
+    <a href="#watching">🎯 Watching</a>
+  </nav>
 </header>
 
 <figure class="hero">
   <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Glasswinged_butterfly_%28Greta_oto%29.jpg" alt="Glasswing butterfly with transparent wings">
-  <figcaption>Greta oto, the glasswing butterfly. Anthropic borrowed the name for what may turn out to be the most consequential industry collaboration of the year. Image: Wikimedia Commons.</figcaption>
+  <figcaption>Greta oto, the glasswing butterfly — namesake of what may turn out to be the most consequential industry alignment of the year. Image: Wikimedia Commons.</figcaption>
 </figure>
 
-<section class="top-signal">
+<section class="top-signal" id="top-signal">
 <h2 class="section"><span class="emoji">🔥</span> TOP SIGNAL</h2>
 
 <p>Anthropic <a href="https://www.anthropic.com/glasswing">launched Project Glasswing</a> last month, and the implications are still landing. The premise: their unreleased Claude Mythos Preview can now find software vulnerabilities at a level that surpasses all but the most skilled humans. Over a few weeks, Mythos identified <strong>thousands of zero-days</strong> across every major operating system and every major browser. It chained four independent bugs into a single exploit that broke both renderer and OS sandboxing. It built a remote-code-execution chain against FreeBSD's NFS server using a 20-gadget ROP payload distributed across packets. That is not a capability demo — that is a working super-hacker, and Anthropic isn't going to ship it.</p>
 
-<p>Why this matters: the offense-defense asymmetry in cybersecurity has been ugly for two decades, and it just got worse. Anthropic's response — a coalition launch with AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks — is an acknowledgment that "ship the model, hope for the best" is no longer a defensible posture for offensive-capable systems. The bet is that locking Mythos-class capability behind a vetted defender consortium gives the good guys a 6–18 month head start. <a href="https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html">Bruce Schneier's read</a> is that this works if and only if the partners actually rebuild their SOCs around Mythos output streams. Most haven't started.</p>
+<p>Why this matters: the offense-defense asymmetry in cybersecurity has been ugly for two decades, and it just got worse. Anthropic's response — a coalition launch with AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorgan, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks — is an acknowledgment that "ship the model, hope for the best" is no longer a defensible posture for offensive-capable systems. The bet: lock Mythos-class capability behind a vetted defender consortium, give the good guys a 6–18 month head start. <a href="https://www.schneier.com/blog/archives/2026/04/on-anthropics-mythos-preview-and-project-glasswing.html">Bruce Schneier's read</a> is that this works if and only if the partners actually rebuild their SOCs around Mythos output streams. Most haven't started.</p>
 
-<p>What to watch: <a href="https://www.theringer.com/2026/05/06/tech/claude-mythos-anthropic-project-glasswing-cybersecurity-threat-ai">whether OpenAI follows suit</a>. GPT-5.5 reportedly cleared the same 32-step end-to-end cyber-attack range three weeks after Mythos. They have not announced a Glasswing equivalent. Whoever ships the defender stack first defines the next decade of enterprise security.</p>
+<p>What to watch: <a href="https://www.theringer.com/2026/05/06/tech/claude-mythos-anthropic-project-glasswing-cybersecurity-threat-ai">whether OpenAI follows suit</a>. GPT-5.5 cleared the same 32-step end-to-end cyber-attack range three weeks after Mythos. They have not announced a Glasswing equivalent. The <a href="https://andrew.ooo/answers/aisi-cyber-eval-gpt-5-5-vs-mythos-vs-opus-may-2026/">UK AI Safety Institute's May 1 cyber eval</a> had GPT-5.5 at 71.4% on Expert-tier tasks and Mythos at 68.6% — close enough that the choice of which to lock down vs. ship is now a values question, not a capabilities one.</p>
 </section>
 
-<section class="stack">
+<section class="stack" id="stack">
 <h2 class="section"><span class="emoji">⚡</span> THE STACK</h2>
 
 <div class="stack-item">
 <h3>DeepMind scales AlphaEvolve across science.</h3>
-<p>Google DeepMind <a href="https://deepmind.google/discover/blog/">expanded AlphaEvolve</a>, their Gemini-powered coding agent, to materials science, biology, and chip design. The pattern from AlphaFold repeats: package frontier reasoning behind a domain-shaped agent loop and ship to specialists. If the productivity numbers hold up, vertical-AI moats just got harder for startups to defend.</p>
+<p>Google DeepMind <a href="https://deepmind.google/discover/blog/">expanded AlphaEvolve</a>, their Gemini-powered coding agent, to materials science, biology, and chip design. The AlphaFold pattern repeats: package frontier reasoning behind a domain-shaped agent loop and ship to specialists. Vertical-AI moats just got harder for startups to defend.</p>
 </div>
 
 <div class="stack-item">
 <h3>Anthropic raises usage limits, signs SpaceX for compute.</h3>
-<p><a href="https://www.anthropic.com/news">Last Tuesday's twin announcement</a>: Claude users get materially higher limits, and Anthropic is buying compute from SpaceX. Starlink-adjacent data centers were not on most 2026 bingo cards. Watch for similar Anthropic infra deals — the company is clearly setting up for a compute regime measured in tens of GW.</p>
+<p><a href="https://www.anthropic.com/news">Last Tuesday's twin announcement</a>: Claude users get materially higher limits, and Anthropic is buying compute from SpaceX. Starlink-adjacent data centers were not on most 2026 bingo cards. Anthropic is clearly setting up for a compute regime measured in tens of GW.</p>
 </div>
 
 <div class="stack-item">
 <h3>Anthropic + Blackstone + Goldman launch enterprise-AI services co.</h3>
-<p>Quieter but possibly bigger: <a href="https://www.anthropic.com/news">a new joint venture</a> with Blackstone, Hellman & Friedman, and Goldman Sachs to provide Claude-powered services to the Fortune 500. This is the consulting-firm play — McKinsey and Accenture should be paying attention. The model lab is moving downstream into deployment muscle.</p>
+<p>Quieter but possibly bigger: <a href="https://www.anthropic.com/news">a new joint venture</a> with Blackstone, Hellman &amp; Friedman, and Goldman Sachs to provide Claude-powered services to the Fortune 500. The consulting-firm play — McKinsey and Accenture should be paying attention.</p>
 </div>
 
 <div class="stack-item">
 <h3>US government wins pre-launch access to frontier models.</h3>
-<p>The new Center for AI Standards and Innovation (CAISI) <a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html">struck agreements with Microsoft, Google, and xAI</a> to test models before public release. Anthropic and OpenAI are not in the announcement. Read this as a soft preview of where compulsory pre-deployment evals are heading — and as an opening for labs that opt in to claim a safety lead.</p>
+<p>The new Center for AI Standards and Innovation (CAISI) <a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html">struck agreements with Microsoft, Google, and xAI</a> to test models before public release. Anthropic and OpenAI are not in the announcement. A soft preview of where compulsory pre-deployment evals are heading.</p>
 </div>
 
 <div class="stack-item">
 <h3>Gemma 4: DeepMind tightens the open-model squeeze.</h3>
-<p><a href="https://deepmind.google/discover/blog/">"Byte for byte, the most capable open models"</a> is the claim. Open-weight competitive pressure on Llama, Qwen, and DeepSeek keeps intensifying — when Google ships open models they sandbag the competitive moat of everyone whose pitch is "we're open-source." Worth a benchmark spot-check this week.</p>
+<p><a href="https://deepmind.google/discover/blog/">"Byte for byte, the most capable open models"</a> is the claim. Open-weight pressure on Llama, Qwen, and DeepSeek keeps intensifying — when Google ships open models, every "we're open-source" pitch loses a notch.</p>
 </div>
 
 <div class="stack-item">
@@ -292,19 +453,152 @@
 </div>
 </section>
 
-<section class="papers">
+<section class="leaks" id="leaks">
+<h2 class="section"><span class="emoji">🕵️</span> LEAKS &amp; RUMORS</h2>
+
+<div class="leak-card">
+<h3><span class="leak-tag">Confirmed-by-leak</span>Google's "Omni" video model surfaces in Gemini UI two weeks before I/O.</h3>
+<p>TestingCatalog <a href="https://wavespeed.ai/blog/posts/google-omni-video-model-leak-i-o-2026/">captured a string</a> in Gemini's video tab: <em>"Start with an idea or try a template. Powered by Omni."</em> Omni appears next to Toucan — the current internal name for Gemini video. UI copy that ships brand names is late-stage release prep. <strong>Google I/O runs May 19–20.</strong> Bet on a Veo-3-era reveal.</p>
+</div>
+
+<div class="leak-card">
+<h3><span class="leak-tag">Stealth-launched</span>Meta's "muse-spark" is silently #5 on Arena.</h3>
+<p>The model sits at <a href="https://arena.ai/leaderboard">Elo 1491 on LMArena's text board</a>, sandwiched between Claude Opus 4.7 and Gemini 3.1 Pro Preview. Meta hasn't announced. Unnamed-model leaderboard appearances mean a public Llama-line announcement is days, not weeks, away.</p>
+</div>
+
+<div class="leak-card">
+<h3><span class="leak-tag">Roadmap</span>Claude 5 "Fennec" and GPT-6 expected this window.</h3>
+<p>Claude 5 is <a href="https://www.abhs.in/blog/ai-models-april-june-2026-gpt6-claude5-llama4-what-developers-should-prepare">rumored as a full architecture upgrade</a> rather than a scale bump — May–September. GPT-6 targets May–July. Code-name "Remy" inside Google maps to Gemini 4. Treat as soft signals; rumored ship-dates slip 60% of the time.</p>
+</div>
+</section>
+
+<section class="bench-wars" id="bench-wars">
+<h2 class="section"><span class="emoji">📈</span> BENCHMARK WARS</h2>
+
+<div class="bench-wars-block">
+<h3>LMArena Text Leaderboard · top 10 · updated 6h ago</h3>
+<table>
+<thead>
+<tr><th>#</th><th>Model</th><th>Org</th><th class="num">Elo</th></tr>
+</thead>
+<tbody>
+<tr><td class="gold">1</td><td>claude-opus-4-6-thinking</td><td>Anthropic</td><td class="num gold">1502</td></tr>
+<tr><td class="silver">2</td><td>claude-opus-4-7-thinking</td><td>Anthropic</td><td class="num silver">1501</td></tr>
+<tr><td class="bronze">3</td><td>claude-opus-4-6</td><td>Anthropic</td><td class="num bronze">1498</td></tr>
+<tr><td>4</td><td>claude-opus-4-7</td><td>Anthropic</td><td class="num">1492</td></tr>
+<tr><td>5</td><td><strong>muse-spark</strong> 🐦‍🔥</td><td>Meta (stealth)</td><td class="num">1491</td></tr>
+<tr><td>6</td><td>gemini-3.1-pro-preview</td><td>Google</td><td class="num">1490</td></tr>
+<tr><td>7</td><td>gemini-3-pro</td><td>Google</td><td class="num">1486</td></tr>
+<tr><td>8</td><td>gpt-5.5-high</td><td>OpenAI</td><td class="num">1484</td></tr>
+<tr><td>9</td><td>grok-4.20-beta1</td><td>xAI</td><td class="num">1479</td></tr>
+<tr><td>10</td><td>gpt-5.4-high</td><td>OpenAI</td><td class="num">1479</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="bench-wars-block">
+<h3>This week's SOTA shifts</h3>
+<table>
+<thead>
+<tr><th>Benchmark</th><th>Leader</th><th class="num">Score</th><th>Note</th></tr>
+</thead>
+<tbody>
+<tr><td>UK AISI Expert-Cyber</td><td>GPT-5.5</td><td class="num">71.4%</td><td>Mythos 68.6%, Opus 4.7 ~61%</td></tr>
+<tr><td>Terminal-Bench 2.0</td><td>GPT-5.5</td><td class="num">narrowly</td><td>beats Mythos Preview</td></tr>
+<tr><td>SWE-bench Pro</td><td>Claude Opus 4.7</td><td class="num">64.3%</td><td>+10.9 vs Opus 4.6</td></tr>
+<tr><td>SWE-bench Verified</td><td>Claude Opus 4.5</td><td class="num">80.9%</td><td>stable leader</td></tr>
+<tr><td>ARC-AGI-2</td><td>GPT-5.2 Thinking</td><td class="num">52.9%</td><td>↑15.3 vs Opus 4.5</td></tr>
+<tr><td>GPQA-Diamond</td><td>Gemini 3.1 Pro Preview</td><td class="num">94.1%</td><td>↑2.1 vs GPT-5.4</td></tr>
+<tr><td>WildClawBench</td><td>Claude Opus 4.7 (OpenClaw)</td><td class="num">62.2%</td><td>harness flip = ±18</td></tr>
+</tbody>
+</table>
+</div>
+
+<p style="font-size:13px; color:var(--muted); font-style:italic; margin-top:8px;">Vote-count matters more than headline rank — top 4 LMArena spots are inside the 95% CI of each other. Treat #1–4 as a statistical tie.</p>
+</section>
+
+<section class="voices" id="voices">
+<h2 class="section"><span class="emoji">💬</span> VOICES</h2>
+
+<blockquote class="twitter-tweet" data-conversation="none">
+<p lang="en" dir="ltr">Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights: The first theme I tried to push on is that LLMs are about a lot more than just speeding up what existed before (e.g. coding). Three examples of new horizons…</p>
+<span class="handle">— Andrej Karpathy (<strong>@karpathy</strong>) · <a href="https://x.com/karpathy/status/2049903821095354523">view on X</a></span>
+</blockquote>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">I packaged up the "autoresearch" project into a new self-contained minimal repo if people would like to play over the weekend. It's basically nanochat LLM training core stripped down to a single-GPU, one file version of ~630 lines of code…</p>
+<span class="handle">— Andrej Karpathy (<strong>@karpathy</strong>) · <a href="https://x.com/karpathy/status/2030371219518931079">view on X</a></span>
+</blockquote>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">"This is easily the biggest change in ~2 decades of programming and it happened over the course of a few weeks." "I rapidly went from about 80% manual+autocomplete coding and 20% agents to 80% agent coding and 20% edits+touchups."</p>
+<span class="handle">— Karpathy quoted by AI Safety Memes (<strong>@AISafetyMemes</strong>) · <a href="https://x.com/AISafetyMemes/status/2016160041108177266">view on X</a></span>
+</blockquote>
+
+<blockquote class="voice">
+"A country of geniuses in a datacenter within a year or two." The phrase has stuck because it shifts the question from "AGI when?" to "what does a country of geniuses <em>do</em>?" — see <a href="https://thezvi.substack.com/p/on-dwarkesh-patels-2026-podcast-with">Zvi's read</a> of the recent Dwarkesh appearance.
+<span class="attribution">— Dario Amodei, Anthropic CEO. <a href="https://www.axios.com/2026/01/26/anthropic-ai-dario-amodei-humanity">via Axios</a></span>
+</blockquote>
+
+<blockquote class="voice">
+"60%+ probability that no-human-involved AI R&amp;D occurs by end of 2028." The number to fight about — Clark's read of the coding-benchmark + scientific-reproducibility trajectories.
+<span class="attribution">— Jack Clark, <a href="https://jack-clark.net/">Import AI #455</a></span>
+</blockquote>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+
+<section class="videos" id="videos">
+<h2 class="section"><span class="emoji">🎬</span> TRENDING VIDEOS</h2>
+
+<div class="video-grid">
+
+<div class="video">
+<div class="frame-wrap">
+<iframe src="https://www.youtube.com/embed/zIEQdAnOfwg" title="Dwarkesh Patel's AI Lab Review" loading="lazy" allowfullscreen></iframe>
+</div>
+<div class="vmeta">
+<p class="vtitle">Dwarkesh — AI Lab Review: OpenAI, Anthropic, Grok, Meta, NVIDIA, Safe Superintelligence</p>
+<p class="vbody">Lab-by-lab tour of who's leading on what going into Q3. The Anthropic/OpenAI compare-and-contrast is the most-shared clip this week.</p>
+</div>
+</div>
+
+<div class="video">
+<div class="frame-wrap">
+<iframe src="https://www.youtube.com/embed/KBPOTklFTiU" title="The most important question nobody's asking about AI" loading="lazy" allowfullscreen></iframe>
+</div>
+<div class="vmeta">
+<p class="vtitle">Dwarkesh — The most important question nobody's asking about AI</p>
+<p class="vbody">Short essay-video. The question, paraphrased: post-AGI, what's the bottleneck on actually rebuilding things in the world? Spoiler — it's not compute.</p>
+</div>
+</div>
+
+<div class="video">
+<div class="frame-wrap">
+<iframe src="https://www.youtube.com/embed/Sk9tvyRSCgY" title="DeepMind's New AI: A Gift To Humanity" loading="lazy" allowfullscreen></iframe>
+</div>
+<div class="vmeta">
+<p class="vtitle">Two Minute Papers — DeepMind's New AI: A Gift To Humanity</p>
+<p class="vbody">Károly's take on the latest DeepMind drop. Two Minute Papers continues to be the cleanest way to keep a finger on the research pulse if you don't read arXiv directly.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="papers" id="papers">
 <h2 class="section"><span class="emoji">📜</span> PAPERS WORTH KNOWING</h2>
 
 <div class="paper">
 <p class="title"><a href="https://arxiv.org/abs/2605.10912">WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation</a></p>
 <p class="summary">60 human-authored bilingual multimodal tasks averaging 8 minutes and 20+ tool calls each, run inside real CLI agent harnesses (OpenClaw, Claude Code, Codex, Hermes). Best frontier model — Claude Opus 4.7 under OpenClaw — hits 62.2%. Every other model stays below 60%, and just <em>switching the harness</em> moves a single model by up to 18 points.</p>
-<p class="summary">Why you care: the "agents are almost there" narrative keeps tripping on its own benchmarks. This one is closer to real deployment than ToolBench or AgentBench, and the harness-sensitivity result is a red flag — capability rankings published today are partly artifacts of scaffolding choices, not just model quality.</p>
+<p class="summary">Why you care: the "agents are almost there" narrative keeps tripping on its own benchmarks. This one is closer to real deployment than ToolBench, and the harness-sensitivity result is a red flag — capability rankings published today are partly artifacts of scaffolding choices, not just model quality.</p>
 <p class="meta">Ding et al., Shanghai AI Lab / OpenClaw team. Published May 11, 2026.</p>
 </div>
 
 <div class="paper">
 <p class="title"><a href="https://arxiv.org/abs/2605.10851">The Generalized Turing Test: A Foundation for Comparing Intelligence</a></p>
-<p class="summary">Formal framework for "A ≥ B" — B (as distinguisher) can't reliably tell A-imitating-B apart from real B. Builds the order theory (transitivity conditions, equivalence classes) and evaluates pairwise indistinguishability across modern models. Recovers a stratification consistent with existing rankings, but dataset-independent.</p>
+<p class="summary">Formal framework for "A ≥ B" — B (as distinguisher) can't reliably tell A-imitating-B apart from real B. Builds the order theory and evaluates pairwise indistinguishability across modern models. Recovers a stratification consistent with existing rankings but dataset-independent.</p>
 <p class="summary">Why you care: Poggio's group is taking another swing at "what does it mean to compare intelligence" in a way that doesn't bottom out in benchmark gaming. If this comparator becomes a training objective, it changes the data-curation calculus for the next generation of frontier runs.</p>
 <p class="meta">Mitropolsky, Hong, Neumarker, Rimoldi, Poggio. MIT. Published May 11, 2026.</p>
 </div>
@@ -312,36 +606,17 @@
 <div class="paper">
 <p class="title"><a href="https://arxiv.org/abs/2605.10828">The First Drop of Ink: Nonlinear Impact of Misleading Information in Long-Context Reasoning</a></p>
 <p class="summary">Vary the proportion of hard distractors in fixed-length context. Performance drops sharply within the first tiny fraction of distractors, then plateaus — a small amount of misleading material poisons the well almost completely. Attention analysis: hard distractors capture disproportionate attention even at low proportions.</p>
-<p class="summary">Why you care: the result implies most "longer context = better" arguments are wrong in the presence of any adversarial or simply messy retrieval. RAG systems pay a steep tax for upstream retrieval imprecision that they can't recover from downstream. Filter ruthlessly.</p>
+<p class="summary">Why you care: most "longer context = better" arguments are wrong in the presence of any adversarial or simply messy retrieval. RAG systems pay a steep tax for upstream retrieval imprecision they can't recover from downstream. Filter ruthlessly.</p>
 <p class="meta">Gao, Chen, Huang. Texas A&amp;M. Published May 11, 2026.</p>
 </div>
 </section>
 
-<section class="voices">
-<h2 class="section"><span class="emoji">💬</span> VOICES</h2>
-
-<blockquote class="voice">
-"A country of geniuses in a datacenter within a year or two."
-<span class="attribution">— Dario Amodei, Anthropic CEO, framing his AGI timeline. The phrase has stuck because it's not "AGI when?" but "what does a country of geniuses <em>do</em>?" <a href="https://www.axios.com/2026/01/26/anthropic-ai-dario-amodei-humanity">via Axios</a></span>
-</blockquote>
-
-<blockquote class="voice">
-"I didn't touch anything. This is what post-AGI feels like."
-<span class="attribution">— Andrej Karpathy, on his Loop autonomous-research-agent demo. The hands-off workflow framing is what's spreading — not the agent itself. <a href="https://fortune.com/2026/03/17/andrej-karpathy-loop-autonomous-ai-agents-future/">via Fortune</a></span>
-</blockquote>
-
-<blockquote class="voice">
-"60%+ probability that no-human-involved AI R&amp;D occurs by end of 2028."
-<span class="attribution">— Jack Clark, Import AI #455. The number to fight about — Clark's read of the coding-benchmark + scientific-reproducibility trajectories. <a href="https://jack-clark.net/">via Import AI</a></span>
-</blockquote>
-</section>
-
-<section class="adjacent">
+<section class="adjacent" id="adjacent">
 <h2 class="section"><span class="emoji">🧬</span> ADJACENT FRONTIER</h2>
 
 <div class="stack-item">
 <h3>Neuralink moves to high-volume production.</h3>
-<p>Musk says the 2026 milestone is "automated surgical procedure" and high-volume implants. 21 patients to date, FDA nod on the second-gen device, redesigned electrode threads to fix the retraction issue that plagued the v1 cohort. The curve from "ten patients" to "ten thousand" determines whether 2026 is the year BCI stops being demo and starts being product. <a href="https://neuralink.com/updates/">Neuralink updates</a>.</p>
+<p>Musk says the 2026 milestone is "automated surgical procedure" and high-volume implants. 21 patients to date, FDA nod on the second-gen device, redesigned electrode threads to fix the retraction issue that plagued v1. The curve from "ten patients" to "ten thousand" determines whether 2026 is the year BCI stops being demo and starts being product. <a href="https://neuralink.com/updates/">Neuralink updates</a>.</p>
 </div>
 
 <div class="stack-item">
@@ -350,32 +625,34 @@
 </div>
 </section>
 
-<section class="progress">
+<section class="progress" id="meters">
 <h2 class="section"><span class="emoji">📊</span> PROGRESS METERS</h2>
 <div class="meters">
-<div class="meter-row"><span class="label">ARC-AGI-2 SOTA</span><span>GPT-5.2 Thinking — <strong>52.9%</strong> <span class="delta-up">↑15.3 vs Opus 4.5</span></span></div>
-<div class="meter-row"><span class="label">GPQA-Diamond SOTA</span><span>Gemini 3.1 Pro Preview — <strong>94.1%</strong> <span class="delta-up">↑2.1 vs GPT-5.4</span></span></div>
+<div class="meter-row"><span class="label">ARC-AGI-2 SOTA</span><span>GPT-5.2 Thinking — <strong>52.9%</strong> <span class="delta-up">↑15.3</span></span></div>
+<div class="meter-row"><span class="label">GPQA-Diamond SOTA</span><span>Gemini 3.1 Pro Preview — <strong>94.1%</strong> <span class="delta-up">↑2.1</span></span></div>
 <div class="meter-row"><span class="label">SWE-bench Verified SOTA</span><span>Claude Opus 4.5 — <strong>80.9%</strong> <span class="delta-flat">→ stable</span></span></div>
-<div class="meter-row"><span class="label">SWE-bench Pro SOTA</span><span>Claude Opus 4.7 — <strong>64.3%</strong> <span class="delta-up">↑ new bench</span></span></div>
-<div class="meter-row"><span class="label">WildClawBench best</span><span>Claude Opus 4.7 (OpenClaw) — <strong>62.2%</strong> <span class="delta-down">↓ ceiling exposed</span></span></div>
-<div class="meter-row"><span class="label">Releases last 30d</span><span>GPT-5.2 · Gemini 3.1 Pro Preview · Mythos Preview · GLM-5 · Gemma 4 <span class="delta-up">↑ 5</span></span></div>
-<div class="meter-row"><span class="label">Cyber-attack range (32-step)</span><span>Mythos Preview + GPT-5.5 cleared <span class="delta-up">↑ 2 frontier models</span></span></div>
-<div class="meter-row"><span class="label">arXiv cs.AI/LG/CL today</span><span>~30 submissions <span class="delta-flat">→ near 7d avg</span></span></div>
+<div class="meter-row"><span class="label">SWE-bench Pro SOTA</span><span>Claude Opus 4.7 — <strong>64.3%</strong> <span class="delta-up">↑10.9 vs 4.6</span></span></div>
+<div class="meter-row"><span class="label">Terminal-Bench 2.0 SOTA</span><span>GPT-5.5 narrowly <span class="delta-up">↑ Mythos passed</span></span></div>
+<div class="meter-row"><span class="label">UK AISI Expert-Cyber</span><span>GPT-5.5 <strong>71.4%</strong> / Mythos 68.6% <span class="delta-up">↑ new bench</span></span></div>
+<div class="meter-row"><span class="label">LMArena top Elo</span><span>opus-4-6-thinking — <strong>1502</strong> <span class="delta-flat">→</span></span></div>
+<div class="meter-row"><span class="label">Releases last 30d</span><span>GPT-5.5 · Gemini 3.1 Pro · Mythos · GLM-5 · Gemma 4 · Opus 4.7 <span class="delta-up">↑ 6</span></span></div>
+<div class="meter-row"><span class="label">Cyber-attack range cleared</span><span>Mythos + GPT-5.5 (32-step) <span class="delta-up">↑ 2 frontier</span></span></div>
+<div class="meter-row"><span class="label">Stealth on Arena</span><span>Meta muse-spark @ #5 <span class="delta-up">↑ unannounced</span></span></div>
 </div>
 </section>
 
-<section class="horizon-wrap">
+<section class="horizon-wrap" id="horizon">
 <h2 class="section"><span class="emoji">🔮</span> ON THE HORIZON</h2>
 <div class="horizon">The defender side of Glasswing is the next 90 days' story. If Mythos-class offensive capability has crossed the human-expert line, the matching defensive deployment is six to twelve months behind — most enterprise SOCs cannot ingest, triage, or act on a Mythos-volume output stream. Prediction: by Q1 2027, at least three of the twelve Glasswing launch partners ship branded "AI-native security operations" products. Whether the asymmetry actually flips defender-favorable depends on how fast the rest of the Fortune 1000 follows. The bet is reasonable; the execution is brutal.</div>
 </section>
 
-<section class="watching-wrap">
+<section class="watching-wrap" id="watching">
 <h2 class="section"><span class="emoji">🎯</span> WORTH WATCHING</h2>
-<div class="watching">OpenAI was second through the 32-step cyber-attack range, three weeks after Mythos. Their Glasswing-equivalent — if it exists — should surface in the next four weeks. If it doesn't, that's a story too.</div>
+<div class="watching"><strong>Google I/O — May 19–20, 2026.</strong> Three things to track: (1) is Omni announced as a Veo replacement, (2) does Gemini 4 ship or just preview, (3) does the Mac-app footprint expand into other native OS surfaces. Anything else is fluff.</div>
 </section>
 
 <footer class="colophon">
-Compiled from 14 sources at 7:30 PM ET, May 12 2026 — dry-run issue, first cron fire is tomorrow morning. <br>
+Compiled from 22 sources at 8:00 PM ET, May 12 2026 — dry-run issue, first cron fire is tomorrow morning. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a>
 </footer>
 

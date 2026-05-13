@@ -8,6 +8,7 @@ twitter:
   - DarioAmodei       # Dario Amodei (Anthropic CEO)
   - ylecun            # Yann LeCun (Meta Chief AI Scientist)
   - gdb               # Greg Brockman (OpenAI President)
+  - sundarpichai      # Sundar Pichai (Google CEO)
   # Researchers worth reading
   - karpathy          # Andrej Karpathy
   - ilyasut           # Ilya Sutskever
@@ -18,10 +19,22 @@ twitter:
   - aidan_mclau       # Aidan McLaughlin
   - swyx              # Shawn Wang (Latent Space)
   - simonw            # Simon Willison
+  - emollick          # Ethan Mollick (Wharton, applied AI)
   # Curators/explainers
   - AIExplainedYT     # AI Explained channel
-  - emollick          # Ethan Mollick (Wharton, applied AI)
-  - sundarpichai      # Sundar Pichai (Google)
+  - dwarkesh_sp       # Dwarkesh Patel
+  - lexfridman        # Lex Fridman
+
+# X/Twitter accounts to monitor specifically for LEAKS & RUMORS
+twitter_rumor_accounts:
+  - testingcatalog    # UI string + feature-flag leaks (Gemini, ChatGPT, Claude)
+  - apples_jimmy      # "Jimmy Apples" — OpenAI rumor sleuth (read with skepticism)
+  - kepano            # Steph Ango — Obsidian / personal AI tools rumors
+  - btibor91          # Tibor Blaho — system prompt + model UI leaks
+  - kimmonismus       # Kim — AI release roundup aggregator
+  - jeffreyemanuel    # PufferAF / model card leaks
+  - swyx              # Latent Space — Discord chatter early-look
+  - garrytan          # YC's Tan — startup-side rumors
 
 reddit:
   - r/singularity
@@ -30,6 +43,8 @@ reddit:
   - r/agi
   - r/OpenAI
   - r/ArtificialIntelligence
+  - r/StableDiffusion          # for image/video model leaks
+  - r/Bard                     # Gemini rumors land here first
 
 hacker_news:
   # Filter front-page submissions matching any of:
@@ -72,6 +87,26 @@ rss:
   - https://www.alignmentforum.org/feed.xml  # Alignment Forum
   - https://importai.substack.com/feed   # Jack Clark Substack mirror
 
+# Channels for the 🎬 TRENDING VIDEOS section
+youtube_channels:
+  - https://www.youtube.com/@DwarkeshPatel/videos       # long-form interviews
+  - https://www.youtube.com/@aiexplained-official/videos  # explainer/news
+  - https://www.youtube.com/@TwoMinutePapers/videos     # paper summaries
+  - https://www.youtube.com/@MachineLearningStreetTalk/videos
+  - https://www.youtube.com/@CognitiveRevolutionPodcast/videos
+  - https://www.youtube.com/@yannickilcher/videos
+  - https://www.youtube.com/@bycloudAI/videos
+  - https://www.youtube.com/@mreflow/videos
+
+# Leaderboards to scrape for 📈 BENCHMARK WARS
+leaderboards:
+  - https://arena.ai/leaderboard       # LMArena (formerly LMSYS chatbot arena)
+  - https://llm-stats.com/             # LLM Stats aggregator
+  - https://www.vellum.ai/llm-leaderboard
+  - https://lmcouncil.ai/benchmarks
+  - https://epoch.ai/benchmarks        # Epoch AI capability tracking
+  - https://lmmarketcap.com/benchmarks
+
 adjacent_frontier:
   bci:
     - https://neuralink.com/blog/
@@ -87,7 +122,7 @@ adjacent_frontier:
     - https://retro.bio/news
     - https://newlimit.com/news
   biotech:
-    - https://www.isomorphiclabs.com/articles  # AlphaFold spinout
+    - https://www.isomorphiclabs.com/articles
 
 # Editorial dedupe priorities (if a story appears in multiple sources, prefer):
 # 1. Primary lab blog post
@@ -96,15 +131,20 @@ adjacent_frontier:
 # 4. News aggregator (HN, Reddit) — last resort, for community signal only
 
 benchmarks_to_track:
-  # When a new score crosses any of these thresholds, lead with it.
   - name: MMLU
     current_sota_threshold: 92.0
   - name: GPQA-Diamond
     current_sota_threshold: 75.0
   - name: ARC-AGI
     current_sota_threshold: 85.0
+  - name: ARC-AGI-2
+    current_sota_threshold: 50.0
   - name: SWE-bench-Verified
     current_sota_threshold: 80.0
+  - name: SWE-bench-Pro
+    current_sota_threshold: 60.0
+  - name: Terminal-Bench-2.0
+    current_sota_threshold: null   # too new to threshold
   - name: METR-autonomy-horizon-50pct
     description: "Length of task an AI completes 50% as well as a human expert"
     current_sota_minutes: 60
@@ -112,3 +152,7 @@ benchmarks_to_track:
     current_sota_threshold: 50.0
   - name: AIME-2025
     current_sota_threshold: 95.0
+  - name: WildClawBench
+    current_sota_threshold: 60.0
+  - name: UK-AISI-Expert-Cyber
+    current_sota_threshold: 70.0
