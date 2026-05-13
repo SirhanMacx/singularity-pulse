@@ -1,5 +1,34 @@
 # Singularity Pulse — Editorial Style Guide
 
+## Editorial north star (read this first)
+
+**Singularity Pulse exists to track the singularity trajectory, not AI generally.** Every editorial decision filters through one question: **how does this bend the curve?**
+
+The curve has eight measurable dimensions; the **Singularity Pulse Index** (top of every issue) is the composite. An item earns space only if it moves at least one of these:
+
+1. **🧠 Autonomy horizon** — how long a task an AI can complete unassisted (METR 50%/80% task length). Currently ~1h, doubling ~5.7 months.
+2. **⚡ Compute frontier** — largest training run announced, datacenter buildouts, FLOPs scale.
+3. **📈 Capability SOTA** — composite of frontier benchmarks (GPQA-D, ARC-AGI-2, SWE-bench-Pro, FrontierMath, MMLU).
+4. **🤖 Embodied deployment** — humanoid units in production, robotics foundation-model commercial revenue.
+5. **🧬 BCI / human-AI bandwidth** — patients implanted, electrode count, signal fidelity.
+6. **🔬 AI-doing-science** — autonomous discoveries (AlphaEvolve, GNoME-class), AI-as-co-author papers, automated R&D.
+7. **📚 Frontier release velocity** — how fast labs ship at the frontier (releases per 30d).
+8. **🌐 Open-frontier proximity** — gap between open-weight best and frontier closed best.
+
+**An item that doesn't move any of these is not Singularity Pulse content, regardless of HN traffic.** "Anthropic launched legal plugins" is application-layer news, not curve news. Cut.
+
+## Curve-impact tagging (every narrative item)
+
+Every item in TOP SIGNAL, THE STACK, LEAKS, PAPERS, ROBOTICS, and ADJACENT FRONTIER carries an inline curve-impact badge:
+
+- `<span class="impact high">High</span>` — concretely moves at least one of the 8 dimensions with a verifiable number. Belongs in TOP SIGNAL or front of STACK.
+- `<span class="impact medium">Med</span>` — credibly relevant to a dimension but incremental, or has structural implications without a clear metric move. Most STACK items.
+- `<span class="impact low">Low</span>` — surfaced because of community signal (HN front page, viral tweet) but doesn't move the curve. Use sparingly. If everything's Low, you've drifted off-thesis — cut harder, ship shorter.
+
+If you can't tag an item, it doesn't belong in the issue.
+
+**TOP SIGNAL must be High-impact.** No exceptions. If today has no High-impact item, ship a quiet day notice and lead with the strongest Med.
+
 ## Voice
 
 Karpathy-meets-Stratechery. Direct, opinionated, technically literate, but readable in the morning before coffee fully hits. Treat the reader as a smart generalist who follows AI but doesn't need ALL the context spelled out. Trust them.
@@ -40,7 +69,22 @@ For each candidate item, verify the publish date BEFORE writing the take:
 
 **If a story is genuinely huge** and you reasonably expect the reader to want context the date-cut excludes (e.g., today's news is "Anthropic releases Mythos v2" and the reader hasn't heard of v1): you may include ONE contextual link out-of-window per issue, labeled `<span class="context">context</span>` and explicitly flagged in the prose. Use sparingly — once per issue, only when the new story is genuinely unparseable without it.
 
-## Sections (in this order — 12 sections total, ~17-25 min total read)
+## Sections (in this order — 13 blocks total, ~17-25 min read)
+
+### 🌀 SINGULARITY PULSE INDEX (top of every issue, always)
+A composite 0–100 metric tracking the eight curve dimensions, rendered as a big number with delta vs. last issue and vs. 30 days. The eight component readouts sit underneath in a grid. Data comes from `progress.json > sp_index`. The agent updates the index in Step 4.0 of the daily orchestrator before any narrative writing — the index is computed FROM today's findings, so the editorial then flows around what moved.
+
+Component normalization (each scored 0–100, then weighted sum):
+- 🧠 Autonomy horizon: log scale, minutes. 60m ≈ 50, 240m ≈ 75, 1440m ≈ 100. Weight: 0.20.
+- ⚡ Compute frontier: log10 FLOPs. 1e26 ≈ 50, 1e27 ≈ 70, 1e28 ≈ 90. Weight: 0.15.
+- 📈 Capability SOTA composite: average of normalized top scores across GPQA/ARC-AGI-2/SWE-bench-Pro/FrontierMath. Weight: 0.20.
+- 🤖 Embodied units rolling-30d: log scale. 1k ≈ 40, 10k ≈ 65, 100k ≈ 90. Weight: 0.10.
+- 🧬 BCI cumulative patients: log scale. 50 ≈ 40, 500 ≈ 65, 5000 ≈ 90. Weight: 0.05.
+- 🔬 AI-doing-science events in window: count. Weight: 0.10.
+- 📚 Frontier release velocity (releases per 30d): count. 5 ≈ 60, 10 ≈ 80. Weight: 0.10.
+- 🌐 Open-frontier proximity (Elo gap, smaller=better): 200 ≈ 30, 50 ≈ 70, 0 ≈ 100. Weight: 0.10.
+
+Display per component: emoji + label + raw value + Δ vs last issue. Big composite at the top.
 
 ### 🔥 TOP SIGNAL (2–3 paragraphs, ~300 words)
 Most important development of the past 24 hours. P1: what happened (concrete, numbers). P2: why it matters (the real insight). P3 (optional): what to watch next. Picks ONE hero image — verify the URL returns 200 before locking.

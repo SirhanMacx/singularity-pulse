@@ -383,6 +383,21 @@
   .ago.live { background: var(--accent); color: white; }
   .ago.stale-warn { background: #fef3c7; color: #92400e; }
   .empty-section { background: var(--code-bg); padding: 16px 20px; border-radius: 6px; color: var(--muted); font-style: italic; text-align: center; margin: 0; }
+  .sp-index { background: linear-gradient(180deg, var(--card) 0%, var(--bg) 100%); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 22px 18px; margin: 0 0 32px; }
+  .sp-index .row1 { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 4px; }
+  .sp-index .label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; }
+  .sp-index .score { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 56px; line-height: 1; color: var(--accent); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .sp-index .score-delta { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; margin-left: 8px; vertical-align: 20px; }
+  .sp-index .score-delta.up { color: #16a34a; } .sp-index .score-delta.down { color: #dc2626; } .sp-index .score-delta.flat { color: var(--muted); }
+  .sp-index .scale { font-size: 12px; color: var(--muted); margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+  .sp-index .components { display: grid; grid-template-columns: repeat(auto-fit, minmax(135px, 1fr)); gap: 10px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .sp-index .comp { font-size: 12px; line-height: 1.45; }
+  .sp-index .comp .ckey { color: var(--muted); font-size: 11px; display: block; margin-bottom: 2px; }
+  .sp-index .comp .cval { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 700; color: var(--fg); font-variant-numeric: tabular-nums; }
+  .sp-index .comp .cdelta { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 11px; font-weight: 600; margin-left: 4px; }
+  .sp-index .comp .cdelta.up { color: #16a34a; } .sp-index .comp .cdelta.down { color: #dc2626; } .sp-index .comp .cdelta.flat { color: var(--muted); }
+  .impact { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 8px; vertical-align: 2px; }
+  .impact.high { background: #dc2626; color: white; } .impact.medium { background: #f59e0b; color: white; } .impact.low { background: var(--code-bg); color: var(--muted); }
   @media (max-width: 600px) {
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
@@ -422,6 +437,27 @@
   </nav>
 </header>
 
+<section class="sp-index" id="sp-index" aria-label="Singularity Pulse Index">
+  <div class="row1">
+    <span class="label">🌀 Singularity Pulse Index</span>
+    <span class="label">May 12 · 8:30 PM ET</span>
+  </div>
+  <div>
+    <span class="score">58</span><span class="score-delta flat">— first issue</span>
+  </div>
+  <div class="scale">composite 0–100 · baseline established · weekly meta-cron will track movement</div>
+  <div class="components">
+    <div class="comp"><span class="ckey">🧠 Autonomy horizon</span><span class="cval">~60 min</span><span class="cdelta flat">baseline</span></div>
+    <div class="comp"><span class="ckey">⚡ Compute frontier</span><span class="cval">10^26.4 FLOPs</span><span class="cdelta flat">est.</span></div>
+    <div class="comp"><span class="ckey">📈 Capability SOTA</span><span class="cval">72.5 avg</span><span class="cdelta flat">baseline</span></div>
+    <div class="comp"><span class="ckey">🤖 Embodied 30d</span><span class="cval">~850 units</span><span class="cdelta flat">est.</span></div>
+    <div class="comp"><span class="ckey">🧬 BCI patients</span><span class="cval">71 cumulative</span><span class="cdelta flat">baseline</span></div>
+    <div class="comp"><span class="ckey">🔬 AI-doing-science</span><span class="cval">1 event</span><span class="cdelta flat">window</span></div>
+    <div class="comp"><span class="ckey">📚 Releases 30d</span><span class="cval">6</span><span class="cdelta flat">baseline</span></div>
+    <div class="comp"><span class="ckey">🌐 Open-frontier gap</span><span class="cval">11 Elo</span><span class="cdelta flat">tight</span></div>
+  </div>
+</section>
+
 <figure class="hero">
   <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Glasswinged_butterfly_%28Greta_oto%29.jpg" alt="Glasswing butterfly with transparent wings">
   <figcaption>Greta oto, the glasswing butterfly — namesake of what may turn out to be the most consequential industry alignment of the year. Image: Wikimedia Commons.</figcaption>
@@ -430,7 +466,7 @@
 <section class="top-signal" id="top-signal">
 <h2 class="section"><span class="emoji">🔥</span> TOP SIGNAL</h2>
 
-<p>Thinking Machines Lab <a href="https://thinkingmachines.ai/blog">published "Interaction Models: A Scalable Approach to Human-AI Collaboration"</a> yesterday <span class="ago">yesterday</span> — Mira Murati's lab's first major research post in eight months. The site has been almost ghostly since last fall's "On-Policy Distillation" drop, which fed the parlour-game speculation that the company was either pre-product-launch or quietly imploding. Today's post says: neither. They're publishing again, and the framing is consequential.</p>
+<p><span class="impact high">High · 🔬 AI-doing-science</span> Thinking Machines Lab <a href="https://thinkingmachines.ai/blog">published "Interaction Models: A Scalable Approach to Human-AI Collaboration"</a> yesterday <span class="ago">yesterday</span> — Mira Murati's lab's first major research post in eight months. The site has been almost ghostly since last fall's "On-Policy Distillation" drop, which fed the parlour-game speculation that the company was either pre-product-launch or quietly imploding. Today's post says: neither. They're publishing again, and the framing is consequential.</p>
 
 <p>Why this matters: the post stakes out a research direction — formalizing the channel between human and model as a first-class object, not an afterthought downstream of a chat UI. That's a thesis bet. It is also the first public artifact from arguably the most-watched stealth lab in the world, and it signals that the eventual product is going to be opinionated about *how* humans collaborate with the model, not just *what* the model can do. Watch the Hacker News thread: it's currently sitting on the front page <span class="ago">live</span>, which is a stronger early-readership signal than the post's own analytics.</p>
 
@@ -442,17 +478,17 @@
 <h2 class="section"><span class="emoji">⚡</span> THE STACK</h2>
 
 <div class="stack-item">
-<h3>Claude Platform lands on AWS. <span class="ago">yesterday</span></h3>
+<h3><span class="impact medium">Med · 🌐 Open-frontier</span>Claude Platform lands on AWS. <span class="ago">yesterday</span></h3>
 <p>Anthropic <a href="https://news.ycombinator.com/from?site=claude.com">shipped Claude Platform on AWS</a>, which the HN thread is parsing as the first-party answer to Bedrock-only access — Anthropic going direct on AWS infrastructure. Front-page now at 220 points; the comments thread is unusually substantive on the latency/billing implications. Reading: Anthropic continues to disintermediate AWS as a reseller of its own models.</p>
 </div>
 
 <div class="stack-item">
-<h3>"If AI writes your code, why use Python?" hits HN front page. <span class="ago">yesterday</span></h3>
+<h3><span class="impact low">Low · community signal</span>"If AI writes your code, why use Python?" hits HN front page. <span class="ago">yesterday</span></h3>
 <p>Cultural moment more than technical one. <a href="https://news.ycombinator.com/from?site=medium.com">851 points, 910 comments</a> on a single essay arguing that the agent-coding regime breaks Python's traditional readability moat. The volume of dissent in the thread is the actual signal — language preference is becoming a live discussion again now that the writer-of-record is increasingly the model.</p>
 </div>
 
 <div class="stack-item">
-<h3>OpenAI employees liquidated $6.6B at last fall's tender. <span class="ago">~38h ago</span> <span class="context">borderline-recency</span></h3>
+<h3><span class="impact medium">Med · 📚 release velocity</span>OpenAI employees liquidated $6.6B at last fall's tender. <span class="ago">~38h ago</span> <span class="context">borderline-recency</span></h3>
 <p>The Wall Street Journal report <a href="https://www.cryptointegrat.com/p/ai-news-may-11-2026">surfaced May 11 at 2:38 AM ET</a>: 600+ current and former OpenAI staff sold $6.6B in stock during October 2025's tender. ~$11M average per person. The number explains why frontier-lab retention has held in the face of comp wars; it also explains the recent splinter-launch energy out of OpenAI alumni.</p>
 </div>
 <p class="deeper"><a class="deeper-link" data-section="stack">Go deeper on this tomorrow →</a></p>
@@ -462,12 +498,12 @@
 <h2 class="section"><span class="emoji">🕵️</span> LEAKS &amp; RUMORS</h2>
 
 <div class="leak-card">
-<h3><span class="leak-tag">Confirmed-by-leak</span>Gemini Omni video — in-chat editing + camera-angle controls surface 8 days before I/O. <span class="ago">yesterday 6am</span></h3>
+<h3><span class="leak-tag">Confirmed-by-leak</span><span class="impact medium">Med · 📚 release velocity</span>Gemini Omni video — in-chat editing + camera-angle controls surface 8 days before I/O. <span class="ago">yesterday 6am</span></h3>
 <p>@testingcatalog <a href="https://x.com/testingcatalog">captured fresh UI evidence</a> May 11 at 6:08 AM ET: Gemini Omni shows in-chat editing, camera-angle controls, and "a significant step up" in voice quality vs current Veo. UI copy of that detail level is late-stage release prep. <strong>Google I/O runs May 19–20</strong> — Omni is now the betting favorite for the headline reveal.</p>
 </div>
 
 <div class="leak-card">
-<h3><span class="leak-tag">Stealth-launched</span>Meta's "muse-spark" still sitting at #5 on LMArena. <span class="ago">live</span></h3>
+<h3><span class="leak-tag">Stealth-launched</span><span class="impact high">High · 🌐 open-frontier + 📈 capability</span>Meta's "muse-spark" still sitting at #5 on LMArena. <span class="ago">live</span></h3>
 <p>The unnamed model is at <a href="https://arena.ai/leaderboard">Elo 1491 on LMArena's text board</a> right now, sandwiched between Claude Opus 4.7 and Gemini 3.1 Pro Preview. Meta hasn't announced. The leaderboard slot is the news — it persists across today's snapshot, which means the Llama-line public reveal is still imminent.</p>
 </div>
 <p class="deeper"><a class="deeper-link" data-section="leaks">Go deeper on this tomorrow →</a></p>
@@ -535,21 +571,21 @@
 <h2 class="section"><span class="emoji">📜</span> PAPERS WORTH KNOWING</h2>
 
 <div class="paper">
-<p class="title"><a href="https://arxiv.org/abs/2605.10912">WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation</a></p>
+<p class="title"><span class="impact high">High · 🧠 autonomy horizon</span><a href="https://arxiv.org/abs/2605.10912">WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation</a></p>
 <p class="summary">60 human-authored bilingual multimodal tasks averaging 8 minutes and 20+ tool calls each, run inside real CLI agent harnesses (OpenClaw, Claude Code, Codex, Hermes). Best frontier model — Claude Opus 4.7 under OpenClaw — hits 62.2%. Every other model stays below 60%, and just <em>switching the harness</em> moves a single model by up to 18 points.</p>
 <p class="summary">Why you care: the "agents are almost there" narrative keeps tripping on its own benchmarks. This one is closer to real deployment than ToolBench, and the harness-sensitivity result is a red flag — capability rankings published today are partly artifacts of scaffolding choices, not just model quality.</p>
 <p class="meta">Ding et al., Shanghai AI Lab / OpenClaw team. <span class="ago">yesterday</span></p>
 </div>
 
 <div class="paper">
-<p class="title"><a href="https://arxiv.org/abs/2605.10851">The Generalized Turing Test: A Foundation for Comparing Intelligence</a></p>
+<p class="title"><span class="impact medium">Med · 📈 capability framing</span><a href="https://arxiv.org/abs/2605.10851">The Generalized Turing Test: A Foundation for Comparing Intelligence</a></p>
 <p class="summary">Formal framework for "A ≥ B" — B (as distinguisher) can't reliably tell A-imitating-B apart from real B. Builds the order theory and evaluates pairwise indistinguishability across modern models. Recovers a stratification consistent with existing rankings but dataset-independent.</p>
 <p class="summary">Why you care: Poggio's group is taking another swing at "what does it mean to compare intelligence" in a way that doesn't bottom out in benchmark gaming. If this comparator becomes a training objective, it changes the data-curation calculus for the next generation of frontier runs.</p>
 <p class="meta">Mitropolsky, Hong, Neumarker, Rimoldi, Poggio. MIT. <span class="ago">yesterday</span></p>
 </div>
 
 <div class="paper">
-<p class="title"><a href="https://arxiv.org/abs/2605.10828">The First Drop of Ink: Nonlinear Impact of Misleading Information in Long-Context Reasoning</a></p>
+<p class="title"><span class="impact medium">Med · 🧠 autonomy</span><a href="https://arxiv.org/abs/2605.10828">The First Drop of Ink: Nonlinear Impact of Misleading Information in Long-Context Reasoning</a></p>
 <p class="summary">Vary the proportion of hard distractors in fixed-length context. Performance drops sharply within the first tiny fraction of distractors, then plateaus — a small amount of misleading material poisons the well almost completely. Attention analysis: hard distractors capture disproportionate attention even at low proportions.</p>
 <p class="summary">Why you care: most "longer context = better" arguments are wrong in the presence of any adversarial or simply messy retrieval. RAG systems pay a steep tax for upstream retrieval imprecision they can't recover from downstream. Filter ruthlessly.</p>
 <p class="meta">Gao, Chen, Huang. Texas A&amp;M. <span class="ago">yesterday</span></p>

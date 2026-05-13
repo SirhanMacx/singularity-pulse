@@ -124,7 +124,53 @@ For the rolling-state exceptions (Progress Meters, LMArena top 10), use `<span c
 
 The badge goes inline near the source link or item byline. Reader sees freshness at a glance.
 
-## Step 4 — Curate into twelve sections
+## Step 4.0 — Compute the Singularity Pulse Index
+
+Read `progress.json > sp_index` for prior values. Update each component from today's findings (today's leaderboards, today's papers, today's robotics signal, today's lab announcements). Apply the normalization formula in `style-guide.md > SINGULARITY PULSE INDEX` section.
+
+Write back to `progress.json > sp_index`:
+```json
+"sp_index": {
+  "as_of": "ISO-timestamp",
+  "score": <0-100>,
+  "score_prior": <previous composite>,
+  "score_30d_prior": <composite from 30d ago>,
+  "components": {
+    "autonomy_horizon_min": {"raw": 60, "score": 50, "delta": "+0"},
+    "compute_frontier_log10_flops": {"raw": 26.4, "score": 56, "delta": "+0.4"},
+    "capability_sota_composite": {"raw": 72.3, "score": 72, "delta": "+1.1"},
+    "embodied_units_30d": {"raw": 850, "score": 38, "delta": "+50"},
+    "bci_patients_cumulative": {"raw": 71, "score": 43, "delta": "+0"},
+    "ai_science_events_window": {"raw": 2, "score": 40, "delta": "+0"},
+    "frontier_releases_30d": {"raw": 6, "score": 65, "delta": "+0"},
+    "open_frontier_elo_gap": {"raw": 11, "score": 88, "delta": "+0"}
+  }
+}
+```
+
+Then render the index block by substituting:
+- `{{SPI_SCORE}}` → the composite, rounded to integer
+- `{{SPI_DELTA}}` → `+2.3` or `-0.5` or `→`
+- `{{SPI_DELTA_DIR}}` → `up` / `down` / `flat`
+- `{{SPI_DELTA_30D}}` → `+4.2 vs 30d ago`
+- `{{SPI_DATE_SHORT}}` → e.g. `May 12 · 8:30 PM ET`
+- `{{SPI_COMPONENTS}}` → grid of 8 `<div class="comp"><span class="ckey">🧠 Autonomy horizon</span><span class="cval">60 min</span><span class="cdelta flat">→</span></div>` blocks
+
+The Index is the editorial anchor of the whole issue. If it moved materially, lead today's TOP SIGNAL with the story that drove the movement.
+
+## Step 4.1 — Tag every item with curve-impact
+
+Before writing the take for each candidate, score it on the 8 dimensions:
+- Does it move autonomy horizon, capability SOTA, compute frontier, embodied deployment, BCI bandwidth, AI-doing-science, frontier release velocity, or open-frontier proximity?
+- If yes with a verifiable number: `<span class="impact high">High</span>` — eligible for TOP SIGNAL.
+- If yes structurally but without a clear metric move: `<span class="impact medium">Med</span>`.
+- If it surfaced via community signal but doesn't move the curve: `<span class="impact low">Low</span>`. Use sparingly.
+
+If you can't tag it: CUT.
+
+**TOP SIGNAL must be High.** If no item is High today, ship a `📭 No High-impact movement on the curve today` placeholder for TOP SIGNAL and lead with the strongest Med.
+
+## Step 4.2 — Curate into twelve sections
 
 Follow `style-guide.md` exactly. The twelve sections, in order:
 

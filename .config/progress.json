@@ -1,7 +1,23 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "last_updated": "2026-05-12T23:45:00Z",
   "issue_count": 1,
+  "sp_index": {
+    "as_of": "2026-05-12T20:30:00-04:00",
+    "score": 58,
+    "score_prior": null,
+    "score_30d_prior": null,
+    "components": {
+      "autonomy_horizon_min": {"raw": 60, "score": 50, "delta": null, "note": "METR 50% — last published Q1 2026"},
+      "compute_frontier_log10_flops": {"raw": 26.4, "score": 56, "delta": null, "note": "Mythos Preview estimated, exact undisclosed"},
+      "capability_sota_composite": {"raw": 72.5, "score": 72, "delta": null, "note": "GPQA 94.1 · ARC-AGI-2 52.9 · SWE-bench-Pro 64.3 · FrontierMath unknown"},
+      "embodied_units_30d": {"raw": 850, "score": 38, "delta": null, "note": "estimated humanoid shipments rolling 30d (Unitree-heavy)"},
+      "bci_patients_cumulative": {"raw": 71, "score": 43, "delta": null, "note": "Neuralink 21 + Synchron 50+"},
+      "ai_science_events_window": {"raw": 1, "score": 30, "delta": null, "note": "AlphaEvolve scale-out flagged"},
+      "frontier_releases_30d": {"raw": 6, "score": 65, "delta": null, "note": "GPT-5.5 · Gemini 3.1 Pro · Mythos · GLM-5 · Gemma 4 · Opus 4.7"},
+      "open_frontier_elo_gap": {"raw": 11, "score": 88, "delta": null, "note": "Opus-4-6-thinking 1502 - GLM-5 ~1491 (LMArena)"}
+    }
+  },
   "compute": {
     "largest_announced_training_run_flops": null,
     "largest_announced_training_run_model": "Claude Mythos Preview (Anthropic, undisclosed)",
