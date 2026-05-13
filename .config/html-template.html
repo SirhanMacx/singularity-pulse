@@ -235,6 +235,29 @@
   .impact.high { background: #dc2626; color: white; }
   .impact.medium { background: #f59e0b; color: white; }
   .impact.low { background: var(--code-bg); color: var(--muted); }
+  /* Agent bylines — morning Claude + afternoon Codex */
+  .agent-byline { display: inline-block; font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 11px; color: var(--muted); margin-top: 6px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 999px; letter-spacing: 0.04em; }
+  .agent-byline + .agent-byline { margin-left: 6px; }
+  .agent-byline.claude { color: #c2410c; border-color: #c2410c; }
+  .agent-byline.codex { color: #059669; border-color: #059669; }
+  /* Inline SVG chart primitives (used by both agents — examples in style-guide.md) */
+  .chart { margin: 12px 0; padding: 14px 0; }
+  .chart .chart-title { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .chart .chart-caption { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 6px; }
+  .chart svg { width: 100%; height: auto; display: block; max-width: 100%; }
+  .sparkline { display: inline-block; vertical-align: middle; width: 120px; height: 32px; }
+  .sparkline path.line { fill: none; stroke: var(--accent); stroke-width: 1.5; }
+  .sparkline path.fill { fill: var(--accent); opacity: 0.08; }
+  .sparkline circle { fill: var(--accent); }
+  .bar-chart .bar { fill: var(--accent); }
+  .bar-chart .bar.dim { fill: var(--rule); }
+  .bar-chart text { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 11px; fill: var(--muted); }
+  .bar-chart text.value { fill: var(--fg); font-weight: 600; }
+  /* Afternoon-update revision marker */
+  .revised { display: inline-block; background: #fef3c7; color: #92400e; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; margin-left: 6px; vertical-align: 2px; }
+  @media (prefers-color-scheme: dark) {
+    .revised { background: #292014; color: #fbbf24; }
+  }
   @media (max-width: 600px) {
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
@@ -259,6 +282,7 @@
   </div>
   <h1 class="pulse-name">Singularity Pulse</h1>
   <div class="date">{{DATE_LONG}}</div>
+  <div>{{AGENT_BYLINES}}</div>
   <nav class="toc" aria-label="Table of contents">
     <a href="#top-signal">🔥 Top Signal</a>
     <a href="#stack">⚡ Stack</a>

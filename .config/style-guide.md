@@ -29,6 +29,94 @@ If you can't tag an item, it doesn't belong in the issue.
 
 **TOP SIGNAL must be High-impact.** No exceptions. If today has no High-impact item, ship a quiet day notice and lead with the strongest Med.
 
+## Chart primitives (both agents use these — feel free to invent more)
+
+The newsletter should feel **alive**. When a story is better told visually, build it inline with SVG. No external chart libraries. iOS Safari renders all of this natively. Sign each chart with an HTML comment naming the agent and time.
+
+### Sparkline — trend over time
+
+Use for: Singularity Index trajectory, benchmark score progression, FLOPs ramp.
+
+```html
+<span class="sparkline">
+  <svg viewBox="0 0 120 32" preserveAspectRatio="none">
+    <!-- baseline-fill polygon under the line -->
+    <path class="fill" d="M0,28 L20,24 L40,22 L60,18 L80,15 L100,10 L120,8 L120,32 L0,32 Z" />
+    <path class="line" d="M0,28 L20,24 L40,22 L60,18 L80,15 L100,10 L120,8" />
+    <circle cx="120" cy="8" r="2.5" />
+  </svg>
+</span>
+```
+
+X-axis is time (left = oldest, right = today). Y-axis points 0–32 (inverted: y=0 is top, y=32 is bottom). Map data values: `y = 32 - normalized * 32`. The final dot marks today's value.
+
+### Inline bar chart — comparison
+
+Use for: LMArena Elo gaps, fleet sizes by manufacturer, model release counts by lab.
+
+```html
+<div class="chart">
+  <p class="chart-title">Releases per 30d, by lab</p>
+  <svg class="bar-chart" viewBox="0 0 320 140" preserveAspectRatio="xMinYMin meet">
+    <!-- per bar: 4 elements (label, bar, dim track, value) -->
+    <text x="0" y="22" class="label">OpenAI</text>
+    <rect class="bar dim" x="80" y="10" width="220" height="14" rx="2" />
+    <rect class="bar" x="80" y="10" width="180" height="14" rx="2" />
+    <text x="265" y="22" class="value">3</text>
+
+    <text x="0" y="52" class="label">Anthropic</text>
+    <rect class="bar dim" x="80" y="40" width="220" height="14" rx="2" />
+    <rect class="bar" x="80" y="40" width="120" height="14" rx="2" />
+    <text x="205" y="52" class="value">2</text>
+
+    <text x="0" y="82" class="label">DeepMind</text>
+    <rect class="bar dim" x="80" y="70" width="220" height="14" rx="2" />
+    <rect class="bar" x="80" y="70" width="180" height="14" rx="2" />
+    <text x="265" y="82" class="value">3</text>
+  </svg>
+  <p class="chart-caption">May 2026 · LMArena + lab-blog confirmed releases</p>
+</div>
+```
+
+Scale bars proportionally to the max value. Keep ≤6 bars per chart (mobile readability).
+
+### Annotated screenshot
+
+Use for: leaked UI strings, lab-blog hero shots that need a callout.
+
+```html
+<figure class="hero">
+  <img src="HERO_URL" alt="...">
+  <figcaption>Caption with the specific element pointed to. Image: <a>source</a>. <span class="ago">yesterday 6am</span></figcaption>
+</figure>
+```
+
+Don't over-engineer the annotation — text caption pointing at "second line from top" beats a hand-drawn arrow you don't have time to position.
+
+### Pull quote
+
+Use for: standalone memorable line that should stop the reader's scroll.
+
+```html
+<blockquote class="voice" style="font-size:22px; line-height:1.4; border-left-width:5px;">
+  "A country of geniuses in a datacenter within a year or two."
+  <span class="attribution">— Dario Amodei</span>
+</blockquote>
+```
+
+Use sparingly. One pull-quote max per issue.
+
+### Inventing new primitives
+
+If neither sparkline nor bar chart fits, invent. Add a new CSS rule to `html-template.html` (signed with agent + time in a comment) and use it inline. Examples worth building when the day calls for them:
+
+- **Compute-ramp chart** — log-scale FLOPs on a stair-step
+- **Geographic deployment map** — SVG world map highlighting humanoid-factory locations
+- **Network diagram** — labs + their compute partners as connected nodes
+- **Bench-Wars heatmap** — model × benchmark grid with cell colors
+
+Don't add chart types you won't actually use today. Add when needed, document in `meta-evolution-log.md`.
+
 ## Voice
 
 Karpathy-meets-Stratechery. Direct, opinionated, technically literate, but readable in the morning before coffee fully hits. Treat the reader as a smart generalist who follows AI but doesn't need ALL the context spelled out. Trust them.
