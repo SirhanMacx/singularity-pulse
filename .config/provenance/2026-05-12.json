@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-12",
+  "issue_kind": "v8-dry-run-baseline",
+  "created_by": "claude",
+  "last_audited_by": "codex",
+  "last_audited_at": "2026-05-13T00:00:00-04:00",
+  "notes": "Seed ledger for the v8 baseline issue. Several scoreboard history values are explicitly synthetic backfill and should not be treated as observed historical data.",
+  "rendered_items": [
+    {
+      "section": "top-signal",
+      "title": "Thinking Machines Lab publishes Interaction Models",
+      "source_url": "https://thinkingmachines.ai/blog",
+      "checked_at": "2026-05-12T20:30:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": ["ai_science_events_window", "autonomy_horizon_min"],
+      "verification_status": "verified",
+      "notes": "Dry-run top signal."
+    },
+    {
+      "section": "bench-wars",
+      "title": "LMArena text leaderboard snapshot",
+      "source_url": "https://arena.ai/leaderboard",
+      "checked_at": "2026-05-12T20:30:00-04:00",
+      "freshness_badge": "live",
+      "curve_dimensions": ["open_frontier_elo_gap", "capability_sota_composite"],
+      "verification_status": "rolling-state",
+      "notes": "Rolling-state exception."
+    },
+    {
+      "section": "scoreboard",
+      "title": "SP-Index synthetic backfill",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "checked_at": "2026-05-12T20:30:00-04:00",
+      "freshness_badge": "baseline",
+      "curve_dimensions": ["sp_index"],
+      "verification_status": "synthetic",
+      "notes": "Progress history before May 12 is marked synthetic in progress.json."
+    }
+  ]
+}

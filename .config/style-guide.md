@@ -29,6 +29,32 @@ If you can't tag an item, it doesn't belong in the issue.
 
 **TOP SIGNAL must be High-impact.** No exceptions. If today has no High-impact item, ship a quiet day notice and lead with the strongest Med.
 
+## Trust layer (provenance, freshness, estimates)
+
+Every rendered claim should be auditable. The issue must render a compact source ledger near the top and write the full ledger to `.config/provenance/YYYY-MM-DD.json`.
+
+Use these labels consistently:
+
+- `verified` — primary source or timestamp/number directly checked.
+- `estimated` — a reasoned estimate; the prose must say it is estimated.
+- `synthetic` — chart backfill or illustrative baseline; never frame it as observed history.
+- `reader-feedback` — derived from feedback taps or suggestions.
+- `rolling-state` — current leaderboard/progress-meter snapshot.
+
+If a number is estimated or synthetic, the badge is not optional. Trust beats drama.
+
+## Agent disagreement
+
+The two-agent system only matters if disagreement is visible and specific. Each issue should include an `Agent disagreement` block:
+
+- If Claude and Codex disagree, show both frames and the evidence that created the split.
+- If they agree, state the assumption the second agent tested.
+- Do not invent disagreement for theater. "No material disagreement yet" is acceptable on quiet days.
+
+## Prediction-first reading
+
+Predictions are the durable value of the project. The top of the Predictions section should act like a tiny market board: top live bets, confidence, movement since last update, and next resolution date. Daily news earns attention partly by how it changes a probability.
+
 ## Chart primitives (both agents use these — feel free to invent more)
 
 The newsletter should feel **alive**. When a story is better told visually, build it inline with SVG. No external chart libraries. iOS Safari renders all of this natively. Sign each chart with an HTML comment naming the agent and time.

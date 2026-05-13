@@ -16,6 +16,7 @@ All renders are **inline SVG**. No external chart libraries. Each chart pulls fr
 | 6 | `chart-compute-stair` | `compute_history_180d.steps` | 320×140 | Log10 FLOPs stair-step over 180d |
 | 7 | `chart-embodied-stack` | `embodied_history_30d.snapshots` | 320×140 | Cumulative humanoid units (filled area) + 30d-flow bar overlay |
 | 8 | `chart-bci-curve` | `bci_history_90d.snapshots` | 320×120 | Cumulative BCI patients across all programs |
+| 9 | `prediction-market` | `predictions.json` | HTML rows | Top live bets, confidence, movement, next resolution date |
 
 Each chart carries:
 - A `<p class="chart-title">` (e.g., `SP-INDEX · 30 DAYS`)
@@ -63,6 +64,7 @@ Examples worth building when the day calls for them:
 - **chart-lab-network** — nodes + edges showing lab/compute-partner relationships
 - **chart-bench-heatmap** — model × benchmark grid with cell colors
 - **chart-pred-cal** — predictions calibration curve (confidence band × hit rate) per agent
+- **prediction-market** — compact live-bet board at top of Predictions; already part of v8.1 template
 
 ## When to retire a chart
 
@@ -80,5 +82,6 @@ Always render in this order so the reader's eye flows from composite → compone
 6. Compute stair (scale)
 7. Embodied stacked (robotics)
 8. BCI curve (human-AI bandwidth)
+9. Prediction market (inside Predictions, not Scoreboard)
 
 The afternoon Codex fire may reorder if afternoon news materially shifts emphasis — note the reorder in the evolution-log.

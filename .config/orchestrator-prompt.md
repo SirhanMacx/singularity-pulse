@@ -165,6 +165,17 @@ For the rolling-state exceptions (Progress Meters, LMArena top 10), use `<span c
 
 The badge goes inline near the source link or item byline. Reader sees freshness at a glance.
 
+## Step 3.7 — Build the provenance ledger
+
+Before writing prose, create a provenance record for every candidate that survives the recency gate. Write the final rendered set to `.config/provenance/$TODAY.json` with:
+
+- `section`, `title`, `source_url`, `checked_at`, `freshness_badge`
+- `curve_dimensions` touched
+- `verification_status`: `verified`, `estimated`, `synthetic`, `reader-feedback`, or `rolling-state`
+- short `notes` explaining any estimate or synthetic value
+
+Render a compact source ledger in the issue using the `{{SOURCE_LEDGER_*}}` placeholders. The reader should be able to tap once and see what was checked without breaking the morning reading flow. Never present synthetic or estimated data as verified.
+
 ## Step 4.0a — Refresh the chart suite (v8)
 
 Read `progress.json` history arrays (`sp_index.history_30d`, `component_histories_30d`, `lmarena_history_30d`, `benchmark_history_30d`, `releases_timeline_90d`, `compute_history_180d`, `embodied_history_30d`, `bci_history_90d`). For each, append today's data point (or update today's if mid-day). Then re-render every chart in the canonical suite per `chart-suite.md`. Render order: SP-Index trio → component grid → Elo race → benchmark climbs → release timeline → compute stair → embodied stack → BCI curve.
@@ -265,6 +276,11 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these place
 - `{{TITLE}}` → `Singularity Pulse — $TODAY`
 - `{{DATE_LONG}}` → human-readable (e.g., `Tuesday, May 12, 2026`)
 - `{{ISSUE_NUMBER}}` → read `progress.json > issue_count`, add 1
+- `{{WHAT_CHANGED_CONTENT}}` → one tight sentence: what moved since the prior issue, or "Quiet day; no high-impact movement."
+- `{{TRUST_POSTURE_CONTENT}}` → one tight sentence summarizing verified vs estimated vs synthetic posture
+- `{{SOURCE_LEDGER_SUMMARY}}` → e.g. `18 sources checked · 11 fresh · 2 estimated · 1 synthetic baseline`
+- `{{SOURCE_LEDGER_CONTENT}}` → compact `<div class="source-item">` rows; include title, linked source, freshness, and `<span class="verify verified|estimated|synthetic|reader-feedback|rolling-state">`
+- `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
 - `{{HERO_IMAGE_BLOCK}}` → `<figure class="hero"><img src="HERO_URL" alt="..."><figcaption>caption</figcaption></figure>` or empty string if no hero
 - `{{TOP_SIGNAL_CONTENT}}` → HTML `<p>` elements
 - `{{STACK_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>`
@@ -276,6 +292,7 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these place
 - `{{ROBOTICS_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>` (same shape as stack)
 - `{{ADJACENT_CONTENT}}` → same shape as stack items
 - `{{METERS_CONTENT}}` → series of `<div class="meter-row"><span class="label">LABEL</span><span>VALUE <span class="delta-up">↑0.5</span></span></div>`
+- `{{PREDICTION_MARKET_CONTENT}}` → top 3 live predictions with confidence and recent movement; make prediction movement more prominent than routine news when useful
 - `{{HORIZON_CONTENT}}` → HTML prose
 - `{{WATCHING_CONTENT}}` → HTML prose
 - `{{SOURCE_COUNT}}` → integer count of sources successfully pulled this run
@@ -298,6 +315,8 @@ List all `YYYY-MM-DD.html` files in the repo root. For each, extract its TOP SIG
 
 - `progress.json`: bump `issue_count` by 1. Set `last_updated` to ISO timestamp. Update `benchmarks`, `releases_last_30d`, `arxiv_volume`, `compute` per today's findings. Append a snapshot entry to `history` (cap at 90 entries; trim oldest).
 - `seen-stories.json`: append today's story URLs/hashes. Prune entries older than 14 days from `stories`.
+- `.config/provenance/$TODAY.json`: write the rendered-item ledger from Step 3.7.
+- `.config/source-performance.json`: increment attempted/succeeded/rendered counts for every source; this powers the weekly source-yield audit.
 - `run-log.jsonl`: append one JSON line:
   ```json
   {"date":"$TODAY","issue":N,"sources_attempted":X,"sources_succeeded":Y,"stories_in_issue":Z,
@@ -318,6 +337,14 @@ Skip on Progress Meters, Horizon, and Worth Watching (they're not narrative sect
 The widget JS in the template wires these to POST to the feedback ntfy topic on tap. Tomorrow's Step 0 reads those events and weights curation accordingly.
 
 ## Step 8 — Commit and push
+
+Run the quality gate before committing:
+
+```bash
+npm run quality
+```
+
+If it fails, fix the issue before publishing. The gate checks unresolved placeholders, secret leakage, provenance presence, impact/recency badges, and whether `today.html` matches the newest dated issue.
 
 ```bash
 cd /tmp/singularity-pulse && \

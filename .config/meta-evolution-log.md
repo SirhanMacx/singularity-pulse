@@ -2,13 +2,13 @@
 
 Where the **spec itself** evolves to keep up with changing times. Distinct from `evolution-log.md` (daily editorial adjustments). This log captures structural changes: sources added/removed, sections promoted/retired, benchmarks tracked/dropped, voice targets shifted.
 
-The weekly meta-cron (`singularity-pulse-meta`, fires Sunday 6:00 PM ET) runs the audit and writes an entry here. The daily cron does NOT modify the spec — it only writes today's content + a daily evolution-log entry.
+The weekly meta-cron (`singularity-pulse-meta`, fires Sunday 6:00 PM ET) runs the audit and writes an entry here. Daily agents may now make reversible spec mutations under the anti-thrash rules in `orchestrator-prompt.md`; the weekly task consolidates those changes, audits drift, and restores anything that moved too fast.
 
 ## Why a separate weekly loop
 
-The daily loop has two jobs: (a) ship today's issue, (b) note one small editorial adjustment for tomorrow. It's fast and bounded.
+The daily loop has two jobs: (a) ship today's issue, (b) note one small editorial adjustment for tomorrow. It may also add small reversible spec improvements when the day's evidence calls for them.
 
-The weekly loop has one job: **make sure the newsletter is still in the right shape for the world it covers.** AI moves fast — new labs emerge, old voices go quiet, new benchmarks supplant old ones, the line between robotics and "AI" blurs further. The spec written today won't fit a year from now. The weekly review is the periodic check-in that catches drift.
+The weekly loop has one job: **make sure the newsletter is still in the right shape for the world it covers.** AI moves fast — new labs emerge, old voices go quiet, new benchmarks supplant old ones, the line between robotics and "AI" blurs further. The spec written today won't fit a year from now. The weekly review is the periodic check-in that catches drift and turns daily experiments into durable practice only when the evidence supports them.
 
 ## Entry format
 
@@ -95,4 +95,22 @@ The agent should look for emerging sources to add, not just audit existing ones:
 
 **Bet for the coming week**: Google I/O (May 19–20) will surface Gemini Omni and Gemini 4. Expect a flood of 24h-fresh material on May 19. Also bet: Thinking Machines posts again within 7 days now that they've broken silence. If so, promote @miramurati to first-class voice.
 
-**One thing established about the meta-loop itself**: The weekly cron is separate from daily. Daily runs are bounded (content only). Weekly runs are spec mutations, audited and logged here.
+**One thing established about the meta-loop itself**: The weekly cron is separate from daily. Daily runs are bounded around the issue but may make small reversible spec mutations. Weekly runs audit, consolidate, and correct those mutations.
+
+## 2026-05-13 · Week 1 · Daily Spec Mutation [codex]
+
+**Audit window**: Issue #1 dry-run baseline plus user direction to make the project more interesting and trustworthy.
+
+**Sources added**: none.
+
+**Sources removed**: none.
+
+**Sections changed**: Added three reusable trust/interest surfaces to the issue template: `What changed`, `Source ledger`, and `Agent disagreement`; promoted the Predictions section with a `Prediction market` lead-in.
+
+**Benchmarks added/dropped**: none.
+
+**Voice / style-guide updates**: Added trust-layer rules for `verified`, `estimated`, `synthetic`, `reader-feedback`, and `rolling-state`; added explicit guidance that disagreement must be real and specific.
+
+**Reader-suggested gaps**: The project needed more trust and less self-referential agent theater.
+
+**Bet for the coming week**: The source ledger will catch more quality issues than prose review because stale/estimated/synthetic claims become visible before publication.

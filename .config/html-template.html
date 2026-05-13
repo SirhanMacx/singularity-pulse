@@ -230,6 +230,37 @@
   .sp-index .comp .cdelta.up { color: #16a34a; }
   .sp-index .comp .cdelta.down { color: #dc2626; }
   .sp-index .comp .cdelta.flat { color: var(--muted); }
+  /* v8.1 trust and ritual surfaces — added by codex */
+  .morning-brief { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 12px; margin: 0 0 24px; }
+  .brief-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
+  .brief-card .brief-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .brief-card p { font-size: 14px; line-height: 1.5; margin: 0; }
+  .source-ledger, .editorial-disagreement, .prediction-market { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; margin: 22px 0; }
+  .source-ledger summary { cursor: pointer; font-weight: 700; color: var(--fg); }
+  .source-ledger .ledger-meta { color: var(--muted); font-size: 12px; margin: 6px 0 12px; }
+  .source-list { display: grid; gap: 8px; margin-top: 12px; }
+  .source-item { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; padding: 8px 0; border-top: 1px solid var(--rule); font-size: 13px; }
+  .source-item .s-title { font-weight: 600; line-height: 1.3; }
+  .source-item .s-meta { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .verify { display: inline-block; border-radius: 999px; padding: 2px 7px; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+  .verify.verified, .verify.rolling-state { background: #dcfce7; color: #166534; }
+  .verify.estimated { background: #fef3c7; color: #92400e; }
+  .verify.synthetic { background: var(--code-bg); color: var(--muted); }
+  .verify.reader-feedback { background: #dbeafe; color: #1d4ed8; }
+  .editorial-disagreement { border-left: 4px solid #7c3aed; }
+  .editorial-disagreement .dispute-kicker, .prediction-market .pm-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .dispute-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dispute-side { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
+  .dispute-side .agent { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+  .dispute-side.claude .agent { color: #c2410c; }
+  .dispute-side.codex .agent { color: #059669; }
+  .dispute-side p { font-size: 13px; margin: 4px 0 0; line-height: 1.45; }
+  .pm-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 8px 0; border-top: 1px solid var(--rule); }
+  .pm-row:first-of-type { border-top: 0; }
+  .pm-claim { font-size: 13px; line-height: 1.35; }
+  .pm-conf { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .sticky-read { position: sticky; top: 0; z-index: 10; display: none; margin: 0 -20px 18px; padding: 8px 20px; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); font-size: 12px; color: var(--muted); overflow-x: auto; white-space: nowrap; }
+  .sticky-read a { color: var(--muted); border-bottom: 0; margin-right: 12px; }
   /* Curve-impact badges — every narrative item carries one */
   .impact { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 8px; vertical-align: 2px; }
   .impact.high { background: #dc2626; color: white; }
@@ -343,6 +374,10 @@
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
+    .sp-index-pair { flex-direction: column; }
+    .morning-brief, .dispute-grid { grid-template-columns: 1fr; }
+    .sticky-read { display: block; }
+    .source-item, .pm-row { grid-template-columns: 1fr; }
     h2.section { font-size: 22px; margin-top: 36px; }
     .top-signal p { font-size: 17px; }
     .top-signal p:first-of-type::first-letter { font-size: 46px; }
@@ -355,6 +390,14 @@
 </head>
 <body>
 <div class="container">
+
+<nav class="sticky-read" aria-label="Quick jump">
+  <a href="#sp-index">Index</a>
+  <a href="#trust">Sources</a>
+  <a href="#disagreement">Disagreement</a>
+  <a href="#predictions">Predictions</a>
+  <a href="#top-signal">Top Signal</a>
+</nav>
 
 <header class="masthead">
   <div class="nav-row">
@@ -380,6 +423,17 @@
   </nav>
 </header>
 
+<section class="morning-brief" aria-label="Issue brief">
+  <div class="brief-card">
+    <div class="brief-kicker">What changed</div>
+    <p>{{WHAT_CHANGED_CONTENT}}</p>
+  </div>
+  <div class="brief-card">
+    <div class="brief-kicker">Trust posture</div>
+    <p>{{TRUST_POSTURE_CONTENT}}</p>
+  </div>
+</section>
+
 <section class="sp-index" id="sp-index" aria-label="Singularity Pulse Index">
   <div class="row1">
     <span class="label">🌀 Singularity Pulse Index</span>
@@ -400,6 +454,19 @@
   <div class="components">
     {{SPI_COMPONENTS}}
   </div>
+</section>
+
+<details class="source-ledger" id="trust">
+  <summary>Source ledger · what was checked</summary>
+  <div class="ledger-meta">{{SOURCE_LEDGER_SUMMARY}}</div>
+  <div class="source-list">
+    {{SOURCE_LEDGER_CONTENT}}
+  </div>
+</details>
+
+<section class="editorial-disagreement" id="disagreement" aria-label="Editorial disagreement">
+  <div class="dispute-kicker">Agent disagreement</div>
+  {{DISAGREEMENT_CONTENT}}
 </section>
 
 <section class="scoreboard" id="scoreboard" aria-label="Visual scoreboard">
@@ -438,6 +505,10 @@
 
 <section class="predictions" id="predictions" aria-label="Predictions ledger">
 <h2 class="section"><span class="emoji">🎯</span> PREDICTIONS</h2>
+<div class="prediction-market">
+  <div class="pm-kicker">Prediction market</div>
+  {{PREDICTION_MARKET_CONTENT}}
+</div>
 {{PREDICTIONS_CONTENT}}
 </section>
 
@@ -556,7 +627,7 @@
 
 <footer class="colophon">
 Compiled from {{SOURCE_COUNT}} sources at {{COMPILE_TIME}}. <br>
-<a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
+<a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 
 </div>

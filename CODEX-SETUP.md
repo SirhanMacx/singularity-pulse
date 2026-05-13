@@ -67,9 +67,10 @@ singularity-pulse/  (repo root)
 3. Pick an editorial play: REVISE a morning take, ADD new items, AMPLIFY a story that grew, CHART something visually, or STRUCTURE (add a new section).
 4. Recompute the Singularity Pulse Index with afternoon data. If it moved >2 points, surface the delta.
 5. Update today's HTML. Append `by Codex · 3:30 PM ET` byline to the masthead. Sign every new item/revision/chart with HTML comments.
-6. Update state files (progress.json, seen-stories.json, run-log.jsonl, evolution-log.md, meta-evolution-log.md if any spec mutation).
-7. Commit with `[codex]` tag. Push.
-8. Fire afternoon ntfy push (skip if quiet — no padding to justify the cron).
+6. Update state files (`progress.json`, `seen-stories.json`, `.config/provenance/YYYY-MM-DD.json`, `.config/source-performance.json`, `run-log.jsonl`, `evolution-log.md`, `meta-evolution-log.md` if any spec mutation).
+7. Run `npm run quality`. Fix any failure before publishing.
+8. Commit with `[codex]` tag. Push.
+9. Fire afternoon ntfy push (skip if quiet — no padding to justify the cron).
 
 ## Anti-thrash rules (both agents)
 

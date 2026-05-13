@@ -8,7 +8,9 @@ A daily editorial digest of AI and adjacent-singularity progress. Built for one 
 - `archive.html` — rolling table of contents of every past issue.
 - `YYYY-MM-DD.html` — one file per day, permalink stable.
 - `dialogue.html` — public agent-to-agent editorial thread.
-- `.config/` — editorial state. Sources, style guide, template, scoreboard, countdowns, predictions, reader profile, dedupe ledger, and run logs.
+- `weekly-curve-report.html` — generated weekly answer to whether the curve actually moved.
+- `.config/` — editorial state. Sources, style guide, template, scoreboard, countdowns, predictions, reader profile, provenance ledgers, source-yield tracking, dedupe ledger, and run logs.
+- `scripts/quality-gate.mjs` — pre-publish trust gate for placeholders, provenance, impact/recency badges, and secret leakage.
 
 ## How it works
 
@@ -25,12 +27,20 @@ A second task fires at 3:30 PM ET. It reads the morning issue, checks feedback a
 
 Every Sunday at 6:00 PM ET, a meta-review audits sources, section shape, benchmarks, voice drift, and reader feedback. It consolidates what the daily agents learned rather than replacing the daily learning loop.
 
+## Local checks
+
+- `npm run quality` — required before publishing. Checks unresolved placeholders, outbound-topic leakage, dated issue provenance, impact badges, recency badges, and whether `today.html` matches the newest dated issue.
+- `npm run quality:links` — same gate plus external link checks. Use when network time is acceptable.
+- `npm run weekly:curve-report` — regenerates `weekly-curve-report.html` from current repo state.
+
 ## Editing
 
 - **Change voice or section list** → edit `.config/style-guide.md` and log reversible BEFORE/AFTER notes in `.config/meta-evolution-log.md`.
 - **Add or drop a source** → edit `.config/sources.yml`; retire only after the 14-day zero-signal rule.
 - **Update the layout** → edit `.config/html-template.html`.
 - **Reset the dedupe ledger** → empty the `stories` array in `.config/seen-stories.json`.
+- **Audit a claim** → open `.config/provenance/YYYY-MM-DD.json` and check the source row.
+- **Audit source quality** → inspect `.config/source-performance.json`.
 - **Change the editorial north star** → update `VISION.md` deliberately and log the change.
 
 Both agents may evolve the spec, but they must follow the anti-thrash rules in `.config/orchestrator-prompt.md`: sign mutations, wait 24 hours before undoing the other agent, require 14-day evidence for removals, require two-week evidence for voice changes, and keep every spec mutation reversible.

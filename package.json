@@ -1,0 +1,11 @@
+{
+  "name": "singularity-pulse",
+  "version": "0.8.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "quality": "node scripts/quality-gate.mjs",
+    "quality:links": "node scripts/quality-gate.mjs --links",
+    "weekly:curve-report": "node scripts/render-weekly-curve-report.mjs"
+  }
+}

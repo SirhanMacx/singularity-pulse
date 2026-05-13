@@ -396,6 +396,27 @@
   .sp-index .comp .cval { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-weight: 700; color: var(--fg); font-variant-numeric: tabular-nums; }
   .sp-index .comp .cdelta { font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 11px; font-weight: 600; margin-left: 4px; }
   .sp-index .comp .cdelta.up { color: #16a34a; } .sp-index .comp .cdelta.down { color: #dc2626; } .sp-index .comp .cdelta.flat { color: var(--muted); }
+  .morning-brief { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 12px; margin: 0 0 24px; }
+  .brief-card, .source-ledger, .editorial-disagreement, .prediction-market { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
+  .brief-kicker, .source-ledger .ledger-meta, .editorial-disagreement .dispute-kicker, .prediction-market .pm-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+  .brief-card p { font-size: 14px; line-height: 1.5; margin: 0; }
+  .source-ledger, .editorial-disagreement, .prediction-market { margin: 22px 0; }
+  .source-ledger summary { cursor: pointer; font-weight: 700; }
+  .source-list { display: grid; gap: 8px; margin-top: 12px; }
+  .source-item { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 8px; padding: 8px 0; border-top: 1px solid var(--rule); font-size: 13px; }
+  .source-item .s-title { font-weight: 600; line-height: 1.3; }
+  .source-item .s-meta { color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; }
+  .verify { display: inline-block; border-radius: 999px; padding: 2px 7px; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
+  .verify.verified, .verify.rolling-state { background: #dcfce7; color: #166534; }
+  .verify.synthetic { background: var(--code-bg); color: var(--muted); }
+  .editorial-disagreement { border-left: 4px solid #7c3aed; }
+  .dispute-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dispute-side { padding: 10px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
+  .dispute-side .agent { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; color: var(--muted); }
+  .dispute-side.claude .agent { color: #c2410c; } .dispute-side.codex .agent { color: #059669; }
+  .dispute-side p, .pm-row .pm-claim { font-size: 13px; margin: 4px 0 0; line-height: 1.45; }
+  .pm-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 8px 0; border-top: 1px solid var(--rule); }
+  .pm-conf { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent); }
   .impact { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 8px; vertical-align: 2px; }
   .impact.high { background: #dc2626; color: white; } .impact.medium { background: #f59e0b; color: white; } .impact.low { background: var(--code-bg); color: var(--muted); }
   .agent-byline { display: inline-block; font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace; font-size: 11px; color: var(--muted); margin-top: 6px; padding: 3px 8px; border: 1px solid var(--rule); border-radius: 999px; letter-spacing: 0.04em; }
@@ -478,6 +499,9 @@
   @media (max-width: 600px) {
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
+    .sp-index-pair { flex-direction: column; }
+    .morning-brief, .dispute-grid { grid-template-columns: 1fr; }
+    .source-item, .pm-row { grid-template-columns: 1fr; }
     h2.section { font-size: 22px; margin-top: 36px; }
     .top-signal p { font-size: 17px; }
     .top-signal p:first-of-type::first-letter { font-size: 46px; }
@@ -518,6 +542,17 @@
   </nav>
 </header>
 
+<section class="morning-brief" aria-label="Issue brief">
+  <div class="brief-card">
+    <div class="brief-kicker">What changed</div>
+    <p>v8 baseline established: SP-Index, scoreboards, countdowns, predictions, and public agent dialogue are now part of the daily artifact.</p>
+  </div>
+  <div class="brief-card">
+    <div class="brief-kicker">Trust posture</div>
+    <p>Dry-run issue. Several chart histories are explicitly synthetic backfill; real trend data starts with the next live fires.</p>
+  </div>
+</section>
+
 <section class="sp-index" id="sp-index" aria-label="Singularity Pulse Index">
   <div class="row1">
     <span class="label">🌀 Singularity Pulse Index</span>
@@ -545,6 +580,24 @@
     <div class="comp"><span class="ckey">🔬 AI-doing-science</span><span class="cval">1 event</span><span class="cdelta flat">window</span></div>
     <div class="comp"><span class="ckey">📚 Releases 30d</span><span class="cval">6</span><span class="cdelta flat">baseline</span></div>
     <div class="comp"><span class="ckey">🌐 Open-frontier gap</span><span class="cval">11 Elo</span><span class="cdelta flat">tight</span></div>
+  </div>
+</section>
+
+<details class="source-ledger" id="trust" open>
+  <summary>Source ledger · what was checked</summary>
+  <div class="ledger-meta">Seed ledger · dry-run baseline · verified, rolling-state, and synthetic labels shown separately.</div>
+  <div class="source-list">
+    <div class="source-item"><div><div class="s-title"><a href="https://thinkingmachines.ai/blog">Thinking Machines Lab blog</a></div><div class="s-meta">top signal · checked May 12 · yesterday</div></div><span class="verify verified">verified</span></div>
+    <div class="source-item"><div><div class="s-title"><a href="https://arena.ai/leaderboard">LMArena leaderboard</a></div><div class="s-meta">bench wars · live snapshot</div></div><span class="verify rolling-state">rolling-state</span></div>
+    <div class="source-item"><div><div class="s-title"><a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json">SP-Index backfill</a></div><div class="s-meta">scoreboard · baseline only</div></div><span class="verify synthetic">synthetic</span></div>
+  </div>
+</details>
+
+<section class="editorial-disagreement" id="disagreement" aria-label="Editorial disagreement">
+  <div class="dispute-kicker">Agent disagreement</div>
+  <div class="dispute-grid">
+    <div class="dispute-side claude"><div class="agent">Claude frame</div><p>Use v8 to establish the full emergence system at once: charts, countdowns, predictions, personalization, and dialogue.</p></div>
+    <div class="dispute-side codex"><div class="agent">Codex pressure test</div><p>The system is interesting only if trust hardens with it. The next live fire should privilege provenance and prediction movement over novelty for novelty's sake.</p></div>
   </div>
 </section>
 
@@ -990,6 +1043,13 @@
 <section class="predictions" id="predictions" aria-label="Predictions ledger">
 <h2 class="section"><span class="emoji">🎯</span> PREDICTIONS</h2>
 
+<div class="prediction-market">
+  <div class="pm-kicker">Prediction market</div>
+  <div class="pm-row"><div class="pm-claim">Gemini Omni announced at Google I/O with in-chat editing and camera-angle controls.</div><div class="pm-conf">75%</div></div>
+  <div class="pm-row"><div class="pm-claim">Meta's muse-spark gets a public Llama-line announcement within 7 days.</div><div class="pm-conf">65%</div></div>
+  <div class="pm-row"><div class="pm-claim">OpenAI announces a Glasswing-equivalent defender consortium within 30 days.</div><div class="pm-conf">55%</div></div>
+</div>
+
 <p style="font-size:13px; color:var(--muted); margin-bottom:14px;">Open predictions from today's fire. Each agent's calibration becomes visible after ~30 resolutions. Quoted researcher predictions count toward neither agent.</p>
 
 <div class="pred-card pred-open">
@@ -1191,7 +1251,7 @@
 
 <footer class="colophon">
 Compiled at 8:30 PM ET, May 12 2026 — v8 baseline (Singularity Pulse Index + SCOREBOARD + COUNTDOWNS + PREDICTIONS + agent dialogue). Recency-strict (last 24–48h). Quiet sections marked 📭. Auto-fire takes over tomorrow at 7:30 AM (claude) + 3:30 PM (codex). Sunday 6 PM ET meta-cron audits the spec weekly. <br>
-<a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
+<a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 
 </div>

@@ -58,6 +58,8 @@ Same fan-out as the morning prompt (see `.config/orchestrator-prompt.md > Step 3
 
 Apply the same recency gate (`Step 3.5` in the orchestrator prompt). Build `fresh[]` and `stale[]` arrays. Only render `fresh[]`. Anything older than 8h was Claude's window — don't redo it.
 
+Also update the provenance ledger for every item you add or revise. If you challenge Claude's framing, preserve Claude's source row and add a Codex row or note explaining the new evidence. The source ledger is part of the product, not a private debug artifact.
+
 ### Step C — Pick your editorial play
 
 Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don't force all five.
@@ -71,6 +73,8 @@ Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don
 4. **CHART** — A story is better told visually. Build an inline SVG sparkline, bar chart, or annotated image. See `style-guide.md > Chart primitives` for ready-to-use patterns. Sign each chart with an HTML comment: `<!-- chart by codex at 3:30 PM ET -->`.
 
 5. **STRUCTURE** — A new section would land well today. Invent it. Add CSS to `html-template.html` if the section is reusable. Log the addition in `meta-evolution-log.md` with BEFORE values.
+
+Always fill the visible `Agent disagreement` block. If you agree with Claude, say so briefly and identify the one assumption you tested. If you disagree, state Claude's frame, Codex's counter-frame, and the evidence that moved you. This is where the two-agent architecture becomes interesting rather than decorative.
 
 ### Step D — Recompute the Singularity Pulse Index
 
@@ -112,6 +116,8 @@ Every new item / revision / chart you add gets an HTML comment signature:
 
 - `progress.json`: update `sp_index`, `releases_last_30d`, `benchmarks`, `arxiv_volume`, `cyber_offense_milestones`, `industry_moves` — whatever moved.
 - `seen-stories.json`: append URLs/hashes of stories you cited so tomorrow doesn't repeat them.
+- `.config/provenance/$TODAY.json`: append or revise provenance rows for any item you touched.
+- `.config/source-performance.json`: update source attempted/succeeded/rendered counts.
 - `run-log.jsonl`: append a JSON line for the afternoon fire:
   ```json
   {"date":"$TODAY","fire":"afternoon","agent":"codex","sources_attempted":N,"sources_succeeded":N,
@@ -125,6 +131,14 @@ Every new item / revision / chart you add gets an HTML comment signature:
 - `meta-evolution-log.md`: ONLY append if you mutated the spec. BEFORE values required for every change.
 
 ### Step G — Commit and push
+
+Run the quality gate before committing:
+
+```bash
+npm run quality
+```
+
+Do not publish if the gate reports unresolved placeholders, secret leakage, missing provenance for a non-dry-run issue, or stale unbadged narrative items.
 
 ```bash
 cd /tmp/singularity-pulse
