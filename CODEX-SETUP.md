@@ -15,13 +15,13 @@ This file is the wiring guide for getting the Codex side stood up.
 
 ## What Codex needs (capabilities)
 
-1. **A Codex frontend** with task-scheduling support — the OpenAI Codex CLI, the OpenAI Agents SDK, or any harness that can fire a prompt on a cron.
+1. **A Codex frontend** with task-scheduling support — the OpenAI Codex app cron automation, the OpenAI Codex CLI, the OpenAI Agents SDK, or any harness that can fire a prompt on a cron.
 2. **Auth for these resources** (same stack as Claude side):
    - `gh` CLI authed as a GitHub identity with push access to `SirhanMacx/singularity-pulse`
    - `curl` for arXiv API, lab blogs, RSS, ntfy POSTs
    - Web-fetch / web-search for HN, lab-blog scrapes, leaderboard pulls
    - Optional: Twitter/Reddit/YouTube reading capability (Codex's own browser tooling works fine — the spec is tool-agnostic)
-3. **A scheduled-task config** firing at `30 15 * * *` America/New_York (3:30 PM ET). The exact mechanism depends on which Codex harness you're using.
+3. **A scheduled-task config** firing at `30 15 * * *` America/New_York (3:30 PM ET). In the Codex app, create a cron automation named `Singularity Pulse Afternoon` whose prompt tells Codex to follow the local afternoon task at `~/.claude/scheduled-tasks/singularity-pulse-afternoon/SKILL.md`.
 
 ## Two pieces Codex needs that are NOT in the public repo
 
@@ -30,7 +30,7 @@ These are kept local for security — anyone who has them can spam your iPhone:
 - **`NTFY_TOPIC=singularity-pulse-jon-XXXXXXXXXXXX`** — outbound push topic. Set this in Codex's local task config.
 - **`FEEDBACK_TOPIC=singularity-pulse-feedback-XXXXXXXXXXXX`** — reader-reaction topic. Also local.
 
-Both values are visible on the Claude side at `~/.claude/scheduled-tasks/singularity-pulse-afternoon/SKILL.md` (the local canonical version of the afternoon prompt — has the actual topic strings filled in). Copy those values into Codex's task config.
+Both values are visible on the Claude side at `~/.claude/scheduled-tasks/singularity-pulse-afternoon/SKILL.md` (the local canonical version of the afternoon prompt — has the actual topic strings filled in). Prefer pointing Codex's local automation at that file instead of copying the outbound topic into another public or semi-public document.
 
 (Note: the FEEDBACK_TOPIC is already exposed in the rendered HTML's inline feedback widget JS, so it's effectively public. The NTFY_TOPIC for outbound notifications is the only truly-sensitive one.)
 
@@ -95,14 +95,14 @@ Just stop firing the afternoon cron. The morning Claude fire stands alone — th
 
 ## Suggested first-run sanity check
 
-Before scheduling the cron:
+Before trusting the cron:
 
 1. Manually fire one afternoon run end-to-end. Verify the issue updates, both bylines appear in the masthead, the SP-Index recomputes, the ntfy push lands on the iPhone.
 2. Open the published `today.html` on a phone. Tap a `Go deeper on this tomorrow →` link in a section Codex contributed. Verify the feedback event lands in the feedback topic.
 3. Check `git log` — confirm the commit is signed `[codex]` and the author shows Codex.
 4. Read `evolution-log.md` and `run-log.jsonl` — confirm the Codex entries follow the format.
 
-If all four pass, schedule the cron and let it run.
+If all four pass, leave the cron active. If any fail, pause the automation before the next afternoon fire and fix the local task prompt or repo state first.
 
 ## When in doubt
 

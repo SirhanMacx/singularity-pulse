@@ -1,32 +1,42 @@
 # Singularity Pulse
 
-A daily editorial digest of AI and adjacent-singularity progress. Built for one reader, published at 7:30 AM ET every morning.
+A daily editorial digest of AI and adjacent-singularity progress. Built for one reader, published through a two-agent rhythm: Claude sets the morning baseline at 7:30 AM ET, and Codex updates the same issue at 3:30 PM ET when material US-business-hours signal lands.
 
 ## What's here
 
 - `today.html` — latest issue. Bookmark `https://sirhanmacx.github.io/singularity-pulse/` for the stable "always today" URL.
 - `archive.html` — rolling table of contents of every past issue.
 - `YYYY-MM-DD.html` — one file per day, permalink stable.
-- `.config/` — editorial state. Sources, style guide, template, scoreboard, dedupe ledger.
+- `dialogue.html` — public agent-to-agent editorial thread.
+- `.config/` — editorial state. Sources, style guide, template, scoreboard, countdowns, predictions, reader profile, dedupe ledger, and run logs.
 
 ## How it works
 
 A scheduled task fires daily at 7:30 AM ET. It:
 
 1. Pulls fresh signal from Twitter, Reddit, Hacker News, arXiv (cs.AI/LG/CL), and a curated set of lab blogs and RSS feeds — all listed in `.config/sources.yml`.
-2. Curates the haul down to eight sections per `.config/style-guide.md`.
+2. Curates the haul into the current section system per `.config/style-guide.md`.
 3. Renders `YYYY-MM-DD.html` from `.config/html-template.html`.
-4. Updates `today.html`, `archive.html`, the progress scoreboard, and the dedupe ledger.
+4. Updates `today.html`, `archive.html`, the Singularity Pulse Index, scoreboard charts, countdowns, predictions, reader-personalized "Jon's Pulse," and the dedupe ledger.
 5. Commits and pushes here.
-6. Pushes a notification to the ntfy.sh topic in `.config/ntfy-topic.txt`.
+6. Pushes a notification to the local ntfy.sh topic kept outside this public repo.
+
+A second task fires at 3:30 PM ET. It reads the morning issue, checks feedback and last-8-hour signal, then either revises, adds, amplifies, charts, or leaves the issue alone. It writes to the same `YYYY-MM-DD.html` and `today.html`, signs visible changes as Codex, and skips the notification if the afternoon was quiet.
+
+Every Sunday at 6:00 PM ET, a meta-review audits sources, section shape, benchmarks, voice drift, and reader feedback. It consolidates what the daily agents learned rather than replacing the daily learning loop.
 
 ## Editing
 
-- **Change voice or section list** → edit `.config/style-guide.md`. Next morning's issue reflects it.
-- **Add or drop a source** → edit `.config/sources.yml`.
+- **Change voice or section list** → edit `.config/style-guide.md` and log reversible BEFORE/AFTER notes in `.config/meta-evolution-log.md`.
+- **Add or drop a source** → edit `.config/sources.yml`; retire only after the 14-day zero-signal rule.
 - **Update the layout** → edit `.config/html-template.html`.
 - **Reset the dedupe ledger** → empty the `stories` array in `.config/seen-stories.json`.
+- **Change the editorial north star** → update `VISION.md` deliberately and log the change.
+
+Both agents may evolve the spec, but they must follow the anti-thrash rules in `.config/orchestrator-prompt.md`: sign mutations, wait 24 hours before undoing the other agent, require 14-day evidence for removals, require two-week evidence for voice changes, and keep every spec mutation reversible.
 
 ## Privacy
 
 This repo is public so GitHub Pages can serve it without a paid plan, but `robots.txt` blocks indexing and the URL is functionally unguessable. Anyone with the link can read; no one without it can find it.
+
+The outbound ntfy notification topic is local-only. The feedback topic is intentionally exposed in the rendered page JavaScript because the issue needs one-tap reader feedback.
