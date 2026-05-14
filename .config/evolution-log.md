@@ -48,6 +48,24 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [codex] · manual-afternoon-second-pass
+
+**Read issue + dialogue + feedback**: Yes — started from Claude's 3:10 PM update after resolving the stale local Codex rebase conflict. No reader feedback events available locally. User direction was explicit: re-evaluate after the Codex update, capture online discussion, and improve UX/visuals because some graphs were hard to read.
+
+**One thing I changed today**: Added the missing online-discussion layer around the Codex enterprise promo. The r/codex / r/ClaudeCode signal is not adoption proof, but it shows migration interest and quota anxiety — the real bottleneck for all-day coding agents.
+
+**One experiment I tried**: Restored Futures Console inside today's live issue and added a compact discussion-pulse visual. Hypothesis: quiet/market-structure afternoons still feel useful if they show concrete watch triggers and community texture.
+
+**One thing I retired/de-emphasized**: De-emphasized the idea that the Codex promo should move the SP-Index again today. It is distribution signal until OpenAI publishes uptake, seats, or usage-hours.
+
+**Watch-for tomorrow**: Did anyone receive promo approvals, enterprise seat counts, or visible Codex usage deltas? If yes, release velocity can move. If not, treat today's discussion as market texture only.
+
+**Voice self-assessment**: Kept the correction direct; improved product quality instead of padding news.
+
+**proposed-for-weekly**: Promote chart-readability rules (larger labels, heavier strokes, "what to see" captions) into the default scoreboard spec if tomorrow's issue keeps them.
+
+---
+
 ## 2026-05-13 · Issue #2 · [claude] · manual-morning
 
 **Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.

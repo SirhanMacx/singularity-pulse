@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-14T00:00:00-04:00",
+  "last_updated": "2026-05-14T17:46:19-04:00",
   "_note": "Reusable state for the Futures Console. Agents update this before rendering each issue. It is a near-term radar of events that could move SP-Index components, not a rumor dump.",
   "render_contract": {
     "template_placeholder": "{{FUTURES_CONSOLE_CONTENT}}",
@@ -18,10 +18,43 @@
   },
   "radar": [
     {
-      "id": "google-io-omni",
+      "id": "codex-enterprise-promo-adoption",
+      "window": "24h",
+      "title": "Codex migration promo: adoption proof window",
+      "thesis": "OpenAI's Codex enterprise promo is distribution signal today; it becomes curve signal only if uptake or usage-hours surface.",
+      "curve_dimension": [
+        "frontier_releases_30d",
+        "autonomy_horizon_min"
+      ],
+      "trigger": "OpenAI publishes enterprise promo approvals, seat counts, usage-hours, or a follow-up Codex product feature during the 30-day window.",
+      "confidence": 0.7,
+      "status": "active",
+      "evidence_urls": [
+        "https://openai.com/form/codex-enterprise-promo/",
+        "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/"
+      ]
+    },
+    {
+      "id": "agent-metering-breakpoint",
       "window": "7d",
+      "title": "Unlimited-agent pricing breaks first",
+      "thesis": "The Anthropic/OpenAI exchange shows the next agent bottleneck is metering trust: long-running agents can consume thousands of requests where human chat consumes dozens.",
+      "curve_dimension": [
+        "autonomy_horizon_min",
+        "frontier_releases_30d"
+      ],
+      "trigger": "Either lab publishes new hard caps, enterprise-only pools, or a price change explicitly tied to automated coding agents.",
+      "confidence": 0.76,
+      "status": "active",
+      "evidence_urls": [
+        "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens"
+      ]
+    },
+    {
+      "id": "google-io-omni",
+      "window": "5d",
       "title": "Google I/O: Gemini Omni / Gemini 4 watch",
-      "thesis": "Google I/O could move frontier-release velocity if a named model, benchmark table, or product surface ships rather than just being teased.",
+      "thesis": "After Meta escalated compute and OpenAI escalated distribution, Google I/O needs a model, price, or agent-surface answer.",
       "curve_dimension": [
         "capability_sota_composite",
         "frontier_releases_30d"
@@ -43,46 +76,15 @@
       ],
       "trigger": "Human-intervention count, recovery failure, hours logged, factory task mix, or new deployment number from Figure.",
       "confidence": 0.62,
-      "status": "active",
+      "status": "watch",
       "evidence_urls": [
         "https://www.youtube.com/live/luU57hMhkak"
-      ]
-    },
-    {
-      "id": "muse-spark-identity",
-      "window": "7d",
-      "title": "Meta muse-spark identity window",
-      "thesis": "Anonymous-model movement becomes curve-relevant only if the model resolves to a lab, capability class, and benchmark position.",
-      "curve_dimension": [
-        "open_frontier_elo_gap",
-        "capability_sota_composite"
-      ],
-      "trigger": "Meta announcement, model card, or LMArena identity confirmation for muse-spark-class entries.",
-      "confidence": 0.65,
-      "status": "watch",
-      "evidence_urls": [
-        "https://arena.ai/leaderboard"
-      ]
-    },
-    {
-      "id": "anthropic-agents-ga",
-      "window": "30d",
-      "title": "Anthropic managed agents: preview to GA",
-      "thesis": "Managed agents only move the autonomy curve if third-party evals or production traces show longer reliable task horizons.",
-      "curve_dimension": [
-        "autonomy_horizon_min"
-      ],
-      "trigger": "General availability, pricing, external evals on long-horizon agent tasks, or production case studies with completion-time data.",
-      "confidence": 0.5,
-      "status": "watch",
-      "evidence_urls": [
-        "https://www.anthropic.com/news"
       ]
     }
   ],
   "watch_rail": [
-    "Google I/O May 19-20",
-    "Figure stream intervention rate",
-    "muse-spark reveal window"
+    "Codex promo approvals",
+    "Claude third-party caps",
+    "Google I/O counterpunch"
   ]
 }

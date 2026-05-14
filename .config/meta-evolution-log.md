@@ -132,3 +132,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: The reader wanted the product to feel more futuristic, more useful on quiet days, and less dependent on whether a single breaking-news item exists.
 
 **Bet for the coming week**: The Futures Console will make morning editions feel more alive because Claude can show live watchpoints and concrete movement triggers before prose curation starts.
+
+## 2026-05-14 · Week 1 · Daily Spec Mutation [codex] · visual readability pass
+
+**Audit window**: Issue #3 plus reader complaint that some graphs are hard to read and the afternoon edition should capture online discussion after the Codex update.
+
+**Sources added**: none to `sources.yml`.
+
+**Sources removed**: none.
+
+**Sections changed**: Added a reusable `Online discussion pulse` primitive for compact community-signal readouts. BEFORE: online discourse had to be squeezed into prose or VOICES. AFTER: a three-card visual can separate primary fact, community mood, and curve read without pretending discussion equals verified adoption.
+
+**Benchmarks added/dropped**: none.
+
+**Voice / style-guide updates**: Template chart defaults now use larger SVG label text, heavier line strokes, stronger gridlines, and larger chart display height. BEFORE: `.v81-bigchart` labels were 8-10px and lines were 2px. AFTER: labels are 10-12px with text stroke, lines are 3px, and charts render taller on phone.
+
+**Reader-suggested gaps**: The reader explicitly named hard-to-read graphs and wanted more online discussion / UX polish as part of the afternoon fire.
+
+**Bet for the coming week**: Readability improvements will matter more than adding more charts; one legible chart plus a clear "what to see" caption beats eight tiny graphics.

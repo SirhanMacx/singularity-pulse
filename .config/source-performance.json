@@ -50,6 +50,42 @@
       "signal_score": 4,
       "last_rendered_at": "2026-05-13",
       "notes": "Primary-source UI wedge for agents in Chrome (Magic Pointer)."
+    },
+    {
+      "id": "axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+      "type": "news",
+      "url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+      "status": "core",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 5,
+      "last_rendered_at": "2026-05-14",
+      "notes": "Afternoon source for Anthropic third-party agent metering and OpenAI counter-positioning."
+    },
+    {
+      "id": "openai.com/form/codex-enterprise-promo",
+      "type": "lab_blog",
+      "url": "https://openai.com/form/codex-enterprise-promo/",
+      "status": "promote-watch",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 4,
+      "last_rendered_at": "2026-05-14",
+      "notes": "Primary-source confirmation of Codex enterprise promo; watch for public uptake numbers."
+    },
+    {
+      "id": "reddit.com/r/codex/2-months-free",
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/",
+      "status": "promote-watch",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 3,
+      "last_rendered_at": "2026-05-14",
+      "notes": "Community discussion signal for migration interest and quota anxiety; not adoption proof."
     }
   ]
 }

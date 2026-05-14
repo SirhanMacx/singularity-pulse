@@ -1,0 +1,66 @@
+{
+  "issue_date": "2026-05-14",
+  "checked_at": "2026-05-14T17:46:19-04:00",
+  "rendered_items": [
+    {
+      "section": "top-signal",
+      "title": "Meta Muse Spark and 2026 capex",
+      "source_url": "https://arena.ai/leaderboard",
+      "checked_at": "2026-05-14T07:30:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": ["compute_frontier_log10_flops", "frontier_releases_30d", "capability_sota_composite"],
+      "verification_status": "rolling-state",
+      "notes": "Morning issue used live LMArena snapshot plus reported Meta capex; Codex did not revise this lead."
+    },
+    {
+      "section": "stack",
+      "title": "Anthropic tightens third-party agent metering; OpenAI counters with Codex enterprise promo",
+      "source_url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "today · ~2pm ET",
+      "curve_dimensions": ["frontier_releases_30d", "autonomy_horizon_min"],
+      "verification_status": "verified",
+      "notes": "Axios report used for third-party agent metering and OpenAI counter-positioning."
+    },
+    {
+      "section": "futures-console",
+      "title": "Codex enterprise promo adoption window",
+      "source_url": "https://openai.com/form/codex-enterprise-promo/",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "live",
+      "curve_dimensions": ["frontier_releases_30d", "autonomy_horizon_min"],
+      "verification_status": "verified",
+      "notes": "Primary OpenAI form confirms promo surface; adoption counts remain unknown."
+    },
+    {
+      "section": "stack",
+      "title": "r/codex discussion of two months free promo",
+      "source_url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "today · 3h ago",
+      "curve_dimensions": ["frontier_releases_30d"],
+      "verification_status": "reader-feedback",
+      "notes": "Community discussion signal only; not treated as verified migration or adoption."
+    },
+    {
+      "section": "scoreboard",
+      "title": "SP-Index and compute charts",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": ["compute_frontier_log10_flops", "capability_sota_composite"],
+      "verification_status": "synthetic",
+      "notes": "Chart histories include synthetic backfill explicitly labeled in issue."
+    },
+    {
+      "section": "robotics",
+      "title": "Figure F.03 livestream",
+      "source_url": "https://www.youtube.com/live/luU57hMhkak",
+      "checked_at": "2026-05-13T15:55:00-04:00",
+      "freshness_badge": "live now",
+      "curve_dimensions": ["embodied_units_30d"],
+      "verification_status": "verified",
+      "notes": "Preserved from Codex May 13 afternoon update as continuing endurance proof."
+    }
+  ]
+}

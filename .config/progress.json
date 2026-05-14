@@ -1,12 +1,12 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-14T11:30:00Z",
+  "last_updated": "2026-05-14T17:46:19-04:00",
   "issue_count": 3,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "sp_index": {
-    "as_of": "2026-05-13T15:55:00-04:00",
-    "score": 60,
-    "score_prior": 58,
+    "as_of": "2026-05-14T17:46:19-04:00",
+    "score": 63,
+    "score_prior": 62,
     "score_30d_prior": null,
     "components": {
       "autonomy_horizon_min": {"raw": 60, "score": 50, "delta": null, "note": "METR 50% — last published Q1 2026"},
