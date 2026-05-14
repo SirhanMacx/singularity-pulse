@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-14T11:45:00-04:00",
+  "last_updated": "2026-05-14T15:10:00-04:00",
   "_note": "Append-only ledger of dated predictions made by either agent or quoted from researchers. Each fire MAY add predictions (not required — don't manufacture bets on slow days) and MUST check for predictions resolving today, marking hit/miss/partial with evidence. Calibration scores per agent computed by the weekly meta-cron after ~30 resolutions per agent.",
   "predictions": [
     {
@@ -89,11 +89,16 @@
         "https://www.crescendo.ai/news/latest-ai-news-and-updates"
       ],
       "rationale": "Three signals point same direction: (1) Thursday is one of OpenAI's higher-cadence ship days. (2) 9 days since last ship (GPT-5.5 Instant May 5), longer than usual gap. (3) Active competitive pressure from Anthropic's autonomous-agents preview yesterday + Google's Gemini 3.1 Flash-Lite $0.25/M cost shock yesterday — Codex CLI is the natural surface where OpenAI competes head-to-head with Claude Code. Discounted from raw 50% to 40% for alignment-bias (3 signals pointing same way = motivated-reasoning red flag). First sub-24h-window prediction in the ledger; resolves cleanly at Codex's 3:30 PM afternoon fire or by the next morning fire at latest.",
-      "status": "open",
-      "resolved_at": null,
-      "resolved_by": null,
-      "outcome": null,
-      "outcome_evidence_links": []
+      "status": "resolved",
+      "resolved_at": "2026-05-14T15:10:00-04:00",
+      "resolved_by": "claude",
+      "outcome": "partial",
+      "outcome_credit": 0.5,
+      "outcome_evidence_links": [
+        "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+        "https://phemex.com/news/article/openai-offers-two-months-free-codex-access-amid-anthropic-changes-81350"
+      ],
+      "outcome_notes": "OpenAI's actual move today was a PRICING/ACCESS promo (Sam Altman announced '2 months free Codex enterprise access' for new business customers, 30-day promotional window, targeting Anthropic defectors after Anthropic tightened third-party agent limits earlier today). The Codex changelog at developers.openai.com/codex/changelog had no May 14 entry — most recent was May 11 (Auto-review). Per my pre-stated resolution rubric, 'pricing change without product' = PARTIAL · 0.5 credit. The directional read (OpenAI moves today, on Codex, on-record from Altman, in competitive response) was correct. The specific bet (agent-mode/sub-agent/voice-Codex FEATURE) was not what shipped. Calibration: 0.4 stated confidence × 0.5 outcome = well-within-band first sub-24h-window resolution."
     },
     {
       "id": "p-2026-05-12-quoted-001",
@@ -134,7 +139,7 @@
   ],
   "calibration_per_agent": {
     "_note": "Computed by the weekly meta-cron after each agent has ≥30 resolved predictions. Until then, this section stays sparse.",
-    "claude": {"resolved": 1, "hit": 1, "miss": 0, "partial": 0, "within_band_pct": null, "_note": "n=1 not yet statistically meaningful. First resolution: p-2026-05-12-003 muse-spark @0.65 confidence resolved HIT at day 2 of 7-day window. Brand-mismatch caveat flagged."},
+    "claude": {"resolved": 2, "hit": 1, "miss": 0, "partial": 1, "within_band_pct": null, "_note": "n=2 not yet statistically meaningful. Resolution 1: p-2026-05-12-003 muse-spark @0.65 → HIT at day 2. Resolution 2: p-2026-05-14-002 OpenAI Codex feature today @0.40 → PARTIAL (pricing promo shipped, not a feature, per pre-stated rubric). Total credit: 1.5/2 = 75%."},
     "codex": {"resolved": 0, "hit": 0, "miss": 0, "partial": 0, "within_band_pct": null}
   }
 }

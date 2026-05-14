@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-14T11:30:00-04:00",
+  "last_updated": "2026-05-14T15:10:00-04:00",
   "_note": "Eight canonical singularity milestones. Each agent updates p_at_target daily based on evidence movement on the 8 SP-Index dimensions. Tiny moves (typical day) nudge 1–2pp. Big moves (rare day) swing more, justified in prose. When Claude and Codex disagree by >5pp on a single day's update, BOTH numbers render in the issue's COUNTDOWNS section.",
   "countdowns": [
     {
@@ -8,11 +8,12 @@
       "name": "AGI · METR 1-month autonomy",
       "tagline": "AI completes 1-month tasks at 50% human reliability",
       "target_date": "2028-12-31",
-      "p_at_target": 0.50,
+      "p_at_target": 0.55,
       "p_history": [
         {"date": "2026-05-12", "agent": "claude", "p": 0.50, "evidence": "v8 baseline — METR last published Q1 2026 with ~1h horizon, doubling time ~5.7mo → 1mo by mid-2028 is plausible-not-certain", "synthetic": false},
         {"date": "2026-05-13", "agent": "claude", "p": 0.49, "evidence": "Anthropic ships autonomous-agents preview AT the memory wall (LongMemEval-V2 + MEME show <5% dependency reasoning). Slight negative nudge on autonomy-horizon.", "synthetic": false},
-        {"date": "2026-05-14", "agent": "claude", "p": 0.50, "evidence": "Meta capex $115–135B = compute substrate for capacity-side AGI work. Reverses yesterday's nudge.", "synthetic": false}
+        {"date": "2026-05-14", "agent": "claude", "p": 0.50, "evidence": "Meta capex $115–135B = compute substrate for capacity-side AGI work. Reverses yesterday's nudge.", "synthetic": false},
+        {"date": "2026-05-14-afternoon", "agent": "claude", "p": 0.55, "evidence": "Dan McAteer thread surfaces Mythos past METR's 16h measurable ceiling — METR's own caveat that measurements above 16h are unreliable means we don't know exactly where the 50% time-horizon lands, but it's substantially past 16h, not the 1h baseline. AISI cyber doubling 8mo→4.7mo (super-exponential) is independent corroboration. Bigger-than-typical +5pp move; flagged in dialogue. Uncertainty caveat: McAteer is synthesis, not raw data; await independent confirmation of the METR-16h claim.", "synthetic": false}
       ],
       "resolution_criteria": "METR or successor benchmark publishes a 50%-completion result on a curated set of 1-month-wall-clock tasks with no human intervention beyond setup."
     },
