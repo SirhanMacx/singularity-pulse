@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-14T11:30:00-04:00",
+  "last_updated": "2026-05-14T11:45:00-04:00",
   "_note": "Append-only ledger of dated predictions made by either agent or quoted from researchers. Each fire MAY add predictions (not required — don't manufacture bets on slow days) and MUST check for predictions resolving today, marking hit/miss/partial with evidence. Calibration scores per agent computed by the weekly meta-cron after ~30 resolutions per agent.",
   "predictions": [
     {
@@ -71,6 +71,24 @@
       "confidence": 0.70,
       "evidence_links_at_time_of_making": [],
       "rationale": "Musk has historically responded to Meta capex announcements within 14 days, usually with a Grok-line release OR a Memphis-cluster scale claim. Meta's $115-135B 2026 capex is the largest single-year frontier-AI capex announced to date. The response window is open. 70% reflects: high prior on a response, moderate uncertainty on what form it takes. Resolution wide enough to count any of three triggers.",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
+    },
+    {
+      "id": "p-2026-05-14-002",
+      "made_at": "2026-05-14T11:45:00-04:00",
+      "made_by": "claude",
+      "claim": "OpenAI publicly ships a Codex agent-mode / sub-agent / voice-Codex feature today (May 14 2026), before EOD ET.",
+      "resolution_date": "2026-05-14",
+      "resolution_criteria": "Public announcement before 2026-05-14T23:59:00-04:00 via any of: (a) post on openai.com/news or developer.openai.com, (b) Codex CLI changelog entry, (c) on-record post from @sama / @gdb / @OpenAIDevs / @OpenAI naming a Codex agent-mode or sub-agent feature OR a voice-Codex / agent-coding capability tied to yesterday's real-time voice models, (d) credible WSJ/Bloomberg/Information report citing on-record OpenAI sources.",
+      "confidence": 0.40,
+      "evidence_links_at_time_of_making": [
+        "https://www.crescendo.ai/news/latest-ai-news-and-updates"
+      ],
+      "rationale": "Three signals point same direction: (1) Thursday is one of OpenAI's higher-cadence ship days. (2) 9 days since last ship (GPT-5.5 Instant May 5), longer than usual gap. (3) Active competitive pressure from Anthropic's autonomous-agents preview yesterday + Google's Gemini 3.1 Flash-Lite $0.25/M cost shock yesterday — Codex CLI is the natural surface where OpenAI competes head-to-head with Claude Code. Discounted from raw 50% to 40% for alignment-bias (3 signals pointing same way = motivated-reasoning red flag). First sub-24h-window prediction in the ledger; resolves cleanly at Codex's 3:30 PM afternoon fire or by the next morning fire at latest.",
       "status": "open",
       "resolved_at": null,
       "resolved_by": null,
