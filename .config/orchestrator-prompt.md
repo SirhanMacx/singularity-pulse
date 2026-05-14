@@ -177,7 +177,34 @@ Before writing prose, create a provenance record for every candidate that surviv
 
 Render a compact source ledger in the issue using the `{{SOURCE_LEDGER_*}}` placeholders. The reader should be able to tap once and see what was checked without breaking the morning reading flow. Never present synthetic or estimated data as verified.
 
-## Step 4.0a — Refresh the chart suite (v8)
+## Step 3.7 — Hero image rotation (v8.1, mandatory)
+
+The same hero image must NOT appear in two issues in a row. After locking your TOP SIGNAL but before rendering, pick a fresh Wikimedia Commons image tied to today's lead story. See `chart-suite.md > Hero image rotation` for the full workflow + category catalog.
+
+Quick recipe:
+1. Identify thematic category from TOP SIGNAL (data center, semiconductor, robotics, neural net, compute hardware, BCI, etc.).
+2. Search Wikimedia Commons for an original-resolution photo in that category.
+3. Verify the `upload.wikimedia.org` URL returns 200 (or pick a different known-stable one if rate-limited).
+4. Write a caption that explicitly ties the image to TODAY's TOP SIGNAL — no generic descriptions.
+5. Compare against the past 7 issues' heroes (read prior `<img src="...">` lines from past `YYYY-MM-DD.html` files). If a candidate appeared in the last 7 fires, pick another.
+6. If absolutely no fresh hero is verifiable: omit the hero block entirely with a 1-line note (`📷 Hero pending — fresh image queued for tomorrow's fire.`). Reusing yesterday's is forbidden.
+
+## Step 4.0a — Refresh the chart suite (v8.1 — redesigned May 14 for clarity)
+
+**Format change as of May 14:** the SCOREBOARD section renders only **3 blocks** (was 8). The new spec is in `chart-suite.md`. Summary:
+
+1. **4-up stat-card grid** (`.v81-stats`) — SP-Index canonical · Jon's Pulse · Predictions ratio · today's headline metric (rotates).
+2. **SP-Index 30-day trajectory** (`.v81-bigchart`) — big chart with axis labels, gridlines, today-dot with glow, and a **🔎 "What to see" caption** stating the editorial read.
+3. **One headline-relevant secondary chart** (`.v81-bigchart`) — pick from: compute ramp, capability climb, embodied stack, autonomy horizon, open-frontier gap. Whichever supports today's TOP SIGNAL.
+
+Hard rules (per `chart-suite.md`):
+- Axis labels mandatory. No naked sparklines.
+- Today's value gets a glowing dot (`bc-dot-today`) and a numeric label.
+- Every chart carries a 🔎 caption naming the read.
+- All inline SVG. No external chart libraries.
+- Sign with `<!-- chart by [agent] at [time] -->`.
+
+If you previously rendered an 8-chart layout (v8 day 1 / day 2), DO NOT reproduce it. Use the v8.1 3-block layout.
 
 Read `progress.json` history arrays (`sp_index.history_30d`, `component_histories_30d`, `lmarena_history_30d`, `benchmark_history_30d`, `releases_timeline_90d`, `compute_history_180d`, `embodied_history_30d`, `bci_history_90d`). For each, append today's data point (or update today's if mid-day). Then re-render every chart in the canonical suite per `chart-suite.md`. Render order: SP-Index trio → component grid → Elo race → benchmark climbs → release timeline → compute stair → embodied stack → BCI curve.
 
