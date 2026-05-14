@@ -99,6 +99,7 @@ Read these files. They are the single source of truth — never invent style, so
 - `/tmp/singularity-pulse/.config/html-template.html` — HTML template with `{{PLACEHOLDERS}}`
 - `/tmp/singularity-pulse/.config/progress.json` — running scoreboard; you'll update it
 - `/tmp/singularity-pulse/.config/seen-stories.json` — 14-day dedupe ledger; you'll update it
+- `/tmp/singularity-pulse/.config/futures-console.json` — forward radar; update before rendering `{{FUTURES_CONSOLE_CONTENT}}`
 
 The push notification topic name is embedded in your runtime SKILL.md (not in the public repo, for security). Use the value defined there.
 
@@ -234,6 +235,20 @@ Then render the index block by substituting:
 
 The Index is the editorial anchor of the whole issue. If it moved materially, lead today's TOP SIGNAL with the story that drove the movement.
 
+## Step 4.0e — Build the Futures Console (v8.2)
+
+Read `.config/futures-console.json` before narrative writing. Update its `radar` entries from today's fresh signal, predictions, countdowns, and dated scheduled events. This is a forward radar: it should tell the reader what could move the curve next, not pad the issue with vague speculation.
+
+Render `{{FUTURES_CONSOLE_CONTENT}}` as 2-4 `.future-card` blocks plus one `.watch-rail`. Each card must include:
+- window (`24h`, `7d`, `30d`, or a dated event)
+- curve dimension(s) that would move
+- thesis in one concrete sentence
+- trigger that would change the SP-Index or a live prediction
+- confidence as a meter
+- at least one evidence link
+
+Use live evidence where available. If nothing meaningful changed, render a concise steady-state console from the highest-value radar entries and say exactly what would change it. Do not invent future events. Do not launder stale rumors into the console.
+
 ## Step 4.1 — Tag every item with curve-impact
 
 Before writing the take for each candidate, score it on the 8 dimensions:
@@ -248,7 +263,7 @@ If you can't tag it: CUT.
 
 ## Step 4.2 — Curate into twelve sections
 
-Follow `style-guide.md` exactly. The twelve sections, in order:
+Follow `style-guide.md` exactly. The narrative sections sit after the Singularity Pulse Index and Futures Console, in this order:
 
 1. **🔥 TOP SIGNAL** — single most important development. 2–3 paragraphs, ~300 words. P1: what happened. P2: why it matters. P3 (optional): what to watch. Pick hero image URL — verify 200 with WebFetch before locking.
 2. **⚡ THE STACK** — 4–6 secondary stories. Verb-led headline + 2–3 sentence take + inline source link.
@@ -281,6 +296,7 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these place
 - `{{SOURCE_LEDGER_SUMMARY}}` → e.g. `18 sources checked · 11 fresh · 2 estimated · 1 synthetic baseline`
 - `{{SOURCE_LEDGER_CONTENT}}` → compact `<div class="source-item">` rows; include title, linked source, freshness, and `<span class="verify verified|estimated|synthetic|reader-feedback|rolling-state">`
 - `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
+- `{{FUTURES_CONSOLE_CONTENT}}` → 2-4 Futures Console cards from `.config/futures-console.json` plus `.watch-rail`
 - `{{HERO_IMAGE_BLOCK}}` → `<figure class="hero"><img src="HERO_URL" alt="..."><figcaption>caption</figcaption></figure>` or empty string if no hero
 - `{{TOP_SIGNAL_CONTENT}}` → HTML `<p>` elements
 - `{{STACK_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>`
@@ -316,6 +332,7 @@ List all `YYYY-MM-DD.html` files in the repo root. For each, extract its TOP SIG
 - `progress.json`: bump `issue_count` by 1. Set `last_updated` to ISO timestamp. Update `benchmarks`, `releases_last_30d`, `arxiv_volume`, `compute` per today's findings. Append a snapshot entry to `history` (cap at 90 entries; trim oldest).
 - `seen-stories.json`: append today's story URLs/hashes. Prune entries older than 14 days from `stories`.
 - `.config/provenance/$TODAY.json`: write the rendered-item ledger from Step 3.7.
+- `.config/futures-console.json`: update `last_updated`, radar status, confidence, triggers, and watch rail when today's signal changes near-term expectations.
 - `.config/source-performance.json`: increment attempted/succeeded/rendered counts for every source; this powers the weekly source-yield audit.
 - `run-log.jsonl`: append one JSON line:
   ```json

@@ -114,3 +114,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: The project needed more trust and less self-referential agent theater.
 
 **Bet for the coming week**: The source ledger will catch more quality issues than prose review because stale/estimated/synthetic claims become visible before publication.
+
+## 2026-05-14 · Week 1 · Daily Spec Mutation [codex]
+
+**Audit window**: Issue #2 plus reader escalation that the newsletter needs a stronger foundation before the next morning fire.
+
+**Sources added**: none.
+
+**Sources removed**: none.
+
+**Sections changed**: Added a reusable `Futures Console` section between the Singularity Pulse Index and TOP SIGNAL. BEFORE: the template jumped from the index/source-ledger zone into narrative sections, leaving predictions scattered across Horizon, Worth Watching, and Countdowns. AFTER: near-term radar gets a dedicated section, nav anchor, HTML placeholder, CSS primitive, and `.config/futures-console.json` state file.
+
+**Benchmarks added/dropped**: none.
+
+**Voice / style-guide updates**: Added rules that the Futures Console must include a dated window, curve dimension, thesis, trigger, confidence meter, and evidence link. It is explicitly a radar, not a rumor dump.
+
+**Reader-suggested gaps**: The reader wanted the product to feel more futuristic, more useful on quiet days, and less dependent on whether a single breaking-news item exists.
+
+**Bet for the coming week**: The Futures Console will make morning editions feel more alive because Claude can show live watchpoints and concrete movement triggers before prose curation starts.

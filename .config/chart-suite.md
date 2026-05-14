@@ -17,6 +17,7 @@ All renders are **inline SVG**. No external chart libraries. Each chart pulls fr
 | 7 | `chart-embodied-stack` | `embodied_history_30d.snapshots` | 320×140 | Cumulative humanoid units (filled area) + 30d-flow bar overlay |
 | 8 | `chart-bci-curve` | `bci_history_90d.snapshots` | 320×120 | Cumulative BCI patients across all programs |
 | 9 | `prediction-market` | `predictions.json` | HTML rows | Top live bets, confidence, movement, next resolution date |
+| 10 | `future-radar` | `.config/futures-console.json > radar` | HTML cards | Near-term triggers that could move SP-Index components |
 
 Each chart carries:
 - A `<p class="chart-title">` (e.g., `SP-INDEX · 30 DAYS`)
@@ -83,5 +84,6 @@ Always render in this order so the reader's eye flows from composite → compone
 7. Embodied stacked (robotics)
 8. BCI curve (human-AI bandwidth)
 9. Prediction market (inside Predictions, not Scoreboard)
+10. Futures Console (outside Scoreboard, immediately under SP-Index)
 
 The afternoon Codex fire may reorder if afternoon news materially shifts emphasis — note the reorder in the evolution-log.

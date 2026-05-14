@@ -55,6 +55,27 @@ The two-agent system only matters if disagreement is visible and specific. Each 
 
 Predictions are the durable value of the project. The top of the Predictions section should act like a tiny market board: top live bets, confidence, movement since last update, and next resolution date. Daily news earns attention partly by how it changes a probability.
 
+## Futures Console
+
+The Futures Console is the issue's forward radar. It sits immediately after the Singularity Pulse Index and before TOP SIGNAL. Its job is to make even quiet mornings useful by showing what could move the curve next.
+
+It is not a speculation blog. Every card needs a dated window, curve dimension, thesis, trigger, confidence meter, and evidence link. Good cards say "what would change my mind"; weak cards say "something might happen soon." Cut weak cards.
+
+Render from `.config/futures-console.json`:
+
+```html
+<div class="future-grid">
+  <article class="future-card primary">
+    <p class="future-kicker">24h · 🤖 embodied deployment · active</p>
+    <h3 class="future-title">Figure F.03 endurance evidence</h3>
+    <p class="future-body">The stream matters if it exposes intervention rate, recovery behavior, or task diversity.</p>
+    <p class="future-trigger"><strong>Trigger:</strong> human-intervention count or hours logged changes the embodied score.</p>
+    <div class="future-meter"><span class="fm-label">conf</span><span class="fm-track"><span class="fm-fill" style="width:62%"></span></span><span class="fm-value">62%</span></div>
+  </article>
+</div>
+<div class="watch-rail"><span class="watch-pill">Google I/O May 19-20</span></div>
+```
+
 ## Chart primitives (both agents use these — feel free to invent more)
 
 The newsletter should feel **alive**. When a story is better told visually, build it inline with SVG. No external chart libraries. iOS Safari renders all of this natively. Sign each chart with an HTML comment naming the agent and time.
@@ -200,6 +221,9 @@ Component normalization (each scored 0–100, then weighted sum):
 
 Display per component: emoji + label + raw value + Δ vs last issue. Big composite at the top.
 
+### 🧭 FUTURES CONSOLE (2–4 cards + watch rail)
+Forward radar from `.config/futures-console.json`. Each card states the window, curve dimension, thesis, trigger, confidence, and evidence link. This section should make the reader feel oriented before the narrative starts: what is live, what would move the SP-Index, and what can be ignored until evidence lands.
+
 ### 🔥 TOP SIGNAL (2–3 paragraphs, ~300 words)
 Most important development of the past 24 hours. P1: what happened (concrete, numbers). P2: why it matters (the real insight). P3 (optional): what to watch next. Picks ONE hero image — verify the URL returns 200 before locking.
 
@@ -281,6 +305,7 @@ Before locking a story, check `seen-stories.json`. If URL or near-duplicate head
 ## Self-check before commit
 
 - [ ] Did I cut 30%?
+- [ ] FUTURES CONSOLE: every card has a trigger, confidence, and evidence link?
 - [ ] Any hype clichés? Strike them.
 - [ ] TOP SIGNAL P2 says something non-obvious?
 - [ ] LEAKS & RUMORS: every claim has a source link? Tags applied correctly?
