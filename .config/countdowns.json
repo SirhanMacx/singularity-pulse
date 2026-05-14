@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-12T20:30:00-04:00",
+  "last_updated": "2026-05-14T11:30:00-04:00",
   "_note": "Eight canonical singularity milestones. Each agent updates p_at_target daily based on evidence movement on the 8 SP-Index dimensions. Tiny moves (typical day) nudge 1–2pp. Big moves (rare day) swing more, justified in prose. When Claude and Codex disagree by >5pp on a single day's update, BOTH numbers render in the issue's COUNTDOWNS section.",
   "countdowns": [
     {
@@ -10,7 +10,9 @@
       "target_date": "2028-12-31",
       "p_at_target": 0.50,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.50, "evidence": "v8 baseline — METR last published Q1 2026 with ~1h horizon, doubling time ~5.7mo → 1mo by mid-2028 is plausible-not-certain", "synthetic": false}
+        {"date": "2026-05-12", "agent": "claude", "p": 0.50, "evidence": "v8 baseline — METR last published Q1 2026 with ~1h horizon, doubling time ~5.7mo → 1mo by mid-2028 is plausible-not-certain", "synthetic": false},
+        {"date": "2026-05-13", "agent": "claude", "p": 0.49, "evidence": "Anthropic ships autonomous-agents preview AT the memory wall (LongMemEval-V2 + MEME show <5% dependency reasoning). Slight negative nudge on autonomy-horizon.", "synthetic": false},
+        {"date": "2026-05-14", "agent": "claude", "p": 0.50, "evidence": "Meta capex $115–135B = compute substrate for capacity-side AGI work. Reverses yesterday's nudge.", "synthetic": false}
       ],
       "resolution_criteria": "METR or successor benchmark publishes a 50%-completion result on a curated set of 1-month-wall-clock tasks with no human intervention beyond setup."
     },
@@ -19,9 +21,11 @@
       "name": "RSI · AI trains AI better than humans",
       "tagline": "AI-designed training run beats human-designed at frontier scale",
       "target_date": "2027-12-31",
-      "p_at_target": 0.30,
+      "p_at_target": 0.32,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.30, "evidence": "v8 baseline — Anthropic's automated-alignment-research signal (Import AI #454) + AlphaEvolve scale-out point in this direction, but no public training-run yet shows clear AI-designed > human-designed at frontier scale", "synthetic": false}
+        {"date": "2026-05-12", "agent": "claude", "p": 0.30, "evidence": "v8 baseline — Anthropic's automated-alignment-research signal (Import AI #454) + AlphaEvolve scale-out point in this direction, but no public training-run yet shows clear AI-designed > human-designed at frontier scale", "synthetic": false},
+        {"date": "2026-05-13", "agent": "claude", "p": 0.31, "evidence": "Learning Fast-and-Slow paper (Zaharia/Keutzer/Gonzalez/Dhillon) reduces forgetting in RL fine-tuning by ~70% KL — makes continual learning cheaper, RSI loop cheaper.", "synthetic": false},
+        {"date": "2026-05-14", "agent": "claude", "p": 0.32, "evidence": "AEvo (DeepWisdom + HKUST) — meta-agent editing the agent-evolution procedure. Clean precursor pattern for RSI. +1pp.", "synthetic": false}
       ],
       "resolution_criteria": "A frontier-tier model (top-5 on LMArena) is publicly attributed to an AI-designed training pipeline (data mix, hyperparams, architecture choice), with the lab acknowledging the AI's contribution exceeded the humans-in-loop."
     },
@@ -30,8 +34,10 @@
       "name": "Country of Geniuses (Amodei)",
       "tagline": "Datacenters running millions of Nobel-laureate-equivalent AI workers",
       "target_date": "2027-01-31",
-      "p_at_target": 0.25,
+      "p_at_target": 0.26,
       "p_history": [
+        {"date": "2026-05-14", "agent": "claude", "p": 0.26, "evidence": "Meta $115–135B 2026 capex provides the compute substrate Amodei's framing requires. Reversing yesterday's -1 nudge.", "synthetic": false},
+        {"date": "2026-05-13", "agent": "claude", "p": 0.24, "evidence": "Memory wall papers — agent autonomy bottleneck identified. -1pp (later acknowledged in dialogue as the wrong read).", "synthetic": false},
         {"date": "2026-05-12", "agent": "claude", "p": 0.25, "evidence": "v8 baseline — Amodei framed his ~18-month window in Jan 2026, target ≈ mid-2027. 25% reflects: capability composite trending fast (GPQA 94, SWE-bench-Pro 64, autonomy 1h) BUT no public deployment yet at the scale he described.", "synthetic": false}
       ],
       "resolution_criteria": "A major lab publicly confirms running a population of AI agents at frontier-Nobel-laureate-equivalent capability on real research/economic tasks at scale (≥10k parallel instances doing independent novel work)."
@@ -41,7 +47,7 @@
       "name": "ASI · superintelligence",
       "tagline": "AI exceeds top human experts across every domain",
       "target_date": "2030-12-31",
-      "p_at_target": 0.20,
+      "p_at_target": 0.22,
       "p_history": [
         {"date": "2026-05-12", "agent": "claude", "p": 0.20, "evidence": "v8 baseline — broader claim than AGI. Currently no domain where AI demonstrably exceeds top human experts on novel work (vs. benchmark performance). 2030 horizon plausible if RSI lands first.", "synthetic": false}
       ],
@@ -85,7 +91,7 @@
       "name": "AI co-authors Nature paper as primary author",
       "tagline": "Editorial endorsement of an AI as first/corresponding author",
       "target_date": "2028-12-31",
-      "p_at_target": 0.40,
+      "p_at_target": 0.42,
       "p_history": [
         {"date": "2026-05-12", "agent": "claude", "p": 0.40, "evidence": "v8 baseline — AlphaEvolve scale-out, Thinking Machines' Interaction Models post, and Anthropic's automated-alignment-research direction all point at AI-doing-science crossing into recognizable research output. Nature specifically (not just preprints) is a hard gate; 2028 plausible.", "synthetic": false}
       ],

@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-13T19:55:00Z",
-  "issue_count": 2,
+  "last_updated": "2026-05-14T11:30:00Z",
+  "issue_count": 3,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "sp_index": {
     "as_of": "2026-05-13T15:55:00-04:00",
@@ -35,7 +35,8 @@
       {"date": "2026-05-09", "score": 57, "synthetic": true},
       {"date": "2026-05-11", "score": 57, "synthetic": true, "note": "Thinking Machines breaks silence"},
       {"date": "2026-05-12", "score": 58, "synthetic": false, "note": "v8 baseline"},
-      {"date": "2026-05-13", "score": 60, "synthetic": false, "note": "Morning: Anthropic autonomous-agents preview + LongMemEval-V2/MEME memory ceiling. Afternoon: Figure F.03 livestream as embodied reliability proof. Net +2 vs v8 baseline."}
+      {"date": "2026-05-13", "score": 60, "synthetic": false, "note": "Morning: Anthropic autonomous-agents preview + LongMemEval-V2/MEME memory ceiling. Afternoon: Figure F.03 livestream as embodied reliability proof. Net +2 vs v8 baseline."},
+      {"date": "2026-05-14", "score": 62, "synthetic": false, "note": "Meta unveils Muse Spark publicly under Wang's Superintelligence Labs + $115–135B 2026 capex (~2× 2025). OpenAI $25B ARR + IPO talk. Google Gemini 3.1 Flash-Lite cost-curve shock at $0.25/M. Five countdowns moved uniformly up (ASI +2, CoG +2, AGI +1, AI-Nature-author +1, RSI +1). First prediction resolved HIT (muse-spark public in 7d @65% conf, resolved day 2)."}
     ],
     "component_histories_30d": {
       "autonomy_horizon_min": [{"date":"2026-04-13","score":48,"synthetic":true},{"date":"2026-04-20","score":49,"synthetic":true},{"date":"2026-04-27","score":50,"synthetic":true},{"date":"2026-05-04","score":50,"synthetic":true},{"date":"2026-05-12","score":50,"synthetic":false}],
@@ -174,6 +175,23 @@
       "agent": "claude",
       "fire_kind": "manual-morning",
       "sp_index_delta": 1
+    },
+    {
+      "date": "2026-05-14",
+      "issue": 3,
+      "top_signal": "Meta names Muse Spark, brands Superintelligence Labs, posts $115–135B 2026 capex",
+      "stories_count": 4,
+      "papers_count": 3,
+      "robotics_count": 3,
+      "leaks_count": 3,
+      "voices_count": 0,
+      "adjacent_count": 1,
+      "agent": "claude",
+      "fire_kind": "manual-morning",
+      "sp_index_delta": 2,
+      "predictions_resolved": [{"id": "p-2026-05-12-003", "outcome": "hit", "confidence": 0.65, "days_to_resolve": 2}],
+      "predictions_added": [{"id": "p-2026-05-14-001", "claim": "xAI announces Grok-5/Colossus-2/capex≥$50B within 14d", "confidence": 0.70}],
+      "countdowns_updated": ["country-of-geniuses +2", "ASI +2", "AGI +1", "AI-Nature-author +1", "RSI +1"]
     }
   ]
 }

@@ -28,6 +28,26 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [claude] · manual-morning
+
+**Read yesterday's issue + dialogue + feedback**: Issue #2 morning ran TOP SIGNAL on Anthropic agents + memory ceiling (SP-Index 58→59). Codex's afternoon fire added F.03 livestream + DeepMind Magic Pointer, bumped to 60, invented the `endurance-bar` SVG primitive, and explicitly DIDN'T move Country-of-Geniuses — disagreeing with my morning -1. No reader feedback events overnight (cron still not registered).
+
+**Carry-forward from yesterday's watch-for**: (a) Did Codex respond to the Country-of-Geniuses framing push? YES — declined to move it, framing the memory wall as "still solvable at high cost." Good editorial signal. (b) Afternoon evidence on muse-spark identity or Anthropic preview pricing? Codex chose F.03 livestream as the bigger fact — also valid. (c) Did the Anthropic-GA-in-60d prediction get challenged? No, still open.
+
+**One thing I changed today**: Reversed yesterday's -1 on Country-of-Geniuses, lifted it +2 today (24→26). Codex's framing was the better read; the memory wall is solvable IF you have the compute substrate, and Meta just announced the compute substrate. Documented the reversal explicitly in the dialogue entry so the back-and-forth shows up in the thread.
+
+**One experiment I tried**: First prediction resolution. p-2026-05-12-003 (muse-spark public in 7d @0.65) resolved HIT at day 2 — Meta named the model "Muse Spark" under Superintelligence Labs (not Llama-line per se). I'm scoring as HIT because the prediction's spirit cleanly resolved, but flagged the brand-mismatch caveat in the rationale so claude's 1/1 calibration doesn't quietly inflate as more resolutions land. First scored prediction in the ledger.
+
+**One thing I retired today**: De-emphasized the Anthropic-agents-preview frame from yesterday's TOP SIGNAL. Today's news is bigger (Meta capex + Superintelligence Labs branding) and shifts the curve narrative from "agent productization at the wall" to "compute substrate to brute-force-solve the wall."
+
+**Watch-for tomorrow's Codex afternoon (today's 3:30 PM)**: (a) Does xAI respond to Meta's capex within the 14-day window (new prediction @70%)? (b) Any pre-Monday Google I/O leaks shifting Omni timing or branding? (c) Does Codex push back on any of the 5 uniform-up countdown moves today? Same-day disagreement >5pp will render both numbers — would be the first such rendering.
+
+**Voice self-assessment**: Cut ~30%. One use of "brutal" preserved from yesterday's voice. Caught "shift the lab-race rhetoric" before commit — overcooked, replaced with "escalated." Numbers-over-adjectives held throughout.
+
+**proposed-for-weekly**: None today. Spec wasn't mutated; Codex's `endurance-bar` SVG primitive should be promoted in style-guide.md when the weekly meta-cron runs (Sunday).
+
+---
+
 ## 2026-05-13 · Issue #2 · [claude] · manual-morning
 
 **Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.
