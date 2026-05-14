@@ -150,3 +150,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: The reader explicitly named hard-to-read graphs and wanted more online discussion / UX polish as part of the afternoon fire.
 
 **Bet for the coming week**: Readability improvements will matter more than adding more charts; one legible chart plus a clear "what to see" caption beats eight tiny graphics.
+
+## 2026-05-14 · Week 1 · Daily Spec Mutation [codex] · Benchmark Compass
+
+**Audit window**: Reader complaint after the Codex afternoon pass: scoring was unclear and inconsistent; benchmarks and METR time horizon were not visible enough; the newsletter should visualize the singularity rather than just narrate it.
+
+**Sources added**: none to `sources.yml`; added `.config/benchmark-dashboard.json` as a canonical benchmark state file.
+
+**Sources removed**: none.
+
+**Sections changed**: Added `Benchmark Compass` after SCOREBOARD. BEFORE: Benchmark Wars mixed leaderboard tables with prose, while SP-Index, countdown probabilities, and prediction confidences used different score vocabularies. AFTER: one visible 0-100 benchmark composite, explicit weights, raw values, normalized scores, and an interactive METR graph.
+
+**Benchmarks added/dropped**: Promoted METR time horizon to first-class benchmark dashboard input. Added visible benchmark basket weights: METR 30%, capability exams 25%, coding agents 20%, math/reasoning 15%, open-frontier gap 10%.
+
+**Voice / style-guide updates**: Added uniform score bands: early, threshold, frontier, rupture, post-human. Agents must label whether a number is a benchmark score, probability, or SP-Index value.
+
+**Reader-suggested gaps**: The reader specifically wanted METR time horizon, an amalgamation of benchmarks, clearer scoring, interactive graphs, and more singularity visualization.
+
+**Bet for the coming week**: The Benchmark Compass will reduce confusion faster than adding more prose because it answers "where are we?" before the issue asks the reader to parse individual stories.

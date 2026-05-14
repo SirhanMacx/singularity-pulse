@@ -55,6 +55,31 @@ The two-agent system only matters if disagreement is visible and specific. Each 
 
 Predictions are the durable value of the project. The top of the Predictions section should act like a tiny market board: top live bets, confidence, movement since last update, and next resolution date. Daily news earns attention partly by how it changes a probability.
 
+## Uniform scoring
+
+Use one visible 0-100 scoring vocabulary everywhere the issue presents a score:
+
+- `0-39 early` — interesting but not frontier-relevant yet.
+- `40-59 threshold` — credible frontier signal, still bottlenecked.
+- `60-74 frontier` — current frontier capability; track daily.
+- `75-89 rupture` — would force strategy changes for schools, companies, labs, or policy.
+- `90-100 post-human` — beyond reliable human expert level on that dimension.
+
+Never mix stars, letter grades, confidence percentages, benchmark percentages, and SP-Index numbers without explaining which scale is being used. Confidence is a probability; benchmark score is normalized capability; SP-Index is a daily curve index. Label them.
+
+## Benchmark Compass
+
+Every issue should render a Benchmark Compass near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
+
+Canonical weights:
+- METR time horizon: `30%`
+- Capability exams: `25%`
+- Coding agents: `20%`
+- Math/reasoning: `15%`
+- Open-frontier gap: `10%`
+
+The METR card must be first. If METR reports a saturation caveat, display the caveat in plain English. For May 2026: `≥16h` means "at least 16h; current public suite cannot precisely measure above that," not "exactly 16h."
+
 ## Futures Console
 
 The Futures Console is the issue's forward radar. It sits immediately after the Singularity Pulse Index and before TOP SIGNAL. Its job is to make even quiet mornings useful by showing what could move the curve next.

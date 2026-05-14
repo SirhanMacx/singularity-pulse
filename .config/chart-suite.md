@@ -12,7 +12,14 @@ The redesign was triggered by reader feedback (May 14): "graphs are impossible t
    - Card 3: 🎯 Predictions (claude/codex hit-rate fraction + 1-line context)
    - Card 4: ⚡ Headline metric of the day — whichever single number best summarizes today's TOP SIGNAL (Meta capex, OpenAI ARR, METR autonomy minutes, etc.). This card rotates daily.
 
-2. **SP-Index 30-day trajectory** (`.v81-bigchart`)
+2. **Benchmark Compass + METR lab** (`.benchmark-compass` / `.metr-lab`)
+   - Renders immediately after the SCOREBOARD.
+   - Shows one uniform 0-100 benchmark composite with visible formula.
+   - METR time horizon is first-class and interactive: 50% horizon, 80% horizon, show both.
+   - Must include raw values alongside normalized scores. Never show a benchmark composite without its weights.
+   - METR caveat is mandatory when the public suite saturates above a threshold.
+
+3. **SP-Index 30-day trajectory** (`.v81-bigchart`)
    - SVG ~320×150, line + fill + today-dot with glow
    - Y-axis: 0–100 scale with gridlines at 40/50/60/70
    - X-axis: 30-day range with Apr-X / mid-month / today labels
@@ -20,7 +27,7 @@ The redesign was triggered by reader feedback (May 14): "graphs are impossible t
    - Today's value rendered as a big label
    - Caption: 🔎 **What to see:** [the editorial read in one sentence]
 
-3. **One headline-relevant secondary chart** (`.v81-bigchart`)
+4. **One headline-relevant secondary chart** (`.v81-bigchart`)
    - Pick the chart that best supports today's TOP SIGNAL. Options:
      - **⚡ Compute frontier ramp** (log10 FLOPs stair-step, 180-day window) — for compute / capex / scale stories
      - **📈 Capability climb** (4 benchmark lines, 30-day window) — for benchmark / model-release stories

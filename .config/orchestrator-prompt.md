@@ -100,6 +100,7 @@ Read these files. They are the single source of truth — never invent style, so
 - `/tmp/singularity-pulse/.config/progress.json` — running scoreboard; you'll update it
 - `/tmp/singularity-pulse/.config/seen-stories.json` — 14-day dedupe ledger; you'll update it
 - `/tmp/singularity-pulse/.config/futures-console.json` — forward radar; update before rendering `{{FUTURES_CONSOLE_CONTENT}}`
+- `/tmp/singularity-pulse/.config/benchmark-dashboard.json` — Benchmark Compass; update METR and normalized benchmark basket before rendering `{{BENCHMARK_DASHBOARD_CONTENT}}`
 
 The push notification topic name is embedded in your runtime SKILL.md (not in the public repo, for security). Use the value defined there.
 
@@ -166,6 +167,8 @@ For the rolling-state exceptions (Progress Meters, LMArena top 10), use `<span c
 
 The badge goes inline near the source link or item byline. Reader sees freshness at a glance.
 
+Each material push must visibly rotate the live media/source surface: fresh X/Reddit/HN/community discussion when available, fresh YouTube/video within the 48h allowance when available, and a fresh hero/generated asset/annotated screenshot/inline SVG tied to the lead. If a channel is unavailable (for example X cookies missing), log that and use another live discussion source. Do not recycle yesterday's links without marking them as context.
+
 ## Step 3.7 — Build the provenance ledger
 
 Before writing prose, create a provenance record for every candidate that survives the recency gate. Write the final rendered set to `.config/provenance/$TODAY.json` with:
@@ -211,6 +214,12 @@ Read `progress.json` history arrays (`sp_index.history_30d`, `component_historie
 Synthetic points (the May 12 v8 baseline) stay marked `"synthetic": true`. New points from your fire are `"synthetic": false`. Charts may render synthetic segments at lower opacity or with dashed strokes.
 
 If you invent a new chart type today, add the CSS class to `html-template.html`, the entry to `chart-suite.md`'s table, the data source to `progress.json`, and a signed HTML comment (`<!-- chart by [agent] at [time] -->`). Note in `meta-evolution-log.md`.
+
+## Step 4.0a.5 — Render Benchmark Compass + interactive METR graph
+
+Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` with one visible 0-100 Benchmark Compass score, the formula/weights, METR 50% time horizon as the lead benchmark, raw benchmark values beside normalized scores, and an interactive METR graph with tap states for `50%`, `80%`, and `show both`.
+
+Never present benchmark percentages, prediction probabilities, and SP-Index scores as the same thing. Label the scale every time. If METR reports a measurement-ceiling caveat, spell it out in the graph caption.
 
 ## Step 4.0b — Resolve due predictions, update countdowns (v8)
 
@@ -324,6 +333,7 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these place
 - `{{SOURCE_LEDGER_CONTENT}}` → compact `<div class="source-item">` rows; include title, linked source, freshness, and `<span class="verify verified|estimated|synthetic|reader-feedback|rolling-state">`
 - `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
 - `{{FUTURES_CONSOLE_CONTENT}}` → 2-4 Futures Console cards from `.config/futures-console.json` plus `.watch-rail`
+- `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Compass score, benchmark table, and interactive METR graph
 - `{{HERO_IMAGE_BLOCK}}` → `<figure class="hero"><img src="HERO_URL" alt="..."><figcaption>caption</figcaption></figure>` or empty string if no hero
 - `{{TOP_SIGNAL_CONTENT}}` → HTML `<p>` elements
 - `{{STACK_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>`

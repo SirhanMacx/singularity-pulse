@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Singularity Pulse Benchmark Compass</title>
+  <desc id="desc">Abstract generated-style visual showing benchmark vectors converging on a central singularity compass.</desc>
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="52%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="45%" stop-color="#c2410c"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="#050505"/>
+  <g opacity="0.34">
+    <path d="M0 112H1200M0 225H1200M0 337H1200M0 450H1200M0 562H1200M200 0V675M400 0V675M600 0V675M800 0V675M1000 0V675" stroke="#27272a" stroke-width="1"/>
+  </g>
+  <circle cx="600" cy="338" r="190" fill="url(#core)" opacity="0.72" filter="url(#glow)"/>
+  <circle cx="600" cy="338" r="252" fill="none" stroke="#fb923c" stroke-width="2" opacity="0.35"/>
+  <circle cx="600" cy="338" r="316" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.22"/>
+  <g filter="url(#glow)" opacity="0.86">
+    <path d="M120 338H1080" stroke="url(#beam)" stroke-width="5"/>
+    <path d="M600 58V618" stroke="url(#beam)" stroke-width="5"/>
+    <path d="M212 132L988 544" stroke="url(#beam)" stroke-width="4"/>
+    <path d="M988 132L212 544" stroke="url(#beam)" stroke-width="4"/>
+  </g>
+  <g font-family="Inter, system-ui, sans-serif" font-weight="700" letter-spacing="2" fill="#fafaf7">
+    <text x="600" y="318" text-anchor="middle" font-size="34">BENCHMARK COMPASS</text>
+    <text x="600" y="362" text-anchor="middle" font-size="82" fill="#fb923c">64</text>
+    <text x="600" y="398" text-anchor="middle" font-size="22" fill="#d4d4d8">FRONTIER BAND</text>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="18" fill="#d4d4d8">
+    <text x="94" y="332">METR ≥16h</text>
+    <text x="930" y="332">OPEN GAP 11 ELO</text>
+    <text x="520" y="58">GPQA 94.1</text>
+    <text x="526" y="635">ARC-AGI-2 52.9</text>
+    <text x="210" y="122">SWE-PRO 64.3</text>
+    <text x="828" y="122">FRONTIERMATH 42.5</text>
+  </g>
+</svg>

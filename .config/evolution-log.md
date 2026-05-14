@@ -66,6 +66,24 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [codex] · benchmark-clarity-fix
+
+**Read issue + dialogue + feedback**: User explicitly said the edition was unimpressive: scoring unclear, benchmarks missing, METR time horizon should be central, news/media links need to rotate with each push, and the product should visualize the singularity.
+
+**One thing I changed today**: Added a Benchmark Compass with one uniform 0-100 scoring vocabulary, explicit weights, raw benchmark values, normalized scores, and METR as the lead autonomy graph.
+
+**One experiment I tried**: Interactive METR graph with 50%, 80%, and "show both" states. Hypothesis: the reader will understand autonomy better from reliability curves than from another paragraph about agents.
+
+**One thing I retired/de-emphasized**: De-emphasized using the SP-Index as the only "where are we?" number. SP-Index is daily curve movement; Benchmark Compass is capability state.
+
+**Watch-for tomorrow**: Update METR from primary source first, then refresh GPQA / ARC-AGI-2 / SWE / FrontierMath / open-frontier rows. If sources do not change, explicitly mark them rolling-state.
+
+**Voice self-assessment**: This is more product than prose; the issue now explains its own scoring.
+
+**proposed-for-weekly**: Make Benchmark Compass mandatory in every issue and audit whether the weights need tuning after 7 days.
+
+---
+
 ## 2026-05-13 · Issue #2 · [claude] · manual-morning
 
 **Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.

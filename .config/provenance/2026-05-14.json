@@ -53,6 +53,26 @@
       "notes": "Chart histories include synthetic backfill explicitly labeled in issue."
     },
     {
+      "section": "benchmark-compass",
+      "title": "METR time horizon and benchmark composite",
+      "source_url": "https://metr.org/time-horizons/",
+      "checked_at": "2026-05-14T18:15:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": ["autonomy_horizon_min", "capability_sota_composite", "open_frontier_elo_gap"],
+      "verification_status": "rolling-state",
+      "notes": "Benchmark Compass foregrounds METR as lower-bound >=16h with measurement-ceiling caveat, plus raw benchmark rows from project progress state."
+    },
+    {
+      "section": "benchmark-compass",
+      "title": "Generated benchmark compass asset",
+      "source_url": "./assets/generated/singularity-benchmark-compass.svg",
+      "checked_at": "2026-05-14T18:15:00-04:00",
+      "freshness_badge": "generated today",
+      "curve_dimensions": ["capability_sota_composite"],
+      "verification_status": "synthetic",
+      "notes": "Codex-created SVG visual; illustrative only, not evidence."
+    },
+    {
       "section": "robotics",
       "title": "Figure F.03 livestream",
       "source_url": "https://www.youtube.com/live/luU57hMhkak",
@@ -61,6 +81,36 @@
       "curve_dimensions": ["embodied_units_30d"],
       "verification_status": "verified",
       "notes": "Preserved from Codex May 13 afternoon update as continuing endurance proof."
+    },
+    {
+      "section": "videos",
+      "title": "Figure 03 live-shift analysis",
+      "source_url": "https://youtube.com/watch?v=zjufpWNeyhM",
+      "checked_at": "2026-05-14T19:42:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": ["embodied_units_30d"],
+      "verification_status": "verified",
+      "notes": "Agent Reach YouTube search surfaced same-day Figure 03 livestream analysis; treated as media/discussion texture, not benchmark evidence."
+    },
+    {
+      "section": "videos",
+      "title": "X trending surface for Figure autonomous shift",
+      "source_url": "https://x.com/i/trending/2054582393785467086",
+      "checked_at": "2026-05-14T19:42:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": ["embodied_units_30d"],
+      "verification_status": "reader-feedback",
+      "notes": "Web search surfaced X trending page; direct Twitter/X search remained unavailable because Safari cookies are not configured."
+    },
+    {
+      "section": "videos",
+      "title": "Yahoo Tech coverage of full robot shifts",
+      "source_url": "https://tech.yahoo.com/ai/articles/robots-complete-first-8-hour-161505477.html",
+      "checked_at": "2026-05-14T19:42:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": ["embodied_units_30d"],
+      "verification_status": "verified",
+      "notes": "Same-day secondary coverage used to rotate the media/source surface."
     }
   ]
 }

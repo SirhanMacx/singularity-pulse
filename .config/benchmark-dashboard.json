@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-05-14T18:15:00-04:00",
+  "_note": "Canonical benchmark dashboard for the reader-facing Benchmark Compass. Scores are normalized to 0-100 with visible methodology; raw values remain visible so the composite is explainable.",
+  "composite": {
+    "name": "Benchmark Compass",
+    "score": 64,
+    "score_prior": 62,
+    "bands": [
+      {"min": 0, "max": 39, "label": "early"},
+      {"min": 40, "max": 59, "label": "threshold"},
+      {"min": 60, "max": 74, "label": "frontier"},
+      {"min": 75, "max": 89, "label": "rupture"},
+      {"min": 90, "max": 100, "label": "post-human"}
+    ],
+    "weights": {
+      "metr_time_horizon": 0.30,
+      "capability_exams": 0.25,
+      "coding_agents": 0.20,
+      "math_reasoning": 0.15,
+      "open_frontier": 0.10
+    },
+    "method": "Weighted normalized benchmark basket. METR gets the largest weight because task time horizon is the most human-legible proxy for autonomy."
+  },
+  "benchmarks": [
+    {
+      "id": "metr-time-horizon",
+      "label": "METR 50% time horizon",
+      "group": "metr_time_horizon",
+      "raw_value": 960,
+      "raw_unit": "human-expert minutes",
+      "display_value": "≥16h",
+      "score_0_100": 67,
+      "status": "verified-primary-with-ceiling-caveat",
+      "source_url": "https://metr.org/time-horizons/",
+      "note": "METR's May 2026 page says Claude Mythos Preview reaches the current suite's >16h unreliable-measurement zone. Treat as at-least-16h, not exact."
+    },
+    {
+      "id": "gpqa-diamond",
+      "label": "GPQA-Diamond",
+      "group": "capability_exams",
+      "raw_value": 94.1,
+      "raw_unit": "%",
+      "display_value": "94.1%",
+      "score_0_100": 94,
+      "status": "rolling-state",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "note": "Current project SOTA snapshot."
+    },
+    {
+      "id": "arc-agi-2",
+      "label": "ARC-AGI-2",
+      "group": "math_reasoning",
+      "raw_value": 52.9,
+      "raw_unit": "%",
+      "display_value": "52.9%",
+      "score_0_100": 53,
+      "status": "rolling-state",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "note": "Still below saturation; good counterweight to over-reading coding/autonomy gains."
+    },
+    {
+      "id": "swe-bench-pro",
+      "label": "SWE-bench Pro",
+      "group": "coding_agents",
+      "raw_value": 64.3,
+      "raw_unit": "%",
+      "display_value": "64.3%",
+      "score_0_100": 64,
+      "status": "rolling-state",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "note": "Coding benchmark signal; not equivalent to autonomous project completion."
+    },
+    {
+      "id": "wildclawbench",
+      "label": "WildClawBench",
+      "group": "coding_agents",
+      "raw_value": 62.2,
+      "raw_unit": "%",
+      "display_value": "62.2%",
+      "score_0_100": 62,
+      "status": "rolling-state",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "note": "Agent harness benchmark; sensitive to scaffold and tool policy."
+    },
+    {
+      "id": "frontiermath",
+      "label": "FrontierMath",
+      "group": "math_reasoning",
+      "raw_value": 42.5,
+      "raw_unit": "%",
+      "display_value": "42.5% est.",
+      "score_0_100": 43,
+      "status": "estimated",
+      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
+      "note": "Estimated project snapshot; must be replaced with direct leaderboard/source when available."
+    },
+    {
+      "id": "open-frontier-gap",
+      "label": "Open-frontier Elo gap",
+      "group": "open_frontier",
+      "raw_value": 11,
+      "raw_unit": "Elo gap",
+      "display_value": "11 Elo",
+      "score_0_100": 88,
+      "status": "rolling-state",
+      "source_url": "https://arena.ai/leaderboard",
+      "note": "Smaller gap is better; score is inverted-normalized."
+    }
+  ],
+  "metr_series": {
+    "source_url": "https://metr.org/time-horizons/",
+    "reliability_modes": [
+      {
+        "id": "p50",
+        "label": "50% success",
+        "current_minutes": 960,
+        "current_display": "≥16h",
+        "doubling_months": 5.7,
+        "caveat": "Current METR suite becomes unreliable above 16h; treat today's value as a lower bound."
+      },
+      {
+        "id": "p80",
+        "label": "80% success",
+        "current_minutes": 192,
+        "current_display": "~3.2h est.",
+        "doubling_months": 5.7,
+        "caveat": "80% horizon is an estimate derived from the lower-reliability curve shape; render as estimated until primary values are available."
+      }
+    ],
+    "milestones": [
+      {"label": "1 day", "minutes": 1440},
+      {"label": "1 week", "minutes": 10080},
+      {"label": "1 month", "minutes": 43200}
+    ]
+  }
+}

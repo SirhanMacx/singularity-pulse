@@ -3,6 +3,20 @@
   "last_updated": "2026-05-14T17:46:19-04:00",
   "issue_count": 3,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
+  "benchmark_composite": {
+    "as_of": "2026-05-14T18:15:00-04:00",
+    "score": 64,
+    "score_prior": 62,
+    "band": "frontier",
+    "weights": {
+      "metr_time_horizon": 0.3,
+      "capability_exams": 0.25,
+      "coding_agents": 0.2,
+      "math_reasoning": 0.15,
+      "open_frontier": 0.1
+    },
+    "note": "Uniform 0-100 benchmark basket. Separate from SP-Index; explains where capabilities are on benchmark evidence rather than daily news."
+  },
   "sp_index": {
     "as_of": "2026-05-14T17:46:19-04:00",
     "score": 63,
@@ -127,7 +141,13 @@
     "SWE-bench-Verified": { "sota": 80.9, "model": "Claude Opus 4.5", "date": "2026-05" },
     "SWE-bench-Pro": { "sota": 64.3, "model": "Claude Opus 4.7", "date": "2026-05" },
     "WildClawBench": { "sota": 62.2, "model": "Claude Opus 4.7 (OpenClaw)", "date": "2026-05-11" },
-    "METR-autonomy-horizon-50pct-minutes": { "sota": null, "model": null, "date": null },
+    "METR-autonomy-horizon-50pct-minutes": {
+      "sota": 960,
+      "model": "Claude Mythos Preview (early)",
+      "date": "2026-05-08",
+      "source": "https://metr.org/time-horizons/",
+      "caveat": "METR says measurements above 16h are unreliable with the current task suite; 960 minutes is rendered as a lower bound, not an exact horizon."
+    },
     "FrontierMath": { "sota": 42.5, "model": "estimated", "date": "2026-05" },
     "AIME-2025": { "sota": null, "model": null, "date": null }
   },
