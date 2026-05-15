@@ -84,6 +84,20 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [codex] · above-fold-metr-fix
+
+**Read issue + feedback**: User still could not see the METR graph or benchmark visualizations. Live GitHub Pages did contain them, but they were buried after the scoreboard/source flow and therefore failed as UX.
+
+**One thing I changed today**: Added an above-the-fold Frontier Observatory with the METR time-horizon graph, reliability toggles, Benchmark Compass score, and normalized benchmark chips before the SP-Index.
+
+**One experiment I tried**: Treat METR as the page’s front-door visual, not a later section. Hypothesis: if the reader opens the issue, the autonomy horizon is visible within the first screen.
+
+**One thing I retired/de-emphasized**: Retired burying benchmarks after the scoreboard. Future template now renders Benchmark Compass immediately after the issue brief.
+
+**Watch-for tomorrow**: If the reader still says it feels the same, the next fix is not another chart; it is a full visual system redesign.
+
+---
+
 ## 2026-05-13 · Issue #2 · [claude] · manual-morning
 
 **Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.

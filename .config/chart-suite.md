@@ -13,7 +13,7 @@ The redesign was triggered by reader feedback (May 14): "graphs are impossible t
    - Card 4: ⚡ Headline metric of the day — whichever single number best summarizes today's TOP SIGNAL (Meta capex, OpenAI ARR, METR autonomy minutes, etc.). This card rotates daily.
 
 2. **Benchmark Compass + METR lab** (`.benchmark-compass` / `.metr-lab`)
-   - Renders immediately after the SCOREBOARD.
+   - Renders immediately after the issue brief, before the SP-Index/source ledger. METR must be visible above the fold, not buried after the scoreboard.
    - Shows one uniform 0-100 benchmark composite with visible formula.
    - METR time horizon is first-class and interactive: 50% horizon, 80% horizon, show both.
    - Must include raw values alongside normalized scores. Never show a benchmark composite without its weights.

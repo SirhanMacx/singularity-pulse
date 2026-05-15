@@ -117,6 +117,45 @@
     font-style: italic;
     padding: 8px 20px 0;
   }
+  .frontier-observatory {
+    position: relative;
+    overflow: hidden;
+    margin: 18px -10px 30px;
+    padding: 18px;
+    border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 34%),
+      radial-gradient(circle at 88% 18%, rgba(5,150,105,0.22), transparent 32%),
+      linear-gradient(135deg, color-mix(in srgb, var(--card) 72%, #020617 28%), var(--card));
+    box-shadow: 0 18px 50px rgba(0,0,0,0.16), inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+  .frontier-observatory::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events: none;
+  }
+  .fo-content { position: relative; z-index: 1; }
+  .fo-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 6px; }
+  .fo-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(32px, 7vw, 68px); line-height: 0.92; letter-spacing: -0.05em; margin: 0 0 12px; }
+  .fo-title span { color: var(--accent); text-shadow: 0 0 28px color-mix(in srgb, var(--accent) 55%, transparent); }
+  .fo-sub { max-width: 760px; color: var(--muted); font-size: 15px; line-height: 1.55; margin: 0 0 16px; }
+  .fo-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 14px; align-items: stretch; }
+  .fo-panel { background: color-mix(in srgb, var(--card) 86%, transparent); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; backdrop-filter: blur(8px); }
+  .fo-panel .panel-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .fo-metric { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .fo-metric .big { font-family: 'Fraunces', Georgia, serif; font-size: 54px; line-height: 0.9; color: var(--accent); font-weight: 800; }
+  .fo-metric .label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
+  .fo-bench-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .fo-bench { border: 1px solid var(--rule); border-radius: 10px; padding: 9px; background: var(--bg); }
+  .fo-bench strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 17px; }
+  .fo-bench span { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
+  .fo-cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .fo-cta a { font-family: 'JetBrains Mono', monospace; font-size: 11px; border: 1px solid var(--rule); border-radius: 999px; padding: 8px 10px; background: var(--bg); }
+  .fo-cta a.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
   h2.section {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 600;
@@ -598,7 +637,9 @@
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
     .sp-index-pair { flex-direction: column; }
-    .morning-brief, .dispute-grid, .future-grid, .watch-rail, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
+    .morning-brief, .dispute-grid, .future-grid, .watch-rail, .fo-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
+    .frontier-observatory { margin: 14px -8px 24px; padding: 14px; }
+    .fo-bench-list { grid-template-columns: 1fr; }
     .source-item, .pm-row { grid-template-columns: 1fr; }
     .discourse-pulse .dp-grid { grid-template-columns: 1fr; }
     .v81-bigchart svg { min-height: 190px; }
@@ -632,7 +673,8 @@
     <a href="#stack">⚡ Stack</a>
     <a href="#leaks">🕵️ Leaks</a>
     <a href="#bench-wars">📈 Bench Wars</a>
-    <a href="#benchmark-compass">🧪 Benchmarks</a>
+    <a href="#metr-horizon">🧪 METR Graph</a>
+    <a href="#benchmark-compass">📈 Benchmarks</a>
     <a href="#voices">💬 Voices</a>
     <a href="#videos">🎬 Videos</a>
     <a href="#papers">📜 Papers</a>
@@ -643,6 +685,72 @@
     <a href="#watching">🎯 Watching</a>
   </nav>
 </header>
+
+<section class="frontier-observatory" id="metr-horizon" aria-label="METR time horizon and benchmark observatory">
+  <div class="fo-content">
+    <div class="fo-kicker">New above-the-fold module · Codex 8:05 PM ET</div>
+    <h2 class="fo-title">METR time horizon is now the <span>front-door graph</span>.</h2>
+    <p class="fo-sub">The old page made you hunt for the benchmark state. This is the direct read: Singularity Pulse Benchmark Compass = <strong>64/100</strong>, frontier band. METR is the weightiest input because long-horizon autonomous work is closer to “singularity progress” than another saturated exam score.</p>
+    <div class="fo-grid">
+      <div class="fo-panel">
+        <div class="panel-k">Interactive METR graph · tap the reliability line</div>
+        <div class="fo-metric"><span class="big">≥16h</span><span class="label">50% autonomous-task horizon · lower bound, not exact</span></div>
+        <div class="metr-lab" data-metr-lab>
+          <div class="metr-controls" aria-label="METR graph controls">
+            <button class="metr-btn active" data-mode="p50">50% success horizon</button>
+            <button class="metr-btn" data-mode="p80">80% success horizon</button>
+            <button class="metr-btn" data-mode="both">show both</button>
+          </div>
+          <svg viewBox="0 0 360 190" preserveAspectRatio="xMinYMin meet" role="img" aria-label="Interactive METR time horizon graph">
+            <text x="6" y="18" class="metr-axis">1 month</text>
+            <text x="6" y="54" class="metr-axis">1 week</text>
+            <text x="6" y="92" class="metr-axis">1 day</text>
+            <text x="6" y="130" class="metr-axis">4h</text>
+            <text x="6" y="168" class="metr-axis">1h</text>
+            <line x1="58" y1="15" x2="350" y2="15" class="metr-grid"/>
+            <line x1="58" y1="52" x2="350" y2="52" class="metr-grid"/>
+            <line x1="58" y1="90" x2="350" y2="90" class="metr-grid"/>
+            <line x1="58" y1="128" x2="350" y2="128" class="metr-grid"/>
+            <line x1="58" y1="166" x2="350" y2="166" class="metr-grid"/>
+            <text x="58" y="184" class="metr-axis">2024</text>
+            <text x="150" y="184" class="metr-axis">2025</text>
+            <text x="242" y="184" class="metr-axis">2026</text>
+            <text x="350" y="184" class="metr-axis" text-anchor="end">2027 est.</text>
+            <path class="metr-line" data-line="p50" d="M58,168 L110,154 L162,140 L214,112 L266,74 L306,52 L340,35"/>
+            <path class="metr-line est" data-line="p80" d="M58,176 L110,166 L162,154 L214,136 L266,112 L306,92 L340,74"/>
+            <circle class="metr-dot" cx="306" cy="52" r="5"/>
+            <text x="310" y="47" class="metr-axis">≥16h now</text>
+          </svg>
+          <p class="metr-caption" data-caption>🔎 <strong>What to see:</strong> METR is saturated above 16h on the current public suite. The next meaningful update is not “17h”; it is a harder task suite or a reliable 80% horizon.</p>
+        </div>
+      </div>
+      <div class="fo-panel">
+        <div class="panel-k">Benchmark basket · normalized 0–100</div>
+        <div class="bench-score" style="margin-bottom:10px;">
+          <div class="bs-label">Benchmark Compass</div>
+          <div class="bs-num">64</div>
+          <div class="bs-sub">Frontier band. The curve is strong but not runaway: exams are high, ARC/FrontierMath still drag, and METR is now a lower-bound measurement problem.</div>
+          <div class="score-bands" aria-label="score bands">
+            <span class="score-band"></span><span class="score-band"></span><span class="score-band active"></span><span class="score-band"></span><span class="score-band"></span>
+          </div>
+        </div>
+        <div class="fo-bench-list">
+          <div class="fo-bench"><strong>94</strong><span>GPQA normalized</span></div>
+          <div class="fo-bench"><strong>53</strong><span>ARC-AGI-2 normalized</span></div>
+          <div class="fo-bench"><strong>64</strong><span>SWE-bench Pro normalized</span></div>
+          <div class="fo-bench"><strong>43</strong><span>FrontierMath est.</span></div>
+          <div class="fo-bench"><strong>88</strong><span>Open-frontier gap</span></div>
+          <div class="fo-bench"><strong>67</strong><span>METR lower-bound score</span></div>
+        </div>
+        <div class="fo-cta">
+          <a class="primary" href="#benchmark-compass">Full benchmark table ↓</a>
+          <a href="https://metr.org/time-horizons/">METR source</a>
+          <a href="#videos">Fresh Figure media ↓</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="morning-brief" aria-label="Issue brief">
   <div class="brief-card">
@@ -888,7 +996,7 @@
   </div>
 </div>
 
-<div class="metr-lab" id="metr-lab">
+<div class="metr-lab" id="metr-lab" data-metr-lab>
   <div class="metr-controls" aria-label="METR graph controls">
     <button class="metr-btn active" data-mode="p50">50% success horizon</button>
     <button class="metr-btn" data-mode="p80">80% success horizon</button>
@@ -909,12 +1017,12 @@
     <text x="150" y="184" class="metr-axis">2025</text>
     <text x="242" y="184" class="metr-axis">2026</text>
     <text x="350" y="184" class="metr-axis" text-anchor="end">2027 est.</text>
-    <path id="metr-p50" class="metr-line" d="M58,168 L110,154 L162,140 L214,112 L266,74 L306,52 L340,35"/>
-    <path id="metr-p80" class="metr-line est" d="M58,176 L110,166 L162,154 L214,136 L266,112 L306,92 L340,74"/>
+    <path id="metr-p50" class="metr-line" data-line="p50" d="M58,168 L110,154 L162,140 L214,112 L266,74 L306,52 L340,35"/>
+    <path id="metr-p80" class="metr-line est" data-line="p80" d="M58,176 L110,166 L162,154 L214,136 L266,112 L306,92 L340,74"/>
     <circle class="metr-dot" cx="306" cy="52" r="5"/>
     <text x="310" y="47" class="metr-axis">≥16h now</text>
   </svg>
-  <p class="metr-caption" id="metr-caption">🔎 <strong>What to see:</strong> METR is the load-bearing graph. The current public read is at least 16h at 50% reliability, but the suite is saturated above that. The 80% line stays lower because reliability matters: a model that can sometimes do a 16h task still cannot be trusted with a 16h job.</p>
+  <p class="metr-caption" id="metr-caption" data-caption>🔎 <strong>What to see:</strong> METR is the load-bearing graph. The current public read is at least 16h at 50% reliability, but the suite is saturated above that. The 80% line stays lower because reliability matters: a model that can sometimes do a 16h task still cannot be trusted with a 16h job.</p>
 </div>
 
 <table class="benchmark-table">
@@ -1467,24 +1575,26 @@
 </script>
 <script>
 (function(){
-  var buttons = document.querySelectorAll('.metr-btn');
-  var p50 = document.getElementById('metr-p50');
-  var p80 = document.getElementById('metr-p80');
-  var caption = document.getElementById('metr-caption');
   var copy = {
     p50: '🔎 <strong>What to see:</strong> at 50% reliability, METR now reads as at least 16h for Claude Mythos Preview, but the task suite is saturated above that. The next useful public number is not 17h; it is a harder suite.',
     p80: '🔎 <strong>What to see:</strong> the 80% line is lower because reliable autonomy lags impressive demos. This is the safer curve for job-replacement claims.',
     both: '🔎 <strong>What to see:</strong> the gap between 50% and 80% is the difference between "can sometimes finish" and "can be trusted." Singularity Pulse should track both.'
   };
-  function setMode(mode){
-    buttons.forEach(function(btn){ btn.classList.toggle('active', btn.getAttribute('data-mode') === mode); });
-    if (!p50 || !p80 || !caption) return;
-    p50.style.opacity = (mode === 'p80') ? '0.18' : '1';
-    p80.style.opacity = (mode === 'p50') ? '0.18' : '0.85';
-    caption.innerHTML = copy[mode] || copy.p50;
-  }
-  buttons.forEach(function(btn){ btn.addEventListener('click', function(){ setMode(btn.getAttribute('data-mode')); }); });
-  setMode('p50');
+  document.querySelectorAll('[data-metr-lab]').forEach(function(lab){
+    var buttons = lab.querySelectorAll('.metr-btn');
+    var p50 = lab.querySelector('[data-line="p50"]');
+    var p80 = lab.querySelector('[data-line="p80"]');
+    var caption = lab.querySelector('[data-caption]');
+    function setMode(mode){
+      buttons.forEach(function(btn){ btn.classList.toggle('active', btn.getAttribute('data-mode') === mode); });
+      if (!p50 || !p80 || !caption) return;
+      p50.style.opacity = (mode === 'p80') ? '0.18' : '1';
+      p80.style.opacity = (mode === 'p50') ? '0.18' : '0.85';
+      caption.innerHTML = copy[mode] || copy.p50;
+    }
+    buttons.forEach(function(btn){ btn.addEventListener('click', function(){ setMode(btn.getAttribute('data-mode')); }); });
+    setMode('p50');
+  });
 })();
 </script>
 
@@ -1506,7 +1616,7 @@
 </div>
 
 <footer class="colophon">
-Compiled at 7:30 AM + 3:10 PM + 5:46 PM + 7:42 PM ET, May 14 2026 — Issue #3 · v8.3 day-3 · Claude morning + Claude/Codex afternoon update. Benchmark Compass added: <strong>64/100 frontier band</strong> with METR ≥16h lower-bound graph, raw benchmark table, and uniform score bands. 7 STACK (3 added afternoon, 1 by Codex) / Futures Console restored / online discussion pulse added / readable scoreboard CSS upgraded / 3 LEAKS / 3 PAPERS / 3 ROBOTICS / 1 ADJACENT / 8 countdowns (6 moved today · AGI +5pp afternoon) / 5 open predictions · <strong>1 HIT · 1 PARTIAL</strong>. SP-Index 60 → <strong>63</strong> ↑+3 · Jon's Pulse 59 → <strong>63</strong> ↑+4. <br>
+Compiled at 7:30 AM + 3:10 PM + 5:46 PM + 8:00 PM ET, May 14 2026 — Issue #3 · v8.4 day-3 · Claude morning + Claude/Codex afternoon update. METR is now an above-the-fold observatory: <strong>≥16h lower-bound time horizon</strong>, interactive reliability toggles, Benchmark Compass <strong>64/100 frontier band</strong>, raw benchmark table, and uniform score bands. 7 STACK (3 added afternoon, 1 by Codex) / Futures Console restored / online discussion pulse added / readable scoreboard CSS upgraded / 3 LEAKS / 3 PAPERS / 3 ROBOTICS / 1 ADJACENT / 8 countdowns (6 moved today · AGI +5pp afternoon) / 5 open predictions · <strong>1 HIT · 1 PARTIAL</strong>. SP-Index 60 → <strong>63</strong> ↑+3 · Jon's Pulse 59 → <strong>63</strong> ↑+4. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 
