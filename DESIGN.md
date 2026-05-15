@@ -22,8 +22,8 @@ The interface has three jobs:
 
 Use a condensed spine. The newsletter should feel future-facing, but it must read in minutes:
 
-1. **Future Deck** — one compact orientation strip only: curve state, benchmark gap, priority lane.
-2. **News Brief** — 2-4 curve-moving items. No separate Stack / Leaks / Papers / Robotics sprawl in the visible reading flow.
+1. **Future Deck** — the actual sourced lead story plus tracker readouts above the fold. No decorative art unless it earns the space.
+2. **News Brief** — remaining curve-moving items. No separate Stack / Leaks / Papers / Robotics sprawl in the visible reading flow.
 3. **Benchmark Progress** — source-faithful Benchmark Observatory. Show what changed since the last issue before showing any table.
 4. **AI 2027 Tracker** — compare today’s evidence to the AI 2027 scenario and later AI Futures timeline revisions.
 5. **YouTube / X / Reddit** — one compact media/social tray. Rotate links every material push.
@@ -58,5 +58,5 @@ Hidden audit/provenance sections may remain in the file, but the reader-facing i
 
 If the issue could be mistaken for a Substack template, it fails.
 If a chart requires trust without source traceability, it fails.
-If the reader cannot tell what moved today within 15 seconds, it fails.
+If the reader cannot tell what moved today within 15 seconds, it fails. The lead story and source chips must be visible on the first screen.
 If a visual is impressive but not useful, it fails.

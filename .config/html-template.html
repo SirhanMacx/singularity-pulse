@@ -29,13 +29,13 @@
   html { -webkit-text-size-adjust: 100%; }
   body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: radial-gradient(circle at 18% 3%, rgba(124,247,255,0.22), transparent 28rem), radial-gradient(circle at 86% 8%, rgba(192,132,252,0.18), transparent 24rem), linear-gradient(180deg, #020617 0%, #050816 52%, #020617 100%); color: var(--fg); line-height: 1.6; font-size: 17px; font-feature-settings: "ss01", "cv11"; -webkit-font-smoothing: antialiased; }
   .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 88px; }
-  header.masthead { border: 1px solid var(--rule); border-radius: 24px; padding: 18px 20px; margin-bottom: 28px; background: linear-gradient(135deg, rgba(8,15,35,0.78), rgba(4,8,20,0.54)); box-shadow: 0 24px 80px rgba(0,0,0,0.32); backdrop-filter: blur(18px); }
-  .nav-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+  header.masthead { border: 1px solid var(--rule); border-radius: 24px; padding: 14px 20px; margin-bottom: 20px; background: linear-gradient(135deg, rgba(8,15,35,0.78), rgba(4,8,20,0.54)); box-shadow: 0 24px 80px rgba(0,0,0,0.32); backdrop-filter: blur(18px); }
+  .nav-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
   .nav-row a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
   .nav-row a:hover { color: var(--accent); border-color: var(--accent); }
-  .masthead .pulse-name { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: clamp(42px, 8vw, 86px); letter-spacing: -0.055em; margin: 0; line-height: 0.88; text-shadow: 0 0 34px rgba(124,247,255,0.18); }
+  .masthead .pulse-name { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: clamp(38px, 6vw, 66px); letter-spacing: -0.055em; margin: 0; line-height: 0.88; text-shadow: 0 0 34px rgba(124,247,255,0.18); }
   .masthead .date { font-size: 15px; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
-  .toc { margin-top: 14px; font-size: 13px; color: var(--muted); line-height: 1.8; }
+  .toc { margin-top: 10px; font-size: 13px; color: var(--muted); line-height: 1.8; }
   .toc a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; margin-right: 10px; white-space: nowrap; }
   .toc a:hover { color: var(--accent); border-color: var(--accent); }
   body.condensed-pulse .jon-lens,
@@ -83,11 +83,22 @@
   .source-footnotes a { color: var(--accent); }
   .benchmark-detail { margin-top: 14px; border: 1px solid rgba(124,247,255,0.16); border-radius: 14px; padding: 12px 14px; background: rgba(2,6,23,0.38); }
   .benchmark-detail summary { cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
-  .future-deck { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(300px,.95fr); gap: 18px; margin: 0 0 28px; padding: 18px; border: 1px solid rgba(124,247,255,.24); border-radius: 28px; background: linear-gradient(135deg, rgba(12,20,42,.88), rgba(7,12,28,.62)); box-shadow: 0 24px 90px rgba(0,0,0,.38); }
+  .future-deck { display: grid; grid-template-columns: minmax(0,1.18fr) minmax(300px,.82fr); gap: 18px; margin: 0 0 28px; padding: 20px; border: 1px solid rgba(124,247,255,.30); border-radius: 28px; background: radial-gradient(circle at 14% 12%, rgba(124,247,255,.15), transparent 18rem), linear-gradient(135deg, rgba(12,20,42,.91), rgba(7,12,28,.66)); box-shadow: 0 24px 90px rgba(0,0,0,.38); }
   .future-kicker, .deck-label, .lane-k, .protocol-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: .16em; }
-  .future-title { margin: 8px 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(38px,6.8vw,82px); line-height: .9; letter-spacing: -.06em; }
+  .future-title { margin: 8px 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(30px,4.2vw,48px); line-height: .98; letter-spacing: -.052em; }
+  .future-title a { color: var(--fg); border-bottom: 0; }
+  .future-title a:hover { color: var(--accent); opacity: 1; }
   .future-title span { color: var(--accent); }
-  .future-sub { max-width: 680px; color: var(--muted); font-size: 16px; line-height: 1.55; }
+  .future-sub { max-width: 760px; color: #c9d8ec; font-size: clamp(16px,1.9vw,20px); line-height: 1.42; }
+  .briefing-why { max-width: 760px; color: var(--muted); font-size: 15px; line-height: 1.5; margin: 0 0 14px; }
+  .briefing-sources { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .source-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--rule); border-radius: 999px; padding: 6px 9px; background: rgba(124,247,255,0.08); color: var(--fg); font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; }
+  .source-chip a { color: var(--accent); border-bottom: 0; }
+  .briefing-instruments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-content: stretch; }
+  .instrument-card { border: 1px solid rgba(124,247,255,.18); border-radius: 16px; background: rgba(2,6,23,.54); padding: 13px 14px; }
+  .instrument-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; }
+  .instrument-v { margin-top: 4px; font-family: 'Fraunces', Georgia, serif; font-size: 25px; font-weight: 800; line-height: 1; color: var(--fg); }
+  .instrument-note { margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.35; }
   .future-readout, .lens-grid, .design-protocol { display: grid; gap: 10px; }
   .future-readout { grid-template-columns: repeat(3,1fr); margin-top: 16px; }
   .lens-grid { grid-template-columns: repeat(4,1fr); }
@@ -317,7 +328,7 @@
   .future-card { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; }
   .future-card.primary { border-left: 4px solid var(--accent); }
   .future-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
-  .future-title { font-weight: 700; font-size: 15px; line-height: 1.3; margin: 0 0 6px; }
+  .future-card .future-title { font-weight: 700; font-size: 15px; line-height: 1.3; margin: 0 0 6px; }
   .future-body { font-size: 13px; line-height: 1.45; color: var(--fg); margin: 0; }
   .future-trigger { display: block; margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); line-height: 1.4; }
   .future-meter { display: grid; grid-template-columns: 52px 1fr 42px; gap: 8px; align-items: center; margin-top: 10px; }
@@ -584,28 +595,24 @@
   </nav>
 </header>
 
-<section class="future-deck" id="future-deck" aria-label="Future newsletter command deck">
-  <div>
-    <div class="future-kicker">Jon Lens · Singularity Observatory</div>
-    <h2 class="future-title">Track the curve, <span>not the feed.</span></h2>
-    <p class="future-sub">A private intelligence terminal for singularity-relevant progress: source-first benchmarks, live media, predictions, and the reader’s explicit weights.</p>
-    <div class="future-readout">
-      <div class="readout-card"><div class="deck-label">SP-Index</div><div class="readout-v">{{SPI_SCORE}}</div><div class="readout-note">{{SPI_DELTA}}</div></div>
-      <div class="readout-card"><div class="deck-label">Jon’s Pulse</div><div class="readout-v">{{JONS_SCORE}}</div><div class="readout-note">{{JONS_DELTA}}</div></div>
-      <div class="readout-card"><div class="deck-label">Priority lane</div><div class="readout-v">Robotics</div><div class="readout-note">From reader-profile weights.</div></div>
+<section class="future-deck briefing-deck" id="future-deck" aria-label="Today’s sourced curve briefing">
+  <article class="briefing-main">
+    <div class="future-kicker">Today’s curve brief · source-backed lead</div>
+    <h2 class="future-title"><a href="{{TOP_BRIEFING_URL}}">{{TOP_BRIEFING_TITLE}}</a></h2>
+    <div class="briefing-sources">
+      {{TOP_SOURCE_CHIPS}}
     </div>
-  </div>
-  <div class="future-visual">
-    <figure>
-      <img src="./assets/generated/singularity-observatory-holo.svg" alt="Illustrative holographic observatory for Singularity Pulse tracking lanes">
-      <figcaption>Illustrative UI art only; benchmark evidence is rendered in sourced panels.</figcaption>
-    </figure>
-  </div>
+    <p class="future-sub">{{TOP_BRIEFING_SUMMARY}}</p>
+    <p class="briefing-why"><strong>Why it matters:</strong> {{TOP_BRIEFING_WHY}}</p>
+  </article>
+  <aside class="briefing-instruments" aria-label="Singularity tracker readouts">
+    {{BRIEFING_READOUTS}}
+  </aside>
 </section>
 
 <section class="pulse-section news-brief-condensed" id="news-brief" aria-label="Condensed news brief">
   <h2>News Brief</h2>
-  <p class="section-sub">Only the curve-moving items. Everything else goes to footnotes or gets cut.</p>
+  <p class="section-sub">The rest of the curve-moving items. The lead story is above the fold.</p>
   <div class="brief-grid">
     {{NEWS_BRIEF_CONTENT}}
   </div>

@@ -152,8 +152,42 @@ function renderBylines(issue) {
     .join('\n    ');
 }
 
+function renderTopSourceChips(item, tools) {
+  return (item.source_ids || [])
+    .map((sourceId, index) => {
+      const source = tools.sourceMap.get(sourceId);
+      if (!source) return '';
+      return `<span class="source-chip"><span>${index + 1}</span><a href="${attr(source.url)}">${html(source.publisher)}</a><span>${html(source.freshness)}</span></span>`;
+    })
+    .filter(Boolean)
+    .join('\n      ');
+}
+
+function renderBriefingReadouts(issue, tools) {
+  const tracker = issue.tracker?.sp_index || {};
+  const metrics = issue.benchmark_panel?.metrics || [];
+  const p50 = metrics.find((metric) => /p50/i.test(metric.label));
+  const p80 = metrics.find((metric) => /p80/i.test(metric.label));
+  const aiLane = (issue.ai_2027 || []).find((lane) => /autonomy/i.test(lane.lane)) || issue.ai_2027?.[0];
+  const readouts = [
+    { key: 'SP-Index', value: tracker.score, note: `${tracker.delta_label || 'flat'} · evidence-only index` },
+    { key: 'METR p50', value: p50?.sub?.split('·')[0]?.trim() || p50?.value || 'queued', note: p50 ? `${p50.value} raw · caveated` : 'No source row' },
+    { key: 'METR p80', value: p80?.sub || p80?.value || 'queued', note: p80 ? `${p80.value} raw reliability threshold` : 'No source row' },
+    { key: 'AI 2027 lane', value: aiLane?.status || 'unresolved', note: aiLane ? aiLane.lane : 'No lane evidence' }
+  ];
+
+  return readouts
+    .map((readout) => `<div class="instrument-card">
+  <div class="instrument-k">${html(readout.key)}</div>
+  <div class="instrument-v">${html(readout.value)}</div>
+  <div class="instrument-note">${html(readout.note)}</div>
+</div>`)
+    .join('\n');
+}
+
 function renderNews(issue, tools) {
-  return (issue.news || [])
+  const cards = (issue.news || []).slice(1);
+  return (cards.length ? cards : issue.news || [])
     .map((item) => {
       const firstSource = item.source_ids?.[0];
       const source = firstSource ? tools.sourceMap.get(firstSource) : null;
@@ -348,6 +382,8 @@ function renderIssue(issue, registry) {
   validateIssue(issue, `data/issues/${issue.issue_date}.json`);
   const tools = buildSourceTools(issue);
   const tracker = issue.tracker.sp_index;
+  const topItem = issue.news?.[0] || {};
+  const topSource = tools.sourceMap.get(topItem.source_ids?.[0]);
   const replacements = {
     TITLE: issue.title,
     ISSUE_NUMBER: issue.issue_number,
@@ -362,6 +398,12 @@ function renderIssue(issue, registry) {
     JONS_DELTA: tracker.jon_delta_label,
     JONS_DELTA_DIR: tracker.jon_delta_dir,
     SPI_COMPONENTS: renderComponents(issue, tools),
+    TOP_BRIEFING_URL: topSource?.url || '#news-brief',
+    TOP_BRIEFING_TITLE: topItem.title || 'No lead story selected',
+    TOP_BRIEFING_SUMMARY: topItem.summary || 'No sourced lead story is available yet.',
+    TOP_BRIEFING_WHY: topItem.why_it_matters || 'No curve read available.',
+    TOP_SOURCE_CHIPS: renderTopSourceChips(topItem, tools),
+    BRIEFING_READOUTS: renderBriefingReadouts(issue, tools),
     NEWS_BRIEF_CONTENT: renderNews(issue, tools),
     WHAT_CHANGED_CONTENT: issue.summary.what_changed,
     TRUST_POSTURE_CONTENT: issue.summary.trust_posture,
