@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-15",
-  "checked_at": "2026-05-15T15:33:00-04:00",
+  "checked_at": "2026-05-15T15:57:07-04:00",
   "generated_from": "data/issues/2026-05-15.json",
   "rendered_items": [
     {
@@ -302,8 +302,8 @@
     {
       "section": "news",
       "title": "Reimagining the mouse pointer for the AI era",
-      "source_url": "https://deepmind.google/discover/blog/reimagining-the-mouse-pointer-for-the-ai-era/",
-      "checked_at": "2026-05-15T15:33:00-04:00",
+      "source_url": "https://deepmind.google/blog/ai-pointer/",
+      "checked_at": "2026-05-15T15:57:07-04:00",
       "freshness_badge": "this week",
       "curve_dimensions": [
         "ai_science",
@@ -311,6 +311,18 @@
       ],
       "verification_status": "verified",
       "notes": "DeepMind argues the mouse pointer is obsolete UI for a world where agents act on your behalf. Pairs with Cat Wu proactivity thesis: same-week labs publishing on what an agent should do without being told."
+    },
+    {
+      "section": "news",
+      "title": "A preview for Pro users: a new personal finance experience in ChatGPT",
+      "source_url": "https://x.com/ChatGPTapp/status/2055317612687675545",
+      "checked_at": "2026-05-15T15:57:07-04:00",
+      "freshness_badge": "today · Pro preview",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Official rollout note: US Pro users can connect financial accounts, see spending, and ask grounded questions."
     }
   ]
 }

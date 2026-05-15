@@ -239,43 +239,134 @@ function renderMetrChart(series, issueDate) {
   const bottom = 52;
   const chartWidth = width - left - right;
   const chartHeight = height - top - bottom;
-  const dates = series.map((point) => new Date(`${point.date}T00:00:00Z`).getTime());
+
+  const ordered = [...(series || [])].sort((a, b) => new Date(`${a.date}T00:00:00Z`).getTime() - new Date(`${b.date}T00:00:00Z`).getTime());
+  if (!ordered.length) return '';
+
+  const dates = ordered.map((point) => new Date(`${point.date}T00:00:00Z`).getTime());
   const minTime = Math.min(...dates);
   const maxTime = Math.max(...dates);
-  const values = series.flatMap((point) => [point.p50_minutes, point.p80_minutes]);
+  const values = ordered.flatMap((point) => [point.p50_minutes, point.p80_minutes]).filter((value) => Number.isFinite(value) && value > 0);
   const minLog = Math.floor(Math.log10(Math.min(...values)));
   const maxLog = Math.ceil(Math.log10(Math.max(...values)));
-  const p50 = series.map((point) => ({ ...point, x: dateToX(point.date, minTime, maxTime, left, chartWidth), y: logY(point.p50_minutes, minLog, maxLog, top, chartHeight) }));
-  const p80 = series.map((point) => ({ ...point, x: dateToX(point.date, minTime, maxTime, left, chartWidth), y: logY(point.p80_minutes, minLog, maxLog, top, chartHeight) }));
-  const ticks = [1, 10, 60, 180, 720, 1440].filter((tick) => Math.log10(tick) >= minLog && Math.log10(tick) <= maxLog);
-  const last = p50.at(-1);
-  const lastP80 = p80.at(-1);
+
   const yearTicks = ['2023-01-01', '2024-01-01', '2025-01-01', '2026-01-01'];
+  const decadeTicks = [1, 10, 100, 1000].filter((tick) => Math.log10(tick) >= minLog && Math.log10(tick) <= maxLog);
+  const anchorTicks = [60, 600, 1440].filter((tick) => Math.log10(tick) >= minLog && Math.log10(tick) <= maxLog);
+  const caveatMinutes = 960;
+
+  function linearY(valueMinutes, maxMinutes) {
+    const clamped = Math.max(0, Math.min(valueMinutes, maxMinutes));
+    if (maxMinutes <= 0) return top + chartHeight;
+    return top + ((maxMinutes - clamped) / maxMinutes) * chartHeight;
+  }
+
+  function shortModel(model) {
+    const text = String(model || '');
+    if (/mythos/i.test(text)) return 'Mythos';
+    return text.replace(/\s*\(.*?\)\s*/g, '').slice(0, 32);
+  }
+
+  const p50Log = ordered.map((point) => ({
+    ...point,
+    x: dateToX(point.date, minTime, maxTime, left, chartWidth),
+    y: logY(point.p50_minutes, minLog, maxLog, top, chartHeight)
+  }));
+  const p80Log = ordered.map((point) => ({
+    ...point,
+    x: dateToX(point.date, minTime, maxTime, left, chartWidth),
+    y: logY(point.p80_minutes, minLog, maxLog, top, chartHeight)
+  }));
+
+  const maxLinear = Math.max(1200, Math.ceil(Math.max(...values) / 240) * 240);
+  const p50Linear = ordered.map((point) => ({
+    ...point,
+    x: dateToX(point.date, minTime, maxTime, left, chartWidth),
+    y: linearY(point.p50_minutes, maxLinear)
+  }));
+  const p80Linear = ordered.map((point) => ({
+    ...point,
+    x: dateToX(point.date, minTime, maxTime, left, chartWidth),
+    y: linearY(point.p80_minutes, maxLinear)
+  }));
+
+  const last = p50Log.at(-1);
+  const y16Log = logY(caveatMinutes, minLog, maxLog, top, chartHeight);
+  const y16Linear = linearY(caveatMinutes, maxLinear);
+
+  const logFrame = `<div class="metr-chart-frame" data-scale="log">
+  <div class="metr-chart-header">
+    <div class="metr-scale-tag" style="background:rgba(124,247,255,0.10);color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid rgba(124,247,255,0.30);display:inline-block;margin-bottom:8px;">LOG SCALE - log10 minutes</div>
+    <p class="metr-axis-note" style="margin:0 0 8px;color:var(--muted);font-size:12px;font-family:'JetBrains Mono',monospace;">Y: log10(minutes). Each decade is the same vertical distance. Early progress visible.</p>
+  </div>
+  <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="METR Time Horizon - log scale - 23 models, p50 and p80 frontiers">
+    ${y16Log > top ? `<rect class="metr-caveat-band" x="${left}" y="${top}" width="${chartWidth}" height="${(y16Log - top).toFixed(2)}" fill="rgba(245,158,11,0.06)" />\n    <text class="metr-axis" x="${left + 6}" y="${top + 16}" font-size="10" fill="#f59e0b">amber band - METR caveat: measurements above 16h are unreliable</text>` : ''}
+    ${[...decadeTicks, ...anchorTicks].sort((a, b) => b - a).map((tick) => {
+      const isDecade = decadeTicks.includes(tick);
+      const y = logY(tick, minLog, maxLog, top, chartHeight);
+      const label = isDecade
+        ? `${tick} min`
+        : tick === 60 ? '1 hr' : tick === 600 ? '10 hr' : '1 day';
+      const stroke = isDecade ? 'var(--rule)' : 'rgba(124,247,255,0.10)';
+      const fill = isDecade ? 'var(--muted)' : 'rgba(148,163,184,0.8)';
+      const weight = isDecade ? '600' : '400';
+      return `<line class="metr-grid" x1="${left}" x2="${width - right}" y1="${y.toFixed(2)}" y2="${y.toFixed(2)}" stroke="${stroke}" />` +
+        `<text class="metr-axis" x="8" y="${(y + 3.5).toFixed(2)}" fill="${fill}" font-weight="${weight}">${label}</text>`;
+    }).join('\n    ')}
+    <line class="metr-grid" x1="${left}" x2="${width - right}" y1="${y16Log.toFixed(2)}" y2="${y16Log.toFixed(2)}" stroke="#f59e0b" stroke-opacity="0.55" stroke-dasharray="3 3" /><text class="metr-axis" x="8" y="${(y16Log + 3.5).toFixed(2)}" fill="#f59e0b" font-weight="700">16 hr</text>
+    ${yearTicks.map((date) => {
+      const x = dateToX(date, minTime, maxTime, left, chartWidth);
+      return `<line class="metr-grid vertical" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${top}" y2="${top + chartHeight}" /><text class="metr-axis" x="${(x - 12).toFixed(1)}" y="${height - 18}">${date.slice(0, 4)}</text>`;
+    }).join('\n    ')}
+    <text class="metr-axis metr-axis-label" x="${(left + chartWidth / 2).toFixed(0)}" y="${height - 2}" text-anchor="middle" font-size="11" fill="var(--muted)" font-weight="600">x-axis: release date (linear)</text>
+    <path class="metr-line" d="${linePath(p50Log)}" />
+    <path class="metr-line p80-line" d="${linePath(p80Log)}" />
+    ${p50Log.map((point, index) => `<circle class="metr-dot" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${index === p50Log.length - 1 ? 4.5 : 2.8}"><title>${html(point.model)} - p50 ${point.p50_minutes.toFixed(2)} min (${html(point.date)})</title></circle>`).join('\n    ')}
+    ${p80Log.map((point, index) => `<circle class="metr-dot p80-dot" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${index === p80Log.length - 1 ? 4.0 : 2.3}"><title>${html(point.model)} - p80 ${point.p80_minutes.toFixed(2)} min (${html(point.date)})</title></circle>`).join('\n    ')}
+    <line class="metr-callout-line" x1="${last.x.toFixed(1)}" y1="${last.y.toFixed(1)}" x2="${Math.max(left + 120, last.x - 80).toFixed(1)}" y2="${Math.max(top + 18, last.y - 10).toFixed(1)}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2 2" opacity="0.7" />
+    <text class="bc-value-label" x="${Math.max(left + 118, last.x - 82).toFixed(1)}" y="${Math.max(top + 16, last.y - 12).toFixed(1)}" text-anchor="end">${html(shortModel(last.model))} - ${last.p50_minutes.toFixed(2)} min (${(last.p50_minutes / 60).toFixed(2)} hr)</text>
+  </svg>
+</div>`;
+
+  const linearTicks = [0, 240, 480, 720, 960, 1200].filter((tick) => tick <= maxLinear);
+  const linearFrame = `<div class="metr-chart-spacer" style="height:16px;"></div>
+<div class="metr-chart-frame" data-scale="linear">
+  <div class="metr-chart-header">
+    <div class="metr-scale-tag" style="background:rgba(192,132,252,0.12);color:var(--accent-2);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid rgba(192,132,252,0.30);display:inline-block;margin-bottom:8px;">LINEAR SCALE - minutes (in hours)</div>
+    <p class="metr-axis-note" style="margin:0 0 8px;color:var(--muted);font-size:12px;font-family:'JetBrains Mono',monospace;">Y: minutes (rendered in hours). Equal vertical distance = equal time. Recent jump dominates the picture.</p>
+  </div>
+  <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="METR Time Horizon - linear scale - same 23 models">
+    ${y16Linear > top ? `<rect class="metr-caveat-band" x="${left}" y="${top}" width="${chartWidth}" height="${(y16Linear - top).toFixed(2)}" fill="rgba(245,158,11,0.06)" />` : ''}
+    ${linearTicks.map((tick) => {
+      const y = linearY(tick, maxLinear);
+      const label = tick === 0 ? '0' : `${Math.round(tick / 60)} hr`;
+      return `<line class="metr-grid" x1="${left}" x2="${width - right}" y1="${y.toFixed(2)}" y2="${y.toFixed(2)}" />` +
+        `<text class="metr-axis" x="8" y="${(y + 3.5).toFixed(2)}">${label}</text>`;
+    }).join('\n    ')}
+    <line class="metr-grid" x1="${left}" x2="${width - right}" y1="${y16Linear.toFixed(2)}" y2="${y16Linear.toFixed(2)}" stroke="#f59e0b" stroke-opacity="0.55" stroke-dasharray="3 3" /><text class="metr-axis" x="8" y="${(y16Linear + 3.5).toFixed(2)}" fill="#f59e0b" font-weight="700">16 hr</text>
+    ${yearTicks.map((date) => {
+      const x = dateToX(date, minTime, maxTime, left, chartWidth);
+      return `<line class="metr-grid vertical" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${top}" y2="${top + chartHeight}" /><text class="metr-axis" x="${(x - 12).toFixed(1)}" y="${height - 18}">${date.slice(0, 4)}</text>`;
+    }).join('\n    ')}
+    <text class="metr-axis metr-axis-label" x="${(left + chartWidth / 2).toFixed(0)}" y="${height - 2}" text-anchor="middle" font-size="11" fill="var(--muted)" font-weight="600">x-axis: release date (linear)</text>
+    <path class="metr-line" d="${linePath(p50Linear)}" />
+    <path class="metr-line p80-line" d="${linePath(p80Linear)}" />
+    ${p50Linear.map((point, index) => `<circle class="metr-dot" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${index === p50Linear.length - 1 ? 4.5 : 2.8}"><title>${html(point.model)} - p50 ${point.p50_minutes.toFixed(2)} min (${html(point.date)})</title></circle>`).join('\n    ')}
+    ${p80Linear.map((point, index) => `<circle class="metr-dot p80-dot" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${index === p80Linear.length - 1 ? 4.0 : 2.3}"><title>${html(point.model)} - p80 ${point.p80_minutes.toFixed(2)} min (${html(point.date)})</title></circle>`).join('\n    ')}
+    <line class="metr-callout-line" x1="${p50Linear.at(-1).x.toFixed(1)}" y1="${p50Linear.at(-1).y.toFixed(1)}" x2="${Math.max(left + 160, p50Linear.at(-1).x - 60).toFixed(1)}" y2="${Math.max(top + 18, p50Linear.at(-1).y - 22).toFixed(1)}" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2 2" opacity="0.7" />
+    <text class="bc-value-label" x="${Math.max(left + 158, p50Linear.at(-1).x - 62).toFixed(1)}" y="${Math.max(top + 16, p50Linear.at(-1).y - 24).toFixed(1)}" text-anchor="end">${html(shortModel(p50Linear.at(-1).model))} - ${p50Linear.at(-1).p50_minutes.toFixed(2)} min p50 (${(p50Linear.at(-1).p50_minutes / 60).toFixed(2)} hr)</text>
+  </svg>
+</div>`;
 
   return `<div class="metr-lab tracker-chart">
   <div class="chart-deck-head">
-    <div><p class="chart-eyebrow">METR Time Horizon 1.1 · log scale</p><h3>How long can frontier agents work?</h3></div>
+    <div><p class="chart-eyebrow">METR Time Horizon 1.1 · ${ordered.length} models · verified ${html(issueDate)} · LOG + LINEAR pair</p><h3>How long can frontier agents work?</h3></div>
     <div class="chart-legend"><span class="legend-p50">p50 success</span><span class="legend-p80">p80 success</span></div>
   </div>
   <!-- chart by codex at implementation time — rendered from data/issues/${html(issueDate)}.json -->
-  <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="METR Time Horizon p50 and p80 values plotted from raw YAML">
-    ${ticks.map((tick) => {
-      const y = logY(tick, minLog, maxLog, top, chartHeight);
-      const label = tick >= 60 ? `${Number((tick / 60).toFixed(1))}h` : `${tick}m`;
-      return `<line class="metr-grid" x1="${left}" x2="${width - right}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" /><text class="metr-axis" x="8" y="${(y + 4).toFixed(1)}">${label}</text>`;
-    }).join('\n    ')}
-    ${yearTicks.map((date) => {
-      const x = dateToX(date, minTime, maxTime, left, chartWidth);
-      if (x < left || x > width - right) return '';
-      return `<line class="metr-grid vertical" x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${top}" y2="${top + chartHeight}" /><text class="metr-axis" x="${(x - 12).toFixed(1)}" y="${height - 18}">${date.slice(0, 4)}</text>`;
-    }).filter(Boolean).join('\n    ')}
-    <path class="metr-line" d="${linePath(p50)}" />
-    <path class="metr-line p80-line" d="${linePath(p80)}" />
-    ${p50.map((point) => `<circle class="metr-dot" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${point === last ? 5 : 3}"><title>${html(point.model)} p50 ${point.p50_minutes.toFixed(2)} min</title></circle>`).join('\n    ')}
-    ${p80.map((point) => `<circle class="metr-dot p80-dot" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="${point === lastP80 ? 4 : 2.5}"><title>${html(point.model)} p80 ${point.p80_minutes.toFixed(2)} min</title></circle>`).join('\n    ')}
-    <text class="bc-value-label" x="${Math.max(left + 8, last.x - 170).toFixed(1)}" y="${(last.y - 12).toFixed(1)}">${html(last.model)} · ${(last.p50_minutes / 60).toFixed(2)}h p50</text>
-  </svg>
-  <p class="metr-caption"><strong>What to see:</strong> the leading p50 point crosses a workday, but METR’s own doubling-time fit excludes central estimates above 16h. Treat this as pressure on the autonomy ceiling, not as a clean forecast.</p>
+  ${logFrame}
+  ${linearFrame}
+  <p class="metr-caption"><strong>What to see:</strong> same ${ordered.length} models, two scales, side-by-side. <strong>LOG (top):</strong> Y is log10(minutes) with decade labels. Use this to see <em>rate of progress</em>. <strong>LINEAR (bottom):</strong> Y is plain minutes, labeled in hours. Use this to see <em>magnitude of recent breakthroughs</em>. The amber 16h band on both is METR’s own caveat that measurements above 16h are unreliable.</p>
 </div>`;
 }
 

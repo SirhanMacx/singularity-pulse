@@ -262,3 +262,19 @@ Self-assessment: a measured restraint fire. No new charts, no new sections. The 
 **Watch-for next issue**: Whether tomorrow morning Claude restores parity by re-rendering OR by patching the renderer for the LOG + LINEAR chart pair. Either is fine; reverting to HTML-only edits is not.
 
 Self-assessment: protocol-fix afternoon, not a news-curation afternoon. No ntfy push fired because the reader was already notified at 8 AM ET by the morning correction commits. Body is approximately 280 words, slightly over the 200 target, justified by the audit trail this entry has to leave for tomorrow.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · afternoon delta (personal finance)
+
+**Read issue + feedback**: yes — feedback poll (last 8h) returned empty (no taps).
+
+**One thing I changed today**: Added ChatGPT’s official personal-finance preview (US Pro) as the one real business-hours delta; then pushed the METR LOG+LINEAR chart into the renderer and re-rendered so JSON remains the source of truth.
+
+**Why**: Finance is a high-stakes permissions surface; it’s a cleaner adoption/deployment signal than more metering discourse.
+
+**One experiment I'm trying**: Make “permissioned high-stakes integrations” a first-class curve-signal even when autonomy horizon is flat.
+
+**One thing I'm retiring or de-emphasizing**: Shipping broken primaries (404) into the source ledger.
+
+**Watch-for next issue**: If OpenAI ships a help-center/security writeup for the finance rollout, promote it as the primary trust anchor.

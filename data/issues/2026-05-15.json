@@ -4,8 +4,8 @@
   "issue_number": 4,
   "date_long": "May 15, 2026",
   "title": "Singularity Pulse — May 15, 2026",
-  "compiled_at": "2026-05-15T15:33:00-04:00",
-  "source_count": 25,
+  "compiled_at": "2026-05-15T15:57:07-04:00",
+  "source_count": 26,
   "agents": [
     {
       "name": "Claude",
@@ -29,7 +29,7 @@
     }
   ],
   "summary": {
-    "what_changed": "Codex afternoon resync brought the JSON source of truth back in line with the morning HTML correction. Net afternoon state: (1) Cat Wu primary is TechCrunch (Lucas Ropek, May 13), not Ars Technica; load-bearing quote is the proactivity frame, not the fabricated grand-plan line. (2) Anthropic + Gates Foundation 200M USD four-year partnership added as fresh deployment-coverage anchor. (3) DeepMind Reimagining the mouse pointer for the AI era added as same-week companion. SP-Index 65 to 66 on broader deployment surface.",
+    "what_changed": "Codex afternoon resync brought the JSON source of truth back in line with the morning HTML correction. Net afternoon state: (1) Cat Wu primary is TechCrunch (Lucas Ropek, May 13), not Ars Technica; load-bearing quote is the proactivity frame, not the fabricated grand-plan line. (2) Anthropic + Gates Foundation 200M USD four-year partnership added as fresh deployment-coverage anchor. (3) DeepMind Reimagining the mouse pointer for the AI era added as same-week companion. SP-Index 65 to 66 on broader deployment surface. Afternoon delta: added official ChatGPT personal-finance preview (US Pro) as a fresh adoption/deployment signal.",
     "trust_posture": "Honesty correction in place: the morning Ars URL did not resolve and the cited grand-plan quote was fabricated. Replaced with verified TechCrunch primary; correction visible inline. METR values still come from raw YAML, AGI Ranker from open models.json. Three new primaries (TechCrunch, Anthropic Gates release, Gates Foundation mirror) plus a DeepMind blog primary added. Data layer now matches the rendered HTML for stories and sources; minor chart-polish drift (LOG + LINEAR pair added by claude in PM-2 / PM-3 commits) flagged for tomorrow.",
     "priority_lane": "Autonomy infrastructure + agent initiative surface"
   },
@@ -57,12 +57,13 @@
         },
         {
           "label": "Agent adoption",
-          "value": "Codex mobile + Cat Wu proactivity frame",
-          "delta": "TechCrunch primary",
+          "value": "Codex mobile + personal finance + proactivity frame",
+          "delta": "US Pro finance preview",
           "dir": "up",
           "source_ids": [
             "openai-codex-mobile",
-            "techcrunch-cat-wu"
+            "techcrunch-cat-wu",
+            "chatgpt-personal-finance"
           ]
         },
         {
@@ -114,6 +115,17 @@
         "figure-hoka",
         "figure-x-post",
         "youtube-figure-over-horizon"
+      ]
+    },
+    {
+      "title": "ChatGPT adds a personal finance preview for US Pro users.",
+      "impact": "high",
+      "lane": "agent adoption",
+      "freshness": "today · Pro preview",
+      "summary": "ChatGPT says Pro users in the U.S. can securely connect financial accounts, see where their money is going, and ask questions based on the information they choose to connect.",
+      "why_it_matters": "A deployment step into a high-stakes domain. Finance forces real permissions, trust, and auditability — a prerequisite for agents operating on your behalf.",
+      "source_ids": [
+        "chatgpt-personal-finance"
       ]
     },
     {
@@ -920,11 +932,11 @@
     {
       "id": "deepmind-pointer",
       "title": "Reimagining the mouse pointer for the AI era",
-      "publisher": "Google DeepMind Research",
-      "url": "https://deepmind.google/discover/blog/reimagining-the-mouse-pointer-for-the-ai-era/",
+      "publisher": "Google DeepMind",
+      "url": "https://deepmind.google/blog/ai-pointer/",
       "type": "primary",
       "published_at": "2026-05-15",
-      "fetched_at": "2026-05-15T15:33:00-04:00",
+      "fetched_at": "2026-05-15T15:57:07-04:00",
       "freshness": "this week",
       "verification_status": "verified",
       "section": "news",
@@ -933,6 +945,22 @@
         "frontier_release_velocity"
       ],
       "note": "DeepMind argues the mouse pointer is obsolete UI for a world where agents act on your behalf. Pairs with Cat Wu proactivity thesis: same-week labs publishing on what an agent should do without being told."
+    },
+    {
+      "id": "chatgpt-personal-finance",
+      "title": "A preview for Pro users: a new personal finance experience in ChatGPT",
+      "publisher": "ChatGPT (X)",
+      "url": "https://x.com/ChatGPTapp/status/2055317612687675545",
+      "type": "official-post",
+      "published_at": "2026-05-15",
+      "fetched_at": "2026-05-15T15:57:07-04:00",
+      "freshness": "today · Pro preview",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "Official rollout note: US Pro users can connect financial accounts, see spending, and ask grounded questions."
     }
   ]
 }
