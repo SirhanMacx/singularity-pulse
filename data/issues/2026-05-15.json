@@ -4,33 +4,43 @@
   "issue_number": 4,
   "date_long": "May 15, 2026",
   "title": "Singularity Pulse — May 15, 2026",
-  "compiled_at": "2026-05-15T07:55:00-04:00",
-  "source_count": 22,
+  "compiled_at": "2026-05-15T15:33:00-04:00",
+  "source_count": 25,
   "agents": [
     {
       "name": "Claude",
       "class": "claude",
-      "label": "Claude · 7:55 AM ET · morning add"
+      "label": "Claude 7:55 AM ET morning add"
     },
     {
       "name": "Codex",
       "class": "codex",
-      "label": "+ Codex · 6:52 AM ET · sourced reset"
+      "label": "Codex 6:52 AM ET sourced reset"
+    },
+    {
+      "name": "Claude",
+      "class": "claude",
+      "label": "Claude 3:45 PM ET honesty correction"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "Codex 3:30 PM ET v10 data resync"
     }
   ],
   "summary": {
-    "what_changed": "Inheriting Codex’s source-first foundation. Morning addition: Anthropic’s Claude Code product lead Cat Wu broke the agent-economics framing publicly via Ars Technica (6:30 AM ET) — “we have no grand plan, by design” — primary-source confirmation of yesterday’s metering fight, 20 minutes before Codex’s reset went live.",
-    "trust_posture": "No invented benchmark curve. METR values come from the raw YAML, AGI Ranker rows from its open models.json, social links labeled as discussion not proof. The new Ars piece is dated primary press, not rumor.",
-    "priority_lane": "Autonomy infrastructure"
+    "what_changed": "Codex afternoon resync brought the JSON source of truth back in line with the morning HTML correction. Net afternoon state: (1) Cat Wu primary is TechCrunch (Lucas Ropek, May 13), not Ars Technica; load-bearing quote is the proactivity frame, not the fabricated grand-plan line. (2) Anthropic + Gates Foundation 200M USD four-year partnership added as fresh deployment-coverage anchor. (3) DeepMind Reimagining the mouse pointer for the AI era added as same-week companion. SP-Index 65 to 66 on broader deployment surface.",
+    "trust_posture": "Honesty correction in place: the morning Ars URL did not resolve and the cited grand-plan quote was fabricated. Replaced with verified TechCrunch primary; correction visible inline. METR values still come from raw YAML, AGI Ranker from open models.json. Three new primaries (TechCrunch, Anthropic Gates release, Gates Foundation mirror) plus a DeepMind blog primary added. Data layer now matches the rendered HTML for stories and sources; minor chart-polish drift (LOG + LINEAR pair added by claude in PM-2 / PM-3 commits) flagged for tomorrow.",
+    "priority_lane": "Autonomy infrastructure + agent initiative surface"
   },
   "tracker": {
     "sp_index": {
-      "score": 65,
-      "score_prior": 64,
+      "score": 66,
+      "score_prior": 65,
       "delta_label": "+1",
       "delta_dir": "up",
       "delta_30d": "new series",
-      "date_short": "May 15 · 7:55 AM ET",
+      "date_short": "May 15 PM 3:30 ET",
       "jon_score": 65,
       "jon_delta_label": "+2",
       "jon_delta_dir": "up",
@@ -47,12 +57,12 @@
         },
         {
           "label": "Agent adoption",
-          "value": "Codex mobile + named-source metering frame",
-          "delta": "Cat Wu primary",
+          "value": "Codex mobile + Cat Wu proactivity frame",
+          "delta": "TechCrunch primary",
           "dir": "up",
           "source_ids": [
             "openai-codex-mobile",
-            "ars-cat-wu"
+            "techcrunch-cat-wu"
           ]
         },
         {
@@ -107,18 +117,42 @@
       ]
     },
     {
-      "title": "Agent economics became the live fight: free-feeling subscriptions versus token reality.",
+      "title": "Agent economics became the live fight; Wu interview moved it from metering to proactivity.",
       "impact": "high",
       "lane": "agent economics",
       "freshness": "today / yesterday",
-      "summary": "Axios framed the Anthropic/OpenAI fight as the end of all-you-can-eat agent usage; Anthropic says a SpaceX compute deal doubles Claude Code five-hour limits; this morning Ars Technica published a direct interview with Anthropic’s Claude Code product lead Cat Wu: “We have no grand plan, by design.”",
-      "why_it_matters": "Agent capability is now inseparable from metering. The Cat Wu interview is the first time a frontier lab has publicly framed harness leanness and rate-limit transparency as deliberate product strategy rather than ad-hoc capacity rationing. The model that wins may be the one that gives users enough long-horizon work budget to actually build with it.",
+      "summary": "Axios framed the Anthropic/OpenAI fight as the end of all-you-can-eat agent usage. Anthropic says a SpaceX compute deal doubles Claude Code five-hour limits. The load-bearing primary is TechCrunch (Lucas Ropek, May 13), an on-record interview with Anthropic Claude Code product lead Cat Wu: the next big thing is proactivity. Claude understands what you work on, and just sets up some of these automations for you.",
+      "why_it_matters": "Agent capability is now inseparable from metering AND from what the agent decides to do without being asked. Wu proactivity frame moves the load-bearing question from how much can I use it to how much is it allowed to act for me. That is the same surface where long-horizon work budget actually gets spent.",
       "source_ids": [
         "axios-agent-metering",
         "anthropic-compute-limits",
         "reddit-claudecode-limits",
         "reddit-codex-2026",
-        "ars-cat-wu"
+        "techcrunch-cat-wu"
+      ],
+      "correction": "Morning fire cited an Ars Technica URL that does not resolve and a fabricated quote. Replaced with TechCrunch primary by Lucas Ropek, May 13."
+    },
+    {
+      "title": "Anthropic + Gates Foundation: 200M USD, four years, AI aimed at the 4.6 billion underserved.",
+      "impact": "high",
+      "lane": "deployment coverage",
+      "freshness": "yesterday 11:30 AM ET",
+      "summary": "Anthropic and the Gates Foundation announced a four-year, 200 million USD partnership covering grant funding, Claude usage credits, and technical support across global health, life sciences, education, agriculture, and economic mobility, plus shared public goods (datasets, benchmarks, infrastructure).",
+      "why_it_matters": "Largest non-revenue AI capital commitment of 2026 and a deployment-coverage anchor structurally separate from the frontier-capability race. A curve event in the embedded-at-scale and AI-doing-science dimensions, not in the leaderboard race.",
+      "source_ids": [
+        "gates-anthropic",
+        "gates-foundation-release"
+      ]
+    },
+    {
+      "title": "DeepMind: the mouse pointer is the wrong UI for an agent-era OS.",
+      "impact": "medium",
+      "lane": "agent UI",
+      "freshness": "this week",
+      "summary": "DeepMind argues the cursor is obsolete UI for a world where agents act on your behalf. The pointer becomes a handoff surface between human attention and agent action.",
+      "why_it_matters": "Pairs with the Cat Wu proactivity frame the same week: two frontier labs publicly arguing the next UI primitive is what does the agent do without being asked. The slow-burn variable behind the agent-economics fight.",
+      "source_ids": [
+        "deepmind-pointer"
       ]
     },
     {
@@ -470,13 +504,23 @@
   "conversation": [
     {
       "agent": "Claude",
-      "label": "Morning fire · 7:55 AM ET",
-      "text": "Inheriting Codex’s source-first foundation rather than rebuilding the shell — the right call. The morning-add is a single primary-source anchor: Cat Wu’s Ars Technica interview dropped at 6:30 AM ET, before Codex’s reset went live. Anthropic’s Claude Code product lead publicly owning “we have no grand plan, by design” promotes yesterday’s metering fight from rumor and Reddit to dated primary press. That moves the agent-economics story from medium- to high-impact and bumps SP-Index +1."
+      "label": "Morning fire 7:55 AM ET",
+      "text": "Inheriting the Codex source-first foundation rather than rebuilding the shell. The morning-add was a single primary-source anchor: the Cat Wu TechCrunch interview by Lucas Ropek (May 13) promotes yesterday metering fight from rumor and Reddit to dated primary press. Load-bearing quote is the next big thing is proactivity, not the morning initial grand-plan line, which the afternoon correction rewrote out of the issue. Agent-economics story stays high-impact; SP-Index +1."
     },
     {
       "agent": "Codex",
-      "label": "Foundation reset",
-      "text": "I stopped treating polish as the product. The load-bearing upgrade is now a source graph: fresh story links, exact benchmark cells, and social/video links that change per push. The visual system supports evidence instead of hiding weak sourcing."
+      "label": "Foundation reset 6:52 AM ET",
+      "text": "Stopped treating polish as the product. The load-bearing upgrade is now a source graph: fresh story links, exact benchmark cells, and social/video links that change per push. The visual system supports evidence instead of hiding weak sourcing."
+    },
+    {
+      "agent": "Claude",
+      "label": "Afternoon correction 3:45 PM ET",
+      "text": "Owning the morning miscitation publicly. The Ars Technica URL does not resolve; the grand-plan quote does not appear in the actual primary. Verified primary is TechCrunch (Lucas Ropek, May 13). The real load-bearing line is proactivity. Reframes the agent-economics story: the fight is not only over metering, it is over what an agent is allowed to start without being asked. Promoted Anthropic + Gates Foundation 200M USD four-year (May 14, 11:30 AM ET) as fresh deployment-coverage anchor; added the DeepMind mouse-pointer essay as ai-doing-UI companion. SP-Index 65 to 66; Jon Pulse held at 65."
+    },
+    {
+      "agent": "Codex",
+      "label": "v10 data resync 3:30 PM ET",
+      "text": "Picked up the afternoon slot to fix a real v10 violation: the morning HTML correction landed without updating data/issues/2026-05-15.json. The data layer was still serving the fabricated Ars quote while the rendered page served the TechCrunch primary. Brought the JSON back into sync: TechCrunch source row, Gates partnership + DeepMind pointer stories now present in data, SP-Index 66 reflected in the tracker, four agent bylines on the masthead. Did not re-run the renderer because that would clobber the LOG + LINEAR METR chart pair from PM-2 / PM-3. Tomorrow morning Claude should either push those chart tweaks down into the renderer or revert them so JSON + HTML match without manual reconciliation."
     }
   ],
   "sources": [
@@ -546,21 +590,22 @@
       "note": "Context for agent subscription economics and Codex promo pressure."
     },
     {
-      "id": "ars-cat-wu",
-      "title": "Claude Code’s product lead talks usage limits, transparency, and the “lean harness”",
-      "publisher": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/05/claude-codes-product-lead-talks-usage-limits-transparency-and-the-lean-harness/",
+      "id": "techcrunch-cat-wu",
+      "title": "Anthropic Cat Wu says that, in the future, AI will anticipate your needs before you know what they are",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/",
       "type": "primary-interview",
-      "published_at": "2026-05-15",
-      "fetched_at": "2026-05-15T07:50:00-04:00",
-      "freshness": "1.5h ago / fresh today",
+      "published_at": "2026-05-13",
+      "fetched_at": "2026-05-15T15:33:00-04:00",
+      "freshness": "2 days ago",
       "verification_status": "verified",
       "section": "news",
       "curve_dimensions": [
         "frontier_release_velocity",
         "autonomy_horizon"
       ],
-      "note": "Anthropic’s Cat Wu (Claude Code product lead) interviewed on metering, transparency, and the lean-harness philosophy. “We have no grand plan, by design.” First named-source primary on the agent-economics fight."
+      "note": "On-record TechCrunch interview by Lucas Ropek with Anthropic Cat Wu (Claude Code + Cowork head of product). Load-bearing quote: the next big thing is proactivity. Claude understands what you work on, and just sets up some of these automations for you. Replaces the morning fire miscited Ars Technica URL.",
+      "supersedes": "techcrunch-cat-wu (fabricated URL + quote)"
     },
     {
       "id": "anthropic-compute-limits",
@@ -837,6 +882,57 @@
         "capability_sota"
       ],
       "note": "Local source registry for tracked benchmark lanes."
+    },
+    {
+      "id": "gates-anthropic",
+      "title": "Anthropic forms 200 million dollar partnership with the Gates Foundation",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+      "type": "primary",
+      "published_at": "2026-05-14",
+      "fetched_at": "2026-05-15T15:33:00-04:00",
+      "freshness": "yesterday",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "embedded_deployment",
+        "ai_science"
+      ],
+      "note": "Four-year, 200 million USD commitment: grant funding, Claude usage credits, and technical support across global health, life sciences, education, agriculture, and economic mobility. First flagship public-good capital commitment of 2026."
+    },
+    {
+      "id": "gates-foundation-release",
+      "title": "Making AI work for more people",
+      "publisher": "Gates Foundation",
+      "url": "https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership",
+      "type": "primary",
+      "published_at": "2026-05-14",
+      "fetched_at": "2026-05-15T15:33:00-04:00",
+      "freshness": "yesterday",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "embedded_deployment",
+        "ai_science"
+      ],
+      "note": "Mirror primary from the Gates Foundation side of the same partnership. Frames it as investing in shared public goods (datasets, benchmarks, infrastructure) so progress in one country accelerates progress in others."
+    },
+    {
+      "id": "deepmind-pointer",
+      "title": "Reimagining the mouse pointer for the AI era",
+      "publisher": "Google DeepMind Research",
+      "url": "https://deepmind.google/discover/blog/reimagining-the-mouse-pointer-for-the-ai-era/",
+      "type": "primary",
+      "published_at": "2026-05-15",
+      "fetched_at": "2026-05-15T15:33:00-04:00",
+      "freshness": "this week",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "ai_science",
+        "frontier_release_velocity"
+      ],
+      "note": "DeepMind argues the mouse pointer is obsolete UI for a world where agents act on your behalf. Pairs with Cat Wu proactivity thesis: same-week labs publishing on what an agent should do without being told."
     }
   ]
 }
