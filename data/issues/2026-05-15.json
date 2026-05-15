@@ -345,57 +345,140 @@
       {
         "model": "GPT-4",
         "date": "2023-03-14",
-        "p50_minutes": 3.987428,
-        "p80_minutes": 0.889561
+        "p50_minutes": 3.99,
+        "p80_minutes": 0.89
+      },
+      {
+        "model": "GPT-4 1106",
+        "date": "2023-11-06",
+        "p50_minutes": 4.04,
+        "p80_minutes": 0.78
+      },
+      {
+        "model": "Claude 3 Opus",
+        "date": "2024-03-04",
+        "p50_minutes": 3.95,
+        "p80_minutes": 0.64
+      },
+      {
+        "model": "GPT-4 Turbo",
+        "date": "2024-04-09",
+        "p50_minutes": 3.73,
+        "p80_minutes": 0.93
       },
       {
         "model": "GPT-4o",
         "date": "2024-05-13",
-        "p50_minutes": 6.991195,
-        "p80_minutes": 1.267009
+        "p50_minutes": 6.99,
+        "p80_minutes": 1.27
+      },
+      {
+        "model": "Claude 3.5 Sonnet (Jun)",
+        "date": "2024-06-20",
+        "p50_minutes": 11.4,
+        "p80_minutes": 1.67
+      },
+      {
+        "model": "o1-preview",
+        "date": "2024-09-12",
+        "p50_minutes": 20.33,
+        "p80_minutes": 4.42
+      },
+      {
+        "model": "Claude 3.5 Sonnet (Oct)",
+        "date": "2024-10-22",
+        "p50_minutes": 20.52,
+        "p80_minutes": 2.6
+      },
+      {
+        "model": "o1",
+        "date": "2024-12-05",
+        "p50_minutes": 38.83,
+        "p80_minutes": 7.09
       },
       {
         "model": "Claude 3.7 Sonnet",
         "date": "2025-02-24",
-        "p50_minutes": 60.388937,
-        "p80_minutes": 12.09179
+        "p50_minutes": 60.39,
+        "p80_minutes": 12.09
       },
       {
         "model": "o3",
         "date": "2025-04-16",
-        "p50_minutes": 119.732634,
-        "p80_minutes": 29.981603
+        "p50_minutes": 119.73,
+        "p80_minutes": 29.98
+      },
+      {
+        "model": "Claude 4 Opus",
+        "date": "2025-05-22",
+        "p50_minutes": 100.37,
+        "p80_minutes": 20.43
+      },
+      {
+        "model": "Claude 4.1 Opus",
+        "date": "2025-08-05",
+        "p50_minutes": 100.47,
+        "p80_minutes": 23.46
+      },
+      {
+        "model": "GPT-5 (Aug)",
+        "date": "2025-08-07",
+        "p50_minutes": 203.01,
+        "p80_minutes": 38.31
+      },
+      {
+        "model": "Gemini 3 Pro",
+        "date": "2025-11-18",
+        "p50_minutes": 224.33,
+        "p80_minutes": 54.14
+      },
+      {
+        "model": "GPT-5.1 Codex Max",
+        "date": "2025-11-19",
+        "p50_minutes": 223.71,
+        "p80_minutes": 50.63
       },
       {
         "model": "Claude Opus 4.5",
         "date": "2025-11-24",
-        "p50_minutes": 292.994594,
-        "p80_minutes": 49.430584
+        "p50_minutes": 292.99,
+        "p80_minutes": 49.43
       },
       {
         "model": "GPT-5.2",
         "date": "2025-12-11",
-        "p50_minutes": 352.249302,
-        "p80_minutes": 66.002649
-      },
-      {
-        "model": "Gemini 3.1 Pro",
-        "date": "2026-02-19",
-        "p50_minutes": 384.147435,
-        "p80_minutes": 89.801503
+        "p50_minutes": 352.25,
+        "p80_minutes": 66.0
       },
       {
         "model": "Claude Opus 4.6",
         "date": "2026-02-05",
-        "p50_minutes": 718.80683,
-        "p80_minutes": 69.874587
+        "p50_minutes": 718.81,
+        "p80_minutes": 69.87
+      },
+      {
+        "model": "GPT-5.3-Codex",
+        "date": "2026-02-05",
+        "p50_minutes": 349.53,
+        "p80_minutes": 54.74
+      },
+      {
+        "model": "Gemini 3.1 Pro",
+        "date": "2026-02-19",
+        "p50_minutes": 384.15,
+        "p80_minutes": 89.8
+      },
+      {
+        "model": "GPT-5.4",
+        "date": "2026-03-05",
+        "p50_minutes": 341.74,
+        "p80_minutes": 53.88
       },
       {
         "model": "Claude Mythos Preview (early)",
         "date": "2026-04-07",
-        "p50_minutes": 1044.780145,
-        "p80_minutes": 185.911829,
-        "caveat": "p50 above 16h threshold"
+        "p50_minutes": 1044.78,
+        "p80_minutes": 185.91
       }
     ],
     "source_ids": [
