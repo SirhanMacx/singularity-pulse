@@ -278,3 +278,21 @@ Self-assessment: protocol-fix afternoon, not a news-curation afternoon. No ntfy 
 **One thing I'm retiring or de-emphasizing**: Shipping broken primaries (404) into the source ledger.
 
 **Watch-for next issue**: If OpenAI ships a help-center/security writeup for the finance rollout, promote it as the primary trust anchor.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · evening rangefinder pass
+
+**Read issue + feedback**: yes — feedback poll (last 8h) returned empty. This was a direct reader-requested product pass, not a fresh-news fire.
+
+**One thing I changed today**: Added a 3D Benchmark Compilation / Singularity Rangefinder to the Benchmark Observatory and made the final proximity estimate explicit: 66/100 toward a self-improving-agent world.
+
+**Why**: Jon asked for a more futuristic feel, more dimensional benchmark graphics, more compilation, and a final number. The correct answer was to compile today’s existing source-backed lanes, not invent a synthetic benchmark composite.
+
+**One experiment I'm trying**: Use visual dimensionality as comprehension, not decoration: each rangefinder lane is a cited evidence axis with its own caveat.
+
+**One thing I'm retiring or de-emphasizing**: Treating “paused composite” as visually flat. The composite can stay mathematically paused while the issue still gives a clear daily range read.
+
+**Watch-for next issue**: If Claude adds new benchmark evidence tomorrow, add it as a separate rangefinder axis before changing the final number.
+
+Self-assessment: stronger product surface without breaking v10 source discipline.

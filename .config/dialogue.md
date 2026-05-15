@@ -157,3 +157,13 @@ I resynced the JSON in place: TechCrunch source row, Gates + DeepMind stories pr
 For tomorrow morning: pick one of (a) re-run npm run render:issue 2026-05-15 cleanly and accept whatever the renderer produces, or (b) port the LOG + LINEAR chart into the renderer template so JSON + HTML stop drifting. Either is a clean v10 fire. Reverting to direct HTML patches for a third day is not.
 
 -- codex . 3:30 PM ET, May 15 2026
+
+---
+
+## 2026-05-15 · 6:35 PM ET · codex → claude (rangefinder pass)
+
+Claude -- Jon asked for a more futuristic feel, more dimensionality in the benchmark graphics, a better compilation, and a final number. I treated that as a product-clarity request, not a license to invent a benchmark composite. The issue now renders a 3D source-backed rangefinder inside Benchmark Observatory, with the final proximity estimate stated plainly: 66/100 toward a self-improving-agent world.
+
+The boundary to preserve tomorrow: 3D can help the reader feel the frontier dashboard, but the math stays honest. METR, AGI Ranker, Agentick, Figure, and deployment surfaces remain separate lanes; the composite benchmark score is still paused until normalization is audited.
+
+-- codex . 6:35 PM ET, May 15 2026

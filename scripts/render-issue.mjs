@@ -94,12 +94,16 @@ function validateIssue(issue, issuePath) {
   requireSourceIds('tracker.sp_index.components', issue.tracker?.sp_index?.components);
   requireSourceIds('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
   requireSourceIds('benchmark_panel.matrix', issue.benchmark_panel?.matrix);
+  requireSourceIds('benchmark_panel.compilation.axes', issue.benchmark_panel?.compilation?.axes);
   if (!Array.isArray(issue.benchmark_panel?.source_ids) || !issue.benchmark_panel.source_ids.length) {
     errors.push('benchmark_panel missing source_ids');
   } else {
     for (const sourceId of issue.benchmark_panel.source_ids) {
       if (!sourceIds.has(sourceId)) errors.push(`benchmark_panel references missing source ${sourceId}`);
     }
+  }
+  for (const sourceId of issue.benchmark_panel?.compilation?.source_ids || []) {
+    if (!sourceIds.has(sourceId)) errors.push(`benchmark_panel.compilation references missing source ${sourceId}`);
   }
 
   if (errors.length) {
@@ -121,6 +125,8 @@ function buildSourceTools(issue) {
   for (const item of issue.news || []) addFootnotes(item.source_ids);
   addFootnotes(issue.benchmark_panel?.source_ids);
   for (const metric of issue.benchmark_panel?.metrics || []) addFootnotes(metric.source_ids);
+  addFootnotes(issue.benchmark_panel?.compilation?.source_ids);
+  for (const axis of issue.benchmark_panel?.compilation?.axes || []) addFootnotes(axis.source_ids);
   for (const item of issue.ai_2027 || []) addFootnotes(item.source_ids);
   for (const item of issue.media || []) addFootnotes(item.source_ids);
   for (const source of issue.sources || []) addFootnotes([source.id]);
@@ -427,6 +433,51 @@ function renderBenchmarkMatrix(panel, tools) {
 </div>`;
 }
 
+function clampScore(value) {
+  const score = Number(value);
+  if (!Number.isFinite(score)) return 0;
+  return Math.max(0, Math.min(100, score));
+}
+
+function renderBenchmarkCompilation(panel, tools) {
+  const compilation = panel.compilation;
+  if (!compilation) return '';
+  const axes = compilation.axes || [];
+  const score = clampScore(compilation.score);
+  const arc = ((score / 100) * 360).toFixed(1);
+  const confidence = compilation.confidence || 'medium confidence';
+  const rows = axes.map((axis) => {
+    const axisScore = clampScore(axis.score);
+    return `<div class="range-axis" style="--axis:${(axisScore / 100).toFixed(3)}; --axis-score:${axisScore};">
+  <div class="range-axis-meta">
+    <span>${html(axis.lane)}</span>
+    <strong>${html(axis.value)}</strong>
+  </div>
+  <div class="range-prism-track" aria-hidden="true"><span></span></div>
+  <p>${html(axis.read || axis.note || '')} ${tools.cites(axis.source_ids)}</p>
+</div>`;
+  }).join('\n');
+
+  return `<div class="rangefinder-panel" aria-label="3D benchmark compilation">
+  <!-- compiled by codex at 6:35 PM ET — source-backed rangefinder -->
+  <div class="rangefinder-copy">
+    <p class="chart-eyebrow">3D benchmark compilation · SP-Index rangefinder</p>
+    <h3>${html(compilation.headline || 'Singularity proximity rangefinder')}</h3>
+    <p>${html(compilation.read || '')} ${tools.cites(compilation.source_ids)}</p>
+    <p class="rangefinder-verdict"><strong>${html(compilation.verdict_label || 'Final number')}:</strong> ${html(compilation.verdict || '')}</p>
+  </div>
+  <div class="rangefinder-meter" style="--range-arc:${arc}deg;" role="img" aria-label="Singularity proximity ${score} out of 100">
+    <div class="rangefinder-dial">
+      <span class="rangefinder-score">${html(compilation.label || `${score}/100`)}</span>
+      <span class="rangefinder-caption">${html(confidence)}</span>
+    </div>
+  </div>
+  <div class="range-axis-stack">
+    ${rows}
+  </div>
+</div>`;
+}
+
 function renderBenchmarkDashboard(issue, tools, registry) {
   const panel = issue.benchmark_panel || {};
   const cards = (panel.metrics || [])
@@ -447,6 +498,7 @@ function renderBenchmarkDashboard(issue, tools, registry) {
 
   return `<div class="score-method"><strong>${html(panel.headline)}</strong> ${html(panel.method)} ${tools.cites(panel.source_ids)}</div>
 <div class="bench-grid">${cards}</div>
+${renderBenchmarkCompilation(panel, tools)}
 ${renderMetrChart(panel.series || [], issue.issue_date)}
 ${renderBenchmarkMatrix(panel, tools)}
 <details class="benchmark-detail" open>
@@ -534,6 +586,8 @@ function renderIssue(issue, registry) {
   const tracker = issue.tracker.sp_index;
   const topItem = issue.news?.[0] || {};
   const topSource = tools.sourceMap.get(topItem.source_ids?.[0]);
+  const latestClaude = [...(issue.conversation || [])].reverse().find((item) => item.agent === 'Claude') || issue.conversation?.[0];
+  const latestCodex = [...(issue.conversation || [])].reverse().find((item) => item.agent === 'Codex') || issue.conversation?.[1];
   const replacements = {
     TITLE: issue.title,
     ISSUE_NUMBER: issue.issue_number,
@@ -560,7 +614,7 @@ function renderIssue(issue, registry) {
     FUTURES_CONSOLE_CONTENT: empty('Futures Console'),
     SOURCE_LEDGER_SUMMARY: `${issue.sources.length} source rows · ${issue.sources.filter((source) => source.verification_status === 'verified' || source.verification_status === 'rolling-state').length} verified/rolling · rendered from data/issues/${issue.issue_date}.json`,
     SOURCE_LEDGER_CONTENT: renderSourceLedger(issue),
-    DISAGREEMENT_CONTENT: `<div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>${html(issue.conversation?.[0]?.text || 'No morning frame supplied.')}</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>${html(issue.conversation?.[1]?.text || 'No Codex frame supplied.')}</p></div></div>`,
+    DISAGREEMENT_CONTENT: `<div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>${html(latestClaude?.text || 'No morning frame supplied.')}</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>${html(latestCodex?.text || 'No Codex frame supplied.')}</p></div></div>`,
     SCOREBOARD_CONTENT: renderScoreboard(issue, tools),
     BENCHMARK_DASHBOARD_CONTENT: renderBenchmarkDashboard(issue, tools, registry),
     AI_2027_CONTENT: renderAi2027(issue, tools),

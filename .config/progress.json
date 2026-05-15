@@ -1,18 +1,18 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-15T16:00:37-04:00",
+  "last_updated": "2026-05-15T18:35:00-04:00",
   "issue_count": 4,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "benchmark_composite": {
-    "as_of": "2026-05-15T06:49:00-04:00",
+    "as_of": "2026-05-15T18:35:00-04:00",
     "score": null,
     "score_prior": null,
     "band": null,
     "weights": null,
-    "note": "Composite paused until every included benchmark is refreshed from primary sources. May 15 adds an exact benchmark matrix from METR YAML + AGI Ranker models.json, but still does not blend those rows into a single score."
+    "note": "Composite remains paused. May 15 evening added a source-backed 3D rangefinder that uses the SP-Index (66/100) as a proximity estimate, not as a normalized benchmark blend."
   },
   "sp_index": {
-    "as_of": "2026-05-15T16:00:37-04:00",
+    "as_of": "2026-05-15T18:35:00-04:00",
     "score": 66,
     "score_prior": 65,
     "score_30d_prior": null,
@@ -175,6 +175,12 @@
         "score": 64,
         "synthetic": false,
         "note": "Codex foundation reset before Claude morning: OpenAI Codex mobile/remote access checked from primary sources, Figure F.03 live-shift remains embodied signal, Anthropic/Codex agent metering is live discourse, and benchmark section now renders a raw METR + AGI Ranker matrix with no composite score."
+      },
+      {
+        "date": "2026-05-15-evening",
+        "score": 66,
+        "synthetic": false,
+        "note": "Evening Codex visual/product pass: no new external story; compiled existing METR, AGI Ranker, Agentick, Figure, and deployment evidence into a 3D rangefinder with final 66/100 proximity estimate."
       }
     ],
     "component_histories_30d": {

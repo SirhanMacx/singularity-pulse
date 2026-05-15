@@ -441,6 +441,27 @@
   .bench-card .bc-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
   .bench-card .bc-v { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 800; margin-top: 4px; color: var(--fg); }
   .bench-card .bc-note { font-size: 12px; color: var(--muted); line-height: 1.35; margin-top: 5px; }
+  .rangefinder-panel { position: relative; display: grid; grid-template-columns: minmax(220px, 0.95fr) minmax(160px, 0.45fr) minmax(260px, 1.1fr); gap: 18px; align-items: center; margin: 18px 0; padding: 18px; border: 1px solid rgba(124,247,255,0.24); border-radius: 18px; background: radial-gradient(circle at 15% 10%, rgba(124,247,255,0.16), transparent 32%), linear-gradient(135deg, rgba(2,6,23,0.96), rgba(15,23,42,0.72)); box-shadow: 0 18px 70px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.06); overflow: hidden; perspective: 1200px; }
+  .rangefinder-panel::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(124,247,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(124,247,255,0.08) 1px, transparent 1px); background-size: 38px 38px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); opacity: 0.38; transform: skewY(-2deg) scale(1.08); }
+  .rangefinder-copy, .rangefinder-meter, .range-axis-stack { position: relative; z-index: 1; }
+  .rangefinder-copy h3 { margin: 0 0 8px; font-size: 23px; line-height: 1.08; letter-spacing: -0.03em; }
+  .rangefinder-copy p { margin: 0 0 10px; color: var(--muted); line-height: 1.5; font-size: 13px; }
+  .rangefinder-verdict { padding: 10px 12px; border: 1px solid rgba(52,211,153,0.24); border-radius: 12px; background: rgba(52,211,153,0.08); color: var(--fg) !important; }
+  .rangefinder-meter { justify-self: center; width: min(178px, 100%); aspect-ratio: 1; display: grid; place-items: center; transform-style: preserve-3d; transform: rotateX(58deg) rotateZ(-24deg); filter: drop-shadow(0 24px 24px rgba(0,0,0,0.38)); }
+  .rangefinder-meter::before { content: ""; position: absolute; inset: 6%; border-radius: 50%; background: conic-gradient(from -90deg, var(--accent) 0 var(--range-arc), rgba(124,247,255,0.10) var(--range-arc) 360deg); box-shadow: 0 0 42px rgba(124,247,255,0.18), inset 0 0 28px rgba(2,6,23,0.68); }
+  .rangefinder-meter::after { content: ""; position: absolute; inset: 22%; border: 1px solid rgba(124,247,255,0.24); border-radius: 50%; background: rgba(2,6,23,0.82); transform: translateZ(22px); }
+  .rangefinder-dial { position: relative; z-index: 2; display: grid; gap: 4px; justify-items: center; transform: translateZ(38px) rotateZ(24deg) rotateX(-58deg); text-align: center; }
+  .rangefinder-score { font-family: 'Fraunces', Georgia, serif; font-weight: 900; font-size: 34px; line-height: 1; color: var(--accent); text-shadow: 0 0 22px rgba(124,247,255,0.36); font-variant-numeric: tabular-nums; }
+  .rangefinder-caption { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; }
+  .range-axis-stack { display: grid; gap: 10px; transform-style: preserve-3d; }
+  .range-axis { display: grid; grid-template-columns: minmax(125px, 0.7fr) minmax(120px, 1fr); gap: 8px 12px; align-items: center; padding: 10px 12px; border: 1px solid rgba(148,163,184,0.18); border-radius: 13px; background: rgba(15,23,42,0.56); }
+  .range-axis-meta span { display: block; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .range-axis-meta strong { display: block; margin-top: 2px; color: var(--fg); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .range-axis p { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.35; }
+  .range-prism-track { position: relative; height: 17px; border-radius: 999px; background: rgba(2,6,23,0.82); border: 1px solid rgba(124,247,255,0.18); transform: rotateX(52deg) rotateZ(-17deg); transform-style: preserve-3d; box-shadow: inset 0 0 12px rgba(0,0,0,0.34); }
+  .range-prism-track span { position: absolute; left: 0; top: 0; bottom: 0; width: calc(var(--axis) * 100%); border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px rgba(124,247,255,0.42); transform-style: preserve-3d; }
+  .range-prism-track span::before { content: ""; position: absolute; left: 8px; right: 3px; top: -7px; height: 7px; border-radius: 999px 999px 0 0; background: linear-gradient(90deg, rgba(255,255,255,0.34), rgba(124,247,255,0.16)); transform: skewX(-48deg); transform-origin: bottom left; }
+  .range-prism-track span::after { content: ""; position: absolute; right: -7px; top: 2px; width: 7px; height: 13px; border-radius: 0 999px 999px 0; background: rgba(124,247,255,0.28); transform: skewY(-42deg); transform-origin: left center; }
   .metr-lab { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; margin: 16px 0; }
   .metr-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
   .metr-btn { appearance: none; border: 1px solid var(--rule); background: var(--bg); color: var(--fg); border-radius: 999px; padding: 7px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; cursor: pointer; }
@@ -553,11 +574,14 @@
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 42px; }
-    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid { grid-template-columns: 1fr; }
+    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid, .rangefinder-panel { grid-template-columns: 1fr; }
     .sp-index-pair { flex-direction: column; }
     .morning-brief, .dispute-grid, .future-grid, .watch-rail, .discourse-pulse .dp-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
     .v81-bigchart svg { min-height: 190px; }
     .metr-lab svg { min-height: 210px; }
+    .rangefinder-meter { width: 154px; margin: 6px auto; }
+    .range-axis { grid-template-columns: 1fr; }
+    .range-prism-track { transform: rotateX(46deg) rotateZ(-10deg); }
     .sticky-read { display: block; }
     .source-item, .pm-row { grid-template-columns: 1fr; }
     h2.section { font-size: 22px; margin-top: 36px; }

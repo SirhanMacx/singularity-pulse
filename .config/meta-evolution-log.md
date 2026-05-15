@@ -258,3 +258,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Fresh X posts, changing links each push, and better online discussion capture.
 
 **Bet for the coming week**: Search-level X access will improve media/discussion freshness immediately, but direct tweet-read/auth health still needs monitoring because search can work while profile/read endpoints fail.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · 3D Rangefinder Visual Primitive
+
+**Audit window**: Reader asked for a more futuristic Singularity Pulse, a more dimensional benchmark graph surface, a better compilation, and a final number on proximity.
+
+**Sources added**: none. This mutation compiles existing source rows only.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: Benchmark Observatory rendered raw metric cards, METR charts, and an exact-cell matrix but did not compile those lanes into a reader-facing proximity read. AFTER: Benchmark Observatory also renders `benchmark_panel.compilation` as a 3D rangefinder with source-cited axes and a visible final SP-Index estimate.
+
+**Benchmarks added/dropped**: none. Composite benchmark scoring remains paused.
+
+**Voice / style-guide updates**: Visual dimensionality is allowed when it makes the evidence stack easier to scan; it must not imply unaudited normalization.
+
+**Reader-suggested gaps**: Futuristic feel, 3D benchmark graphs, compilation, and final proximity number.
+
+**Bet for the coming week**: A source-backed rangefinder gives Jon the dashboard feeling he wants without sacrificing the v10 evidence contract.

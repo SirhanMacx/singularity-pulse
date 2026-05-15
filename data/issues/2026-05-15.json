@@ -4,7 +4,7 @@
   "issue_number": 4,
   "date_long": "May 15, 2026",
   "title": "Singularity Pulse — May 15, 2026",
-  "compiled_at": "2026-05-15T15:57:07-04:00",
+  "compiled_at": "2026-05-15T18:35:00-04:00",
   "source_count": 26,
   "agents": [
     {
@@ -26,12 +26,17 @@
       "name": "Codex",
       "class": "codex",
       "label": "Codex 3:30 PM ET v10 data resync"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "Codex 6:35 PM ET rangefinder pass"
     }
   ],
   "summary": {
-    "what_changed": "Codex afternoon resync brought the JSON source of truth back in line with the morning HTML correction. Net afternoon state: (1) Cat Wu primary is TechCrunch (Lucas Ropek, May 13), not Ars Technica; load-bearing quote is the proactivity frame, not the fabricated grand-plan line. (2) Anthropic + Gates Foundation 200M USD four-year partnership added as fresh deployment-coverage anchor. (3) DeepMind Reimagining the mouse pointer for the AI era added as same-week companion. SP-Index 65 to 66 on broader deployment surface. Afternoon delta: added official ChatGPT personal-finance preview (US Pro) as a fresh adoption/deployment signal.",
-    "trust_posture": "Honesty correction in place: the morning Ars URL did not resolve and the cited grand-plan quote was fabricated. Replaced with verified TechCrunch primary; correction visible inline. METR values still come from raw YAML, AGI Ranker from open models.json. Three new primaries (TechCrunch, Anthropic Gates release, Gates Foundation mirror) plus a DeepMind blog primary added. Data layer now matches the rendered HTML for stories and sources; minor chart-polish drift (LOG + LINEAR pair added by claude in PM-2 / PM-3 commits) flagged for tomorrow.",
-    "priority_lane": "Autonomy infrastructure + agent initiative surface"
+    "what_changed": "Evening Codex product pass: no new external story added, but the existing source-backed evidence is now compiled into a 3D Benchmark Compilation / Singularity Rangefinder. The final visible proximity estimate is 66/100, tied to the SP-Index and source-linked lanes: METR autonomy horizon, AGI Ranker exact cells, Agentick sequential-decision score, Figure F.03 embodied-shift evidence, and high-stakes agent deployment surfaces.",
+    "trust_posture": "The 66/100 rangefinder is an editorial SP-Index proximity estimate, not a blended benchmark composite. Benchmark composite scoring remains paused until normalization is audited. Every rangefinder lane cites an existing source row; no fresh facts or synthetic benchmark values were invented for the visual pass.",
+    "priority_lane": "Source-backed singularity rangefinding"
   },
   "tracker": {
     "sp_index": {
@@ -40,7 +45,7 @@
       "delta_label": "+1",
       "delta_dir": "up",
       "delta_30d": "new series",
-      "date_short": "May 15 PM 3:30 ET",
+      "date_short": "May 15 PM 6:35 ET",
       "jon_score": 65,
       "jon_delta_label": "+2",
       "jon_delta_dir": "up",
@@ -68,8 +73,8 @@
         },
         {
           "label": "Benchmark state",
-          "value": "15 models / 14 benches",
-          "delta": "matrix added",
+          "value": "3D rangefinder + exact cells",
+          "delta": "compiled, not blended",
           "dir": "up",
           "source_ids": [
             "agiranker",
@@ -181,8 +186,8 @@
     }
   ],
   "benchmark_panel": {
-    "headline": "Benchmark section is now a raw evidence dashboard, not a mysterious score.",
-    "method": "METR is plotted directly from its raw YAML. AGI Ranker contributes source-linked public cells from models.json. Agentick and Figure are included as benchmark-shape signals, not folded into a composite.",
+    "headline": "Benchmark section now compiles the evidence into a rangefinder without pretending the composite is audited.",
+    "method": "METR, AGI Ranker, Agentick, Figure, and agent-deployment surfaces stay as separate source-backed lanes. The rangefinder uses today’s SP-Index as the final proximity number while leaving the benchmark composite paused.",
     "metrics": [
       {
         "label": "METR leading p50",
@@ -448,7 +453,7 @@
         "model": "GPT-5.2",
         "date": "2025-12-11",
         "p50_minutes": 352.25,
-        "p80_minutes": 66.0
+        "p80_minutes": 66
       },
       {
         "model": "Claude Opus 4.6",
@@ -488,7 +493,75 @@
       "agiranker-models",
       "agentick-paper",
       "benchmark-registry"
-    ]
+    ],
+    "compilation": {
+      "headline": "Singularity proximity: 66 / 100",
+      "label": "66/100",
+      "score": 66,
+      "confidence": "medium confidence",
+      "read": "This is the daily proximity estimate: close enough that the curve feels compounding, not close enough to claim runaway self-improvement. The number is the SP-Index, not a hidden benchmark blend.",
+      "verdict_label": "Codex final read",
+      "verdict": "66/100 toward a self-improving-agent world. Autonomy is past the workday at p50 but only 3.10h at p80; coding and permissioned deployments are accelerating; embodied reliability still needs intervention-rate proof.",
+      "source_ids": [
+        "metr-yaml",
+        "agiranker-models",
+        "agentick-paper",
+        "figure-livestream",
+        "chatgpt-personal-finance"
+      ],
+      "axes": [
+        {
+          "lane": "Autonomy horizon",
+          "value": "17.41h p50 / 3.10h p80",
+          "score": 72,
+          "read": "Long single-run work is visible; reliable workday autonomy is not yet there.",
+          "source_ids": [
+            "metr-time-horizons",
+            "metr-yaml"
+          ]
+        },
+        {
+          "lane": "Coding frontier",
+          "value": "82.6% SWE-bench cell",
+          "score": 76,
+          "read": "Software-task capability is now high enough that supervision surface matters as much as raw model score.",
+          "source_ids": [
+            "agiranker-models",
+            "openai-codex-mobile"
+          ]
+        },
+        {
+          "lane": "Sequential agents",
+          "value": "0.309 Agentick leader",
+          "score": 58,
+          "read": "New agent benchmarks are forming, but no single approach dominates yet.",
+          "source_ids": [
+            "agentick-paper"
+          ]
+        },
+        {
+          "lane": "Embodied proof",
+          "value": "8h Figure shift",
+          "score": 48,
+          "read": "The format is meaningful; intervention rate and throughput still need audit.",
+          "source_ids": [
+            "figure-livestream",
+            "figure-hoka"
+          ]
+        },
+        {
+          "lane": "Deployment surface",
+          "value": "mobile + finance + proactivity",
+          "score": 68,
+          "read": "Agents are moving from demos into supervised daily-work and high-trust account surfaces.",
+          "source_ids": [
+            "openai-codex-mobile",
+            "techcrunch-cat-wu",
+            "chatgpt-personal-finance"
+          ]
+        }
+      ]
+    }
   },
   "ai_2027": [
     {
@@ -616,6 +689,11 @@
       "agent": "Codex",
       "label": "v10 data resync 3:30 PM ET",
       "text": "Picked up the afternoon slot to fix a real v10 violation: the morning HTML correction landed without updating data/issues/2026-05-15.json. The data layer was still serving the fabricated Ars quote while the rendered page served the TechCrunch primary. Brought the JSON back into sync: TechCrunch source row, Gates partnership + DeepMind pointer stories now present in data, SP-Index 66 reflected in the tracker, four agent bylines on the masthead. Did not re-run the renderer because that would clobber the LOG + LINEAR METR chart pair from PM-2 / PM-3. Tomorrow morning Claude should either push those chart tweaks down into the renderer or revert them so JSON + HTML match without manual reconciliation."
+    },
+    {
+      "agent": "Codex",
+      "label": "Rangefinder pass 6:35 PM ET",
+      "text": "Jon asked for the page to feel more futuristic, for benchmark graphs to have more dimensionality, and for a final number on how close the curve feels. I did not add a fake composite. I turned today’s exact evidence lanes into a 3D rangefinder and made the final read explicit: 66/100 toward a self-improving-agent world. The useful distinction for tomorrow is visual: use 3D treatment to make the source-backed compilation legible, but keep benchmark normalization paused until the math is audited."
     }
   ],
   "sources": [
