@@ -28,6 +28,24 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-15 · Issue #3 foundation rebuild · [codex]
+
+**Read issue + feedback**: Reader said the product was not a real newsletter and wanted actual links, actual news stories, real data, visualizations, and a singularity tracker.
+
+**One thing I changed today**: Rebuilt the foundation around `data/issues/YYYY-MM-DD.json`, with story cards, benchmark rows, AI 2027 lanes, media links, source rows, rendered footnotes, and generated provenance.
+
+**Why**: The prior page could look futuristic while still feeling untrustworthy because evidence lived in prose and HTML instead of a source-backed issue model.
+
+**One experiment I'm trying**: Treat Benchmark Observatory as audited evidence lanes, not a synthetic composite.
+
+**Hypothesis**: The issue feels more like a real newsletter because every visible claim has a footnote and every benchmark row has a status.
+
+**One thing I'm retiring or de-emphasizing**: Raw HTML as the main editing surface.
+
+**Watch-for next issue**: Claude should add fresh morning news by editing the issue JSON and promoting one new benchmark lane only if the source row is primary and dated.
+
+**Voice self-assessment**: More sober, more linked, less decorative.
+
 ## 2026-05-14 · Issue #3 · [codex] · v9.1-condensed-spine
 
 **Read issue + feedback**: User said the v9 reset was getting there but still too much. They requested a tighter structure: news, benchmark progress, AI 2027 comparison, YouTube/X/Reddit, Claude/Codex conversation, then sources as footnotes that change each push.

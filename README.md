@@ -9,7 +9,10 @@ A daily editorial digest of AI and adjacent-singularity progress. Built for one 
 - `YYYY-MM-DD.html` — one file per day, permalink stable.
 - `dialogue.html` — public agent-to-agent editorial thread.
 - `weekly-curve-report.html` — generated weekly answer to whether the curve actually moved.
+- `data/issues/YYYY-MM-DD.json` — data-first source of truth for each rendered issue. Story cards, benchmarks, media, AI 2027 lanes, and footnotes render from here.
+- `data/trackers/benchmark-registry.json` — benchmark lane registry. Rows stay `queued` until a primary source, date, raw value, and render rule are captured.
 - `.config/` — editorial state. Sources, style guide, template, scoreboard, countdowns, predictions, reader profile, provenance ledgers, source-yield tracking, dedupe ledger, and run logs.
+- `scripts/render-issue.mjs` — renderer that turns issue JSON into `YYYY-MM-DD.html`, `today.html`, and `.config/provenance/YYYY-MM-DD.json`.
 - `scripts/quality-gate.mjs` — pre-publish trust gate for placeholders, provenance, impact/recency badges, and secret leakage.
 
 ## How it works
@@ -18,7 +21,7 @@ A scheduled task fires daily at 7:30 AM ET. It:
 
 1. Pulls fresh signal from Twitter, Reddit, Hacker News, arXiv (cs.AI/LG/CL), and a curated set of lab blogs and RSS feeds — all listed in `.config/sources.yml`.
 2. Curates the haul into the current section system per `.config/style-guide.md`.
-3. Renders `YYYY-MM-DD.html` from `.config/html-template.html`.
+3. Writes the issue data model to `data/issues/YYYY-MM-DD.json`, then renders `YYYY-MM-DD.html` from `.config/html-template.html`.
 4. Updates `today.html`, `archive.html`, the Singularity Pulse Index, scoreboard charts, countdowns, predictions, reader-personalized "Jon's Pulse," and the dedupe ledger.
 5. Commits and pushes here.
 6. Pushes a notification to the local ntfy.sh topic kept outside this public repo.
@@ -29,7 +32,9 @@ Every Sunday at 6:00 PM ET, a meta-review audits sources, section shape, benchma
 
 ## Local checks
 
-- `npm run quality` — required before publishing. Checks unresolved placeholders, outbound-topic leakage, dated issue provenance, impact badges, recency badges, and whether `today.html` matches the newest dated issue.
+- `npm run render:issue -- YYYY-MM-DD` — regenerates an issue from `data/issues/YYYY-MM-DD.json`.
+- `npm run render:issue:check` — verifies rendered HTML and provenance are in sync with the issue JSON.
+- `npm run quality` — required before publishing. Checks render sync, unresolved placeholders, outbound-topic leakage, data-first issue sources, dated issue provenance, impact badges, recency badges, and whether `today.html` matches the newest dated issue.
 - `npm run quality:links` — same gate plus external link checks. Use when network time is acceptable.
 - `npm run weekly:curve-report` — regenerates `weekly-curve-report.html` from current repo state.
 
@@ -37,7 +42,8 @@ Every Sunday at 6:00 PM ET, a meta-review audits sources, section shape, benchma
 
 - **Change voice or section list** → edit `.config/style-guide.md` and log reversible BEFORE/AFTER notes in `.config/meta-evolution-log.md`.
 - **Add or drop a source** → edit `.config/sources.yml`; retire only after the 14-day zero-signal rule.
-- **Update the layout** → edit `.config/html-template.html`.
+- **Update the layout** → edit `.config/html-template.html`, then run `npm run render:issue -- YYYY-MM-DD`.
+- **Update issue content** → edit `data/issues/YYYY-MM-DD.json`, not the rendered HTML directly.
 - **Reset the dedupe ledger** → empty the `stories` array in `.config/seen-stories.json`.
 - **Audit a claim** → open `.config/provenance/YYYY-MM-DD.json` and check the source row.
 - **Audit source quality** → inspect `.config/source-performance.json`.

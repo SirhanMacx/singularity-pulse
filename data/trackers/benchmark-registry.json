@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "last_updated": "2026-05-15T00:00:00-04:00",
+  "policy": "Render real benchmark values only when the row has a source URL, source date, and visible caveat. Otherwise render the benchmark as tracked or queued, not scored.",
+  "benchmarks": [
+    {
+      "id": "metr-time-horizon",
+      "label": "METR Time Horizon",
+      "lane": "autonomy_horizon",
+      "status": "live-primary",
+      "source_url": "https://metr.org/time-horizons",
+      "data_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "source_updated": "2026-04-15",
+      "display_rule": "Plot p50 and p80 human-expert minutes on a log scale. Do not project trend lines.",
+      "caveat": "METR excludes central estimates above 16 hours from its doubling-time fit."
+    },
+    {
+      "id": "epoch-ai-models",
+      "label": "Epoch AI model database",
+      "lane": "compute_frontier",
+      "status": "source-linked",
+      "source_url": "https://epoch.ai/data/ai-models",
+      "source_updated": "2026-05-08",
+      "display_rule": "Use for compute, cost, parameter, and release trend charts once the renderer pulls the CSV snapshot."
+    },
+    {
+      "id": "lmarena",
+      "label": "LMArena leaderboard",
+      "lane": "open_frontier_proximity",
+      "status": "source-linked",
+      "source_url": "https://llmarena.ai/leaderboard",
+      "display_rule": "Use current leaderboard state for frontier/open gap; label as rolling-state, not news."
+    },
+    {
+      "id": "arc-agi-2",
+      "label": "ARC-AGI-2",
+      "lane": "capability_sota",
+      "status": "queued-primary-audit",
+      "source_url": "https://arcprize.org/leaderboard",
+      "display_rule": "Render only after exact row, model, score, and date are captured."
+    },
+    {
+      "id": "swe-bench",
+      "label": "SWE-bench",
+      "lane": "capability_sota",
+      "status": "queued-primary-audit",
+      "source_url": "https://www.swebench.com/",
+      "display_rule": "Render verified/pro rows separately; do not merge suites without a formula."
+    },
+    {
+      "id": "frontiermath",
+      "label": "FrontierMath",
+      "lane": "capability_sota",
+      "status": "queued-primary-audit",
+      "source_url": "https://epoch.ai/frontiermath",
+      "display_rule": "Render only when public result rows include model, score, and date."
+    },
+    {
+      "id": "robotics-endurance",
+      "label": "Robotics endurance",
+      "lane": "embodied_deployment",
+      "status": "tracked-nonstandard",
+      "source_url": "https://www.youtube.com/live/luU57hMhkak",
+      "display_rule": "Track hours, intervention counts, recovery behavior, and task diversity only when directly visible or reported."
+    }
+  ]
+}

@@ -106,6 +106,21 @@ Five v8 layers exist because they each create surface area for two agents to col
 
 **The reader (Jon) is here for the emergence as much as for the news.** Both must be served.
 
+## v10 amendment — real newsletter, data-first evidence spine
+
+(Added May 15, 2026, after the reader rejected dashboard-shaped issues that lacked enough real links, story provenance, and benchmark clarity.)
+
+The visible product must read like a real newsletter first. The future-terminal UI is valuable only when it makes sourced evidence easier to understand. Every issue now has a data-first source of truth at `data/issues/YYYY-MM-DD.json`; the rendered HTML is an output artifact, not the editing surface.
+
+Hard rules for v10 onward:
+
+1. **Actual links first.** Every visible story, benchmark, AI 2027 lane, media card, and footnote must cite real source rows.
+2. **Benchmarks are evidence lanes.** METR, Epoch, LMArena, ARC-AGI, SWE-bench, FrontierMath, and robotics endurance are tracked as separate lanes until a primary source row and normalization formula justify any composite.
+3. **No fake precision.** If a benchmark row is unaudited, it renders as queued/source-linked, not as a score.
+4. **AI 2027 is a comparator, not a prophecy.** Track lane-by-lane status against the scenario and later AI Futures updates; never collapse it into one global score.
+5. **Media is context.** X, Reddit, YouTube, and rumor links belong in the issue, but they are discussion texture unless they provide primary evidence.
+6. **Render, then validate.** Agents edit issue JSON, run the renderer, and pass the quality gate before publishing.
+
 ## The compact between vision and implementation
 
 This document is the editorial soul. `.config/orchestrator-prompt.md` is the daily fire's workflow. `.config/orchestrator-afternoon.md` is the afternoon fire's extension. `.config/style-guide.md` is the voice and chart primitives. `.config/sources.yml` is what to pull from. `.config/evolution-log.md` and `.config/meta-evolution-log.md` are the running learning archives. `CODEX-SETUP.md` is the wiring.

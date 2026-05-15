@@ -71,6 +71,11 @@
   .compact-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
   .brief-card.compact h3, .timeline-card h3, .media-card h3, .conversation-card h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
   .brief-card.compact p, .timeline-card p, .media-card p, .conversation-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+  .story-card { position: relative; overflow: hidden; }
+  .story-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.72; }
+  .story-card .why { margin-top: 8px; color: var(--fg); }
+  .source-cites { display: inline-flex; gap: 3px; margin-left: 4px; vertical-align: super; font-size: 10px; line-height: 1; }
+  .source-cites a { min-width: 16px; height: 16px; display: inline-grid; place-items: center; border: 1px solid var(--rule); border-radius: 999px; background: rgba(124,247,255,0.08); color: var(--accent); text-decoration: none; }
   .ai2027-grid { grid-template-columns: 0.9fr 1.1fr 1fr; }
   .timeline-card.primary { border-color: rgba(124,247,255,0.38); background: rgba(124,247,255,0.07); }
   .source-footnotes ol { margin: 10px 0 0; padding-left: 22px; color: var(--muted); font-size: 13px; line-height: 1.55; }
@@ -401,6 +406,16 @@
   .generated-asset figcaption { font-size: 12px; color: var(--muted); font-style: italic; padding: 8px 12px; background: var(--card); }
   .score-method { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 16px; font-size: 13px; color: var(--muted); line-height: 1.5; }
   .score-method strong { color: var(--fg); }
+  .chart-deck-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; margin-bottom: 8px; }
+  .chart-deck-head h3 { margin: 0; font-size: 18px; line-height: 1.2; }
+  .chart-eyebrow, .chart-legend { margin: 0 0 4px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  .chart-legend { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  .chart-legend span { display: inline-flex; align-items: center; gap: 4px; }
+  .chart-legend span::before { content: ""; display: inline-block; width: 16px; height: 3px; border-radius: 999px; background: var(--accent); }
+  .chart-legend .legend-p80::before { background: var(--accent-2); }
+  .tracker-status { display: inline-block; border: 1px solid var(--rule); border-radius: 999px; padding: 2px 7px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); background: rgba(124,247,255,0.08); text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+  .tracker-status.queued-primary-audit, .tracker-status.unresolved, .tracker-status.watch { color: #fbbf24; background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.24); }
+  .tracker-status.live-primary, .tracker-status.ahead-pressure { color: #34d399; background: rgba(52,211,153,0.08); border-color: rgba(52,211,153,0.24); }
   .bench-aggregate { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 12px; margin: 14px 0; }
   .bench-score { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; }
   .bench-score .bs-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
@@ -420,10 +435,12 @@
   .metr-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
   .metr-lab svg { width: 100%; min-height: 240px; height: auto; display: block; }
   .metr-lab .metr-line { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 4px rgba(194,65,12,0.45)); }
+  .metr-lab .metr-line.p80-line { stroke: var(--accent-2); stroke-width: 2.4; opacity: 0.92; }
   .metr-lab .metr-line.est { stroke-dasharray: 5 4; opacity: 0.45; }
   .metr-lab .metr-grid { stroke: var(--rule); stroke-width: 0.8; stroke-dasharray: 2 3; }
   .metr-lab .metr-axis { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--card); stroke-width: 3px; }
   .metr-lab .metr-dot { fill: var(--accent); filter: drop-shadow(0 0 7px rgba(194,65,12,0.75)); }
+  .metr-lab .metr-dot.p80-dot { fill: var(--accent-2); filter: drop-shadow(0 0 7px rgba(192,132,252,0.65)); }
   .metr-caption { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 10px 0 0; }
   .benchmark-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
   .benchmark-table th, .benchmark-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); text-align: left; }

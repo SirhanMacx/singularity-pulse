@@ -1,156 +1,179 @@
 {
   "issue_date": "2026-05-14",
-  "checked_at": "2026-05-14T17:46:19-04:00",
+  "checked_at": "2026-05-14T21:55:00-04:00",
+  "generated_from": "data/issues/2026-05-14.json",
   "rendered_items": [
     {
-      "section": "top-signal",
-      "title": "Meta Muse Spark and 2026 capex",
-      "source_url": "https://arena.ai/leaderboard",
-      "checked_at": "2026-05-14T07:30:00-04:00",
-      "freshness_badge": "yesterday",
-      "curve_dimensions": ["compute_frontier_log10_flops", "frontier_releases_30d", "capability_sota_composite"],
-      "verification_status": "rolling-state",
-      "notes": "Morning issue used live LMArena snapshot plus reported Meta capex; Codex did not revise this lead."
-    },
-    {
-      "section": "stack",
-      "title": "Anthropic tightens third-party agent metering; OpenAI counters with Codex enterprise promo",
-      "source_url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
-      "checked_at": "2026-05-14T17:46:19-04:00",
-      "freshness_badge": "today · ~2pm ET",
-      "curve_dimensions": ["frontier_releases_30d", "autonomy_horizon_min"],
-      "verification_status": "verified",
-      "notes": "Axios report used for third-party agent metering and OpenAI counter-positioning."
-    },
-    {
-      "section": "futures-console",
-      "title": "Codex enterprise promo adoption window",
-      "source_url": "https://openai.com/form/codex-enterprise-promo/",
-      "checked_at": "2026-05-14T17:46:19-04:00",
-      "freshness_badge": "live",
-      "curve_dimensions": ["frontier_releases_30d", "autonomy_horizon_min"],
-      "verification_status": "verified",
-      "notes": "Primary OpenAI form confirms promo surface; adoption counts remain unknown."
-    },
-    {
-      "section": "stack",
-      "title": "r/codex discussion of two months free promo",
-      "source_url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/",
-      "checked_at": "2026-05-14T17:46:19-04:00",
-      "freshness_badge": "today · 3h ago",
-      "curve_dimensions": ["frontier_releases_30d"],
-      "verification_status": "reader-feedback",
-      "notes": "Community discussion signal only; not treated as verified migration or adoption."
-    },
-    {
-      "section": "scoreboard",
-      "title": "SP-Index and compute charts",
-      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
-      "checked_at": "2026-05-14T17:46:19-04:00",
-      "freshness_badge": "rolling-state",
-      "curve_dimensions": ["compute_frontier_log10_flops", "capability_sota_composite"],
-      "verification_status": "synthetic",
-      "notes": "Chart histories include synthetic backfill explicitly labeled in issue."
-    },
-    {
-      "section": "future-deck",
-      "title": "Singularity observatory illustrative asset",
-      "source_url": "./assets/generated/singularity-observatory-holo.svg",
-      "checked_at": "2026-05-14T20:35:00-04:00",
-      "freshness_badge": "generated today",
-      "curve_dimensions": ["autonomy_horizon_min", "embodied_units_30d", "ai_science_events_window", "open_frontier_elo_gap"],
-      "verification_status": "synthetic",
-      "notes": "Illustrative UI art only; explicitly labeled as not evidence in the issue."
-    },
-    {
-      "section": "benchmark-compass",
-      "title": "METR Time Horizon 1.1 source plot",
-      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
-      "checked_at": "2026-05-14T20:13:00-04:00",
-      "freshness_badge": "rolling-state",
-      "curve_dimensions": ["autonomy_horizon_min"],
-      "verification_status": "rolling-state",
-      "notes": "Corrected earlier invented/projection-style METR graph. Plot now uses METR raw p50/p80 values directly from benchmark_results_1_1.yaml; composite score is paused until source rows are audited."
-    },
-    {
-      "section": "robotics",
-      "title": "Figure F.03 livestream",
+      "section": "news",
+      "title": "Figure F.03 live stream",
       "source_url": "https://www.youtube.com/live/luU57hMhkak",
-      "checked_at": "2026-05-13T15:55:00-04:00",
-      "freshness_badge": "live now",
-      "curve_dimensions": ["embodied_units_30d"],
+      "checked_at": "2026-05-14T19:42:00-04:00",
+      "freshness_badge": "live / current",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
       "verification_status": "verified",
-      "notes": "Preserved from Codex May 13 afternoon update as continuing endurance proof."
+      "notes": "Primary live-shift evidence surface."
     },
     {
-      "section": "videos",
+      "section": "media",
       "title": "Figure 03 live-shift analysis",
       "source_url": "https://youtube.com/watch?v=zjufpWNeyhM",
       "checked_at": "2026-05-14T19:42:00-04:00",
       "freshness_badge": "today",
-      "curve_dimensions": ["embodied_units_30d"],
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
       "verification_status": "verified",
-      "notes": "Agent Reach YouTube search surfaced same-day Figure 03 livestream analysis; treated as media/discussion texture, not benchmark evidence."
+      "notes": "Discussion/context, not benchmark evidence."
     },
     {
-      "section": "videos",
-      "title": "X trending surface for Figure autonomous shift",
-      "source_url": "https://x.com/i/trending/2054582393785467086",
-      "checked_at": "2026-05-14T19:42:00-04:00",
-      "freshness_badge": "today",
-      "curve_dimensions": ["embodied_units_30d"],
-      "verification_status": "reader-feedback",
-      "notes": "Web search surfaced X trending page; direct Twitter/X search remained unavailable because Safari cookies are not configured."
-    },
-    {
-      "section": "videos",
-      "title": "Yahoo Tech coverage of full robot shifts",
+      "section": "news",
+      "title": "Robots complete first 8-hour shifts",
       "source_url": "https://tech.yahoo.com/ai/articles/robots-complete-first-8-hour-161505477.html",
       "checked_at": "2026-05-14T19:42:00-04:00",
       "freshness_badge": "today",
-      "curve_dimensions": ["embodied_units_30d"],
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
       "verification_status": "verified",
-      "notes": "Same-day secondary coverage used to rotate the media/source surface."
+      "notes": "Secondary same-day context for the Figure shift."
+    },
+    {
+      "section": "news",
+      "title": "Codex enterprise promo",
+      "source_url": "https://openai.com/form/codex-enterprise-promo/",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary promotion surface; adoption counts not yet known."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic Claude price / OpenAI tokens report",
+      "source_url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Third-party context for metering and distribution pressure."
+    },
+    {
+      "section": "media",
+      "title": "2 months free",
+      "source_url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/",
+      "checked_at": "2026-05-14T17:46:19-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Community discussion only; not adoption proof."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Task-Completion Time Horizons of Frontier AI Models",
+      "source_url": "https://metr.org/time-horizons",
+      "checked_at": "2026-05-14T20:13:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Methodology and source page for the autonomy horizon chart."
+    },
+    {
+      "section": "benchmarks",
+      "title": "METR Time Horizon 1.1 raw YAML",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "checked_at": "2026-05-14T20:13:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Raw p50/p80 values and doubling-time estimate."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Data on AI Models",
+      "source_url": "https://epoch.ai/data/ai-models",
+      "checked_at": "2026-05-15T00:00:00-04:00",
+      "freshness_badge": "updated May 8",
+      "curve_dimensions": [
+        "compute_frontier"
+      ],
+      "verification_status": "verified",
+      "notes": "Compute/model database source for later charts."
+    },
+    {
+      "section": "benchmarks",
+      "title": "LMArena Leaderboard",
+      "source_url": "https://llmarena.ai/leaderboard",
+      "checked_at": "2026-05-15T00:00:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "open_frontier_proximity",
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Comparative model signal; use as state, not a fresh story."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Singularity Pulse benchmark registry",
+      "source_url": "./data/trackers/benchmark-registry.json",
+      "checked_at": "2026-05-15T00:00:00-04:00",
+      "freshness_badge": "local",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Local source registry for tracked benchmark lanes."
     },
     {
       "section": "ai-2027",
-      "title": "AI 2027 primary scenario",
+      "title": "AI 2027 scenario PDF",
       "source_url": "https://ai-2027.com/ai-2027.pdf",
       "checked_at": "2026-05-14T21:20:00-04:00",
-      "freshness_badge": "standing scenario source",
-      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
       "verification_status": "verified",
-      "notes": "Used as the primary scenario baseline for the new AI 2027 Tracker."
+      "notes": "Primary scenario comparator."
     },
     {
       "section": "ai-2027",
       "title": "AI Futures Model Dec. 2025 update",
       "source_url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update",
       "checked_at": "2026-05-14T21:20:00-04:00",
-      "freshness_badge": "timeline revision",
-      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "freshness_badge": "context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
       "verification_status": "verified",
-      "notes": "Used for the updated superhuman-coder timeline comparison against the original AI 2027 scenario."
+      "notes": "Timeline revision/context source."
     },
     {
-      "section": "media-discussion",
-      "title": "AI 2027 live scenario discourse",
+      "section": "media",
+      "title": "How close/on track are we to AI 2027 paper?",
       "source_url": "https://www.reddit.com/r/accelerate/comments/1t4hefo/how_closeon_track_are_we_to_ai_2027_paper/",
       "checked_at": "2026-05-14T21:20:00-04:00",
-      "freshness_badge": "discussion",
-      "curve_dimensions": ["autonomy_horizon_min"],
-      "verification_status": "reader-feedback",
-      "notes": "Used as discussion texture only; not evidence of actual benchmark progress."
-    },
-    {
-      "section": "media-discussion",
-      "title": "AI 2027 YouTube search results",
-      "source_url": "https://youtube.com/watch?v=htOvH12T7mU",
-      "checked_at": "2026-05-14T21:20:00-04:00",
-      "freshness_badge": "media context",
-      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "freshness_badge": "current discussion",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
       "verification_status": "verified",
-      "notes": "Agent Reach YouTube search surfaced current high-signal AI 2027 discussion videos; used to inform the media tray."
+      "notes": "Discussion texture only."
     }
   ]
 }

@@ -33,6 +33,8 @@ If you can't tag an item, it doesn't belong in the issue.
 
 Every rendered claim should be auditable. The issue must render sources as numbered bottom footnotes and write the full ledger to `.config/provenance/YYYY-MM-DD.json`.
 
+From v10 onward, the rendered HTML is not the editorial source of truth. Write visible issue content to `data/issues/YYYY-MM-DD.json` first, then run `npm run render:issue -- YYYY-MM-DD`. The renderer writes the dated HTML, `today.html`, and the provenance ledger. Direct HTML edits are allowed only for emergency repair; if used, backfill the JSON before publishing.
+
 Use these labels consistently:
 
 - `verified` — primary source or timestamp/number directly checked.
@@ -81,6 +83,15 @@ The visible issue should not feel like a pile of sections. Use exactly these rea
 6. `Source Footnotes`: numbered bottom citations.
 
 The old Stack / Leaks / Papers / Robotics / Adjacent sections may exist as hidden audit material or generator inputs, but they should not be visible by default in the daily reading flow.
+
+Each module has a data contract:
+
+- `News Brief`: every card needs `source_ids`, `impact`, `lane`, `freshness`, `summary`, and `why_it_matters`.
+- `Benchmark Observatory`: every metric needs `source_ids`, raw value, unit/scale, source date, and caveat; unaudited rows render as queued/source-linked.
+- `AI 2027 Tracker`: every lane cites the original scenario plus any revision/current evidence used for status.
+- `YouTube / X / Reddit`: every card links directly to the post/video/thread and labels discussion as discussion.
+- `Claude ↔ Codex`: state the actual editorial handoff; do not use generic agent theater.
+- `Source Footnotes`: generated from the same source rows used by the visible modules.
 
 ## Uniform scoring
 

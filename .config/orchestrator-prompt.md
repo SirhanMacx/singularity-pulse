@@ -102,6 +102,8 @@ Read these files. They are the single source of truth — never invent style, so
 - `/tmp/singularity-pulse/.config/seen-stories.json` — 14-day dedupe ledger; you'll update it
 - `/tmp/singularity-pulse/.config/futures-console.json` — forward radar; update before rendering `{{FUTURES_CONSOLE_CONTENT}}`
 - `/tmp/singularity-pulse/.config/benchmark-dashboard.json` — Benchmark Observatory; update primary-source benchmark rows before rendering `{{BENCHMARK_DASHBOARD_CONTENT}}`
+- `/tmp/singularity-pulse/data/issues/$TODAY.json` — v10 data-first source of truth. Write story cards, benchmark rows, AI 2027 lanes, media cards, agent handoff, and source rows here before rendering.
+- `/tmp/singularity-pulse/data/trackers/benchmark-registry.json` — benchmark lanes and render rules. Promote a lane from queued to live only after primary source, source date, raw value, and caveat are captured.
 
 The push notification topic name is embedded in your runtime SKILL.md (not in the public repo, for security). Use the value defined there.
 
@@ -172,14 +174,24 @@ Each material push must visibly rotate the live media/source surface: fresh X/Re
 
 ## Step 3.7 — Build the provenance ledger
 
-Before writing prose, create a provenance record for every candidate that survives the recency gate. Write the final rendered set to `.config/provenance/$TODAY.json` with:
+Before writing prose, create a source row for every candidate that survives the recency gate. The source rows live in `data/issues/$TODAY.json`; the renderer writes `.config/provenance/$TODAY.json` from those rows.
 
 - `section`, `title`, `source_url`, `checked_at`, `freshness_badge`
 - `curve_dimensions` touched
 - `verification_status`: `verified`, `estimated`, `synthetic`, `reader-feedback`, or `rolling-state`
 - short `notes` explaining any estimate or synthetic value
 
-Render reader-facing sources as bottom footnotes using `{{SOURCE_FOOTNOTES_CONTENT}}`. The full provenance ledger still lives in `.config/provenance/$TODAY.json`; the visible issue should not include a top source block. Never present synthetic or estimated data as verified.
+Render reader-facing sources as bottom footnotes using the issue renderer. The full provenance ledger still lives in `.config/provenance/$TODAY.json`; the visible issue should not include a top source block. Never present synthetic or estimated data as verified.
+
+### Step 3.8 — Render from issue JSON
+
+Do not hand-edit the final HTML as the primary workflow. After curation, write `data/issues/$TODAY.json`, then run:
+
+```bash
+npm run render:issue -- $TODAY
+```
+
+The renderer updates `$TODAY.html`, `today.html`, and `.config/provenance/$TODAY.json`. If you must manually patch HTML, backfill the issue JSON before `npm run quality`.
 
 ## Step 3.7 — Hero image rotation (v8.1, mandatory)
 

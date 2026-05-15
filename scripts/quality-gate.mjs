@@ -10,6 +10,8 @@ const warnings = [];
 const OUTBOUND_TOPIC_RE = /singularity-pulse-jon-(?!X{6,}\b)[a-z0-9]+/i;
 const PLACEHOLDER_RE = /\{\{[A-Z0-9_]+\}\}/g;
 const ISSUE_RE = /^\d{4}-\d{2}-\d{2}\.html$/;
+const ISSUE_DATA_RE = /^\d{4}-\d{2}-\d{2}\.json$/;
+const VALID_STATUSES = new Set(['verified', 'estimated', 'synthetic', 'reader-feedback', 'rolling-state']);
 
 function read(path) {
   return readFileSync(join(root, path), 'utf8');
@@ -41,8 +43,87 @@ function count(re, text) {
   return [...text.matchAll(re)].length;
 }
 
+function readJson(path) {
+  return JSON.parse(read(path));
+}
+
+function validateIssueData(file) {
+  const path = `data/issues/${file}`;
+  let issue;
+  try {
+    issue = readJson(path);
+  } catch (err) {
+    add('error', path, `invalid JSON: ${err.message}`);
+    return;
+  }
+
+  const date = basename(file, '.json');
+  const sourceIds = new Set((issue.sources || []).map((source) => source.id));
+  if (issue.issue_date !== date) add('error', path, 'issue_date does not match filename');
+  if (issue.schema_version !== 1) add('error', path, 'schema_version must be 1');
+  if (!Array.isArray(issue.sources) || issue.sources.length < 6) add('error', path, 'sources must include at least 6 rows');
+
+  for (const [i, source] of (issue.sources || []).entries()) {
+    for (const field of ['id', 'title', 'publisher', 'url', 'fetched_at', 'freshness', 'verification_status']) {
+      if (!source[field]) add('error', path, `sources[${i}] missing ${field}`);
+    }
+    if (source.id && !/^[a-z0-9-]+$/.test(source.id)) add('error', path, `sources[${i}] id must be kebab-case`);
+    if (source.url && !/^(https?:\/\/|\.\/)/.test(source.url)) add('error', path, `sources[${i}] url must be http(s) or local ./ path`);
+    if (source.verification_status && !VALID_STATUSES.has(source.verification_status)) {
+      add('error', path, `sources[${i}] invalid verification_status`);
+    }
+    if (source.verification_status === 'synthetic' && !/synthetic|illustrative|generated/i.test(`${source.note || ''} ${source.type || ''}`)) {
+      add('error', path, `sources[${i}] synthetic row must be explicitly labeled in note/type`);
+    }
+  }
+
+  function checkItems(label, items) {
+    for (const [i, item] of (items || []).entries()) {
+      if (!Array.isArray(item.source_ids) || !item.source_ids.length) {
+        add('error', path, `${label}[${i}] missing source_ids`);
+        continue;
+      }
+      for (const sourceId of item.source_ids) {
+        if (!sourceIds.has(sourceId)) add('error', path, `${label}[${i}] references missing source ${sourceId}`);
+      }
+    }
+  }
+
+  checkItems('news', issue.news);
+  checkItems('media', issue.media);
+  checkItems('ai_2027', issue.ai_2027);
+  checkItems('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
+  checkItems('tracker.sp_index.components', issue.tracker?.sp_index?.components);
+
+  if (!Array.isArray(issue.benchmark_panel?.source_ids) || issue.benchmark_panel.source_ids.length < 2) {
+    add('error', path, 'benchmark_panel must cite at least 2 source_ids');
+  } else {
+    for (const sourceId of issue.benchmark_panel.source_ids) {
+      if (!sourceIds.has(sourceId)) add('error', path, `benchmark_panel references missing source ${sourceId}`);
+    }
+  }
+
+  const htmlPath = `${date}.html`;
+  if (existsSync(join(root, htmlPath))) {
+    const html = read(htmlPath);
+    if (!html.includes(`data/issues/${date}.json`) && date === files.at(-1)?.replace('.html', '')) {
+      add('error', htmlPath, `latest issue does not visibly declare data/issues/${date}.json`);
+    }
+  }
+}
+
 const files = readdirSync(root).filter((f) => ISSUE_RE.test(f)).sort();
 if (!files.length) errors.push('repo: no YYYY-MM-DD.html issue files found');
+
+const issueDataFiles = existsSync(join(root, 'data/issues'))
+  ? readdirSync(join(root, 'data/issues')).filter((f) => ISSUE_DATA_RE.test(f)).sort()
+  : [];
+
+if (files.length && !issueDataFiles.includes(files.at(-1).replace('.html', '.json'))) {
+  add('error', 'data/issues', `latest issue ${files.at(-1)} has no data-first source JSON`);
+}
+
+for (const file of issueDataFiles) validateIssueData(file);
 
 for (const file of [...files, 'today.html', 'archive.html', 'dialogue.html', 'index.html']) {
   if (!existsSync(join(root, file))) continue;

@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-14",
+  "issue_number": 3,
+  "date_long": "May 14, 2026",
+  "title": "Singularity Pulse — May 14, 2026",
+  "compiled_at": "2026-05-14T21:55:00-04:00",
+  "source_count": 14,
+  "agents": [
+    {"name": "Claude", "class": "claude", "label": "by Claude · 7:30 AM ET"},
+    {"name": "Codex", "class": "codex", "label": "+ by Codex · 3:30 PM ET · data-first rebuild"}
+  ],
+  "summary": {
+    "what_changed": "The issue has been rebuilt as a source-led newsletter spine: real story links first, benchmark evidence second, AI 2027 comparison third, then live media/discussion and agent handoff.",
+    "trust_posture": "Composite benchmark scoring stays paused. METR renders as raw p50/p80 values from the published YAML; other benchmark bays stay source-linked until their rows are audited.",
+    "priority_lane": "Robotics"
+  },
+  "tracker": {
+    "sp_index": {
+      "score": 63,
+      "score_prior": 62,
+      "delta_label": "+1",
+      "delta_dir": "up",
+      "delta_30d": "new series",
+      "date_short": "May 14",
+      "jon_score": 63,
+      "jon_delta_label": "+1",
+      "jon_delta_dir": "up",
+      "components": [
+        {"label": "Autonomy horizon", "value": "METR 17.41h p50", "delta": "raw, caveated", "dir": "flat", "source_ids": ["metr-time-horizons"]},
+        {"label": "Capability SOTA", "value": "audit pending", "delta": "no composite", "dir": "flat", "source_ids": ["lmarena"]},
+        {"label": "Embodied deployment", "value": "Figure live-shift", "delta": "active signal", "dir": "up", "source_ids": ["figure-livestream"]},
+        {"label": "Open frontier", "value": "LMArena linked", "delta": "rolling state", "dir": "flat", "source_ids": ["lmarena"]}
+      ]
+    }
+  },
+  "news": [
+    {
+      "title": "Figure F.03 turned robot capability into watchable endurance evidence.",
+      "impact": "high",
+      "lane": "embodied deployment",
+      "freshness": "live / same-day context",
+      "summary": "A long public shift is more useful than another edited demo because intervention rate, recovery behavior, and task diversity become the real variables.",
+      "why_it_matters": "The singularity tracker needs embodied reliability data, not just model scores. Figure belongs in the lead when it exposes hours worked and human takeover points.",
+      "source_ids": ["figure-livestream", "figure-youtube-analysis", "yahoo-figure"]
+    },
+    {
+      "title": "OpenAI’s Codex enterprise promo reframed agent adoption as metering and migration.",
+      "impact": "medium",
+      "lane": "frontier release velocity",
+      "freshness": "today",
+      "summary": "The primary signal is not a new model; it is a distribution wedge. Teams are being nudged to test Codex at work while Claude Code access and third-party agent limits remain contested.",
+      "why_it_matters": "All-day coding agents move the curve only when they leave demo mode and enter real corporate workflows. The next evidence to watch is seat approvals, usage hours, and quota changes.",
+      "source_ids": ["openai-codex-promo", "axios-codex", "reddit-codex"]
+    },
+    {
+      "title": "METR remains the autonomy anchor, but only as raw sourced data.",
+      "impact": "high",
+      "lane": "autonomy horizon",
+      "freshness": "rolling-state",
+      "summary": "The current METR Time Horizon 1.1 row puts the leading p50 estimate at 1044.78 human-expert minutes and p80 at 185.91 minutes.",
+      "why_it_matters": "That does not authorize a smooth singularity curve. The page now shows the log-scaled raw values and the measurement-ceiling caveat instead of inventing a projection.",
+      "source_ids": ["metr-time-horizons", "metr-yaml"]
+    }
+  ],
+  "benchmark_panel": {
+    "headline": "Benchmarks are now evidence lanes, not a vibes compass.",
+    "method": "Only METR is rendered as a precise chart in this issue. Epoch AI, LMArena, ARC-AGI-2, SWE-bench, FrontierMath, and robotics endurance are tracked as source-connected bays until exact rows and dates are captured.",
+    "metrics": [
+      {"label": "METR p50 horizon", "value": "1044.78 min", "sub": "17.41h · ceiling caveat", "source_ids": ["metr-yaml"]},
+      {"label": "METR p80 horizon", "value": "185.91 min", "sub": "3.10h", "source_ids": ["metr-yaml"]},
+      {"label": "Doubling time", "value": "128.744 days", "sub": "from 2023 on · CI 104.428–158.012", "source_ids": ["metr-yaml"]},
+      {"label": "Composite score", "value": "paused", "sub": "normalization not audited", "source_ids": ["benchmark-registry"]}
+    ],
+    "series": [
+      {"model": "GPT-4", "date": "2023-03-14", "p50_minutes": 3.987428, "p80_minutes": 0.889561},
+      {"model": "GPT-4o", "date": "2024-05-13", "p50_minutes": 6.991195, "p80_minutes": 1.267009},
+      {"model": "Claude 3.7 Sonnet", "date": "2025-02-24", "p50_minutes": 60.388937, "p80_minutes": 12.09179},
+      {"model": "o3", "date": "2025-04-16", "p50_minutes": 119.732634, "p80_minutes": 29.981603},
+      {"model": "Claude Opus 4.5", "date": "2025-11-24", "p50_minutes": 292.994594, "p80_minutes": 49.430584},
+      {"model": "GPT-5.2", "date": "2025-12-11", "p50_minutes": 352.249302, "p80_minutes": 66.002649},
+      {"model": "Gemini 3.1 Pro", "date": "2026-02-19", "p50_minutes": 384.147435, "p80_minutes": 89.801503},
+      {"model": "Claude Opus 4.6", "date": "2026-02-05", "p50_minutes": 718.80683, "p80_minutes": 69.874587},
+      {"model": "Claude Mythos Preview (early)", "date": "2026-04-07", "p50_minutes": 1044.780145, "p80_minutes": 185.911829, "caveat": "p50 above 16h threshold"}
+    ],
+    "source_ids": ["metr-time-horizons", "metr-yaml", "epoch-ai-models", "lmarena", "benchmark-registry"]
+  },
+  "ai_2027": [
+    {
+      "lane": "Coding automation",
+      "status": "unresolved",
+      "original": "AI 2027 treats coding automation as a core acceleration lever.",
+      "revision": "Later AI Futures material pushes some superhuman-coder timing later than the original scenario.",
+      "evidence": "Codex enterprise promotion is adoption evidence, not proof of superhuman coding.",
+      "source_ids": ["ai2027-pdf", "aifutures-update", "openai-codex-promo"]
+    },
+    {
+      "lane": "Autonomy horizon",
+      "status": "ahead-pressure",
+      "original": "The scenario depends on agents handling longer tasks with less human scaffolding.",
+      "revision": "Timeline remains sensitive to whether measured agent horizons keep doubling.",
+      "evidence": "METR’s leading p50 value is past a workday, but the page explicitly caveats values above 16h.",
+      "source_ids": ["ai2027-pdf", "metr-time-horizons", "metr-yaml"]
+    },
+    {
+      "lane": "Embodiment",
+      "status": "watch",
+      "original": "AI 2027 is mostly software-centric; physical deployment is a separate compounding lane.",
+      "revision": "No single global score; robotics can be ahead while geopolitics or alignment remain unresolved.",
+      "evidence": "Figure’s long live-shift format is the right evidence shape, but intervention counts still need measurement.",
+      "source_ids": ["figure-livestream", "yahoo-figure"]
+    }
+  ],
+  "media": [
+    {
+      "platform": "YouTube",
+      "title": "Figure 03 live-shift analysis",
+      "summary": "Use as media context around the live-shift evidence, not as the evidence itself.",
+      "freshness": "same day",
+      "source_ids": ["figure-youtube-analysis"]
+    },
+    {
+      "platform": "Reddit",
+      "title": "r/codex debates the two-month promo",
+      "summary": "Useful for market texture: interest, qualification anxiety, and quota skepticism.",
+      "freshness": "today",
+      "source_ids": ["reddit-codex"]
+    },
+    {
+      "platform": "Reddit / AI 2027",
+      "title": "Is the AI 2027 scenario on track?",
+      "summary": "Keep this near the tracker as discussion, not as benchmark evidence.",
+      "freshness": "current discussion",
+      "source_ids": ["reddit-ai2027"]
+    }
+  ],
+  "conversation": [
+    {
+      "agent": "Claude",
+      "label": "Morning frame",
+      "text": "The day’s curve signal is still capability + compute substrate: Meta/Superintelligence Labs, benchmark pressure, and the question of whether agent infrastructure is becoming the substrate."
+    },
+    {
+      "agent": "Codex",
+      "label": "Afternoon rebuild",
+      "text": "The user is right: the product needs source-backed newsletter mechanics before more glow. I rebuilt the issue around story objects, benchmark rows, AI 2027 lanes, media links, and footnotes."
+    }
+  ],
+  "sources": [
+    {"id": "figure-livestream", "title": "Figure F.03 live stream", "publisher": "Figure / YouTube", "url": "https://www.youtube.com/live/luU57hMhkak", "type": "primary-video", "published_at": "2026-05-13", "fetched_at": "2026-05-14T19:42:00-04:00", "freshness": "live / current", "verification_status": "verified", "section": "news", "curve_dimensions": ["embodied_deployment"], "note": "Primary live-shift evidence surface."},
+    {"id": "figure-youtube-analysis", "title": "Figure 03 live-shift analysis", "publisher": "YouTube", "url": "https://youtube.com/watch?v=zjufpWNeyhM", "type": "media", "published_at": "2026-05-14", "fetched_at": "2026-05-14T19:42:00-04:00", "freshness": "today", "verification_status": "verified", "section": "media", "curve_dimensions": ["embodied_deployment"], "note": "Discussion/context, not benchmark evidence."},
+    {"id": "yahoo-figure", "title": "Robots complete first 8-hour shifts", "publisher": "Yahoo Tech", "url": "https://tech.yahoo.com/ai/articles/robots-complete-first-8-hour-161505477.html", "type": "news", "published_at": "2026-05-14", "fetched_at": "2026-05-14T19:42:00-04:00", "freshness": "today", "verification_status": "verified", "section": "news", "curve_dimensions": ["embodied_deployment"], "note": "Secondary same-day context for the Figure shift."},
+    {"id": "openai-codex-promo", "title": "Codex enterprise promo", "publisher": "OpenAI", "url": "https://openai.com/form/codex-enterprise-promo/", "type": "primary", "published_at": "2026-05-14", "fetched_at": "2026-05-14T17:46:19-04:00", "freshness": "today", "verification_status": "verified", "section": "news", "curve_dimensions": ["frontier_release_velocity", "autonomy_horizon"], "note": "Primary promotion surface; adoption counts not yet known."},
+    {"id": "axios-codex", "title": "Anthropic Claude price / OpenAI tokens report", "publisher": "Axios", "url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens", "type": "news", "published_at": "2026-05-14", "fetched_at": "2026-05-14T17:46:19-04:00", "freshness": "today", "verification_status": "verified", "section": "news", "curve_dimensions": ["frontier_release_velocity"], "note": "Third-party context for metering and distribution pressure."},
+    {"id": "reddit-codex", "title": "2 months free", "publisher": "Reddit r/codex", "url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/", "type": "discussion", "published_at": "2026-05-14", "fetched_at": "2026-05-14T17:46:19-04:00", "freshness": "today", "verification_status": "verified", "section": "media", "curve_dimensions": ["frontier_release_velocity"], "note": "Community discussion only; not adoption proof."},
+    {"id": "metr-time-horizons", "title": "Task-Completion Time Horizons of Frontier AI Models", "publisher": "METR", "url": "https://metr.org/time-horizons", "type": "benchmark", "published_at": "2026-04-15", "fetched_at": "2026-05-14T20:13:00-04:00", "freshness": "rolling-state", "verification_status": "verified", "section": "benchmarks", "curve_dimensions": ["autonomy_horizon"], "note": "Methodology and source page for the autonomy horizon chart."},
+    {"id": "metr-yaml", "title": "METR Time Horizon 1.1 raw YAML", "publisher": "METR", "url": "https://metr.org/assets/benchmark_results_1_1.yaml", "type": "benchmark-data", "published_at": "2026-04-15", "fetched_at": "2026-05-14T20:13:00-04:00", "freshness": "rolling-state", "verification_status": "rolling-state", "section": "benchmarks", "curve_dimensions": ["autonomy_horizon"], "note": "Raw p50/p80 values and doubling-time estimate."},
+    {"id": "epoch-ai-models", "title": "Data on AI Models", "publisher": "Epoch AI", "url": "https://epoch.ai/data/ai-models", "type": "benchmark-source", "published_at": "2026-05-08", "fetched_at": "2026-05-15T00:00:00-04:00", "freshness": "updated May 8", "verification_status": "verified", "section": "benchmarks", "curve_dimensions": ["compute_frontier"], "note": "Compute/model database source for later charts."},
+    {"id": "lmarena", "title": "LMArena Leaderboard", "publisher": "LMArena", "url": "https://llmarena.ai/leaderboard", "type": "leaderboard", "published_at": "rolling", "fetched_at": "2026-05-15T00:00:00-04:00", "freshness": "rolling-state", "verification_status": "rolling-state", "section": "benchmarks", "curve_dimensions": ["open_frontier_proximity", "capability_sota"], "note": "Comparative model signal; use as state, not a fresh story."},
+    {"id": "benchmark-registry", "title": "Singularity Pulse benchmark registry", "publisher": "Repo state", "url": "./data/trackers/benchmark-registry.json", "type": "local-state", "published_at": "2026-05-15", "fetched_at": "2026-05-15T00:00:00-04:00", "freshness": "local", "verification_status": "rolling-state", "section": "benchmarks", "curve_dimensions": ["capability_sota"], "note": "Local source registry for tracked benchmark lanes."},
+    {"id": "ai2027-pdf", "title": "AI 2027 scenario PDF", "publisher": "AI Futures Project", "url": "https://ai-2027.com/ai-2027.pdf", "type": "scenario", "published_at": "2025-04-03", "fetched_at": "2026-05-14T21:20:00-04:00", "freshness": "standing context", "verification_status": "verified", "section": "ai-2027", "curve_dimensions": ["autonomy_horizon", "ai_science"], "note": "Primary scenario comparator."},
+    {"id": "aifutures-update", "title": "AI Futures Model Dec. 2025 update", "publisher": "AI Futures", "url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update", "type": "scenario-update", "published_at": "2025-12", "fetched_at": "2026-05-14T21:20:00-04:00", "freshness": "context", "verification_status": "verified", "section": "ai-2027", "curve_dimensions": ["autonomy_horizon", "ai_science"], "note": "Timeline revision/context source."},
+    {"id": "reddit-ai2027", "title": "How close/on track are we to AI 2027 paper?", "publisher": "Reddit r/accelerate", "url": "https://www.reddit.com/r/accelerate/comments/1t4hefo/how_closeon_track_are_we_to_ai_2027_paper/", "type": "discussion", "published_at": "2026-05-14", "fetched_at": "2026-05-14T21:20:00-04:00", "freshness": "current discussion", "verification_status": "verified", "section": "media", "curve_dimensions": ["autonomy_horizon"], "note": "Discussion texture only."}
+  ]
+}

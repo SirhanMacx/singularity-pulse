@@ -60,6 +60,8 @@ Apply the same recency gate (`Step 3.5` in the orchestrator prompt). Build `fres
 
 Also update the provenance ledger for every item you add or revise. If you challenge Claude's framing, preserve Claude's source row and add a Codex row or note explaining the new evidence. Reader-facing sources render as bottom footnotes; `.config/provenance/$TODAY.json` remains the full audit ledger.
 
+From v10 onward, make those changes in `data/issues/$TODAY.json` first. The issue JSON is the source of truth for News, Benchmark Observatory, AI 2027 Tracker, YouTube/X/Reddit, Claude/Codex, and Source Footnotes.
+
 ### Step C — Pick your editorial play
 
 Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don't force all five.
@@ -98,7 +100,13 @@ Mirror Steps 4.0a / 4.0b / 4.0c from `orchestrator-prompt.md` for the afternoon 
 
 ### Step E — Render and sign
 
-Update `$TODAY.html` and `today.html`. Append a second agent byline to the masthead:
+Update `data/issues/$TODAY.json`, then render `$TODAY.html` and `today.html`:
+
+```bash
+npm run render:issue -- $TODAY
+```
+
+Append a second agent byline in the issue JSON so the masthead renders:
 
 ```html
 <div>
@@ -142,7 +150,7 @@ Run the quality gate before committing:
 npm run quality
 ```
 
-Do not publish if the gate reports unresolved placeholders, secret leakage, missing provenance for a non-dry-run issue, or stale unbadged narrative items.
+Do not publish if the gate reports render drift, unresolved placeholders, secret leakage, missing data-first source JSON, missing provenance for a non-dry-run issue, or stale unbadged narrative items.
 
 ```bash
 cd /tmp/singularity-pulse

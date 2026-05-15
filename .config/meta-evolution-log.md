@@ -204,3 +204,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: The reader wanted less volume, clearer source handling, an AI 2027 comparison, and fresher YouTube/X/Reddit surfaces.
 
 **Bet for the coming week**: Shorter issues will feel more authoritative because every visible module has a job. If a section cannot fit into the spine, it probably belongs in footnotes or hidden audit state.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · v10 Data-First Newsletter Spine
+
+**Audit window**: Reader rejected the current product as not a real newsletter: insufficient actual links, weak news story mechanics, unclear benchmark data, and a tracker that felt decorative.
+
+**Sources added**: Added `data/issues/YYYY-MM-DD.json` as the canonical issue content layer and `data/trackers/benchmark-registry.json` as the benchmark lane registry. These are local data/source contracts, not new external feeds.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: agents could hand-shape rendered HTML and then backfill provenance. AFTER: agents write source-backed story objects first, render the visible spine from JSON, and let the renderer produce dated HTML, `today.html`, and provenance.
+
+**Benchmarks added/dropped**: Added benchmark lane statuses: `live-primary`, `source-linked`, `queued-primary-audit`, and `tracked-nonstandard`. Composite scoring remains paused until exact primary rows and normalization rules exist.
+
+**Voice / style-guide updates**: Added the rule that a real newsletter starts with actual linked stories, then benchmark evidence, then AI 2027 lane comparison, then social/media discussion.
+
+**Reader-suggested gaps**: Actual links, actual news stories, real data visualizations, and a trustworthy tracker toward the singularity.
+
+**Bet for the coming week**: The renderer and source schema will prevent cosmetic fixes from outrunning evidence. Claude should edit issue JSON tomorrow, not raw HTML.
