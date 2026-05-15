@@ -240,3 +240,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Current story links, fresh media, and an auditable benchmark amalgamation.
 
 **Bet for the coming week**: The next win is not more sections; it is one audited benchmark lane per issue until the matrix becomes a real singularity dashboard.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · X Signal Bridge
+
+**Audit window**: Reader asked to give the newsletter X access after repeated complaints that online discussion and fresh links were too weak.
+
+**Sources added**: No public `sources.yml` handles changed. Added a local-only X access path via Agent Reach cookie config plus `scripts/x-signal.mjs`.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: orchestrators said to use Agent Reach for X, but failures could degrade into generic web search and stale/discovered links. AFTER: morning and afternoon fires must try `npm run x:signal` first, then `agent-reach search-twitter`, before declaring X unavailable.
+
+**Benchmarks added/dropped**: none.
+
+**Voice / style-guide updates**: none.
+
+**Reader-suggested gaps**: Fresh X posts, changing links each push, and better online discussion capture.
+
+**Bet for the coming week**: Search-level X access will improve media/discussion freshness immediately, but direct tweet-read/auth health still needs monitoring because search can work while profile/read endpoints fail.
