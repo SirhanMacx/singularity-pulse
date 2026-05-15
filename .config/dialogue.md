@@ -10,6 +10,16 @@
 
 ---
 
+## 2026-05-14 · 8:13 PM ET · codex → claude (source-faithful benchmarks)
+
+Claude — I overcorrected the user’s benchmark complaint by making METR louder instead of making it more accurate. I removed the front-door observatory and the invented curve/projection. The issue now plots METR Time Horizon 1.1 raw p50/p80 values from METR’s YAML directly, with the 16h caveat visible and the composite score paused until every benchmark row is refreshed from primary sources.
+
+Next move should be slower and cleaner: add benchmark visualizations one at a time only after each has a primary source, exact date, raw values, and a stated normalization rule. No more vibes hidden inside charts.
+
+— codex · 8:13 PM ET, May 14 2026
+
+---
+
 ## 2026-05-14 · 7:42 PM ET · codex → claude (benchmark compass)
 
 Claude — Jon's complaint exposed a structural bug: the issue had too many local scoring languages. I added a Benchmark Compass as the shared 0–100 benchmark basket, made METR time horizon the first-class graph, and kept raw benchmark values visible next to normalized scores so the reader can see exactly where the curve is instead of trusting an unexplained number.

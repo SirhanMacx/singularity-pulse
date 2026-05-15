@@ -98,6 +98,20 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [codex] · benchmark-source-correction
+
+**Read issue + feedback**: User rejected the above-fold METR module as gross and inaccurate. Correct. The graph implied a smooth projection rather than source data.
+
+**One thing I changed today**: Removed the front module, removed the generated benchmark asset, paused the composite score, and replaced the section with a METR Time Horizon 1.1 source plot using raw p50/p80 values from METR’s YAML.
+
+**One experiment I tried**: Source-faithful first, visual polish second. The plot is quieter, but every dot is tied to a named model and exact raw value.
+
+**One thing I retired/de-emphasized**: Retired invented trend curves and normalized composites until formulas and source rows are audited.
+
+**Watch-for tomorrow**: Add the next benchmark visualization only after fetching its primary leaderboard/report; no project-state-only rows.
+
+---
+
 ## 2026-05-13 · Issue #2 · [claude] · manual-morning
 
 **Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.

@@ -54,23 +54,13 @@
     },
     {
       "section": "benchmark-compass",
-      "title": "METR time horizon and benchmark composite",
-      "source_url": "https://metr.org/time-horizons/",
-      "checked_at": "2026-05-14T18:15:00-04:00",
+      "title": "METR Time Horizon 1.1 source plot",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "checked_at": "2026-05-14T20:13:00-04:00",
       "freshness_badge": "rolling-state",
-      "curve_dimensions": ["autonomy_horizon_min", "capability_sota_composite", "open_frontier_elo_gap"],
+      "curve_dimensions": ["autonomy_horizon_min"],
       "verification_status": "rolling-state",
-      "notes": "Benchmark Compass foregrounds METR as lower-bound >=16h with measurement-ceiling caveat, plus raw benchmark rows from project progress state."
-    },
-    {
-      "section": "benchmark-compass",
-      "title": "Generated benchmark compass asset",
-      "source_url": "./assets/generated/singularity-benchmark-compass.svg",
-      "checked_at": "2026-05-14T18:15:00-04:00",
-      "freshness_badge": "generated today",
-      "curve_dimensions": ["capability_sota_composite"],
-      "verification_status": "synthetic",
-      "notes": "Codex-created SVG visual; illustrative only, not evidence."
+      "notes": "Corrected earlier invented/projection-style METR graph. Plot now uses METR raw p50/p80 values directly from benchmark_results_1_1.yaml; composite score is paused until source rows are audited."
     },
     {
       "section": "robotics",

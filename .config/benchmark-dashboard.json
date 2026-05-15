@@ -1,137 +1,83 @@
 {
-  "schema_version": 1,
-  "last_updated": "2026-05-14T18:15:00-04:00",
-  "_note": "Canonical benchmark dashboard for the reader-facing Benchmark Compass. Scores are normalized to 0-100 with visible methodology; raw values remain visible so the composite is explainable.",
+  "schema_version": 2,
+  "last_updated": "2026-05-14T20:13:00-04:00",
+  "_note": "Canonical benchmark dashboard for source-faithful visualizations. Composite scoring is paused until each benchmark row is refreshed from primary sources; render raw benchmark plots first.",
   "composite": {
     "name": "Benchmark Compass",
-    "score": 64,
-    "score_prior": 62,
-    "bands": [
-      {"min": 0, "max": 39, "label": "early"},
-      {"min": 40, "max": 59, "label": "threshold"},
-      {"min": 60, "max": 74, "label": "frontier"},
-      {"min": 75, "max": 89, "label": "rupture"},
-      {"min": 90, "max": 100, "label": "post-human"}
-    ],
-    "weights": {
-      "metr_time_horizon": 0.30,
-      "capability_exams": 0.25,
-      "coding_agents": 0.20,
-      "math_reasoning": 0.15,
-      "open_frontier": 0.10
-    },
-    "method": "Weighted normalized benchmark basket. METR gets the largest weight because task time horizon is the most human-legible proxy for autonomy."
+    "score": null,
+    "score_prior": null,
+    "bands": [],
+    "weights": null,
+    "method": "Paused. Do not publish an amalgamated benchmark score until every included benchmark has a primary source URL, source date, and audited normalization formula."
   },
   "benchmarks": [
     {
-      "id": "metr-time-horizon",
+      "id": "metr-time-horizon-p50",
       "label": "METR 50% time horizon",
       "group": "metr_time_horizon",
-      "raw_value": 960,
+      "raw_value": 1044.78,
       "raw_unit": "human-expert minutes",
-      "display_value": "≥16h",
-      "score_0_100": 67,
+      "display_value": "1044.78 min / 17.41h",
+      "score_0_100": null,
       "status": "verified-primary-with-ceiling-caveat",
-      "source_url": "https://metr.org/time-horizons/",
-      "note": "METR's May 2026 page says Claude Mythos Preview reaches the current suite's >16h unreliable-measurement zone. Treat as at-least-16h, not exact."
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "source_page": "https://metr.org/time-horizons/",
+      "source_updated": "2026-05-08",
+      "note": "Claude Mythos Preview (early). METR says measurements above 16h are unreliable with the current task suite, so render the exact raw estimate with the caveat rather than as an uncaveated capability claim."
     },
     {
-      "id": "gpqa-diamond",
-      "label": "GPQA-Diamond",
-      "group": "capability_exams",
-      "raw_value": 94.1,
-      "raw_unit": "%",
-      "display_value": "94.1%",
-      "score_0_100": 94,
-      "status": "rolling-state",
-      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
-      "note": "Current project SOTA snapshot."
+      "id": "metr-time-horizon-p80",
+      "label": "METR 80% time horizon",
+      "group": "metr_time_horizon",
+      "raw_value": 185.91,
+      "raw_unit": "human-expert minutes",
+      "display_value": "185.91 min / 3.10h",
+      "score_0_100": null,
+      "status": "verified-primary",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "source_page": "https://metr.org/time-horizons/",
+      "source_updated": "2026-05-08",
+      "note": "Claude Mythos Preview (early). Reliability-adjusted horizon from METR Time Horizon 1.1 raw data."
     },
     {
-      "id": "arc-agi-2",
-      "label": "ARC-AGI-2",
-      "group": "math_reasoning",
-      "raw_value": 52.9,
-      "raw_unit": "%",
-      "display_value": "52.9%",
-      "score_0_100": 53,
-      "status": "rolling-state",
-      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
-      "note": "Still below saturation; good counterweight to over-reading coding/autonomy gains."
-    },
-    {
-      "id": "swe-bench-pro",
-      "label": "SWE-bench Pro",
-      "group": "coding_agents",
-      "raw_value": 64.3,
-      "raw_unit": "%",
-      "display_value": "64.3%",
-      "score_0_100": 64,
-      "status": "rolling-state",
-      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
-      "note": "Coding benchmark signal; not equivalent to autonomous project completion."
-    },
-    {
-      "id": "wildclawbench",
-      "label": "WildClawBench",
-      "group": "coding_agents",
-      "raw_value": 62.2,
-      "raw_unit": "%",
-      "display_value": "62.2%",
-      "score_0_100": 62,
-      "status": "rolling-state",
-      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
-      "note": "Agent harness benchmark; sensitive to scaffold and tool policy."
-    },
-    {
-      "id": "frontiermath",
-      "label": "FrontierMath",
-      "group": "math_reasoning",
-      "raw_value": 42.5,
-      "raw_unit": "%",
-      "display_value": "42.5% est.",
-      "score_0_100": 43,
-      "status": "estimated",
-      "source_url": "https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/progress.json",
-      "note": "Estimated project snapshot; must be replaced with direct leaderboard/source when available."
-    },
-    {
-      "id": "open-frontier-gap",
-      "label": "Open-frontier Elo gap",
-      "group": "open_frontier",
-      "raw_value": 11,
-      "raw_unit": "Elo gap",
-      "display_value": "11 Elo",
-      "score_0_100": 88,
-      "status": "rolling-state",
-      "source_url": "https://arena.ai/leaderboard",
-      "note": "Smaller gap is better; score is inverted-normalized."
+      "id": "metr-doubling-time-since-2023",
+      "label": "METR doubling time since 2023",
+      "group": "metr_time_horizon",
+      "raw_value": 128.744,
+      "raw_unit": "days",
+      "display_value": "128.744 days (CI 104.428–158.012)",
+      "score_0_100": null,
+      "status": "verified-primary",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "source_page": "https://metr.org/time-horizons/",
+      "source_updated": "2026-05-08",
+      "note": "METR Time Horizon 1.1 doubling_time_in_days.from_2023_on."
     }
   ],
   "metr_series": {
-    "source_url": "https://metr.org/time-horizons/",
-    "reliability_modes": [
-      {
-        "id": "p50",
-        "label": "50% success",
-        "current_minutes": 960,
-        "current_display": "≥16h",
-        "doubling_months": 5.7,
-        "caveat": "Current METR suite becomes unreliable above 16h; treat today's value as a lower bound."
-      },
-      {
-        "id": "p80",
-        "label": "80% success",
-        "current_minutes": 192,
-        "current_display": "~3.2h est.",
-        "doubling_months": 5.7,
-        "caveat": "80% horizon is an estimate derived from the lower-reliability curve shape; render as estimated until primary values are available."
-      }
-    ],
-    "milestones": [
-      {"label": "1 day", "minutes": 1440},
-      {"label": "1 week", "minutes": 10080},
-      {"label": "1 month", "minutes": 43200}
+    "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+    "source_page": "https://metr.org/time-horizons/",
+    "source_updated": "2026-05-08",
+    "scale": "log10 human-expert minutes",
+    "models": [
+      {"model": "Claude Mythos Preview (early)", "release_date": "2026-04-07", "p50_minutes": 1044.78, "p80_minutes": 185.91, "caveat": "p50 above 16h reliability threshold"},
+      {"model": "Claude Opus 4.6", "release_date": "2026-02-05", "p50_minutes": 718.81, "p80_minutes": 69.87},
+      {"model": "Gemini 3.1 Pro", "release_date": "2026-02-19", "p50_minutes": 384.15, "p80_minutes": 89.80},
+      {"model": "GPT-5.2", "release_date": "2025-12-11", "p50_minutes": 352.25, "p80_minutes": 66.00},
+      {"model": "GPT-5.3 Codex", "release_date": "2026-02-05", "p50_minutes": 349.53, "p80_minutes": 54.74},
+      {"model": "GPT-5.4", "release_date": "2026-03-05", "p50_minutes": 341.74, "p80_minutes": 53.88},
+      {"model": "Claude Opus 4.5", "release_date": "2025-11-24", "p50_minutes": 292.99, "p80_minutes": 49.43},
+      {"model": "Gemini 3 Pro", "release_date": "2025-11-18", "p50_minutes": 224.33, "p80_minutes": 54.14},
+      {"model": "GPT-5.1 Codex Max", "release_date": "2025-11-19", "p50_minutes": 223.71, "p80_minutes": 50.63},
+      {"model": "GPT-5", "release_date": "2025-08-07", "p50_minutes": 203.01, "p80_minutes": 38.31}
     ]
-  }
+  },
+  "deferred_benchmarks": [
+    "GPQA-Diamond",
+    "ARC-AGI-2",
+    "SWE-bench Pro",
+    "WildClawBench",
+    "FrontierMath",
+    "Open-frontier Elo gap"
+  ]
 }

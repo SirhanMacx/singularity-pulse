@@ -57,7 +57,7 @@ Predictions are the durable value of the project. The top of the Predictions sec
 
 ## Uniform scoring
 
-Use one visible 0-100 scoring vocabulary everywhere the issue presents a score:
+Use one visible 0-100 scoring vocabulary only where the issue presents a true normalized score:
 
 - `0-39 early` — interesting but not frontier-relevant yet.
 - `40-59 threshold` — credible frontier signal, still bottlenecked.
@@ -65,20 +65,13 @@ Use one visible 0-100 scoring vocabulary everywhere the issue presents a score:
 - `75-89 rupture` — would force strategy changes for schools, companies, labs, or policy.
 - `90-100 post-human` — beyond reliable human expert level on that dimension.
 
-Never mix stars, letter grades, confidence percentages, benchmark percentages, and SP-Index numbers without explaining which scale is being used. Confidence is a probability; benchmark score is normalized capability; SP-Index is a daily curve index. Label them.
+Never mix stars, letter grades, confidence percentages, benchmark percentages, and SP-Index numbers without explaining which scale is being used. Confidence is a probability; raw benchmark values are source measurements; SP-Index is a daily curve index. Label them. If a benchmark visualization has not been normalized with an audited formula, show raw values only.
 
 ## Benchmark Compass
 
 Every issue should render a Benchmark Compass near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
 
-Canonical weights:
-- METR time horizon: `30%`
-- Capability exams: `25%`
-- Coding agents: `20%`
-- Math/reasoning: `15%`
-- Open-frontier gap: `10%`
-
-The METR card must be first. If METR reports a saturation caveat, display the caveat in plain English. For May 2026: `≥16h` means "at least 16h; current public suite cannot precisely measure above that," not "exactly 16h."
+Composite weights are paused until the source rows are audited. The default Benchmark Compass should be a source-faithful dashboard: raw values, source URL, source date, scale label, and caveat. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
 
 ## Futures Console
 

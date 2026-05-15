@@ -217,7 +217,7 @@ If you invent a new chart type today, add the CSS class to `html-template.html`,
 
 ## Step 4.0a.5 — Render Benchmark Compass + interactive METR graph
 
-Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` immediately after the issue brief, before the SP-Index and source ledger, so METR/benchmarks are visible above the fold. Include one visible 0-100 Benchmark Compass score, the formula/weights, METR 50% time horizon as the lead benchmark, raw benchmark values beside normalized scores, and an interactive METR graph with tap states for `50%`, `80%`, and `show both`.
+Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` immediately after the SCOREBOARD, not as a front-door explainer. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly.
 
 Never present benchmark percentages, prediction probabilities, and SP-Index scores as the same thing. Label the scale every time. If METR reports a measurement-ceiling caveat, spell it out in the graph caption.
 

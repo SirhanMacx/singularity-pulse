@@ -159,12 +159,12 @@ The agent should look for emerging sources to add, not just audit existing ones:
 
 **Sources removed**: none.
 
-**Sections changed**: Added `Benchmark Compass` after SCOREBOARD. BEFORE: Benchmark Wars mixed leaderboard tables with prose, while SP-Index, countdown probabilities, and prediction confidences used different score vocabularies. AFTER: one visible 0-100 benchmark composite, explicit weights, raw values, normalized scores, and an interactive METR graph.
+**Sections changed**: Added `Benchmark Compass` after SCOREBOARD. BEFORE: Benchmark Wars mixed leaderboard tables with prose, while SP-Index, countdown probabilities, and prediction confidences used different score vocabularies. AFTER: source-faithful benchmark plots with raw values, source dates, scale labels, and caveats. A 0-100 composite was attempted, then paused after reader feedback because the source rows and normalization were not yet audited enough.
 
-**Benchmarks added/dropped**: Promoted METR time horizon to first-class benchmark dashboard input. Added visible benchmark basket weights: METR 30%, capability exams 25%, coding agents 20%, math/reasoning 15%, open-frontier gap 10%.
+**Benchmarks added/dropped**: Promoted METR Time Horizon 1.1 to first-class benchmark dashboard input using `https://metr.org/assets/benchmark_results_1_1.yaml`. Dropped the interim composite weights until GPQA / ARC-AGI-2 / SWE / FrontierMath / open-frontier rows are refreshed from primary sources.
 
 **Voice / style-guide updates**: Added uniform score bands: early, threshold, frontier, rupture, post-human. Agents must label whether a number is a benchmark score, probability, or SP-Index value.
 
 **Reader-suggested gaps**: The reader specifically wanted METR time horizon, an amalgamation of benchmarks, clearer scoring, interactive graphs, and more singularity visualization.
 
-**Bet for the coming week**: The Benchmark Compass will reduce confusion faster than adding more prose because it answers "where are we?" before the issue asks the reader to parse individual stories.
+**Bet for the coming week**: The Benchmark Compass will reduce confusion only if it is boringly accurate first. Add the next visualization one benchmark at a time from primary data, not from project-state snapshots.

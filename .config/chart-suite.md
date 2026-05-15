@@ -12,11 +12,11 @@ The redesign was triggered by reader feedback (May 14): "graphs are impossible t
    - Card 3: 🎯 Predictions (claude/codex hit-rate fraction + 1-line context)
    - Card 4: ⚡ Headline metric of the day — whichever single number best summarizes today's TOP SIGNAL (Meta capex, OpenAI ARR, METR autonomy minutes, etc.). This card rotates daily.
 
-2. **Benchmark Compass + METR lab** (`.benchmark-compass` / `.metr-lab`)
-   - Renders immediately after the issue brief, before the SP-Index/source ledger. METR must be visible above the fold, not buried after the scoreboard.
-   - Shows one uniform 0-100 benchmark composite with visible formula.
-   - METR time horizon is first-class and interactive: 50% horizon, 80% horizon, show both.
-   - Must include raw values alongside normalized scores. Never show a benchmark composite without its weights.
+2. **Benchmark Compass + METR source plot** (`.benchmark-compass` / `.metr-source-plot`)
+   - Renders immediately after the SCOREBOARD. Do not make it the front-door hero.
+   - Uses benchmark-source data only: raw values, source URL, source date, and scale labels must be visible.
+   - METR plot must use the published Time Horizon 1.1 raw p50/p80 values directly; no invented trend line or projection.
+   - Normalized/composite scores are allowed only when the exact formula and source values are shown.
    - METR caveat is mandatory when the public suite saturates above a threshold.
 
 3. **SP-Index 30-day trajectory** (`.v81-bigchart`)

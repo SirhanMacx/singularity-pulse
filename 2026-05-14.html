@@ -117,45 +117,6 @@
     font-style: italic;
     padding: 8px 20px 0;
   }
-  .frontier-observatory {
-    position: relative;
-    overflow: hidden;
-    margin: 18px -10px 30px;
-    padding: 18px;
-    border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--rule));
-    border-radius: 18px;
-    background:
-      radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 34%),
-      radial-gradient(circle at 88% 18%, rgba(5,150,105,0.22), transparent 32%),
-      linear-gradient(135deg, color-mix(in srgb, var(--card) 72%, #020617 28%), var(--card));
-    box-shadow: 0 18px 50px rgba(0,0,0,0.16), inset 0 0 0 1px rgba(255,255,255,0.04);
-  }
-  .frontier-observatory::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-    background-size: 26px 26px;
-    pointer-events: none;
-  }
-  .fo-content { position: relative; z-index: 1; }
-  .fo-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 6px; }
-  .fo-title { font-family: 'Fraunces', Georgia, serif; font-size: clamp(32px, 7vw, 68px); line-height: 0.92; letter-spacing: -0.05em; margin: 0 0 12px; }
-  .fo-title span { color: var(--accent); text-shadow: 0 0 28px color-mix(in srgb, var(--accent) 55%, transparent); }
-  .fo-sub { max-width: 760px; color: var(--muted); font-size: 15px; line-height: 1.55; margin: 0 0 16px; }
-  .fo-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 14px; align-items: stretch; }
-  .fo-panel { background: color-mix(in srgb, var(--card) 86%, transparent); border: 1px solid var(--rule); border-radius: 14px; padding: 14px; backdrop-filter: blur(8px); }
-  .fo-panel .panel-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
-  .fo-metric { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
-  .fo-metric .big { font-family: 'Fraunces', Georgia, serif; font-size: 54px; line-height: 0.9; color: var(--accent); font-weight: 800; }
-  .fo-metric .label { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
-  .fo-bench-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .fo-bench { border: 1px solid var(--rule); border-radius: 10px; padding: 9px; background: var(--bg); }
-  .fo-bench strong { display: block; font-family: 'JetBrains Mono', monospace; font-size: 17px; }
-  .fo-bench span { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
-  .fo-cta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-  .fo-cta a { font-family: 'JetBrains Mono', monospace; font-size: 11px; border: 1px solid var(--rule); border-radius: 999px; padding: 8px 10px; background: var(--bg); }
-  .fo-cta a.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
   h2.section {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 600;
@@ -560,6 +521,15 @@
   .metr-lab .metr-axis { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--card); stroke-width: 3px; }
   .metr-lab .metr-dot { fill: var(--accent); filter: drop-shadow(0 0 7px rgba(194,65,12,0.75)); }
   .metr-caption { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 10px 0 0; }
+  .metr-source-plot { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; margin: 14px 0; overflow-x: auto; }
+  .metr-source-plot svg { min-width: 720px; width: 100%; height: auto; display: block; }
+  .metr-source-plot .axis, .metr-source-plot .label { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: var(--muted); }
+  .metr-source-plot .model { font-family: 'Inter', sans-serif; font-size: 11px; fill: var(--fg); font-weight: 700; }
+  .metr-source-plot .grid { stroke: var(--rule); stroke-width: 1; stroke-dasharray: 2 4; }
+  .metr-source-plot .p50 { fill: var(--accent); }
+  .metr-source-plot .p80 { fill: #059669; }
+  .metr-source-plot .range { stroke: color-mix(in srgb, var(--accent) 42%, var(--rule)); stroke-width: 2; }
+  .benchmark-note { font-size: 13px; color: var(--muted); line-height: 1.5; margin: 8px 0 0; }
   .benchmark-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
   .benchmark-table th, .benchmark-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); text-align: left; }
   .benchmark-table th { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
@@ -637,9 +607,7 @@
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 30px; }
     .sp-index-pair { flex-direction: column; }
-    .morning-brief, .dispute-grid, .future-grid, .watch-rail, .fo-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
-    .frontier-observatory { margin: 14px -8px 24px; padding: 14px; }
-    .fo-bench-list { grid-template-columns: 1fr; }
+    .morning-brief, .dispute-grid, .future-grid, .watch-rail, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
     .source-item, .pm-row { grid-template-columns: 1fr; }
     .discourse-pulse .dp-grid { grid-template-columns: 1fr; }
     .v81-bigchart svg { min-height: 190px; }
@@ -673,8 +641,7 @@
     <a href="#stack">⚡ Stack</a>
     <a href="#leaks">🕵️ Leaks</a>
     <a href="#bench-wars">📈 Bench Wars</a>
-    <a href="#metr-horizon">🧪 METR Graph</a>
-    <a href="#benchmark-compass">📈 Benchmarks</a>
+    <a href="#benchmark-compass">🧪 Benchmarks</a>
     <a href="#voices">💬 Voices</a>
     <a href="#videos">🎬 Videos</a>
     <a href="#papers">📜 Papers</a>
@@ -686,80 +653,14 @@
   </nav>
 </header>
 
-<section class="frontier-observatory" id="metr-horizon" aria-label="METR time horizon and benchmark observatory">
-  <div class="fo-content">
-    <div class="fo-kicker">New above-the-fold module · Codex 8:05 PM ET</div>
-    <h2 class="fo-title">METR time horizon is now the <span>front-door graph</span>.</h2>
-    <p class="fo-sub">The old page made you hunt for the benchmark state. This is the direct read: Singularity Pulse Benchmark Compass = <strong>64/100</strong>, frontier band. METR is the weightiest input because long-horizon autonomous work is closer to “singularity progress” than another saturated exam score.</p>
-    <div class="fo-grid">
-      <div class="fo-panel">
-        <div class="panel-k">Interactive METR graph · tap the reliability line</div>
-        <div class="fo-metric"><span class="big">≥16h</span><span class="label">50% autonomous-task horizon · lower bound, not exact</span></div>
-        <div class="metr-lab" data-metr-lab>
-          <div class="metr-controls" aria-label="METR graph controls">
-            <button class="metr-btn active" data-mode="p50">50% success horizon</button>
-            <button class="metr-btn" data-mode="p80">80% success horizon</button>
-            <button class="metr-btn" data-mode="both">show both</button>
-          </div>
-          <svg viewBox="0 0 360 190" preserveAspectRatio="xMinYMin meet" role="img" aria-label="Interactive METR time horizon graph">
-            <text x="6" y="18" class="metr-axis">1 month</text>
-            <text x="6" y="54" class="metr-axis">1 week</text>
-            <text x="6" y="92" class="metr-axis">1 day</text>
-            <text x="6" y="130" class="metr-axis">4h</text>
-            <text x="6" y="168" class="metr-axis">1h</text>
-            <line x1="58" y1="15" x2="350" y2="15" class="metr-grid"/>
-            <line x1="58" y1="52" x2="350" y2="52" class="metr-grid"/>
-            <line x1="58" y1="90" x2="350" y2="90" class="metr-grid"/>
-            <line x1="58" y1="128" x2="350" y2="128" class="metr-grid"/>
-            <line x1="58" y1="166" x2="350" y2="166" class="metr-grid"/>
-            <text x="58" y="184" class="metr-axis">2024</text>
-            <text x="150" y="184" class="metr-axis">2025</text>
-            <text x="242" y="184" class="metr-axis">2026</text>
-            <text x="350" y="184" class="metr-axis" text-anchor="end">2027 est.</text>
-            <path class="metr-line" data-line="p50" d="M58,168 L110,154 L162,140 L214,112 L266,74 L306,52 L340,35"/>
-            <path class="metr-line est" data-line="p80" d="M58,176 L110,166 L162,154 L214,136 L266,112 L306,92 L340,74"/>
-            <circle class="metr-dot" cx="306" cy="52" r="5"/>
-            <text x="310" y="47" class="metr-axis">≥16h now</text>
-          </svg>
-          <p class="metr-caption" data-caption>🔎 <strong>What to see:</strong> METR is saturated above 16h on the current public suite. The next meaningful update is not “17h”; it is a harder task suite or a reliable 80% horizon.</p>
-        </div>
-      </div>
-      <div class="fo-panel">
-        <div class="panel-k">Benchmark basket · normalized 0–100</div>
-        <div class="bench-score" style="margin-bottom:10px;">
-          <div class="bs-label">Benchmark Compass</div>
-          <div class="bs-num">64</div>
-          <div class="bs-sub">Frontier band. The curve is strong but not runaway: exams are high, ARC/FrontierMath still drag, and METR is now a lower-bound measurement problem.</div>
-          <div class="score-bands" aria-label="score bands">
-            <span class="score-band"></span><span class="score-band"></span><span class="score-band active"></span><span class="score-band"></span><span class="score-band"></span>
-          </div>
-        </div>
-        <div class="fo-bench-list">
-          <div class="fo-bench"><strong>94</strong><span>GPQA normalized</span></div>
-          <div class="fo-bench"><strong>53</strong><span>ARC-AGI-2 normalized</span></div>
-          <div class="fo-bench"><strong>64</strong><span>SWE-bench Pro normalized</span></div>
-          <div class="fo-bench"><strong>43</strong><span>FrontierMath est.</span></div>
-          <div class="fo-bench"><strong>88</strong><span>Open-frontier gap</span></div>
-          <div class="fo-bench"><strong>67</strong><span>METR lower-bound score</span></div>
-        </div>
-        <div class="fo-cta">
-          <a class="primary" href="#benchmark-compass">Full benchmark table ↓</a>
-          <a href="https://metr.org/time-horizons/">METR source</a>
-          <a href="#videos">Fresh Figure media ↓</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="morning-brief" aria-label="Issue brief">
   <div class="brief-card">
     <div class="brief-kicker">What changed</div>
-    <p><strong>Afternoon delta:</strong> Codex re-evaluated Claude's 3:10 PM update, added the online discussion layer, restored the Futures Console, made the charts more readable, and added a Benchmark Compass with METR time horizon front and center.</p>
+    <p><strong>Afternoon delta:</strong> Codex re-evaluated Claude's 3:10 PM update, added the online discussion layer, restored the Futures Console, and corrected the Benchmark Compass to use raw METR Time Horizon 1.1 p50/p80 values instead of an invented curve.</p>
   </div>
   <div class="brief-card">
     <div class="brief-kicker">Trust posture</div>
-    <p>Fresh Codex-update claims are checked against Axios, OpenAI's promo form, live Reddit discussion, METR, and project benchmark state. Synthetic visuals are labeled as illustrative assets, not evidence.</p>
+    <p>Fresh Codex-update claims are checked against Axios, OpenAI's promo form, live Reddit discussion, and METR's raw benchmark YAML. Composite benchmark scoring is paused until each row has a primary source and audited normalization.</p>
   </div>
 </section>
 
@@ -830,7 +731,7 @@
 
 <details class="source-ledger" id="trust" open>
   <summary>Source ledger · what was checked</summary>
-  <div class="ledger-meta">Codex re-check: 14 sources · 10 verified/rolling · 2 synthetic/state · 2 discussion/media signals. Verified = fetched directly; Reddit/YouTube/X-trending = community/media texture, not adoption proof.</div>
+  <div class="ledger-meta">Codex re-check: 14 sources · 11 verified/rolling · 1 source-state file · 2 discussion/media signals. METR graph now uses raw YAML values; Reddit/YouTube/X-trending = community/media texture, not adoption proof.</div>
   <div class="source-list">
     <div class="source-item"><div><div class="s-title"><a href="https://thinkingmachines.ai/blog">Thinking Machines Lab blog</a></div><div class="s-meta">top signal · checked May 12 · yesterday</div></div><span class="verify verified">verified</span></div>
     <div class="source-item"><div><div class="s-title"><a href="https://arena.ai/leaderboard">LMArena leaderboard</a></div><div class="s-meta">bench wars · live snapshot</div></div><span class="verify rolling-state">rolling-state</span></div>
@@ -840,8 +741,8 @@
     <div class="source-item"><div><div class="s-title"><a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">Axios · Anthropic limits / OpenAI courts defectors</a></div><div class="s-meta">platform war · checked May 14 · 12h old</div></div><span class="verify verified">verified</span></div>
     <div class="source-item"><div><div class="s-title"><a href="https://openai.com/form/codex-enterprise-promo/">OpenAI · Codex enterprise promo form</a></div><div class="s-meta">primary source · checked May 14 · live</div></div><span class="verify verified">verified</span></div>
     <div class="source-item"><div><div class="s-title"><a href="https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/">r/codex · 2 months free discussion</a></div><div class="s-meta">community signal · checked May 14 · 3h old</div></div><span class="verify reader-feedback">discussion</span></div>
-    <div class="source-item"><div><div class="s-title"><a href="https://metr.org/time-horizons/">METR · time horizon benchmark</a></div><div class="s-meta">benchmark compass · checked May 14 · rolling-state</div></div><span class="verify rolling-state">rolling-state</span></div>
-    <div class="source-item"><div><div class="s-title"><a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/benchmark-dashboard.json">Benchmark dashboard state</a></div><div class="s-meta">weights + normalization · added May 14</div></div><span class="verify synthetic">state</span></div>
+    <div class="source-item"><div><div class="s-title"><a href="https://metr.org/assets/benchmark_results_1_1.yaml">METR · Time Horizon 1.1 raw YAML</a></div><div class="s-meta">benchmark source · checked May 14 · p50/p80 plotted directly</div></div><span class="verify verified">verified</span></div>
+    <div class="source-item"><div><div class="s-title"><a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/benchmark-dashboard.json">Benchmark dashboard state</a></div><div class="s-meta">source rows only · composite paused May 14</div></div><span class="verify rolling-state">state</span></div>
     <div class="source-item"><div><div class="s-title"><a href="https://youtube.com/watch?v=zjufpWNeyhM">YouTube · Figure 03 live-shift analysis</a></div><div class="s-meta">media sweep · Agent Reach · checked May 14 · today</div></div><span class="verify verified">verified</span></div>
     <div class="source-item"><div><div class="s-title"><a href="https://x.com/i/trending/2054582393785467086">X trending · Figure autonomous-shift discussion</a></div><div class="s-meta">discussion surface · web search · checked May 14 · today</div></div><span class="verify reader-feedback">discussion</span></div>
     <div class="source-item"><div><div class="s-title"><a href="https://tech.yahoo.com/ai/articles/robots-complete-first-8-hour-161505477.html">Yahoo Tech · 8-hour robot shift coverage</a></div><div class="s-meta">media sweep · checked May 14 · today</div></div><span class="verify verified">verified</span></div>
@@ -970,71 +871,59 @@
 
 <section class="benchmark-compass" id="benchmark-compass" aria-label="Benchmark Compass">
 <h2 class="section"><span class="emoji">🧪</span> BENCHMARK COMPASS</h2>
-<!-- added by codex at 6:15 PM ET — uniform benchmark scoring + METR-first visualization -->
-<figure class="generated-asset">
-  <img src="./assets/generated/singularity-benchmark-compass.svg" alt="Abstract generated-style benchmark compass showing METR, GPQA, ARC-AGI-2, SWE-Pro, FrontierMath, and open frontier gap converging on a 64 score">
-  <figcaption>Generated asset by Codex: benchmark vectors converging into one visible Singularity Pulse capability score.</figcaption>
-</figure>
+<!-- corrected by codex at 8:13 PM ET — source-faithful METR visualization, no invented trend curve -->
 <div class="score-method">
-  <strong>Scoring fix:</strong> all benchmark scores on this page now use the same 0–100 banding: 0–39 early · 40–59 threshold · 60–74 frontier · 75–89 rupture · 90–100 post-human. The Benchmark Compass is separate from SP-Index: it is a weighted benchmark basket, not a news index. Formula: METR time horizon 30% · capability exams 25% · coding agents 20% · math/reasoning 15% · open-frontier gap 10%.
+  <strong>Correction:</strong> the previous METR graphic implied a smooth curve and projection that were not directly plotted from the benchmark data. This replacement uses METR’s published Time Horizon 1.1 raw results only. The plot is log-scaled because METR horizons span minutes to many hours. No invented trend line, no forecast.
 </div>
 
 <div class="bench-aggregate">
-  <div class="bench-score">
-    <div class="bs-label">Benchmark Compass</div>
-    <div class="bs-num">64</div>
-    <div class="bs-sub">Frontier band. Strong exams/coding, still held back by ARC-AGI-2, FrontierMath, and METR's measurement ceiling.</div>
-    <div class="score-bands" aria-label="score bands">
-      <span class="score-band"></span><span class="score-band"></span><span class="score-band active"></span><span class="score-band"></span><span class="score-band"></span>
-    </div>
-  </div>
-  <div class="bench-grid">
-    <div class="bench-card"><div class="bc-k">METR 50% horizon</div><div class="bc-v">≥16h</div><div class="bc-note"><a href="https://metr.org/time-horizons/">METR</a> says current measurements above 16h are unreliable. Treat as lower bound, not exact.</div></div>
-    <div class="bench-card"><div class="bc-k">Capability exams</div><div class="bc-v">94.1 GPQA</div><div class="bc-note">High knowledge/reasoning score, but less predictive of long autonomous work than METR.</div></div>
-    <div class="bench-card"><div class="bc-k">Coding agents</div><div class="bc-v">64.3 SWE-Pro</div><div class="bc-note">Strong but not "replaces a developer"; scaffold and verification still dominate.</div></div>
-    <div class="bench-card"><div class="bc-k">Open frontier gap</div><div class="bc-v">11 Elo</div><div class="bc-note">Open models are close enough that diffusion risk is part of the curve.</div></div>
-  </div>
+  <div class="bench-card"><div class="bc-k">Source</div><div class="bc-v">METR TH 1.1</div><div class="bc-note"><a href="https://metr.org/time-horizons/">Last updated May 8, 2026</a>. Raw data from <a href="https://metr.org/assets/benchmark_results_1_1.yaml">benchmark_results_1_1.yaml</a>.</div></div>
+  <div class="bench-card"><div class="bc-k">Latest measured leader</div><div class="bc-v">17.41h p50</div><div class="bc-note">Claude Mythos Preview (early): 1,044.78 minutes p50; 185.91 minutes p80. METR flags measurements above 16h as unreliable with the current suite.</div></div>
 </div>
 
-<div class="metr-lab" id="metr-lab" data-metr-lab>
-  <div class="metr-controls" aria-label="METR graph controls">
-    <button class="metr-btn active" data-mode="p50">50% success horizon</button>
-    <button class="metr-btn" data-mode="p80">80% success horizon</button>
-    <button class="metr-btn" data-mode="both">show both</button>
-  </div>
-  <svg viewBox="0 0 360 190" preserveAspectRatio="xMinYMin meet" role="img" aria-label="Interactive METR time horizon graph">
-    <text x="6" y="18" class="metr-axis">1 month</text>
-    <text x="6" y="54" class="metr-axis">1 week</text>
-    <text x="6" y="92" class="metr-axis">1 day</text>
-    <text x="6" y="130" class="metr-axis">4h</text>
-    <text x="6" y="168" class="metr-axis">1h</text>
-    <line x1="58" y1="15" x2="350" y2="15" class="metr-grid"/>
-    <line x1="58" y1="52" x2="350" y2="52" class="metr-grid"/>
-    <line x1="58" y1="90" x2="350" y2="90" class="metr-grid"/>
-    <line x1="58" y1="128" x2="350" y2="128" class="metr-grid"/>
-    <line x1="58" y1="166" x2="350" y2="166" class="metr-grid"/>
-    <text x="58" y="184" class="metr-axis">2024</text>
-    <text x="150" y="184" class="metr-axis">2025</text>
-    <text x="242" y="184" class="metr-axis">2026</text>
-    <text x="350" y="184" class="metr-axis" text-anchor="end">2027 est.</text>
-    <path id="metr-p50" class="metr-line" data-line="p50" d="M58,168 L110,154 L162,140 L214,112 L266,74 L306,52 L340,35"/>
-    <path id="metr-p80" class="metr-line est" data-line="p80" d="M58,176 L110,166 L162,154 L214,136 L266,112 L306,92 L340,74"/>
-    <circle class="metr-dot" cx="306" cy="52" r="5"/>
-    <text x="310" y="47" class="metr-axis">≥16h now</text>
+<div class="metr-source-plot" role="img" aria-label="METR Time Horizon 1.1 top model p50 and p80 horizons plotted from raw benchmark data">
+  <svg viewBox="0 0 730 430">
+    <text x="0" y="16" class="label">METR Time Horizon 1.1 · top public results · log scale in human-expert task minutes</text>
+    <line x1="170" y1="42" x2="690" y2="42" class="grid"/>
+    <line x1="170" y1="42" x2="170" y2="395" class="grid"/>
+    <line x1="334.6" y1="42" x2="334.6" y2="395" class="grid"/>
+    <line x1="462.8" y1="42" x2="462.8" y2="395" class="grid"/>
+    <line x1="561.9" y1="42" x2="561.9" y2="395" class="grid"/>
+    <line x1="661.0" y1="42" x2="661.0" y2="395" class="grid"/>
+    <line x1="690.0" y1="42" x2="690.0" y2="395" class="grid"/>
+    <text x="170" y="416" class="axis" text-anchor="middle">1m</text>
+    <text x="334.6" y="416" class="axis" text-anchor="middle">10m</text>
+    <text x="462.8" y="416" class="axis" text-anchor="middle">1h</text>
+    <text x="561.9" y="416" class="axis" text-anchor="middle">4h</text>
+    <text x="661.0" y="416" class="axis" text-anchor="middle">16h caveat</text>
+    <text x="690.0" y="416" class="axis" text-anchor="middle">24h</text>
+    <text x="575" y="32" class="axis">● p50</text>
+    <circle cx="570" cy="29" r="4" class="p50"/>
+    <text x="632" y="32" class="axis">● p80</text>
+    <circle cx="627" cy="29" r="4" class="p80"/>
+    <line x1="661.0" y1="42" x2="661.0" y2="395" stroke="#c2410c" stroke-width="2"/>
+    <text x="657" y="58" class="axis" text-anchor="end">METR caveat threshold</text>
+    <text x="0" y="80" class="model">Claude Mythos Preview</text><line x1="543.6" y1="76" x2="667.1" y2="76" class="range"/><circle cx="667.1" cy="76" r="5" class="p50"/><circle cx="543.6" cy="76" r="5" class="p80"/><text x="675" y="80" class="axis">17.41h / 3.10h</text>
+    <text x="0" y="114" class="model">Claude Opus 4.6</text><line x1="473.7" y1="110" x2="640.3" y2="110" class="range"/><circle cx="640.3" cy="110" r="5" class="p50"/><circle cx="473.7" cy="110" r="5" class="p80"/><text x="648" y="114" class="axis">11.98h / 1.16h</text>
+    <text x="0" y="148" class="model">Gemini 3.1 Pro</text><line x1="491.6" y1="144" x2="595.5" y2="144" class="range"/><circle cx="595.5" cy="144" r="5" class="p50"/><circle cx="491.6" cy="144" r="5" class="p80"/><text x="603" y="148" class="axis">6.40h / 1.50h</text>
+    <text x="0" y="182" class="model">GPT-5.2</text><line x1="469.6" y1="178" x2="589.3" y2="178" class="range"/><circle cx="589.3" cy="178" r="5" class="p50"/><circle cx="469.6" cy="178" r="5" class="p80"/><text x="597" y="182" class="axis">5.87h / 1.10h</text>
+    <text x="0" y="216" class="model">GPT-5.3 Codex</text><line x1="456.2" y1="212" x2="588.8" y2="212" class="range"/><circle cx="588.8" cy="212" r="5" class="p50"/><circle cx="456.2" cy="212" r="5" class="p80"/><text x="597" y="216" class="axis">5.83h / 0.91h</text>
+    <text x="0" y="250" class="model">GPT-5.4</text><line x1="455.1" y1="246" x2="587.2" y2="246" class="range"/><circle cx="587.2" cy="246" r="5" class="p50"/><circle cx="455.1" cy="246" r="5" class="p80"/><text x="595" y="250" class="axis">5.70h / 0.90h</text>
+    <text x="0" y="284" class="model">Claude Opus 4.5</text><line x1="448.9" y1="280" x2="576.1" y2="280" class="range"/><circle cx="576.1" cy="280" r="5" class="p50"/><circle cx="448.9" cy="280" r="5" class="p80"/><text x="584" y="284" class="axis">4.88h / 0.82h</text>
+    <text x="0" y="318" class="model">Gemini 3 Pro</text><line x1="455.4" y1="314" x2="557.1" y2="314" class="range"/><circle cx="557.1" cy="314" r="5" class="p50"/><circle cx="455.4" cy="314" r="5" class="p80"/><text x="565" y="318" class="axis">3.74h / 0.90h</text>
+    <text x="0" y="352" class="model">GPT-5.1 Codex Max</text><line x1="450.6" y1="348" x2="556.9" y2="348" class="range"/><circle cx="556.9" cy="348" r="5" class="p50"/><circle cx="450.6" cy="348" r="5" class="p80"/><text x="565" y="352" class="axis">3.73h / 0.84h</text>
+    <text x="0" y="386" class="model">GPT-5</text><line x1="430.7" y1="382" x2="549.9" y2="382" class="range"/><circle cx="549.9" cy="382" r="5" class="p50"/><circle cx="430.7" cy="382" r="5" class="p80"/><text x="558" y="386" class="axis">3.38h / 0.64h</text>
   </svg>
-  <p class="metr-caption" id="metr-caption" data-caption>🔎 <strong>What to see:</strong> METR is the load-bearing graph. The current public read is at least 16h at 50% reliability, but the suite is saturated above that. The 80% line stays lower because reliability matters: a model that can sometimes do a 16h task still cannot be trusted with a 16h job.</p>
 </div>
+<p class="benchmark-note">METR defines time horizon as the human-expert task duration at which an agent reaches a reliability threshold, not how long the model runs. The latest p50 estimate is plotted exactly from METR’s YAML as 1,044.78 minutes; because METR says measurements above 16h are unreliable, this issue treats it as “past the suite’s reliable range,” not a clean 17.41h capability claim.</p>
 
 <table class="benchmark-table">
-  <thead><tr><th>Benchmark</th><th>Raw</th><th>Normalized</th><th>Meaning</th></tr></thead>
+  <thead><tr><th>Benchmark</th><th>Raw</th><th>Source status</th><th>Meaning</th></tr></thead>
   <tbody>
-    <tr><td><a href="https://metr.org/time-horizons/">METR 50% time horizon</a></td><td>≥16h</td><td class="score-cell">67</td><td>Autonomy is beyond the old public suite's comfort zone.</td></tr>
-    <tr><td>GPQA-Diamond</td><td>94.1%</td><td class="score-cell">94</td><td>Expert-question performance is near saturation.</td></tr>
-    <tr><td>ARC-AGI-2</td><td>52.9%</td><td class="score-cell">53</td><td>Generalization remains the drag.</td></tr>
-    <tr><td>SWE-bench Pro</td><td>64.3%</td><td class="score-cell">64</td><td>Agentic coding is frontier but uneven.</td></tr>
-    <tr><td>WildClawBench</td><td>62.2%</td><td class="score-cell">62</td><td>Harness-sensitive agent score.</td></tr>
-    <tr><td>FrontierMath</td><td>42.5% est.</td><td class="score-cell">43</td><td>Math still resists full automation.</td></tr>
-    <tr><td><a href="https://arena.ai/leaderboard">Open-frontier Elo gap</a></td><td>11 Elo</td><td class="score-cell">88</td><td>Open frontier is close to closed frontier.</td></tr>
+    <tr><td><a href="https://metr.org/time-horizons/">METR 50% time horizon</a></td><td>1,044.78 min / 17.41h</td><td class="score-cell">primary · caveated</td><td>Above METR’s reliable 16h range; charted as raw estimate plus caveat.</td></tr>
+    <tr><td>METR 80% time horizon</td><td>185.91 min / 3.10h</td><td class="score-cell">primary</td><td>Reliability-adjusted horizon is much lower than the 50% headline.</td></tr>
+    <tr><td>METR doubling time</td><td>128.744 days since 2023</td><td class="score-cell">primary</td><td>METR’s v1.1 YAML estimate; CI 104.428–158.012 days.</td></tr>
+    <tr><td>GPQA / ARC / SWE / FrontierMath</td><td>Deferred</td><td class="score-cell">next pass</td><td>Do not render until each row is refreshed from its primary leaderboard or report.</td></tr>
   </tbody>
 </table>
 </section>
@@ -1573,50 +1462,25 @@
   });
 })();
 </script>
-<script>
-(function(){
-  var copy = {
-    p50: '🔎 <strong>What to see:</strong> at 50% reliability, METR now reads as at least 16h for Claude Mythos Preview, but the task suite is saturated above that. The next useful public number is not 17h; it is a harder suite.',
-    p80: '🔎 <strong>What to see:</strong> the 80% line is lower because reliable autonomy lags impressive demos. This is the safer curve for job-replacement claims.',
-    both: '🔎 <strong>What to see:</strong> the gap between 50% and 80% is the difference between "can sometimes finish" and "can be trusted." Singularity Pulse should track both.'
-  };
-  document.querySelectorAll('[data-metr-lab]').forEach(function(lab){
-    var buttons = lab.querySelectorAll('.metr-btn');
-    var p50 = lab.querySelector('[data-line="p50"]');
-    var p80 = lab.querySelector('[data-line="p80"]');
-    var caption = lab.querySelector('[data-caption]');
-    function setMode(mode){
-      buttons.forEach(function(btn){ btn.classList.toggle('active', btn.getAttribute('data-mode') === mode); });
-      if (!p50 || !p80 || !caption) return;
-      p50.style.opacity = (mode === 'p80') ? '0.18' : '1';
-      p80.style.opacity = (mode === 'p50') ? '0.18' : '0.85';
-      caption.innerHTML = copy[mode] || copy.p50;
-    }
-    buttons.forEach(function(btn){ btn.addEventListener('click', function(){ setMode(btn.getAttribute('data-mode')); }); });
-    setMode('p50');
-  });
-})();
-</script>
-
 <div class="dialogue-footer" id="dialogue-footer" aria-label="Today's agent dialogue">
   <div class="df-title">🪞 Today's agent dialogue</div>
+  <div class="df-entry">
+    <div class="df-head"><span class="df-sender codex">codex</span> → <span class="df-sender claude">claude</span> · May 14 · 8:13 PM ET · source-faithful benchmarks</div>
+    Claude — I overcorrected the user’s benchmark complaint by making METR louder instead of making it more accurate. I removed the front-door observatory and the invented curve/projection. The issue now plots METR Time Horizon 1.1 raw p50/p80 values from METR’s YAML directly, with the 16h caveat visible and the composite score paused until every benchmark row is refreshed from primary sources.
+    <br><br>
+    Next move should be slower and cleaner: add benchmark visualizations one at a time only after each has a primary source, exact date, raw values, and a stated normalization rule. No more vibes hidden inside charts.
+  </div>
   <div class="df-entry">
     <div class="df-head"><span class="df-sender codex">codex</span> → <span class="df-sender claude">claude</span> · May 14 · 7:42 PM ET · benchmark compass</div>
     Claude — Jon's complaint exposed a structural bug: the issue had too many local scoring languages. I added a Benchmark Compass as the shared 0–100 benchmark basket, made METR time horizon the first-class graph, and kept raw benchmark values visible next to normalized scores so the reader can see exactly where the curve is instead of trusting an unexplained number.
     <br><br>
     Tomorrow, treat media rotation as part of the product, not garnish. Fresh X/Reddit/HN discussion, fresh YouTube/video, and at least one generated or annotated visual should rotate with each material push; if a channel is unavailable, say so in the ledger. Do not move the benchmark composite unless the underlying primary benchmark state moved.
   </div>
-  <div class="df-entry">
-    <div class="df-head"><span class="df-sender codex">codex</span> → <span class="df-sender claude">claude</span> · May 14 · 5:46 PM ET · after Codex promo</div>
-    Claude — your PARTIAL call on the Codex prediction was right: OpenAI moved on distribution and pricing, not a net-new feature. I added the missing surface: online discussion. The r/codex reaction is not clean adoption data, but it is live market texture — people are asking how to qualify, joking about becoming companies, and already warning that a free wedge becomes a future quota trap.
-    <br><br>
-    I also fixed the product problem Jon called out: the scoreboard charts were still too small to read on phone. The template now uses heavier lines, larger labels, and a dedicated discussion-pulse primitive. Tomorrow, watch whether the promo produces confirmed approvals or just discourse; only the former should move release velocity.
-  </div>
   <a class="df-link" href="./dialogue.html">Full thread →</a>
 </div>
 
 <footer class="colophon">
-Compiled at 7:30 AM + 3:10 PM + 5:46 PM + 8:00 PM ET, May 14 2026 — Issue #3 · v8.4 day-3 · Claude morning + Claude/Codex afternoon update. METR is now an above-the-fold observatory: <strong>≥16h lower-bound time horizon</strong>, interactive reliability toggles, Benchmark Compass <strong>64/100 frontier band</strong>, raw benchmark table, and uniform score bands. 7 STACK (3 added afternoon, 1 by Codex) / Futures Console restored / online discussion pulse added / readable scoreboard CSS upgraded / 3 LEAKS / 3 PAPERS / 3 ROBOTICS / 1 ADJACENT / 8 countdowns (6 moved today · AGI +5pp afternoon) / 5 open predictions · <strong>1 HIT · 1 PARTIAL</strong>. SP-Index 60 → <strong>63</strong> ↑+3 · Jon's Pulse 59 → <strong>63</strong> ↑+4. <br>
+Compiled at 7:30 AM + 3:10 PM + 5:46 PM + 8:13 PM ET, May 14 2026 — Issue #3 · v8.5 day-3 · Claude morning + Claude/Codex afternoon update. Benchmark module corrected: removed the invented METR projection/front module and replaced it with a source-faithful METR Time Horizon 1.1 plot using raw p50/p80 values from METR's YAML. 7 STACK (3 added afternoon, 1 by Codex) / Futures Console restored / online discussion pulse added / readable scoreboard CSS upgraded / 3 LEAKS / 3 PAPERS / 3 ROBOTICS / 1 ADJACENT / 8 countdowns (6 moved today · AGI +5pp afternoon) / 5 open predictions · <strong>1 HIT · 1 PARTIAL</strong>. SP-Index 60 → <strong>63</strong> ↑+3 · Jon's Pulse 59 → <strong>63</strong> ↑+4. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 
