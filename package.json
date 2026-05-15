@@ -6,6 +6,7 @@
   "scripts": {
     "render:issue": "node scripts/render-issue.mjs",
     "render:issue:check": "node scripts/render-issue.mjs --check",
+    "x:signal": "node scripts/x-signal.mjs",
     "quality": "npm run render:issue:check && node scripts/quality-gate.mjs",
     "quality:links": "npm run render:issue:check && node scripts/quality-gate.mjs --links",
     "weekly:curve-report": "node scripts/render-weekly-curve-report.mjs"

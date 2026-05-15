@@ -113,7 +113,12 @@ Also list the repo root with `ls /tmp/singularity-pulse/*.html` so you know what
 
 In a single message with multiple tool calls, fetch from all source categories at once. Do not wait between calls when they're independent. Each call should request only what you need — top headlines, recent posts, last 24h.
 
-**Twitter/X** — for each handle in `sources.yml > twitter`, use the `agent-reach` MCP tool to fetch their last 24h of posts. Prioritize threads and link-shares over one-liners.
+**Twitter/X** — use the local X signal bridge first:
+```bash
+npm run x:signal -- "OpenAI Codex" "Figure F.03 robot" "AI benchmark" --since-hours 24 -n 5
+npm run x:signal -- --sources --rumors --since-hours 24 -n 2
+```
+This reads local-only cookies from `~/.agent-reach/config.yaml`, calls `bird search --json`, returns normalized X URLs/timestamps/metrics, and never writes credentials into the repo. If it fails, run `agent-reach search-twitter "<query>" -n 5` as a fallback and log the degraded path. Prioritize threads and link-shares over one-liners.
 
 **Reddit** — for each subreddit in `sources.yml > reddit`, fetch top posts of the last 24h via `agent-reach`.
 

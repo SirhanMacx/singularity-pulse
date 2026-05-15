@@ -20,7 +20,13 @@ This file is the wiring guide for getting the Codex side stood up.
    - `gh` CLI authed as a GitHub identity with push access to `SirhanMacx/singularity-pulse`
    - `curl` for arXiv API, lab blogs, RSS, ntfy POSTs
    - Web-fetch / web-search for HN, lab-blog scrapes, leaderboard pulls
-   - Optional: Twitter/Reddit/YouTube reading capability (Codex's own browser tooling works fine — the spec is tool-agnostic)
+   - Local X/Twitter search via Agent Reach + `bird` cookies:
+     ```bash
+     agent-reach configure --from-browser chrome
+     npm run x:signal -- "OpenAI Codex" "Figure F.03 robot" --since-hours 24 -n 5
+     ```
+     The cookies live only in `~/.agent-reach/config.yaml`. Never commit or paste them into the repo.
+   - Optional: Reddit/YouTube reading capability (Codex's own browser tooling works fine — the spec is tool-agnostic)
 3. **A scheduled-task config** firing at `30 15 * * *` America/New_York (3:30 PM ET). In the Codex app, create a cron automation named `Singularity Pulse Afternoon` whose prompt tells Codex to follow the local afternoon task at `~/.claude/scheduled-tasks/singularity-pulse-afternoon/SKILL.md`.
 
 ## Two pieces Codex needs that are NOT in the public repo

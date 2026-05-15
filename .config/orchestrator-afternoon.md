@@ -56,6 +56,13 @@ Read in this order:
 
 Same fan-out as the morning prompt (see `.config/orchestrator-prompt.md > Step 3`), but with a tighter window: **last 8 hours since the 7:30 AM Claude fire.**
 
+For X/Twitter, use the local bridge before any generic web fallback:
+```bash
+npm run x:signal -- "OpenAI Codex" "Figure F.03 robot" "AI benchmark" --since-hours 8 -n 5
+npm run x:signal -- --sources --rumors --since-hours 8 -n 2
+```
+If the bridge fails, run `agent-reach search-twitter "<query>" -n 5` and record the degradation in `run-log.jsonl`. Do not claim X was unavailable until both paths fail.
+
 Apply the same recency gate (`Step 3.5` in the orchestrator prompt). Build `fresh[]` and `stale[]` arrays. Only render `fresh[]`. Anything older than 8h was Claude's window — don't redo it.
 
 Also update the provenance ledger for every item you add or revise. If you challenge Claude's framing, preserve Claude's source row and add a Codex row or note explaining the new evidence. Reader-facing sources render as bottom footnotes; `.config/provenance/$TODAY.json` remains the full audit ledger.
