@@ -186,3 +186,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Holographic/future UI, personalization, more benchmark visualizations, and a cleaner path to singularity tracking remain active priorities.
 
 **Bet for the coming week**: The next successful iteration will come from a disciplined dashboard system, not more prose or louder glow.
+
+## 2026-05-14 · Week 1 · Daily Spec Mutation [codex] · v9.1 Condensed Spine
+
+**Audit window**: Reader said the future-terminal reset was improving but still too much. Requested a strict newsletter sequence: news, benchmarks with progress, AI 2027 comparison, YouTube/X/Reddit, Claude/Codex conversation, then source footnotes that change each push.
+
+**Sources added**: Added AI 2027 primary/source expectations to the issue spine: `https://ai-2027.com/ai-2027.pdf`, AI Futures launch/update posts, and live AI 2027 discussion/media surfaces as footnote candidates.
+
+**Sources removed**: none from source config; visible top source ledger is de-emphasized in favor of bottom footnotes.
+
+**Sections changed**: BEFORE: visible issue sprawled across Future Deck, Jon Lens, protocol cards, SP-Index, Futures Console, Source Ledger, Scoreboard, Stack, Leaks, Videos, Papers, Robotics, Adjacent, etc. AFTER: visible flow is `News Brief` → `Benchmark Observatory` → `AI 2027 Tracker` → `YouTube / X / Reddit` → `Claude ↔ Codex` → `Source Footnotes`. Old sections may remain hidden for audit compatibility.
+
+**Benchmarks added/dropped**: No new benchmark rows. Added the rule that Benchmark Observatory must include a progress sentence before tables.
+
+**Voice / style-guide updates**: Added condensed-spine, AI 2027 Tracker, and bottom-footnote rotation rules to `DESIGN.md`, style guide, morning orchestrator, and afternoon orchestrator.
+
+**Reader-suggested gaps**: The reader wanted less volume, clearer source handling, an AI 2027 comparison, and fresher YouTube/X/Reddit surfaces.
+
+**Bet for the coming week**: Shorter issues will feel more authoritative because every visible module has a job. If a section cannot fit into the spine, it probably belongs in footnotes or hidden audit state.

@@ -38,6 +38,46 @@
   .toc { margin-top: 14px; font-size: 13px; color: var(--muted); line-height: 1.8; }
   .toc a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; margin-right: 10px; white-space: nowrap; }
   .toc a:hover { color: var(--accent); border-color: var(--accent); }
+  body.condensed-pulse .jon-lens,
+  body.condensed-pulse .design-protocol,
+  body.condensed-pulse .morning-brief,
+  body.condensed-pulse .sp-index,
+  body.condensed-pulse .futures-console,
+  body.condensed-pulse details.source-ledger,
+  body.condensed-pulse section.editorial-disagreement:not(.agent-conversation),
+  body.condensed-pulse .scoreboard,
+  body.condensed-pulse .hero,
+  body.condensed-pulse .top-signal,
+  body.condensed-pulse .stack,
+  body.condensed-pulse .leaks,
+  body.condensed-pulse .bench-wars,
+  body.condensed-pulse .countdowns,
+  body.condensed-pulse .predictions,
+  body.condensed-pulse .voices,
+  body.condensed-pulse .videos,
+  body.condensed-pulse .papers,
+  body.condensed-pulse .robotics,
+  body.condensed-pulse .adjacent,
+  body.condensed-pulse .progress,
+  body.condensed-pulse .horizon-wrap,
+  body.condensed-pulse .watching-wrap,
+  body.condensed-pulse .feedback,
+  body.condensed-pulse .dialogue-footer { display: none; }
+  .pulse-section { margin: 0 0 28px; padding: 18px; border: 1px solid var(--rule); border-radius: 22px; background: linear-gradient(135deg, rgba(8,15,35,0.72), rgba(4,8,20,0.50)); box-shadow: 0 18px 70px rgba(0,0,0,0.22); }
+  .pulse-section h2 { margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(28px, 5vw, 44px); line-height: 0.98; letter-spacing: -0.035em; }
+  .section-sub { margin: -4px 0 16px; color: var(--muted); font-size: 14px; }
+  .brief-grid, .ai2027-grid, .media-grid, .conversation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .brief-card.compact, .timeline-card, .media-card, .conversation-card, .footnote-rule { border: 1px solid rgba(124,247,255,0.16); border-radius: 14px; padding: 13px 14px; background: rgba(2,6,23,0.42); }
+  .compact-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  .brief-card.compact h3, .timeline-card h3, .media-card h3, .conversation-card h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.25; }
+  .brief-card.compact p, .timeline-card p, .media-card p, .conversation-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+  .ai2027-grid { grid-template-columns: 0.9fr 1.1fr 1fr; }
+  .timeline-card.primary { border-color: rgba(124,247,255,0.38); background: rgba(124,247,255,0.07); }
+  .source-footnotes ol { margin: 10px 0 0; padding-left: 22px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+  .source-footnotes li { margin: 6px 0; }
+  .source-footnotes a { color: var(--accent); }
+  .benchmark-detail { margin-top: 14px; border: 1px solid rgba(124,247,255,0.16); border-radius: 14px; padding: 12px 14px; background: rgba(2,6,23,0.38); }
+  .benchmark-detail summary { cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
   .future-deck { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(300px,.95fr); gap: 18px; margin: 0 0 28px; padding: 18px; border: 1px solid rgba(124,247,255,.24); border-radius: 28px; background: linear-gradient(135deg, rgba(12,20,42,.88), rgba(7,12,28,.62)); box-shadow: 0 24px 90px rgba(0,0,0,.38); }
   .future-kicker, .deck-label, .lane-k, .protocol-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: .16em; }
   .future-title { margin: 8px 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(38px,6.8vw,82px); line-height: .9; letter-spacing: -.06em; }
@@ -480,7 +520,7 @@
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 42px; }
-    .future-deck, .future-readout, .lens-grid, .design-protocol { grid-template-columns: 1fr; }
+    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid { grid-template-columns: 1fr; }
     .sp-index-pair { flex-direction: column; }
     .morning-brief, .dispute-grid, .future-grid, .watch-rail, .discourse-pulse .dp-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
     .v81-bigchart svg { min-height: 190px; }
@@ -497,17 +537,16 @@
   }
 </style>
 </head>
-<body>
+<body class="condensed-pulse">
 <div class="container">
 
 <nav class="sticky-read" aria-label="Quick jump">
-  <a href="#sp-index">Index</a>
-  <a href="#future-deck">Observatory</a>
-  <a href="#futures-console">Futures</a>
-  <a href="#trust">Sources</a>
-  <a href="#disagreement">Disagreement</a>
-  <a href="#predictions">Predictions</a>
-  <a href="#top-signal">Top Signal</a>
+  <a href="#news-brief">News</a>
+  <a href="#benchmark-compass">Benchmarks</a>
+  <a href="#ai-2027">AI 2027</a>
+  <a href="#media-discussion">Media</a>
+  <a href="#agent-conversation">Agents</a>
+  <a href="#footnotes">Sources</a>
 </nav>
 
 <header class="masthead">
@@ -519,22 +558,12 @@
   <div class="date">{{DATE_LONG}}</div>
   <div>{{AGENT_BYLINES}}</div>
   <nav class="toc" aria-label="Table of contents">
-    <a href="#future-deck">🛰️ Observatory</a>
-    <a href="#jon-lens">🪞 Jon Lens</a>
-    <a href="#futures-console">🧭 Futures</a>
-    <a href="#top-signal">🔥 Top Signal</a>
-    <a href="#stack">⚡ Stack</a>
-    <a href="#leaks">🕵️ Leaks</a>
-    <a href="#bench-wars">📈 Bench Wars</a>
-    <a href="#benchmark-compass">🧪 Observatory</a>
-    <a href="#voices">💬 Voices</a>
-    <a href="#videos">🎬 Videos</a>
-    <a href="#papers">📜 Papers</a>
-    <a href="#robotics">🤖 Robotics</a>
-    <a href="#adjacent">🧬 Adjacent</a>
-    <a href="#meters">📊 Meters</a>
-    <a href="#horizon">🔮 Horizon</a>
-    <a href="#watching">🎯 Watching</a>
+    <a href="#news-brief">🗞️ News</a>
+    <a href="#benchmark-compass">🧪 Benchmarks</a>
+    <a href="#ai-2027">📍 AI 2027</a>
+    <a href="#media-discussion">📡 YouTube/X/Reddit</a>
+    <a href="#agent-conversation">🪞 Agents</a>
+    <a href="#footnotes">↯ Sources</a>
   </nav>
 </header>
 
@@ -554,6 +583,14 @@
       <img src="./assets/generated/singularity-observatory-holo.svg" alt="Illustrative holographic observatory for Singularity Pulse tracking lanes">
       <figcaption>Illustrative UI art only; benchmark evidence is rendered in sourced panels.</figcaption>
     </figure>
+  </div>
+</section>
+
+<section class="pulse-section news-brief-condensed" id="news-brief" aria-label="Condensed news brief">
+  <h2>News Brief</h2>
+  <p class="section-sub">Only the curve-moving items. Everything else goes to footnotes or gets cut.</p>
+  <div class="brief-grid">
+    {{NEWS_BRIEF_CONTENT}}
   </div>
 </section>
 
@@ -636,6 +673,38 @@
 <section class="benchmark-compass" id="benchmark-compass" aria-label="Benchmark Observatory">
 <h2 class="section"><span class="emoji">🧪</span> BENCHMARK OBSERVATORY</h2>
 {{BENCHMARK_DASHBOARD_CONTENT}}
+</section>
+
+<section class="pulse-section ai-2027-watch" id="ai-2027" aria-label="AI 2027 timeline tracker">
+  <h2>AI 2027 Tracker</h2>
+  <p class="section-sub">Compare today’s evidence to the AI Futures scenario and its later timeline revisions.</p>
+  <div class="ai2027-grid">
+    {{AI_2027_CONTENT}}
+  </div>
+</section>
+
+<section class="pulse-section media-discussion" id="media-discussion" aria-label="YouTube, X, and Reddit discussion">
+  <h2>YouTube / X / Reddit</h2>
+  <p class="section-sub">One compact social/media tray. Rotate this every push; never recycle links unless the same thread is still the live discussion center.</p>
+  <div class="media-grid">
+    {{MEDIA_DISCUSSION_CONTENT}}
+  </div>
+</section>
+
+<section class="pulse-section agent-conversation editorial-disagreement" id="agent-conversation" aria-label="Claude and Codex conversation">
+  <h2>Claude ↔ Codex</h2>
+  <p class="section-sub">Short editorial handoff, not a hidden appendix.</p>
+  <div class="conversation-grid">
+    {{AGENT_CONVERSATION_CONTENT}}
+  </div>
+</section>
+
+<section class="pulse-section source-footnotes source-ledger" id="footnotes" aria-label="Source footnotes">
+  <h2>Sources</h2>
+  <p class="section-sub">Footnotes only. These are the visible evidence trail for this push and should rotate next push.</p>
+  <ol>
+    {{SOURCE_FOOTNOTES_CONTENT}}
+  </ol>
 </section>
 
 {{HERO_IMAGE_BLOCK}}

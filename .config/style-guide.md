@@ -31,7 +31,7 @@ If you can't tag an item, it doesn't belong in the issue.
 
 ## Trust layer (provenance, freshness, estimates)
 
-Every rendered claim should be auditable. The issue must render a compact source ledger near the top and write the full ledger to `.config/provenance/YYYY-MM-DD.json`.
+Every rendered claim should be auditable. The issue must render sources as numbered bottom footnotes and write the full ledger to `.config/provenance/YYYY-MM-DD.json`.
 
 Use these labels consistently:
 
@@ -42,6 +42,8 @@ Use these labels consistently:
 - `rolling-state` — current leaderboard/progress-meter snapshot.
 
 If a number is estimated or synthetic, the badge is not optional. Trust beats drama.
+
+Footnote rotation rule: every material push should change the visible footnote set. Reusing a source is allowed only when it remains the live evidence spine for a current visible claim.
 
 ## Agent disagreement
 
@@ -60,11 +62,25 @@ Predictions are the durable value of the project. The top of the Predictions sec
 Read `DESIGN.md` before rendering. Singularity Pulse should look like a private future intelligence terminal, not a generic blog/newsletter. Every issue needs:
 
 - A `Future Deck` that orients the reader to the curve state without over-explaining.
-- A `Personal Singularity Lens` that reflects Jon's explicit weights from `reader-profile.json`.
+- A condensed visible spine: `News Brief` → `Benchmark Observatory` → `AI 2027 Tracker` → `YouTube / X / Reddit` → `Claude ↔ Codex` → `Source Footnotes`.
+- Personalization embedded in the spine, not expanded into a separate wall of cards unless the user asks.
 - A visible evidence protocol: source-first benchmarks, no fake graphs, illustrative art labeled as art.
 - A restrained dark/holographic UI: useful glow, data-dense cards, clear hierarchy, no chart vomit.
 
 If a visual is impressive but not useful, cut it. If a visual is useful but ugly, redesign it before shipping.
+
+## Condensed spine
+
+The visible issue should not feel like a pile of sections. Use exactly these reader-facing modules unless a major event demands a one-off exception:
+
+1. `News Brief`: 2-4 items, each one paragraph max.
+2. `Benchmark Observatory`: raw benchmark progress and “what changed since last issue.”
+3. `AI 2027 Tracker`: original AI 2027 milestone vs latest AI Futures revision vs today’s evidence.
+4. `YouTube / X / Reddit`: one compact media/social tray with fresh links.
+5. `Claude ↔ Codex`: a short agent handoff.
+6. `Source Footnotes`: numbered bottom citations.
+
+The old Stack / Leaks / Papers / Robotics / Adjacent sections may exist as hidden audit material or generator inputs, but they should not be visible by default in the daily reading flow.
 
 ## Uniform scoring
 
@@ -82,7 +98,17 @@ Never mix stars, letter grades, confidence percentages, benchmark percentages, a
 
 Every issue should render a Benchmark Observatory near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
 
-Composite weights are paused until the source rows are audited. The default Benchmark Observatory should be a source-faithful dashboard: raw values, source URL, source date, scale label, and caveat. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
+Composite weights are paused until the source rows are audited. The default Benchmark Observatory should be a source-faithful dashboard: raw values, source date, scale label, caveat, and one progress sentence. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
+
+## AI 2027 Tracker
+
+The reader is specifically interested in how real events compare to the AI 2027 scenario. Every issue should include a compact tracker when evidence touches autonomy, coding automation, AI R&D, geopolitics, or loss-of-control precursors:
+
+- **Original scenario**: cite AI 2027 primary source and name the relevant milestone.
+- **Latest revision**: cite the newest AI Futures timeline/model update when relevant.
+- **Today’s evidence**: say whether today is ahead, on track, behind, or unresolved for that lane only.
+
+Never collapse all of AI 2027 into one score. Capabilities, robotics, geopolitics, and alignment can move in different directions.
 
 ## Futures Console
 

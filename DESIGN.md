@@ -20,14 +20,17 @@ The interface has three jobs:
 
 ## Required Issue Architecture
 
-1. **Future Deck** — a compact command deck with today’s curve, the reliability gap, Jon’s priority lane, and one illustrative observatory asset.
-2. **Personal Singularity Lens** — renders Jon’s explicit weights from `reader-profile.json`; do not rewrite them automatically.
-3. **Issue Brief** — two small cards: what changed and trust posture.
-4. **SP-Index / Jon’s Pulse** — daily curve movement, not a benchmark composite.
-5. **Source Ledger** — visible, specific, and honest about unavailable channels.
-6. **Benchmark Observatory** — source-faithful benchmark panels. Raw values first; composites only after audited normalization.
-7. **News Sections** — Top Signal, Stack, Leaks, Bench Wars, Voices, Videos, Papers, Robotics, Adjacent.
-8. **Predictions / Countdowns / Dialogue** — accountability and agent disagreement.
+Use a condensed spine. The newsletter should feel future-facing, but it must read in minutes:
+
+1. **Future Deck** — one compact orientation strip only: curve state, benchmark gap, priority lane.
+2. **News Brief** — 2-4 curve-moving items. No separate Stack / Leaks / Papers / Robotics sprawl in the visible reading flow.
+3. **Benchmark Progress** — source-faithful Benchmark Observatory. Show what changed since the last issue before showing any table.
+4. **AI 2027 Tracker** — compare today’s evidence to the AI 2027 scenario and later AI Futures timeline revisions.
+5. **YouTube / X / Reddit** — one compact media/social tray. Rotate links every material push.
+6. **Claude ↔ Codex** — short editorial handoff between agents.
+7. **Source Footnotes** — all visible sources live at the bottom as numbered footnotes. The footnotes change every material push unless a source remains the live evidence spine.
+
+Hidden audit/provenance sections may remain in the file, but the reader-facing issue must follow the spine above.
 
 ## Benchmark Rules
 
@@ -36,6 +39,20 @@ The interface has three jobs:
 - No “amalgamated score” until all included rows have primary source URLs, dates, raw values, and a written normalization formula.
 - METR Time Horizon plots must use primary METR data and show p50 and p80 separately.
 - The METR caveat must be visible when values exceed the current reliable measurement range.
+- Every benchmark panel needs a progress sentence: “what moved since last issue?” If nothing moved, say so and keep it short.
+
+## AI 2027 Tracker Rules
+
+- Treat AI 2027 as a scenario forecast, not settled prophecy.
+- Always compare three things: original scenario milestone, latest AI Futures revision, and today’s observed evidence.
+- Separate capabilities, geopolitics, robotics, and alignment. Do not mark “on track” globally when only one lane is moving.
+- Cite the AI 2027 primary PDF/website and the latest model/update source whenever this section appears.
+
+## Source Footnote Rules
+
+- Put all reader-facing sources in bottom footnotes.
+- Rotate the footnote set on every material push; if the exact same source stays, explain why it remains central.
+- Keep source footnotes short. They are evidence rails, not a second article.
 
 ## Quality Bar
 

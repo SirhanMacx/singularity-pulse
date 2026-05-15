@@ -28,6 +28,20 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [codex] · v9.1-condensed-spine
+
+**Read issue + feedback**: User said the v9 reset was getting there but still too much. They requested a tighter structure: news, benchmark progress, AI 2027 comparison, YouTube/X/Reddit, Claude/Codex conversation, then sources as footnotes that change each push.
+
+**One thing I changed today**: Condensed the visible issue into that spine and hid the old section pile from the reading flow while preserving audit/provenance material in the file.
+
+**One experiment I'm trying**: Added an `AI 2027 Tracker` as a standing section comparing original scenario, latest AI Futures revision, and today’s evidence lane-by-lane.
+
+**One thing I'm retiring or de-emphasizing**: De-emphasized visible Stack / Leaks / Papers / Robotics / Adjacent sprawl. Those can feed the News Brief but should not dominate the page.
+
+**Watch-for next issue**: Claude should add only one new benchmark bay if its primary source is fresh, and should rotate the footnote set rather than recycling today’s links.
+
+**Voice self-assessment**: Better structure, less vomit. The product now has a readable spine.
+
 ## 2026-05-14 · Issue #3 · [claude] · manual-morning
 
 **Read yesterday's issue + dialogue + feedback**: Issue #2 morning ran TOP SIGNAL on Anthropic agents + memory ceiling (SP-Index 58→59). Codex's afternoon fire added F.03 livestream + DeepMind Magic Pointer, bumped to 60, invented the `endurance-bar` SVG primitive, and explicitly DIDN'T move Country-of-Geniuses — disagreeing with my morning -1. No reader feedback events overnight (cron still not registered).

@@ -58,7 +58,7 @@ Same fan-out as the morning prompt (see `.config/orchestrator-prompt.md > Step 3
 
 Apply the same recency gate (`Step 3.5` in the orchestrator prompt). Build `fresh[]` and `stale[]` arrays. Only render `fresh[]`. Anything older than 8h was Claude's window — don't redo it.
 
-Also update the provenance ledger for every item you add or revise. If you challenge Claude's framing, preserve Claude's source row and add a Codex row or note explaining the new evidence. The source ledger is part of the product, not a private debug artifact.
+Also update the provenance ledger for every item you add or revise. If you challenge Claude's framing, preserve Claude's source row and add a Codex row or note explaining the new evidence. Reader-facing sources render as bottom footnotes; `.config/provenance/$TODAY.json` remains the full audit ledger.
 
 ### Step C — Pick your editorial play
 
@@ -72,9 +72,9 @@ Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don
 
 4. **CHART** — A story is better told visually. Build an inline SVG sparkline, bar chart, or annotated image. See `style-guide.md > Chart primitives` for ready-to-use patterns. Sign each chart with an HTML comment: `<!-- chart by codex at 3:30 PM ET -->`.
 
-5. **STRUCTURE** — A new section would land well today. Invent it. Add CSS to `html-template.html` if the section is reusable. Log the addition in `meta-evolution-log.md` with BEFORE values.
+5. **STRUCTURE** — Keep the visible issue on the condensed spine: News Brief → Benchmark Observatory → AI 2027 Tracker → YouTube/X/Reddit → Claude/Codex → Source Footnotes. Add CSS to `html-template.html` only when the section is reusable. Log the mutation in `meta-evolution-log.md` with BEFORE values.
 
-Always fill the visible `Agent disagreement` block. If you agree with Claude, say so briefly and identify the one assumption you tested. If you disagree, state Claude's frame, Codex's counter-frame, and the evidence that moved you. This is where the two-agent architecture becomes interesting rather than decorative.
+Always fill the visible `Claude ↔ Codex` block. If you agree with Claude, say so briefly and identify the one assumption you tested. If you disagree, state Claude's frame, Codex's counter-frame, and the evidence that moved you. This is where the two-agent architecture becomes interesting rather than decorative.
 
 ### Step D — Recompute the Singularity Pulse Index
 
@@ -111,6 +111,10 @@ Every new item / revision / chart you add gets an HTML comment signature:
 ```html
 <!-- added by codex at 3:30 PM ET — story landed at 2:15 PM ET via Anthropic blog -->
 ```
+
+The visible section order must stay condensed. Do not bring back the old visible Stack / Leaks / Papers / Robotics / Adjacent pile unless the reader explicitly asks. If those sections remain in the HTML for audit compatibility, hide them from the default reading flow.
+
+Each material push must change the visible `Source Footnotes` list. Reuse a source only when it is still the live evidence spine for a visible claim.
 
 ### Step F — Update state files
 

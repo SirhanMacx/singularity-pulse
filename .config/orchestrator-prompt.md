@@ -179,7 +179,7 @@ Before writing prose, create a provenance record for every candidate that surviv
 - `verification_status`: `verified`, `estimated`, `synthetic`, `reader-feedback`, or `rolling-state`
 - short `notes` explaining any estimate or synthetic value
 
-Render a compact source ledger in the issue using the `{{SOURCE_LEDGER_*}}` placeholders. The reader should be able to tap once and see what was checked without breaking the morning reading flow. Never present synthetic or estimated data as verified.
+Render reader-facing sources as bottom footnotes using `{{SOURCE_FOOTNOTES_CONTENT}}`. The full provenance ledger still lives in `.config/provenance/$TODAY.json`; the visible issue should not include a top source block. Never present synthetic or estimated data as verified.
 
 ## Step 3.7 — Hero image rotation (v8.1, mandatory)
 
@@ -218,9 +218,13 @@ If you invent a new chart type today, add the CSS class to `html-template.html`,
 
 ## Step 4.0a.5 — Render Benchmark Observatory
 
-Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` immediately after the SCOREBOARD, not as a front-door explainer. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly.
+Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` as the second visible module, immediately after News Brief. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, include a progress sentence, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly.
 
 Never present benchmark percentages, prediction probabilities, and SP-Index scores as the same thing. Label the scale every time. If METR reports a measurement-ceiling caveat, spell it out in the graph caption.
+
+## Step 4.0a.6 — Render AI 2027 Tracker
+
+Read the AI 2027 primary scenario and the latest AI Futures timeline/model update before writing this section. Compare today’s evidence by lane: autonomy/coding automation, AI R&D, robotics, geopolitics, and alignment. Use the language `ahead`, `on track`, `behind`, or `unresolved` only for the lane you can support. Do not give AI 2027 one global score.
 
 ## Step 4.0b — Resolve due predictions, update countdowns (v8)
 
@@ -323,18 +327,23 @@ Follow `style-guide.md` exactly. The narrative sections sit after the Singularit
 
 Today's date: produce in `YYYY-MM-DD` format from `date +%Y-%m-%d`. Call it `$TODAY`.
 
-Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these placeholders:
+Read `/tmp/singularity-pulse/.config/html-template.html`. The visible issue spine is fixed: News Brief → Benchmark Observatory → AI 2027 Tracker → YouTube/X/Reddit → Claude/Codex → Source Footnotes. Substitute these placeholders:
 
 - `{{TITLE}}` → `Singularity Pulse — $TODAY`
 - `{{DATE_LONG}}` → human-readable (e.g., `Tuesday, May 12, 2026`)
 - `{{ISSUE_NUMBER}}` → read `progress.json > issue_count`, add 1
 - `{{WHAT_CHANGED_CONTENT}}` → one tight sentence: what moved since the prior issue, or "Quiet day; no high-impact movement."
 - `{{TRUST_POSTURE_CONTENT}}` → one tight sentence summarizing verified vs estimated vs synthetic posture
-- `{{SOURCE_LEDGER_SUMMARY}}` → e.g. `18 sources checked · 11 fresh · 2 estimated · 1 synthetic baseline`
-- `{{SOURCE_LEDGER_CONTENT}}` → compact `<div class="source-item">` rows; include title, linked source, freshness, and `<span class="verify verified|estimated|synthetic|reader-feedback|rolling-state">`
+- `{{NEWS_BRIEF_CONTENT}}` → 2-4 `<article class="brief-card compact">` cards, one paragraph each; this replaces visible Top Signal/Stack sprawl
+- `{{SOURCE_LEDGER_SUMMARY}}` → legacy hidden audit placeholder; keep concise if still present
+- `{{SOURCE_LEDGER_CONTENT}}` → legacy hidden audit rows; visible sources belong in `{{SOURCE_FOOTNOTES_CONTENT}}`
 - `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
 - `{{FUTURES_CONSOLE_CONTENT}}` → 2-4 Futures Console cards from `.config/futures-console.json` plus `.watch-rail`
 - `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Observatory source rows, benchmark table, and source-faithful METR graph
+- `{{AI_2027_CONTENT}}` → 3 compact `.timeline-card` cards: original AI 2027 milestone, latest AI Futures revision, today’s evidence by lane
+- `{{MEDIA_DISCUSSION_CONTENT}}` → 3 compact `.media-card` cards: one YouTube, one X/Twitter, one Reddit; rotate links each material push
+- `{{AGENT_CONVERSATION_CONTENT}}` → 2-3 compact `.conversation-card` cards for Claude/Codex handoff
+- `{{SOURCE_FOOTNOTES_CONTENT}}` → numbered `<li>` footnotes with all visible source links; must change on every material push unless a source remains the live evidence spine
 - `{{HERO_IMAGE_BLOCK}}` → `<figure class="hero"><img src="HERO_URL" alt="..."><figcaption>caption</figcaption></figure>` or empty string if no hero
 - `{{TOP_SIGNAL_CONTENT}}` → HTML `<p>` elements
 - `{{STACK_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>`

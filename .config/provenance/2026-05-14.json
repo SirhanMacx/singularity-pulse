@@ -111,6 +111,46 @@
       "curve_dimensions": ["embodied_units_30d"],
       "verification_status": "verified",
       "notes": "Same-day secondary coverage used to rotate the media/source surface."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI 2027 primary scenario",
+      "source_url": "https://ai-2027.com/ai-2027.pdf",
+      "checked_at": "2026-05-14T21:20:00-04:00",
+      "freshness_badge": "standing scenario source",
+      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "verification_status": "verified",
+      "notes": "Used as the primary scenario baseline for the new AI 2027 Tracker."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI Futures Model Dec. 2025 update",
+      "source_url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update",
+      "checked_at": "2026-05-14T21:20:00-04:00",
+      "freshness_badge": "timeline revision",
+      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "verification_status": "verified",
+      "notes": "Used for the updated superhuman-coder timeline comparison against the original AI 2027 scenario."
+    },
+    {
+      "section": "media-discussion",
+      "title": "AI 2027 live scenario discourse",
+      "source_url": "https://www.reddit.com/r/accelerate/comments/1t4hefo/how_closeon_track_are_we_to_ai_2027_paper/",
+      "checked_at": "2026-05-14T21:20:00-04:00",
+      "freshness_badge": "discussion",
+      "curve_dimensions": ["autonomy_horizon_min"],
+      "verification_status": "reader-feedback",
+      "notes": "Used as discussion texture only; not evidence of actual benchmark progress."
+    },
+    {
+      "section": "media-discussion",
+      "title": "AI 2027 YouTube search results",
+      "source_url": "https://youtube.com/watch?v=htOvH12T7mU",
+      "checked_at": "2026-05-14T21:20:00-04:00",
+      "freshness_badge": "media context",
+      "curve_dimensions": ["autonomy_horizon_min", "ai_science_events_window"],
+      "verification_status": "verified",
+      "notes": "Agent Reach YouTube search surfaced current high-signal AI 2027 discussion videos; used to inform the media tray."
     }
   ]
 }
