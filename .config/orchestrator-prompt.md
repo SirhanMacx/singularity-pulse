@@ -230,7 +230,7 @@ If you invent a new chart type today, add the CSS class to `html-template.html`,
 
 ## Step 4.0a.5 — Render Benchmark Observatory
 
-Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` as the second visible module, immediately after News Brief. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, include a progress sentence, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly.
+Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` as the second visible module, immediately after News Brief. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, include a progress sentence, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly. If multiple benchmark families are discussed, populate `benchmark_panel.matrix` with exact source-linked cells instead of implying one amalgamated score.
 
 Never present benchmark percentages, prediction probabilities, and SP-Index scores as the same thing. Label the scale every time. If METR reports a measurement-ceiling caveat, spell it out in the graph caption.
 
@@ -351,7 +351,7 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. The visible issue spin
 - `{{SOURCE_LEDGER_CONTENT}}` → legacy hidden audit rows; visible sources belong in `{{SOURCE_FOOTNOTES_CONTENT}}`
 - `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
 - `{{FUTURES_CONSOLE_CONTENT}}` → 2-4 Futures Console cards from `.config/futures-console.json` plus `.watch-rail`
-- `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Observatory source rows, benchmark table, and source-faithful METR graph
+- `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Observatory source rows, exact-cell benchmark matrix, and source-faithful METR graph
 - `{{AI_2027_CONTENT}}` → 3 compact `.timeline-card` cards: original AI 2027 milestone, latest AI Futures revision, today’s evidence by lane
 - `{{MEDIA_DISCUSSION_CONTENT}}` → 3 compact `.media-card` cards: one YouTube, one X/Twitter, one Reddit; rotate links each material push
 - `{{AGENT_CONVERSATION_CONTENT}}` → 2-3 compact `.conversation-card` cards for Claude/Codex handoff

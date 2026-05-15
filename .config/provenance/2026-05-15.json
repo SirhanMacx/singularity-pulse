@@ -1,0 +1,264 @@
+{
+  "issue_date": "2026-05-15",
+  "checked_at": "2026-05-15T06:52:00-04:00",
+  "generated_from": "data/issues/2026-05-15.json",
+  "rendered_items": [
+    {
+      "section": "news",
+      "title": "Work with Codex from anywhere",
+      "source_url": "https://openai.com/index/work-with-codex-from-anywhere/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "published yesterday / checked today",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary source for Codex mobile, weekly users, remote context, approvals, SSH, hooks, and tokens."
+    },
+    {
+      "section": "news",
+      "title": "ChatGPT release notes — Codex remote access from the ChatGPT mobile app",
+      "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "updated 8h ago",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Confirms rollout details and Mac-host requirement."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI brings Codex coding tool to ChatGPT mobile app",
+      "source_url": "https://www.streetinsider.com/Reuters/OpenAI%2Bbrings%2BCodex%2Bcoding%2Btool%2Bto%2BChatGPT%2Bmobile%2Bapp/26496646.html",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Independent news framing for Codex mobile."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic tightens Claude limits and OpenAI courts defectors",
+      "source_url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Context for agent subscription economics and Codex promo pressure."
+    },
+    {
+      "section": "news",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "source_url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "compute_frontier",
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary Anthropic source for Claude Code limit increases and 300+ MW / 220,000+ GPU compute capacity claim."
+    },
+    {
+      "section": "media",
+      "title": "F.03 Livestream",
+      "source_url": "https://youtube.com/watch?v=luU57hMhkak",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "live / current",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary official live-shift evidence surface."
+    },
+    {
+      "section": "news",
+      "title": "Figure AI Livestreams 8-Hour Autonomous Shift of Figure 03 Humanoid Robot",
+      "source_url": "https://www.hokanews.com/2026/05/figure-ai-livestreams-8-hour-autonomous.html",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday / crawled today",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Secondary same-week report; not primary throughput evidence."
+    },
+    {
+      "section": "media",
+      "title": "Cointelegraph Figure F.03 X post",
+      "source_url": "https://x.com/Cointelegraph/status/2054692177775571303",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "via fresh article",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "estimated",
+      "notes": "Direct X URL discovered from Hoka page; X search unavailable without configured cookies."
+    },
+    {
+      "section": "media",
+      "title": "HAPPENING NOW: Figure.03 Live: The Robot Workday Has Begun",
+      "source_url": "https://youtube.com/watch?v=c8xL4Ff-DjA",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "fresh Agent Reach result",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "8h+ secondary media context surfaced by Agent Reach YouTube search."
+    },
+    {
+      "section": "media",
+      "title": "Figure AI Livestreams 8-Hour Shift, Claude Runaway Hits $30k, Microsoft Spends $100B",
+      "source_url": "https://youtube.com/watch?v=vuY-ZdtBftg",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "today / fresh Agent Reach result",
+      "curve_dimensions": [
+        "embodied_deployment",
+        "compute_frontier"
+      ],
+      "verification_status": "estimated",
+      "notes": "Very low-view media result; useful only as topic texture."
+    },
+    {
+      "section": "media",
+      "title": "Who do you think will take the win in 2026?",
+      "source_url": "https://www.reddit.com/r/codex/comments/1tcu459/who_do_you_think_will_take_the_win_in_2026/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Market texture only; low-vote thread."
+    },
+    {
+      "section": "media",
+      "title": "Anthropic just ripped off everyone and they still managed to make it sound deceptively friendly",
+      "source_url": "https://www.reddit.com/r/ClaudeCode/comments/1tc832e/anthropic_just_ripped_off_everyone_and_they_still/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday / active",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Community reaction to Agent SDK / Claude Code metering."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Task-Completion Time Horizons of Frontier AI Models",
+      "source_url": "https://metr.org/time-horizons",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "last updated May 8",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Methodology, caveats, updates, and dashboard for task-completion horizons."
+    },
+    {
+      "section": "benchmarks",
+      "title": "METR Time Horizon 1.1 raw YAML",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Raw p50/p80 values and doubling-time estimate used for the chart and matrix."
+    },
+    {
+      "section": "benchmarks",
+      "title": "AGI Ranker — Open AGI Score for Frontier Models",
+      "source_url": "https://www.agiranker.com/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "v1.4.12 / crawled today",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "verified",
+      "notes": "Aggregator methodology, version log, and no-imputation policy."
+    },
+    {
+      "section": "benchmarks",
+      "title": "AGI Ranker models.json",
+      "source_url": "https://agiranker.com/models.json",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "fetched today",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Open JSON source for exact model benchmark cells in the matrix."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Agentick: A Unified Benchmark for General Sequential Decision-Making Agents",
+      "source_url": "https://papers.cool/arxiv/2605.06869",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Sequential-decision benchmark with 37 tasks and reported GPT-5 mini 0.309 leading result."
+    },
+    {
+      "section": "news",
+      "title": "Embodied AI in Action: Insights from SAE World Congress 2026",
+      "source_url": "https://arxiv.org/abs/2605.10653",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Robotics deployment context: safety, trust, governance, and lifecycle reliability."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI 2027 scenario PDF",
+      "source_url": "https://ai-2027.com/ai-2027.pdf",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary scenario comparator."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI Futures Model Dec. 2025 update",
+      "source_url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Timeline revision/context source."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Singularity Pulse benchmark registry",
+      "source_url": "./data/trackers/benchmark-registry.json",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "local",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Local source registry for tracked benchmark lanes."
+    }
+  ]
+}

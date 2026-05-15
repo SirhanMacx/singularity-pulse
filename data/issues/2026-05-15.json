@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-15",
+  "issue_number": 4,
+  "date_long": "May 15, 2026",
+  "title": "Singularity Pulse — May 15, 2026",
+  "compiled_at": "2026-05-15T06:52:00-04:00",
+  "source_count": 21,
+  "agents": [
+    {"name": "Claude", "class": "claude", "label": "Claude · morning slot pending"},
+    {"name": "Codex", "class": "codex", "label": "+ Codex · 6:52 AM ET · sourced reset"}
+  ],
+  "summary": {
+    "what_changed": "This issue is rebuilt around actual links: OpenAI's Codex mobile release, Figure F.03 live-shift evidence, the Anthropic/Codex usage-economics fight, a sourced METR plot, an AGI Ranker benchmark matrix, and rotating YouTube/X/Reddit links.",
+    "trust_posture": "No invented benchmark curve. METR values come from the raw YAML, AGI Ranker rows come from its open models.json, and social links are labeled as discussion rather than proof.",
+    "priority_lane": "Autonomy infrastructure"
+  },
+  "tracker": {
+    "sp_index": {
+      "score": 64,
+      "score_prior": 63,
+      "delta_label": "+1",
+      "delta_dir": "up",
+      "delta_30d": "new series",
+      "date_short": "May 15",
+      "jon_score": 65,
+      "jon_delta_label": "+2",
+      "jon_delta_dir": "up",
+      "components": [
+        {"label": "Autonomy horizon", "value": "METR 17.41h p50", "delta": "raw, caveated", "dir": "flat", "source_ids": ["metr-time-horizons", "metr-yaml"]},
+        {"label": "Agent adoption", "value": "Codex mobile + 4M/wk", "delta": "new primary", "dir": "up", "source_ids": ["openai-codex-mobile"]},
+        {"label": "Benchmark state", "value": "15 models / 14 benches", "delta": "matrix added", "dir": "up", "source_ids": ["agiranker", "agiranker-models"]},
+        {"label": "Embodied deployment", "value": "F.03 8h shift", "delta": "still live signal", "dir": "up", "source_ids": ["figure-livestream", "figure-x-post"]}
+      ]
+    }
+  },
+  "news": [
+    {
+      "title": "Codex moved from desk software to pocket supervision.",
+      "impact": "high",
+      "lane": "autonomy infrastructure",
+      "freshness": "published yesterday / checked today",
+      "summary": "OpenAI says Codex is now in the ChatGPT mobile app, with live project context, approvals, screenshots, terminal output, diffs, and test results flowing from the Mac host to the phone.",
+      "why_it_matters": "For the singularity tracker, this is not just a convenience feature. It makes longer-running agents easier to keep alive during normal human motion: commute, classroom, coffee, errands, and quick approvals from the phone.",
+      "source_ids": ["openai-codex-mobile", "openai-release-notes", "reuters-codex-mobile"]
+    },
+    {
+      "title": "Figure F.03 remains the embodied signal because endurance beats choreography.",
+      "impact": "high",
+      "lane": "embodied deployment",
+      "freshness": "live / 48h",
+      "summary": "The strongest robotics evidence this week is still the public work-shift format: a long Figure F.03 stream and secondary reports around an eight-hour autonomous warehouse-style run.",
+      "why_it_matters": "A beautiful demo clip is weak evidence. A long stream exposes boring details: pauses, repeated manipulation, stalls, recovery, and whether the robot can keep moving after novelty wears off.",
+      "source_ids": ["figure-livestream", "figure-hoka", "figure-x-post", "youtube-figure-over-horizon"]
+    },
+    {
+      "title": "Agent economics became the live fight: free-feeling subscriptions versus token reality.",
+      "impact": "medium",
+      "lane": "agent economics",
+      "freshness": "today / yesterday",
+      "summary": "Axios framed the Anthropic/OpenAI fight as the end of all-you-can-eat agent usage; Anthropic says a SpaceX compute deal doubles Claude Code five-hour limits, while Reddit threads argue over whether programmatic agent usage is being pulled toward API pricing.",
+      "why_it_matters": "Agent capability is now inseparable from metering. The model that wins may be the one that gives users enough long-horizon work budget to actually build with it.",
+      "source_ids": ["axios-agent-metering", "anthropic-compute-limits", "reddit-claudecode-limits", "reddit-codex-2026"]
+    },
+    {
+      "title": "Agent benchmark work is moving from static exams toward sequential, embodied, and operational tasks.",
+      "impact": "medium",
+      "lane": "benchmark evolution",
+      "freshness": "this week",
+      "summary": "Agentick proposes 37 procedurally generated sequential-decision tasks and reports that GPT-5 mini leads overall at 0.309 oracle-normalized score, while the SAE embodied-AI paper argues deployment is a lifecycle reliability problem, not just a model-score problem.",
+      "why_it_matters": "The tracker needs benchmarks that look like work: sequential decisions, tool use, robot operations, and failure recovery. Static leaderboard numbers are useful but incomplete.",
+      "source_ids": ["agentick-paper", "embodied-ai-paper"]
+    }
+  ],
+  "benchmark_panel": {
+    "headline": "Benchmark section is now a raw evidence dashboard, not a mysterious score.",
+    "method": "METR is plotted directly from its raw YAML. AGI Ranker contributes source-linked public cells from models.json. Agentick and Figure are included as benchmark-shape signals, not folded into a composite.",
+    "metrics": [
+      {"label": "METR leading p50", "value": "1044.78 min", "sub": "17.41h · Claude Mythos Preview early · above 16h caveat", "source_ids": ["metr-yaml"]},
+      {"label": "METR leading p80", "value": "185.91 min", "sub": "3.10h · same row", "source_ids": ["metr-yaml"]},
+      {"label": "METR doubling time", "value": "128.744 days", "sub": "from 2023 on · CI 104.428–158.012", "source_ids": ["metr-yaml"]},
+      {"label": "AGI Ranker roster", "value": "15 models", "sub": "14 public benchmarks · v1.4.12 · no imputation", "source_ids": ["agiranker", "agiranker-models"]},
+      {"label": "Agentick leader", "value": "0.309", "sub": "GPT-5 mini · oracle-normalized score", "source_ids": ["agentick-paper"]},
+      {"label": "Composite score", "value": "paused", "sub": "no blended singularity score until normalization is audited", "source_ids": ["benchmark-registry"]}
+    ],
+    "matrix_title": "Where the frontier actually sits today",
+    "matrix": [
+      {"model": "Claude Mythos Preview (early)", "benchmark": "METR Time Horizon p50", "value": "1044.78 min / 17.41h", "eval_date": "2026-05-08 page update", "note": "Autonomy horizon leader; METR warns values above 16h are unreliable.", "source_ids": ["metr-time-horizons", "metr-yaml"]},
+      {"model": "Claude Mythos Preview (early)", "benchmark": "METR Time Horizon p80", "value": "185.91 min / 3.10h", "eval_date": "2026-05-08 page update", "note": "Higher-reliability work length is far shorter than p50.", "source_ids": ["metr-time-horizons", "metr-yaml"]},
+      {"model": "GPT-5.3-Codex", "benchmark": "METR Time Horizon p50", "value": "349.53 min / 5.83h", "eval_date": "2026-02-05 release row", "note": "Useful Codex anchor for the AI 2027 coding-labor lane.", "source_ids": ["metr-yaml"]},
+      {"model": "ChatGPT 5.5", "benchmark": "SWE-bench Verified", "value": "82.6%", "eval_date": "2026-04-30", "note": "Independent vals.ai cell as represented in AGI Ranker open data.", "source_ids": ["agiranker-models"]},
+      {"model": "ChatGPT 5.5", "benchmark": "ARC-AGI-2", "value": "83.3%", "eval_date": "2026-04-23", "note": "Reasoning cell; keep separate from agentic autonomy.", "source_ids": ["agiranker-models"]},
+      {"model": "Claude Opus 4.7 (thinking)", "benchmark": "SWE-bench Verified", "value": "82.0%", "eval_date": "2026-04-30", "note": "AGI Ranker notes the T1 vals.ai row replaced a higher but lower-trust T2 value.", "source_ids": ["agiranker", "agiranker-models"]},
+      {"model": "Claude Opus 4.7 (thinking)", "benchmark": "FrontierMath", "value": "43.8%", "eval_date": "2026-05-11", "note": "Hard-math cell; useful for AI-science pressure but not enough alone.", "source_ids": ["agiranker-models"]},
+      {"model": "Gemini 3.1 Pro (preview)", "benchmark": "GAIA", "value": "46.1%", "eval_date": "2026-05-11", "note": "Agentic/general-assistant row in AGI Ranker models.json.", "source_ids": ["agiranker-models"]},
+      {"model": "GPT-5 mini", "benchmark": "Agentick", "value": "0.309", "eval_date": "2026-05-07 paper", "note": "Leader on the new sequential decision benchmark; no single approach dominates.", "source_ids": ["agentick-paper"]},
+      {"model": "Figure F.03", "benchmark": "Robotics endurance format", "value": "8h live shift", "eval_date": "2026-05-13/14", "note": "Operational evidence shape; intervention count still not audited.", "source_ids": ["figure-livestream", "figure-hoka"]}
+    ],
+    "series": [
+      {"model": "GPT-4", "date": "2023-03-14", "p50_minutes": 3.987428, "p80_minutes": 0.889561},
+      {"model": "GPT-4o", "date": "2024-05-13", "p50_minutes": 6.991195, "p80_minutes": 1.267009},
+      {"model": "Claude 3.7 Sonnet", "date": "2025-02-24", "p50_minutes": 60.388937, "p80_minutes": 12.09179},
+      {"model": "o3", "date": "2025-04-16", "p50_minutes": 119.732634, "p80_minutes": 29.981603},
+      {"model": "Claude Opus 4.5", "date": "2025-11-24", "p50_minutes": 292.994594, "p80_minutes": 49.430584},
+      {"model": "GPT-5.2", "date": "2025-12-11", "p50_minutes": 352.249302, "p80_minutes": 66.002649},
+      {"model": "Gemini 3.1 Pro", "date": "2026-02-19", "p50_minutes": 384.147435, "p80_minutes": 89.801503},
+      {"model": "Claude Opus 4.6", "date": "2026-02-05", "p50_minutes": 718.80683, "p80_minutes": 69.874587},
+      {"model": "Claude Mythos Preview (early)", "date": "2026-04-07", "p50_minutes": 1044.780145, "p80_minutes": 185.911829, "caveat": "p50 above 16h threshold"}
+    ],
+    "source_ids": ["metr-time-horizons", "metr-yaml", "agiranker", "agiranker-models", "agentick-paper", "benchmark-registry"]
+  },
+  "ai_2027": [
+    {
+      "lane": "Coding automation",
+      "status": "on-track-pressure",
+      "original": "AI 2027 depends on coding automation becoming a core acceleration lever.",
+      "revision": "Distribution and supervision now matter as much as raw model quality.",
+      "evidence": "Codex mobile turns long-running repo work into phone-supervised work, while METR shows Codex-class agents already measured in multi-hour software-task horizons.",
+      "source_ids": ["ai2027-pdf", "openai-codex-mobile", "metr-yaml"]
+    },
+    {
+      "lane": "Autonomy horizon",
+      "status": "ahead-pressure",
+      "original": "The scenario requires agents handling longer tasks with less human scaffolding.",
+      "revision": "Still sensitive to METR-style horizon growth and reliability, especially p80 rather than p50.",
+      "evidence": "The leading METR p50 row is past a workday, but p80 is 3.10h and METR caveats values above 16h.",
+      "source_ids": ["ai2027-pdf", "metr-time-horizons", "metr-yaml"]
+    },
+    {
+      "lane": "Benchmark realism",
+      "status": "improving",
+      "original": "AI 2027 is mostly software/lab-centric, but real-world automation needs evaluation beyond static exams.",
+      "revision": "Sequential and embodied benchmarks are becoming the right next layer.",
+      "evidence": "Agentick measures general sequential decision-making; the SAE embodied-AI paper frames robotics deployment around lifecycle reliability, governance, and safety.",
+      "source_ids": ["agentick-paper", "embodied-ai-paper", "aifutures-update"]
+    },
+    {
+      "lane": "Embodiment",
+      "status": "watch",
+      "original": "The AI 2027 scenario is not primarily a humanoid-robotics scenario.",
+      "revision": "Robotics can still advance the personal singularity clock when the evidence is long-duration work rather than clips.",
+      "evidence": "Figure F.03’s public work-shift format is exactly the evidence shape to track next: hours, interventions, recovery, and throughput.",
+      "source_ids": ["figure-livestream", "figure-hoka", "figure-x-post"]
+    }
+  ],
+  "media": [
+    {
+      "platform": "YouTube",
+      "title": "Official Figure F.03 livestream",
+      "summary": "Primary media artifact for the robotics lane. Treat it as raw evidence only after intervention and throughput counts are audited.",
+      "freshness": "live / current",
+      "source_ids": ["figure-livestream"]
+    },
+    {
+      "platform": "YouTube",
+      "title": "Figure.03 Live: The Robot Workday Has Begun",
+      "summary": "Secondary 8h commentary stream surfaced by Agent Reach; useful for social/media texture around the live shift.",
+      "freshness": "fresh search",
+      "source_ids": ["youtube-figure-over-horizon"]
+    },
+    {
+      "platform": "YouTube",
+      "title": "Figure AI livestream + Claude runaway + AI capex clip",
+      "summary": "Tiny-view count, but it bundles the exact topics this issue tracks: humanoids, agent autonomy risk, and compute spend.",
+      "freshness": "fresh search",
+      "source_ids": ["youtube-razr-kade"]
+    },
+    {
+      "platform": "X",
+      "title": "Cointelegraph Figure F.03 post",
+      "summary": "Direct X link discovered from the Hoka article; X search itself remains degraded without configured cookies, so this is discussion texture, not primary evidence.",
+      "freshness": "via fresh article",
+      "source_ids": ["figure-x-post"]
+    },
+    {
+      "platform": "Reddit",
+      "title": "r/ClaudeCode pushes back on Anthropic's agent-credit framing",
+      "summary": "High-friction community signal around whether subscriptions are being pulled toward API-rate economics.",
+      "freshness": "yesterday / active",
+      "source_ids": ["reddit-claudecode-limits"]
+    },
+    {
+      "platform": "Reddit",
+      "title": "r/codex asks who wins 2026",
+      "summary": "Low-vote but current market-texture thread around Codex versus Claude Code after the access and pricing moves.",
+      "freshness": "today",
+      "source_ids": ["reddit-codex-2026"]
+    }
+  ],
+  "conversation": [
+    {
+      "agent": "Claude",
+      "label": "Morning slot",
+      "text": "Pending. The morning edition should inherit this foundation instead of rebuilding the shell: current-source lead, benchmark matrix, AI 2027 lanes, rotating media, and bottom footnotes."
+    },
+    {
+      "agent": "Codex",
+      "label": "Foundation reset",
+      "text": "I stopped treating polish as the product. The load-bearing upgrade is now a source graph: fresh story links, exact benchmark cells, and social/video links that change per push. The visual system supports evidence instead of hiding weak sourcing."
+    }
+  ],
+  "sources": [
+    {"id": "openai-codex-mobile", "title": "Work with Codex from anywhere", "publisher": "OpenAI", "url": "https://openai.com/index/work-with-codex-from-anywhere/", "type": "primary", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "published yesterday / checked today", "verification_status": "verified", "section": "news", "curve_dimensions": ["autonomy_horizon", "frontier_release_velocity"], "note": "Primary source for Codex mobile, weekly users, remote context, approvals, SSH, hooks, and tokens."},
+    {"id": "openai-release-notes", "title": "ChatGPT release notes — Codex remote access from the ChatGPT mobile app", "publisher": "OpenAI Help Center", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes", "type": "primary-changelog", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "updated 8h ago", "verification_status": "verified", "section": "news", "curve_dimensions": ["frontier_release_velocity"], "note": "Confirms rollout details and Mac-host requirement."},
+    {"id": "reuters-codex-mobile", "title": "OpenAI brings Codex coding tool to ChatGPT mobile app", "publisher": "Reuters via StreetInsider", "url": "https://www.streetinsider.com/Reuters/OpenAI%2Bbrings%2BCodex%2Bcoding%2Btool%2Bto%2BChatGPT%2Bmobile%2Bapp/26496646.html", "type": "news", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "yesterday", "verification_status": "verified", "section": "news", "curve_dimensions": ["frontier_release_velocity"], "note": "Independent news framing for Codex mobile."},
+    {"id": "axios-agent-metering", "title": "Anthropic tightens Claude limits and OpenAI courts defectors", "publisher": "Axios", "url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens", "type": "news", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "yesterday", "verification_status": "verified", "section": "news", "curve_dimensions": ["frontier_release_velocity"], "note": "Context for agent subscription economics and Codex promo pressure."},
+    {"id": "anthropic-compute-limits", "title": "Higher usage limits for Claude and a compute deal with SpaceX", "publisher": "Anthropic", "url": "https://www.anthropic.com/news/higher-limits-spacex", "type": "primary", "published_at": "2026-05-06", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "standing context", "verification_status": "verified", "section": "news", "curve_dimensions": ["compute_frontier", "autonomy_horizon"], "note": "Primary Anthropic source for Claude Code limit increases and 300+ MW / 220,000+ GPU compute capacity claim."},
+    {"id": "figure-livestream", "title": "F.03 Livestream", "publisher": "Figure / YouTube", "url": "https://youtube.com/watch?v=luU57hMhkak", "type": "primary-video", "published_at": "2026-05-13", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "live / current", "verification_status": "verified", "section": "media", "curve_dimensions": ["embodied_deployment"], "note": "Primary official live-shift evidence surface."},
+    {"id": "figure-hoka", "title": "Figure AI Livestreams 8-Hour Autonomous Shift of Figure 03 Humanoid Robot", "publisher": "Hoka News", "url": "https://www.hokanews.com/2026/05/figure-ai-livestreams-8-hour-autonomous.html", "type": "news", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "yesterday / crawled today", "verification_status": "verified", "section": "news", "curve_dimensions": ["embodied_deployment"], "note": "Secondary same-week report; not primary throughput evidence."},
+    {"id": "figure-x-post", "title": "Cointelegraph Figure F.03 X post", "publisher": "X / Cointelegraph", "url": "https://x.com/Cointelegraph/status/2054692177775571303", "type": "discussion", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "via fresh article", "verification_status": "estimated", "section": "media", "curve_dimensions": ["embodied_deployment"], "note": "Direct X URL discovered from Hoka page; X search unavailable without configured cookies."},
+    {"id": "youtube-figure-over-horizon", "title": "HAPPENING NOW: Figure.03 Live: The Robot Workday Has Begun", "publisher": "Over The Horizon / YouTube", "url": "https://youtube.com/watch?v=c8xL4Ff-DjA", "type": "media", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "fresh Agent Reach result", "verification_status": "verified", "section": "media", "curve_dimensions": ["embodied_deployment"], "note": "8h+ secondary media context surfaced by Agent Reach YouTube search."},
+    {"id": "youtube-razr-kade", "title": "Figure AI Livestreams 8-Hour Shift, Claude Runaway Hits $30k, Microsoft Spends $100B", "publisher": "Razr Kade / YouTube", "url": "https://youtube.com/watch?v=vuY-ZdtBftg", "type": "media", "published_at": "2026-05-15", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "today / fresh Agent Reach result", "verification_status": "estimated", "section": "media", "curve_dimensions": ["embodied_deployment", "compute_frontier"], "note": "Very low-view media result; useful only as topic texture."},
+    {"id": "reddit-codex-2026", "title": "Who do you think will take the win in 2026?", "publisher": "Reddit r/codex", "url": "https://www.reddit.com/r/codex/comments/1tcu459/who_do_you_think_will_take_the_win_in_2026/", "type": "discussion", "published_at": "2026-05-15", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "today", "verification_status": "verified", "section": "media", "curve_dimensions": ["frontier_release_velocity"], "note": "Market texture only; low-vote thread."},
+    {"id": "reddit-claudecode-limits", "title": "Anthropic just ripped off everyone and they still managed to make it sound deceptively friendly", "publisher": "Reddit r/ClaudeCode", "url": "https://www.reddit.com/r/ClaudeCode/comments/1tc832e/anthropic_just_ripped_off_everyone_and_they_still/", "type": "discussion", "published_at": "2026-05-14", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "yesterday / active", "verification_status": "verified", "section": "media", "curve_dimensions": ["frontier_release_velocity"], "note": "Community reaction to Agent SDK / Claude Code metering."},
+    {"id": "metr-time-horizons", "title": "Task-Completion Time Horizons of Frontier AI Models", "publisher": "METR", "url": "https://metr.org/time-horizons", "type": "benchmark", "published_at": "2026-05-08", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "last updated May 8", "verification_status": "verified", "section": "benchmarks", "curve_dimensions": ["autonomy_horizon"], "note": "Methodology, caveats, updates, and dashboard for task-completion horizons."},
+    {"id": "metr-yaml", "title": "METR Time Horizon 1.1 raw YAML", "publisher": "METR", "url": "https://metr.org/assets/benchmark_results_1_1.yaml", "type": "benchmark-data", "published_at": "2026-05-08", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "rolling-state", "verification_status": "rolling-state", "section": "benchmarks", "curve_dimensions": ["autonomy_horizon"], "note": "Raw p50/p80 values and doubling-time estimate used for the chart and matrix."},
+    {"id": "agiranker", "title": "AGI Ranker — Open AGI Score for Frontier Models", "publisher": "AGI Ranker", "url": "https://www.agiranker.com/", "type": "benchmark-aggregator", "published_at": "2026-05-13", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "v1.4.12 / crawled today", "verification_status": "verified", "section": "benchmarks", "curve_dimensions": ["capability_sota"], "note": "Aggregator methodology, version log, and no-imputation policy."},
+    {"id": "agiranker-models", "title": "AGI Ranker models.json", "publisher": "AGI Ranker", "url": "https://agiranker.com/models.json", "type": "benchmark-data", "published_at": "2026-05-13", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "fetched today", "verification_status": "rolling-state", "section": "benchmarks", "curve_dimensions": ["capability_sota"], "note": "Open JSON source for exact model benchmark cells in the matrix."},
+    {"id": "agentick-paper", "title": "Agentick: A Unified Benchmark for General Sequential Decision-Making Agents", "publisher": "arXiv / papers.cool mirror", "url": "https://papers.cool/arxiv/2605.06869", "type": "paper", "published_at": "2026-05-07", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "this week", "verification_status": "verified", "section": "benchmarks", "curve_dimensions": ["autonomy_horizon"], "note": "Sequential-decision benchmark with 37 tasks and reported GPT-5 mini 0.309 leading result."},
+    {"id": "embodied-ai-paper", "title": "Embodied AI in Action: Insights from SAE World Congress 2026", "publisher": "arXiv", "url": "https://arxiv.org/abs/2605.10653", "type": "paper", "published_at": "2026-05-11", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "this week", "verification_status": "verified", "section": "news", "curve_dimensions": ["embodied_deployment"], "note": "Robotics deployment context: safety, trust, governance, and lifecycle reliability."},
+    {"id": "ai2027-pdf", "title": "AI 2027 scenario PDF", "publisher": "AI Futures Project", "url": "https://ai-2027.com/ai-2027.pdf", "type": "scenario", "published_at": "2025-04-03", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "standing context", "verification_status": "verified", "section": "ai-2027", "curve_dimensions": ["autonomy_horizon", "ai_science"], "note": "Primary scenario comparator."},
+    {"id": "aifutures-update", "title": "AI Futures Model Dec. 2025 update", "publisher": "AI Futures", "url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update", "type": "scenario-update", "published_at": "2025-12", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "standing context", "verification_status": "verified", "section": "ai-2027", "curve_dimensions": ["autonomy_horizon", "ai_science"], "note": "Timeline revision/context source."},
+    {"id": "benchmark-registry", "title": "Singularity Pulse benchmark registry", "publisher": "Repo state", "url": "./data/trackers/benchmark-registry.json", "type": "local-state", "published_at": "2026-05-15", "fetched_at": "2026-05-15T06:49:00-04:00", "freshness": "local", "verification_status": "rolling-state", "section": "benchmarks", "curve_dimensions": ["capability_sota"], "note": "Local source registry for tracked benchmark lanes."}
+  ]
+}

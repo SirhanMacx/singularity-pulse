@@ -93,6 +93,7 @@ function validateIssueData(file) {
   checkItems('media', issue.media);
   checkItems('ai_2027', issue.ai_2027);
   checkItems('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
+  checkItems('benchmark_panel.matrix', issue.benchmark_panel?.matrix);
   checkItems('tracker.sp_index.components', issue.tracker?.sp_index?.components);
 
   if (!Array.isArray(issue.benchmark_panel?.source_ids) || issue.benchmark_panel.source_ids.length < 2) {

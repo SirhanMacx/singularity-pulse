@@ -60,7 +60,7 @@ Apply the same recency gate (`Step 3.5` in the orchestrator prompt). Build `fres
 
 Also update the provenance ledger for every item you add or revise. If you challenge Claude's framing, preserve Claude's source row and add a Codex row or note explaining the new evidence. Reader-facing sources render as bottom footnotes; `.config/provenance/$TODAY.json` remains the full audit ledger.
 
-From v10 onward, make those changes in `data/issues/$TODAY.json` first. The issue JSON is the source of truth for News, Benchmark Observatory, AI 2027 Tracker, YouTube/X/Reddit, Claude/Codex, and Source Footnotes.
+From v10 onward, make those changes in `data/issues/$TODAY.json` first. The issue JSON is the source of truth for News, Benchmark Observatory, AI 2027 Tracker, YouTube/X/Reddit, Claude/Codex, and Source Footnotes. From v10.1 onward, cross-benchmark claims belong in `benchmark_panel.matrix` as exact source-linked cells, not prose-only comparisons.
 
 ### Step C — Pick your editorial play
 

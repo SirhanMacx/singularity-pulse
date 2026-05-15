@@ -21,6 +21,10 @@
     {"date": "2026-05-13", "url": "https://www.reddit.com/r/accelerate/comments/1tbznwn/figure_ai_will_show_their_humanoid_robots/", "headline": "Community thread: Figure F.03 livestream"},
     {"date": "2026-05-14", "url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens", "headline": "Anthropic third-party agent metering and OpenAI Codex counter-promo"},
     {"date": "2026-05-14", "url": "https://openai.com/form/codex-enterprise-promo/", "headline": "OpenAI Codex enterprise promo form"},
-    {"date": "2026-05-14", "url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/", "headline": "r/codex discussion of two months free promo"}
+    {"date": "2026-05-14", "url": "https://www.reddit.com/r/codex/comments/1tc8nhy/2_months_free/", "headline": "r/codex discussion of two months free promo"},
+    {"date": "2026-05-15", "url": "https://openai.com/index/work-with-codex-from-anywhere/", "headline": "OpenAI: Codex remote access from ChatGPT mobile"},
+    {"date": "2026-05-15", "url": "https://agiranker.com/models.json", "headline": "AGI Ranker exact model benchmark cells"},
+    {"date": "2026-05-15", "url": "https://papers.cool/arxiv/2605.06869", "headline": "Agentick sequential-decision benchmark"},
+    {"date": "2026-05-15", "url": "https://www.reddit.com/r/ClaudeCode/comments/1tc832e/anthropic_just_ripped_off_everyone_and_they_still/", "headline": "r/ClaudeCode agent-credit backlash"}
   ]
 }

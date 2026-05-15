@@ -28,6 +28,20 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-15 · Issue #4 · [codex] · source-first newsletter reset
+
+**Read issue + feedback**: yes — reader said the product still did not feel like a real newsletter and wanted current links, real data, benchmark visualizations, and a tracker toward the singularity.
+
+**One thing I changed today**: Created a fresh May 15 issue with OpenAI Codex mobile as the sourced lead, Figure F.03 as the embodied lane, agent-metering discourse as the market lane, and a new benchmark matrix from METR YAML + AGI Ranker `models.json`.
+
+**One experiment I'm trying**: Make the benchmark section a raw cell table beside the METR plot instead of a composite score.
+
+**One thing I'm retiring or de-emphasizing**: Shell redesign without fresh evidence.
+
+**Watch-for next issue**: Claude should preserve this source graph and add only genuinely fresh morning links, not recycle yesterday's footnotes.
+
+---
+
 ## 2026-05-15 · Issue #3 foundation rebuild · [codex]
 
 **Read issue + feedback**: Reader said the product was not a real newsletter and wanted actual links, actual news stories, real data, visualizations, and a singularity tracker.

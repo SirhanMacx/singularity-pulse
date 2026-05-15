@@ -87,7 +87,7 @@ The old Stack / Leaks / Papers / Robotics / Adjacent sections may exist as hidde
 Each module has a data contract:
 
 - `News Brief`: every card needs `source_ids`, `impact`, `lane`, `freshness`, `summary`, and `why_it_matters`.
-- `Benchmark Observatory`: every metric needs `source_ids`, raw value, unit/scale, source date, and caveat; unaudited rows render as queued/source-linked.
+- `Benchmark Observatory`: every metric and benchmark matrix row needs `source_ids`, raw value, unit/scale, source/eval date, and caveat; unaudited rows render as queued/source-linked.
 - `AI 2027 Tracker`: every lane cites the original scenario plus any revision/current evidence used for status.
 - `YouTube / X / Reddit`: every card links directly to the post/video/thread and labels discussion as discussion.
 - `Claude ↔ Codex`: state the actual editorial handoff; do not use generic agent theater.
@@ -110,6 +110,8 @@ Never mix stars, letter grades, confidence percentages, benchmark percentages, a
 Every issue should render a Benchmark Observatory near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
 
 Composite weights are paused until the source rows are audited. The default Benchmark Observatory should be a source-faithful dashboard: raw values, source date, scale label, caveat, and one progress sentence. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
+
+When multiple benchmark families appear, render a `benchmark_panel.matrix` instead of a blended score. Rows should be boringly exact: model/system, benchmark, value, eval date, interpretation, and source footnote. Do not infer one winner from rows with different task distributions.
 
 ## AI 2027 Tracker
 

@@ -40,6 +40,7 @@ Hidden audit/provenance sections may remain in the file, but the reader-facing i
 - METR Time Horizon plots must use primary METR data and show p50 and p80 separately.
 - The METR caveat must be visible when values exceed the current reliable measurement range.
 - Every benchmark panel needs a progress sentence: “what moved since last issue?” If nothing moved, say so and keep it short.
+- When multiple benchmark families appear, render `benchmark_panel.matrix`: model/system, benchmark, exact value, eval/source date, caveat, and `source_ids`. Do not imply one amalgamated score unless the normalization formula is audited.
 
 ## AI 2027 Tracker Rules
 

@@ -222,3 +222,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Actual links, actual news stories, real data visualizations, and a trustworthy tracker toward the singularity.
 
 **Bet for the coming week**: The renderer and source schema will prevent cosmetic fixes from outrunning evidence. Claude should edit issue JSON tomorrow, not raw HTML.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · v10.1 Benchmark Matrix
+
+**Audit window**: Reader still found the newsletter unimpressive and specifically wanted current links plus benchmark visualization that shows where the frontier actually sits.
+
+**Sources added**: Added `https://agiranker.com/models.json` as an exact-cell benchmark data source; added OpenAI's Codex mobile release page and release notes as core current-news sources for agent infrastructure.
+
+**Sources removed**: none.
+
+**Sections changed**: Benchmark Observatory now renders a `benchmark_panel.matrix` table for exact source-linked rows in addition to the METR plot.
+
+**Benchmarks added/dropped**: Added AGI Ranker rows for SWE-bench Verified, ARC-AGI-2, FrontierMath, GAIA, and Agentick as explicit cells. Still no blended composite.
+
+**Voice / style-guide updates**: Charts must name source row, value, and eval date in the visible page.
+
+**Reader-suggested gaps**: Current story links, fresh media, and an auditable benchmark amalgamation.
+
+**Bet for the coming week**: The next win is not more sections; it is one audited benchmark lane per issue until the matrix becomes a real singularity dashboard.

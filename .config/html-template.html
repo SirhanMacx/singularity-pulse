@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
 <title>{{TITLE}}</title>
+<link rel="icon" href="assets/generated/singularity-favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -457,6 +458,10 @@
   .benchmark-table th, .benchmark-table td { padding: 8px 8px; border-bottom: 1px solid var(--rule); text-align: left; }
   .benchmark-table th { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
   .benchmark-table .score-cell { font-family: 'JetBrains Mono', monospace; font-weight: 800; color: var(--accent); }
+  .benchmark-matrix-wrap { margin: 16px 0; border: 1px solid rgba(124,247,255,0.20); border-radius: 14px; padding: 14px; background: rgba(2,6,23,0.40); overflow-x: auto; }
+  .benchmark-matrix td:first-child { font-weight: 800; color: var(--fg); min-width: 170px; }
+  .benchmark-matrix td:nth-child(2) { min-width: 160px; }
+  .benchmark-matrix td:last-child { color: var(--muted); min-width: 210px; }
   /* v8.2 — Online discussion pulse: compact community-signal readout */
   .discourse-pulse { background: linear-gradient(135deg, color-mix(in srgb, var(--card) 92%, var(--accent) 8%), var(--card)); border: 1px solid var(--rule); border-radius: 12px; padding: 16px 18px; margin: 18px 0; }
   .discourse-pulse .dp-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }

@@ -93,6 +93,7 @@ function validateIssue(issue, issuePath) {
   requireSourceIds('media', issue.media);
   requireSourceIds('tracker.sp_index.components', issue.tracker?.sp_index?.components);
   requireSourceIds('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
+  requireSourceIds('benchmark_panel.matrix', issue.benchmark_panel?.matrix);
   if (!Array.isArray(issue.benchmark_panel?.source_ids) || !issue.benchmark_panel.source_ids.length) {
     errors.push('benchmark_panel missing source_ids');
   } else {
@@ -229,7 +230,7 @@ function linePath(points) {
   return points.map((point, index) => `${index === 0 ? 'M' : 'L'}${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(' ');
 }
 
-function renderMetrChart(series) {
+function renderMetrChart(series, issueDate) {
   const width = 860;
   const height = 320;
   const left = 74;
@@ -256,7 +257,7 @@ function renderMetrChart(series) {
     <div><p class="chart-eyebrow">METR Time Horizon 1.1 · log scale</p><h3>How long can frontier agents work?</h3></div>
     <div class="chart-legend"><span class="legend-p50">p50 success</span><span class="legend-p80">p80 success</span></div>
   </div>
-  <!-- chart by codex at implementation time — rendered from data/issues/2026-05-14.json -->
+  <!-- chart by codex at implementation time — rendered from data/issues/${html(issueDate)}.json -->
   <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="METR Time Horizon p50 and p80 values plotted from raw YAML">
     ${ticks.map((tick) => {
       const y = logY(tick, minLog, maxLog, top, chartHeight);
@@ -275,6 +276,27 @@ function renderMetrChart(series) {
     <text class="bc-value-label" x="${Math.max(left + 8, last.x - 170).toFixed(1)}" y="${(last.y - 12).toFixed(1)}">${html(last.model)} · ${(last.p50_minutes / 60).toFixed(2)}h p50</text>
   </svg>
   <p class="metr-caption"><strong>What to see:</strong> the leading p50 point crosses a workday, but METR’s own doubling-time fit excludes central estimates above 16h. Treat this as pressure on the autonomy ceiling, not as a clean forecast.</p>
+</div>`;
+}
+
+function renderBenchmarkMatrix(panel, tools) {
+  const rows = panel.matrix || [];
+  if (!rows.length) return '';
+  return `<div class="benchmark-matrix-wrap">
+  <div class="chart-deck-head">
+    <div><p class="chart-eyebrow">Benchmark matrix · exact cells</p><h3>${html(panel.matrix_title || 'Current frontier cells')}</h3></div>
+    <div class="tracker-status live-primary">source-linked</div>
+  </div>
+  <table class="benchmark-table benchmark-matrix source-backed">
+    <thead><tr><th>Model / system</th><th>Benchmark</th><th>Value</th><th>Eval date</th><th>Read</th></tr></thead>
+    <tbody>${rows.map((row) => `<tr>
+  <td>${html(row.model)}</td>
+  <td>${tools.cites(row.source_ids)} ${html(row.benchmark)}</td>
+  <td class="score-cell">${html(row.value)}</td>
+  <td>${html(row.eval_date || 'rolling')}</td>
+  <td>${html(row.note || '')}</td>
+</tr>`).join('\n')}</tbody>
+  </table>
 </div>`;
 }
 
@@ -298,7 +320,8 @@ function renderBenchmarkDashboard(issue, tools, registry) {
 
   return `<div class="score-method"><strong>${html(panel.headline)}</strong> ${html(panel.method)} ${tools.cites(panel.source_ids)}</div>
 <div class="bench-grid">${cards}</div>
-${renderMetrChart(panel.series || [])}
+${renderMetrChart(panel.series || [], issue.issue_date)}
+${renderBenchmarkMatrix(panel, tools)}
 <details class="benchmark-detail" open>
   <summary>Tracked benchmark lanes</summary>
   <table class="benchmark-table source-backed">

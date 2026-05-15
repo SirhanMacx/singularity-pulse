@@ -1,29 +1,29 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-14T17:46:19-04:00",
-  "issue_count": 3,
+  "last_updated": "2026-05-15T06:52:00-04:00",
+  "issue_count": 4,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "benchmark_composite": {
-    "as_of": "2026-05-14T20:13:00-04:00",
+    "as_of": "2026-05-15T06:49:00-04:00",
     "score": null,
     "score_prior": null,
     "band": null,
     "weights": null,
-    "note": "Composite paused until every included benchmark is refreshed from primary sources. Render raw benchmark-source plots first; do not imply a precise amalgamated score without audited source rows and formula."
+    "note": "Composite paused until every included benchmark is refreshed from primary sources. May 15 adds an exact benchmark matrix from METR YAML + AGI Ranker models.json, but still does not blend those rows into a single score."
   },
   "sp_index": {
-    "as_of": "2026-05-14T17:46:19-04:00",
-    "score": 63,
-    "score_prior": 62,
+    "as_of": "2026-05-15T06:52:00-04:00",
+    "score": 64,
+    "score_prior": 63,
     "score_30d_prior": null,
     "components": {
       "autonomy_horizon_min": {"raw": 60, "score": 50, "delta": null, "note": "METR 50% — last published Q1 2026"},
       "compute_frontier_log10_flops": {"raw": 26.4, "score": 56, "delta": null, "note": "Mythos Preview estimated, exact undisclosed"},
-      "capability_sota_composite": {"raw": 72.5, "score": 72, "delta": null, "note": "GPQA 94.1 · ARC-AGI-2 52.9 · SWE-bench-Pro 64.3 · FrontierMath unknown"},
-      "embodied_units_30d": {"raw": 850, "score": 39, "delta": 1, "note": "Figure F.03 public livestream (endurance proof) + broader humanoid deployment still estimated"},
+      "capability_sota_composite": {"raw": 72.5, "score": 72, "delta": null, "note": "Composite paused; May 15 exact cells render from AGI Ranker models.json instead of a hidden blended score."},
+      "embodied_units_30d": {"raw": 850, "score": 40, "delta": 1, "note": "Figure F.03 public livestream/endurance proof remains active; intervention count still unaudited."},
       "bci_patients_cumulative": {"raw": 71, "score": 43, "delta": null, "note": "Neuralink 21 + Synchron 50+"},
       "ai_science_events_window": {"raw": 1, "score": 30, "delta": null, "note": "AlphaEvolve scale-out flagged"},
-      "frontier_releases_30d": {"raw": 6, "score": 65, "delta": null, "note": "GPT-5.5 · Gemini 3.1 Pro · Mythos · GLM-5 · Gemma 4 · Opus 4.7"},
+      "frontier_releases_30d": {"raw": 6, "score": 66, "delta": 1, "note": "Codex mobile remote access adds a distribution/supervision surface, not a new base model."},
       "open_frontier_elo_gap": {"raw": 11, "score": 88, "delta": null, "note": "Opus-4-6-thinking 1502 - GLM-5 ~1491 (LMArena)"}
     },
     "history_30d": [
@@ -45,7 +45,8 @@
       {"date": "2026-05-12", "score": 58, "synthetic": false, "note": "v8 baseline"},
       {"date": "2026-05-13", "score": 60, "synthetic": false, "note": "Morning: Anthropic autonomous-agents preview + LongMemEval-V2/MEME memory ceiling. Afternoon: Figure F.03 livestream as embodied reliability proof. Net +2 vs v8 baseline."},
       {"date": "2026-05-14", "score": 62, "synthetic": false, "note": "Morning: Meta unveils Muse Spark publicly under Wang's Superintelligence Labs + $115–135B 2026 capex (~2× 2025). OpenAI $25B ARR + IPO talk. Google Gemini 3.1 Flash-Lite cost-curve shock at $0.25/M. Five countdowns moved uniformly up (ASI +2, CoG +2, AGI +1, AI-Nature-author +1, RSI +1). First prediction resolved HIT (muse-spark @65% conf at day 2)."},
-      {"date": "2026-05-14-afternoon", "score": 63, "synthetic": false, "note": "Afternoon claude update: Anthropic tightened third-party agent limits → OpenAI countered with 2 months free Codex enterprise access (Altman on-record). Resolved p-2026-05-14-002 (OpenAI Codex feature today @0.40) as PARTIAL (pricing not feature). Dan McAteer's viral 'Something Big' thread surfaced two new quantitative claims: Mythos past METR's 16h ceiling; AISI cyber-test doubling time 8mo→4.7mo (super-exponential). AGI METR-1-month bumped +5pp afternoon (50→55) on autonomy-horizon evidence. SP-Index +1 afternoon."}
+      {"date": "2026-05-14-afternoon", "score": 63, "synthetic": false, "note": "Afternoon claude update: Anthropic tightened third-party agent limits → OpenAI countered with 2 months free Codex enterprise access (Altman on-record). Resolved p-2026-05-14-002 (OpenAI Codex feature today @0.40) as PARTIAL (pricing not feature). Dan McAteer's viral 'Something Big' thread surfaced two new quantitative claims: Mythos past METR's 16h ceiling; AISI cyber-test doubling time 8mo→4.7mo (super-exponential). AGI METR-1-month bumped +5pp afternoon (50→55) on autonomy-horizon evidence. SP-Index +1 afternoon."},
+      {"date": "2026-05-15", "score": 64, "synthetic": false, "note": "Codex foundation reset before Claude morning: OpenAI Codex mobile/remote access checked from primary sources, Figure F.03 live-shift remains embodied signal, Anthropic/Codex agent metering is live discourse, and benchmark section now renders a raw METR + AGI Ranker matrix with no composite score."}
     ],
     "component_histories_30d": {
       "autonomy_horizon_min": [{"date":"2026-04-13","score":48,"synthetic":true},{"date":"2026-04-20","score":49,"synthetic":true},{"date":"2026-04-27","score":50,"synthetic":true},{"date":"2026-05-04","score":50,"synthetic":true},{"date":"2026-05-12","score":50,"synthetic":false}],
