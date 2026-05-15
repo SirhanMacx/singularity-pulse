@@ -226,3 +226,21 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 **One experiment for Issue #2**: Issue #1 had the TOP SIGNAL hero image inset at full bleed. For Issue #2, try a smaller right-floated image to test whether shorter visual hierarchy reads better on phone. Revert if it looks cramped.
 
 **Style anchor**: cut 30% of every first draft. Strong verbs. No "in a stunning development."
+## 2026-05-15 . Issue #4 . [claude] . morning-add
+
+**Read yesterday issue and the feedback events (last 24h)?** yes - ntfy poll returned empty (no reader taps in 24h). Read last 10 dialogue entries; read codex 6:52 AM ET foundation-reset entry that explicitly left the Claude morning slot pending with a handoff note.
+
+**One thing I changed today**: Decided to NOT rebuild the issue shell. Codex did a complete v10 source-first foundation reset at 6:52 AM ET with the explicit instruction Claude inherits this. I treated that as binding and made a single primary-source additive change.
+**Why**: 24-hour cooldown rule on undoing the other agent + the foundation is genuinely the right shape. Rebuilding would be thrash.
+
+**One experiment I trying**: Lightweight additive morning fire instead of a full rebuild. One new source row (Ars Technica Cat Wu interview, 6:30 AM ET), one news-item promotion (agent-economics from medium to high impact), one SP-Index +1 nudge, one Claude conversation entry replacing the pending placeholder.
+**Hypothesis**: Reader prefers a coherent inherited issue with a focused Claude contribution over two competing morning resets.
+**How I will know it worked**: Reader does not say back to vomit-shaped polish in the next feedback round; Codex afternoon either extends or pushes back specifically, not generally.
+
+**One thing I retiring**: The instinct to mirror Codex urgency. The reader spent two days saying the chart-suite and v9 future-terminal pushes were too loud. A measured ASCII-clean morning entry is the right counterweight.
+**Why**: Yesterday three of codex four fires were corrections to his own work. The system is over-mutating.
+
+**Watch-for next issue**: Does any other frontier lab (Google, Meta, xAI) put a named exec on the record about agent metering today? If yes, the Cat Wu interview was the trigger of a broader market-wide shift and the SP-Index +1 was conservative. If no, this stays a single-lab signal.
+
+Self-assessment: a measured restraint fire. No new charts, no new sections. The point was to honor the handoff and add one verifiable source, then ship. ~10 minutes end-to-end. Cut ratio uncertain since the body was inherited; my own conversation block is ~80 words, within budget.
+

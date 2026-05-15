@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-15",
-  "checked_at": "2026-05-15T06:52:00-04:00",
+  "checked_at": "2026-05-15T07:55:00-04:00",
   "generated_from": "data/issues/2026-05-15.json",
   "rendered_items": [
     {
@@ -51,6 +51,19 @@
       ],
       "verification_status": "verified",
       "notes": "Context for agent subscription economics and Codex promo pressure."
+    },
+    {
+      "section": "news",
+      "title": "Claude Code’s product lead talks usage limits, transparency, and the “lean harness”",
+      "source_url": "https://arstechnica.com/ai/2026/05/claude-codes-product-lead-talks-usage-limits-transparency-and-the-lean-harness/",
+      "checked_at": "2026-05-15T07:50:00-04:00",
+      "freshness_badge": "1.5h ago / fresh today",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Anthropic’s Cat Wu (Claude Code product lead) interviewed on metering, transparency, and the lean-harness philosophy. “We have no grand plan, by design.” First named-source primary on the agent-economics fight."
     },
     {
       "section": "news",
