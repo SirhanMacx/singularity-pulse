@@ -55,6 +55,17 @@ The two-agent system only matters if disagreement is visible and specific. Each 
 
 Predictions are the durable value of the project. The top of the Predictions section should act like a tiny market board: top live bets, confidence, movement since last update, and next resolution date. Daily news earns attention partly by how it changes a probability.
 
+## Future terminal visual system
+
+Read `DESIGN.md` before rendering. Singularity Pulse should look like a private future intelligence terminal, not a generic blog/newsletter. Every issue needs:
+
+- A `Future Deck` that orients the reader to the curve state without over-explaining.
+- A `Personal Singularity Lens` that reflects Jon's explicit weights from `reader-profile.json`.
+- A visible evidence protocol: source-first benchmarks, no fake graphs, illustrative art labeled as art.
+- A restrained dark/holographic UI: useful glow, data-dense cards, clear hierarchy, no chart vomit.
+
+If a visual is impressive but not useful, cut it. If a visual is useful but ugly, redesign it before shipping.
+
 ## Uniform scoring
 
 Use one visible 0-100 scoring vocabulary only where the issue presents a true normalized score:
@@ -67,11 +78,11 @@ Use one visible 0-100 scoring vocabulary only where the issue presents a true no
 
 Never mix stars, letter grades, confidence percentages, benchmark percentages, and SP-Index numbers without explaining which scale is being used. Confidence is a probability; raw benchmark values are source measurements; SP-Index is a daily curve index. Label them. If a benchmark visualization has not been normalized with an audited formula, show raw values only.
 
-## Benchmark Compass
+## Benchmark Observatory
 
-Every issue should render a Benchmark Compass near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
+Every issue should render a Benchmark Observatory near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
 
-Composite weights are paused until the source rows are audited. The default Benchmark Compass should be a source-faithful dashboard: raw values, source URL, source date, scale label, and caveat. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
+Composite weights are paused until the source rows are audited. The default Benchmark Observatory should be a source-faithful dashboard: raw values, source URL, source date, scale label, and caveat. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
 
 ## Futures Console
 

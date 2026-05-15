@@ -12,44 +12,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fafaf7;
-    --fg: #1a1a1a;
-    --muted: #5a5a5a;
-    --accent: #c2410c;
-    --rule: #e5e5e0;
-    --card: #ffffff;
-    --code-bg: #f4f1ec;
-    --quote-border: #c2410c;
+    --bg: #020617;
+    --fg: #e5f7ff;
+    --muted: #93a4bd;
+    --accent: #7cf7ff;
+    --accent-2: #c084fc;
+    --accent-3: #34d399;
+    --rule: rgba(124,247,255,0.18);
+    --card: rgba(8,15,35,0.74);
+    --code-bg: rgba(124,247,255,0.08);
+    --quote-border: #7cf7ff;
     --leak-bg: #fef3c7;
     --leak-border: #f59e0b;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0a0a0a;
-      --fg: #f0f0ec;
-      --muted: #9a9a96;
-      --accent: #fb923c;
-      --rule: #2a2a28;
-      --card: #141413;
-      --code-bg: #1a1a18;
-      --quote-border: #fb923c;
-      --leak-bg: #292014;
-      --leak-border: #d97706;
-    }
-  }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-  body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.6; font-size: 17px; font-feature-settings: "ss01", "cv11"; -webkit-font-smoothing: antialiased; }
-  .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 80px; }
-  header.masthead { border-bottom: 1px solid var(--rule); padding-bottom: 20px; margin-bottom: 28px; }
+  body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: radial-gradient(circle at 18% 3%, rgba(124,247,255,0.22), transparent 28rem), radial-gradient(circle at 86% 8%, rgba(192,132,252,0.18), transparent 24rem), linear-gradient(180deg, #020617 0%, #050816 52%, #020617 100%); color: var(--fg); line-height: 1.6; font-size: 17px; font-feature-settings: "ss01", "cv11"; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 88px; }
+  header.masthead { border: 1px solid var(--rule); border-radius: 24px; padding: 18px 20px; margin-bottom: 28px; background: linear-gradient(135deg, rgba(8,15,35,0.78), rgba(4,8,20,0.54)); box-shadow: 0 24px 80px rgba(0,0,0,0.32); backdrop-filter: blur(18px); }
   .nav-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 14px; font-variant-numeric: tabular-nums; }
   .nav-row a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
   .nav-row a:hover { color: var(--accent); border-color: var(--accent); }
-  .masthead .pulse-name { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 38px; letter-spacing: -0.02em; margin: 0; line-height: 1.05; }
+  .masthead .pulse-name { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: clamp(42px, 8vw, 86px); letter-spacing: -0.055em; margin: 0; line-height: 0.88; text-shadow: 0 0 34px rgba(124,247,255,0.18); }
   .masthead .date { font-size: 15px; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
   .toc { margin-top: 14px; font-size: 13px; color: var(--muted); line-height: 1.8; }
   .toc a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; margin-right: 10px; white-space: nowrap; }
   .toc a:hover { color: var(--accent); border-color: var(--accent); }
+  .future-deck { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(300px,.95fr); gap: 18px; margin: 0 0 28px; padding: 18px; border: 1px solid rgba(124,247,255,.24); border-radius: 28px; background: linear-gradient(135deg, rgba(12,20,42,.88), rgba(7,12,28,.62)); box-shadow: 0 24px 90px rgba(0,0,0,.38); }
+  .future-kicker, .deck-label, .lane-k, .protocol-k { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); text-transform: uppercase; letter-spacing: .16em; }
+  .future-title { margin: 8px 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(38px,6.8vw,82px); line-height: .9; letter-spacing: -.06em; }
+  .future-title span { color: var(--accent); }
+  .future-sub { max-width: 680px; color: var(--muted); font-size: 16px; line-height: 1.55; }
+  .future-readout, .lens-grid, .design-protocol { display: grid; gap: 10px; }
+  .future-readout { grid-template-columns: repeat(3,1fr); margin-top: 16px; }
+  .lens-grid { grid-template-columns: repeat(4,1fr); }
+  .design-protocol { grid-template-columns: repeat(3,1fr); margin: 28px 0; }
+  .readout-card, .lane-card, .protocol-card { border: 1px solid var(--rule); border-radius: 18px; background: rgba(7,17,31,.72); padding: 13px 14px; }
+  .readout-v, .lane-v { margin-top: 5px; font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 32px; line-height: 1; }
+  .readout-note, .lane-note, .protocol-card p { color: var(--muted); font-size: 12px; line-height: 1.35; }
+  .future-visual img { width: 100%; display: block; border: 1px solid rgba(124,247,255,.20); border-radius: 22px; background: #020617; }
+  .future-visual figcaption { margin-top: 8px; color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+  .jon-lens { margin: 0 0 28px; }
+  .lens-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 12px; }
+  .lens-head h2 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 28px; letter-spacing: -.03em; }
+  .lane-bar { height: 7px; border-radius: 999px; background: rgba(148,163,184,.18); overflow: hidden; }
+  .lane-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
   .hero { margin: 0 -20px 28px; position: relative; }
   .hero img { width: 100%; height: auto; display: block; }
   .hero figcaption { font-size: 12px; color: var(--muted); font-style: italic; padding: 8px 20px 0; }
@@ -347,7 +354,7 @@
   .v81-stat .st-delta.down { color: #dc2626; }
   .v81-stat .st-delta.flat { color: var(--muted); }
   .v81-stat .st-sub { font-size: 10px; color: var(--muted); margin-top: 6px; line-height: 1.3; }
-  /* v8.3 — Benchmark Compass: uniform scoring + METR-first autonomy graph */
+  /* v9 — Benchmark Observatory: source-first benchmark bays + METR autonomy plot */
   .benchmark-compass { margin: 0 0 28px; }
   .generated-asset { margin: 0 0 14px; border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); background: #050505; }
   .generated-asset img { width: 100%; height: auto; display: block; }
@@ -472,7 +479,8 @@
   @media (max-width: 600px) {
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
-    .masthead .pulse-name { font-size: 30px; }
+    .masthead .pulse-name { font-size: 42px; }
+    .future-deck, .future-readout, .lens-grid, .design-protocol { grid-template-columns: 1fr; }
     .sp-index-pair { flex-direction: column; }
     .morning-brief, .dispute-grid, .future-grid, .watch-rail, .discourse-pulse .dp-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
     .v81-bigchart svg { min-height: 190px; }
@@ -494,6 +502,7 @@
 
 <nav class="sticky-read" aria-label="Quick jump">
   <a href="#sp-index">Index</a>
+  <a href="#future-deck">Observatory</a>
   <a href="#futures-console">Futures</a>
   <a href="#trust">Sources</a>
   <a href="#disagreement">Disagreement</a>
@@ -510,12 +519,14 @@
   <div class="date">{{DATE_LONG}}</div>
   <div>{{AGENT_BYLINES}}</div>
   <nav class="toc" aria-label="Table of contents">
+    <a href="#future-deck">🛰️ Observatory</a>
+    <a href="#jon-lens">🪞 Jon Lens</a>
     <a href="#futures-console">🧭 Futures</a>
     <a href="#top-signal">🔥 Top Signal</a>
     <a href="#stack">⚡ Stack</a>
     <a href="#leaks">🕵️ Leaks</a>
     <a href="#bench-wars">📈 Bench Wars</a>
-    <a href="#benchmark-compass">🧪 METR + Benchmarks</a>
+    <a href="#benchmark-compass">🧪 Observatory</a>
     <a href="#voices">💬 Voices</a>
     <a href="#videos">🎬 Videos</a>
     <a href="#papers">📜 Papers</a>
@@ -526,6 +537,45 @@
     <a href="#watching">🎯 Watching</a>
   </nav>
 </header>
+
+<section class="future-deck" id="future-deck" aria-label="Future newsletter command deck">
+  <div>
+    <div class="future-kicker">Jon Lens · Singularity Observatory</div>
+    <h2 class="future-title">Track the curve, <span>not the feed.</span></h2>
+    <p class="future-sub">A private intelligence terminal for singularity-relevant progress: source-first benchmarks, live media, predictions, and the reader’s explicit weights.</p>
+    <div class="future-readout">
+      <div class="readout-card"><div class="deck-label">SP-Index</div><div class="readout-v">{{SPI_SCORE}}</div><div class="readout-note">{{SPI_DELTA}}</div></div>
+      <div class="readout-card"><div class="deck-label">Jon’s Pulse</div><div class="readout-v">{{JONS_SCORE}}</div><div class="readout-note">{{JONS_DELTA}}</div></div>
+      <div class="readout-card"><div class="deck-label">Priority lane</div><div class="readout-v">Robotics</div><div class="readout-note">From reader-profile weights.</div></div>
+    </div>
+  </div>
+  <div class="future-visual">
+    <figure>
+      <img src="./assets/generated/singularity-observatory-holo.svg" alt="Illustrative holographic observatory for Singularity Pulse tracking lanes">
+      <figcaption>Illustrative UI art only; benchmark evidence is rendered in sourced panels.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="jon-lens" id="jon-lens" aria-label="Personalized singularity tracking weights">
+  <div class="lens-head"><h2>Personal Singularity Lens</h2><span class="deck-label">reader-profile.json</span></div>
+  <div class="lens-grid">
+    <div class="lane-card primary"><div class="lane-k">🤖 Embodied deployment</div><div class="lane-v">20%</div><p class="lane-note">Robots, VLA progress, live shifts, intervention rates.</p><div class="lane-bar"><span style="width:100%"></span></div></div>
+    <div class="lane-card primary"><div class="lane-k">🧠 Autonomy horizon</div><div class="lane-v">18%</div><p class="lane-note">METR, agent task length, reliability gaps.</p><div class="lane-bar"><span style="width:90%"></span></div></div>
+    <div class="lane-card primary"><div class="lane-k">📈 Capability SOTA</div><div class="lane-v">18%</div><p class="lane-note">Benchmarks only when source rows are fresh.</p><div class="lane-bar"><span style="width:90%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">🔬 AI-doing-science</div><div class="lane-v">12%</div><p class="lane-note">Research loops, AI-discovered methods, automated R&amp;D.</p><div class="lane-bar"><span style="width:60%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">⚡ Compute frontier</div><div class="lane-v">10%</div><p class="lane-note">Capex, chips, datacenter scale, training-run substrate.</p><div class="lane-bar"><span style="width:50%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">🧬 BCI bandwidth</div><div class="lane-v">8%</div><p class="lane-note">Patients, channels, signal fidelity, human-AI bandwidth.</p><div class="lane-bar"><span style="width:40%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">🌐 Open frontier</div><div class="lane-v">8%</div><p class="lane-note">Open/closed gap, diffusion risk, local capability.</p><div class="lane-bar"><span style="width:40%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">📚 Release velocity</div><div class="lane-v">6%</div><p class="lane-note">Useful as a volatility signal, not the lead frame.</p><div class="lane-bar"><span style="width:30%"></span></div></div>
+  </div>
+</section>
+
+<section class="design-protocol" aria-label="Newsletter quality protocol">
+  <div class="protocol-card"><div class="protocol-k">01 · Evidence</div><strong>No fake graphs.</strong><p>Every chart needs source URL, source date, raw value, and caveat.</p></div>
+  <div class="protocol-card"><div class="protocol-k">02 · Future UI</div><strong>Instrument panel.</strong><p>Signal lanes, benchmark bays, predictions, and live media compose the issue.</p></div>
+  <div class="protocol-card"><div class="protocol-k">03 · Personal</div><strong>Jon Lens first.</strong><p>Robotics, autonomy, capability, and AI science get priority surface area.</p></div>
+</section>
 
 <section class="morning-brief" aria-label="Issue brief">
   <div class="brief-card">
@@ -583,8 +633,8 @@
 {{SCOREBOARD_CONTENT}}
 </section>
 
-<section class="benchmark-compass" id="benchmark-compass" aria-label="Benchmark Compass">
-<h2 class="section"><span class="emoji">🧪</span> BENCHMARK COMPASS</h2>
+<section class="benchmark-compass" id="benchmark-compass" aria-label="Benchmark Observatory">
+<h2 class="section"><span class="emoji">🧪</span> BENCHMARK OBSERVATORY</h2>
 {{BENCHMARK_DASHBOARD_CONTENT}}
 </section>
 

@@ -53,6 +53,16 @@
       "notes": "Chart histories include synthetic backfill explicitly labeled in issue."
     },
     {
+      "section": "future-deck",
+      "title": "Singularity observatory illustrative asset",
+      "source_url": "./assets/generated/singularity-observatory-holo.svg",
+      "checked_at": "2026-05-14T20:35:00-04:00",
+      "freshness_badge": "generated today",
+      "curve_dimensions": ["autonomy_horizon_min", "embodied_units_30d", "ai_science_events_window", "open_frontier_elo_gap"],
+      "verification_status": "synthetic",
+      "notes": "Illustrative UI art only; explicitly labeled as not evidence in the issue."
+    },
+    {
       "section": "benchmark-compass",
       "title": "METR Time Horizon 1.1 source plot",
       "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",

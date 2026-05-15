@@ -3,7 +3,7 @@
   "last_updated": "2026-05-14T20:13:00-04:00",
   "_note": "Canonical benchmark dashboard for source-faithful visualizations. Composite scoring is paused until each benchmark row is refreshed from primary sources; render raw benchmark plots first.",
   "composite": {
-    "name": "Benchmark Compass",
+    "name": "Benchmark Observatory",
     "score": null,
     "score_prior": null,
     "bands": [],

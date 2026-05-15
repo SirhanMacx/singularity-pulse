@@ -1,4 +1,4 @@
-# Singularity Pulse — Chart Suite (v8.1, redesigned May 14 2026)
+# Singularity Pulse — Chart Suite (v9, source-first)
 
 Charts are first-class daily content. The v8.1 redesign cut the previous 8-chart dense scoreboard down to **3 readable blocks** in this fixed order. Every chart must carry **axis labels, today's value highlighted, and a one-line "🔎 What to see" caption** explaining the editorial read.
 
@@ -12,7 +12,7 @@ The redesign was triggered by reader feedback (May 14): "graphs are impossible t
    - Card 3: 🎯 Predictions (claude/codex hit-rate fraction + 1-line context)
    - Card 4: ⚡ Headline metric of the day — whichever single number best summarizes today's TOP SIGNAL (Meta capex, OpenAI ARR, METR autonomy minutes, etc.). This card rotates daily.
 
-2. **Benchmark Compass + METR source plot** (`.benchmark-compass` / `.metr-source-plot`)
+2. **Benchmark Observatory + METR source plot** (`.benchmark-compass` / `.metr-source-plot`)
    - Renders immediately after the SCOREBOARD. Do not make it the front-door hero.
    - Uses benchmark-source data only: raw values, source URL, source date, and scale labels must be visible.
    - METR plot must use the published Time Horizon 1.1 raw p50/p80 values directly; no invented trend line or projection.

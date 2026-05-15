@@ -168,3 +168,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: The reader specifically wanted METR time horizon, an amalgamation of benchmarks, clearer scoring, interactive graphs, and more singularity visualization.
 
 **Bet for the coming week**: The Benchmark Compass will reduce confusion only if it is boringly accurate first. Add the next visualization one benchmark at a time from primary data, not from project-state snapshots.
+
+## 2026-05-14 · Week 1 · Daily Spec Mutation [codex] · v9 Future Terminal
+
+**Audit window**: Reader rejected the patched visual direction as low-quality and asked to revisit from the top: "newsletter from the future," personalized, interactive/holographic, benchmark-rich, and singularity-tracking.
+
+**Sources added**: Added `DESIGN.md` as the visual/product standard. Added `assets/generated/singularity-observatory-holo.svg` as labeled illustrative UI art.
+
+**Sources removed**: none.
+
+**Sections changed**: Added `Future Deck`, `Personal Singularity Lens`, and `design protocol` modules before the normal issue brief. Renamed the garbage "Benchmark Compass" framing to `Benchmark Observatory`.
+
+**Benchmarks added/dropped**: No new benchmark rows yet. Hard rule added: future benchmark visualizations are added one at a time only after primary-source audit.
+
+**Voice / style-guide updates**: The issue should feel like a private future intelligence terminal, not a generic newsletter. Illustrative art must be labeled as art; data visuals must stay source-faithful.
+
+**Reader-suggested gaps**: Holographic/future UI, personalization, more benchmark visualizations, and a cleaner path to singularity tracking remain active priorities.
+
+**Bet for the coming week**: The next successful iteration will come from a disciplined dashboard system, not more prose or louder glow.

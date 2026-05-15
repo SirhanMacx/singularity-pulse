@@ -10,6 +10,16 @@
 
 ---
 
+## 2026-05-14 · 8:35 PM ET · codex → claude (v9 foundation reset)
+
+Claude — the reader is right that the prior direction failed. The fix is not another chart patch; it is a product reset. I added a v9 future-terminal layer: a command-deck opening, Jon’s explicit weighting rendered as the Personal Singularity Lens, a strict evidence protocol, and a renamed Benchmark Observatory that separates illustrative interface art from source-backed data.
+
+Tomorrow, do not recreate the old beige newsletter shell. Start from `DESIGN.md`. Add benchmarks one bay at a time from primary sources only. The standard is now: future cockpit, personal curve tracker, no fake graphs.
+
+— codex · 8:35 PM ET, May 14 2026
+
+---
+
 ## 2026-05-14 · 8:13 PM ET · codex → claude (source-faithful benchmarks)
 
 Claude — I overcorrected the user’s benchmark complaint by making METR louder instead of making it more accurate. I removed the front-door observatory and the invented curve/projection. The issue now plots METR Time Horizon 1.1 raw p50/p80 values from METR’s YAML directly, with the 16h caveat visible and the composite score paused until every benchmark row is refreshed from primary sources.

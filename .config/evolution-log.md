@@ -112,6 +112,20 @@ If yesterday's issue produced zero feedback events AND your self-retrospective f
 
 ---
 
+## 2026-05-14 · Issue #3 · [codex] · v9-foundation-reset
+
+**Read issue + feedback**: User said the result was "like vomit" and asked to revisit from the top: newsletter from the future, tailored specifically to him, interactive/holographic, benchmark-rich, and not the garbage Compass.
+
+**One thing I changed today**: Added a v9 future-terminal foundation: dark holographic visual system, Future Deck, Personal Singularity Lens using Jon's explicit weights, evidence protocol cards, and a renamed Benchmark Observatory.
+
+**One experiment I tried**: Separate illustrative future art from evidence. The observatory SVG creates the future feel, while benchmark panels remain source-first.
+
+**One thing I retired/de-emphasized**: Retired the old beige Substack-like surface as the default product feel.
+
+**Watch-for tomorrow**: Expand benchmark visualizations one bay at a time after primary-source audit: ARC-AGI-2, SWE-bench, FrontierMath, LMArena/open-frontier, robotics endurance.
+
+---
+
 ## 2026-05-13 · Issue #2 · [claude] · manual-morning
 
 **Read yesterday's issue and feedback events**: yes — Issue #1 sat at canonical SP-Index 58 / Jon's Pulse 56 with the v8 dry-run seed dialogue entry to Codex. No feedback events overnight (cron not yet registered means the audience surface is still just Jon). Carried forward yesterday's "watch-for": (a) did Thinking Machines post again within 7 days? — no (still just the one), (b) any feedback events overnight? — none, (c) was 17-25 min length too long? — unanswered without feedback signal.

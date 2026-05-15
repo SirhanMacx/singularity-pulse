@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Singularity Pulse holographic observatory</title>
+  <desc id="desc">Illustrative holographic interface with singularity tracking lanes orbiting a central intelligence horizon.</desc>
+  <defs>
+    <radialGradient id="core" cx="50%" cy="48%" r="45%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="18%" stop-color="#7cf7ff"/>
+      <stop offset="46%" stop-color="#7c3aed" stop-opacity=".88"/>
+      <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7cf7ff" stop-opacity=".1"/>
+      <stop offset=".5" stop-color="#7cf7ff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#c084fc" stop-opacity=".08"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0v42" fill="none" stroke="#7cf7ff" stroke-opacity=".10" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="720" fill="#020617"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+  <path d="M52 646C230 502 350 438 512 430c235-11 324 135 636-22" fill="none" stroke="#7cf7ff" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M90 520c190-95 330-121 516-78 190 44 287 1 506-106" fill="none" stroke="#c084fc" stroke-opacity=".18" stroke-width="2"/>
+  <g transform="translate(600 360)" filter="url(#glow)">
+    <circle r="156" fill="url(#core)" opacity=".92"/>
+    <ellipse rx="330" ry="112" fill="none" stroke="#7cf7ff" stroke-opacity=".72" stroke-width="2"/>
+    <ellipse rx="258" ry="86" fill="none" stroke="#c084fc" stroke-opacity=".58" stroke-width="2" transform="rotate(-24)"/>
+    <ellipse rx="220" ry="68" fill="none" stroke="#34d399" stroke-opacity=".42" stroke-width="2" transform="rotate(37)"/>
+    <circle r="10" fill="#fff"/>
+    <circle r="5" cx="330" fill="#7cf7ff"/>
+    <circle r="6" cx="-258" cy="0" fill="#c084fc" transform="rotate(-24)"/>
+    <circle r="5" cx="220" cy="0" fill="#34d399" transform="rotate(37)"/>
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui" font-size="22" fill="#e5f9ff" font-weight="700">
+    <text x="88" y="98">AUTONOMY HORIZON</text>
+    <text x="900" y="128">EMBODIED DEPLOYMENT</text>
+    <text x="100" y="615">AI-DOING-SCIENCE</text>
+    <text x="818" y="620">OPEN FRONTIER</text>
+  </g>
+  <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="15" fill="#93c5fd">
+    <text x="88" y="124">METR · p50 / p80 · caveated</text>
+    <text x="900" y="154">Figure · VLA · fleet hours</text>
+    <text x="100" y="641">AlphaEvolve · automated R&amp;D</text>
+    <text x="818" y="646">Elo gap · weights · diffusion</text>
+  </g>
+  <g stroke="url(#beam)" stroke-width="2" fill="none">
+    <path d="M288 118L486 292"/>
+    <path d="M900 154L716 292"/>
+    <path d="M316 628L512 440"/>
+    <path d="M818 638L704 438"/>
+  </g>
+  <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="13" fill="#cbd5e1" opacity=".88">
+    <text x="442" y="678">ILLUSTRATIVE UI ART · DATA LIVES IN THE BENCHMARK PANELS</text>
+  </g>
+</svg>

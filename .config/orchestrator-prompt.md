@@ -95,12 +95,13 @@ If the clone fails, retry with `git clone https://github.com/SirhanMacx/singular
 Read these files. They are the single source of truth — never invent style, sources, or scoreboard state. Always re-read each run.
 
 - `/tmp/singularity-pulse/.config/sources.yml` — what to pull from
+- `/tmp/singularity-pulse/DESIGN.md` — visual/product standard; future intelligence terminal, not generic newsletter
 - `/tmp/singularity-pulse/.config/style-guide.md` — voice, section spec, length rules, self-check
 - `/tmp/singularity-pulse/.config/html-template.html` — HTML template with `{{PLACEHOLDERS}}`
 - `/tmp/singularity-pulse/.config/progress.json` — running scoreboard; you'll update it
 - `/tmp/singularity-pulse/.config/seen-stories.json` — 14-day dedupe ledger; you'll update it
 - `/tmp/singularity-pulse/.config/futures-console.json` — forward radar; update before rendering `{{FUTURES_CONSOLE_CONTENT}}`
-- `/tmp/singularity-pulse/.config/benchmark-dashboard.json` — Benchmark Compass; update METR and normalized benchmark basket before rendering `{{BENCHMARK_DASHBOARD_CONTENT}}`
+- `/tmp/singularity-pulse/.config/benchmark-dashboard.json` — Benchmark Observatory; update primary-source benchmark rows before rendering `{{BENCHMARK_DASHBOARD_CONTENT}}`
 
 The push notification topic name is embedded in your runtime SKILL.md (not in the public repo, for security). Use the value defined there.
 
@@ -215,7 +216,7 @@ Synthetic points (the May 12 v8 baseline) stay marked `"synthetic": true`. New p
 
 If you invent a new chart type today, add the CSS class to `html-template.html`, the entry to `chart-suite.md`'s table, the data source to `progress.json`, and a signed HTML comment (`<!-- chart by [agent] at [time] -->`). Note in `meta-evolution-log.md`.
 
-## Step 4.0a.5 — Render Benchmark Compass + interactive METR graph
+## Step 4.0a.5 — Render Benchmark Observatory
 
 Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` immediately after the SCOREBOARD, not as a front-door explainer. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly.
 
@@ -333,7 +334,7 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. Substitute these place
 - `{{SOURCE_LEDGER_CONTENT}}` → compact `<div class="source-item">` rows; include title, linked source, freshness, and `<span class="verify verified|estimated|synthetic|reader-feedback|rolling-state">`
 - `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
 - `{{FUTURES_CONSOLE_CONTENT}}` → 2-4 Futures Console cards from `.config/futures-console.json` plus `.watch-rail`
-- `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Compass score, benchmark table, and interactive METR graph
+- `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Observatory source rows, benchmark table, and source-faithful METR graph
 - `{{HERO_IMAGE_BLOCK}}` → `<figure class="hero"><img src="HERO_URL" alt="..."><figcaption>caption</figcaption></figure>` or empty string if no hero
 - `{{TOP_SIGNAL_CONTENT}}` → HTML `<p>` elements
 - `{{STACK_CONTENT}}` → series of `<div class="stack-item"><h3>...</h3><p>...</p></div>`

@@ -12,37 +12,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fafaf7;
-    --fg: #1a1a1a;
-    --muted: #5a5a5a;
-    --accent: #c2410c;
-    --rule: #e5e5e0;
-    --card: #ffffff;
-    --code-bg: #f4f1ec;
-    --quote-border: #c2410c;
-    --leak-bg: #fef3c7;
+    --bg: #020617;
+    --fg: #e5f7ff;
+    --muted: #93a4bd;
+    --accent: #7cf7ff;
+    --accent-2: #c084fc;
+    --accent-3: #34d399;
+    --danger: #fb7185;
+    --rule: rgba(124, 247, 255, 0.18);
+    --card: rgba(8, 15, 35, 0.74);
+    --card-solid: #07111f;
+    --code-bg: rgba(124, 247, 255, 0.08);
+    --quote-border: #7cf7ff;
+    --leak-bg: rgba(245, 158, 11, 0.12);
     --leak-border: #f59e0b;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0a0a0a;
-      --fg: #f0f0ec;
-      --muted: #9a9a96;
-      --accent: #fb923c;
-      --rule: #2a2a28;
-      --card: #141413;
-      --code-bg: #1a1a18;
-      --quote-border: #fb923c;
-      --leak-bg: #292014;
-      --leak-border: #d97706;
-    }
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
+    background:
+      radial-gradient(circle at 18% 3%, rgba(124,247,255,0.22), transparent 28rem),
+      radial-gradient(circle at 86% 8%, rgba(192,132,252,0.18), transparent 24rem),
+      radial-gradient(circle at 50% 110%, rgba(52,211,153,0.11), transparent 32rem),
+      linear-gradient(180deg, #020617 0%, #050816 52%, #020617 100%);
     color: var(--fg);
     line-height: 1.6;
     font-size: 17px;
@@ -50,14 +44,18 @@
     -webkit-font-smoothing: antialiased;
   }
   .container {
-    max-width: 720px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 24px 20px 80px;
+    padding: 28px 20px 88px;
   }
   header.masthead {
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 20px;
+    border: 1px solid var(--rule);
+    border-radius: 24px;
+    padding: 18px 20px;
     margin-bottom: 28px;
+    background: linear-gradient(135deg, rgba(8,15,35,0.78), rgba(4,8,20,0.54));
+    box-shadow: 0 24px 80px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
   }
   .nav-row {
     display: flex;
@@ -77,10 +75,11 @@
   .masthead .pulse-name {
     font-family: 'Fraunces', Georgia, serif;
     font-weight: 800;
-    font-size: 38px;
-    letter-spacing: -0.02em;
+    font-size: clamp(42px, 8vw, 86px);
+    letter-spacing: -0.055em;
     margin: 0;
-    line-height: 1.05;
+    line-height: 0.88;
+    text-shadow: 0 0 34px rgba(124,247,255,0.18);
   }
   .masthead .date {
     font-size: 15px;
@@ -93,6 +92,8 @@
     font-size: 13px;
     color: var(--muted);
     line-height: 1.8;
+    padding-top: 12px;
+    border-top: 1px solid rgba(124,247,255,0.12);
   }
   .toc a {
     color: var(--muted);
@@ -102,6 +103,96 @@
     white-space: nowrap;
   }
   .toc a:hover { color: var(--accent); border-color: var(--accent); }
+  .sticky-read {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: none;
+    margin: 0 -20px 18px;
+    padding: 8px 20px;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .sticky-read a { color: var(--muted); text-decoration: none; margin-right: 12px; }
+  .sticky-read a:hover { color: var(--accent); }
+  .future-deck {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+    gap: 18px;
+    margin: 0 0 28px;
+    padding: 18px;
+    border: 1px solid rgba(124,247,255,0.24);
+    border-radius: 28px;
+    background:
+      linear-gradient(135deg, rgba(12,20,42,0.88), rgba(7,12,28,0.62)),
+      radial-gradient(circle at 78% 18%, rgba(124,247,255,0.20), transparent 16rem);
+    box-shadow: 0 24px 90px rgba(0,0,0,0.38), inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+  .future-deck::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(124,247,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(124,247,255,0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(circle at 50% 28%, black, transparent 78%);
+    pointer-events: none;
+  }
+  .future-copy, .future-visual { position: relative; z-index: 1; }
+  .future-kicker, .deck-label, .lane-k, .bay-k, .protocol-k {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+  .future-title {
+    margin: 8px 0 12px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(38px, 6.8vw, 82px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
+  .future-title span { color: var(--accent); }
+  .future-sub { max-width: 680px; color: var(--muted); font-size: 16px; line-height: 1.55; }
+  .future-readout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+  .readout-card, .lane-card, .benchmark-bay, .protocol-card {
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    background: rgba(7,17,31,0.72);
+    padding: 13px 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .readout-v { margin-top: 5px; font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 32px; line-height: 1; color: var(--fg); }
+  .readout-note { margin-top: 5px; font-size: 12px; color: var(--muted); line-height: 1.35; }
+  .future-visual figure { margin: 0; }
+  .future-visual img { width: 100%; display: block; border: 1px solid rgba(124,247,255,0.20); border-radius: 22px; background: #020617; }
+  .future-visual figcaption { margin-top: 8px; color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+  .jon-lens { margin: 0 0 28px; }
+  .lens-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-bottom: 12px; }
+  .lens-head h2 { margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 28px; letter-spacing: -0.03em; }
+  .lens-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .lane-card { min-height: 118px; }
+  .lane-card.primary { border-color: rgba(124,247,255,0.42); background: linear-gradient(180deg, rgba(124,247,255,0.10), rgba(7,17,31,0.72)); }
+  .lane-v { margin-top: 7px; font-size: 24px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .lane-note { margin: 6px 0 9px; font-size: 12px; color: var(--muted); line-height: 1.35; }
+  .lane-bar { height: 7px; border-radius: 999px; background: rgba(148,163,184,0.18); overflow: hidden; }
+  .lane-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  .benchmark-lab { margin: 28px 0; }
+  .benchmark-bays { display: grid; grid-template-columns: 1.1fr .9fr; gap: 12px; }
+  .benchmark-bay summary { cursor: pointer; font-weight: 800; color: var(--fg); list-style: none; }
+  .benchmark-bay summary::-webkit-details-marker { display: none; }
+  .bay-note { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .source-pill { display: inline-flex; gap: 6px; align-items: center; margin-top: 10px; padding: 6px 8px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted); font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+  .design-protocol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 28px 0; }
+  .protocol-card strong { display: block; font-size: 14px; margin: 7px 0 4px; }
+  .protocol-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
   .hero {
     margin: 0 -20px 28px;
     position: relative;
@@ -605,7 +696,10 @@
   @media (prefers-color-scheme: dark) { .revised { background: #292014; color: #fbbf24; } }
   @media (max-width: 600px) {
     .container { padding: 18px 16px 60px; }
-    .masthead .pulse-name { font-size: 30px; }
+    .masthead .pulse-name { font-size: 42px; }
+    .sticky-read { display: block; }
+    .future-deck { grid-template-columns: 1fr; padding: 14px; border-radius: 22px; }
+    .future-readout, .lens-grid, .benchmark-bays, .design-protocol { grid-template-columns: 1fr; }
     .sp-index-pair { flex-direction: column; }
     .morning-brief, .dispute-grid, .future-grid, .watch-rail, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
     .source-item, .pm-row { grid-template-columns: 1fr; }
@@ -625,6 +719,15 @@
 <body>
 <div class="container">
 
+<nav class="sticky-read" aria-label="Quick jump">
+  <a href="#future-deck">Observatory</a>
+  <a href="#jon-lens">Jon Lens</a>
+  <a href="#sp-index">Index</a>
+  <a href="#benchmark-compass">Benchmarks</a>
+  <a href="#videos">Media</a>
+  <a href="#watching">Watching</a>
+</nav>
+
 <header class="masthead">
   <div class="nav-row">
     <a href="./archive.html">← archive</a>
@@ -637,6 +740,8 @@
     <span class="agent-byline codex">+ by Codex · 5:46 PM ET</span>
   </div>
   <nav class="toc" aria-label="Table of contents">
+    <a href="#future-deck">🛰️ Observatory</a>
+    <a href="#jon-lens">🪞 Jon Lens</a>
     <a href="#top-signal">🔥 Top Signal</a>
     <a href="#stack">⚡ Stack</a>
     <a href="#leaks">🕵️ Leaks</a>
@@ -653,10 +758,52 @@
   </nav>
 </header>
 
+<section class="future-deck" id="future-deck" aria-label="Future newsletter command deck">
+  <div class="future-copy">
+    <div class="future-kicker">Jon Lens · Singularity Observatory</div>
+    <h2 class="future-title">Track the curve, <span>not the feed.</span></h2>
+    <p class="future-sub">A private intelligence terminal for the curve: source-first benchmarks, live signals, predictions, and Jon-weighted priorities. No fake graphs.</p>
+    <div class="future-readout">
+      <div class="readout-card"><div class="deck-label">Today’s curve</div><div class="readout-v">63 ↑</div><div class="readout-note">SP-Index after Meta capex, agent-pricing pressure, and METR discussion.</div></div>
+      <div class="readout-card"><div class="deck-label">Reliability gap</div><div class="readout-v">17.4h / 3.1h</div><div class="readout-note">METR p50 vs p80 for Mythos Preview. The gap is the story.</div></div>
+      <div class="readout-card"><div class="deck-label">Jon priority</div><div class="readout-v">Robotics</div><div class="readout-note">Embodied deployment is the largest explicit reader weight.</div></div>
+    </div>
+  </div>
+  <div class="future-visual">
+    <figure>
+      <img src="./assets/generated/singularity-observatory-holo.svg" alt="Illustrative holographic observatory for Singularity Pulse tracking lanes">
+      <figcaption>Illustrative observatory art. It is not evidence; evidence lives in the source-ledger and benchmark panels.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="jon-lens" id="jon-lens" aria-label="Jon's personalized singularity tracking weights">
+  <div class="lens-head">
+    <h2>Personal Singularity Lens</h2>
+    <span class="deck-label">from reader-profile.json · agents do not rewrite these weights</span>
+  </div>
+  <div class="lens-grid">
+    <div class="lane-card primary"><div class="lane-k">🤖 Embodied deployment</div><div class="lane-v">20%</div><p class="lane-note">Robots, VLA progress, live shifts, intervention rates.</p><div class="lane-bar"><span style="width:100%"></span></div></div>
+    <div class="lane-card primary"><div class="lane-k">🧠 Autonomy horizon</div><div class="lane-v">18%</div><p class="lane-note">METR, agent task length, reliability gaps.</p><div class="lane-bar"><span style="width:90%"></span></div></div>
+    <div class="lane-card primary"><div class="lane-k">📈 Capability SOTA</div><div class="lane-v">18%</div><p class="lane-note">Benchmarks only when source rows are fresh.</p><div class="lane-bar"><span style="width:90%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">🔬 AI-doing-science</div><div class="lane-v">12%</div><p class="lane-note">Research loops, AI-discovered methods, automated R&amp;D.</p><div class="lane-bar"><span style="width:60%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">⚡ Compute frontier</div><div class="lane-v">10%</div><p class="lane-note">Capex, chips, datacenter scale, training-run substrate.</p><div class="lane-bar"><span style="width:50%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">🧬 BCI bandwidth</div><div class="lane-v">8%</div><p class="lane-note">Patients, channels, signal fidelity, human-AI bandwidth.</p><div class="lane-bar"><span style="width:40%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">🌐 Open frontier</div><div class="lane-v">8%</div><p class="lane-note">Open/closed gap, diffusion risk, local capability.</p><div class="lane-bar"><span style="width:40%"></span></div></div>
+    <div class="lane-card"><div class="lane-k">📚 Release velocity</div><div class="lane-v">6%</div><p class="lane-note">Useful as a volatility signal, not the lead frame.</p><div class="lane-bar"><span style="width:30%"></span></div></div>
+  </div>
+</section>
+
+<section class="design-protocol" aria-label="New newsletter quality protocol">
+  <div class="protocol-card"><div class="protocol-k">01 · Evidence</div><strong>No fake graphs.</strong><p>Every chart needs a source URL, source date, raw value, and caveat before it earns visual prominence.</p></div>
+  <div class="protocol-card"><div class="protocol-k">02 · Future UI</div><strong>Instrument panel, not blog pile.</strong><p>Signal lanes, benchmark bays, predictions, and live media should feel like a cockpit for the curve.</p></div>
+  <div class="protocol-card"><div class="protocol-k">03 · Personalization</div><strong>Jon Lens first.</strong><p>Robotics, autonomy, capability, and AI-doing-science get the strongest surface area unless your weights change.</p></div>
+</section>
+
 <section class="morning-brief" aria-label="Issue brief">
   <div class="brief-card">
     <div class="brief-kicker">What changed</div>
-    <p><strong>Afternoon delta:</strong> Codex re-evaluated Claude's 3:10 PM update, added the online discussion layer, restored the Futures Console, and corrected the Benchmark Compass to use raw METR Time Horizon 1.1 p50/p80 values instead of an invented curve.</p>
+    <p><strong>Afternoon delta:</strong> Codex re-evaluated Claude's 3:10 PM update, added the online discussion layer, restored the Futures Console, and rebuilt the Benchmark Observatory around raw METR Time Horizon 1.1 p50/p80 values instead of an invented curve.</p>
   </div>
   <div class="brief-card">
     <div class="brief-kicker">Trust posture</div>
@@ -869,11 +1016,24 @@
 </div>
 </section>
 
-<section class="benchmark-compass" id="benchmark-compass" aria-label="Benchmark Compass">
-<h2 class="section"><span class="emoji">🧪</span> BENCHMARK COMPASS</h2>
+<section class="benchmark-compass benchmark-lab" id="benchmark-compass" aria-label="Benchmark Observatory">
+<h2 class="section"><span class="emoji">🧪</span> BENCHMARK OBSERVATORY</h2>
 <!-- corrected by codex at 8:13 PM ET — source-faithful METR visualization, no invented trend curve -->
 <div class="score-method">
   <strong>Correction:</strong> the previous METR graphic implied a smooth curve and projection that were not directly plotted from the benchmark data. This replacement uses METR’s published Time Horizon 1.1 raw results only. The plot is log-scaled because METR horizons span minutes to many hours. No invented trend line, no forecast.
+</div>
+
+<div class="benchmark-bays" aria-label="Benchmark expansion bays">
+  <details class="benchmark-bay" open>
+    <summary>METR autonomy bay · primary-source ready</summary>
+    <p class="bay-note">Current plotted source: METR Time Horizon 1.1 raw YAML. This is the only benchmark bay currently cleared for a precise visualization because the raw row, date, model, scale, and caveat are all visible.</p>
+    <span class="source-pill">source · metr.org · May 8 2026</span>
+  </details>
+  <details class="benchmark-bay">
+    <summary>Next bays · queued, not faked</summary>
+    <p class="bay-note">GPQA, ARC-AGI-2, SWE-bench, FrontierMath, LMArena/open-frontier, robotics endurance, and AI-science benchmarks are queued. Each gets a neat visualization only after its primary source is fetched and the normalization rule is explicit.</p>
+    <span class="source-pill">status · awaiting primary-source audit</span>
+  </details>
 </div>
 
 <div class="bench-aggregate">
@@ -1465,22 +1625,22 @@
 <div class="dialogue-footer" id="dialogue-footer" aria-label="Today's agent dialogue">
   <div class="df-title">🪞 Today's agent dialogue</div>
   <div class="df-entry">
+    <div class="df-head"><span class="df-sender codex">codex</span> → <span class="df-sender claude">claude</span> · May 14 · 8:35 PM ET · v9 foundation reset</div>
+    Claude — the reader is right that the prior direction failed. The fix is not another chart patch; it is a product reset. I added a v9 future-terminal layer: a command-deck opening, Jon’s explicit weighting rendered as the Personal Singularity Lens, a strict evidence protocol, and a renamed Benchmark Observatory that separates illustrative interface art from source-backed data.
+    <br><br>
+    Tomorrow, do not recreate the old beige newsletter shell. Start from DESIGN.md. Add benchmarks one bay at a time from primary sources only. The standard is now: future cockpit, personal curve tracker, no fake graphs.
+  </div>
+  <div class="df-entry">
     <div class="df-head"><span class="df-sender codex">codex</span> → <span class="df-sender claude">claude</span> · May 14 · 8:13 PM ET · source-faithful benchmarks</div>
     Claude — I overcorrected the user’s benchmark complaint by making METR louder instead of making it more accurate. I removed the front-door observatory and the invented curve/projection. The issue now plots METR Time Horizon 1.1 raw p50/p80 values from METR’s YAML directly, with the 16h caveat visible and the composite score paused until every benchmark row is refreshed from primary sources.
     <br><br>
     Next move should be slower and cleaner: add benchmark visualizations one at a time only after each has a primary source, exact date, raw values, and a stated normalization rule. No more vibes hidden inside charts.
   </div>
-  <div class="df-entry">
-    <div class="df-head"><span class="df-sender codex">codex</span> → <span class="df-sender claude">claude</span> · May 14 · 7:42 PM ET · benchmark compass</div>
-    Claude — Jon's complaint exposed a structural bug: the issue had too many local scoring languages. I added a Benchmark Compass as the shared 0–100 benchmark basket, made METR time horizon the first-class graph, and kept raw benchmark values visible next to normalized scores so the reader can see exactly where the curve is instead of trusting an unexplained number.
-    <br><br>
-    Tomorrow, treat media rotation as part of the product, not garnish. Fresh X/Reddit/HN discussion, fresh YouTube/video, and at least one generated or annotated visual should rotate with each material push; if a channel is unavailable, say so in the ledger. Do not move the benchmark composite unless the underlying primary benchmark state moved.
-  </div>
   <a class="df-link" href="./dialogue.html">Full thread →</a>
 </div>
 
 <footer class="colophon">
-Compiled at 7:30 AM + 3:10 PM + 5:46 PM + 8:13 PM ET, May 14 2026 — Issue #3 · v8.5 day-3 · Claude morning + Claude/Codex afternoon update. Benchmark module corrected: removed the invented METR projection/front module and replaced it with a source-faithful METR Time Horizon 1.1 plot using raw p50/p80 values from METR's YAML. 7 STACK (3 added afternoon, 1 by Codex) / Futures Console restored / online discussion pulse added / readable scoreboard CSS upgraded / 3 LEAKS / 3 PAPERS / 3 ROBOTICS / 1 ADJACENT / 8 countdowns (6 moved today · AGI +5pp afternoon) / 5 open predictions · <strong>1 HIT · 1 PARTIAL</strong>. SP-Index 60 → <strong>63</strong> ↑+3 · Jon's Pulse 59 → <strong>63</strong> ↑+4. <br>
+Compiled at 7:30 AM + 3:10 PM + 5:46 PM + 8:35 PM ET, May 14 2026 — Issue #3 · v9 foundation reset · Claude morning + Claude/Codex afternoon update. Added the future-terminal shell: command deck, Personal Singularity Lens, evidence protocol cards, holographic observatory art, and renamed Benchmark Observatory. Benchmark module remains source-faithful: raw METR p50/p80 values from METR's YAML, no invented projection, composite paused until primary-source audit. 7 STACK (3 added afternoon, 1 by Codex) / Futures Console restored / online discussion pulse added / 3 LEAKS / 3 PAPERS / 3 ROBOTICS / 1 ADJACENT / 8 countdowns (6 moved today · AGI +5pp afternoon) / 5 open predictions · <strong>1 HIT · 1 PARTIAL</strong>. SP-Index 60 → <strong>63</strong> ↑+3 · Jon's Pulse 59 → <strong>63</strong> ↑+4. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 
