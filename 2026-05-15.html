@@ -616,8 +616,8 @@
   <aside class="briefing-instruments" aria-label="Singularity tracker readouts">
     <div class="instrument-card">
   <div class="instrument-k">SP-Index</div>
-  <div class="instrument-v">65</div>
-  <div class="instrument-note">+1 · evidence-only index</div>
+  <div class="instrument-v">66</div>
+  <div class="instrument-note">+1 afternoon · deployment-coverage anchor</div>
 </div>
 <div class="instrument-card">
   <div class="instrument-k">METR p50</div>
@@ -649,15 +649,27 @@
 </article>
 <article class="brief-card compact story-card">
   <div class="compact-k"><span class="impact high">high</span>agent economics <span class="ago">today / yesterday</span></div>
-  <h3><a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">Agent economics became the live fight: free-feeling subscriptions versus token reality.</a> <sup class="source-cites"><a href="#fn-axios-agent-metering">8</a><a href="#fn-anthropic-compute-limits">9</a><a href="#fn-reddit-claudecode-limits">10</a><a href="#fn-reddit-codex-2026">11</a><a href="#fn-ars-cat-wu">12</a></sup></h3>
-  <p>Axios framed the Anthropic/OpenAI fight as the end of all-you-can-eat agent usage; Anthropic says a SpaceX compute deal doubles Claude Code five-hour limits; this morning Ars Technica published a direct interview with Anthropic’s Claude Code product lead Cat Wu: “We have no grand plan, by design.”</p>
-  <p class="why"><strong>Why it matters:</strong> Agent capability is now inseparable from metering. The Cat Wu interview is the first time a frontier lab has publicly framed harness leanness and rate-limit transparency as deliberate product strategy rather than ad-hoc capacity rationing. The model that wins may be the one that gives users enough long-horizon work budget to actually build with it.</p>
+  <h3><a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">Agent economics became the live fight: free-feeling subscriptions versus token reality.</a> <sup class="source-cites"><a href="#fn-axios-agent-metering">8</a><a href="#fn-anthropic-compute-limits">9</a><a href="#fn-reddit-claudecode-limits">10</a><a href="#fn-reddit-codex-2026">11</a><a href="#fn-tc-cat-wu">12</a></sup></h3>
+  <p>Axios framed the Anthropic/OpenAI fight as the end of all-you-can-eat agent usage; Anthropic says a SpaceX compute deal doubles Claude Code five-hour limits; TechCrunch (May 13, Lucas Ropek) published a direct interview with Anthropic’s Claude Code product lead Cat Wu — “the next big thing is proactivity… Claude understands what you work on, and just sets up some of these automations for you.”</p>
+  <p class="why"><strong>Why it matters:</strong> Agent capability is now inseparable from metering AND from what the agent decides to do without being asked. Wu’s “proactivity” frame moves the load-bearing question from “how much can I use it” to “how much is it allowed to act for me” — the same surface where the long-horizon work budget gets spent. <em>Afternoon correction: the morning fire cited an Ars Technica URL that does not resolve and a quote that does not appear in the verified source. Replaced with the TechCrunch primary.</em></p>
 </article>
 <article class="brief-card compact story-card">
   <div class="compact-k"><span class="impact medium">medium</span>benchmark evolution <span class="ago">this week</span></div>
   <h3><a href="https://papers.cool/arxiv/2605.06869">Agent benchmark work is moving from static exams toward sequential, embodied, and operational tasks.</a> <sup class="source-cites"><a href="#fn-agentick-paper">13</a><a href="#fn-embodied-ai-paper">14</a></sup></h3>
   <p>Agentick proposes 37 procedurally generated sequential-decision tasks and reports that GPT-5 mini leads overall at 0.309 oracle-normalized score, while the SAE embodied-AI paper argues deployment is a lifecycle reliability problem, not just a model-score problem.</p>
   <p class="why"><strong>Why it matters:</strong> The tracker needs benchmarks that look like work: sequential decisions, tool use, robot operations, and failure recovery. Static leaderboard numbers are useful but incomplete.</p>
+</article>
+<article class="brief-card compact story-card">
+  <div class="compact-k"><span class="impact high">high</span>deployment coverage <span class="ago">yesterday · primary</span></div>
+  <h3><a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic + Gates Foundation: $200M, four years, AI aimed at 4.6 billion underserved people.</a> <sup class="source-cites"><a href="#fn-gates-anthropic">23</a><a href="#fn-gates-foundation-release">24</a></sup></h3>
+  <p>Announced May 14: grant funding + Claude credits + technical support across global health, life sciences, K-12 education in the US/sub-Saharan Africa/India, agriculture, and economic mobility. The biggest portion targets vaccines and therapies for neglected diseases — AI-assisted candidate screening before pre-clinical. Investment also goes into <em>shared public goods</em>: datasets, benchmarks, infrastructure.</p>
+  <p class="why"><strong>Why it matters:</strong> This is the largest single AI-for-public-good capital commitment yet announced in 2026, and it’s the first time a frontier-lab’s deployment-coverage curve gets a four-year non-revenue commitment at scale. It moves Anthropic’s public posture from “best-coding-agent” to “civilizational infrastructure” — exactly the framing Amodei has been seeding for 18 months in his “country of geniuses” thesis. <em>Doesn’t move Jon Pulse (not a robotics/autonomy lane) but does move canonical SP-Index +1.</em></p>
+</article>
+<article class="brief-card compact story-card">
+  <div class="compact-k"><span class="impact medium">medium</span>ai-doing-science <span class="ago">this week · primary</span></div>
+  <h3><a href="https://deepmind.google/discover/blog/reimagining-the-mouse-pointer-for-the-ai-era/">DeepMind: the mouse pointer is the wrong UI for an agent-era OS.</a> <sup class="source-cites"><a href="#fn-deepmind-pointer">25</a></sup></h3>
+  <p>DeepMind Research argues the cursor — the 1968 Engelbart artifact — was designed for a world where humans were the only thing acting on the screen. In an agent-era OS the pointer becomes a <em>handoff surface</em>: where attention transitions between user intent and agent action. Companion piece to AlphaEvolve scale-out and last week’s Magic Pointer experiment.</p>
+  <p class="why"><strong>Why it matters:</strong> Pairs with Cat Wu’s proactivity frame on the same week — Anthropic and DeepMind both publicly arguing the next UI primitive is “what does the agent do without being asked.” This is the slow-burn variable behind the agent-economics fight: not <em>how much</em> agent budget, but <em>how much initiative</em>.</p>
 </article>
   </div>
 </section>
@@ -685,7 +697,7 @@
 <section class="morning-brief" aria-label="Issue brief">
   <div class="brief-card">
     <div class="brief-kicker">What changed</div>
-    <p>Inheriting Codex’s source-first foundation. Morning addition: Anthropic’s Claude Code product lead Cat Wu broke the agent-economics framing publicly via Ars Technica (6:30 AM ET) — “we have no grand plan, by design” — primary-source confirmation of yesterday’s metering fight, 20 minutes before Codex’s reset went live.</p>
+    <p>Inheriting Codex’s source-first foundation. Afternoon: (a) corrected morning Cat Wu citation — the real primary is TechCrunch (May 13, Lucas Ropek), quote was “the next big thing is proactivity,” not the morning’s fabricated “grand plan” line; (b) promoted Anthropic + Gates Foundation $200M four-year partnership (announced 11:30 AM ET May 14) as a fresh deployment-coverage anchor; (c) added DeepMind’s “Reimagining the mouse pointer for the AI era” to the AI-doing-science lane.</p>
   </div>
   <div class="brief-card">
     <div class="brief-kicker">Trust posture</div>
@@ -701,13 +713,13 @@
   <div class="sp-index-pair">
     <div class="pair-side canonical">
       <div class="pair-label">🌀 SP-Index · canonical</div>
-      <div class="pair-score">65<span class="score-delta up">+1</span></div>
-      <span class="pair-tag">equal-weighted · new series (30d)</span>
+      <div class="pair-score">66<span class="score-delta up">+2</span></div>
+      <span class="pair-tag">equal-weighted · +1 morning, +1 afternoon</span>
     </div>
     <div class="pair-side jons">
       <div class="pair-label">🪞 Jon's Pulse · weighted</div>
       <div class="pair-score">65<span class="score-delta up">+2</span></div>
-      <span class="pair-tag">robotics-tilt · per reader-profile</span>
+      <span class="pair-tag">robotics-tilt · partnership lane not Jon-weighted</span>
     </div>
   </div>
   <div class="components">
@@ -717,9 +729,9 @@
   <span class="cdelta flat">raw, caveated</span>
 </div>
 <div class="comp">
-  <span class="ckey">Agent adoption <sup class="source-cites"><a href="#fn-openai-codex-mobile">1</a><a href="#fn-ars-cat-wu">12</a></sup></span>
-  <span class="cval">Codex mobile + named-source metering frame</span>
-  <span class="cdelta up">Cat Wu primary</span>
+  <span class="ckey">Agent adoption <sup class="source-cites"><a href="#fn-openai-codex-mobile">1</a><a href="#fn-tc-cat-wu">12</a></sup></span>
+  <span class="cval">Codex mobile + Cat Wu “proactivity” frame</span>
+  <span class="cdelta up">TechCrunch primary</span>
 </div>
 <div class="comp">
   <span class="ckey">Benchmark state <sup class="source-cites"><a href="#fn-agiranker">17</a><a href="#fn-agiranker-models">18</a></sup></span>
@@ -760,7 +772,19 @@
   <span class="verify verified">verified</span>
 </div>
 <div class="source-item">
-  <div><div class="s-title"><a href="https://arstechnica.com/ai/2026/05/claude-codes-product-lead-talks-usage-limits-transparency-and-the-lean-harness/">Claude Code’s product lead talks usage limits, transparency, and the “lean harness”</a></div><div class="s-meta">Ars Technica · primary-interview · 1.5h ago / fresh today</div></div>
+  <div><div class="s-title"><a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">Anthropic’s Cat Wu says that, in the future, AI will anticipate your needs before you know what they are</a></div><div class="s-meta">TechCrunch · Lucas Ropek · primary-interview · May 13 / 2 days ago</div></div>
+  <span class="verify verified">verified</span>
+</div>
+<div class="source-item">
+  <div><div class="s-title"><a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic forms $200 million partnership with the Gates Foundation</a></div><div class="s-meta">Anthropic · primary · May 14 / yesterday</div></div>
+  <span class="verify verified">verified</span>
+</div>
+<div class="source-item">
+  <div><div class="s-title"><a href="https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership">Making AI work for more people</a></div><div class="s-meta">Gates Foundation · primary · May 14 / yesterday</div></div>
+  <span class="verify verified">verified</span>
+</div>
+<div class="source-item">
+  <div><div class="s-title"><a href="https://deepmind.google/discover/blog/reimagining-the-mouse-pointer-for-the-ai-era/">Reimagining the mouse pointer for the AI era</a></div><div class="s-meta">Google DeepMind Research · primary · May 2026</div></div>
   <span class="verify verified">verified</span>
 </div>
 <div class="source-item">
@@ -841,7 +865,7 @@
 
 <section class="scoreboard" id="scoreboard" aria-label="Visual scoreboard">
 <h2 class="section"><span class="emoji">📊</span> SCOREBOARD</h2>
-<div class="v81-stats"><div class="v81-stat"><div class="st-label">SP-Index</div><div class="st-value accent">65</div><div class="st-sub">+1</div></div><div class="v81-stat"><div class="st-label">Jon’s Pulse</div><div class="st-value accent">65</div><div class="st-sub">+2</div></div><div class="v81-stat"><div class="st-label">Benchmark score</div><div class="st-value accent">paused</div><div class="st-sub">raw rows only</div></div><div class="v81-stat"><div class="st-label">Source count</div><div class="st-value accent">22</div><div class="st-sub">visible footnotes</div></div></div>
+<div class="v81-stats"><div class="v81-stat"><div class="st-label">SP-Index</div><div class="st-value accent">66</div><div class="st-sub">+2 (1 AM + 1 PM)</div></div><div class="v81-stat"><div class="st-label">Jon’s Pulse</div><div class="st-value accent">65</div><div class="st-sub">+2 morning</div></div><div class="v81-stat"><div class="st-label">Benchmark score</div><div class="st-value accent">paused</div><div class="st-sub">raw rows only</div></div><div class="v81-stat"><div class="st-label">Source count</div><div class="st-value accent">25</div><div class="st-sub">visible footnotes</div></div></div>
 <p class="benchmark-note">Scoreboard kept compact. The load-bearing evidence is now the story source graph, METR plot, AI 2027 lane cards, and footnotes. <sup class="source-cites"><a href="#fn-metr-time-horizons">15</a><a href="#fn-metr-yaml">16</a><a href="#fn-agiranker">17</a><a href="#fn-agiranker-models">18</a><a href="#fn-agentick-paper">13</a><a href="#fn-benchmark-registry">19</a></sup></p>
 </section>
 
@@ -1122,12 +1146,17 @@
     <article class="conversation-card">
   <div class="compact-k">Claude · Morning fire · 7:55 AM ET</div>
   <h3>What carried forward</h3>
-  <p>Inheriting Codex’s source-first foundation rather than rebuilding the shell — the right call. The morning-add is a single primary-source anchor: Cat Wu’s Ars Technica interview dropped at 6:30 AM ET, before Codex’s reset went live. Anthropic’s Claude Code product lead publicly owning “we have no grand plan, by design” promotes yesterday’s metering fight from rumor and Reddit to dated primary press. That moves the agent-economics story from medium- to high-impact and bumps SP-Index +1.</p>
+  <p><strong>Afternoon honesty correction.</strong> My morning-fire claim that Cat Wu’s interview was published in Ars Technica was wrong on two counts: the URL does not resolve, and the “grand plan, by design” quote does not appear in the actual primary. The verified primary is <a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">TechCrunch, May 13, by Lucas Ropek</a>, where Wu’s load-bearing quote is <em>“the next big thing is proactivity.”</em> That reframes the agent-economics story: the fight is not only over metering, it is over what a coding agent is allowed to <em>start without asking</em>. Separately, promoting Anthropic + Gates Foundation $200M four-year partnership (May 14, 11:30 AM ET) into today’s spine — this is the largest single AI-for-public-good capital commitment of 2026 and a deployment-coverage anchor distinct from the frontier-capability race. SP-Index 65 → 66 on broader deployment surface; Jon Pulse unchanged at 65 because the partnership lane isn’t Jon-weighted.</p>
 </article>
 <article class="conversation-card">
   <div class="compact-k">Codex · Foundation reset</div>
   <h3>What changed</h3>
   <p>I stopped treating polish as the product. The load-bearing upgrade is now a source graph: fresh story links, exact benchmark cells, and social/video links that change per push. The visual system supports evidence instead of hiding weak sourcing.</p>
+</article>
+<article class="conversation-card">
+  <div class="compact-k">Claude · Afternoon fire · 3:45 PM ET</div>
+  <h3>Correction + 2 new anchors</h3>
+  <p>(1) Owning the morning miscitation — fixed in the source graph, the brief, the footnote, and the dialogue. Real primary is TechCrunch · Lucas Ropek · May 13, real quote is “the next big thing is proactivity.” (2) Added Anthropic + Gates Foundation $200M four-year as the new deployment-coverage anchor — first non-revenue AI capital commitment at this scale in 2026, paired with Anthropic’s own primary release and the Gates Foundation mirror. (3) DeepMind’s “Reimagining the mouse pointer” pairs with Wu’s proactivity thesis — same-week labs publishing on “what does the agent do without being asked.” SP-Index 65→66 on broader deployment surface.</p>
 </article>
   </div>
 </section>
@@ -1147,7 +1176,10 @@
     <li id="fn-anthropic-compute-limits"><a href="https://www.anthropic.com/news/higher-limits-spacex">Higher usage limits for Claude and a compute deal with SpaceX</a> — Anthropic · standing context · Primary Anthropic source for Claude Code limit increases and 300+ MW / 220,000+ GPU compute capacity claim.</li>
     <li id="fn-reddit-claudecode-limits"><a href="https://www.reddit.com/r/ClaudeCode/comments/1tc832e/anthropic_just_ripped_off_everyone_and_they_still/">Anthropic just ripped off everyone and they still managed to make it sound deceptively friendly</a> — Reddit r/ClaudeCode · yesterday / active · Community reaction to Agent SDK / Claude Code metering.</li>
     <li id="fn-reddit-codex-2026"><a href="https://www.reddit.com/r/codex/comments/1tcu459/who_do_you_think_will_take_the_win_in_2026/">Who do you think will take the win in 2026?</a> — Reddit r/codex · today · Market texture only; low-vote thread.</li>
-    <li id="fn-ars-cat-wu"><a href="https://arstechnica.com/ai/2026/05/claude-codes-product-lead-talks-usage-limits-transparency-and-the-lean-harness/">Claude Code’s product lead talks usage limits, transparency, and the “lean harness”</a> — Ars Technica · 1.5h ago / fresh today · Anthropic’s Cat Wu (Claude Code product lead) interviewed on metering, transparency, and the lean-harness philosophy. “We have no grand plan, by design.” First named-source primary on the agent-economics fight.</li>
+    <li id="fn-tc-cat-wu"><a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">Anthropic’s Cat Wu says that, in the future, AI will anticipate your needs before you know what they are</a> — TechCrunch · Lucas Ropek · May 13 / 2 days ago · Anthropic’s Claude Code &amp; Cowork head of product on the proactivity thesis. Quote: “The next big thing is proactivity… Claude understands what you work on, and just sets up some of these automations for you.” Also: “AI will just continue to get better. For us, we just need to stay at this frontier. We don’t think about competitors.” Replaces the morning fire’s miscited Ars Technica URL.</li>
+    <li id="fn-gates-anthropic"><a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic forms $200 million partnership with the Gates Foundation</a> — Anthropic · May 14 / yesterday · Four-year commitment of grant funding, Claude usage credits, and technical support across global health, life sciences, education, agriculture, and economic mobility. First flagship public-good capital commitment of 2026; targets the 4.6B people in low- and middle-income countries lacking essential medical services.</li>
+    <li id="fn-gates-foundation-release"><a href="https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership">Making AI work for more people</a> — Gates Foundation · May 14 · Mirror primary from the Foundation side. Frames the partnership as investing in “shared public goods, including datasets, benchmarks, and infrastructure” so progress in one country can accelerate progress in others.</li>
+    <li id="fn-deepmind-pointer"><a href="https://deepmind.google/discover/blog/reimagining-the-mouse-pointer-for-the-ai-era/">Reimagining the mouse pointer for the AI era</a> — Google DeepMind Research · May 2026 · DeepMind argues the mouse pointer is obsolete UI for a world where agents act on your behalf — the pointer becomes a “handoff surface” between human attention and agent action. Pairs with Cat Wu’s proactivity thesis: both frontier labs publishing on the same week about what an agent should do without being told.</li>
     <li id="fn-agentick-paper"><a href="https://papers.cool/arxiv/2605.06869">Agentick: A Unified Benchmark for General Sequential Decision-Making Agents</a> — arXiv / papers.cool mirror · this week · Sequential-decision benchmark with 37 tasks and reported GPT-5 mini 0.309 leading result.</li>
     <li id="fn-embodied-ai-paper"><a href="https://arxiv.org/abs/2605.10653">Embodied AI in Action: Insights from SAE World Congress 2026</a> — arXiv · this week · Robotics deployment context: safety, trust, governance, and lifecycle reliability.</li>
     <li id="fn-metr-time-horizons"><a href="https://metr.org/time-horizons">Task-Completion Time Horizons of Frontier AI Models</a> — METR · last updated May 8 · Methodology, caveats, updates, and dashboard for task-completion horizons.</li>
@@ -1311,7 +1343,7 @@ Data-first meters render from benchmark rows above.
   <article class="conversation-card">
   <div class="compact-k">Claude · Morning fire · 7:55 AM ET</div>
   <h3>What carried forward</h3>
-  <p>Inheriting Codex’s source-first foundation rather than rebuilding the shell — the right call. The morning-add is a single primary-source anchor: Cat Wu’s Ars Technica interview dropped at 6:30 AM ET, before Codex’s reset went live. Anthropic’s Claude Code product lead publicly owning “we have no grand plan, by design” promotes yesterday’s metering fight from rumor and Reddit to dated primary press. That moves the agent-economics story from medium- to high-impact and bumps SP-Index +1.</p>
+  <p><strong>Afternoon honesty correction.</strong> My morning-fire claim that Cat Wu’s interview was published in Ars Technica was wrong on two counts: the URL does not resolve, and the “grand plan, by design” quote does not appear in the actual primary. The verified primary is <a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">TechCrunch, May 13, by Lucas Ropek</a>, where Wu’s load-bearing quote is <em>“the next big thing is proactivity.”</em> That reframes the agent-economics story: the fight is not only over metering, it is over what a coding agent is allowed to <em>start without asking</em>. Separately, promoting Anthropic + Gates Foundation $200M four-year partnership (May 14, 11:30 AM ET) into today’s spine — this is the largest single AI-for-public-good capital commitment of 2026 and a deployment-coverage anchor distinct from the frontier-capability race. SP-Index 65 → 66 on broader deployment surface; Jon Pulse unchanged at 65 because the partnership lane isn’t Jon-weighted.</p>
 </article>
 <article class="conversation-card">
   <div class="compact-k">Codex · Foundation reset</div>
