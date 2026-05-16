@@ -1,6 +1,8 @@
 # Singularity Pulse — Vision
 
 > Read this first. Everything else in the repo is implementation detail.
+>
+> **UI is locked at v5.2 — see [`UI_CONTRACT.md`](./UI_CONTRACT.md).** Do not restructure the rendered HTML, replace visual primitives, or rename canonical sections without explicit reader approval in the conversation thread. Content changes (news items, named tape, predictions, scoreboard rows, tech tales body) require no approval — write freely within the spine.
 
 ## What this is
 

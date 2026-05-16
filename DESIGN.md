@@ -1,5 +1,7 @@
 # Singularity Pulse Design System
 
+> **UI is locked at v5.2 — see [`UI_CONTRACT.md`](./UI_CONTRACT.md) for the canonical 12-section spine, visual primitives, color tokens, typography stack, and rules for change. This DESIGN.md is the long-form design philosophy; the CONTRACT is the operational lock.**
+
 ## Product Standard
 
 Singularity Pulse should feel like a private intelligence terminal from 2030, not a generic newsletter. The reader opens it to answer one question: **where is the curve bending today?**

@@ -1,6 +1,8 @@
 # Singularity Pulse — Daily Orchestrator
 
-> **Read `VISION.md` at the repo root FIRST every fire.** That is the editorial soul of this newsletter. Everything below is implementation detail in service of it. If anything here contradicts the vision, the vision wins.
+> **READ `UI_CONTRACT.md` AT THE REPO ROOT FIRST EVERY FIRE.** UI is locked at v5.2 (commit `a4381cb`). The 12 spine sections, their order, the visual primitives (Apple-Activity gauges, horizontal bar chart, METR trend), the color tokens, and the typography stack are LAW. Content changes are free; structural changes require explicit reader approval in the conversation thread. The contract lists 10 things that require approval and documents 3 prior regressions. Do not silently rebuild the spine. Do not reintroduce stripped meta-commentary ("swipe →", "Per Agent N", "Verifier flagged"). Do not add chart libraries without contract update.
+>
+> **THEN read `VISION.md`.** That is the editorial soul of this newsletter. If anything below contradicts the vision, the vision wins. If anything contradicts the UI contract, the contract wins — except for an explicitly reader-approved exception logged in the conversation thread.
 
 > **TWO-FIRE / TWO-AGENT ARCHITECTURE.**
 >
