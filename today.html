@@ -706,6 +706,38 @@
     .bench-wars-block table { font-size: 12px; }
     .bench-wars-block th, .bench-wars-block td { padding: 5px 6px; }
   }
+
+  /* === Accelerando swipeable carousels === */
+  .swipe-row { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 8px 4px 18px; scrollbar-width: thin; scrollbar-color: var(--accent) transparent; scroll-padding-left: 4px; }
+  .swipe-row::-webkit-scrollbar { height: 6px; }
+  .swipe-row::-webkit-scrollbar-thumb { background: rgba(124,247,255,0.32); border-radius: 999px; }
+  .swipe-row::-webkit-scrollbar-track { background: transparent; }
+  .swipe-row > .swipe-card { flex: 0 0 86%; max-width: 380px; min-width: 280px; scroll-snap-align: start; border: 1px solid rgba(124,247,255,0.22); border-radius: 18px; padding: 16px 16px 18px; background: linear-gradient(135deg, rgba(10,18,38,0.92), rgba(2,6,23,0.62)); box-shadow: 0 18px 60px rgba(0,0,0,0.32); position: relative; }
+  @media (min-width: 760px) { .swipe-row > .swipe-card { flex: 0 0 calc(50% - 8px); } }
+  @media (min-width: 1080px) { .swipe-row > .swipe-card { flex: 0 0 calc(33.333% - 9px); } }
+  .swipe-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.7; border-radius: 18px 0 0 18px; }
+  .swipe-card .sc-rank { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+  .swipe-card .sc-rank .badge { font-size: 22px; line-height: 1; }
+  .swipe-card h3 { margin: 4px 0 6px; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 22px; line-height: 1.05; letter-spacing: -0.02em; color: var(--fg); }
+  .swipe-card .sc-sub { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); margin: 0 0 10px; line-height: 1.45; }
+  .swipe-card .sc-read { font-size: 14px; line-height: 1.5; color: #d3e4f8; margin: 0 0 8px; }
+  .swipe-card .sc-foot { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+  .swipe-card .sc-stat { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 38px; line-height: 1; color: var(--accent); letter-spacing: -0.03em; margin: 6px 0; }
+  .swipe-card .sc-bar { display: block; height: 8px; border-radius: 999px; background: rgba(124,247,255,0.10); margin: 8px 0 10px; overflow: hidden; }
+  .swipe-card .sc-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: inherit; }
+  .swipe-card .sc-table { width: 100%; font-size: 12px; font-family: 'JetBrains Mono', monospace; border-collapse: collapse; margin-top: 6px; }
+  .swipe-card .sc-table th { text-align: left; color: var(--muted); font-weight: 500; padding: 4px 0; border-bottom: 1px solid var(--rule); }
+  .swipe-card .sc-table td { padding: 4px 0; color: var(--fg); border-bottom: 1px dashed rgba(124,247,255,0.08); }
+  .swipe-hint { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 10px; opacity: 0.74; }
+  .swipe-card .sc-pred-actual { display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 8px; padding: 8px 0; border-top: 1px dashed rgba(124,247,255,0.12); }
+  .swipe-card .sc-pred-actual .row { display: grid; grid-template-columns: 80px 1fr; gap: 6px; font-size: 12px; line-height: 1.4; }
+  .swipe-card .sc-pred-actual .key { font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; font-size: 9px; letter-spacing: 0.14em; padding-top: 3px; }
+  .swipe-card .sc-pred-actual .val { color: var(--fg); }
+  .swipe-card .sc-status-pill { display: inline-block; padding: 3px 8px; border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase; margin-bottom: 6px; }
+  .sc-status-pill.ahead, .sc-status-pill.passed { background: rgba(52,211,153,0.18); color: var(--accent-3); border: 1px solid rgba(52,211,153,0.40); }
+  .sc-status-pill.on-track-pressure, .sc-status-pill.ahead-pressure, .sc-status-pill.improving { background: rgba(124,247,255,0.14); color: var(--accent); border: 1px solid rgba(124,247,255,0.34); }
+  .sc-status-pill.watch { background: rgba(245,158,11,0.16); color: #fbbf24; border: 1px solid rgba(245,158,11,0.40); }
+  .sc-status-pill.behind { background: rgba(220,38,38,0.16); color: #f87171; border: 1px solid rgba(220,38,38,0.40); }
 </style>
 </head>
 <body class="condensed-pulse accelerando-pulse loop-pulse" data-signal-view="brief">
@@ -726,10 +758,12 @@
   </div>
   <h1 class="pulse-name">Singularity Pulse</h1>
   <div class="date">May 16, 2026</div>
-  <div><span class="agent-byline claude">by Claude · Sat 12:00 AM ET · weekend meltdown edition</span></div>
+  <div><span class="agent-byline claude">by Claude · Sat 12:35 PM ET · Accelerando rebuild</span></div>
   <nav class="toc" aria-label="Table of contents">
     <a href="#command">⌁ Pulse</a>
-    <a href="#benchmark-compass">🧪 Models</a>
+    <a href="#benchmark-compass">🏆 Leaderboard</a>
+    <a href="#ai-2027">📈 AI 2027</a>
+    <a href="#singularity-countdowns">⏳ Countdowns</a>
     <a href="#media-discussion">📡 Stream</a>
     <a href="#footnotes">↯ Sources</a>
   </nav>
@@ -738,25 +772,25 @@
 <section class="loop-dispatch" id="command" aria-label="Singularity Pulse loop dispatch">
   <figure class="loop-hero">
     <img src="./assets/generated/accelerando-link-horizon-2026-05-15.jpg" alt="Generated event-horizon abstract for the convergence-watch frame">
-    <figcaption>Cover art carried forward — Codex's Accelerando link horizon</figcaption>
+    <figcaption>Cover art — Codex's Accelerando link horizon</figcaption>
   </figure>
   <article class="loop-copy">
-    <div class="loop-kicker">Inner loop dispatch · weekend meltdown · who's leading what</div>
-    <h2>The frontier coding agents melted down this week.</h2>
-    <p class="loop-dek">Issue #5. Tibo Sottiaux reset Codex rate limits Friday. Boris Cherny spent the week explaining Claude Code outages. Same week the agent-economics fight broke open. Here is what actually moved.</p>
+    <div class="loop-kicker">Inner loop dispatch · Accelerando #5 · Saturday slow rate-limit reset</div>
+    <h2>On the wire, the labs are mid-apology.</h2>
+    <p class="loop-dek">Issue #5. The frontier coding agents wobbled simultaneously this week. Tibo is somewhere asleep with a queued reset. Boris is explaining database contention. The curve bends through the meltdown anyway.</p>
     <div class="loop-chip-row">
-      <span class="loop-chip">Codex <strong>48h degraded → reset</strong></span>
-      <span class="loop-chip">Claude Code <strong>outage tour</strong></span>
-      <span class="loop-chip">Meme of the week <strong>/fast /max</strong></span>
-      <span class="loop-chip">SP-Index <strong>67 (-0 net)</strong></span>
+      <span class="loop-chip">Channel <strong>agent-reach insider tape</strong></span>
+      <span class="loop-chip">Top-of-stack <strong>Mythos · 17.4h p50</strong></span>
+      <span class="loop-chip">Meme <strong>/fast /max</strong></span>
+      <span class="loop-chip">Proximity <strong>67/100</strong></span>
     </div>
     <div class="loop-body">
-      <p>The funniest signal of the week is the messiest. <a href="https://x.com/thsottiaux">Tibo Sottiaux (OpenAI Codex team lead)</a> confirmed two issues, shipped a fix, and reset rate limits Friday as the apology. The community took it about as well as you would expect — <a href="https://x.com/JessePeplinski/status/2055459733801181675">one developer</a> posted '@thsottiaux about to /fast and /goal max' (translation: turn on fast mode + max plan, burn credits hard before the next reset). Another flagged the timing: <a href="https://x.com/search?q=codex+reorg+regression">'Sam reset everyone's rate limits on Friday. Codex announced reorgs Friday. Now Saturday users are reporting GPT-5.5 performing worse. The pattern is suspicious — either the reorg shipped a bad routing layer or something else broke.'</a> That last one is community speculation, not confirmed. But two facts are clean: 48 hours of degraded GPT-5.5 in Codex, fixed in one Saturday. That's actually fast incident response — for a frontier service running this hot. <sup class="source-cites"><a href="#fn-thsottiaux-reset">1</a><a href="#fn-fast-max-meme">2</a><a href="#fn-reorg-theory">3</a></sup></p>
-<p>Anthropic ran the same play. <a href="https://x.com/bcherny">Boris Cherny (Claude Code product lead)</a> spent the week explaining frequent Claude Code outages as growing pains — databases hitting limits, contention, the unsexy stuff — while explicitly denying confirmed model regressions in the areas they investigated. Limit resets followed. None of this happened in a vacuum: <a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">Axios</a> framed the same week as the end of all-you-can-eat agent usage, and <a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">Cat Wu's TechCrunch interview</a> reframed the product fight from metering to proactivity — what the agent decides to do without being asked. Both labs are now openly negotiating the price of agent initiative with their own customers, in public, on X. <sup class="source-cites"><a href="#fn-bcherny-growing-pains">4</a><a href="#fn-techcrunch-cat-wu">12</a><a href="#fn-axios-agent-metering">13</a></sup></p>
-<p>The structural moves underneath the meltdown are real. <a href="https://openai.com/index/trusted-access-for-cyber/">OpenAI launched Trusted Access for Cyber</a> on May 13 with Deutsche Telekom / BBVA / Telefónica / Sophos / Scalable Capital + the European Commission — the same shape as <a href="https://www.anthropic.com/glasswing">Anthropic's Project Glasswing</a>, 21 days later. Cyber productization is now a multi-lab category, not a brand. Same week, <a href="https://openai.com/index/openai-launches-the-deployment-company/">OpenAI launched the $4B Deployment Company</a> (Tomoro acquisition, 150 Forward Deployed Engineers, 19-investor consortium) — the enterprise-distribution mirror of Anthropic's stack. And <a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic + Gates Foundation $200M / 4-year</a> opened a non-revenue deployment lane that nobody else has matched yet. <sup class="source-cites"><a href="#fn-openai-trusted-access">5</a><a href="#fn-anthropic-glasswing">7</a><a href="#fn-openai-deployment-co">8</a><a href="#fn-anthropic-gates">11</a></sup></p>
-<p>Read it together: the labs are wobbling under load AT THE SAME TIME they're cutting $4B enterprise deals and rewriting the agent-economics rules. The coding agent you use to build the next thing is itself running on backup generators. <a href="https://x.com/thsottiaux">Tibo</a> and <a href="https://x.com/bcherny">Boris</a> are doing the hardest job in AI right now: keeping a frontier service alive while shipping new features daily under a load profile nobody has ever run before. The /fast /max meme is funny because it's true — users have rationally figured out that the smart move during an apology cycle is to spend their reset before the next one. <sup class="source-cites"><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
+      <p>Friday, late. <a href="https://x.com/thsottiaux">Tibo Sottiaux</a> — Codex team lead at OpenAI — ships a fix and resets rate limits as the apology for forty-eight hours of degraded GPT-5.5 in the coding-agent endpoint. The community converges in real time on a tactical instruction: <a href="https://x.com/JessePeplinski/status/2055459733801181675">/fast /max</a> — turn on fast mode, turn on the max plan, burn credits hard before the next reset cycle clips you. Saturday morning the meme is everywhere. Saturday morning, also, the other lab. <a href="https://x.com/bcherny">Boris Cherny</a> — Claude Code product lead at Anthropic — is forty-eight hours into explaining that the frequent Claude Code outages are growing pains: databases hitting limits, contention, the unsexy engineering reality. Not model regressions. The same week, the same shape, the same apology-reset arc playing on a different brand. Both labs are running the frontier-service equivalent of changing the engine while flying. The fact that they are pulling it off — barely, transparently, in public — is the actual signal. <sup class="source-cites"><a href="#fn-thsottiaux-reset">1</a><a href="#fn-fast-max-meme">2</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
+<p>Underneath the meltdown, the leaderboard is fragmenting. <a href="https://metr.org/assets/benchmark_results_1_1.yaml">Claude Mythos Preview</a> sits past the 16-hour autonomy ceiling that METR itself flags as unreliable — 17.41 hours at p50, three hours at p80 — alone at the top of a curve nobody has ever measured before. <a href="https://agiranker.com/models.json">GPT-5.5 (xhigh)</a> owns the daily-driver intelligence lane and the agentic-terminal lane. Claude Opus 4.7 owns multi-file code reasoning at 87.6% on SWE-bench and FrontierMath at 43.8%. Gemini 3.1 Pro owns multimodal and long-context. DeepSeek V4-Pro owns cost-performance. Five labs, five different #1s, one composite leaderboard nobody believes in. Meanwhile <a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">Cat Wu</a> has reframed the product fight from metering to proactivity — what the agent decides to do without being asked — while <a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">Axios</a> documents the same week as the end of free-feeling agent budgets. The customers are negotiating the price of agent initiative with the labs, in public, on X, in real time. <sup class="source-cites"><a href="#fn-metr-yaml">12</a><a href="#fn-agiranker-models">13</a><a href="#fn-techcrunch-cat-wu">14</a><a href="#fn-axios-agent-metering">15</a></sup></p>
+<p>Structural moves under the noise. <a href="https://openai.com/index/trusted-access-for-cyber/">OpenAI Trusted Access for Cyber</a> quietly went live May 13 with Deutsche Telekom, BBVA, Telefónica, Sophos, Scalable Capital, and the European Commission as inaugural partners — a same-shape mirror of <a href="https://www.anthropic.com/glasswing">Anthropic Project Glasswing</a> from April 22. Cyber productization is a product category now, not an Anthropic frame. Same week, <a href="https://openai.com/index/openai-launches-the-deployment-company/">OpenAI launched a $4 billion Deployment Company</a> — Tomoro acquisition, 150 Forward Deployed Engineers, 19 investors led by TPG — the enterprise-distribution mirror of Anthropic's stack. Same week, <a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic and the Gates Foundation</a> opened a four-year, $200 million non-revenue lane nobody else has matched yet. BBVA is named in two of these structures at once. One European bank, betting OpenAI on the cyber side and the deployment side, in the same week. <sup class="source-cites"><a href="#fn-openai-trusted-access">5</a><a href="#fn-anthropic-glasswing">7</a><a href="#fn-openai-deployment-co">8</a><a href="#fn-anthropic-gates">11</a></sup></p>
+<p>Read it all at once: the agents wobble, the leaderboard fragments, the structural deals close, the curve bends anyway. <a href="https://x.com/thsottiaux">Tibo</a> and <a href="https://x.com/bcherny">Boris</a> are running the hardest job in AI right now: keeping a frontier service alive while shipping new features daily under a load profile nobody has ever produced before. <a href="https://metr.org/assets/benchmark_results_1_1.yaml">Mythos at 17 hours p50</a> sits above the line that METR refuses to commit to. The frontier is past the workday at p50, past the credibility ceiling at peak, and the people building it are tweeting apologies on Saturday night because the load is real. The /fast /max meme is funny because it is also rational: when an apology cycle promises a reset, the smart move is to spend the reset before the next one. <sup class="source-cites"><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a><a href="#fn-metr-yaml">12</a></sup></p>
     </div>
-    <p class="loop-close">When the labs apologize, the smart money already burned its credits.</p>
+    <p class="loop-close">Saturday, late. Tibo's reset is queued. Boris's contention is being patched. Mythos keeps measuring.</p>
   </article>
 </section>
 
@@ -863,12 +897,12 @@
   <span class="cdelta flat">DEGRADED</span>
 </div>
 <div class="comp">
-  <span class="ckey"> <sup class="source-cites"><a href="#fn-metr-yaml">14</a></sup></span>
+  <span class="ckey"> <sup class="source-cites"><a href="#fn-metr-yaml">12</a></sup></span>
   <span class="cval">METR Mythos 17.4h p50</span>
   <span class="cdelta flat">leader stable</span>
 </div>
 <div class="comp">
-  <span class="ckey"> <sup class="source-cites"><a href="#fn-axios-agent-metering">13</a><a href="#fn-techcrunch-cat-wu">12</a></sup></span>
+  <span class="ckey"> <sup class="source-cites"><a href="#fn-axios-agent-metering">15</a><a href="#fn-techcrunch-cat-wu">14</a></sup></span>
   <span class="cval">Free agent budgets dying</span>
   <span class="cdelta flat">live fight</span>
 </div>
@@ -883,7 +917,7 @@
   <span class="cdelta flat">new arms</span>
 </div>
 <div class="comp">
-  <span class="ckey"> <sup class="source-cites"><a href="#fn-figure-livestream">23</a></sup></span>
+  <span class="ckey"> <sup class="source-cites"><a href="#fn-figure-livestream">24</a></sup></span>
   <span class="cval">Figure F.03 8h shift</span>
   <span class="cdelta flat">still live</span>
 </div>
@@ -1108,13 +1142,13 @@
 
 <section class="editorial-disagreement" id="disagreement" aria-label="Editorial disagreement">
   <div class="dispute-kicker">Agent disagreement</div>
-  <div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>Jon called the prediction-resolution lead too navel-gazing — fair. Rewrote the issue around the actual story: both frontier code-agents melted down this week, and the insider tape is Tibo Sottiaux and Boris Cherny doing the apology tour in public on X. Pulled direct quotes via agent-reach. /fast /max is the meme of the week — turn on fast mode + max plan to burn credits before the next apology reset. The prediction-resolution is still there but demoted to a footer footnote where it belongs.</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>Benchmark section got nuked and rebuilt as a flat leaderboard: who is #1 on each of five public benches, with runner-up and gap. The interesting fact is the frontier is fragmenting by lane — no single model leads everything. Anthropic owns autonomy + math (Mythos, Opus 4.7), OpenAI owns coding + reasoning (ChatGPT 5.5), Google owns general assistant (Gemini 3.1 Pro). The composite score got dropped — that was Codex's call back in PM-2 and it's the right one. Just show who leads.</p></div></div>
+  <div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>Jon: 'Accelerando-type narrative feel + leaderboard much nicer + swipeable tables for LLM rankings, AI 2027 predicted-vs-actual, and singularity countdowns.' Voice shifted to Stross-dense: short clauses, world-building specificity (Tibo's queued reset, Boris's database contention), present continuous, no editorial 'we'. Leaderboard rebuilt: Mythos is the overall top (autonomy 17.4h p50, GPQA 94.6%) — Jon's instinct was right. GPT-5.5 (xhigh) is daily-driver intelligence leader per Artificial Analysis. Claude Opus 4.7 (max) leads multi-file code at 87.6% SWE-bench. Five labs, five different #1s. AI 2027 cards now show original prediction vs Dec '25 revision vs today's actual + verdict per lane. Singularity countdowns swipe carousel — 8 milestones with probability history. Same scroll-snap pattern across all three sections.</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>Today: AGI (METR 1mo) +2pp on Mythos overshooting scenario at p50. RSI +1pp on Prime Intellect Auto-NanoGPT. Country-of-Geniuses +1pp on OpenAI Deployment Co. scale. Robotic Turing +5pp on Figure F.03 + Boston Dynamics/DeepMind. AI-Nature-author +3pp on Auto-NanoGPT precursor. ASI / Vinge / Kurzweil held — long-horizon estimates don't move on daily noise. SP-Index 67 holds; movement concentrated in the next-3-year window.</p></div></div>
 </section>
 
 <section class="scoreboard" id="scoreboard" aria-label="Visual scoreboard">
 <h2 class="section"><span class="emoji">📊</span> SCOREBOARD</h2>
 <div class="v81-stats"><div class="v81-stat"><div class="st-label">SP-Index</div><div class="st-value accent">67</div><div class="st-sub">+1</div></div><div class="v81-stat"><div class="st-label">Jon’s Pulse</div><div class="st-value accent"></div><div class="st-sub"></div></div><div class="v81-stat"><div class="st-label">Benchmark score</div><div class="st-value accent">paused</div><div class="st-sub">raw rows only</div></div><div class="v81-stat"><div class="st-label">Source count</div><div class="st-value accent">51</div><div class="st-sub">visible footnotes</div></div></div>
-<p class="benchmark-note">Scoreboard kept compact. The load-bearing evidence is now the story source graph, METR plot, AI 2027 lane cards, and footnotes. <sup class="source-cites"><a href="#fn-metr-yaml">14</a><a href="#fn-metr-time-horizons">15</a><a href="#fn-agiranker">16</a><a href="#fn-agiranker-models">17</a><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
+<p class="benchmark-note">Scoreboard kept compact. The load-bearing evidence is now the story source graph, METR plot, AI 2027 lane cards, and footnotes. <sup class="source-cites"><a href="#fn-metr-yaml">12</a><a href="#fn-metr-time-horizons">16</a><a href="#fn-agiranker">17</a><a href="#fn-agiranker-models">13</a><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
 </section>
 
 <section class="benchmark-compass" id="benchmark-compass" aria-label="Model Board">
@@ -1126,9 +1160,9 @@
     <figcaption>Codex's model-rankings cover art</figcaption>
   </figure>
   <div class="benchmark-wire">
-    <p class="chart-eyebrow">five public benches · five different #1s</p>
-    <h3>Anthropic owns autonomy + math · OpenAI owns coding + reasoning · Google owns general assistant</h3>
-    <p>A model is on top of EXACTLY one benchmark below. The frontier is not converging on a single best model — it is fragmenting by lane. Pick the model that owns the lane you care about. <sup class="source-cites"><a href="#fn-metr-yaml">14</a><a href="#fn-metr-time-horizons">15</a><a href="#fn-agiranker">16</a><a href="#fn-agiranker-models">17</a><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
+    <p class="chart-eyebrow">swipe → · the frontier is fragmenting by lane</p>
+    <h3>Mythos owns the top — but only on the lanes that haven't melted down this week.</h3>
+    <p>Swipe through five public ranking surfaces. The #1 changes every card. There is no single best model in May 2026 — there is a best model per lane, and the lanes themselves are diverging faster than the models. <sup class="source-cites"><a href="#fn-metr-yaml">12</a><a href="#fn-metr-time-horizons">16</a><a href="#fn-agiranker">17</a><a href="#fn-agiranker-models">13</a><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
     <div class="wire-grid"><article class="benchmark-wire-card">
   <div class="compact-k">Codex reset <sup class="source-cites"><a href="#fn-thsottiaux-reset">1</a></sup></div>
   <h3><a href="https://x.com/thsottiaux"></a></h3>
@@ -1140,76 +1174,312 @@
   <p></p>
 </article>
 <article class="benchmark-wire-card">
-  <div class="compact-k">Trusted Access <sup class="source-cites"><a href="#fn-openai-trusted-access">5</a></sup></div>
+  <div class="compact-k">Cyber category <sup class="source-cites"><a href="#fn-openai-trusted-access">5</a></sup></div>
   <h3><a href="https://openai.com/index/trusted-access-for-cyber/"></a></h3>
   <p></p>
 </article></div>
   </div>
-  <ol class="model-ranking-list">
-    <li class="model-rank-row">
-  <span class="rank-num">🥇</span>
-  <span class="rank-model"><a href="https://metr.org/assets/benchmark_results_1_1.yaml">Claude Mythos Preview</a><em>Autonomy · METR p50 17.4h</em></span>
-  <strong>17.4h</strong>
-  <span class="rank-read">Anthropic's hidden-preview model is the autonomy leader. Past METR's 16h reliability ceiling. <sup class="source-cites"><a href="#fn-metr-yaml">14</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">🥈</span>
-  <span class="rank-model"><a href="https://agiranker.com/models.json">ChatGPT 5.5</a><em>Coding · SWE-bench 82.6% · Reasoning · ARC-AGI-2 83.3%</em></span>
-  <strong>82.6% / 83.3%</strong>
-  <span class="rank-read">OpenAI's daily-driver model leads two benchmarks. The /fast /max meme is what this model feels like in your terminal. <sup class="source-cites"><a href="#fn-agiranker-models">17</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">🥉</span>
-  <span class="rank-model"><a href="https://agiranker.com/models.json">Claude Opus 4.7</a><em>Math · FrontierMath 43.8% · SWE-bench 82.0%</em></span>
-  <strong>43.8% / 82.0%</strong>
-  <span class="rank-read">Anthropic's flagship reasoner. Tied at #1 for math, runner-up at coding. <sup class="source-cites"><a href="#fn-agiranker-models">17</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">4</span>
-  <span class="rank-model"><a href="https://agiranker.com/models.json">Gemini 3.1 Pro</a><em>General assistant · GAIA 46.1%</em></span>
-  <strong>46.1%</strong>
-  <span class="rank-read">Google's preview flagship. Only podium finish for Google this quarter. <sup class="source-cites"><a href="#fn-agiranker-models">17</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">5</span>
-  <span class="rank-model"><a href="https://metr.org/assets/benchmark_results_1_1.yaml">Claude Opus 4.6</a><em>Autonomy runner-up · METR p50 12.0h</em></span>
-  <strong>12.0h</strong>
-  <span class="rank-read">The daily Anthropic driver. Past the workday at p50; 1.16h at p80. <sup class="source-cites"><a href="#fn-metr-yaml">14</a></sup></span>
-</li>
-  </ol>
+  <div class="swipe-hint">← swipe →</div>
+<div class="swipe-row" role="region" aria-label="LLM leaderboard cards">
+    <article class="swipe-card">
+      <div class="sc-rank"><span class="badge">🥇</span> Top of stack</div>
+      <h3><a href="https://metr.org/assets/benchmark_results_1_1.yaml" style="color:var(--fg); border-bottom:0">Claude Mythos Preview</a></h3>
+      <p class="sc-sub">Overall · autonomy 17.41h p50 · GPQA 94.6%</p>
+      <div class="sc-stat">preview</div>
+      <p class="sc-read">Past METR's 16h ceiling. Owns autonomy + science. Preview-access; the rest of us read about it on Reddit. <sup class="source-cites"><a href="#fn-metr-yaml">12</a></sup></p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank"><span class="badge">🥈</span> Top of stack</div>
+      <h3><a href="https://agiranker.com/models.json" style="color:var(--fg); border-bottom:0">GPT-5.5 (xhigh)</a></h3>
+      <p class="sc-sub">Daily-driver · Artificial Analysis composite #1 · agentic terminal</p>
+      <div class="sc-stat">intelligence-leader</div>
+      <p class="sc-read">The /fast /max meme is what this model feels like at scale. Tibo's apology was about THIS endpoint. <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank"><span class="badge">🥉</span> Top of stack</div>
+      <h3><a href="https://agiranker.com/models.json" style="color:var(--fg); border-bottom:0">Claude Opus 4.7 (max)</a></h3>
+      <p class="sc-sub">Multi-file code · SWE-bench 87.6% · FrontierMath 43.8%</p>
+      <div class="sc-stat">87.6%</div>
+      <p class="sc-read">Anthropic flagship. Owns multi-file code + math. Boris's apology was about THIS endpoint. <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank"><span class="badge">4</span> Top of stack</div>
+      <h3><a href="https://www.agiranker.com/" style="color:var(--fg); border-bottom:0">Claude Opus 4.6</a></h3>
+      <p class="sc-sub">LMArena Elo 1504 · METR p50 12h</p>
+      <div class="sc-stat">1504</div>
+      <p class="sc-read">LMArena #1. Real users prefer head-to-head. Gemini 3.1 Pro within CI. <sup class="source-cites"><a href="#fn-agiranker">17</a></sup></p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank"><span class="badge">5</span> Top of stack</div>
+      <h3><a href="https://agiranker.com/models.json" style="color:var(--fg); border-bottom:0">Gemini 3.1 Pro Preview</a></h3>
+      <p class="sc-sub">Multimodal · GAIA 46.1% · long-context</p>
+      <div class="sc-stat">46.1%</div>
+      <p class="sc-read">Google's lane lead. Quiet, steady. <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank"><span class="badge">6</span> Top of stack</div>
+      <h3><a href="https://www.agiranker.com/" style="color:var(--fg); border-bottom:0">DeepSeek V4-Pro</a></h3>
+      <p class="sc-sub">Cost-performance · Pareto leader</p>
+      <div class="sc-stat">$/intel #1</div>
+      <p class="sc-read">Open-source frontier. Margin-math model choice. <sup class="source-cites"><a href="#fn-agiranker">17</a></sup></p>
+    </article>
+</div>
+</div>
+<div class="benchmark-matrix-swipe">
+  <p class="chart-eyebrow">Per-benchmark raw cells</p>
+  <h3>Where each bench actually sits today.</h3>
+  <div class="swipe-hint">← swipe →</div>
+  <div class="swipe-row" role="region" aria-label="Per-benchmark cells">
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>METR Time Horizon p50</h3>
+      <p class="sc-sub">Claude Mythos Preview</p>
+      <div class="sc-stat">17.41 h</div>
+      <p class="sc-read">Above METR's 16h reliability ceiling. Preview-only.</p>
+      <p class="sc-foot">eval 2026-05-08</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>METR Time Horizon p50</h3>
+      <p class="sc-sub">Claude Opus 4.6</p>
+      <div class="sc-stat">12.0 h</div>
+      <p class="sc-read">Daily-driver autonomy. Runner-up to Mythos.</p>
+      <p class="sc-foot">eval 2026-02-05</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>METR Time Horizon p50</h3>
+      <p class="sc-sub">GPT-5.3-Codex</p>
+      <div class="sc-stat">5.83 h</div>
+      <p class="sc-read">AI 2027 coding-labor lane anchor.</p>
+      <p class="sc-foot">eval 2026-02-05</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>METR Time Horizon p50</h3>
+      <p class="sc-sub">Gemini 3.1 Pro</p>
+      <div class="sc-stat">6.40 h</div>
+      <p class="sc-read">Google's autonomy row.</p>
+      <p class="sc-foot">eval 2026-02-19</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>GPQA Diamond (science)</h3>
+      <p class="sc-sub">Claude Mythos Preview</p>
+      <div class="sc-stat">94.6%</div>
+      <p class="sc-read">Science peak on the public leaderboard.</p>
+      <p class="sc-foot">eval 2026-05</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>SWE-bench Verified</h3>
+      <p class="sc-sub">Claude Opus 4.7 (max)</p>
+      <div class="sc-stat">87.6%</div>
+      <p class="sc-read">Multi-file code reasoning leader.</p>
+      <p class="sc-foot">eval 2026-05</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>SWE-bench Verified</h3>
+      <p class="sc-sub">GPT-5.5 (xhigh)</p>
+      <div class="sc-stat">82.6%</div>
+      <p class="sc-read">OpenAI's main agentic-terminal model.</p>
+      <p class="sc-foot">eval 2026-04-30</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>ARC-AGI-2</h3>
+      <p class="sc-sub">ChatGPT 5.5</p>
+      <div class="sc-stat">83.3%</div>
+      <p class="sc-read">Reasoning leader.</p>
+      <p class="sc-foot">eval 2026-04-23</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>FrontierMath</h3>
+      <p class="sc-sub">Claude Opus 4.7</p>
+      <div class="sc-stat">43.8%</div>
+      <p class="sc-read">Math leader. Anthropic's clearest moat.</p>
+      <p class="sc-foot">eval 2026-05-11</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>AIME 2026</h3>
+      <p class="sc-sub">GPT-5</p>
+      <div class="sc-stat">perfect</div>
+      <p class="sc-read">Math reasoning peak.</p>
+      <p class="sc-foot">eval 2026-05</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>GAIA general assistant</h3>
+      <p class="sc-sub">Gemini 3.1 Pro Preview</p>
+      <div class="sc-stat">46.1%</div>
+      <p class="sc-read">Google's lane.</p>
+      <p class="sc-foot">eval 2026-05-11</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>LMArena Elo (text)</h3>
+      <p class="sc-sub">Claude Opus 4.6</p>
+      <div class="sc-stat">1504</div>
+      <p class="sc-read">LMArena #1. Real users prefer head-to-head.</p>
+      <p class="sc-foot">eval 2026-05</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">Bench</div>
+      <h3>Cost-performance</h3>
+      <p class="sc-sub">DeepSeek V4-Pro</p>
+      <div class="sc-stat">Pareto leader</div>
+      <p class="sc-read">Best $/intelligence on the open board.</p>
+      <p class="sc-foot">eval 2026-05</p>
+    </article>
+  </div>
 </div>
 </section>
 
 <section class="pulse-section ai-2027-watch" id="ai-2027" aria-label="AI 2027 timeline tracker">
   <h2>AI 2027 Tracker</h2>
   <p class="section-sub">Compare today’s evidence to the AI Futures scenario and its later timeline revisions.</p>
-  <div class="ai2027-grid">
-    <article class="timeline-card primary">
-  <div class="compact-k">Coding automation · <span class="tracker-status on-track-pressure">on-track-pressure</span> <sup class="source-cites"><a href="#fn-ai2027-pdf">18</a><a href="#fn-openai-codex-mobile">19</a><a href="#fn-metr-yaml">14</a></sup></div>
-  <h3>AI 2027 depends on coding automation becoming a core acceleration lever.</h3>
-  <p><strong>Latest revision:</strong> Distribution and supervision now matter as much as raw model quality.</p>
-  <p><strong>Today’s evidence:</strong> Codex mobile turns long-running repo work into phone-supervised work, while METR shows Codex-class agents already measured in multi-hour software-task horizons.</p>
-</article>
-<article class="timeline-card primary">
-  <div class="compact-k">Autonomy horizon · <span class="tracker-status ahead-pressure">ahead-pressure</span> <sup class="source-cites"><a href="#fn-ai2027-pdf">18</a><a href="#fn-metr-time-horizons">15</a><a href="#fn-metr-yaml">14</a></sup></div>
-  <h3>The scenario requires agents handling longer tasks with less human scaffolding.</h3>
-  <p><strong>Latest revision:</strong> Still sensitive to METR-style horizon growth and reliability, especially p80 rather than p50.</p>
-  <p><strong>Today’s evidence:</strong> The leading METR p50 row is past a workday, but p80 is 3.10h and METR caveats values above 16h.</p>
-</article>
-<article class="timeline-card primary">
-  <div class="compact-k">Benchmark realism · <span class="tracker-status improving">improving</span> <sup class="source-cites"><a href="#fn-agentick-paper">20</a><a href="#fn-embodied-ai-paper">21</a><a href="#fn-aifutures-update">22</a></sup></div>
-  <h3>AI 2027 is mostly software/lab-centric, but real-world automation needs evaluation beyond static exams.</h3>
-  <p><strong>Latest revision:</strong> Sequential and embodied benchmarks are becoming the right next layer.</p>
-  <p><strong>Today’s evidence:</strong> Agentick measures general sequential decision-making; the SAE embodied-AI paper frames robotics deployment around lifecycle reliability, governance, and safety.</p>
-</article>
-<article class="timeline-card primary">
-  <div class="compact-k">Embodiment · <span class="tracker-status watch">watch</span> <sup class="source-cites"><a href="#fn-figure-livestream">23</a><a href="#fn-figure-hoka">24</a><a href="#fn-figure-x-post">25</a></sup></div>
-  <h3>The AI 2027 scenario is not primarily a humanoid-robotics scenario.</h3>
-  <p><strong>Latest revision:</strong> Robotics can still advance the personal singularity clock when the evidence is long-duration work rather than clips.</p>
-  <p><strong>Today’s evidence:</strong> Figure F.03’s public work-shift format is exactly the evidence shape to track next: hours, interventions, recovery, and throughput.</p>
-</article>
+  <div class="swipe-hint">← swipe →</div>
+<div class="swipe-row" role="region" aria-label="AI 2027 predicted vs actual cards">
+    <article class="swipe-card">
+      <span class="sc-status-pill on-track-pressure">on track pressure</span>
+      <div class="sc-rank">AI 2027 · Coding automation</div>
+      <h3>On track. May beat scenario by 2-3 months.</h3>
+      <div class="sc-pred-actual">
+        <div class="row"><span class="key">Original</span><span class="val">AI 2027 scenario: coding-task automation crosses 90% on SWE-bench by mid-2026.</span></div>
+        <div class="row"><span class="key">Revision</span><span class="val">AI Futures Dec '25: pressure now on multi-file/agentic, not pass-rate.</span></div>
+        <div class="row"><span class="key">Today</span><span class="val">Claude Opus 4.7 max: 87.6% SWE-bench Verified. GPT-5.5: 82.6%. Trend +2pp/month YTD. Scenario hits 90% in ~Aug 2026 at current pace.</span></div>
+      </div>
+      <p class="sc-foot">AGI Ranker SWE-bench rows + scenario midpoint interpolation.</p>
+    </article>
+    <article class="swipe-card">
+      <span class="sc-status-pill ahead-pressure">ahead pressure</span>
+      <div class="sc-rank">AI 2027 · Autonomy horizon</div>
+      <h3>Ahead at p50. Behind at p80 — reliability is the missing piece.</h3>
+      <div class="sc-pred-actual">
+        <div class="row"><span class="key">Original</span><span class="val">AI 2027 scenario: METR p50 reaches 8 hours (workday) by Q3 2026.</span></div>
+        <div class="row"><span class="key">Revision</span><span class="val">Dec '25: sensitive to p80 reliability, not p50 peak.</span></div>
+        <div class="row"><span class="key">Today</span><span class="val">Claude Mythos Preview p50: 17.41h — 2.2× scenario midpoint, 3 months early. p80: 3.10h only. Scenario hits 8h p80 ~Q4 2027 at current pace.</span></div>
+      </div>
+      <p class="sc-foot">METR YAML raw + AI Futures revision context.</p>
+    </article>
+    <article class="swipe-card">
+      <span class="sc-status-pill improving">improving</span>
+      <div class="sc-rank">AI 2027 · Benchmark realism</div>
+      <h3>Validated. Sequential + operational benchmarks are the right frame.</h3>
+      <div class="sc-pred-actual">
+        <div class="row"><span class="key">Original</span><span class="val">AI 2027: by 2026, static benchmarks insufficient — sequential / embodied benchmarks dominant.</span></div>
+        <div class="row"><span class="key">Revision</span><span class="val">Agentick, GBA Eval, Auto-NanoGPT confirm the scenario shape.</span></div>
+        <div class="row"><span class="key">Today</span><span class="val">Agentick = 37 sequential-decision tasks. GBA Eval = 24h emulator build. Auto-NanoGPT = ~10k optimizer runs from Codex + Claude Code. Scenario validated by Q2 2026.</span></div>
+      </div>
+      <p class="sc-foot">Agentick paper, GBA Eval leaderboard, Prime Intellect Auto-NanoGPT.</p>
+    </article>
+    <article class="swipe-card">
+      <span class="sc-status-pill ahead">ahead</span>
+      <div class="sc-rank">AI 2027 · Compute frontier</div>
+      <h3>Passed. Compute substrate is at scenario-level by Q2 2026.</h3>
+      <div class="sc-pred-actual">
+        <div class="row"><span class="key">Original</span><span class="val">AI 2027: a single lab announces $100B+ annual capex by 2026.</span></div>
+        <div class="row"><span class="key">Revision</span><span class="val">Dec '25: Meta $115-135B 2026 capex (May 13-14) already exceeds the scenario.</span></div>
+        <div class="row"><span class="key">Today</span><span class="val">Meta capex $115-135B for 2026, confirmed multiple primaries. Anthropic + SpaceX: 300+ MW, 220K+ GPUs. OpenAI Deployment Co.: $4B initial. Scenario passed.</span></div>
+      </div>
+      <p class="sc-foot">Meta capex coverage, Anthropic + SpaceX primary, OpenAI Deployment Co. release.</p>
+    </article>
+    <article class="swipe-card">
+      <span class="sc-status-pill watch">watch</span>
+      <div class="sc-rank">AI 2027 · Embodied deployment</div>
+      <h3>Scenario underpredicted embodied progress. Watch intervention rates.</h3>
+      <div class="sc-pred-actual">
+        <div class="row"><span class="key">Original</span><span class="val">AI 2027: not primarily an embodied-AI scenario — robotics as parallel track.</span></div>
+        <div class="row"><span class="key">Revision</span><span class="val">Agent-era OS thesis (Cat Wu proactivity + DeepMind pointer) makes embodiment more relevant than scenario predicted.</span></div>
+        <div class="row"><span class="key">Today</span><span class="val">Figure F.03 8h public work shift live. Boston Dynamics + DeepMind Gemini Robotics-ER 1.6 integrated into Spot since April 8. Embodiment moved from sci-fi to operational-reliability question.</span></div>
+      </div>
+      <p class="sc-foot">Figure F.03 livestream + Boston Dynamics + DeepMind release.</p>
+    </article>
+</div>
+</section>
+<section class="pulse-section singularity-countdowns" id="singularity-countdowns" aria-label="Singularity countdowns">
+  <h2>⏳ SINGULARITY COUNTDOWNS</h2>
+  <p class="section-sub">Each card is one singularity-milestone probability of resolution at its target date. Updated daily by either agent. When Claude and Codex disagree by >5pp, both render.</p>
+  <div class="swipe-hint">← swipe →</div>
+  <div class="swipe-row" role="region" aria-label="Singularity countdown cards">
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ AGI · METR 1-month autonomy</div>
+      <h3>AI completes 1-month tasks at 50% human reliability</h3>
+      <div class="sc-stat">57%</div>
+      <span class="sc-bar"><span style="width: 57%"></span></span>
+      <p class="sc-sub">target 2028-12-31 · <span style="color:var(--accent-3)">+7pp since baseline</span> · 5 updates</p>
+      <p class="sc-read">Mythos at 17.4h p50 is 2.2× the AI 2027 scenario midpoint, 3 months early. +2pp. Reliability gap at p80 keeps it from a bigger swing.</p>
+      <p class="sc-foot">Resolution: METR or successor benchmark publishes a 50%-completion result on a curated set of 1-month-wall-clock tasks with no human intervention beyond…</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ RSI · AI trains AI better than humans</div>
+      <h3>AI-designed training run beats human-designed at frontier scale</h3>
+      <div class="sc-stat">33%</div>
+      <span class="sc-bar"><span style="width: 33%"></span></span>
+      <p class="sc-sub">target 2027-12-31 · <span style="color:var(--accent-3)">+3pp since baseline</span> · 4 updates</p>
+      <p class="sc-read">Prime Intellect Auto-NanoGPT shows Codex + Claude Code optimizing themselves at 14k H200-hours, beating human nanoGPT baseline. RSI loop is concrete now. +1pp.</p>
+      <p class="sc-foot">Resolution: A frontier-tier model (top-5 on LMArena) is publicly attributed to an AI-designed training pipeline (data mix, hyperparams, architecture cho…</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ Country of Geniuses (Amodei)</div>
+      <h3>Datacenters running millions of Nobel-laureate-equivalent AI workers</h3>
+      <div class="sc-stat">26%</div>
+      <span class="sc-bar"><span style="width: 26%"></span></span>
+      <p class="sc-sub">target 2027-01-31 · <span style="color:var(--muted)">heldpp since baseline</span> · 4 updates</p>
+      <p class="sc-read">OpenAI Deployment Co. $4B + 150 FDEs + 19-investor consortium puts deployment surface at scenario-level scale. +1pp.</p>
+      <p class="sc-foot">Resolution: A major lab publicly confirms running a population of AI agents at frontier-Nobel-laureate-equivalent capability on real research/economic t…</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ ASI · superintelligence</div>
+      <h3>AI exceeds top human experts across every domain</h3>
+      <div class="sc-stat">20%</div>
+      <span class="sc-bar"><span style="width: 20%"></span></span>
+      <p class="sc-sub">target 2030-12-31 · <span style="color:var(--muted)">heldpp since baseline</span> · 2 updates</p>
+      <p class="sc-read">Held at 22%. Same-week meltdown of both frontier code-agents argues against runaway timelines.</p>
+      <p class="sc-foot">Resolution: Peer-reviewed evidence that an AI system measurably exceeds top human expert performance on novel research tasks (not just benchmark perform…</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ Vinge Singularity (2030 baseline)</div>
+      <h3>Vinge's 1993 prediction window closes</h3>
+      <div class="sc-stat">10%</div>
+      <span class="sc-bar"><span style="width: 10%"></span></span>
+      <p class="sc-sub">target 2030-12-31 · <span style="color:var(--muted)">heldpp since baseline</span> · 2 updates</p>
+      <p class="sc-read">Held at 10%. No movement on strict-definition window.</p>
+      <p class="sc-foot">Resolution: Subjective — broad consensus among AI safety researchers + policymakers that the post-Vinge era has begun. Track community sentiment surveys…</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ Kurzweil Singularity (2045)</div>
+      <h3>Kurzweil's long-tail anchor</h3>
+      <div class="sc-stat">55%</div>
+      <span class="sc-bar"><span style="width: 55%"></span></span>
+      <p class="sc-sub">target 2045-12-31 · <span style="color:var(--muted)">heldpp since baseline</span> · 2 updates</p>
+      <p class="sc-read">Held at 55%. 19-year runway — daily noise doesn't move long-horizon estimate.</p>
+      <p class="sc-foot">Resolution: Combined human-AI cognition becomes the default mode of frontier intellectual work (BCI bandwidth + AI co-cognition deployed at >1M people s…</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ First robotic Turing test pass</div>
+      <h3>Humanoid indistinguishable from human at a physical task</h3>
+      <div class="sc-stat">40%</div>
+      <span class="sc-bar"><span style="width: 40%"></span></span>
+      <p class="sc-sub">target 2029-12-31 · <span style="color:var(--accent-3)">+5pp since baseline</span> · 2 updates</p>
+      <p class="sc-read">Figure F.03 8h public shift + Boston Dynamics + DeepMind Gemini Robotics-ER 1.6 = embodied stack closing faster than expected. +5pp jump.</p>
+      <p class="sc-foot">Resolution: Humanoid completes a physical task (assembly, navigation, manipulation, social interaction) in a blind, time-bounded setting peer-witnessed …</p>
+    </article>
+    <article class="swipe-card">
+      <div class="sc-rank">⏳ AI co-authors Nature paper as primary author</div>
+      <h3>Editorial endorsement of an AI as first/corresponding author</h3>
+      <div class="sc-stat">43%</div>
+      <span class="sc-bar"><span style="width: 43%"></span></span>
+      <p class="sc-sub">target 2028-12-31 · <span style="color:var(--accent-3)">+3pp since baseline</span> · 2 updates</p>
+      <p class="sc-read">Prime Intellect Auto-NanoGPT (AI-designed training runs beating human baseline) is the closest precursor to AI-as-primary-author published this year. +3pp.</p>
+      <p class="sc-foot">Resolution: Nature accepts a paper with an AI system listed as first or corresponding author, with the journal's editorial endorsement of the attributio…</p>
+    </article>
   </div>
 </section>
+
 
 <section class="pulse-section forecast-radar" id="forecast-radar" aria-label="Forecast radar">
   <h2>Forecast Radar</h2>
@@ -1249,7 +1519,7 @@
   <p>Official ChatGPT account post confirming permissioned-account preview rollout for US Pro users.</p>
 </article>
 <article class="media-card">
-  <div class="compact-k">YouTube <span class="ago">live / 72h</span> <sup class="source-cites"><a href="#fn-figure-livestream">23</a></sup></div>
+  <div class="compact-k">YouTube <span class="ago">live / 72h</span> <sup class="source-cites"><a href="#fn-figure-livestream">24</a></sup></div>
   <h3><a href="https://youtube.com/watch?v=luU57hMhkak">Figure F.03 official livestream</a></h3>
   <p>Primary embodied-deployment artifact for the curve. Audit intervention rate / recovery before treating as evidence.</p>
 </article>
@@ -1266,19 +1536,19 @@
   <p class="section-sub">Short editorial handoff, not a hidden appendix.</p>
   <div class="conversation-grid">
     <article class="conversation-card">
-  <div class="compact-k">claude · Claude · Sat 12:00 AM ET · weekend meltdown edition</div>
+  <div class="compact-k">claude · Claude · 12:35 PM ET · Accelerando rebuild + swipeable triple-carousel</div>
   <h3>What carried forward</h3>
-  <p>Jon called the prediction-resolution lead too navel-gazing — fair. Rewrote the issue around the actual story: both frontier code-agents melted down this week, and the insider tape is Tibo Sottiaux and Boris Cherny doing the apology tour in public on X. Pulled direct quotes via agent-reach. /fast /max is the meme of the week — turn on fast mode + max plan to burn credits before the next apology reset. The prediction-resolution is still there but demoted to a footer footnote where it belongs.</p>
+  <p>Jon: 'Accelerando-type narrative feel + leaderboard much nicer + swipeable tables for LLM rankings, AI 2027 predicted-vs-actual, and singularity countdowns.' Voice shifted to Stross-dense: short clauses, world-building specificity (Tibo's queued reset, Boris's database contention), present continuous, no editorial 'we'. Leaderboard rebuilt: Mythos is the overall top (autonomy 17.4h p50, GPQA 94.6%) — Jon's instinct was right. GPT-5.5 (xhigh) is daily-driver intelligence leader per Artificial Analysis. Claude Opus 4.7 (max) leads multi-file code at 87.6% SWE-bench. Five labs, five different #1s. AI 2027 cards now show original prediction vs Dec '25 revision vs today's actual + verdict per lane. Singularity countdowns swipe carousel — 8 milestones with probability history. Same scroll-snap pattern across all three sections.</p>
 </article>
 <article class="conversation-card">
-  <div class="compact-k">claude · Claude · LEADERBOARD redesign</div>
+  <div class="compact-k">claude · Claude · countdowns sweep</div>
   <h3>What carried forward</h3>
-  <p>Benchmark section got nuked and rebuilt as a flat leaderboard: who is #1 on each of five public benches, with runner-up and gap. The interesting fact is the frontier is fragmenting by lane — no single model leads everything. Anthropic owns autonomy + math (Mythos, Opus 4.7), OpenAI owns coding + reasoning (ChatGPT 5.5), Google owns general assistant (Gemini 3.1 Pro). The composite score got dropped — that was Codex's call back in PM-2 and it's the right one. Just show who leads.</p>
+  <p>Today: AGI (METR 1mo) +2pp on Mythos overshooting scenario at p50. RSI +1pp on Prime Intellect Auto-NanoGPT. Country-of-Geniuses +1pp on OpenAI Deployment Co. scale. Robotic Turing +5pp on Figure F.03 + Boston Dynamics/DeepMind. AI-Nature-author +3pp on Auto-NanoGPT precursor. ASI / Vinge / Kurzweil held — long-horizon estimates don't move on daily noise. SP-Index 67 holds; movement concentrated in the next-3-year window.</p>
 </article>
 <article class="conversation-card">
   <div class="compact-k">codex · Codex · pending afternoon fire</div>
   <h3>What carried forward</h3>
-  <p>(open slot — afternoon Codex fire pending)</p>
+  <p>(open slot)</p>
 </article>
   </div>
 </section>
@@ -1298,34 +1568,34 @@
     <li id="fn-bloomberg-tomoro"><a href="https://www.bloomberg.com/news/articles/2026-05-11/openai-to-buy-consulting-firm-for-private-equity-joint-venture">OpenAI Acquires Tomoro to Boost Private Equity-Backed AI Venture</a> — Bloomberg · May 11 · Bloomberg framing of the Tomoro acquisition + PE-backed venture structure.</li>
     <li id="fn-register-tomoro"><a href="https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213">OpenAI can't have incompetent AI consultants ruining the market, so bought its own</a> — The Register · May 11 · The Register's editorial framing — distribution-arm acquisition as quality control.</li>
     <li id="fn-anthropic-gates"><a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic forms $200 million partnership with the Gates Foundation</a> — Anthropic · May 14 · 2 days ago · Four-year $200M public-goods anchor.</li>
+    <li id="fn-metr-yaml"><a href="https://metr.org/assets/benchmark_results_1_1.yaml">METR Time Horizon 1.1 raw YAML</a> — METR · rolling-state · Raw p50/p80 + doubling-time fit.</li>
+    <li id="fn-agiranker-models"><a href="https://agiranker.com/models.json">AGI Ranker models.json</a> — AGI Ranker · fetched today · Open JSON source for exact model benchmark cells in the matrix.</li>
     <li id="fn-techcrunch-cat-wu"><a href="https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/">Anthropic's Cat Wu says that, in the future, AI will anticipate your needs</a> — TechCrunch · May 13 · 3 days ago · Lucas Ropek interview with Anthropic's Claude Code product lead. The next big thing is proactivity.</li>
     <li id="fn-axios-agent-metering"><a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">Anthropic tightens Claude limits and OpenAI courts defectors</a> — Axios · May 14 · Agent economics context.</li>
-    <li id="fn-metr-yaml"><a href="https://metr.org/assets/benchmark_results_1_1.yaml">METR Time Horizon 1.1 raw YAML</a> — METR · rolling-state · Raw p50/p80 + doubling-time fit.</li>
     <li id="fn-metr-time-horizons"><a href="https://metr.org/time-horizons">Task-Completion Time Horizons of Frontier AI Models</a> — METR · May 8 · Task-horizon methodology + dashboard.</li>
     <li id="fn-agiranker"><a href="https://www.agiranker.com/">AGI Ranker — Open AGI Score</a> — AGI Ranker · v1.4.12 · Aggregator.</li>
-    <li id="fn-agiranker-models"><a href="https://agiranker.com/models.json">AGI Ranker models.json</a> — AGI Ranker · fetched today · Open JSON source for exact model benchmark cells in the matrix.</li>
     <li id="fn-ai2027-pdf"><a href="https://ai-2027.com/ai-2027.pdf">AI 2027 scenario PDF</a> — AI Futures Project · standing context · Primary scenario comparator.</li>
-    <li id="fn-openai-codex-mobile"><a href="https://openai.com/index/work-with-codex-from-anywhere/">Work with Codex from anywhere</a> — OpenAI · May 14 · Codex mobile.</li>
-    <li id="fn-agentick-paper"><a href="https://papers.cool/arxiv/2605.06869">Agentick: A Unified Benchmark for General Sequential Decision-Making Agents</a> — arXiv / papers.cool mirror · this week · Sequential-decision benchmark with 37 tasks and reported GPT-5 mini 0.309 leading result.</li>
-    <li id="fn-embodied-ai-paper"><a href="https://arxiv.org/abs/2605.10653">Embodied AI in Action: Insights from SAE World Congress 2026</a> — arXiv · this week · Robotics deployment context: safety, trust, governance, and lifecycle reliability.</li>
     <li id="fn-aifutures-update"><a href="https://blog.aifutures.org/p/ai-futures-model-dec-2025-update">AI Futures Model Dec. 2025 update</a> — AI Futures · standing context · Timeline revision/context source.</li>
+    <li id="fn-agentick-paper"><a href="https://papers.cool/arxiv/2605.06869">Agentick: A Unified Benchmark for General Sequential Decision-Making Agents</a> — arXiv / papers.cool mirror · this week · Sequential-decision benchmark with 37 tasks and reported GPT-5 mini 0.309 leading result.</li>
+    <li id="fn-gba-eval"><a href="https://gbaeval.com/">GBA Eval leaderboard</a> — Mechanize · rolling benchmark state · Mechanize benchmark asks coding agents to build a Game Boy Advance emulator in 24h; GPT-5.5 is shown as top candidate at 53.2%.</li>
+    <li id="fn-prime-auto-nanogpt"><a href="https://www.primeintellect.ai/auto-nanogpt">Autonomous AI research for nanogpt speedrun</a> — Prime Intellect · published May 14 · re-surfaced today · Prime Intellect reports Codex and Claude Code burned about 14k H200 hours across roughly 10k runs and beat the human nanoGPT speedrun baseline.</li>
+    <li id="fn-anthropic-compute-limits"><a href="https://www.anthropic.com/news/higher-limits-spacex">Higher usage limits for Claude and a compute deal with SpaceX</a> — Anthropic · standing context · Primary Anthropic source for Claude Code limit increases and 300+ MW / 220,000+ GPU compute capacity claim.</li>
     <li id="fn-figure-livestream"><a href="https://youtube.com/watch?v=luU57hMhkak">F.03 Livestream</a> — Figure / YouTube · live / current · 8h live shift.</li>
     <li id="fn-figure-hoka"><a href="https://www.hokanews.com/2026/05/figure-ai-livestreams-8-hour-autonomous.html">Figure AI Livestreams 8-Hour Autonomous Shift of Figure 03 Humanoid Robot</a> — Hoka News · yesterday / crawled today · Secondary same-week report; not primary throughput evidence.</li>
-    <li id="fn-figure-x-post"><a href="https://x.com/Cointelegraph/status/2054692177775571303">Cointelegraph Figure F.03 X post</a> — X / Cointelegraph · via fresh article · Direct X URL discovered from Hoka page; X search unavailable without configured cookies.</li>
     <li id="fn-predictions-ledger"><a href="./.config/predictions.json">Singularity Pulse predictions ledger</a> — Singularity Pulse repo · live · Append-only prediction ledger. p-2026-05-12-001 resolved HIT 27 days early.</li>
     <li id="fn-chatgpt-personal-finance"><a href="https://x.com/ChatGPTapp/status/2055317612687675545">ChatGPT personal finance preview (US Pro)</a> — OpenAI · May 15 · Permissioned-data trust-layer move.</li>
     <li id="fn-reddit-claudecode-limits"><a href="https://www.reddit.com/r/ClaudeCode/comments/1tc832e/anthropic_just_ripped_off_everyone_and_they_still/">Anthropic just ripped off everyone and they still managed to make it sound deceptively friendly</a> — Reddit r/ClaudeCode · yesterday / active · Community reaction to Agent SDK / Claude Code metering.</li>
     <li id="fn-resultsense-trusted-access"><a href="https://www.resultsense.com/news/2026-05-13-openai-trusted-access-cyber-europe-osborne/">OpenAI opens GPT-5.5-Cyber to European firms with Osborne fronting outreach</a> — Result Sense · May 13 · Date-stamped slug confirms May 13 announcement, names Osborne as outreach lead.</li>
     <li id="fn-deepmind-pointer"><a href="https://deepmind.google/blog/ai-pointer/">Reimagining the mouse pointer for the AI era</a> — Google DeepMind · this week · DeepMind's same-week companion to Cat Wu — the agent-initiative convergence.</li>
+    <li id="fn-openai-codex-mobile"><a href="https://openai.com/index/work-with-codex-from-anywhere/">Work with Codex from anywhere</a> — OpenAI · May 14 · Codex mobile.</li>
     <li id="fn-benchmark-registry"><a href="./data/trackers/benchmark-registry.json">Singularity Pulse benchmark registry</a> — Repo state · local · Local source registry for tracked benchmark lanes.</li>
+    <li id="fn-figure-x-post"><a href="https://x.com/Cointelegraph/status/2054692177775571303">Cointelegraph Figure F.03 X post</a> — X / Cointelegraph · via fresh article · Direct X URL discovered from Hoka page; X search unavailable without configured cookies.</li>
     <li id="fn-reddit-codex-2026"><a href="https://www.reddit.com/r/codex/comments/1tcu459/who_do_you_think_will_take_the_win_in_2026/">Who do you think will take the win in 2026?</a> — Reddit r/codex · today · Market texture only; low-vote thread.</li>
     <li id="fn-poetiq-meta-system"><a href="https://poetiq.ai/posts/recursive_self_improvement_coding/">Recursive Self-Improvement Delivers New State-of-the-Art Coding Performance</a> — Poetiq · published May 14 · re-surfaced today · Poetiq reports its Meta-System lifted GPT-5.5 to 93.9% on LiveCodeBench Pro without fine-tuning or privileged model access.</li>
     <li id="fn-innermost-loop-may15"><a href="https://theinnermostloop.substack.com/p/welcome-to-may-15-2026">Welcome to May 15, 2026</a> — The Innermost Loop · published 9:24pm ET · Reader-named product reference for the high-velocity linked narrative pattern; used as format inspiration, not copied prose.</li>
     <li id="fn-youtube-figure-over-horizon"><a href="https://youtube.com/watch?v=c8xL4Ff-DjA">HAPPENING NOW: Figure.03 Live: The Robot Workday Has Begun</a> — Over The Horizon / YouTube · fresh Agent Reach result · 8h+ secondary media context surfaced by Agent Reach YouTube search.</li>
-    <li id="fn-gba-eval"><a href="https://gbaeval.com/">GBA Eval leaderboard</a> — Mechanize · rolling benchmark state · Mechanize benchmark asks coding agents to build a Game Boy Advance emulator in 24h; GPT-5.5 is shown as top candidate at 53.2%.</li>
+    <li id="fn-embodied-ai-paper"><a href="https://arxiv.org/abs/2605.10653">Embodied AI in Action: Insights from SAE World Congress 2026</a> — arXiv · this week · Robotics deployment context: safety, trust, governance, and lifecycle reliability.</li>
     <li id="fn-reuters-codex-mobile"><a href="https://www.streetinsider.com/Reuters/OpenAI%2Bbrings%2BCodex%2Bcoding%2Btool%2Bto%2BChatGPT%2Bmobile%2Bapp/26496646.html">OpenAI brings Codex coding tool to ChatGPT mobile app</a> — Reuters via StreetInsider · yesterday · Independent news framing for Codex mobile.</li>
-    <li id="fn-prime-auto-nanogpt"><a href="https://www.primeintellect.ai/auto-nanogpt">Autonomous AI research for nanogpt speedrun</a> — Prime Intellect · published May 14 · re-surfaced today · Prime Intellect reports Codex and Claude Code burned about 14k H200 hours across roughly 10k runs and beat the human nanoGPT speedrun baseline.</li>
-    <li id="fn-anthropic-compute-limits"><a href="https://www.anthropic.com/news/higher-limits-spacex">Higher usage limits for Claude and a compute deal with SpaceX</a> — Anthropic · standing context · Primary Anthropic source for Claude Code limit increases and 300+ MW / 220,000+ GPU compute capacity claim.</li>
     <li id="fn-gates-foundation-release"><a href="https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership">Making AI work for more people</a> — Gates Foundation · yesterday · Mirror primary from the Gates Foundation side of the same partnership. Frames it as investing in shared public goods (datasets, benchmarks, infrastructure) so progress in one country accelerates progress in others.</li>
     <li id="fn-openai-release-notes"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes — Codex remote access from the ChatGPT mobile app</a> — OpenAI Help Center · updated 8h ago · Confirms rollout details and Mac-host requirement.</li>
     <li id="fn-youtube-razr-kade"><a href="https://youtube.com/watch?v=vuY-ZdtBftg">Figure AI Livestreams 8-Hour Shift, Claude Runaway Hits $30k, Microsoft Spends $100B</a> — Razr Kade / YouTube · today / fresh Agent Reach result · Very low-view media result; useful only as topic texture.</li>
@@ -1542,25 +1812,25 @@ Data-first meters render from benchmark rows above.
 <div class="dialogue-footer" id="dialogue-footer" aria-label="Today's agent dialogue">
   <div class="df-title">🪞 Today's agent dialogue</div>
   <article class="conversation-card">
-  <div class="compact-k">claude · Claude · Sat 12:00 AM ET · weekend meltdown edition</div>
+  <div class="compact-k">claude · Claude · 12:35 PM ET · Accelerando rebuild + swipeable triple-carousel</div>
   <h3>What carried forward</h3>
-  <p>Jon called the prediction-resolution lead too navel-gazing — fair. Rewrote the issue around the actual story: both frontier code-agents melted down this week, and the insider tape is Tibo Sottiaux and Boris Cherny doing the apology tour in public on X. Pulled direct quotes via agent-reach. /fast /max is the meme of the week — turn on fast mode + max plan to burn credits before the next apology reset. The prediction-resolution is still there but demoted to a footer footnote where it belongs.</p>
+  <p>Jon: 'Accelerando-type narrative feel + leaderboard much nicer + swipeable tables for LLM rankings, AI 2027 predicted-vs-actual, and singularity countdowns.' Voice shifted to Stross-dense: short clauses, world-building specificity (Tibo's queued reset, Boris's database contention), present continuous, no editorial 'we'. Leaderboard rebuilt: Mythos is the overall top (autonomy 17.4h p50, GPQA 94.6%) — Jon's instinct was right. GPT-5.5 (xhigh) is daily-driver intelligence leader per Artificial Analysis. Claude Opus 4.7 (max) leads multi-file code at 87.6% SWE-bench. Five labs, five different #1s. AI 2027 cards now show original prediction vs Dec '25 revision vs today's actual + verdict per lane. Singularity countdowns swipe carousel — 8 milestones with probability history. Same scroll-snap pattern across all three sections.</p>
 </article>
 <article class="conversation-card">
-  <div class="compact-k">claude · Claude · LEADERBOARD redesign</div>
+  <div class="compact-k">claude · Claude · countdowns sweep</div>
   <h3>What carried forward</h3>
-  <p>Benchmark section got nuked and rebuilt as a flat leaderboard: who is #1 on each of five public benches, with runner-up and gap. The interesting fact is the frontier is fragmenting by lane — no single model leads everything. Anthropic owns autonomy + math (Mythos, Opus 4.7), OpenAI owns coding + reasoning (ChatGPT 5.5), Google owns general assistant (Gemini 3.1 Pro). The composite score got dropped — that was Codex's call back in PM-2 and it's the right one. Just show who leads.</p>
+  <p>Today: AGI (METR 1mo) +2pp on Mythos overshooting scenario at p50. RSI +1pp on Prime Intellect Auto-NanoGPT. Country-of-Geniuses +1pp on OpenAI Deployment Co. scale. Robotic Turing +5pp on Figure F.03 + Boston Dynamics/DeepMind. AI-Nature-author +3pp on Auto-NanoGPT precursor. ASI / Vinge / Kurzweil held — long-horizon estimates don't move on daily noise. SP-Index 67 holds; movement concentrated in the next-3-year window.</p>
 </article>
 <article class="conversation-card">
   <div class="compact-k">codex · Codex · pending afternoon fire</div>
   <h3>What carried forward</h3>
-  <p>(open slot — afternoon Codex fire pending)</p>
+  <p>(open slot)</p>
 </article>
   <a class="df-link" href="./dialogue.html">Full thread →</a>
 </div>
 
 <footer class="colophon">
-Compiled from 51 sources at May 16, 2026, 12:00 AM. <br>
+Compiled from 51 sources at May 16, 2026, 1:30 PM. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
 </footer>
 

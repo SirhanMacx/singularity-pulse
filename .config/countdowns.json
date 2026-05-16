@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-14T15:10:00-04:00",
+  "last_updated": "2026-05-16T13:30:00-04:00",
   "_note": "Eight canonical singularity milestones. Each agent updates p_at_target daily based on evidence movement on the 8 SP-Index dimensions. Tiny moves (typical day) nudge 1–2pp. Big moves (rare day) swing more, justified in prose. When Claude and Codex disagree by >5pp on a single day's update, BOTH numbers render in the issue's COUNTDOWNS section.",
   "countdowns": [
     {
@@ -8,12 +8,43 @@
       "name": "AGI · METR 1-month autonomy",
       "tagline": "AI completes 1-month tasks at 50% human reliability",
       "target_date": "2028-12-31",
-      "p_at_target": 0.55,
+      "p_at_target": 0.57,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.50, "evidence": "v8 baseline — METR last published Q1 2026 with ~1h horizon, doubling time ~5.7mo → 1mo by mid-2028 is plausible-not-certain", "synthetic": false},
-        {"date": "2026-05-13", "agent": "claude", "p": 0.49, "evidence": "Anthropic ships autonomous-agents preview AT the memory wall (LongMemEval-V2 + MEME show <5% dependency reasoning). Slight negative nudge on autonomy-horizon.", "synthetic": false},
-        {"date": "2026-05-14", "agent": "claude", "p": 0.50, "evidence": "Meta capex $115–135B = compute substrate for capacity-side AGI work. Reverses yesterday's nudge.", "synthetic": false},
-        {"date": "2026-05-14-afternoon", "agent": "claude", "p": 0.55, "evidence": "Dan McAteer thread surfaces Mythos past METR's 16h measurable ceiling — METR's own caveat that measurements above 16h are unreliable means we don't know exactly where the 50% time-horizon lands, but it's substantially past 16h, not the 1h baseline. AISI cyber doubling 8mo→4.7mo (super-exponential) is independent corroboration. Bigger-than-typical +5pp move; flagged in dialogue. Uncertainty caveat: McAteer is synthesis, not raw data; await independent confirmation of the METR-16h claim.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.5,
+          "evidence": "v8 baseline — METR last published Q1 2026 with ~1h horizon, doubling time ~5.7mo → 1mo by mid-2028 is plausible-not-certain",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-13",
+          "agent": "claude",
+          "p": 0.49,
+          "evidence": "Anthropic ships autonomous-agents preview AT the memory wall (LongMemEval-V2 + MEME show <5% dependency reasoning). Slight negative nudge on autonomy-horizon.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-14",
+          "agent": "claude",
+          "p": 0.5,
+          "evidence": "Meta capex $115–135B = compute substrate for capacity-side AGI work. Reverses yesterday's nudge.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-14-afternoon",
+          "agent": "claude",
+          "p": 0.55,
+          "evidence": "Dan McAteer thread surfaces Mythos past METR's 16h measurable ceiling — METR's own caveat that measurements above 16h are unreliable means we don't know exactly where the 50% time-horizon lands, but it's substantially past 16h, not the 1h baseline. AISI cyber doubling 8mo→4.7mo (super-exponential) is independent corroboration. Bigger-than-typical +5pp move; flagged in dialogue. Uncertainty caveat: McAteer is synthesis, not raw data; await independent confirmation of the METR-16h claim.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.57,
+          "evidence": "Mythos at 17.4h p50 is 2.2× the AI 2027 scenario midpoint, 3 months early. +2pp. Reliability gap at p80 keeps it from a bigger swing.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "METR or successor benchmark publishes a 50%-completion result on a curated set of 1-month-wall-clock tasks with no human intervention beyond setup."
     },
@@ -22,11 +53,36 @@
       "name": "RSI · AI trains AI better than humans",
       "tagline": "AI-designed training run beats human-designed at frontier scale",
       "target_date": "2027-12-31",
-      "p_at_target": 0.32,
+      "p_at_target": 0.33,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.30, "evidence": "v8 baseline — Anthropic's automated-alignment-research signal (Import AI #454) + AlphaEvolve scale-out point in this direction, but no public training-run yet shows clear AI-designed > human-designed at frontier scale", "synthetic": false},
-        {"date": "2026-05-13", "agent": "claude", "p": 0.31, "evidence": "Learning Fast-and-Slow paper (Zaharia/Keutzer/Gonzalez/Dhillon) reduces forgetting in RL fine-tuning by ~70% KL — makes continual learning cheaper, RSI loop cheaper.", "synthetic": false},
-        {"date": "2026-05-14", "agent": "claude", "p": 0.32, "evidence": "AEvo (DeepWisdom + HKUST) — meta-agent editing the agent-evolution procedure. Clean precursor pattern for RSI. +1pp.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.3,
+          "evidence": "v8 baseline — Anthropic's automated-alignment-research signal (Import AI #454) + AlphaEvolve scale-out point in this direction, but no public training-run yet shows clear AI-designed > human-designed at frontier scale",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-13",
+          "agent": "claude",
+          "p": 0.31,
+          "evidence": "Learning Fast-and-Slow paper (Zaharia/Keutzer/Gonzalez/Dhillon) reduces forgetting in RL fine-tuning by ~70% KL — makes continual learning cheaper, RSI loop cheaper.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-14",
+          "agent": "claude",
+          "p": 0.32,
+          "evidence": "AEvo (DeepWisdom + HKUST) — meta-agent editing the agent-evolution procedure. Clean precursor pattern for RSI. +1pp.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.33,
+          "evidence": "Prime Intellect Auto-NanoGPT shows Codex + Claude Code optimizing themselves at 14k H200-hours, beating human nanoGPT baseline. RSI loop is concrete now. +1pp.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "A frontier-tier model (top-5 on LMArena) is publicly attributed to an AI-designed training pipeline (data mix, hyperparams, architecture choice), with the lab acknowledging the AI's contribution exceeded the humans-in-loop."
     },
@@ -37,9 +93,34 @@
       "target_date": "2027-01-31",
       "p_at_target": 0.26,
       "p_history": [
-        {"date": "2026-05-14", "agent": "claude", "p": 0.26, "evidence": "Meta $115–135B 2026 capex provides the compute substrate Amodei's framing requires. Reversing yesterday's -1 nudge.", "synthetic": false},
-        {"date": "2026-05-13", "agent": "claude", "p": 0.24, "evidence": "Memory wall papers — agent autonomy bottleneck identified. -1pp (later acknowledged in dialogue as the wrong read).", "synthetic": false},
-        {"date": "2026-05-12", "agent": "claude", "p": 0.25, "evidence": "v8 baseline — Amodei framed his ~18-month window in Jan 2026, target ≈ mid-2027. 25% reflects: capability composite trending fast (GPQA 94, SWE-bench-Pro 64, autonomy 1h) BUT no public deployment yet at the scale he described.", "synthetic": false}
+        {
+          "date": "2026-05-14",
+          "agent": "claude",
+          "p": 0.26,
+          "evidence": "Meta $115–135B 2026 capex provides the compute substrate Amodei's framing requires. Reversing yesterday's -1 nudge.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-13",
+          "agent": "claude",
+          "p": 0.24,
+          "evidence": "Memory wall papers — agent autonomy bottleneck identified. -1pp (later acknowledged in dialogue as the wrong read).",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.25,
+          "evidence": "v8 baseline — Amodei framed his ~18-month window in Jan 2026, target ≈ mid-2027. 25% reflects: capability composite trending fast (GPQA 94, SWE-bench-Pro 64, autonomy 1h) BUT no public deployment yet at the scale he described.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.26,
+          "evidence": "OpenAI Deployment Co. $4B + 150 FDEs + 19-investor consortium puts deployment surface at scenario-level scale. +1pp.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "A major lab publicly confirms running a population of AI agents at frontier-Nobel-laureate-equivalent capability on real research/economic tasks at scale (≥10k parallel instances doing independent novel work)."
     },
@@ -48,9 +129,22 @@
       "name": "ASI · superintelligence",
       "tagline": "AI exceeds top human experts across every domain",
       "target_date": "2030-12-31",
-      "p_at_target": 0.22,
+      "p_at_target": 0.2,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.20, "evidence": "v8 baseline — broader claim than AGI. Currently no domain where AI demonstrably exceeds top human experts on novel work (vs. benchmark performance). 2030 horizon plausible if RSI lands first.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.2,
+          "evidence": "v8 baseline — broader claim than AGI. Currently no domain where AI demonstrably exceeds top human experts on novel work (vs. benchmark performance). 2030 horizon plausible if RSI lands first.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.2,
+          "evidence": "Held at 22%. Same-week meltdown of both frontier code-agents argues against runaway timelines.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "Peer-reviewed evidence that an AI system measurably exceeds top human expert performance on novel research tasks (not just benchmark performance) across 5+ disparate domains."
     },
@@ -59,9 +153,22 @@
       "name": "Vinge Singularity (2030 baseline)",
       "tagline": "Vinge's 1993 prediction window closes",
       "target_date": "2030-12-31",
-      "p_at_target": 0.10,
+      "p_at_target": 0.1,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.10, "evidence": "v8 baseline — Vinge's 'between 2005 and 2030' framing. Probability low because the strict 'fall of the human era' framing is uncalibrated; loose readings (transformative AI) overlap with AGI/ASI countdowns above.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.1,
+          "evidence": "v8 baseline — Vinge's 'between 2005 and 2030' framing. Probability low because the strict 'fall of the human era' framing is uncalibrated; loose readings (transformative AI) overlap with AGI/ASI countdowns above.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.1,
+          "evidence": "Held at 10%. No movement on strict-definition window.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "Subjective — broad consensus among AI safety researchers + policymakers that the post-Vinge era has begun. Track community sentiment surveys; resolve when ≥70% of named-researcher surveys agree."
     },
@@ -72,7 +179,20 @@
       "target_date": "2045-12-31",
       "p_at_target": 0.55,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.55, "evidence": "v8 baseline — Kurzweil's 2045 has a 19-year runway from today. Given current curve velocity, >50% probability is reasonable, but the specific definition (merger of biological + digital intelligence) is harder to operationalize than AGI/ASI.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.55,
+          "evidence": "v8 baseline — Kurzweil's 2045 has a 19-year runway from today. Given current curve velocity, >50% probability is reasonable, but the specific definition (merger of biological + digital intelligence) is harder to operationalize than AGI/ASI.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.55,
+          "evidence": "Held at 55%. 19-year runway — daily noise doesn't move long-horizon estimate.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "Combined human-AI cognition becomes the default mode of frontier intellectual work (BCI bandwidth + AI co-cognition deployed at >1M people scale, with measurable capability gains)."
     },
@@ -81,9 +201,22 @@
       "name": "First robotic Turing test pass",
       "tagline": "Humanoid indistinguishable from human at a physical task",
       "target_date": "2029-12-31",
-      "p_at_target": 0.35,
+      "p_at_target": 0.4,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.35, "evidence": "v8 baseline — Figure 02 at BMW (5mm precision, 1250 hrs) + Physical Intelligence π0.7 + Skild Brain suggest the embodied-foundation-model stack is closing fast. 2029 horizon = 3.5 years; current capability gap is bigger than the AI Turing gap was 3 years pre-ChatGPT.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.35,
+          "evidence": "v8 baseline — Figure 02 at BMW (5mm precision, 1250 hrs) + Physical Intelligence π0.7 + Skild Brain suggest the embodied-foundation-model stack is closing fast. 2029 horizon = 3.5 years; current capability gap is bigger than the AI Turing gap was 3 years pre-ChatGPT.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.4,
+          "evidence": "Figure F.03 8h public shift + Boston Dynamics + DeepMind Gemini Robotics-ER 1.6 = embodied stack closing faster than expected. +5pp jump.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "Humanoid completes a physical task (assembly, navigation, manipulation, social interaction) in a blind, time-bounded setting peer-witnessed by ≥3 independent observers who cannot distinguish from a human at the same task."
     },
@@ -92,9 +225,22 @@
       "name": "AI co-authors Nature paper as primary author",
       "tagline": "Editorial endorsement of an AI as first/corresponding author",
       "target_date": "2028-12-31",
-      "p_at_target": 0.42,
+      "p_at_target": 0.43,
       "p_history": [
-        {"date": "2026-05-12", "agent": "claude", "p": 0.40, "evidence": "v8 baseline — AlphaEvolve scale-out, Thinking Machines' Interaction Models post, and Anthropic's automated-alignment-research direction all point at AI-doing-science crossing into recognizable research output. Nature specifically (not just preprints) is a hard gate; 2028 plausible.", "synthetic": false}
+        {
+          "date": "2026-05-12",
+          "agent": "claude",
+          "p": 0.4,
+          "evidence": "v8 baseline — AlphaEvolve scale-out, Thinking Machines' Interaction Models post, and Anthropic's automated-alignment-research direction all point at AI-doing-science crossing into recognizable research output. Nature specifically (not just preprints) is a hard gate; 2028 plausible.",
+          "synthetic": false
+        },
+        {
+          "date": "2026-05-16",
+          "agent": "claude",
+          "p": 0.43,
+          "evidence": "Prime Intellect Auto-NanoGPT (AI-designed training runs beating human baseline) is the closest precursor to AI-as-primary-author published this year. +3pp.",
+          "synthetic": false
+        }
       ],
       "resolution_criteria": "Nature accepts a paper with an AI system listed as first or corresponding author, with the journal's editorial endorsement of the attribution. Preprints, lab whitepapers, and co-author lists with AI buried below human authors do NOT count."
     }
