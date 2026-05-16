@@ -755,12 +755,7 @@
   .lb-leader-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--very-muted); letter-spacing: 0.06em; line-height: 1.4; }
 
   /* Hero scatter chart */
-  .lb-scatter-wrap { margin: 0 0 32px; padding: 18px 18px 14px; border: 1px solid rgba(124,247,255,0.16); border-radius: 18px; background: rgba(2,6,23,0.62); }
-  .lb-scatter-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; gap: 12px; flex-wrap: wrap; }
-  .lb-scatter-title { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 20px; line-height: 1.1; color: var(--fg); }
-  .lb-scatter-axes { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.10em; text-transform: uppercase; }
-  .lb-scatter { width: 100%; height: 360px; }
-  @media (max-width: 520px) { .lb-scatter { height: 280px; } }
+  @media (max-width: 520px) { }
 
   /* Ranked table with CSS gradient bars */
   .lb-table { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -804,10 +799,36 @@
   .gauge-stadium-fill { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, var(--negative) 0%, var(--warning) 50%, var(--accent-3) 100%); border-radius: 5px; }
   .gauge-stadium-tick { position: absolute; top: -2px; bottom: -2px; width: 2px; background: rgba(232,238,247,0.55); }
   .gauge-sparkline { width: 100%; height: 32px; margin-top: 6px; }
+
+  /* === v5.1 CLEAN SVG CHARTS === */
+  .lb-chart { margin: 0 0 28px; padding: 18px 16px 16px; border: 1px solid rgba(124,247,255,0.16); border-radius: 18px; background: rgba(2,6,23,0.62); }
+  .lb-chart-head { margin-bottom: 14px; }
+  .lb-chart-title { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 18px; line-height: 1.15; color: var(--fg); margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lb-chart-sub { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.10em; text-transform: uppercase; margin: 0; }
+
+  /* Horizontal bar chart */
+  .bar-chart { display: grid; gap: 8px; }
+  .bar-row { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 10px; align-items: center; }
+  .bar-row-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); text-align: right; padding-right: 2px; font-weight: 600; }
+  .bar-row.leader .bar-row-label { color: #FBBF24; }
+  .bar-shell { position: relative; height: 32px; background: rgba(148,163,184,0.08); border-radius: 6px; overflow: hidden; }
+  .bar-shell::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 0%, transparent 50%, rgba(148,163,184,0.04) 50.1%, rgba(148,163,184,0.04) 100%); pointer-events: none; }
+  .bar-fill { position: absolute; top: 0; left: 0; bottom: 0; border-radius: 6px; transition: width 0.6s cubic-bezier(.2,.8,.2,1); }
+  .bar-content { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; }
+  .bar-name { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 13px; color: var(--fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: calc(100% - 60px); text-shadow: 0 0 6px rgba(2,6,23,0.7); }
+  .bar-name em { font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 9px; color: rgba(232,238,247,0.62); margin-left: 6px; letter-spacing: 0.04em; }
+  .bar-score { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; color: var(--fg); font-variant-numeric: tabular-nums; text-shadow: 0 0 6px rgba(2,6,23,0.7); }
+  .bar-row.leader .bar-name { color: #020617; text-shadow: none; }
+  .bar-row.leader .bar-score { color: #020617; text-shadow: none; }
+  .bar-axis { display: flex; justify-content: space-between; margin-top: 8px; padding-left: 34px; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--very-muted); letter-spacing: 0.10em; text-transform: uppercase; }
+
+  /* METR trend chart */
+  .metr-chart { margin: 0 0 28px; padding: 18px 16px 14px; border: 1px solid rgba(124,247,255,0.16); border-radius: 18px; background: rgba(2,6,23,0.62); }
+  .metr-svg { width: 100%; height: auto; max-height: 320px; display: block; }
+  .metr-caption { margin-top: 10px; font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .metr-caption strong { color: var(--fg); font-family: 'Fraunces', Georgia, serif; font-weight: 600; }
 </style>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uplot@1.6.32/dist/uPlot.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/uplot@1.6.32/dist/uPlot.iife.min.js"></script>
 </head>
 <body class="condensed-pulse accelerando-pulse loop-pulse" data-signal-view="brief">
 <div class="container">
@@ -1317,77 +1338,119 @@
       <p class="lb-leader-meta"></p>
     </div>
   </div>
-
-
-  <div class="lb-scatter-wrap">
-    <div class="lb-scatter-head">
-      <h3 class="lb-scatter-title">Cost vs intelligence — May 16 2026</h3>
-      <span class="lb-scatter-axes">x: $/Mtok (log) · y: intelligence</span>
+  <div class="lb-chart">
+    <div class="lb-chart-head">
+      <h3 class="lb-chart-title">Composite intelligence · top 8 models</h3>
+      <p class="lb-chart-sub">Higher = stronger across autonomy · coding · reasoning · math</p>
     </div>
-    <div id="lb-scatter" class="lb-scatter"></div>
-    <p class="lb-leader-meta" style="margin-top:10px">Frontier dots ringed in cyan. Lower-left dominates.</p>
+    <div class="bar-chart">
+    <div class="bar-row leader">
+      <span class="bar-row-label">🥇</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #A78BFAcc 0%, #A78BFA 100%); width: 85%; box-shadow: 0 0 12px #A78BFA55"></div>
+        <div class="bar-content">
+          <span class="bar-name">Claude Mythos Preview<em>Anthropic · preview</em></span>
+          <span class="bar-score">94</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">🥈</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #A78BFA33 0%, #A78BFA66 100%); width: 72%"></div>
+        <div class="bar-content">
+          <span class="bar-name">Claude Opus 4.7 max<em>Anthropic · flagship</em></span>
+          <span class="bar-score">89</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">🥉</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #34D39933 0%, #34D39966 100%); width: 70%"></div>
+        <div class="bar-content">
+          <span class="bar-name">GPT-5.5 (xhigh)<em>OpenAI · daily driver</em></span>
+          <span class="bar-score">88</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">4</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #34D39933 0%, #34D39966 100%); width: 68%"></div>
+        <div class="bar-content">
+          <span class="bar-name">GPT-5.4 Pro<em>OpenAI · reasoning</em></span>
+          <span class="bar-score">87</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">5</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #34D39933 0%, #34D39966 100%); width: 65%"></div>
+        <div class="bar-content">
+          <span class="bar-name">GPT-5.4<em>OpenAI · math</em></span>
+          <span class="bar-score">86</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">6</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #A78BFA33 0%, #A78BFA66 100%); width: 62%"></div>
+        <div class="bar-content">
+          <span class="bar-name">Claude Opus 4.6<em>Anthropic · LMArena #1</em></span>
+          <span class="bar-score">85</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">7</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #FBBF2433 0%, #FBBF2466 100%); width: 55%"></div>
+        <div class="bar-content">
+          <span class="bar-name">Gemini 3.1 Pro Preview<em>Google · multimodal</em></span>
+          <span class="bar-score">82</span>
+        </div>
+      </div>
+    </div>
+    <div class="bar-row ">
+      <span class="bar-row-label">8</span>
+      <div class="bar-shell">
+        <div class="bar-fill" style="background: linear-gradient(90deg, #7CF7FF33 0%, #7CF7FF66 100%); width: 50%"></div>
+        <div class="bar-content">
+          <span class="bar-name">DeepSeek V4-Pro<em>DeepSeek · cost-perf</em></span>
+          <span class="bar-score">80</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="bar-axis"><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span></div>
   </div>
-  <script>
-  (function(){
-    const draw = () => {
-      if (typeof uPlot === 'undefined') { setTimeout(draw, 200); return; }
-      const xs = [15.0, 60.0, 15.0, 8.0, 5.0, 8.0, 12.0, 4.0, 2.0, 0.3, 0.5, 3.0];
-      const ys = [92, 94, 88, 85, 82, 86, 89, 84, 76, 80, 72, 74];
-      const names = ["GPT-5.5 (xhigh)", "Claude Mythos Preview", "Claude Opus 4.7 (max)", "Claude Opus 4.6", "Gemini 3.1 Pro", "GPT-5.4", "GPT-5.4 Pro", "ChatGPT 5.5", "GPT-5.2", "DeepSeek V4-Pro", "Kimi K2.6", "Meta Muse Spark"];
-      const pareto = [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
-      const el = document.getElementById('lb-scatter');
-      if (!el) return;
-      const opts = {
-        width: el.clientWidth || 600,
-        height: el.clientHeight || 360,
-        scales: { x: { distr: 3, range: [0.1, 200] }, y: { range: [60, 100] } },
-        axes: [
-          { stroke: '#94A3B8', grid: { stroke: 'rgba(148,163,184,0.10)' }, ticks: { stroke: 'rgba(148,163,184,0.2)' }, values: (u, vals) => vals.map(v => v < 1 ? '$'+v : '$'+Math.round(v)) },
-          { stroke: '#94A3B8', grid: { stroke: 'rgba(148,163,184,0.10)' }, ticks: { stroke: 'rgba(148,163,184,0.2)' } }
-        ],
-        legend: { show: false },
-        cursor: { drag: { setScale: false }, points: { size: 14 } },
-        series: [
-          {},
-          { stroke: 'transparent',
-            points: { show: true, size: 11, fill: (u, sIdx, idx) => pareto[idx] ? '#7CF7FF' : '#475569', stroke: (u, sIdx, idx) => pareto[idx] ? '#020617' : '#1e293b', width: pareto.map(p => p ? 2 : 1) }
-          }
-        ],
-        hooks: {
-          draw: [u => {
-            const ctx = u.ctx;
-            const dpr = devicePixelRatio || 1;
-            ctx.save();
-            ctx.font = `${11 * dpr}px ui-monospace, "JetBrains Mono", monospace`;
-            ctx.fillStyle = '#E8EEF7';
-            ctx.textBaseline = 'middle';
-            for (let i = 0; i < xs.length; i++) {
-              const cx = u.valToPos(xs[i], 'x', true);
-              const cy = u.valToPos(ys[i], 'y', true);
-              if (cx == null || cy == null) continue;
-              const label = names[i];
-              const w = ctx.measureText(label).width;
-              const right = cx + 12 * dpr;
-              const above = cy - 6 * dpr;
-              // Position label to right if not too far, else above
-              if (right + w < u.bbox.left + u.bbox.width) {
-                ctx.fillStyle = pareto[i] ? '#7CF7FF' : '#94A3B8';
-                ctx.fillText(label, right, cy);
-              } else {
-                ctx.fillStyle = pareto[i] ? '#7CF7FF' : '#94A3B8';
-                ctx.fillText(label, cx - w - 12*dpr, cy);
-              }
-            }
-            ctx.restore();
-          }]
-        }
-      };
-      new uPlot(opts, [xs, ys], el);
-      window.addEventListener('resize', () => { el.innerHTML=''; new uPlot({...opts, width: el.clientWidth, height: el.clientHeight}, [xs, ys], el); });
-    };
-    if (document.readyState === 'complete' || document.readyState === 'interactive') setTimeout(draw, 100); else document.addEventListener('DOMContentLoaded', draw);
-  })();
-  </script>
+
+  <div class="metr-chart">
+    <div class="lb-chart-head">
+      <h3 class="lb-chart-title">How long frontier agents can work</h3>
+      <p class="lb-chart-sub">METR · 18 models · 3 years · log scale</p>
+    </div>
+    <svg viewBox="0 0 800 320" class="metr-svg" role="img" aria-label="METR Time Horizon trend — 18 frontier models">
+  <defs>
+    <linearGradient id="metr-area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7CF7FF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7CF7FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="50" y1="280.0" x2="784" y2="280.0" stroke="rgba(148,163,184,0.10)" stroke-width="1"/><text x="44" y="283.5" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">1m</text><line x1="50" y1="200.9" x2="784" y2="200.9" stroke="rgba(148,163,184,0.10)" stroke-width="1"/><text x="44" y="204.4" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">10m</text><line x1="50" y1="139.3" x2="784" y2="139.3" stroke="rgba(148,163,184,0.10)" stroke-width="1"/><text x="44" y="142.8" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">1h</text><line x1="50" y1="67.9" x2="784" y2="67.9" stroke="rgba(148,163,184,0.10)" stroke-width="1"/><text x="44" y="71.4" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">8h</text><line x1="50" y1="30.1" x2="784" y2="30.1" stroke="rgba(148,163,184,0.10)" stroke-width="1"/><text x="44" y="33.6" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">1d</text><line x1="233.5" y1="30" x2="233.5" y2="280" stroke="rgba(148,163,184,0.08)" stroke-width="1"/><text x="233.5" y="298" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">2024</text><line x1="462.9" y1="30" x2="462.9" y2="280" stroke="rgba(148,163,184,0.08)" stroke-width="1"/><text x="462.9" y="298" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">2025</text><line x1="692.2" y1="30" x2="692.2" y2="280" stroke="rgba(148,163,184,0.08)" stroke-width="1"/><text x="692.2" y="298" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8">2026</text>
+  <path d="M 61.5,232.5 L 214.4,232.0 L 329.1,213.2 L 348.2,196.4 L 405.5,176.5 L 462.9,154.3 L 501.1,139.1 L 539.3,115.6 L 615.8,97.4 L 673.1,94.0 L 673.1,84.8 L 692.2,78.5 L 730.5,54.0 L 768.7,41.2 L 768.7,280 L 61.5,280 Z" fill="url(#metr-area)"/>
+  <path d="M 61.5,232.5 L 214.4,232.0 L 329.1,213.2 L 348.2,196.4 L 405.5,176.5 L 462.9,154.3 L 501.1,139.1 L 539.3,115.6 L 615.8,97.4 L 673.1,94.0 L 673.1,84.8 L 692.2,78.5 L 730.5,54.0 L 768.7,41.2" fill="none" stroke="#7CF7FF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="61.5" cy="232.5" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>GPT-4 — 4.0 min (2023-03)</title></circle><circle cx="214.4" cy="232.0" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>GPT-4 1106 — 4.0 min (2023-11)</title></circle><circle cx="290.8" cy="232.8" r="3" fill="#475569" stroke="transparent" stroke-width="1.5"><title>Claude 3 Opus — 4.0 min (2024-03)</title></circle><circle cx="329.1" cy="213.2" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>GPT-4o — 7.0 min (2024-05)</title></circle><circle cx="348.2" cy="196.4" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>Claude 3.5 Sonnet (Jun) — 11.4 min (2024-06)</title></circle><circle cx="405.5" cy="176.5" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>o1-preview — 20.3 min (2024-09)</title></circle><circle cx="462.9" cy="154.3" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>o1 — 38.8 min (2024-12)</title></circle><circle cx="501.1" cy="139.1" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>Claude 3.7 Sonnet — 60.4 min (2025-02)</title></circle><circle cx="539.3" cy="115.6" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>o3 — 119.7 min (2025-04)</title></circle><circle cx="558.4" cy="121.6" r="3" fill="#475569" stroke="transparent" stroke-width="1.5"><title>Claude 4 Opus — 100.4 min (2025-05)</title></circle><circle cx="615.8" cy="97.4" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>GPT-5 (Aug) — 203.0 min (2025-08)</title></circle><circle cx="673.1" cy="94.0" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>Gemini 3 Pro — 224.3 min (2025-11)</title></circle><circle cx="673.1" cy="84.8" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>Claude Opus 4.5 — 293.0 min (2025-11)</title></circle><circle cx="692.2" cy="78.5" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>GPT-5.2 — 352.2 min (2025-12)</title></circle><circle cx="730.5" cy="54.0" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>Claude Opus 4.6 — 718.8 min (2026-02)</title></circle><circle cx="730.5" cy="75.5" r="3" fill="#475569" stroke="transparent" stroke-width="1.5"><title>Gemini 3.1 Pro — 384.1 min (2026-02)</title></circle><circle cx="749.6" cy="79.5" r="3" fill="#475569" stroke="transparent" stroke-width="1.5"><title>GPT-5.4 — 341.7 min (2026-03)</title></circle><circle cx="768.7" cy="41.2" r="4.5" fill="#7CF7FF" stroke="#020617" stroke-width="1.5"><title>Claude Mythos Preview — 1044.8 min (2026-04)</title></circle>
+  <text x="754.7" y="27.2" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" font-weight="600" fill="#7CF7FF">Mythos · 17h</text>
+  <line x1="754.7" y1="30.2" x2="764.7" y2="38.2" stroke="#7CF7FF" stroke-width="1" stroke-dasharray="2 2"/>
+  <text x="50" y="20" font-family="JetBrains Mono, monospace" font-size="10" fill="#94A3B8" letter-spacing="0.10em">P50 TASK-COMPLETION TIME · LOG SCALE</text>
+</svg>
+    <p class="metr-caption"><strong>3 years ago, the frontier was four minutes.</strong> Today it sits at seventeen hours — past METR&apos;s own measurement ceiling, doubling every 129 days.</p>
+  </div>
+
 
 
   <table class="lb-table">
