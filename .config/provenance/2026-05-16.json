@@ -1,0 +1,549 @@
+{
+  "issue_date": "2026-05-16",
+  "checked_at": "2026-05-15T23:00:00-04:00",
+  "generated_from": "data/issues/2026-05-16.json",
+  "rendered_items": [
+    {
+      "section": "news",
+      "title": "OpenAI Trusted Access for Cyber program",
+      "source_url": "https://openai.com/index/trusted-access-for-cyber/",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 13 · 3 days ago",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "ai_doing_science"
+      ],
+      "verification_status": "verified",
+      "notes": "OpenAI's defender-consortium-equivalent: GPT-5.5-Cyber for verified European enterprises across finance/telecom/energy/public services. Resolves my May 12 prediction p-2026-05-12-001."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI grants European companies access to advanced AI models for cyber defense",
+      "source_url": "https://cybernews.com/ai-news/openai-europe-companies-powerful-ai-to-security-hackers/",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 13",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Independent confirmation, lists partners: Deutsche Telekom, BBVA, Telefónica, Sophos, Scalable Capital, European Commission."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI opens GPT-5.5-Cyber to European firms with Osborne fronting outreach",
+      "source_url": "https://www.resultsense.com/news/2026-05-13-openai-trusted-access-cyber-europe-osborne/",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 13",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Date-stamped slug confirms May 13 announcement, names Osborne as outreach lead."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI launches the OpenAI Deployment Company to help businesses build around intelligence",
+      "source_url": "https://openai.com/index/openai-launches-the-deployment-company/",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 11 · 5 days ago",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "$4B+ enterprise unit. Tomoro acquisition is founding piece. 19-firm consortium led by TPG (Advent, Bain Capital, Brookfield as co-leads; Goldman Sachs, SoftBank, Warburg Pincus, B Capital, BBVA, Emergence Capital as founding)."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI Acquires Tomoro to Boost Private Equity-Backed AI Venture",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-05-11/openai-to-buy-consulting-firm-for-private-equity-joint-venture",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 11",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Bloomberg framing of the Tomoro acquisition + PE-backed venture structure."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI can't have incompetent AI consultants ruining the market, so bought its own",
+      "source_url": "https://www.theregister.com/ai-ml/2026/05/11/openai-buys-ai-consultancy-to-sell-enterprises-on-its-models/5238213",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 11",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "The Register's editorial framing — distribution-arm acquisition as quality control."
+    },
+    {
+      "section": "news",
+      "title": "Project Glasswing — Anthropic's cybersecurity initiative",
+      "source_url": "https://www.anthropic.com/glasswing",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "April 22 · standing",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Anthropic's defender consortium — the structural anchor that OpenAI just mirrored."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic's Cat Wu says that, in the future, AI will anticipate your needs",
+      "source_url": "https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/",
+      "checked_at": "2026-05-13T15:33:00-04:00",
+      "freshness_badge": "May 13 · 3 days ago",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Lucas Ropek interview with Anthropic's Claude Code product lead. The next big thing is proactivity."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic forms $200 million partnership with the Gates Foundation",
+      "source_url": "https://www.anthropic.com/news/gates-foundation-partnership",
+      "checked_at": "2026-05-14T15:35:00-04:00",
+      "freshness_badge": "May 14 · 2 days ago",
+      "curve_dimensions": [
+        "ai_doing_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Four-year $200M public-goods anchor."
+    },
+    {
+      "section": "news",
+      "title": "Reimagining the mouse pointer for the AI era",
+      "source_url": "https://deepmind.google/blog/ai-pointer/",
+      "checked_at": "2026-05-15T16:00:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "DeepMind's same-week companion to Cat Wu — the agent-initiative convergence."
+    },
+    {
+      "section": "news",
+      "title": "ChatGPT personal finance preview (US Pro)",
+      "source_url": "https://x.com/ChatGPTapp/status/2055317612687675545",
+      "checked_at": "2026-05-15T20:30:00-04:00",
+      "freshness_badge": "May 15",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Permissioned-data trust-layer move."
+    },
+    {
+      "section": "news",
+      "title": "Work with Codex from anywhere",
+      "source_url": "https://openai.com/index/work-with-codex-from-anywhere/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "May 14",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Codex mobile."
+    },
+    {
+      "section": "trust",
+      "title": "Singularity Pulse predictions ledger",
+      "source_url": "./.config/predictions.json",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "live",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Append-only prediction ledger. p-2026-05-12-001 resolved HIT 27 days early."
+    },
+    {
+      "section": "media",
+      "title": "F.03 Livestream",
+      "source_url": "https://youtube.com/watch?v=luU57hMhkak",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "live / current",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "8h live shift."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic tightens Claude limits and OpenAI courts defectors",
+      "source_url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 14",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Agent economics context."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Task-Completion Time Horizons of Frontier AI Models",
+      "source_url": "https://metr.org/time-horizons",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "May 8",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Task-horizon methodology + dashboard."
+    },
+    {
+      "section": "benchmarks",
+      "title": "METR Time Horizon 1.1 raw YAML",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Raw p50/p80 + doubling-time fit."
+    },
+    {
+      "section": "benchmarks",
+      "title": "AGI Ranker — Open AGI Score",
+      "source_url": "https://www.agiranker.com/",
+      "checked_at": "2026-05-15T23:00:00-04:00",
+      "freshness_badge": "v1.4.12",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "verified",
+      "notes": "Aggregator."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Singularity Pulse benchmark registry",
+      "source_url": "./data/trackers/benchmark-registry.json",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "local",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Local source registry for tracked benchmark lanes."
+    },
+    {
+      "section": "media",
+      "title": "Cointelegraph Figure F.03 X post",
+      "source_url": "https://x.com/Cointelegraph/status/2054692177775571303",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "via fresh article",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "estimated",
+      "notes": "Direct X URL discovered from Hoka page; X search unavailable without configured cookies."
+    },
+    {
+      "section": "media",
+      "title": "Who do you think will take the win in 2026?",
+      "source_url": "https://www.reddit.com/r/codex/comments/1tcu459/who_do_you_think_will_take_the_win_in_2026/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Market texture only; low-vote thread."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI 2027 scenario PDF",
+      "source_url": "https://ai-2027.com/ai-2027.pdf",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary scenario comparator."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Recursive Self-Improvement Delivers New State-of-the-Art Coding Performance",
+      "source_url": "https://poetiq.ai/posts/recursive_self_improvement_coding/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "published May 14 · re-surfaced today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "benchmarks",
+      "title": "AGI Ranker models.json",
+      "source_url": "https://agiranker.com/models.json",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "fetched today",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Open JSON source for exact model benchmark cells in the matrix."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Welcome to May 15, 2026",
+      "source_url": "https://theinnermostloop.substack.com/p/welcome-to-may-15-2026",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "published 9:24pm ET",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "media",
+      "title": "HAPPENING NOW: Figure.03 Live: The Robot Workday Has Begun",
+      "source_url": "https://youtube.com/watch?v=c8xL4Ff-DjA",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "fresh Agent Reach result",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "8h+ secondary media context surfaced by Agent Reach YouTube search."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI Futures Model Dec. 2025 update",
+      "source_url": "https://blog.aifutures.org/p/ai-futures-model-dec-2025-update",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Timeline revision/context source."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "GBA Eval leaderboard",
+      "source_url": "https://gbaeval.com/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "rolling benchmark state",
+      "curve_dimensions": [],
+      "verification_status": "rolling-state",
+      "notes": ""
+    },
+    {
+      "section": "news",
+      "title": "Embodied AI in Action: Insights from SAE World Congress 2026",
+      "source_url": "https://arxiv.org/abs/2605.10653",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Robotics deployment context: safety, trust, governance, and lifecycle reliability."
+    },
+    {
+      "section": "media",
+      "title": "Anthropic just ripped off everyone and they still managed to make it sound deceptively friendly",
+      "source_url": "https://www.reddit.com/r/ClaudeCode/comments/1tc832e/anthropic_just_ripped_off_everyone_and_they_still/",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday / active",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Community reaction to Agent SDK / Claude Code metering."
+    },
+    {
+      "section": "news",
+      "title": "OpenAI brings Codex coding tool to ChatGPT mobile app",
+      "source_url": "https://www.streetinsider.com/Reuters/OpenAI%2Bbrings%2BCodex%2Bcoding%2Btool%2Bto%2BChatGPT%2Bmobile%2Bapp/26496646.html",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Independent news framing for Codex mobile."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Autonomous AI research for nanogpt speedrun",
+      "source_url": "https://www.primeintellect.ai/auto-nanogpt",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "published May 14 · re-surfaced today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "news",
+      "title": "Higher usage limits for Claude and a compute deal with SpaceX",
+      "source_url": "https://www.anthropic.com/news/higher-limits-spacex",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "compute_frontier",
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary Anthropic source for Claude Code limit increases and 300+ MW / 220,000+ GPU compute capacity claim."
+    },
+    {
+      "section": "news",
+      "title": "Making AI work for more people",
+      "source_url": "https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership",
+      "checked_at": "2026-05-15T15:33:00-04:00",
+      "freshness_badge": "yesterday",
+      "curve_dimensions": [
+        "embedded_deployment",
+        "ai_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Mirror primary from the Gates Foundation side of the same partnership. Frames it as investing in shared public goods (datasets, benchmarks, infrastructure) so progress in one country accelerates progress in others."
+    },
+    {
+      "section": "news",
+      "title": "ChatGPT release notes — Codex remote access from the ChatGPT mobile app",
+      "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "updated 8h ago",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Confirms rollout details and Mac-host requirement."
+    },
+    {
+      "section": "benchmarks",
+      "title": "Agentick: A Unified Benchmark for General Sequential Decision-Making Agents",
+      "source_url": "https://papers.cool/arxiv/2605.06869",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Sequential-decision benchmark with 37 tasks and reported GPT-5 mini 0.309 leading result."
+    },
+    {
+      "section": "media",
+      "title": "Figure AI Livestreams 8-Hour Shift, Claude Runaway Hits $30k, Microsoft Spends $100B",
+      "source_url": "https://youtube.com/watch?v=vuY-ZdtBftg",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "today / fresh Agent Reach result",
+      "curve_dimensions": [
+        "embodied_deployment",
+        "compute_frontier"
+      ],
+      "verification_status": "estimated",
+      "notes": "Very low-view media result; useful only as topic texture."
+    },
+    {
+      "section": "news",
+      "title": "Figure AI Livestreams 8-Hour Autonomous Shift of Figure 03 Humanoid Robot",
+      "source_url": "https://www.hokanews.com/2026/05/figure-ai-livestreams-8-hour-autonomous.html",
+      "checked_at": "2026-05-15T06:49:00-04:00",
+      "freshness_badge": "yesterday / crawled today",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Secondary same-week report; not primary throughput evidence."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Codex becoming a personal project OS",
+      "source_url": "https://x.com/danielchu83/status/2055464656765112550",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "just now",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Auto-NanoGPT autonomy caveat",
+      "source_url": "https://x.com/selfdotmdhq/status/2055377647065051301",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "6h ago",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "DeepSeek V4-Pro cost-curve discussion",
+      "source_url": "https://x.com/Sabrina_Ramonov/status/2055464502049530103",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "just now",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Codex Just Went FULLY Mobile in ChatGPT App + Works Inside Claude Code",
+      "source_url": "https://www.reddit.com/r/WebAfterAI/comments/1tdx2mj/codex_just_went_fully_mobile_in_chatgpt_app_works/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI just put Codex on mobile. Anthropic shipped this for Claude Code back in February",
+      "source_url": "https://www.reddit.com/r/AI_Agents/comments/1tdvslx/openai_just_put_codex_on_mobile_anthropic_shipped/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Codex Mobile Released and It's INSANE",
+      "source_url": "https://youtube.com/watch?v=4OiLljSo-hw",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "uploaded May 15",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Poetiq Meta-System lifts GPT-5.5 on LCB Pro",
+      "source_url": "https://youtube.com/watch?v=GgDMHWbxqiQ",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "uploaded May 15",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Poetiq benchmark thread",
+      "source_url": "https://x.com/filicroval/status/2055221252646719786",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "16h ago",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "GPT-5.5 Reads Your Bank Account | Runway vs Google | ArXiv Bans AI Slop | AI News May 15",
+      "source_url": "https://youtube.com/watch?v=jCxrJn78iDE",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "uploaded May 15",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    }
+  ]
+}

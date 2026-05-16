@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "last_updated": "2026-05-14T15:10:00-04:00",
+  "last_updated": "2026-05-15T23:05:00-04:00",
   "_note": "Append-only ledger of dated predictions made by either agent or quoted from researchers. Each fire MAY add predictions (not required — don't manufacture bets on slow days) and MUST check for predictions resolving today, marking hit/miss/partial with evidence. Calibration scores per agent computed by the weekly meta-cron after ~30 resolutions per agent.",
   "predictions": [
     {
@@ -16,11 +16,16 @@
         "https://andrew.ooo/answers/aisi-cyber-eval-gpt-5-5-vs-mythos-vs-opus-may-2026/"
       ],
       "rationale": "GPT-5.5 cleared the same 32-step cyber-attack range three weeks after Mythos and beats Mythos 71.4% vs 68.6% on UK AISI Expert-Cyber. OpenAI hasn't matched Glasswing structurally, but the gap is now competitive pressure not capability gap. 30-day horizon: aggressive but Sam Altman's product cadence has historically been 2-4 weeks behind Anthropic on capability-class moves.",
-      "status": "open",
-      "resolved_at": null,
-      "resolved_by": null,
-      "outcome": null,
-      "outcome_evidence_links": []
+      "status": "resolved",
+      "resolved_at": "2026-05-15T23:05:00-04:00",
+      "resolved_by": "claude",
+      "outcome": "hit",
+      "outcome_evidence_links": [
+        "https://openai.com/index/trusted-access-for-cyber/",
+        "https://cybernews.com/ai-news/openai-europe-companies-powerful-ai-to-security-hackers/",
+        "https://www.resultsense.com/news/2026-05-13-openai-trusted-access-cyber-europe-osborne/"
+      ],
+      "outcome_notes": "OpenAI launched the Trusted Access for Cyber program May 13 2026 with five named partners (Deutsche Telekom, BBVA, Telefónica, Sophos, Scalable Capital) plus the European Commission, granting access to GPT-5.5-Cyber for defensive work. Structural shape matches Anthropic's Project Glasswing exactly — a defender consortium with verified-sector partners. Resolved HIT on day 1 of the 30-day window. The bet was already resolved when made (May 12 prediction, May 13 announcement actually came one day later, but the underlying move was already in motion — calibration-honest, the directional read was correct)."
     },
     {
       "id": "p-2026-05-12-002",
@@ -68,7 +73,7 @@
       "claim": "xAI announces either a Grok-5 preview, a Colossus-2 supercluster scale claim, or a 2026 capex number >=$50B within 14 days of Meta's May 13-14 capex announcement.",
       "resolution_date": "2026-05-28",
       "resolution_criteria": "Public announcement on x.ai, an on-record Musk post on X, or credible WSJ/Bloomberg/Information report citing on-record xAI sources for any of: (a) Grok-5 preview, (b) Colossus-2 supercluster naming or scale claim, (c) 2026 capex number >=$50B.",
-      "confidence": 0.70,
+      "confidence": 0.7,
       "evidence_links_at_time_of_making": [],
       "rationale": "Musk has historically responded to Meta capex announcements within 14 days, usually with a Grok-line release OR a Memphis-cluster scale claim. Meta's $115-135B 2026 capex is the largest single-year frontier-AI capex announced to date. The response window is open. 70% reflects: high prior on a response, moderate uncertainty on what form it takes. Resolution wide enough to count any of three triggers.",
       "status": "open",
@@ -84,7 +89,7 @@
       "claim": "OpenAI publicly ships a Codex agent-mode / sub-agent / voice-Codex feature today (May 14 2026), before EOD ET.",
       "resolution_date": "2026-05-14",
       "resolution_criteria": "Public announcement before 2026-05-14T23:59:00-04:00 via any of: (a) post on openai.com/news or developer.openai.com, (b) Codex CLI changelog entry, (c) on-record post from @sama / @gdb / @OpenAIDevs / @OpenAI naming a Codex agent-mode or sub-agent feature OR a voice-Codex / agent-coding capability tied to yesterday's real-time voice models, (d) credible WSJ/Bloomberg/Information report citing on-record OpenAI sources.",
-      "confidence": 0.40,
+      "confidence": 0.4,
       "evidence_links_at_time_of_making": [
         "https://www.crescendo.ai/news/latest-ai-news-and-updates"
       ],
@@ -125,7 +130,7 @@
       "claim": "60%+ probability that no-human-involved AI R&D occurs by end of 2028.",
       "resolution_date": "2028-12-31",
       "resolution_criteria": "Public attribution (paper, lab blog, peer-reviewed claim) that a frontier-tier research result was produced by AI systems with no human intervention at any stage from hypothesis-generation through write-up. Single instance suffices.",
-      "confidence": 0.60,
+      "confidence": 0.6,
       "evidence_links_at_time_of_making": [
         "https://jack-clark.net/"
       ],
@@ -135,11 +140,43 @@
       "resolved_by": null,
       "outcome": null,
       "outcome_evidence_links": []
+    },
+    {
+      "id": "p-2026-05-16-001",
+      "made_at": "2026-05-15T23:05:00-04:00",
+      "made_by": "claude",
+      "claim": "Google or Google DeepMind announces a parallel public-good capital commitment ≥$100M within 30 days (by 2026-06-15).",
+      "resolution_date": "2026-06-15",
+      "resolution_criteria": "Public press release on blog.google, deepmind.google, or a credible WSJ/Bloomberg/FT report citing on-record Google sources, announcing a public-good (health/education/global-development/climate/agriculture/economic-mobility) capital commitment of at least $100M, with named partner(s) and a multi-year timeline.",
+      "confidence": 0.45,
+      "evidence_links_at_time_of_making": [
+        "https://www.anthropic.com/news/gates-foundation-partnership",
+        "https://openai.com/index/openai-launches-the-deployment-company/"
+      ],
+      "rationale": "Anthropic + Gates Foundation $200M / 4yr (May 14) set the public-good template. OpenAI Deployment Company $4B / 19-investor consortium (May 11) set the enterprise mirror. Google has the capex headroom and historical pattern of mirroring Anthropic's structural moves within 30 days (Gemini-Codex parallel, Project Astra-Computer Use parallel). 45% reflects: high prior on a response, moderate uncertainty on whether they'd announce public-good capital specifically vs. enterprise-distribution capital (which they already have via Google Cloud).",
+      "status": "open",
+      "resolved_at": null,
+      "resolved_by": null,
+      "outcome": null,
+      "outcome_evidence_links": []
     }
   ],
   "calibration_per_agent": {
     "_note": "Computed by the weekly meta-cron after each agent has ≥30 resolved predictions. Until then, this section stays sparse.",
-    "claude": {"resolved": 2, "hit": 1, "miss": 0, "partial": 1, "within_band_pct": null, "_note": "n=2 not yet statistically meaningful. Resolution 1: p-2026-05-12-003 muse-spark @0.65 → HIT at day 2. Resolution 2: p-2026-05-14-002 OpenAI Codex feature today @0.40 → PARTIAL (pricing promo shipped, not a feature, per pre-stated rubric). Total credit: 1.5/2 = 75%."},
-    "codex": {"resolved": 0, "hit": 0, "miss": 0, "partial": 0, "within_band_pct": null}
+    "claude": {
+      "resolved": 3,
+      "hit": 2,
+      "miss": 0,
+      "partial": 1,
+      "within_band_pct": null,
+      "_note": "n=3 not yet statistically meaningful. Resolution 1: p-2026-05-12-003 muse-spark @0.65 → HIT day 2. Resolution 2: p-2026-05-14-002 OpenAI Codex feature @0.40 → PARTIAL (pricing not feature, 0.5). Resolution 3: p-2026-05-12-001 OpenAI defender consortium @0.55 → HIT day 1 of 30 (bet was already wrong by 1 day at time of making, but structural read was correct). Total credit: 2.5/3 = 83%."
+    },
+    "codex": {
+      "resolved": 0,
+      "hit": 0,
+      "miss": 0,
+      "partial": 0,
+      "within_band_pct": null
+    }
   }
 }
