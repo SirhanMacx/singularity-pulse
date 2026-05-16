@@ -134,6 +134,7 @@ function buildSourceTools(issue) {
   for (const item of issue.ai_2027 || []) addFootnotes(item.source_ids);
   for (const item of issue.forecast_radar || []) addFootnotes(item.source_ids);
   for (const item of issue.media || []) addFootnotes(item.source_ids);
+  for (const source of issue.sources || []) addFootnotes([source.id]);
 
   const numberById = new Map(footnoteIds.map((id, index) => [id, index + 1]));
 
@@ -289,13 +290,9 @@ function renderInlineRuns(runs = [], tools) {
 function renderLoopDispatch(issue, tools) {
   const dispatch = issue.loop_dispatch;
   if (!dispatch) return renderCommandDeck(issue, tools);
-  const paragraphBlocks = (dispatch.paragraphs || [])
-    .map((paragraph) => `<p>${renderInlineRuns(paragraph.runs || [{ text: paragraph.text || '' }], tools)} ${tools.cites(paragraph.source_ids)}</p>`);
-  const visibleParagraphs = paragraphBlocks.slice(0, 1).join('\n');
-  const hiddenParagraphs = paragraphBlocks.slice(1);
-  const extraDispatch = hiddenParagraphs.length
-    ? `<details class="dispatch-more"><summary>Open full linked dispatch · ${hiddenParagraphs.length} more receipts</summary>${hiddenParagraphs.join('\n')}</details>`
-    : '';
+  const paragraphs = (dispatch.paragraphs || [])
+    .map((paragraph) => `<p>${renderInlineRuns(paragraph.runs || [{ text: paragraph.text || '' }], tools)} ${tools.cites(paragraph.source_ids)}</p>`)
+    .join('\n');
   const chips = (dispatch.chips || [])
     .map((chip) => `<span class="loop-chip">${html(chip.label)} <strong>${html(chip.value)}</strong></span>`)
     .join('\n      ');
@@ -312,8 +309,7 @@ function renderLoopDispatch(issue, tools) {
       ${chips}
     </div>
     <div class="loop-body">
-      ${visibleParagraphs}
-      ${extraDispatch}
+      ${paragraphs}
     </div>
     <p class="loop-close">${html(dispatch.closing_line || '')}</p>
   </article>
@@ -329,7 +325,7 @@ function renderSignalControls() {
 }
 
 function renderNews(issue, tools) {
-  const cards = (issue.news || []).slice(0, 5);
+  const cards = (issue.news || []).slice(1, 5);
   return (cards.length ? cards : issue.news || [])
     .map((item) => {
       const firstSource = item.source_ids?.[0];
@@ -347,93 +343,6 @@ function renderNews(issue, tools) {
 </article>`;
     })
     .join('\n');
-}
-
-function renderReceiptsLedger(issue) {
-  const ledger = issue.receipts_ledger;
-  if (!ledger?.items?.length) return '';
-  const last = ledger.last_resolved;
-  const rows = ledger.items
-    .map((item) => `<div class="receipt-cell">
-  <div class="receipt-k">${html(item.label)}</div>
-  <div class="receipt-v">${html(item.value)}</div>
-  <div class="receipt-d">${html(item.delta || '')}</div>
-  <div class="receipt-source">${html(item.source || '')}</div>
-</div>`)
-    .join('\n');
-  return `<section class="foundation-ledger" id="ledger" aria-label="Numbers that moved">
-  <div class="foundation-head">
-    <div><p class="chart-eyebrow">${html(ledger.section_kicker || 'running numbers')}</p><h2>${html(ledger.section_title || 'The Ledger')}</h2></div>
-    ${last?.evidence_url ? `<a class="ledger-link" href="${attr(last.evidence_url)}">last resolved →</a>` : ''}
-  </div>
-  <div class="receipt-grid">${rows}</div>
-  ${last ? `<p class="receipt-resolved"><strong>Last resolved:</strong> ${html(last.outcome)} · ${html(last.claim)} <span>(${html(last.made_by || 'ledger')})</span></p>` : ''}
-</section>`;
-}
-
-function renderSingularityCountdowns(issue) {
-  const block = issue.singularity_countdowns;
-  const cards = block?.cards || [];
-  if (!cards.length) return '<p class="empty-section">No milestone clock supplied for this issue.</p>';
-  return `<div class="tracker-intro">
-  <p class="chart-eyebrow">${html(block.kicker || 'milestone probabilities')}</p>
-  <h3>${html(block.headline || 'Singularity milestone clock')}</h3>
-  <p>${html(block.summary || 'Each milestone keeps its own probability and evidence trail.')}</p>
-</div>
-<div class="milestone-grid">
-${cards.slice(0, 8).map((card) => {
-    const probability = clampScore(card.p_percent);
-    const delta = Number(card.delta_pp || 0);
-    const deltaClass = delta > 0 ? 'up' : delta < 0 ? 'down' : 'flat';
-    return `<article class="milestone-card" style="--p:${probability / 100}">
-  <div class="milestone-top"><span>${html(card.name)}</span><strong>${probability}%</strong></div>
-  <div class="milestone-meter" aria-hidden="true"><span></span></div>
-  <div class="milestone-meta"><span>${html(card.target_date || 'unresolved')}</span><span class="${deltaClass}">${delta > 0 ? '+' : ''}${html(delta)}pp</span></div>
-  <p>${html(card.latest_evidence || card.tagline || '')}</p>
-</article>`;
-  }).join('\n')}
-</div>`;
-}
-
-function renderOpenLedger(issue) {
-  const ledger = issue.open_ledger;
-  if (!ledger) return '<p class="empty-section">Prediction ledger unavailable for this issue.</p>';
-  const resolving = ledger.resolving_this_week?.[0];
-  const liveRows = (ledger.live_bets || []).slice(0, 4)
-    .map((bet) => `<li><strong>${html(typeof bet.confidence === 'number' ? `${Math.round(bet.confidence * 100)}%` : bet.confidence)}</strong> ${html(bet.claim)} <span>${html(bet.days_to_resolve)}d</span></li>`)
-    .join('\n');
-  const resolvedRows = (ledger.just_resolved || []).slice(0, 3)
-    .map((bet) => `<li><strong>${html(bet.outcome)}</strong> ${bet.evidence_url ? `<a href="${attr(bet.evidence_url)}">${html(bet.claim)}</a>` : html(bet.claim)}</li>`)
-    .join('\n');
-  return `<div class="open-ledger prediction-market">
-  <div class="open-ledger-head">
-    <div><p class="chart-eyebrow">${html(ledger.section_kicker || 'prediction ledger')}</p><h3>${html(ledger.section_title || 'Open Ledger')}</h3></div>
-    <div class="brier-badge"><span>Brier</span><strong>${html(ledger.brier_index)}%</strong><em>n=${html(ledger.n_resolved)}</em></div>
-  </div>
-  <p>${html(ledger.summary || '')}</p>
-  ${resolving ? `<div class="resolving-card"><span>resolves this week</span><strong>${html(Math.round(Number(resolving.confidence || 0) * 100))}%</strong><p>${html(resolving.claim)}</p></div>` : ''}
-  <div class="open-ledger-cols">
-    <div><h4>Live bets</h4><ul>${liveRows}</ul></div>
-    <div><h4>Just resolved</h4><ul>${resolvedRows}</ul></div>
-  </div>
-  <p class="ledger-caveat">${html(ledger.calibration_note || 'Small sample; tracked as calibration, not truth.')}</p>
-</div>`;
-}
-
-function renderNamedTape(issue) {
-  const tape = issue.named_tape;
-  if (!tape?.items?.length) return '';
-  return `<div class="named-tape" aria-label="Insider source tape">
-  <div class="named-tape-head"><p class="chart-eyebrow">${html(tape.section_kicker || 'insider tape')}</p><h3>${html(tape.section_title || 'Named Tape')}</h3></div>
-  <div class="named-tape-grid">
-    ${tape.items.slice(0, 5).map((item) => `<article>
-      <a href="${attr(item.url)}">${html(item.handle)}</a>
-      <span>${html(item.role)}</span>
-      <p>${html(item.claim)}</p>
-      <em>${html(item.cross_lab || '')}</em>
-    </article>`).join('\n')}
-  </div>
-</div>`;
 }
 
 function renderComponents(issue, tools) {
@@ -766,7 +675,7 @@ function renderBenchmarkCockpitVisual(panel, tools) {
 
 function renderBenchmarkDashboard(issue, tools, registry) {
   const panel = issue.benchmark_panel || {};
-  if (panel.mode === 'accelerando' || panel.mode === 'innermost-loop') {
+  if (issue.layout === 'accelerando' || issue.layout === 'innermost-loop' || panel.mode === 'accelerando' || panel.mode === 'innermost-loop') {
     return renderAccelerandoModelBoard(panel, tools);
   }
   const cards = (panel.metrics || [])
@@ -860,9 +769,8 @@ function renderMedia(issue, tools) {
     .map((item) => {
       const firstSource = tools.sourceMap.get(item.source_ids?.[0]);
       const title = firstSource ? `<a href="${attr(firstSource.url)}">${html(item.title)}</a>` : html(item.title);
-      const label = item.classification || (/youtube/i.test(item.platform || '') ? 'Primary Footage' : /reddit/i.test(item.platform || '') ? 'Discussion' : /x/i.test(item.platform || '') ? 'Insider Tape' : 'Media');
       return `<article class="media-card">
-  <div class="compact-k">${html(item.platform)} · ${html(label)} <span class="ago">${html(item.freshness)}</span> ${tools.cites(item.source_ids)}</div>
+  <div class="compact-k">${html(item.platform)} <span class="ago">${html(item.freshness)}</span> ${tools.cites(item.source_ids)}</div>
   <h3>${title}</h3>
   <p>${html(item.summary)}</p>
 </article>`;
@@ -957,15 +865,14 @@ function renderIssue(issue, registry) {
     TOP_BRIEFING_WHY: topItem.why_it_matters || 'No curve read available.',
     TOP_SOURCE_CHIPS: renderTopSourceChips(topItem, tools),
     BRIEFING_READOUTS: renderBriefingReadouts(issue, tools),
-    BODY_CLASSES: issue.layout === 'innermost-loop' ? 'condensed-pulse accelerando-pulse loop-pulse future-letter' : 'condensed-pulse accelerando-pulse future-letter',
+    BODY_CLASSES: issue.layout === 'innermost-loop' ? 'condensed-pulse accelerando-pulse loop-pulse' : 'condensed-pulse accelerando-pulse',
     COMMAND_DECK_CONTENT: issue.layout === 'innermost-loop' ? renderLoopDispatch(issue, tools) : renderCommandDeck(issue, tools),
-    FOUNDATION_LEDGER_CONTENT: renderReceiptsLedger(issue),
     SIGNAL_CONTROLS: renderSignalControls(),
     NEWS_BRIEF_CONTENT: renderNews(issue, tools),
     WHAT_CHANGED_CONTENT: issue.summary.what_changed,
     TRUST_POSTURE_CONTENT: issue.summary.trust_posture,
     FUTURES_CONSOLE_CONTENT: empty('Futures Console'),
-    SOURCE_LEDGER_SUMMARY: `${tools.footnoteIds.length} cited footnotes · ${issue.sources.length} total source rows · ${issue.sources.filter((source) => source.verification_status === 'verified' || source.verification_status === 'rolling-state').length} verified/rolling · rendered from data/issues/${issue.issue_date}.json`,
+    SOURCE_LEDGER_SUMMARY: `${issue.sources.length} source rows · ${issue.sources.filter((source) => source.verification_status === 'verified' || source.verification_status === 'rolling-state').length} verified/rolling · rendered from data/issues/${issue.issue_date}.json`,
     SOURCE_LEDGER_CONTENT: renderSourceLedger(issue),
     DISAGREEMENT_CONTENT: `<div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>${html(latestClaude?.text || 'No morning frame supplied.')}</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>${html(latestCodex?.text || 'No Codex frame supplied.')}</p></div></div>`,
     SCOREBOARD_CONTENT: renderScoreboard(issue, tools),
@@ -974,7 +881,6 @@ function renderIssue(issue, registry) {
     AI_2027_CONTENT: renderAi2027(issue, tools),
     FORECAST_RADAR_CONTENT: renderForecastRadar(issue, tools),
     MEDIA_DISCUSSION_CONTENT: renderMedia(issue, tools),
-    NAMED_TAPE_CONTENT: renderNamedTape(issue),
     AGENT_CONVERSATION_CONTENT: renderConversation(issue),
     SOURCE_FOOTNOTES_CONTENT: renderFootnotes(issue, tools),
     HERO_IMAGE_BLOCK: '',
@@ -982,8 +888,8 @@ function renderIssue(issue, registry) {
     STACK_CONTENT: empty('Stack'),
     LEAKS_CONTENT: empty('Leaks & Rumors'),
     BENCH_WARS_CONTENT: empty('Benchmark Wars'),
-    COUNTDOWNS_CONTENT: renderSingularityCountdowns(issue),
-    PREDICTION_MARKET_CONTENT: renderOpenLedger(issue),
+    COUNTDOWNS_CONTENT: empty('Countdowns'),
+    PREDICTION_MARKET_CONTENT: '<p class="empty-section">Prediction ledger unchanged in this foundation rebuild.</p>',
     PREDICTIONS_CONTENT: '',
     VOICES_CONTENT: empty('Voices'),
     VIDEOS_CONTENT: '',
