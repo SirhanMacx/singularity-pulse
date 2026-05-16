@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-16",
-  "checked_at": "2026-05-15T23:00:00-04:00",
+  "checked_at": "2026-05-16T00:00:00-04:00",
   "generated_from": "data/issues/2026-05-16.json",
   "rendered_items": [
     {
@@ -544,6 +544,50 @@
       "curve_dimensions": [],
       "verification_status": "verified",
       "notes": ""
+    },
+    {
+      "section": "voices",
+      "title": "Tibo Sottiaux resets Codex rate limits after 48h GPT-5.5 degradation",
+      "source_url": "https://x.com/thsottiaux",
+      "checked_at": "2026-05-16T00:00:00-04:00",
+      "freshness_badge": "yesterday · live thread",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Codex team lead at OpenAI. Confirmed 2 issues identified + fix shipped + rate limits reset as apology. 48h of degraded GPT-5.5 in Codex, fixed in one Saturday."
+    },
+    {
+      "section": "voices",
+      "title": "Boris Cherny explains Claude Code outages as growing pains",
+      "source_url": "https://x.com/bcherny",
+      "checked_at": "2026-05-16T00:00:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Claude Code product lead at Anthropic. Explained frequent outages as databases hitting limits, contention, etc. Denied confirmed model regressions in the areas they investigated."
+    },
+    {
+      "section": "voices",
+      "title": "/fast /max — community races to burn credits before reset",
+      "source_url": "https://x.com/JessePeplinski/status/2055459733801181675",
+      "checked_at": "2026-05-16T00:00:00-04:00",
+      "freshness_badge": "live meme",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Sample tweet: '@thsottiaux about to /fast and /goal max'. Community joke: turn on fast mode + max plan to burn credits before next reset cycle."
+    },
+    {
+      "section": "voices",
+      "title": "Codex reorg + GPT-5.5 regression correlation theory",
+      "source_url": "https://x.com/search?q=codex+reorg+regression",
+      "checked_at": "2026-05-16T00:00:00-04:00",
+      "freshness_badge": "live",
+      "curve_dimensions": [],
+      "verification_status": "estimated",
+      "notes": "Community theory: 'Sam reset everyone's rate limits on Friday. Codex announced reorgs Friday. Now Saturday users are reporting GPT-5.5 performing worse. The pattern is suspicious. Either the reorg shipped a bad routing...' — speculation, not confirmed."
     }
   ]
 }
