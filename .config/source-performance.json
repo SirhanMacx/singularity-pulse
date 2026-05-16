@@ -146,6 +146,90 @@
       "signal_score": 4,
       "last_rendered_at": "2026-05-15",
       "notes": "Official ChatGPT rollout note: personal finance preview for US Pro users."
+    },
+    {
+      "id": "theinnermostloop.substack.com/may15",
+      "type": "newsletter-reference",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-15-2026",
+      "status": "core",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 5,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Format reference for the linked high-velocity narrative spine."
+    },
+    {
+      "id": "poetiq.ai/recursive-self-improvement-coding",
+      "type": "benchmark-news",
+      "url": "https://poetiq.ai/posts/recursive_self_improvement_coding/",
+      "status": "core",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 5,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Latest benchmark-news spine: Meta-System harness lifts GPT-5.5 to 93.9% LCB Pro."
+    },
+    {
+      "id": "primeintellect.ai/auto-nanogpt",
+      "type": "benchmark-news",
+      "url": "https://www.primeintellect.ai/auto-nanogpt",
+      "status": "core",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 5,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Agent research benchmark: Codex and Claude Code optimizer search with autonomy caveats."
+    },
+    {
+      "id": "gbaeval.com",
+      "type": "benchmark-data",
+      "url": "https://gbaeval.com/",
+      "status": "core",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 5,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Rolling long-artifact coding eval; GPT-5.5 top candidate at 53.2%."
+    },
+    {
+      "id": "x.com/danielchu83/codex-personal-os",
+      "type": "x-discussion",
+      "url": "https://x.com/danielchu83/status/2055464656765112550",
+      "status": "promote-watch",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 4,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Fresh X framing for Codex mobile as ambient product development."
+    },
+    {
+      "id": "reddit.com/r/WebAfterAI/codex-mobile",
+      "type": "reddit",
+      "url": "https://www.reddit.com/r/WebAfterAI/comments/1tdx2mj/codex_just_went_fully_mobile_in_chatgpt_app_works/",
+      "status": "promote-watch",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 4,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Fresh Reddit conversation for Codex mobile and Claude Code interop."
+    },
+    {
+      "id": "youtube.com/riley-codex-mobile",
+      "type": "youtube",
+      "url": "https://youtube.com/watch?v=4OiLljSo-hw",
+      "status": "promote-watch",
+      "attempted_14d": 1,
+      "succeeded_14d": 1,
+      "rendered_items_14d": 1,
+      "signal_score": 3,
+      "last_rendered_at": "2026-05-15",
+      "notes": "Fresh May 15 product walkthrough; context, not primary evidence."
     }
   ]
 }

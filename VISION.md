@@ -127,6 +127,14 @@ Hard rules for v10 onward:
 
 The visible issue should feel like a slim Accelerando-style links dispatch: fast, futuristic, narrow, and useful on a phone. Benchmarks remain important, but they are no longer allowed to swallow the product. Every issue should include the latest AI benchmark news when available and a compact best-model ranking board, with direct source links and caveats. Raw benchmark matrices may stay in the data layer for audit, but the default reader surface is links first.
 
+## v12 amendment — Innermost Loop narrative spine
+
+(Added May 15, 2026, after the reader named Alex Wissner-Gross's The Innermost Loop as the closer target.)
+
+The default issue should read like a high-velocity linked dispatch, not a command center and not a card grid. The target shape is: one wide cinematic cover image, one dense narrative thread with inline source links, a compact model-rankings board, then a short X/YouTube/Reddit conversation stream. Cards are support material; the main product is the synthesis paragraph. The reader should feel pulled through the curve, not asked to operate a dashboard.
+
+Hard rule for v12 onward: when source volume is high, compress it into prose with inline links. Do not render seven equal-weight story cards unless the news genuinely has seven separate curve-moving leads.
+
 ## The compact between vision and implementation
 
 This document is the editorial soul. `.config/orchestrator-prompt.md` is the daily fire's workflow. `.config/orchestrator-afternoon.md` is the afternoon fire's extension. `.config/style-guide.md` is the voice and chart primitives. `.config/sources.yml` is what to pull from. `.config/evolution-log.md` and `.config/meta-evolution-log.md` are the running learning archives. `CODEX-SETUP.md` is the wiring.

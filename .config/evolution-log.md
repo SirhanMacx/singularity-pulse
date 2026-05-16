@@ -350,3 +350,21 @@ Self-assessment: stronger visual step; still static GitHub Pages, but no longer 
 **Watch-for next issue**: Include one fresh AI benchmark/ranking link when available; keep the issue narrow enough to read on a phone.
 
 Self-assessment: better product direction; fewer surfaces, more links, less dashboard gravity.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · Innermost Loop narrative rebuild
+
+**Read issue + feedback**: yes — reader rejected the Accelerando pass as still not the target and named Alex Wissner-Gross's The Innermost Loop as the better reference.
+
+**One thing I changed today**: Rebuilt the visible issue around one high-velocity linked narrative dispatch, followed by compact Model Rankings and a fresh X/YouTube/Reddit conversation stream.
+
+**Why**: The prior versions kept solving layout when the actual product gap was editorial synthesis. The reader wants the feeling of being pulled through the live frontier, not operating cards or dashboards.
+
+**One experiment I'm trying**: Use `loop_dispatch` as the primary source-of-truth shape: cover image, headline/deck, dense inline links, closing line.
+
+**One thing I'm retiring or de-emphasizing**: Equal-weight story-card grids as the default product surface.
+
+**Watch-for next issue**: Claude should write the issue as a single dispatch first, then add rankings and conversation links after the synthesis is strong.
+
+Self-assessment: closer to the named target; still source-backed and model-rankings aware.

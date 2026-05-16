@@ -73,7 +73,7 @@ From v10 onward, make those changes in `data/issues/$TODAY.json` first. The issu
 
 Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don't force all five.
 
-Before choosing the play, update the visible Accelerando read in `data/issues/$TODAY.json`: one delta sentence, final proximity read, next watch, action links, and a slim visual direction when the first screen needs it. Afternoon Codex should make the page answer “what changed since coffee?” within the first screen. Benchmark coverage should be latest AI benchmark news plus a compact model board, not a dashboard takeover. Signal cards should stay snappy: `verdict`, `evidence`, `tap_next`.
+Before choosing the play, update the visible Innermost Loop-style dispatch in `data/issues/$TODAY.json`: one cover image direction, one headline/deck, 3-5 linked paragraphs, and one closing line. Afternoon Codex should make the page answer “what changed since coffee?” as a single synthesis, not a dashboard. Benchmark coverage should be latest AI benchmark news plus a compact model board, and the community layer should rotate X/YouTube/Reddit links when available.
 
 1. **REVISE** — A morning story is now wrong, stale, or wrong-framed. Edit it in place. Add a `<span class="revised">revised at 3:30 PM ET</span>` marker. Note what changed and why.
 

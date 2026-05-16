@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-15",
-  "checked_at": "2026-05-15T21:33:00-04:00",
+  "checked_at": "2026-05-15T21:52:00-04:00",
   "generated_from": "data/issues/2026-05-15.json",
   "rendered_items": [
     {
@@ -323,6 +323,146 @@
       ],
       "verification_status": "verified",
       "notes": "Official rollout note: US Pro users can connect financial accounts, see spending, and ask grounded questions."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Welcome to May 15, 2026",
+      "source_url": "https://theinnermostloop.substack.com/p/welcome-to-may-15-2026",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "published 9:24pm ET",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Recursive Self-Improvement Delivers New State-of-the-Art Coding Performance",
+      "source_url": "https://poetiq.ai/posts/recursive_self_improvement_coding/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "published May 14 · re-surfaced today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Autonomous AI research for nanogpt speedrun",
+      "source_url": "https://www.primeintellect.ai/auto-nanogpt",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "published May 14 · re-surfaced today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "GBA Eval leaderboard",
+      "source_url": "https://gbaeval.com/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "rolling benchmark state",
+      "curve_dimensions": [],
+      "verification_status": "rolling-state",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "GPT-5.5 Reads Your Bank Account | Runway vs Google | ArXiv Bans AI Slop | AI News May 15",
+      "source_url": "https://youtube.com/watch?v=jCxrJn78iDE",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "uploaded May 15",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Codex Mobile Released and It's INSANE",
+      "source_url": "https://youtube.com/watch?v=4OiLljSo-hw",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "uploaded May 15",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Poetiq Meta-System lifts GPT-5.5 on LCB Pro",
+      "source_url": "https://youtube.com/watch?v=GgDMHWbxqiQ",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "uploaded May 15",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Codex becoming a personal project OS",
+      "source_url": "https://x.com/danielchu83/status/2055464656765112550",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "just now",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Auto-NanoGPT autonomy caveat",
+      "source_url": "https://x.com/selfdotmdhq/status/2055377647065051301",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "6h ago",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Poetiq benchmark thread",
+      "source_url": "https://x.com/filicroval/status/2055221252646719786",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "16h ago",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "DeepSeek V4-Pro cost-curve discussion",
+      "source_url": "https://x.com/Sabrina_Ramonov/status/2055464502049530103",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "just now",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Codex Just Went FULLY Mobile in ChatGPT App + Works Inside Claude Code",
+      "source_url": "https://www.reddit.com/r/WebAfterAI/comments/1tdx2mj/codex_just_went_fully_mobile_in_chatgpt_app_works/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI just put Codex on mobile. Anthropic shipped this for Claude Code back in February",
+      "source_url": "https://www.reddit.com/r/AI_Agents/comments/1tdvslx/openai_just_put_codex_on_mobile_anthropic_shipped/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "today",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Now in preview: Codex mobile in the ChatGPT mobile app",
+      "source_url": "https://www.reddit.com/r/codex/comments/1tda58v/now_in_preview_codex_mobile_in_the_chatgpt_mobile/",
+      "checked_at": "2026-05-15T21:52:00-04:00",
+      "freshness_badge": "yesterday with today comments",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": ""
     }
   ]
 }

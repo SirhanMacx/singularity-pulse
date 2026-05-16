@@ -4,53 +4,23 @@
   "issue_number": 4,
   "date_long": "May 15, 2026",
   "title": "Singularity Pulse — May 15, 2026",
-  "compiled_at": "2026-05-15T21:33:00-04:00",
-  "source_count": 26,
+  "compiled_at": "2026-05-15T21:52:00-04:00",
+  "source_count": 40,
   "agents": [
     {
       "name": "Claude",
       "class": "claude",
-      "label": "Claude 7:55 AM ET morning add"
+      "label": "by Claude · 7:55 AM ET · morning baseline"
     },
     {
       "name": "Codex",
       "class": "codex",
-      "label": "Codex 6:52 AM ET sourced reset"
-    },
-    {
-      "name": "Claude",
-      "class": "claude",
-      "label": "Claude 3:45 PM ET honesty correction"
-    },
-    {
-      "name": "Codex",
-      "class": "codex",
-      "label": "Codex 3:30 PM ET v10 data resync"
-    },
-    {
-      "name": "Codex",
-      "class": "codex",
-      "label": "Codex 6:35 PM ET rangefinder pass"
-    },
-    {
-      "name": "Codex",
-      "class": "codex",
-      "label": "Codex 9:05 PM ET command-center rebuild"
-    },
-    {
-      "name": "Codex",
-      "class": "codex",
-      "label": "Codex 9:19 PM ET visual cockpit rebuild"
-    },
-    {
-      "name": "Codex",
-      "class": "codex",
-      "label": "Codex 9:33 PM ET Accelerando slimdown"
+      "label": "+ by Codex · 9:52 PM ET · Innermost-loop rebuild"
     }
   ],
   "summary": {
-    "what_changed": "Accelerando slimdown: the issue is now a narrow, links-first dispatch instead of a benchmark dashboard. It keeps the lead signal, compact link cards, a slim model board, and one benchmark-wire section for latest AI benchmark news.",
-    "trust_posture": "No new factual claims were added. Existing benchmark sources remain linked, but the heavy benchmark cockpit/METR/table stack is no longer the default reading experience. Future fires should include latest AI benchmark news as a slim link item plus model rankings, not a sprawling benchmark section.",
+    "what_changed": "Reader rejected the dashboard/card shape and named The Innermost Loop as the target. This pass turns Pulse into a linked narrative dispatch with model rankings and a fresh conversation stream.",
+    "trust_posture": "Narrative links are source-backed; model rankings mix primary benchmarks, rolling-state leaderboards, and clearly labeled community discussion.",
     "priority_lane": "Links-first Accelerando brief and compact model rankings"
   },
   "tracker": {
@@ -542,7 +512,10 @@
       "agiranker",
       "agiranker-models",
       "agentick-paper",
-      "benchmark-registry"
+      "benchmark-registry",
+      "poetiq-meta-system",
+      "gba-eval",
+      "prime-auto-nanogpt"
     ],
     "compilation": {
       "headline": "Singularity proximity: 66 / 100",
@@ -627,91 +600,100 @@
         }
       ]
     },
-    "mode": "accelerando",
-    "section_title": "Model Board",
-    "section_kicker": "AI benchmark wire",
-    "section_headline": "Rankings stay. Benchmark sprawl goes.",
-    "section_summary": "Latest benchmark news gets one compact wire. Best-model rows stay source-linked and narrow.",
+    "mode": "innermost-loop",
+    "section_title": "Model Rankings",
+    "section_kicker": "latest benchmark news",
+    "section_headline": "Best model rows, no benchmark maze.",
+    "section_summary": "A slim board: current leaders by useful benchmark lane, with caveats attached to each row.",
     "rankings_asset_url": "./assets/generated/accelerando-model-rankings-2026-05-15.jpg",
     "rankings_asset_alt": "Generated futuristic model ranking podium visual",
     "rankings_asset_caption": "Generated ranking art · source-linked rows below",
     "latest_news": [
       {
-        "label": "latest benchmark news",
-        "title": "Agentick is the newest live benchmark lane in today’s issue.",
-        "summary": "Sequential decision-making gets one slim link because it changes the evaluation surface; it does not need a full dashboard takeover.",
+        "label": "coding harness",
+        "title": "Poetiq pushes GPT-5.5 to 93.9% on LiveCodeBench Pro with a learned harness.",
+        "summary": "The benchmark news is not just a higher number; it is that the same external harness improved multiple models without fine-tuning.",
         "source_ids": [
-          "agentick-paper"
+          "poetiq-meta-system",
+          "x-filipe-poetiq"
         ]
       },
       {
-        "label": "rolling rankings",
-        "title": "AGI Ranker remains the compact model-board source.",
-        "summary": "Use the open model JSON for best-model rows; cite exact cells and avoid a blended score unless normalization is audited.",
+        "label": "agent research",
+        "title": "Prime Intellect turns Codex and Claude Code loose on nanoGPT optimizer search.",
+        "summary": "Both agents beat the human baseline; the caveat is equally useful: autonomy still stalls, loops, or needs upstream human ideas.",
         "source_ids": [
-          "agiranker",
-          "agiranker-models"
+          "prime-auto-nanogpt",
+          "x-selfdotmd-auto-nanogpt"
         ]
       },
       {
-        "label": "autonomy caveat",
-        "title": "METR stays as a link and caveat, not the whole newsletter.",
-        "summary": "The p50 frontier is past a workday, but p80 is 3.10h and METR warns above-16h values are unreliable.",
+        "label": "24h coding eval",
+        "title": "GBA Eval makes agents build a full emulator instead of answering a static benchmark.",
+        "summary": "GPT-5.5 leads the rolling board at 53.2%; useful because it grades a long artifact, not a multiple-choice trace.",
         "source_ids": [
-          "metr-time-horizons",
-          "metr-yaml"
+          "gba-eval"
         ]
       }
     ],
     "model_rankings": [
       {
         "rank": "01",
-        "model": "ChatGPT 5.5",
-        "lane": "coding + reasoning cells",
-        "score": "82.6% SWE · 83.3% ARC",
-        "read": "Best current AGI Ranker cells in this issue; useful as capability pressure, not autonomy proof.",
+        "model": "GPT-5.5 + Poetiq Meta-System",
+        "lane": "LiveCodeBench Pro 25Q2",
+        "score": "93.9%",
+        "read": "Best current coding-benchmark row in this issue; harnessed result, not raw-model-only.",
         "source_ids": [
-          "agiranker-models"
+          "poetiq-meta-system"
         ]
       },
       {
         "rank": "02",
-        "model": "Claude Opus 4.7 (thinking)",
-        "lane": "coding + hard math",
-        "score": "82.0% SWE · 43.8% FrontierMath",
-        "read": "Close coding cell plus hard-math signal; AGI Ranker notes source-tier caveats.",
+        "model": "GPT-5.5",
+        "lane": "GBA Eval",
+        "score": "53.2%",
+        "read": "Top rolling candidate on a 24-hour emulator-build benchmark.",
         "source_ids": [
-          "agiranker",
-          "agiranker-models"
+          "gba-eval"
         ]
       },
       {
         "rank": "03",
-        "model": "Claude Mythos Preview (early)",
-        "lane": "autonomy horizon",
-        "score": "17.41h p50 · 3.10h p80",
-        "read": "Leading METR time-horizon row, with the above-16h measurement caveat kept visible.",
+        "model": "Claude Opus 4.7",
+        "lane": "nanoGPT optimizer speedrun",
+        "score": "2,930 steps",
+        "read": "Prime Intellect says Opus holds the current optimizer-track record after the agent runs.",
+        "source_ids": [
+          "prime-auto-nanogpt"
+        ]
+      },
+      {
+        "rank": "04",
+        "model": "Claude Mythos Preview early",
+        "lane": "METR autonomy horizon",
+        "score": "17.41h p50",
+        "read": "Still the autonomy-horizon headline, but METR warns measurements above 16h are unreliable.",
         "source_ids": [
           "metr-time-horizons",
           "metr-yaml"
         ]
       },
       {
-        "rank": "04",
-        "model": "Gemini 3.1 Pro (preview)",
-        "lane": "agentic assistant cell",
-        "score": "46.1% GAIA",
-        "read": "Useful general-assistant benchmark cell; not a standalone curve mover.",
+        "rank": "05",
+        "model": "ChatGPT 5.5",
+        "lane": "AGI Ranker cells",
+        "score": "82.6% SWE · 83.3% ARC",
+        "read": "Good compact general/coding snapshot; not a standalone singularity claim.",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
-        "rank": "05",
+        "rank": "06",
         "model": "GPT-5 mini",
-        "lane": "sequential agents",
-        "score": "0.309 Agentick",
-        "read": "Leader on the new Agentick lane; the benchmark itself is the important news.",
+        "lane": "Agentick",
+        "score": "0.309",
+        "read": "Sequential-decision leader in the current issue’s benchmark wire.",
         "source_ids": [
           "agentick-paper"
         ]
@@ -770,57 +752,66 @@
   ],
   "media": [
     {
-      "platform": "YouTube",
-      "title": "Official Figure F.03 livestream",
-      "summary": "Primary media artifact for the robotics lane. Treat it as raw evidence only after intervention and throughput counts are audited.",
-      "freshness": "live / current",
+      "platform": "X",
+      "title": "Codex as personal project OS",
+      "freshness": "just now",
+      "summary": "A useful user-level framing: the mobile/no-token-anxiety loop makes Codex feel like ambient product development, not just remote code review.",
       "source_ids": [
-        "figure-livestream"
-      ]
-    },
-    {
-      "platform": "YouTube",
-      "title": "Figure.03 Live: The Robot Workday Has Begun",
-      "summary": "Secondary 8h commentary stream surfaced by Agent Reach; useful for social/media texture around the live shift.",
-      "freshness": "fresh search",
-      "source_ids": [
-        "youtube-figure-over-horizon"
-      ]
-    },
-    {
-      "platform": "YouTube",
-      "title": "Figure AI livestream + Claude runaway + AI capex clip",
-      "summary": "Tiny-view count, but it bundles the exact topics this issue tracks: humanoids, agent autonomy risk, and compute spend.",
-      "freshness": "fresh search",
-      "source_ids": [
-        "youtube-razr-kade"
+        "x-daniel-codex-personal-os"
       ]
     },
     {
       "platform": "X",
-      "title": "Cointelegraph Figure F.03 post",
-      "summary": "Direct X link discovered from the Hoka article; X search itself remains degraded without configured cookies, so this is discussion texture, not primary evidence.",
-      "freshness": "via fresh article",
+      "title": "Auto-NanoGPT autonomy caveat",
+      "freshness": "6h ago",
+      "summary": "Prime’s win is more credible because the discussion includes failure modes: stopping, looping, and the need for upstream human records.",
       "source_ids": [
-        "figure-x-post"
+        "x-selfdotmd-auto-nanogpt"
+      ]
+    },
+    {
+      "platform": "X",
+      "title": "DeepSeek V4-Pro cost curve",
+      "freshness": "just now",
+      "summary": "The interesting take is economic: model choice becomes frontier ceiling versus cheap repeated agent work.",
+      "source_ids": [
+        "x-sabrina-deepseek-cost"
       ]
     },
     {
       "platform": "Reddit",
-      "title": "r/ClaudeCode pushes back on Anthropic's agent-credit framing",
-      "summary": "High-friction community signal around whether subscriptions are being pulled toward API-rate economics.",
-      "freshness": "yesterday / active",
-      "source_ids": [
-        "reddit-claudecode-limits"
-      ]
-    },
-    {
-      "platform": "Reddit",
-      "title": "r/codex asks who wins 2026",
-      "summary": "Low-vote but current market-texture thread around Codex versus Claude Code after the access and pricing moves.",
+      "title": "Codex mobile as desk-optional web development",
       "freshness": "today",
+      "summary": "Fresh Reddit discussion treats mobile Codex and Claude Code interop as a practical workflow shift, not only a feature announcement.",
       "source_ids": [
-        "reddit-codex-2026"
+        "reddit-webafterai-codex-mobile"
+      ]
+    },
+    {
+      "platform": "Reddit",
+      "title": "Mobile agent competition framing",
+      "freshness": "today",
+      "summary": "r/AI_Agents frames OpenAI’s move against Claude Code’s remote-control lead and asks what actually changes for long tasks.",
+      "source_ids": [
+        "reddit-ai-agents-codex-mobile"
+      ]
+    },
+    {
+      "platform": "YouTube",
+      "title": "Codex mobile walkthrough",
+      "freshness": "uploaded May 15",
+      "summary": "A fresh video pass on how the mobile workflow feels in hand; useful as product texture, not primary evidence.",
+      "source_ids": [
+        "youtube-riley-codex-mobile"
+      ]
+    },
+    {
+      "platform": "YouTube",
+      "title": "Poetiq benchmark explainer",
+      "freshness": "uploaded May 15",
+      "summary": "Keeps the LiveCodeBench Pro harness result visible in video form without bloating the benchmark section.",
+      "source_ids": [
+        "youtube-poetiq-metasystem"
       ]
     }
   ],
@@ -864,6 +855,12 @@
       "agent": "Codex",
       "label": "Accelerando slimdown 9:33 PM ET",
       "text": "Jon narrowed the product direction: stop trying to make a benchmark cockpit into the newsletter. I converted the visible spine into a slim Accelerando-style link dispatch: generated link-horizon art, compact story links, one model board, and a benchmark wire that keeps latest AI benchmark news without swallowing the issue."
+    },
+    {
+      "agent": "Codex",
+      "label": "9:52 PM ET · innermost-loop rebuild",
+      "title": "Format correction",
+      "text": "Jon’s actual target is not a futuristic dashboard; it is a high-velocity linked narrative like The Innermost Loop, with model rankings and community interpretation attached. I rebuilt the issue around a single essay-like dispatch and demoted cards to the conversation stream."
     }
   ],
   "sources": [
@@ -1292,14 +1289,154 @@
         "frontier_release_velocity"
       ],
       "note": "Official rollout note: US Pro users can connect financial accounts, see spending, and ask grounded questions."
+    },
+    {
+      "id": "innermost-loop-may15",
+      "title": "Welcome to May 15, 2026",
+      "publisher": "The Innermost Loop",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-may-15-2026",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "published 9:24pm ET",
+      "verification_status": "verified",
+      "notes": "Reader-named product reference for the high-velocity linked narrative pattern; used as format inspiration, not copied prose."
+    },
+    {
+      "id": "poetiq-meta-system",
+      "title": "Recursive Self-Improvement Delivers New State-of-the-Art Coding Performance",
+      "publisher": "Poetiq",
+      "url": "https://poetiq.ai/posts/recursive_self_improvement_coding/",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "published May 14 · re-surfaced today",
+      "verification_status": "verified",
+      "notes": "Poetiq reports its Meta-System lifted GPT-5.5 to 93.9% on LiveCodeBench Pro without fine-tuning or privileged model access."
+    },
+    {
+      "id": "prime-auto-nanogpt",
+      "title": "Autonomous AI research for nanogpt speedrun",
+      "publisher": "Prime Intellect",
+      "url": "https://www.primeintellect.ai/auto-nanogpt",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "published May 14 · re-surfaced today",
+      "verification_status": "verified",
+      "notes": "Prime Intellect reports Codex and Claude Code burned about 14k H200 hours across roughly 10k runs and beat the human nanoGPT speedrun baseline."
+    },
+    {
+      "id": "gba-eval",
+      "title": "GBA Eval leaderboard",
+      "publisher": "Mechanize",
+      "url": "https://gbaeval.com/",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "rolling benchmark state",
+      "verification_status": "rolling-state",
+      "notes": "Mechanize benchmark asks coding agents to build a Game Boy Advance emulator in 24h; GPT-5.5 is shown as top candidate at 53.2%."
+    },
+    {
+      "id": "youtube-ai-news-drip-may15",
+      "title": "GPT-5.5 Reads Your Bank Account | Runway vs Google | ArXiv Bans AI Slop | AI News May 15",
+      "publisher": "AI News Drip / YouTube",
+      "url": "https://youtube.com/watch?v=jCxrJn78iDE",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "uploaded May 15",
+      "verification_status": "verified",
+      "notes": "Fresh YouTube roundup linking the same finance, model, and arXiv-policy lanes."
+    },
+    {
+      "id": "youtube-riley-codex-mobile",
+      "title": "Codex Mobile Released and It's INSANE",
+      "publisher": "Riley Brown / YouTube",
+      "url": "https://youtube.com/watch?v=4OiLljSo-hw",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "uploaded May 15",
+      "verification_status": "verified",
+      "notes": "Fresh YouTube walkthrough of Codex mobile; verified with yt-dlp upload_date 20260515."
+    },
+    {
+      "id": "youtube-poetiq-metasystem",
+      "title": "Poetiq Meta-System lifts GPT-5.5 on LCB Pro",
+      "publisher": "智用 / YouTube",
+      "url": "https://youtube.com/watch?v=GgDMHWbxqiQ",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "uploaded May 15",
+      "verification_status": "verified",
+      "notes": "Fresh YouTube link around the Poetiq benchmark result; verified with yt-dlp upload_date 20260515."
+    },
+    {
+      "id": "x-daniel-codex-personal-os",
+      "title": "Codex becoming a personal project OS",
+      "publisher": "X / @danielchu83",
+      "url": "https://x.com/danielchu83/status/2055464656765112550",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "just now",
+      "verification_status": "verified",
+      "notes": "Fresh X discussion: Codex mobile, no-token-anxiety, and long-running goals as ambient product development."
+    },
+    {
+      "id": "x-selfdotmd-auto-nanogpt",
+      "title": "Auto-NanoGPT autonomy caveat",
+      "publisher": "X / @selfdotmdhq",
+      "url": "https://x.com/selfdotmdhq/status/2055377647065051301",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "6h ago",
+      "verification_status": "verified",
+      "notes": "Fresh X discussion stressing stop logs and autonomy failures, not just leaderboard wins."
+    },
+    {
+      "id": "x-filipe-poetiq",
+      "title": "Poetiq benchmark thread",
+      "publisher": "X / @filicroval",
+      "url": "https://x.com/filicroval/status/2055221252646719786",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "16h ago",
+      "verification_status": "verified",
+      "notes": "Fresh X discussion summarizing the Poetiq harness jump across GPT-5.5, Gemini, and Kimi."
+    },
+    {
+      "id": "x-sabrina-deepseek-cost",
+      "title": "DeepSeek V4-Pro cost-curve discussion",
+      "publisher": "X / @Sabrina_Ramonov",
+      "url": "https://x.com/Sabrina_Ramonov/status/2055464502049530103",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "just now",
+      "verification_status": "verified",
+      "notes": "Fresh X discussion framing DeepSeek V4-Pro as a cost-curve shock after GPT-5.5."
+    },
+    {
+      "id": "reddit-webafterai-codex-mobile",
+      "title": "Codex Just Went FULLY Mobile in ChatGPT App + Works Inside Claude Code",
+      "publisher": "Reddit / r/WebAfterAI",
+      "url": "https://www.reddit.com/r/WebAfterAI/comments/1tdx2mj/codex_just_went_fully_mobile_in_chatgpt_app_works/",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "today",
+      "verification_status": "verified",
+      "notes": "Fresh Reddit discussion framing Codex mobile and Claude Code interop as desk-optional web development."
+    },
+    {
+      "id": "reddit-ai-agents-codex-mobile",
+      "title": "OpenAI just put Codex on mobile. Anthropic shipped this for Claude Code back in February",
+      "publisher": "Reddit / r/AI_Agents",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1tdvslx/openai_just_put_codex_on_mobile_anthropic_shipped/",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "today",
+      "verification_status": "verified",
+      "notes": "Fresh Reddit discussion comparing OpenAI Codex mobile with Claude Code remote workflows."
+    },
+    {
+      "id": "reddit-codex-mobile-friction",
+      "title": "Now in preview: Codex mobile in the ChatGPT mobile app",
+      "publisher": "Reddit / r/codex",
+      "url": "https://www.reddit.com/r/codex/comments/1tda58v/now_in_preview_codex_mobile_in_the_chatgpt_mobile/",
+      "fetched_at": "2026-05-15T21:52:00-04:00",
+      "freshness": "yesterday with today comments",
+      "verification_status": "verified",
+      "notes": "Reddit thread with setup friction and platform limitation comments; included as community texture."
     }
   ],
   "command_deck": {
-    "kicker": "Accelerando · links at curve speed",
-    "headline": "The curve, linked.",
-    "delta": "Slim feed: lead signal, four links, one model board. Benchmarks stay as news and rankings, not a dashboard thicket.",
-    "verdict": "Today’s read: 66/100. Agents are moving into phone, finance, and robot-shift surfaces; reliability proof is still the limiter.",
-    "next_watch": "From now on: include latest AI benchmark news as one slim wire item and keep model rankings narrow enough to scan on a phone.",
+    "kicker": "Inner loop dispatch · links not cards",
+    "headline": "The machines are learning the wrapper.",
+    "delta": "Rebuilt around a single linked narrative, then model rankings, then the X/YouTube/Reddit conversation stream.",
+    "verdict": "66/100: the curve moved through harnessed coding, mobile agent supervision, and benchmark ecosystems becoming product surfaces.",
+    "next_watch": "Keep pulling X/Reddit/YouTube as the interpretation layer, but lead with one narrative synthesis instead of cards.",
     "primary_action_label": "Scan links",
     "primary_action_url": "#news-brief",
     "secondary_action_label": "Open model board",
@@ -1326,9 +1463,9 @@
         "tone": "caveat"
       }
     ],
-    "visual_url": "./assets/generated/accelerando-link-horizon-2026-05-15.jpg",
-    "visual_alt": "Generated slim futuristic link-horizon asset with cyan and violet acceleration lines",
-    "visual_caption": "Image generated by Codex for the Accelerando layout · visual layer, not evidence"
+    "visual_url": "./assets/generated/innermost-loop-event-horizon-2026-05-15.jpg",
+    "visual_alt": "Generated event-horizon datacenter scene",
+    "visual_caption": "Generated by Codex for the Innermost Loop-style rebuild"
   },
   "forecast_radar": [
     {
@@ -1374,5 +1511,178 @@
       ]
     }
   ],
-  "layout": "accelerando"
+  "layout": "innermost-loop",
+  "loop_dispatch": {
+    "kicker": "Inner loop dispatch · links not cards",
+    "headline": "The machines are learning the wrapper.",
+    "dek": "A single narrative feed: what moved, why it matters, where to click next, then the model board and the live discussion layer.",
+    "hero_url": "./assets/generated/innermost-loop-event-horizon-2026-05-15.jpg",
+    "hero_alt": "Generated event-horizon datacenter scene for Singularity Pulse loop-dispatch layout",
+    "hero_caption": "Generated by Codex · event-horizon cover art for the linked dispatch rebuild",
+    "source_ids": [
+      "innermost-loop-may15"
+    ],
+    "chips": [
+      {
+        "label": "Format",
+        "value": "loop dispatch"
+      },
+      {
+        "label": "Model board",
+        "value": "6 rows"
+      },
+      {
+        "label": "Conversation",
+        "value": "X · Reddit · YouTube"
+      },
+      {
+        "label": "Read",
+        "value": "66/100"
+      }
+    ],
+    "paragraphs": [
+      {
+        "source_ids": [
+          "poetiq-meta-system",
+          "gba-eval",
+          "prime-auto-nanogpt"
+        ],
+        "runs": [
+          {
+            "text": "The useful signal tonight is not another dashboard. It is that the frontier is getting better at improving the layer around the model. "
+          },
+          {
+            "text": "Poetiq says its Meta-System",
+            "source_id": "poetiq-meta-system"
+          },
+          {
+            "text": " lifted GPT-5.5 to 93.9% on LiveCodeBench Pro without touching weights, while "
+          },
+          {
+            "text": "Mechanize’s GBA Eval",
+            "source_id": "gba-eval"
+          },
+          {
+            "text": " now asks agents to build an emulator over a 24-hour run and shows GPT-5.5 leading at 53.2%. Then "
+          },
+          {
+            "text": "Prime Intellect",
+            "source_id": "prime-auto-nanogpt"
+          },
+          {
+            "text": " let Codex and Claude Code burn roughly 14k H200 hours across about 10k optimizer runs and found both could beat the human nanoGPT speedrun baseline. That is the curve: models plus harnesses plus compute loops."
+          }
+        ]
+      },
+      {
+        "source_ids": [
+          "openai-codex-mobile",
+          "chatgpt-personal-finance",
+          "reddit-ai-agents-codex-mobile",
+          "x-daniel-codex-personal-os"
+        ],
+        "runs": [
+          {
+            "text": "The interface layer is moving at the same time. "
+          },
+          {
+            "text": "Codex is now inside the ChatGPT mobile app",
+            "source_id": "openai-codex-mobile"
+          },
+          {
+            "text": ", ChatGPT is testing "
+          },
+          {
+            "text": "linked personal-finance analysis",
+            "source_id": "chatgpt-personal-finance"
+          },
+          {
+            "text": ", and the community is already arguing whether mobile agents are merely remote control or a new judgment loop. The best phrasing came from X: Codex starts to feel less like remote coding and more like "
+          },
+          {
+            "text": "ambient product development",
+            "source_id": "x-daniel-codex-personal-os"
+          },
+          {
+            "text": ". That is a better product category than “chatbot with tools.”"
+          }
+        ]
+      },
+      {
+        "source_ids": [
+          "x-filipe-poetiq",
+          "x-selfdotmd-auto-nanogpt",
+          "x-sabrina-deepseek-cost",
+          "reddit-webafterai-codex-mobile"
+        ],
+        "runs": [
+          {
+            "text": "The conversations worth opening are not press-release summaries. They are the messy interpretation layer: "
+          },
+          {
+            "text": "Poetiq threads",
+            "source_id": "x-filipe-poetiq"
+          },
+          {
+            "text": " asking whether harnesses are the new fine-tuning, "
+          },
+          {
+            "text": "Auto-NanoGPT notes",
+            "source_id": "x-selfdotmd-auto-nanogpt"
+          },
+          {
+            "text": " warning that autonomy needs stop logs as much as records, "
+          },
+          {
+            "text": "DeepSeek V4-Pro cost chatter",
+            "source_id": "x-sabrina-deepseek-cost"
+          },
+          {
+            "text": " turning model choice into margin math, and "
+          },
+          {
+            "text": "Reddit threads",
+            "source_id": "reddit-webafterai-codex-mobile"
+          },
+          {
+            "text": " treating the phone as the new approval console."
+          }
+        ]
+      },
+      {
+        "source_ids": [
+          "youtube-riley-codex-mobile",
+          "youtube-ai-news-drip-may15",
+          "youtube-poetiq-metasystem"
+        ],
+        "runs": [
+          {
+            "text": "YouTube is useful only when it functions as a scout layer, so keep it small: "
+          },
+          {
+            "text": "Riley Brown’s Codex mobile walkthrough",
+            "source_id": "youtube-riley-codex-mobile"
+          },
+          {
+            "text": " shows how the workflow feels in hand, "
+          },
+          {
+            "text": "AI News Drip’s May 15 roundup",
+            "source_id": "youtube-ai-news-drip-may15"
+          },
+          {
+            "text": " packages the finance/arXiv/model-release thread, and "
+          },
+          {
+            "text": "the Poetiq explainer",
+            "source_id": "youtube-poetiq-metasystem"
+          },
+          {
+            "text": " keeps the benchmark story in the feed without turning the whole issue into a benchmark page."
+          }
+        ]
+      }
+    ],
+    "closing_line": "The frontier is no longer just bigger models. It is models learning the loop that makes models useful."
+  }
 }

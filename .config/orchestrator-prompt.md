@@ -212,7 +212,7 @@ Quick recipe:
 
 ## Step 4.0a — Refresh the chart suite (v8.1 — redesigned May 14 for clarity)
 
-**Format change as of May 15 night:** the issue is now an **Accelerando-style link dispatch**, not a benchmark dashboard. Before writing prose, fill the command-deck fields in `data/issues/$TODAY.json`: what moved, final proximity read, next watch trigger, two action links, and a slim visual direction. The first screen should be one short verdict, one generated/annotated visual layer, direct links, and one next proof. Then write Signal Brief cards with `verdict`, `evidence`, and `tap_next`; keep benchmark coverage to latest AI benchmark news plus the compact model board.
+**Format change as of May 15 late night:** the issue is now an **Innermost Loop-style linked narrative dispatch**, not a benchmark dashboard, command center, or card grid. Before rendering, fill `loop_dispatch` in `data/issues/$TODAY.json`: one cinematic cover image, one headline/deck, 3-5 dense paragraphs with inline source links, and one closing line. Then fill the compact Model Rankings board and the X/YouTube/Reddit conversation stream. Benchmark coverage should be latest AI benchmark news plus source-linked best-model rows, not a matrix-first product.
 
 **Format change as of May 14:** the SCOREBOARD section renders only **3 blocks** (was 8). The new spec is in `chart-suite.md`. Summary:
 

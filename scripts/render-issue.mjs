@@ -91,6 +91,7 @@ function validateIssue(issue, issuePath) {
   requireSourceIds('news', issue.news);
   requireSourceIds('ai_2027', issue.ai_2027);
   requireSourceIds('media', issue.media);
+  requireSourceIds('loop_dispatch.paragraphs', issue.loop_dispatch?.paragraphs);
   requireSourceIds('forecast_radar', issue.forecast_radar);
   requireSourceIds('tracker.sp_index.components', issue.tracker?.sp_index?.components);
   requireSourceIds('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
@@ -124,6 +125,8 @@ function buildSourceTools(issue) {
   }
 
   for (const item of issue.news || []) addFootnotes(item.source_ids);
+  addFootnotes(issue.loop_dispatch?.source_ids);
+  for (const paragraph of issue.loop_dispatch?.paragraphs || []) addFootnotes(paragraph.source_ids);
   addFootnotes(issue.benchmark_panel?.source_ids);
   for (const metric of issue.benchmark_panel?.metrics || []) addFootnotes(metric.source_ids);
   addFootnotes(issue.benchmark_panel?.compilation?.source_ids);
@@ -268,6 +271,48 @@ function renderCommandDeck(issue, tools) {
       <div class="command-watch"><span>Next watch</span><p>${html(deck.next_watch || 'Watch for one source-backed benchmark lane that actually moves the curve.')}</p></div>
     </aside>
   </div>
+</section>`;
+}
+
+function renderInlineRuns(runs = [], tools) {
+  return runs
+    .map((run) => {
+      if (run.source_id) {
+        const source = tools.sourceMap.get(run.source_id);
+        const href = source?.url || run.url || '#footnotes';
+        return `<a href="${attr(href)}">${html(run.text)}</a>`;
+      }
+      return html(run.text);
+    })
+    .join('');
+}
+
+function renderLoopDispatch(issue, tools) {
+  const dispatch = issue.loop_dispatch;
+  if (!dispatch) return renderCommandDeck(issue, tools);
+  const paragraphs = (dispatch.paragraphs || [])
+    .map((paragraph) => `<p>${renderInlineRuns(paragraph.runs || [{ text: paragraph.text || '' }], tools)} ${tools.cites(paragraph.source_ids)}</p>`)
+    .join('\n');
+  const chips = (dispatch.chips || [])
+    .map((chip) => `<span class="loop-chip">${html(chip.label)} <strong>${html(chip.value)}</strong></span>`)
+    .join('\n      ');
+  return `<section class="loop-dispatch" id="command" aria-label="Singularity Pulse loop dispatch">
+  <figure class="loop-hero">
+    <img src="${attr(dispatch.hero_url || './assets/generated/innermost-loop-event-horizon-2026-05-15.jpg')}" alt="${attr(dispatch.hero_alt || 'Futuristic event-horizon over datacenter hero image')}">
+    <figcaption>${html(dispatch.hero_caption || 'Generated visual layer · source links live in the copy below')}</figcaption>
+  </figure>
+  <article class="loop-copy">
+    <div class="loop-kicker">${html(dispatch.kicker || 'Inner loop dispatch')}</div>
+    <h2>${html(dispatch.headline || 'The curve is a story again.')}</h2>
+    <p class="loop-dek">${html(dispatch.dek || '')}</p>
+    <div class="loop-chip-row">
+      ${chips}
+    </div>
+    <div class="loop-body">
+      ${paragraphs}
+    </div>
+    <p class="loop-close">${html(dispatch.closing_line || '')}</p>
+  </article>
 </section>`;
 }
 
@@ -630,7 +675,7 @@ function renderBenchmarkCockpitVisual(panel, tools) {
 
 function renderBenchmarkDashboard(issue, tools, registry) {
   const panel = issue.benchmark_panel || {};
-  if (issue.layout === 'accelerando' || panel.mode === 'accelerando') {
+  if (issue.layout === 'accelerando' || issue.layout === 'innermost-loop' || panel.mode === 'accelerando' || panel.mode === 'innermost-loop') {
     return renderAccelerandoModelBoard(panel, tools);
   }
   const cards = (panel.metrics || [])
@@ -770,7 +815,7 @@ function renderFootnotes(issue, tools) {
   return tools.footnoteIds
     .map((sourceId) => {
       const source = tools.sourceMap.get(sourceId);
-      const note = String(source.note || source.type || '').replace(/[.。]\s*$/, '');
+      const note = String(source.note || source.notes || source.type || '').replace(/[.。]\s*$/, '');
       return `<li id="fn-${attr(source.id)}"><a href="${attr(source.url)}">${html(source.title)}</a> — ${html(source.publisher)} · ${html(source.freshness)} · ${html(note)}.</li>`;
     })
     .join('\n    ');
@@ -820,7 +865,8 @@ function renderIssue(issue, registry) {
     TOP_BRIEFING_WHY: topItem.why_it_matters || 'No curve read available.',
     TOP_SOURCE_CHIPS: renderTopSourceChips(topItem, tools),
     BRIEFING_READOUTS: renderBriefingReadouts(issue, tools),
-    COMMAND_DECK_CONTENT: renderCommandDeck(issue, tools),
+    BODY_CLASSES: issue.layout === 'innermost-loop' ? 'condensed-pulse accelerando-pulse loop-pulse' : 'condensed-pulse accelerando-pulse',
+    COMMAND_DECK_CONTENT: issue.layout === 'innermost-loop' ? renderLoopDispatch(issue, tools) : renderCommandDeck(issue, tools),
     SIGNAL_CONTROLS: renderSignalControls(),
     NEWS_BRIEF_CONTENT: renderNews(issue, tools),
     WHAT_CHANGED_CONTENT: issue.summary.what_changed,

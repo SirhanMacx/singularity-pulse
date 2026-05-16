@@ -330,3 +330,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Too much benchmark machinery; wants slim, cool, useful newsletter links.
 
 **Bet for the coming week**: A narrow link dispatch with a recurring model board will feel more useful and less stagnant than an expanding cockpit UI.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · Innermost Loop Narrative Spine
+
+**Audit window**: Reader said the Accelerando link layout was still not the target and named Alex Wissner-Gross's The Innermost Loop daily newsletter.
+
+**Sources added**: Added The Innermost Loop as a format-reference source row for May 15, plus fresh source rows from X, Reddit, YouTube, Poetiq, Prime Intellect, and Mechanize.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: visible issue opened with a generated link-horizon and compact card sections. AFTER: visible issue opens with `loop_dispatch`: one wide cover image, one linked narrative, one closing line, then Model Rankings and Conversation Stream.
+
+**Benchmarks added/dropped**: Added latest benchmark-news rows for Poetiq LiveCodeBench Pro, Prime Intellect Auto-NanoGPT, and Mechanize GBA Eval. Heavy benchmark dashboard remains dropped from the visible default.
+
+**Voice / style-guide updates**: Innermost Loop standard: synthesis paragraph first; inline links; cards only as support; model rankings stay compact.
+
+**Reader-suggested gaps**: Wants The Innermost Loop feel plus model rankings and interesting X/YouTube/Reddit conversations.
+
+**Bet for the coming week**: A linked narrative spine will feel less stagnant than any dashboard variant because the value is editorial compression, not UI machinery.

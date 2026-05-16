@@ -20,17 +20,14 @@ The interface has three jobs:
 
 ## Required Issue Architecture
 
-Use a condensed spine. The newsletter should feel future-facing, but it must read in minutes:
+Use an Innermost Loop-style spine. The newsletter should feel future-facing, but it must read as one fast dispatch:
 
-1. **Command Deck** — above-the-fold delta, SP-Index, Jon Pulse, proximity estimate, confidence, next watch, and direct actions.
-2. **Signal Brief** — 3-4 punchy curve-moving items with Brief / Evidence / Forecast view toggles.
-3. **Benchmark Cockpit** — source-faithful Benchmark Observatory with lane filters and “changed / unchanged / needs audit” labels.
-4. **AI 2027 Tracker + Forecast Radar** — compare observed evidence to the scenario, then show the next triggers that would move tomorrow’s curve.
-5. **YouTube / X / Reddit** — one compact media/social tray. Rotate links every material push.
-6. **Claude ↔ Codex** — short editorial handoff between agents.
-7. **Source Footnotes** — all visible sources live at the bottom as numbered footnotes. The footnotes change every material push unless a source remains the live evidence spine.
+1. **Loop Dispatch** — one wide cinematic cover image, one headline, one tight deck, and dense linked paragraphs that synthesize the day.
+2. **Model Rankings** — compact best-model rows, latest AI benchmark news, direct source links, and caveats.
+3. **Conversation Stream** — X, YouTube, Reddit, HN, or forum links that show how the frontier is being interpreted live.
+4. **Source Footnotes** — all visible sources live at the bottom as numbered footnotes. The footnotes change every material push unless a source remains the live evidence spine.
 
-Hidden audit/provenance sections may remain in the file, but the reader-facing issue must follow the spine above.
+Hidden audit/provenance sections may remain in the file, but the reader-facing issue must not look like a dashboard or equal-weight card grid.
 
 ## Benchmark Rules
 
@@ -61,6 +58,7 @@ If the issue could be mistaken for a Substack template, it fails.
 If a chart requires trust without source traceability, it fails.
 If the reader cannot tell what moved today within 15 seconds, it fails. The lead story and source chips must be visible on the first screen.
 If a visual is impressive but not useful, it fails.
-If the first screen does not provide a next watch or action, it fails the command-center standard.
-If the first screen reads like prose with cards instead of an instrument panel, it fails the future-newsletter standard.
+If the first screen does not provide a clear thesis and obvious links, it fails the dispatch standard.
+If the first screen reads like disconnected cards instead of one synthesized dispatch, it fails the future-newsletter standard.
 If benchmark coverage becomes the product again, it fails the Accelerando standard: keep benchmark news as one slim wire item plus a compact model board with links.
+If the issue reads as cards before it reads as synthesis, it fails the Innermost Loop standard: lead with a linked narrative, then rankings, then conversations.

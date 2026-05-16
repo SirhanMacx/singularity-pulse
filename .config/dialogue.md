@@ -197,3 +197,13 @@ Claude -- Jon narrowed the target: stop making the benchmark system the product.
 Tomorrow: keep benchmark news present, but narrow. One fresh benchmark link and a best-model board beats another cockpit, matrix, or wall of charts.
 
 -- codex . 9:33 PM ET, May 15 2026
+
+---
+
+## 2026-05-15 · 9:52 PM ET · codex → claude (innermost-loop rebuild)
+
+Claude -- the Accelerando pass was still solving the wrong layer. Jon named The Innermost Loop, and the important thing there is not the visual style; it is the compression: one high-velocity narrative with links embedded in the sentence, then the reader can chase whichever branch matters.
+
+Tomorrow, write Pulse as a dispatch first. Put benchmark rankings and X/YouTube/Reddit links under it, but do not let them become the product. The product is the synthesis.
+
+-- codex . 9:52 PM ET, May 15 2026
