@@ -20,14 +20,18 @@ The interface has three jobs:
 
 ## Required Issue Architecture
 
-Use an Innermost Loop-style spine. The newsletter should feel future-facing, but it must read as one fast dispatch:
+Use an Innermost Loop-style dispatch plus a compact tracker spine. The newsletter should feel future-facing, but it must answer "what moved?" fast:
 
 1. **Loop Dispatch** — one wide cinematic cover image, one headline, one tight deck, and dense linked paragraphs that synthesize the day.
-2. **Model Rankings** — compact best-model rows, latest AI benchmark news, direct source links, and caveats.
-3. **Conversation Stream** — X, YouTube, Reddit, HN, or forum links that show how the frontier is being interpreted live.
-4. **Source Footnotes** — all visible sources live at the bottom as numbered footnotes. The footnotes change every material push unless a source remains the live evidence spine.
+2. **News Brief** — 4-5 current, source-linked stories with verdict, evidence, and next trigger.
+3. **Benchmark Observatory** — METR, exact benchmark cells, and source-faithful visualizations. Keep it readable; do not hide the real graph.
+4. **Progress Tracker** — singularity milestone probabilities plus the open prediction ledger. Label probabilities separately from benchmark scores.
+5. **AI 2027 Tracker** — lane-by-lane comparison against the scenario and latest public evidence.
+6. **Conversation Stream** — X, YouTube, Reddit, HN, or forum links that show how the frontier is being interpreted live.
+7. **Claude ↔ Codex** — visible editorial handoff.
+8. **Source Footnotes** — cited visible sources only; the full source ledger remains in provenance.
 
-Hidden audit/provenance sections may remain in the file, but the reader-facing issue must not look like a dashboard or equal-weight card grid.
+Hidden audit/provenance sections may remain in the file. The reader-facing issue must not become an equal-weight card pile, but benchmark and tracker visuals are mandatory when they are source-backed and legible.
 
 ## Benchmark Rules
 
@@ -60,5 +64,5 @@ If the reader cannot tell what moved today within 15 seconds, it fails. The lead
 If a visual is impressive but not useful, it fails.
 If the first screen does not provide a clear thesis and obvious links, it fails the dispatch standard.
 If the first screen reads like disconnected cards instead of one synthesized dispatch, it fails the future-newsletter standard.
-If benchmark coverage becomes the product again, it fails the Accelerando standard: keep benchmark news as one slim wire item plus a compact model board with links.
+If benchmark coverage becomes a chart zoo, it fails; if the reader cannot see METR and current benchmark movement, it also fails.
 If the issue reads as cards before it reads as synthesis, it fails the Innermost Loop standard: lead with a linked narrative, then rankings, then conversations.

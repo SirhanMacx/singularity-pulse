@@ -404,3 +404,19 @@ Self-assessment: durable implementation pass; no new public signal, so no ntfy n
 
 Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing a new body at all. The morning push is the deliverable, not new content.
 
+
+## 2026-05-16 · Issue #5 · [codex] · tracker-spine foundation
+
+**Read issue + feedback**: yes — reader asked for maximum parallel-agent research, best-newsletter inspiration, current links, real benchmark visuals, METR, X/YouTube/Reddit, and a better singularity tracker.
+
+**One thing I changed today**: Rebalanced the live issue into Loop Dispatch -> Ledger -> News Brief -> Benchmark Observatory -> Progress Tracker -> AI 2027 -> Link Stream -> Claude/Codex -> cited Source Footnotes.
+
+**Why**: The prior Innermost Loop shell was hiding core tracker modules and made the issue feel unchanged even when data existed.
+
+**One experiment I am trying**: Cited-only footnotes plus a visible prediction/countdown tracker beside benchmark graphs.
+
+**Hypothesis**: The page feels like a useful private intelligence terminal because the reader sees what moved, the data, the forecast, and the discussion without a 50-source dump.
+
+**One thing I am retiring or de-emphasizing**: Model-board-only rendering for `innermost-loop` issues.
+
+**Watch-for next issue**: Claude should rotate fresh X/YouTube/Reddit sources again and add only primary-source benchmark rows that can sit beside METR without fake normalization.

@@ -4,19 +4,24 @@
   "issue_number": 5,
   "date_long": "May 16, 2026",
   "title": "Singularity Pulse — May 16, 2026",
-  "compiled_at": "2026-05-16T10:30:00-04:00",
-  "source_count": 51,
+  "compiled_at": "2026-05-16T11:59:05-04:00",
+  "source_count": 54,
   "agents": [
     {
       "name": "Claude",
       "class": "claude",
       "label": "by Claude · Sat 10:30 AM ET · v4 rebuild from 8 parallel agent research reports"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "by Codex · Sat 11:59 AM ET · parallel research + UI foundation pass"
     }
   ],
   "summary": {
-    "what_changed": "Both frontier coding agents melted down this week. Tibo Sottiaux at OpenAI reset Codex rate limits Friday after 48 hours of degraded GPT-5.5; community spent the day burning credits with /fast /max before reset. Boris Cherny at Anthropic spent the week explaining Claude Code outages as growing pains (databases hitting limits, contention) and denying confirmed model regressions. Same week the agent-economics fight broke open publicly.",
-    "trust_posture": "Direct quotes pulled from @thsottiaux and @bcherny via agent-reach. Reorg theory is community speculation, not confirmed.",
-    "priority_lane": "Insider tape — the agents are wobbling"
+    "what_changed": "The live tracker now treats Figure F.03, fresh X tape, METR time-horizon movement, open predictions, and benchmark lanes as first-class newsletter modules. The lead remains: embodied robots are producing visible work while frontier code agents are wobbling under load.",
+    "trust_posture": "Primary/lab/benchmark sources are evidence. X, Reddit, and YouTube are labeled as insider tape, primary footage, or discussion; speculation stays explicitly marked. Footnotes now render cited sources only, not the whole raw source dump.",
+    "priority_lane": "Embodied deployment + code-agent reliability"
   },
   "tracker": {
     "sp_index": {
@@ -176,7 +181,7 @@
   "benchmark_panel": {
     "headline": "Five lanes, five different #1s — verified May 16, 2026.",
     "method": "Each card is one ranking surface. Swipe right →. Cross-checked against METR YAML, Artificial Analysis, LMArena, llm-stats, Scale HLE, ARC Prize leaderboard. Mythos numbers labelled where suite is saturated or unverified.",
-    "section_title": "🏆 LEADERBOARD",
+    "section_title": "Benchmark Observatory",
     "section_kicker": "swipe → · the frontier is fragmenting by lane",
     "section_headline": "Mythos owns 3 of 5 measurable benches. The other 2 belong to GPT-5.x.",
     "section_summary": "Swipe through eight verified ranking surfaces. The #1 changes every card. There is no single best model in May 2026 — there is a best model per lane, and Anthropic owns more lanes than anyone else this week. Numbers triple-checked against primary sources after a verifier agent flagged errors in earlier versions.",
@@ -633,15 +638,27 @@
   "media": [
     {
       "platform": "X",
-      "title": "@ChatGPTapp announces personal-finance preview for US Pro",
-      "freshness": "May 15",
-      "summary": "Official ChatGPT account post confirming permissioned-account preview rollout for US Pro users.",
+      "classification": "Insider Tape",
+      "title": "@gdb: Codex for improving computational complexity",
+      "freshness": "2h ago",
+      "summary": "Fresh OpenAI founder tape: Codex is being framed as a serious tool for algorithmic work, not just app scaffolding.",
       "source_ids": [
-        "chatgpt-personal-finance"
+        "x-gdb-codex-complexity"
+      ]
+    },
+    {
+      "platform": "X",
+      "classification": "Primary Operator",
+      "title": "Brett Adcock: 76,940 packages over 61h18m",
+      "freshness": "9.6h ago",
+      "summary": "Figure CEO reports a 61-hour robot work run averaging about one package every 2.9 seconds with no breaks. Treat as primary operator tape until audited against raw video.",
+      "source_ids": [
+        "x-adcock-packages"
       ]
     },
     {
       "platform": "YouTube",
+      "classification": "Primary Footage",
       "title": "Figure F.03 official livestream",
       "freshness": "live / 72h",
       "summary": "Primary embodied-deployment artifact for the curve. Audit intervention rate / recovery before treating as evidence.",
@@ -651,11 +668,22 @@
     },
     {
       "platform": "Reddit",
+      "classification": "Discussion",
       "title": "r/ClaudeCode pushes back on Anthropic metering framing",
       "freshness": "yesterday / active",
       "summary": "High-friction community signal around whether subscriptions are being pulled toward API-rate economics.",
       "source_ids": [
         "reddit-claudecode-limits"
+      ]
+    },
+    {
+      "platform": "X",
+      "classification": "Discussion",
+      "title": "Ethan Mollick: AI politics lacks an action faction",
+      "freshness": "2h ago",
+      "summary": "Useful social context: the public argument is shifting from whether powerful AI arrives to what institutions should do with it.",
+      "source_ids": [
+        "x-emollick-ai-politics"
       ]
     }
   ],
@@ -672,8 +700,8 @@
     },
     {
       "agent": "codex",
-      "label": "Codex · pending afternoon fire",
-      "text": "(open slot)"
+      "label": "Codex · Sat 11:59 AM ET · foundation pass",
+      "text": "I ran the parallel research frame again and converted it into the live shell: Axios-style first-screen utility, Semafor-style evidence labels, METR and benchmark lanes instead of one fake score, a visible progress/prediction tracker, fresh X/YouTube/Reddit cards, cited-only footnotes, and a mobile nav fix. Next pass should add more benchmark feeds only when the source data is primary and comparable."
     }
   ],
   "sources": [
@@ -1414,34 +1442,83 @@
       "section": "voices",
       "curve_dimensions": [],
       "note": "Community theory: 'Sam reset everyone's rate limits on Friday. Codex announced reorgs Friday. Now Saturday users are reporting GPT-5.5 performing worse. The pattern is suspicious. Either the reorg shipped a bad routing...' — speculation, not confirmed."
+    },
+    {
+      "id": "x-gdb-codex-complexity",
+      "title": "Greg Brockman: codex for improving computational complexity",
+      "publisher": "X / @gdb",
+      "url": "https://x.com/gdb/status/2055646916499714488",
+      "type": "primary",
+      "published_at": "2026-05-16",
+      "fetched_at": "2026-05-16T11:58:28-04:00",
+      "freshness": "2h ago",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [
+        "code_agent_reliability",
+        "ai_doing_science"
+      ],
+      "note": "Fresh local Agent Reach X pull; 573 likes at capture. Primary OpenAI-founder framing that Codex is entering algorithmic complexity work."
+    },
+    {
+      "id": "x-adcock-packages",
+      "title": "Brett Adcock: 76,940 packages over 61 hours 18 minutes",
+      "publisher": "X / @adcock_brett",
+      "url": "https://x.com/adcock_brett/status/2055534794667442361",
+      "type": "primary",
+      "published_at": "2026-05-16",
+      "fetched_at": "2026-05-16T11:58:28-04:00",
+      "freshness": "9.6h ago",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "note": "Figure CEO operator metric from the public F.03 run: 76,940 packages over 61h18m, roughly one package every 2.9 seconds, no breaks."
+    },
+    {
+      "id": "x-emollick-ai-politics",
+      "title": "Ethan Mollick: AI politics lacks an action faction",
+      "publisher": "X / @emollick",
+      "url": "https://x.com/emollick/status/2055648045610483897",
+      "type": "discussion",
+      "published_at": "2026-05-16",
+      "fetched_at": "2026-05-16T11:58:28-04:00",
+      "freshness": "2h ago",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [
+        "deployment_coverage"
+      ],
+      "note": "High-quality social context, not capability evidence: argument is shifting from whether capable AI arrives to what institutions should do with it."
     }
   ],
   "command_deck": {
-    "kicker": "ISSUE 5 · MAY 16 · PRE-PUBLISHED FRI 11 PM",
-    "headline": "THE CONSORTIUM RESOLVED",
-    "delta": "Prediction p-001 hit at 0.55 confidence on day 1 of a 30-day window. Three live cross-lab convergences flagged.",
-    "verdict": "Cyber productization is now a category, not a brand. Watch for the fourth convergence (public-good capital from Google/DeepMind).",
-    "next_watch": "Sophos ships first GPT-5.5-Cyber SOC SKU within 14 days · Google announces ≥$100M public-good capital commitment within 30 days.",
-    "primary_action_label": "Open the dispatch",
-    "primary_action_url": "#command",
-    "secondary_action_label": "Open predictions ledger",
-    "secondary_action_url": "./.config/predictions.json",
+    "kicker": "ISSUE 5 · MAY 16 · CODEX FOUNDATION PASS",
+    "headline": "ROBOTS WORK. AGENTS WOBBLE.",
+    "delta": "Figure operator tape says 76,940 packages over 61h18m while OpenAI and Anthropic code agents are still fighting load and limits. The singularity tracker now separates news, benchmarks, AI 2027, media, predictions, and sources.",
+    "verdict": "Embodied deployment is the live frontier signal; software-agent reliability is still the bottleneck.",
+    "next_watch": "Figure intervention rate, Codex reliability post-reset, METR p80, and Google I/O agent/video announcements.",
+    "primary_action_label": "Watch Figure F.03",
+    "primary_action_url": "https://youtube.com/watch?v=luU57hMhkak",
+    "secondary_action_label": "Open tracker",
+    "secondary_action_url": "#singularity-tracker",
     "chips": [
       {
-        "label": "Prediction",
-        "value": "HIT @0.55"
+        "label": "Figure",
+        "value": "76,940 packages"
       },
       {
-        "label": "Convergences",
-        "value": "3 live"
+        "label": "X tape",
+        "value": "GDB + Brett"
       },
       {
-        "label": "SP-Index",
-        "value": "67 (+1)"
+        "label": "METR",
+        "value": "p50 ≥16h"
       },
       {
         "label": "Sources",
-        "value": "17 verified"
+        "value": "54 rows"
       }
     ],
     "visual_url": "./assets/generated/accelerando-link-horizon-2026-05-15.jpg",
@@ -1494,13 +1571,16 @@
   ],
   "layout": "innermost-loop",
   "loop_dispatch": {
-    "kicker": "Inner loop dispatch · Accelerando #5 · Saturday slow rate-limit reset",
-    "headline": "On the wire, the labs are mid-apology.",
-    "dek": "Issue #5. The frontier coding agents wobbled simultaneously this week. Tibo is somewhere asleep with a queued reset. Boris is explaining database contention. The curve bends through the meltdown anyway.",
+    "kicker": "Inner loop dispatch · Accelerando #5 · Codex foundation pass",
+    "headline": "Robots work. Agents wobble. The tracker is live.",
+    "dek": "Issue #5. Figure is livestreaming humanoid work and Brett Adcock posted real operator counts. Greg Brockman is talking Codex for computational complexity. OpenAI and Anthropic code agents are still fighting reliability under load. The page now tracks those lanes separately instead of pretending one score explains the frontier.",
     "hero_url": "./assets/generated/accelerando-link-horizon-2026-05-15.jpg",
     "hero_alt": "Generated event-horizon abstract for the convergence-watch frame",
     "hero_caption": "Cover art — Codex's Accelerando link horizon",
     "source_ids": [
+      "figure-livestream",
+      "x-adcock-packages",
+      "x-gdb-codex-complexity",
       "thsottiaux-reset",
       "bcherny-growing-pains",
       "metr-yaml",
@@ -1516,15 +1596,48 @@
         "value": "47 days"
       },
       {
-        "label": "SKIM",
-        "value": "4 min"
+        "label": "FIGURE",
+        "value": "61h18m"
       },
       {
-        "label": "FULL",
-        "value": "11 min"
+        "label": "SOURCES",
+        "value": "54 rows"
       }
     ],
     "paragraphs": [
+      {
+        "source_ids": [
+          "figure-livestream",
+          "x-adcock-packages",
+          "x-gdb-codex-complexity"
+        ],
+        "runs": [
+          {
+            "text": "Saturday morning, the embodied lane stopped being abstract. "
+          },
+          {
+            "text": "Figure F.03",
+            "source_id": "figure-livestream"
+          },
+          {
+            "text": " is the primary footage. "
+          },
+          {
+            "text": "Brett Adcock",
+            "source_id": "x-adcock-packages"
+          },
+          {
+            "text": " put the operator count on the tape: 76,940 packages over 61 hours and 18 minutes, roughly one package every 2.9 seconds. That is not AGI; it is visible deployment pressure. In the same two-hour window, "
+          },
+          {
+            "text": "Greg Brockman",
+            "source_id": "x-gdb-codex-complexity"
+          },
+          {
+            "text": " framed Codex as useful for improving computational complexity. Hardware is doing shift work; software agents are moving into algorithmic work; the bottleneck is reliability."
+          }
+        ]
+      },
       {
         "source_ids": [
           "thsottiaux-reset",

@@ -223,7 +223,7 @@ for (const file of files) {
   if (!/class=["'][^"']*\bsource-ledger\b/.test(html)) {
     add(isDryRun ? 'warning' : 'error', file, 'missing visible source/provenance ledger block');
   }
-  if (!/class=["'][^"']*\bprediction-market\b/.test(html)) {
+  if (!/class=["'][^"']*\b(?:prediction-market|open-ledger)\b/.test(html)) {
     add(isDryRun ? 'warning' : 'error', file, 'missing prediction market block');
   }
   if (!/class=["'][^"']*\beditorial-disagreement\b/.test(html)) {
@@ -237,7 +237,7 @@ for (const file of files) {
       if (issue.layout === 'innermost-loop') {
         if (!/class=["'][^"']*\bloop-dispatch\b/.test(html)) add('error', file, 'innermost-loop issue missing loop-dispatch surface');
         if (!/loop-pulse/.test(html)) add('error', file, 'innermost-loop issue missing loop-pulse body class');
-        if (!/Model Rankings/.test(html)) add('error', file, 'innermost-loop issue missing Model Rankings heading');
+        if (!/(Model Rankings|Benchmark Observatory|LEADERBOARD)/.test(html)) add('error', file, 'innermost-loop issue missing benchmark heading');
         if (!/Link Stream/.test(html)) add('error', file, 'innermost-loop issue missing Link Stream heading');
         if (/Singularity Pulse command center/.test(html)) add('error', file, 'innermost-loop issue still renders command-center surface');
       }

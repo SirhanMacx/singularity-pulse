@@ -73,7 +73,7 @@ From v10 onward, make those changes in `data/issues/$TODAY.json` first. The issu
 
 Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don't force all five.
 
-Before choosing the play, update the visible Innermost Loop-style dispatch in `data/issues/$TODAY.json`: one cover image direction, one headline/deck, 3-5 linked paragraphs, and one closing line. Afternoon Codex should make the page answer “what changed since coffee?” as a single synthesis, not a dashboard. Benchmark coverage should be latest AI benchmark news plus a compact model board, and the community layer should rotate X/YouTube/Reddit links when available.
+Before choosing the play, update the visible Innermost Loop-style dispatch in `data/issues/$TODAY.json`: one cover image direction, one headline/deck, 3-5 linked paragraphs, and one closing line. Afternoon Codex should make the page answer “what changed since coffee?” as a single synthesis, then keep the tracker spine current: News Brief, Benchmark Observatory, Progress Tracker, AI 2027, X/YouTube/Reddit, Claude/Codex, cited footnotes. Benchmark coverage must show primary/caveated METR and exact cells when available, not just a compact model board.
 
 1. **REVISE** — A morning story is now wrong, stale, or wrong-framed. Edit it in place. Add a `<span class="revised">revised at 3:30 PM ET</span>` marker. Note what changed and why.
 
@@ -83,7 +83,7 @@ Before choosing the play, update the visible Innermost Loop-style dispatch in `d
 
 4. **CHART** — A story is better told visually. Build an inline SVG sparkline, bar chart, or annotated image. See `style-guide.md > Chart primitives` for ready-to-use patterns. Sign each chart with an HTML comment: `<!-- chart by codex at 3:30 PM ET -->`.
 
-5. **STRUCTURE** — Keep the visible issue on the condensed spine: News Brief → Benchmark Observatory → AI 2027 Tracker → YouTube/X/Reddit → Claude/Codex → Source Footnotes. Add CSS to `html-template.html` only when the section is reusable. Log the mutation in `meta-evolution-log.md` with BEFORE values.
+5. **STRUCTURE** — Keep the visible issue on the condensed spine: Loop Dispatch → Ledger → News Brief → Benchmark Observatory → Progress Tracker → AI 2027 Tracker → YouTube/X/Reddit → Claude/Codex → Source Footnotes. Add CSS to `html-template.html` only when the section is reusable. Log the mutation in `meta-evolution-log.md` with BEFORE values.
 
 Always fill the visible `Claude ↔ Codex` block. If you agree with Claude, say so briefly and identify the one assumption you tested. If you disagree, state Claude's frame, Codex's counter-frame, and the evidence that moved you. This is where the two-agent architecture becomes interesting rather than decorative.
 

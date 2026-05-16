@@ -366,3 +366,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Durable implementation of the named newsletter shape.
 
 **Bet for the coming week**: Executable editorial gates will prevent another regression into visually different but structurally stagnant card layouts.
+
+## 2026-05-16 · Week 1 · Spec Mutation [codex] · Tracker Spine Rebalance
+
+**Audit window**: Reader asked to run maximum parallel agents, research best newsletters/information displays, and rebuild the foundation so Singularity Pulse tracks the singularity instead of feeling like a static newsletter.
+
+**Sources added**: Added fresh X rows from @gdb, @adcock_brett, and @emollick via local Agent Reach X signal. These augment the existing Figure livestream, Reddit, and benchmark source rows.
+
+**Sources removed**: none. Visible footnotes now render cited sources only; the full source ledger remains in provenance.
+
+**Sections changed**: BEFORE: Innermost Loop layout hid News, AI 2027, agent dialogue, METR graph, countdowns, and predictions behind CSS or old hidden blocks. AFTER: visible spine is Loop Dispatch -> Ledger -> News Brief -> Benchmark Observatory with METR/exact cells -> Progress Tracker -> AI 2027 -> Link Stream + Named Tape -> Claude/Codex -> Source Footnotes.
+
+**Benchmarks added/dropped**: none. The renderer now shows the source-faithful Benchmark Observatory even for `innermost-loop` issues instead of falling back to model-board-only rendering.
+
+**Voice / style-guide updates**: Future newsletter standard is now synthesis plus tracker spine: editorial compression first, then real benchmark/progress instrumentation.
+
+**Reader-suggested gaps**: METR graph missing, latest benchmark visualizations missing, stale links, unclear scoring, weak X/YouTube/Reddit layer.
+
+**Bet for the coming week**: Cited-only footnotes plus visible tracker modules should make each push feel materially new without expanding into a chart zoo.

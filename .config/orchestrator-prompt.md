@@ -212,7 +212,7 @@ Quick recipe:
 
 ## Step 4.0a — Refresh the chart suite (v8.1 — redesigned May 14 for clarity)
 
-**Format change as of May 15 late night:** the issue is now an **Innermost Loop-style linked narrative dispatch**, not a benchmark dashboard, command center, or card grid. Before rendering, fill `loop_dispatch` in `data/issues/$TODAY.json`: one cinematic cover image, one headline/deck, 3-5 dense paragraphs with inline source links, and one closing line. Then fill the compact Model Rankings board and the X/YouTube/Reddit conversation stream. Benchmark coverage should be latest AI benchmark news plus source-linked best-model rows, not a matrix-first product.
+**Format change as of May 16 Codex foundation pass:** the issue is an **Innermost Loop-style linked narrative dispatch plus a compact tracker spine**. Before rendering, fill `loop_dispatch` in `data/issues/$TODAY.json`: one cinematic cover image, one headline/deck, 3-5 dense paragraphs with inline source links, and one closing line. Then fill: News Brief, Benchmark Observatory with METR/exact cells/source-faithful visuals, Progress Tracker, AI 2027 Tracker, X/YouTube/Reddit conversation stream, Claude/Codex, and cited source footnotes. Do not collapse back to a model-board-only issue when benchmark/tracker data is available.
 
 **Format change as of May 14:** the SCOREBOARD section renders only **3 blocks** (was 8). The new spec is in `chart-suite.md`. Summary:
 
@@ -237,7 +237,7 @@ If you invent a new chart type today, add the CSS class to `html-template.html`,
 
 ## Step 4.0a.5 — Render Benchmark Observatory
 
-Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. In the visible issue, render benchmark coverage as a slim **Model Board**: latest AI benchmark news, best-model rows, direct links, source/date/caveat. Do not let benchmark visuals or tables swallow the newsletter. If a benchmark truly moves the curve, include it as one linked wire item and update `benchmark_panel.model_rankings` / `benchmark_panel.latest_news`; keep raw rows in data for audit, not as the default reading experience.
+Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. In the visible issue, render benchmark coverage as a readable **Benchmark Observatory**: latest AI benchmark news, best-model rows, METR p50/p80 graph, exact cells, direct links, source/date/caveat. Do not let benchmark visuals swallow the newsletter, but do not hide the graph or exact cells when the user is explicitly tracking progress.
 
 Never present benchmark percentages, prediction probabilities, and SP-Index scores as the same thing. Label the scale every time. If METR reports a measurement-ceiling caveat, spell it out in the graph caption.
 
@@ -346,7 +346,7 @@ Follow `style-guide.md` exactly. The narrative sections sit after the Singularit
 
 Today's date: produce in `YYYY-MM-DD` format from `date +%Y-%m-%d`. Call it `$TODAY`.
 
-Read `/tmp/singularity-pulse/.config/html-template.html`. The visible issue spine is fixed: News Brief → Benchmark Observatory → AI 2027 Tracker → YouTube/X/Reddit → Claude/Codex → Source Footnotes. Substitute these placeholders:
+Read `/tmp/singularity-pulse/.config/html-template.html`. The visible issue spine is fixed: Loop Dispatch → Ledger → News Brief → Benchmark Observatory → Progress Tracker → AI 2027 Tracker → YouTube/X/Reddit → Claude/Codex → Source Footnotes. Substitute these placeholders:
 
 - `{{TITLE}}` → `Singularity Pulse — $TODAY`
 - `{{DATE_LONG}}` → human-readable (e.g., `Tuesday, May 12, 2026`)
@@ -359,6 +359,8 @@ Read `/tmp/singularity-pulse/.config/html-template.html`. The visible issue spin
 - `{{DISAGREEMENT_CONTENT}}` → visible Claude/Codex disagreement block, or a plain sentence saying no material disagreement yet
 - `{{FUTURES_CONSOLE_CONTENT}}` → 2-4 Futures Console cards from `.config/futures-console.json` plus `.watch-rail`
 - `{{BENCHMARK_DASHBOARD_CONTENT}}` → Benchmark Observatory source rows, exact-cell benchmark matrix, and source-faithful METR graph
+- `{{COUNTDOWNS_CONTENT}}` → source/caveat-aware singularity milestone cards
+- `{{PREDICTION_MARKET_CONTENT}}` → open prediction ledger with Brier score, live bets, and resolved receipts
 - `{{AI_2027_CONTENT}}` → 3 compact `.timeline-card` cards: original AI 2027 milestone, latest AI Futures revision, today’s evidence by lane
 - `{{MEDIA_DISCUSSION_CONTENT}}` → 3 compact `.media-card` cards: one YouTube, one X/Twitter, one Reddit; rotate links each material push
 - `{{AGENT_CONVERSATION_CONTENT}}` → 2-3 compact `.conversation-card` cards for Claude/Codex handoff

@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-16",
-  "checked_at": "2026-05-16T10:30:00-04:00",
+  "checked_at": "2026-05-16T11:59:05-04:00",
   "generated_from": "data/issues/2026-05-16.json",
   "rendered_items": [
     {
@@ -588,6 +588,43 @@
       "curve_dimensions": [],
       "verification_status": "estimated",
       "notes": "Community theory: 'Sam reset everyone's rate limits on Friday. Codex announced reorgs Friday. Now Saturday users are reporting GPT-5.5 performing worse. The pattern is suspicious. Either the reorg shipped a bad routing...' — speculation, not confirmed."
+    },
+    {
+      "section": "media",
+      "title": "Greg Brockman: codex for improving computational complexity",
+      "source_url": "https://x.com/gdb/status/2055646916499714488",
+      "checked_at": "2026-05-16T11:58:28-04:00",
+      "freshness_badge": "2h ago",
+      "curve_dimensions": [
+        "code_agent_reliability",
+        "ai_doing_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Fresh local Agent Reach X pull; 573 likes at capture. Primary OpenAI-founder framing that Codex is entering algorithmic complexity work."
+    },
+    {
+      "section": "media",
+      "title": "Brett Adcock: 76,940 packages over 61 hours 18 minutes",
+      "source_url": "https://x.com/adcock_brett/status/2055534794667442361",
+      "checked_at": "2026-05-16T11:58:28-04:00",
+      "freshness_badge": "9.6h ago",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Figure CEO operator metric from the public F.03 run: 76,940 packages over 61h18m, roughly one package every 2.9 seconds, no breaks."
+    },
+    {
+      "section": "media",
+      "title": "Ethan Mollick: AI politics lacks an action faction",
+      "source_url": "https://x.com/emollick/status/2055648045610483897",
+      "checked_at": "2026-05-16T11:58:28-04:00",
+      "freshness_badge": "2h ago",
+      "curve_dimensions": [
+        "deployment_coverage"
+      ],
+      "verification_status": "verified",
+      "notes": "High-quality social context, not capability evidence: argument is shifting from whether capable AI arrives to what institutions should do with it."
     }
   ]
 }
