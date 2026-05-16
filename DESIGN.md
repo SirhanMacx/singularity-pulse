@@ -62,3 +62,4 @@ If a chart requires trust without source traceability, it fails.
 If the reader cannot tell what moved today within 15 seconds, it fails. The lead story and source chips must be visible on the first screen.
 If a visual is impressive but not useful, it fails.
 If the first screen does not provide a next watch or action, it fails the command-center standard.
+If the first screen reads like prose with cards instead of an instrument panel, it fails the future-newsletter standard.

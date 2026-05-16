@@ -294,3 +294,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Punchier writing, snappier first screen, useful interaction, and a product that feels native to the AI frontier rather than like a dressed-up newsletter.
 
 **Bet for the coming week**: Light-JS command-center interaction will make each issue feel alive without breaking GitHub Pages or source-trust constraints.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · Visual Cockpit Standard
+
+**Audit window**: Reader rejected the first command-center pass as still basically the same and asked for computer-use, vision, and generated images to fix the UI/UX and benchmark graphs.
+
+**Sources added**: none. Added a generated visual asset at `assets/generated/pulse-command-horizon-2026-05-15.jpg`; it is illustrative interface art, not evidence.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: Command Deck was still text-first with metric cards. AFTER: Command Deck includes an image-led cockpit visual, shorter verdict copy, and stronger action hierarchy; Benchmark Observatory now opens with a 3D cockpit SVG before raw tables.
+
+**Benchmarks added/dropped**: none. Existing benchmark lanes now have a visual cockpit layer; raw source values and caveats remain below.
+
+**Voice / style-guide updates**: First screen should be one short verdict, one visual, one final number, one next proof.
+
+**Reader-suggested gaps**: Future feel, generated image direction, more useful benchmark graphs, less stagnant/static layout.
+
+**Bet for the coming week**: A visual-cockpit standard will keep the product from regressing into prose-first newsletter cards.

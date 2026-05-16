@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-15T21:05:00-04:00",
+  "last_updated": "2026-05-15T21:19:00-04:00",
   "issue_count": 4,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "benchmark_composite": {
@@ -922,10 +922,10 @@
     }
   ],
   "product_surface": {
-    "as_of": "2026-05-15T21:05:00-04:00",
-    "mode": "command-center",
+    "as_of": "2026-05-15T21:19:00-04:00",
+    "mode": "visual-cockpit-command-center",
     "interaction": "light-js",
-    "default_signal_view": "brief",
-    "note": "Visible issue rebuilt around command deck, signal view toggles, benchmark filters, and forecast radar. No change to SP-Index score."
+    "generated_asset": "assets/generated/pulse-command-horizon-2026-05-15.jpg",
+    "note": "Second UI pass after computer-use visual audit: image-generated command cockpit, shorter first-screen verdict, Brief mode hides long summaries, benchmark cockpit SVG added before raw tables."
   }
 }

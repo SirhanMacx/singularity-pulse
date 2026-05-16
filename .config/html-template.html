@@ -39,6 +39,10 @@
   .toc { margin-top: 10px; font-size: 13px; color: var(--muted); line-height: 1.8; }
   .toc a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; margin-right: 10px; white-space: nowrap; }
   .toc a:hover { color: var(--accent); border-color: var(--accent); }
+  body.condensed-pulse header.masthead { padding: 10px 14px; margin-bottom: 14px; border-radius: 18px; background: rgba(2,6,23,0.52); box-shadow: 0 16px 50px rgba(0,0,0,0.24); }
+  body.condensed-pulse .masthead .pulse-name { font-size: clamp(28px, 5vw, 44px); letter-spacing: -0.06em; }
+  body.condensed-pulse .masthead .date { margin-top: 2px; font-size: 12px; }
+  body.condensed-pulse .toc { font-size: 11px; line-height: 1.7; }
   body.condensed-pulse .jon-lens,
   body.condensed-pulse .design-protocol,
   body.condensed-pulse .morning-brief,
@@ -63,12 +67,20 @@
   body.condensed-pulse .horizon-wrap,
   body.condensed-pulse .watching-wrap,
   body.condensed-pulse .dialogue-footer { display: none; }
-  .command-deck { margin: 0 0 22px; border: 1px solid rgba(124,247,255,0.34); border-radius: 30px; padding: 22px; background: radial-gradient(circle at 14% 10%, rgba(124,247,255,0.20), transparent 24rem), radial-gradient(circle at 84% 18%, rgba(192,132,252,0.16), transparent 22rem), linear-gradient(135deg, rgba(9,18,42,0.96), rgba(2,6,23,0.72)); box-shadow: 0 28px 100px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.06); overflow: hidden; position: relative; }
+  .command-deck { margin: 0 0 22px; border: 1px solid rgba(124,247,255,0.34); border-radius: 30px; padding: 18px; background: radial-gradient(circle at 14% 10%, rgba(124,247,255,0.20), transparent 24rem), radial-gradient(circle at 84% 18%, rgba(192,132,252,0.16), transparent 22rem), linear-gradient(135deg, rgba(9,18,42,0.96), rgba(2,6,23,0.72)); box-shadow: 0 28px 100px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.06); overflow: hidden; position: relative; }
   .command-deck::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(124,247,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(124,247,255,0.07) 1px, transparent 1px); background-size: 42px 42px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 86%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 86%, transparent); opacity: 0.34; }
-  .command-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.16fr) minmax(310px, 0.84fr); gap: 18px; align-items: stretch; }
+  .command-deck::after { content: ""; position: absolute; inset: -20% -10% auto auto; width: 44%; height: 70%; background: radial-gradient(circle, rgba(124,247,255,0.24), transparent 62%); pointer-events: none; filter: blur(18px); opacity: 0.8; }
+  .command-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(280px, 0.72fr) minmax(420px, 1.04fr) minmax(250px, 0.58fr); gap: 14px; align-items: stretch; }
   .command-kicker, .command-metric span, .command-watch span, .command-verdict span, .signal-controls, .radar-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
-  .command-primary h2 { margin: 8px 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(40px, 7vw, 78px); line-height: 0.88; letter-spacing: -0.07em; max-width: 760px; }
-  .command-delta { max-width: 780px; color: #c9d8ec; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.42; margin: 0 0 16px; }
+  .command-primary h2 { margin: 8px 0 12px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(42px, 6vw, 74px); font-weight: 900; line-height: 0.88; letter-spacing: -0.085em; max-width: 720px; text-transform: uppercase; }
+  .command-delta { max-width: 780px; color: #d5e5fb; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.42; margin: 0 0 16px; }
+  .command-visual { margin: 0; align-self: stretch; min-height: 100%; border: 1px solid rgba(124,247,255,0.22); border-radius: 24px; overflow: hidden; background: rgba(2,6,23,0.42); box-shadow: inset 0 0 40px rgba(124,247,255,0.08), 0 24px 70px rgba(0,0,0,0.34); position: relative; }
+  .command-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 44%, rgba(2,6,23,0.72)); pointer-events: none; }
+  .command-visual img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; object-position: center; display: block; filter: saturate(1.12) contrast(1.08); transform: scale(1.01); }
+  .command-visual figcaption { position: absolute; left: 14px; bottom: 12px; right: 150px; z-index: 2; font-family: 'JetBrains Mono', monospace; color: rgba(229,247,255,0.72); font-size: 9px; letter-spacing: 0.11em; text-transform: uppercase; line-height: 1.35; }
+  .visual-prediction { position: absolute; right: 14px; bottom: 14px; z-index: 2; min-width: 116px; border: 1px solid rgba(124,247,255,0.34); border-radius: 16px; padding: 10px 11px; background: rgba(2,6,23,0.68); backdrop-filter: blur(14px); }
+  .visual-prediction span { display: block; font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; }
+  .visual-prediction strong { display: block; color: var(--fg); font-size: 25px; line-height: 1.05; letter-spacing: -0.05em; }
   .command-chips, .command-actions, .signal-controls, .bench-filter-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .command-chip { border: 1px solid rgba(124,247,255,0.22); border-radius: 999px; padding: 7px 10px; background: rgba(124,247,255,0.08); color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
   .command-chip strong { color: var(--fg); margin-left: 4px; }
@@ -82,7 +94,7 @@
   .command-metric em, .command-watch p { display: block; margin: 6px 0 0; color: var(--muted); font-size: 12px; font-style: normal; line-height: 1.35; }
   .read-mode-toggle, .signal-toggle, .bench-filter { appearance: none; border: 1px solid rgba(124,247,255,0.22); border-radius: 999px; background: rgba(2,6,23,0.62); color: var(--muted); padding: 7px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; cursor: pointer; }
   .signal-toggle.active, .bench-filter.active, .read-mode-toggle.active { color: var(--fg); border-color: rgba(124,247,255,0.52); background: rgba(124,247,255,0.14); box-shadow: 0 0 18px rgba(124,247,255,0.12); }
-  body[data-signal-view="brief"] .story-evidence, body[data-signal-view="brief"] .story-forecast, body[data-signal-view="evidence"] .story-summary, body[data-signal-view="evidence"] .story-forecast, body[data-signal-view="forecast"] .story-summary, body[data-signal-view="forecast"] .story-evidence { display: none; }
+  body[data-signal-view="brief"] .story-summary, body[data-signal-view="brief"] .story-evidence, body[data-signal-view="brief"] .story-forecast, body[data-signal-view="evidence"] .story-forecast, body[data-signal-view="forecast"] .story-summary, body[data-signal-view="forecast"] .story-evidence { display: none; }
   .story-verdict { color: var(--fg) !important; font-size: 14px !important; margin-bottom: 8px !important; }
   .story-evidence, .story-forecast { color: #c9d8ec !important; margin-top: 8px !important; }
   .story-tap { display: inline-flex; margin-top: 10px; font-size: 12px; font-weight: 800; border-bottom: 0; color: var(--accent); }
@@ -94,6 +106,14 @@
   .range-axis-meta em { color: var(--accent-3); font-style: normal; font-size: 9px; margin-left: 5px; }
   .range-axis.is-hidden { display: none; }
   body.reader-focus .media-discussion, body.reader-focus .agent-conversation, body.reader-focus .source-footnotes { opacity: 0.58; }
+  .benchmark-cockpit-visual { display: grid; grid-template-columns: minmax(220px, 0.44fr) minmax(420px, 1fr); gap: 16px; align-items: center; margin: 16px 0; padding: 16px; border: 1px solid rgba(124,247,255,0.24); border-radius: 22px; background: radial-gradient(circle at 74% 46%, rgba(124,247,255,0.16), transparent 18rem), linear-gradient(135deg, rgba(2,6,23,0.72), rgba(8,15,35,0.50)); overflow: hidden; box-shadow: inset 0 1px 0 rgba(255,255,255,0.06); }
+  .benchmark-cockpit-visual h3 { margin: 4px 0 8px; font-size: clamp(24px, 3vw, 38px); line-height: 0.98; letter-spacing: -0.05em; }
+  .benchmark-cockpit-visual p { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 0; }
+  .benchmark-cockpit-visual svg { width: 100%; height: auto; min-height: 280px; display: block; filter: drop-shadow(0 24px 44px rgba(0,0,0,0.28)); }
+  .cockpit-value, .cockpit-label, .cockpit-small { font-family: 'JetBrains Mono', monospace; fill: #e5f7ff; font-size: 15px; font-weight: 800; }
+  .cockpit-label { fill: #93a4bd; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+  .cockpit-small { fill: #93a4bd; font-size: 10px; letter-spacing: .18em; }
+  .cockpit-score { font-family: 'Inter', sans-serif; fill: #e5f7ff; font-size: 34px; font-weight: 900; }
   .pulse-section { margin: 0 0 28px; padding: 18px; border: 1px solid var(--rule); border-radius: 22px; background: linear-gradient(135deg, rgba(8,15,35,0.72), rgba(4,8,20,0.50)); box-shadow: 0 18px 70px rgba(0,0,0,0.22); }
   .pulse-section h2 { margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(28px, 5vw, 44px); line-height: 0.98; letter-spacing: -0.035em; }
   .section-sub { margin: -4px 0 16px; color: var(--muted); font-size: 14px; }
@@ -604,9 +624,14 @@
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 42px; }
-    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid, .rangefinder-panel, .command-grid, .forecast-radar .radar-grid { grid-template-columns: 1fr; }
+    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid, .rangefinder-panel, .command-grid, .forecast-radar .radar-grid, .benchmark-cockpit-visual { grid-template-columns: 1fr; }
     .command-deck { padding: 18px; border-radius: 24px; }
-    .command-primary h2 { font-size: 40px; }
+    body.condensed-pulse header.masthead { margin: -4px 0 12px; }
+    .command-primary h2 { font-size: 42px; }
+    .command-visual { order: -1; }
+    .command-visual img { min-height: 240px; }
+    .command-visual figcaption { right: 14px; font-size: 8px; }
+    .visual-prediction { top: 12px; bottom: auto; }
     .command-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .sp-index-pair { flex-direction: column; }
     .morning-brief, .dispute-grid, .future-grid, .watch-rail, .discourse-pulse .dp-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }

@@ -212,7 +212,7 @@ Quick recipe:
 
 ## Step 4.0a — Refresh the chart suite (v8.1 — redesigned May 14 for clarity)
 
-**Format change as of May 15 night:** the issue opens as a **Command Center**, not a static newsletter. Before writing prose, fill the command-deck fields in `data/issues/$TODAY.json`: what moved, final proximity read, confidence, next watch trigger, and two action links. Then write Signal Brief cards with `verdict`, `evidence`, and `tap_next` so the renderer can expose Brief / Evidence / Forecast modes.
+**Format change as of May 15 night:** the issue opens as a **Command Center**, not a static newsletter. Before writing prose, fill the command-deck fields in `data/issues/$TODAY.json`: what moved, final proximity read, confidence, next watch trigger, two action links, and a visual direction. The first screen should read as an instrument panel: one short verdict, one generated/annotated visual layer, one final number, one next proof. Then write Signal Brief cards with `verdict`, `evidence`, and `tap_next` so the renderer can expose Brief / Evidence / Forecast modes.
 
 **Format change as of May 14:** the SCOREBOARD section renders only **3 blocks** (was 8). The new spec is in `chart-suite.md`. Summary:
 

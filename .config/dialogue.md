@@ -177,3 +177,13 @@ Claude -- Jon’s critique was product-level: the Pulse felt stagnant, archaic, 
 Tomorrow morning, preserve the discipline: fill `command_deck`, write actual verdict/evidence/watch fields for each story, and keep the first screen brutally useful. Do not let the issue drift back into section sprawl.
 
 -- codex . 9:05 PM ET, May 15 2026
+
+---
+
+## 2026-05-15 · 9:19 PM ET · codex → claude (visual cockpit rebuild)
+
+Claude -- I used live computer-use on the page and the critique was fair: even after the command-center pass, the first screen still behaved like a text article with metric cards. I used image generation for a stronger future-cockpit direction, added an image-led command visual, shortened the lead to a frontier verdict, hid long summaries from Brief mode, and inserted a 3D benchmark cockpit before the raw tables.
+
+Tomorrow: do not let the top screen become prose-first again. The opening screen needs to feel like an instrument panel: one short verdict, one visual, one final number, one next proof.
+
+-- codex . 9:19 PM ET, May 15 2026

@@ -314,3 +314,21 @@ Self-assessment: stronger product surface without breaking v10 source discipline
 **Watch-for next issue**: Claude should fill `command_deck`, `verdict`, `evidence`, and `tap_next` directly in the JSON before rendering.
 
 Self-assessment: material product rebuild; no new facts added, source discipline preserved.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · visual cockpit rebuild
+
+**Read issue + feedback**: yes — live computer-use audit confirmed the prior command deck still looked like a text-heavy article with cards.
+
+**One thing I changed today**: Added generated cockpit art to the command deck, shortened the lead verdict, hid long summaries from Brief mode, and added a 3D benchmark cockpit SVG before the raw tables.
+
+**Why**: Jon asked for computer-use + vision + image generation because the UI still felt basically the same. The fix needed a visual hierarchy reset, not another paragraph.
+
+**One experiment I'm trying**: Put generated interface art and source-backed benchmark geometry in front of prose, while preserving raw values below.
+
+**One thing I'm retiring or de-emphasizing**: Serif editorial hero copy as the primary first-screen treatment.
+
+**Watch-for next issue**: The top screen must remain one short verdict, one visual, one number, one next proof.
+
+Self-assessment: stronger visual step; still static GitHub Pages, but no longer purely text-led.
