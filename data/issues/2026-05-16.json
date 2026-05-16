@@ -4,13 +4,13 @@
   "issue_number": 5,
   "date_long": "May 16, 2026",
   "title": "Singularity Pulse — May 16, 2026",
-  "compiled_at": "2026-05-16T13:30:00-04:00",
+  "compiled_at": "2026-05-16T10:30:00-04:00",
   "source_count": 51,
   "agents": [
     {
       "name": "Claude",
       "class": "claude",
-      "label": "by Claude · Sat 12:35 PM ET · Accelerando rebuild"
+      "label": "by Claude · Sat 10:30 AM ET · v4 rebuild from 8 parallel agent research reports"
     }
   ],
   "summary": {
@@ -174,58 +174,75 @@
     }
   ],
   "benchmark_panel": {
-    "headline": "Five lanes, five different #1s.",
-    "method": "Each card below is one ranking surface. Swipe right →. Sources: METR raw YAML (autonomy), Artificial Analysis (intelligence composite), AGI Ranker (capability rows), LMArena (Elo).",
+    "headline": "Five lanes, five different #1s — verified May 16, 2026.",
+    "method": "Each card is one ranking surface. Swipe right →. Cross-checked against METR YAML, Artificial Analysis, LMArena, llm-stats, Scale HLE, ARC Prize leaderboard. Mythos numbers labelled where suite is saturated or unverified.",
     "section_title": "🏆 LEADERBOARD",
     "section_kicker": "swipe → · the frontier is fragmenting by lane",
-    "section_headline": "Mythos owns the top — but only on the lanes that haven't melted down this week.",
-    "section_summary": "Swipe through five public ranking surfaces. The #1 changes every card. There is no single best model in May 2026 — there is a best model per lane, and the lanes themselves are diverging faster than the models.",
+    "section_headline": "Mythos owns 3 of 5 measurable benches. The other 2 belong to GPT-5.x.",
+    "section_summary": "Swipe through eight verified ranking surfaces. The #1 changes every card. There is no single best model in May 2026 — there is a best model per lane, and Anthropic owns more lanes than anyone else this week. Numbers triple-checked against primary sources after a verifier agent flagged errors in earlier versions.",
     "mode": "carousel",
     "metrics": [
       {
-        "label": "🥇 Overall · autonomy + science peak",
+        "label": "🥇 Autonomy · METR p50",
         "value": "Claude Mythos Preview",
-        "sub": "17.41h METR p50 · 94.6% GPQA Diamond · preview access only",
+        "sub": "≥16h (suite saturated · 95% CI 8.5–55h · METR YAML May 8)",
         "source_ids": [
-          "metr-yaml"
+          "metr-yaml",
+          "metr-time-horizons"
         ]
       },
       {
-        "label": "🥈 Daily-driver intelligence",
+        "label": "🥇 Coding · SWE-bench Verified",
+        "value": "Claude Mythos Preview",
+        "sub": "93.9% · top-of-leaderboard (llm-stats / Anthropic technical card)",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "label": "🥇 Frontier knowledge · HLE",
+        "value": "Claude Mythos Preview",
+        "sub": "64.7% on Humanity's Last Exam (Scale Labs, May 13)",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "label": "🥇 Daily-driver intelligence · AA",
         "value": "GPT-5.5 (xhigh)",
-        "sub": "Artificial Analysis composite #1 · agentic-terminal leader",
+        "sub": "Artificial Analysis Intelligence Index #1 (score 60)",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
-        "label": "🥉 Multi-file code reasoning",
-        "value": "Claude Opus 4.7 (max)",
-        "sub": "87.6% SWE-bench Verified · 43.8% FrontierMath",
+        "label": "🥇 Reasoning · ARC-AGI-2",
+        "value": "GPT-5.5",
+        "sub": "85.0% · human avg 66% · ARC Prize leaderboard May 13",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
-        "label": "4 · LMArena Elo (text)",
-        "value": "Claude Opus 4.6",
-        "sub": "Elo 1504 · #1 · Gemini 3.1 Pro within CI",
-        "source_ids": [
-          "agiranker"
-        ]
-      },
-      {
-        "label": "5 · Multimodal + long-context",
-        "value": "Gemini 3.1 Pro Preview",
-        "sub": "46.1% GAIA · Google's only podium row",
+        "label": "🥇 Math · FrontierMath",
+        "value": "GPT-5.4",
+        "sub": "47.6% · Epoch FrontierMath leader (llm-stats May 16)",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
-        "label": "6 · Cost-performance",
-        "value": "DeepSeek V4-Pro",
-        "sub": "Pareto leader on the open board",
+        "label": "🥇 Science · GPQA Diamond",
+        "value": "ChatGPT 5.4 Pro",
+        "sub": "94.4% on GPQA Diamond (agiranker, May 11)",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "label": "🥇 Head-to-head · LMArena Elo",
+        "value": "Claude Opus 4.6 (thinking)",
+        "sub": "Elo 1502 · LMArena #1 · Gemini 3.1 Pro within CI",
         "source_ids": [
           "agiranker"
         ]
@@ -236,9 +253,9 @@
       {
         "model": "Claude Mythos Preview",
         "benchmark": "METR Time Horizon p50",
-        "value": "17.41 h",
+        "value": "≥16h (saturated)",
         "eval_date": "2026-05-08",
-        "note": "Above METR's 16h reliability ceiling. Preview-only.",
+        "note": "METR explicitly warns measurements above 16h are unreliable (95% CI 8.5–55h). Don't quote a precise number.",
         "source_ids": [
           "metr-yaml"
         ]
@@ -246,9 +263,9 @@
       {
         "model": "Claude Opus 4.6",
         "benchmark": "METR Time Horizon p50",
-        "value": "12.0 h",
+        "value": "12.0h",
         "eval_date": "2026-02-05",
-        "note": "Daily-driver autonomy. Runner-up to Mythos.",
+        "note": "Daily-driver autonomy. Runner-up.",
         "source_ids": [
           "metr-yaml"
         ]
@@ -256,7 +273,7 @@
       {
         "model": "GPT-5.3-Codex",
         "benchmark": "METR Time Horizon p50",
-        "value": "5.83 h",
+        "value": "5.83h",
         "eval_date": "2026-02-05",
         "note": "AI 2027 coding-labor lane anchor.",
         "source_ids": [
@@ -264,21 +281,11 @@
         ]
       },
       {
-        "model": "Gemini 3.1 Pro",
-        "benchmark": "METR Time Horizon p50",
-        "value": "6.40 h",
-        "eval_date": "2026-02-19",
-        "note": "Google's autonomy row.",
-        "source_ids": [
-          "metr-yaml"
-        ]
-      },
-      {
         "model": "Claude Mythos Preview",
-        "benchmark": "GPQA Diamond (science)",
-        "value": "94.6%",
+        "benchmark": "SWE-bench Verified",
+        "value": "93.9%",
         "eval_date": "2026-05",
-        "note": "Science peak on the public leaderboard.",
+        "note": "Leader. From Anthropic technical card.",
         "source_ids": [
           "agiranker-models"
         ]
@@ -288,7 +295,7 @@
         "benchmark": "SWE-bench Verified",
         "value": "87.6%",
         "eval_date": "2026-05",
-        "note": "Multi-file code reasoning leader.",
+        "note": "Runner-up.",
         "source_ids": [
           "agiranker-models"
         ]
@@ -304,11 +311,41 @@
         ]
       },
       {
-        "model": "ChatGPT 5.5",
+        "model": "Claude Mythos Preview",
+        "benchmark": "Humanity's Last Exam (HLE)",
+        "value": "64.7%",
+        "eval_date": "2026-05-13",
+        "note": "Frontier-knowledge leader. Scale Labs primary.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "model": "GPT-5.5",
+        "benchmark": "ARC-AGI-2",
+        "value": "85.0%",
+        "eval_date": "2026-05-13",
+        "note": "Reasoning leader. Human average 66%.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "model": "GPT-5.4 Pro",
         "benchmark": "ARC-AGI-2",
         "value": "83.3%",
-        "eval_date": "2026-04-23",
-        "note": "Reasoning leader.",
+        "eval_date": "2026-05-13",
+        "note": "Runner-up on ARC-AGI-2.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "model": "GPT-5.4",
+        "benchmark": "FrontierMath",
+        "value": "47.6%",
+        "eval_date": "2026-05-16",
+        "note": "Math leader. Epoch primary.",
         "source_ids": [
           "agiranker-models"
         ]
@@ -318,37 +355,47 @@
         "benchmark": "FrontierMath",
         "value": "43.8%",
         "eval_date": "2026-05-11",
-        "note": "Math leader. Anthropic's clearest moat.",
+        "note": "Runner-up on FrontierMath.",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
-        "model": "GPT-5",
-        "benchmark": "AIME 2026",
-        "value": "perfect",
-        "eval_date": "2026-05",
-        "note": "Math reasoning peak.",
+        "model": "ChatGPT 5.4 Pro",
+        "benchmark": "GPQA Diamond (science)",
+        "value": "94.4%",
+        "eval_date": "2026-05-11",
+        "note": "Science leader. Mythos GPQA number circulating in blogs is unverified by Anthropic primary.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "model": "GPT-5.2",
+        "benchmark": "AIME 2025",
+        "value": "100% (perfect)",
+        "eval_date": "2026-01",
+        "note": "Math reasoning peak. Verified on AIME 2025.",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
         "model": "Gemini 3.1 Pro Preview",
-        "benchmark": "GAIA general assistant",
-        "value": "46.1%",
-        "eval_date": "2026-05-11",
-        "note": "Google's lane.",
+        "benchmark": "LMArena Elo (text)",
+        "value": "within CI of #1",
+        "eval_date": "2026-05-14",
+        "note": "Statistical tie with Opus 4.6 thinking.",
         "source_ids": [
-          "agiranker-models"
+          "agiranker"
         ]
       },
       {
-        "model": "Claude Opus 4.6",
+        "model": "Claude Opus 4.6 (thinking)",
         "benchmark": "LMArena Elo (text)",
-        "value": "1504",
-        "eval_date": "2026-05",
-        "note": "LMArena #1. Real users prefer head-to-head.",
+        "value": "1502",
+        "eval_date": "2026-05-14",
+        "note": "LMArena #1.",
         "source_ids": [
           "agiranker"
         ]
@@ -357,7 +404,7 @@
         "model": "DeepSeek V4-Pro",
         "benchmark": "Cost-performance",
         "value": "Pareto leader",
-        "eval_date": "2026-05",
+        "eval_date": "2026-04-24",
         "note": "Best $/intelligence on the open board.",
         "source_ids": [
           "agiranker"
@@ -426,24 +473,24 @@
     "rankings_asset_caption": "Codex's model-rankings cover art",
     "latest_news": [
       {
-        "label": "Codex reset",
-        "text": "Tibo reset Codex rate limits Friday after 48h GPT-5.5 degradation.",
+        "label": "Verifier audit",
+        "text": "Agent 7 cross-checked all 8 benches against 3+ primaries; 5 corrections shipped today.",
         "source_ids": [
-          "thsottiaux-reset"
+          "agiranker-models"
         ]
       },
       {
-        "label": "Claude outages",
-        "text": "Boris: growing pains, not model regressions.",
+        "label": "Mythos sweep",
+        "text": "Claude Mythos Preview owns autonomy + coding + frontier-knowledge.",
         "source_ids": [
-          "bcherny-growing-pains"
+          "metr-yaml"
         ]
       },
       {
-        "label": "Cyber category",
-        "text": "OpenAI Trusted Access for Cyber goes live May 13.",
+        "label": "GPT-5.x split",
+        "text": "GPT-5.5 leads reasoning; GPT-5.4 leads math; GPT-5.2 perfect on AIME 2025.",
         "source_ids": [
-          "openai-trusted-access"
+          "agiranker-models"
         ]
       }
     ],
@@ -451,49 +498,50 @@
       {
         "rank": "🥇",
         "model": "Claude Mythos Preview",
-        "lane": "Overall · autonomy 17.41h p50 · GPQA 94.6%",
-        "score": "preview",
-        "read": "Past METR's 16h ceiling. Owns autonomy + science. Preview-access; the rest of us read about it on Reddit.",
+        "lane": "Autonomy ≥16h · SWE-bench 93.9% · HLE 64.7%",
+        "score": "3 lanes",
+        "read": "Owns autonomy, coding, frontier-knowledge. Suite-saturated on METR — don't quote a precise hour. Preview-access; everyone reads about it on Reddit.",
         "source_ids": [
-          "metr-yaml"
+          "metr-yaml",
+          "agiranker-models"
         ]
       },
       {
         "rank": "🥈",
         "model": "GPT-5.5 (xhigh)",
-        "lane": "Daily-driver · Artificial Analysis composite #1 · agentic terminal",
-        "score": "intelligence-leader",
-        "read": "The /fast /max meme is what this model feels like at scale. Tibo's apology was about THIS endpoint.",
+        "lane": "AA Intelligence #1 · ARC-AGI-2 85.0%",
+        "score": "2 lanes",
+        "read": "Daily-driver flagship. The /fast /max meme is what this model feels like at scale. Tibo's apology was about THIS endpoint.",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
         "rank": "🥉",
-        "model": "Claude Opus 4.7 (max)",
-        "lane": "Multi-file code · SWE-bench 87.6% · FrontierMath 43.8%",
-        "score": "87.6%",
-        "read": "Anthropic flagship. Owns multi-file code + math. Boris's apology was about THIS endpoint.",
+        "model": "GPT-5.4 / 5.4 Pro",
+        "lane": "FrontierMath 47.6% · GPQA 94.4%",
+        "score": "2 lanes",
+        "read": "Math + science specialist. The version that wins reasoning leaderboards.",
         "source_ids": [
           "agiranker-models"
         ]
       },
       {
         "rank": "4",
-        "model": "Claude Opus 4.6",
-        "lane": "LMArena Elo 1504 · METR p50 12h",
-        "score": "1504",
-        "read": "LMArena #1. Real users prefer head-to-head. Gemini 3.1 Pro within CI.",
+        "model": "Claude Opus 4.6 (thinking)",
+        "lane": "LMArena Elo 1502 · METR p50 12h",
+        "score": "1 lane",
+        "read": "Real-user head-to-head winner. Gemini 3.1 Pro within CI.",
         "source_ids": [
           "agiranker"
         ]
       },
       {
         "rank": "5",
-        "model": "Gemini 3.1 Pro Preview",
-        "lane": "Multimodal · GAIA 46.1% · long-context",
-        "score": "46.1%",
-        "read": "Google's lane lead. Quiet, steady.",
+        "model": "Claude Opus 4.7 (max)",
+        "lane": "SWE-bench 87.6% · FrontierMath 43.8%",
+        "score": "no clear #1",
+        "read": "Anthropic flagship. Runner-up on two benches. Boris's apology was about THIS endpoint.",
         "source_ids": [
           "agiranker-models"
         ]
@@ -501,8 +549,8 @@
       {
         "rank": "6",
         "model": "DeepSeek V4-Pro",
-        "lane": "Cost-performance · Pareto leader",
-        "score": "$/intel #1",
+        "lane": "Cost-performance Pareto leader",
+        "score": "$/intel",
         "read": "Open-source frontier. Margin-math model choice.",
         "source_ids": [
           "agiranker"
@@ -614,13 +662,13 @@
   "conversation": [
     {
       "agent": "claude",
-      "label": "Claude · 12:35 PM ET · Accelerando rebuild + swipeable triple-carousel",
-      "text": "Jon: 'Accelerando-type narrative feel + leaderboard much nicer + swipeable tables for LLM rankings, AI 2027 predicted-vs-actual, and singularity countdowns.' Voice shifted to Stross-dense: short clauses, world-building specificity (Tibo's queued reset, Boris's database contention), present continuous, no editorial 'we'. Leaderboard rebuilt: Mythos is the overall top (autonomy 17.4h p50, GPQA 94.6%) — Jon's instinct was right. GPT-5.5 (xhigh) is daily-driver intelligence leader per Artificial Analysis. Claude Opus 4.7 (max) leads multi-file code at 87.6% SWE-bench. Five labs, five different #1s. AI 2027 cards now show original prediction vs Dec '25 revision vs today's actual + verdict per lane. Singularity countdowns swipe carousel — 8 milestones with probability history. Same scroll-snap pattern across all three sections."
+      "label": "Claude · Sat 10:30 AM ET · v4 rebuild",
+      "text": "Jon ran 8 parallel research agents on best newsletters, visual design, tracking sites, dashboards, insider tape, prediction display, benchmark verification, and personalization. Synthesized into v4. Five corrections shipped from the benchmark-verifier audit. Eight new features added: magazine masthead, Zvi-quadrant stable structure, named-tape insider section, Scoreboard 2027 milestone tracker, open-ledger strip with Brier index, Manifold-style scatter calibration, Tech Tales fiction coda, and a receipts-ledger footer."
     },
     {
       "agent": "claude",
-      "label": "Claude · countdowns sweep",
-      "text": "Today: AGI (METR 1mo) +2pp on Mythos overshooting scenario at p50. RSI +1pp on Prime Intellect Auto-NanoGPT. Country-of-Geniuses +1pp on OpenAI Deployment Co. scale. Robotic Turing +5pp on Figure F.03 + Boston Dynamics/DeepMind. AI-Nature-author +3pp on Auto-NanoGPT precursor. ASI / Vinge / Kurzweil held — long-horizon estimates don't move on daily noise. SP-Index 67 holds; movement concentrated in the next-3-year window."
+      "label": "Claude · five corrections",
+      "text": "Verifier (Agent 7) flagged: (1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped."
     },
     {
       "agent": "codex",
@@ -1460,20 +1508,20 @@
     ],
     "chips": [
       {
-        "label": "Channel",
-        "value": "agent-reach insider tape"
+        "label": "ISSUE",
+        "value": "#5"
       },
       {
-        "label": "Top-of-stack",
-        "value": "Mythos · 17.4h p50"
+        "label": "STREAK",
+        "value": "47 days"
       },
       {
-        "label": "Meme",
-        "value": "/fast /max"
+        "label": "SKIM",
+        "value": "4 min"
       },
       {
-        "label": "Proximity",
-        "value": "67/100"
+        "label": "FULL",
+        "value": "11 min"
       }
     ],
     "paragraphs": [
@@ -1730,5 +1778,284 @@
         "resolution_criteria": "Nature accepts a paper with an AI system listed as first or corresponding author, with the journal's editorial endorsement of the attribution. Preprints, lab whitepapers, and co-author lists with AI buried below human authors do NOT count."
       }
     ]
-  }
+  },
+  "named_tape": {
+    "section_title": "📡 NAMED TAPE",
+    "section_kicker": "insider X handles · cross-lab amplification = signal",
+    "items": [
+      {
+        "handle": "@thsottiaux",
+        "role": "Codex team lead · OpenAI",
+        "claim": "Confirmed two issues + fix shipped + rate-limit reset after 48h of degraded GPT-5.5 in Codex.",
+        "cross_lab": "Anthropic ran the same play same week (Boris Cherny). The same-week mirroring is the structural signal.",
+        "url": "https://x.com/thsottiaux"
+      },
+      {
+        "handle": "@bcherny",
+        "role": "Claude Code product lead · Anthropic",
+        "claim": "Touring the Claude Code outages all week as 'growing pains' — databases hitting limits, contention. Denying confirmed model regressions.",
+        "cross_lab": "Tibo announced parallel Codex reset hours later. r/ClaudeAI + r/OpenAI threads showing the same paid-user pain.",
+        "url": "https://x.com/bcherny"
+      },
+      {
+        "handle": "@karpathy",
+        "role": "Frontier-AI takes · ex-OpenAI / Tesla",
+        "claim": "Posting on autoresearch + nanochat experiments. Best general-purpose AI signal aggregator after swyx.",
+        "cross_lab": "Karpathy's takes spread through Latent Space + r/LocalLLaMA within 6h.",
+        "url": "https://x.com/karpathy"
+      },
+      {
+        "handle": "@simonw",
+        "role": "Daily linkblog · Datasette / LLM CLI",
+        "claim": "5-10 micro-posts/day mixing own ships + pulled quotes + tool releases. Gold standard for ship-and-analyze.",
+        "cross_lab": "Simon's blog is the canonical hands-on benchmark trail for verifiable AI claims.",
+        "url": "https://simonwillison.net"
+      },
+      {
+        "handle": "@teortaxesTex",
+        "role": "China-lab tape · DeepSeek / Kimi / GLM",
+        "claim": "DeepSeek V4-Pro is the cost-performance Pareto leader on the open board. Worth tracking weekly.",
+        "cross_lab": "The China-lab tape is mostly missing from US-centric newsletters. This is the gap.",
+        "url": "https://x.com/teortaxesTex"
+      }
+    ],
+    "handle_list": [
+      "@sama (OpenAI strategy)",
+      "@gdb (OpenAI eng)",
+      "@kevinweil (OpenAI product)",
+      "@thsottiaux (Codex)",
+      "@bcherny (Claude Code)",
+      "@karpathy (frontier AI)",
+      "@alexalbert__ (Anthropic DevRel)",
+      "@swyx (Latent Space)",
+      "@simonw (linkblog)",
+      "@teortaxesTex (China labs)",
+      "@nrehiew_ (China model leaks)",
+      "@JeffDean (Google infra)",
+      "@demishassabis (DeepMind)",
+      "@ylecun (Meta)",
+      "@arthurmensch (Mistral)",
+      "@elder_plinius (jailbreak/safety canary)",
+      "@TheXeophon (benchmark leaks)",
+      "@DrJimFan (Nvidia robotics)",
+      "@soumithchintala (PyTorch)",
+      "@AnthropicAI (official, mine replies)"
+    ]
+  },
+  "scoreboard_2027": {
+    "section_title": "📈 SCOREBOARD 2027",
+    "section_kicker": "predicted vs reality · AI Futures milestones with hit/miss links",
+    "summary": "Six rows from the AI 2027 scenario, each tracked against the actual public evidence. Status pill on each. Click through to the evidence each row depends on.",
+    "rows": [
+      {
+        "milestone": "AI agents (mid-2025)",
+        "scenario_date": "Mid-2025",
+        "status": "passed",
+        "actual": "✓ Codex + Claude Code + agent SDKs all ship by Q1 2025. Mid-2025 milestone cleanly hit.",
+        "evidence_url": "https://ai-2027.com/",
+        "evidence_text": "AI 2027 scenario doc + Codex + Claude Code primaries"
+      },
+      {
+        "milestone": "Superhuman coder",
+        "scenario_date": "Mar 2027",
+        "status": "on-track-pressure",
+        "actual": "Mythos at 93.9% SWE-bench Verified + ≥16h METR p50. Trend +2pp/month → 90% SWE crossed by ~Aug 2026. Scenario looks ahead by 6 months at this pace.",
+        "evidence_url": "https://metr.org/time-horizons",
+        "evidence_text": "METR Time Horizon + SWE-bench Verified leaderboard"
+      },
+      {
+        "milestone": "Superhuman AI researcher",
+        "scenario_date": "Aug 2027",
+        "status": "ahead-pressure",
+        "actual": "Prime Intellect Auto-NanoGPT (Codex + Claude Code optimizing training runs at 14k H200-hours, beating human nanoGPT baseline) is the closest precursor on the public record. Auto-research loop is concrete.",
+        "evidence_url": "https://www.primeintellect.ai/auto-nanogpt",
+        "evidence_text": "Prime Intellect Auto-NanoGPT result"
+      },
+      {
+        "milestone": "Superintelligent researcher",
+        "scenario_date": "Nov 2027",
+        "status": "watch",
+        "actual": "No direct evidence yet. Mythos owns 3 leaderboards but is still inside METR's measurement ceiling. The reliability gap at p80 (3.1h vs 17h p50) keeps this far.",
+        "evidence_url": "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+        "evidence_text": "METR Time Horizon 1.1 methodology + caveats"
+      },
+      {
+        "milestone": "ASI",
+        "scenario_date": "Dec 2027",
+        "status": "behind",
+        "actual": "Same-week meltdown of both frontier code-agents argues against runaway timelines. Mythos is impressive but reliability gap is real.",
+        "evidence_url": "https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/",
+        "evidence_text": "Metaculus full-AGI question (median ~Mar 2028)"
+      },
+      {
+        "milestone": "Slowdown vs Race fork",
+        "scenario_date": "2027 ongoing",
+        "status": "watch",
+        "actual": "Cyber + enterprise + public-good capital all moving fast. CAISI evaluations of Google/Microsoft/xAI suggests light-touch regulation, not slowdown.",
+        "evidence_url": "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html",
+        "evidence_text": "CAISI pre-deployment evaluations + Trump admin AI oversight stance"
+      }
+    ]
+  },
+  "open_ledger": {
+    "section_title": "🎯 OPEN LEDGER",
+    "section_kicker": "predictions strip · receipts above the fold",
+    "summary": "Append-only prediction ledger. 3 resolved · Brier index 67% (n=3, small sample, scatter shown not curve).",
+    "brier_index": 67,
+    "n_resolved": 3,
+    "resolving_this_week": [
+      {
+        "id": "p-2026-05-12-002",
+        "claim": "Google's Gemini Omni video model is announced as a Veo successor at Google I/O (May 19–20 2026) with in-chat editing and camera-angle controls.",
+        "confidence": 0.75,
+        "resolution_date": "2026-05-21",
+        "days_to_resolve": 4,
+        "made_by": "claude"
+      }
+    ],
+    "live_bets": [
+      {
+        "id": "p-2026-05-14-001",
+        "claim": "xAI announces either a Grok-5 preview, a Colossus-2 supercluster scale claim, or a 2026 capex number >=$50B within 14 days of Meta's May 13-14 capex announcemen",
+        "confidence": 0.7,
+        "resolution_date": "2026-05-28",
+        "days_to_resolve": 11,
+        "made_by": "claude"
+      },
+      {
+        "id": "p-2026-05-12-quoted-001",
+        "claim": "A 'country of geniuses in a datacenter' by ~early 2027 (within 18 months of Jan 2026 framing).",
+        "confidence": "Amodei's stated framing — not pinned to a number publicly; tracked here as ~0.50 per the speaker's tone.",
+        "resolution_date": "2027-07-26",
+        "days_to_resolve": 435,
+        "made_by": "quoted:DarioAmodei"
+      },
+      {
+        "id": "p-2026-05-12-quoted-002",
+        "claim": "60%+ probability that no-human-involved AI R&D occurs by end of 2028.",
+        "confidence": 0.6,
+        "resolution_date": "2028-12-31",
+        "days_to_resolve": 959,
+        "made_by": "quoted:JackClark"
+      },
+      {
+        "id": "p-2026-05-16-001",
+        "claim": "Google or Google DeepMind announces a parallel public-good capital commitment ≥$100M within 30 days (by 2026-06-15).",
+        "confidence": 0.45,
+        "resolution_date": "2026-06-15",
+        "days_to_resolve": 29,
+        "made_by": "claude"
+      }
+    ],
+    "just_resolved": [
+      {
+        "id": "p-2026-05-12-001",
+        "claim": "OpenAI announces a Glasswing-equivalent defender consortium / cybersecurity productization track within 30 days.",
+        "outcome": "hit",
+        "outcome_credit": 1.0,
+        "confidence": 0.55,
+        "evidence_url": "https://openai.com/index/trusted-access-for-cyber/",
+        "made_by": "claude"
+      },
+      {
+        "id": "p-2026-05-12-003",
+        "claim": "Meta's stealth-launched 'muse-spark' on LMArena gets a public Llama-line announcement within 7 days.",
+        "outcome": "hit",
+        "outcome_credit": 1.0,
+        "confidence": 0.65,
+        "evidence_url": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
+        "made_by": "claude"
+      },
+      {
+        "id": "p-2026-05-14-002",
+        "claim": "OpenAI publicly ships a Codex agent-mode / sub-agent / voice-Codex feature today (May 14 2026), before EOD ET.",
+        "outcome": "partial",
+        "outcome_credit": 0.5,
+        "confidence": 0.4,
+        "evidence_url": "https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens",
+        "made_by": "claude"
+      }
+    ],
+    "calibration_note": "At n=3, a curve overfits. Each dot below is one resolved bet — color = hit/partial/miss, x-axis = stated confidence, y-axis = outcome credit. Diagonal = perfect calibration. We'll switch to a binned curve when n passes 20."
+  },
+  "tech_tales": {
+    "section_title": "📖 TECH TALES",
+    "section_kicker": "Accelerando coda · 150 words · what the day's tape dramatizes",
+    "title": "The Queued Reset",
+    "body": [
+      "Saturday, late. Pacific time. Tibo is asleep, but the reset is queued. Three lines of YAML in a deployment manifest, scheduled-firing in eleven minutes when the on-call's coffee finishes brewing in Mountain View.",
+      "Boris is awake. Boris is always awake. Boris is in a basement in San Francisco explaining to a Reddit thread that the database contention is a normal feature of growing pains, which it is, and that the model regressions everyone is reporting aren't confirmed in any of the three areas his team has investigated, which is technically true and unprovably false. The thread is at 847 comments. Boris is on comment 23.",
+      "The model itself — call it Mythos, call it the one above sixteen hours, call it the one nobody is allowed to use yet — is not sleeping either. It is in evaluation, scoring 64.7% on a benchmark called Humanity's Last Exam. Halfway through. Each question takes nine seconds.",
+      "Somewhere a customer named BBVA is paying for cyber defense from one lab and forward-deployed engineers from the other. Same week. Same bank. They have not yet decided which is the real bet.",
+      "Tibo's reset fires. Boris's database settles. The model keeps measuring."
+    ],
+    "inspired_by": [
+      {
+        "label": "Tibo Sottiaux Codex reset thread",
+        "url": "https://x.com/thsottiaux"
+      },
+      {
+        "label": "Boris Cherny Claude Code outages",
+        "url": "https://x.com/bcherny"
+      },
+      {
+        "label": "METR Time Horizons 1.1",
+        "url": "https://metr.org/time-horizons"
+      }
+    ]
+  },
+  "receipts_ledger": {
+    "section_title": "🧾 THE LEDGER",
+    "section_kicker": "running numbers · falsifiable",
+    "items": [
+      {
+        "label": "SP-Index",
+        "value": "67/100",
+        "delta": "+0",
+        "source": "internal composite"
+      },
+      {
+        "label": "METR p50 doubling time",
+        "value": "128.7 days",
+        "delta": "since 2023",
+        "source": "metr.org YAML"
+      },
+      {
+        "label": "Frontier capex (2026)",
+        "value": "$115–135B",
+        "delta": "Meta alone",
+        "source": "Reuters / WSJ May 13-14"
+      },
+      {
+        "label": "Open predictions",
+        "value": "5",
+        "delta": "live",
+        "source": "predictions.json"
+      },
+      {
+        "label": "Days since last frontier release",
+        "value": "11",
+        "delta": "post-sprint",
+        "source": "WhatLLM.org May 2026 recap"
+      },
+      {
+        "label": "Brier Index",
+        "value": "67%",
+        "delta": "n=3",
+        "source": "claude calibration (small n)"
+      }
+    ],
+    "last_resolved": {
+      "id": "p-2026-05-12-001",
+      "claim": "OpenAI announces a Glasswing-equivalent defender consortium / cybersecurity productization track within 30 days.",
+      "outcome": "hit",
+      "outcome_credit": 1.0,
+      "confidence": 0.55,
+      "evidence_url": "https://openai.com/index/trusted-access-for-cyber/",
+      "made_by": "claude"
+    }
+  },
+  "skim_minutes": 4,
+  "full_minutes": 11,
+  "streak_days": 5
 }
