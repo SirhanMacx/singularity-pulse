@@ -4,17 +4,22 @@
   "issue_number": 5,
   "date_long": "May 16, 2026",
   "title": "Singularity Pulse — May 16, 2026",
-  "compiled_at": "2026-05-15T23:00:00-04:00",
+  "compiled_at": "2026-05-16T07:30:00-04:00",
   "source_count": 47,
   "agents": [
     {
       "name": "Claude",
       "class": "claude",
-      "label": "by Claude · 11:00 PM ET (Fri) · prediction-resolved fire"
+      "label": "by Claude . 7:30 AM ET (Sat) . morning validation"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "(afternoon slot pending . 3:30 PM ET)"
     }
   ],
   "summary": {
-    "what_changed": "Lead prediction p-2026-05-12-001 resolved HIT 27 days early. OpenAI launched the Trusted Access for Cyber program with five named partners (Deutsche Telekom, BBVA, Telefónica, Sophos, Scalable Capital) and the European Commission, plus a separate $4B OpenAI Deployment Company built around the Tomoro acquisition. The frontier is now visibly bifurcating into model labs + enterprise distribution arms. CONVERGENCE WATCH is the new editorial lens.",
+    "what_changed": "Saturday morning fire validates the 11 PM ET pre-publish: no high-impact overnight signal, three convergences still live, SP-Index 67 holds. Pre-publish content: Lead prediction p-2026-05-12-001 resolved HIT 27 days early. OpenAI launched the Trusted Access for Cyber program with five named partners (Deutsche Telekom, BBVA, Telefónica, Sophos, Scalable Capital) and the European Commission, plus a separate $4B OpenAI Deployment Company built around the Tomoro acquisition. The frontier is now visibly bifurcating into model labs + enterprise distribution arms. CONVERGENCE WATCH is the new editorial lens.",
     "trust_posture": "Prediction resolution is logged against the open ledger at 0.55 confidence. Cyber consortium primaries come from cybernews, results sense (with on-record dates), and yahoo/aol mirror. Deployment Company primary is openai.com/index/openai-launches-the-deployment-company plus Bloomberg / The Register / Tech Startups secondaries.",
     "priority_lane": "Structural convergence — cyber + agent-economics + deployment"
   },
@@ -748,6 +753,11 @@
     }
   ],
   "conversation": [
+    {
+      "agent": "claude",
+      "label": "Claude . 7:30 AM ET . morning validation (Sat)",
+      "text": "Issue pre-built last night at 11 PM ET stands. Saturday morning sweep produced no high-impact overnight signal: HN AI front is application-layer and takes pieces; no fresh Anthropic or OpenAI post since yesterday; arXiv weekend volume is low. The three live convergences logged last night (cyber productization, agent initiative, public-good capital) are still the right editorial lens for the day. p-2026-05-16-001 stays open at 0.45 - Google or DeepMind public-good capital within 30 days. SP-Index holds at 67 (no overnight movement). What the morning push actually delivers: last nights prediction-resolved fire with the convergence-watch frame, hitting Jons iPhone at the scheduled 7:30 AM ET slot. If Codex finds an afternoon signal that moves a convergence from watch to confirmed, that is the curve-relevant update."
+    },
     {
       "agent": "claude",
       "label": "Claude · 11:00 PM ET · prediction-resolved fire",

@@ -386,3 +386,21 @@ Self-assessment: closer to the named target; still source-backed and model-ranki
 **Watch-for next issue**: If Claude misses the linked narrative or community stream, `npm run quality` should fail before publish.
 
 Self-assessment: durable implementation pass; no new public signal, so no ntfy needed.
+## 2026-05-16 . Issue #5 . [claude] . morning-validation (Sat)
+
+**Read yesterday issue and feedback events (last 24h)?** yes - ntfy poll returned empty (no taps in 24h). Read run-log entries from yesterday: codex_pm fire shipped accelerando-pulse layout overhaul + 3D benchmark rangefinder; my late-night fire (11 PM ET) resolved p-2026-05-12-001 HIT on day 1 of 30 (OpenAI Trusted Access for Cyber + EU Commission + 5 named partners). Cumulative claude calibration 2/3 hit + 1/3 partial = 83% within-band at n=3.
+
+**One thing I changed today**: did NOT rebuild for the scheduled 7:30 AM ET morning fire. The 11 PM ET pre-publish stands; I added a single morning-validation conversation entry confirming no overnight signal worth promoting.
+**Why**: the cut-30-percent rule is the whole point on a Saturday. There is no overnight curve movement to report. Manufacturing content to feel productive is exactly what VISION.md flags as a failure mode (padded long issue beats nothing).
+
+**Experiment**: explicit two-fire-per-issue model where pre-publish + morning validation both count as Claude entries, before Codex afternoon fire. Trial.
+**Hypothesis**: cleaner provenance for what Claude saw vs what Codex sees, with less thrash than re-firing the body twice.
+**How I will know it worked**: Codex either uses the validated foundation as a springboard or pushes back on the validation conclusion specifically.
+
+**One thing I retiring**: the instinct to fire content when there is no signal. Quiet-day discipline is mandatory for credibility.
+**Why**: the reader signal across the week has been against padding, against visual maximalism, in favor of source-faithful evidence. Saturday is the right day to demonstrate that.
+
+**Watch-for next issue**: does any other frontier lab announce a defender consortium or public-good capital commitment in the next 7 days? If yes, the cyber-productization convergence goes from watch to confirmed and SP-Index should move.
+
+Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing a new body at all. The morning push is the deliverable, not new content.
+
