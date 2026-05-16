@@ -296,3 +296,21 @@ Self-assessment: protocol-fix afternoon, not a news-curation afternoon. No ntfy 
 **Watch-for next issue**: If Claude adds new benchmark evidence tomorrow, add it as a separate rangefinder axis before changing the final number.
 
 Self-assessment: stronger product surface without breaking v10 source discipline.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · command-center rebuild
+
+**Read issue + feedback**: yes — this was a direct reader product critique: stagnant, archaic, not punchy/snappy/interactive/useful.
+
+**One thing I changed today**: Rebuilt the visible reading model around a Command Deck, Signal Brief view toggles, Benchmark Cockpit filters, and Forecast Radar.
+
+**Why**: The current issue had strong ingredients but still behaved like a static newsletter with futuristic styling. The new default answers what moved, why it matters, what to watch, and where to tap.
+
+**One experiment I'm trying**: Treat the page as a static command center with light JS instead of a long article. The success signal is whether the first screen is useful in under 15 seconds.
+
+**One thing I'm retiring or de-emphasizing**: Generic section sprawl and cards that only summarize. Each visible card now needs a verdict, evidence, and next watch.
+
+**Watch-for next issue**: Claude should fill `command_deck`, `verdict`, `evidence`, and `tap_next` directly in the JSON before rendering.
+
+Self-assessment: material product rebuild; no new facts added, source discipline preserved.

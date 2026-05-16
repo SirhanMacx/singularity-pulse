@@ -4,7 +4,7 @@
   "issue_number": 4,
   "date_long": "May 15, 2026",
   "title": "Singularity Pulse — May 15, 2026",
-  "compiled_at": "2026-05-15T18:35:00-04:00",
+  "compiled_at": "2026-05-15T21:05:00-04:00",
   "source_count": 26,
   "agents": [
     {
@@ -31,12 +31,17 @@
       "name": "Codex",
       "class": "codex",
       "label": "Codex 6:35 PM ET rangefinder pass"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "Codex 9:05 PM ET command-center rebuild"
     }
   ],
   "summary": {
-    "what_changed": "Evening Codex product pass: no new external story added, but the existing source-backed evidence is now compiled into a 3D Benchmark Compilation / Singularity Rangefinder. The final visible proximity estimate is 66/100, tied to the SP-Index and source-linked lanes: METR autonomy horizon, AGI Ranker exact cells, Agentick sequential-decision score, Figure F.03 embodied-shift evidence, and high-stakes agent deployment surfaces.",
-    "trust_posture": "The 66/100 rangefinder is an editorial SP-Index proximity estimate, not a blended benchmark composite. Benchmark composite scoring remains paused until normalization is audited. Every rangefinder lane cites an existing source row; no fresh facts or synthetic benchmark values were invented for the visual pass.",
-    "priority_lane": "Source-backed singularity rangefinding"
+    "what_changed": "Command Center rebuild: the issue now opens with the delta, proximity, confidence, next watch trigger, and direct actions instead of a static newsletter lead. Signal cards are punchier and interactive: Brief, Evidence, and Forecast views reuse the same source-backed story data.",
+    "trust_posture": "No new facts were added for this product pass. The command deck, forecast radar, and benchmark cockpit compile existing source rows. The 66/100 proximity remains the SP-Index estimate, not an audited benchmark composite.",
+    "priority_lane": "Command-center usability and curve movement clarity"
   },
   "tracker": {
     "sp_index": {
@@ -106,7 +111,12 @@
         "openai-codex-mobile",
         "openai-release-notes",
         "reuters-codex-mobile"
-      ]
+      ],
+      "verdict": "Pocket supervision matters because long-running agents need approval loops outside the desk.",
+      "evidence": "OpenAI says Codex now runs through ChatGPT mobile with approvals, diffs, screenshots, terminal output, tests, SSH, hooks, and remote context.",
+      "tap_next": "Watch whether phone approval loops turn into persistent autonomous work sessions rather than convenience controls.",
+      "tap_label": "Open OpenAI release →",
+      "tap_url": "https://openai.com/index/work-with-codex-from-anywhere/"
     },
     {
       "title": "Figure F.03 remains the embodied signal because endurance beats choreography.",
@@ -120,7 +130,12 @@
         "figure-hoka",
         "figure-x-post",
         "youtube-figure-over-horizon"
-      ]
+      ],
+      "verdict": "Embodiment only counts when endurance replaces choreography.",
+      "evidence": "The Figure F.03 signal is the live/public work-shift format, plus secondary reports around an eight-hour autonomous run.",
+      "tap_next": "Intervention count, recovery behavior, and throughput are the missing numbers that would move this lane.",
+      "tap_label": "Open Figure stream →",
+      "tap_url": "https://www.youtube.com/@FigureAI/streams"
     },
     {
       "title": "ChatGPT adds a personal finance preview for US Pro users.",
@@ -131,7 +146,12 @@
       "why_it_matters": "A deployment step into a high-stakes domain. Finance forces real permissions, trust, and auditability — a prerequisite for agents operating on your behalf.",
       "source_ids": [
         "chatgpt-personal-finance"
-      ]
+      ],
+      "verdict": "Finance is the trust-layer test agents cannot dodge.",
+      "evidence": "ChatGPT’s preview lets US Pro users connect financial accounts and ask questions over permissioned account data.",
+      "tap_next": "A security/help-center writeup would decide whether this is a serious agent surface or just a preview feature.",
+      "tap_label": "Open finance preview →",
+      "tap_url": "https://x.com/ChatGPTapp/status/2055317612687675545"
     },
     {
       "title": "Agent economics became the live fight; Wu interview moved it from metering to proactivity.",
@@ -147,7 +167,12 @@
         "reddit-codex-2026",
         "techcrunch-cat-wu"
       ],
-      "correction": "Morning fire cited an Ars Technica URL that does not resolve and a fabricated quote. Replaced with TechCrunch primary by Lucas Ropek, May 13."
+      "correction": "Morning fire cited an Ars Technica URL that does not resolve and a fabricated quote. Replaced with TechCrunch primary by Lucas Ropek, May 13.",
+      "verdict": "The agent fight is shifting from token limits to initiative: what should the agent start without being asked?",
+      "evidence": "Axios framed the metering fight, Anthropic discussed compute limits, Reddit shows user backlash, and TechCrunch quotes Cat Wu on proactivity.",
+      "tap_next": "Look for concrete proactivity settings, background-task controls, or enterprise guardrails.",
+      "tap_label": "Open TechCrunch primary →",
+      "tap_url": "https://techcrunch.com/2026/05/13/anthropic-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/"
     },
     {
       "title": "Anthropic + Gates Foundation: 200M USD, four years, AI aimed at the 4.6 billion underserved.",
@@ -159,7 +184,12 @@
       "source_ids": [
         "gates-anthropic",
         "gates-foundation-release"
-      ]
+      ],
+      "verdict": "The Gates partnership is deployment coverage, not benchmark movement.",
+      "evidence": "Anthropic and the Gates Foundation announced a four-year 200M USD partnership across health, education, agriculture, and public goods.",
+      "tap_next": "Actual public datasets, benchmarks, or field deployments would make this more than coverage expansion.",
+      "tap_label": "Open Anthropic release →",
+      "tap_url": "https://www.anthropic.com/news/anthropic-gates-foundation-partnership"
     },
     {
       "title": "DeepMind: the mouse pointer is the wrong UI for an agent-era OS.",
@@ -170,7 +200,12 @@
       "why_it_matters": "Pairs with the Cat Wu proactivity frame the same week: two frontier labs publicly arguing the next UI primitive is what does the agent do without being asked. The slow-burn variable behind the agent-economics fight.",
       "source_ids": [
         "deepmind-pointer"
-      ]
+      ],
+      "verdict": "DeepMind is describing the UI layer agents need: handoff surfaces, not cursor metaphors.",
+      "evidence": "The pointer essay argues the mouse pointer becomes obsolete when agents act on the user’s behalf.",
+      "tap_next": "Watch whether this becomes OS-level interaction, not just lab-blog philosophy.",
+      "tap_label": "Open DeepMind essay →",
+      "tap_url": "https://deepmind.google/blog/ai-pointer/"
     },
     {
       "title": "Agent benchmark work is moving from static exams toward sequential, embodied, and operational tasks.",
@@ -182,7 +217,12 @@
       "source_ids": [
         "agentick-paper",
         "embodied-ai-paper"
-      ]
+      ],
+      "verdict": "The benchmark frontier is becoming operational: sequential decisions, embodiment, and lifecycle reliability.",
+      "evidence": "Agentick adds procedurally generated sequential-decision tasks while the embodied-AI paper emphasizes lifecycle deployment reliability.",
+      "tap_next": "Promote only benchmark rows with raw values, dates, and audited source links.",
+      "tap_label": "Open Agentick source →",
+      "tap_url": "#benchmark-compass"
     }
   ],
   "benchmark_panel": {
@@ -518,7 +558,10 @@
           "source_ids": [
             "metr-time-horizons",
             "metr-yaml"
-          ]
+          ],
+          "changed_since_last": "moved",
+          "change_label": "moved",
+          "filter_label": "Autonomy"
         },
         {
           "lane": "Coding frontier",
@@ -528,7 +571,10 @@
           "source_ids": [
             "agiranker-models",
             "openai-codex-mobile"
-          ]
+          ],
+          "changed_since_last": "watch",
+          "change_label": "watch",
+          "filter_label": "Coding"
         },
         {
           "lane": "Sequential agents",
@@ -537,7 +583,10 @@
           "read": "New agent benchmarks are forming, but no single approach dominates yet.",
           "source_ids": [
             "agentick-paper"
-          ]
+          ],
+          "changed_since_last": "new bench",
+          "change_label": "new bench",
+          "filter_label": "Agents"
         },
         {
           "lane": "Embodied proof",
@@ -547,7 +596,10 @@
           "source_ids": [
             "figure-livestream",
             "figure-hoka"
-          ]
+          ],
+          "changed_since_last": "needs audit",
+          "change_label": "needs audit",
+          "filter_label": "Robotics"
         },
         {
           "lane": "Deployment surface",
@@ -558,7 +610,10 @@
             "openai-codex-mobile",
             "techcrunch-cat-wu",
             "chatgpt-personal-finance"
-          ]
+          ],
+          "changed_since_last": "moved",
+          "change_label": "moved",
+          "filter_label": "Deployment"
         }
       ]
     }
@@ -694,6 +749,11 @@
       "agent": "Codex",
       "label": "Rangefinder pass 6:35 PM ET",
       "text": "Jon asked for the page to feel more futuristic, for benchmark graphs to have more dimensionality, and for a final number on how close the curve feels. I did not add a fake composite. I turned today’s exact evidence lanes into a 3D rangefinder and made the final read explicit: 66/100 toward a self-improving-agent world. The useful distinction for tomorrow is visual: use 3D treatment to make the source-backed compilation legible, but keep benchmark normalization paused until the math is audited."
+    },
+    {
+      "agent": "Codex",
+      "label": "Command center rebuild 9:05 PM ET",
+      "text": "Jon called the page stagnant and archaic, so I stopped treating the issue as a prettier article. The page now opens as a command center: delta, proximity, confidence, next watch, actions, and interactive Signal Brief views. The key implementation line is still the v10 line: no new facts, no fake composite, just a faster interface for the evidence already in the issue."
     }
   ],
   "sources": [
@@ -1122,6 +1182,83 @@
         "frontier_release_velocity"
       ],
       "note": "Official rollout note: US Pro users can connect financial accounts, see spending, and ask grounded questions."
+    }
+  ],
+  "command_deck": {
+    "kicker": "Command center · know what moved",
+    "headline": "The curve is shifting from model demos to supervised agents.",
+    "delta": "Today’s useful read is not one more story: Codex mobile, ChatGPT finance, Cat Wu’s proactivity frame, Figure’s work-shift format, and METR’s multi-hour horizon all point in the same direction — agents are becoming supervised infrastructure.",
+    "verdict": "66/100 toward a self-improving-agent world. The frontier feels live, but p80 reliability and embodied intervention rates still block the runaway claim.",
+    "next_watch": "Watch for either OpenAI publishing finance/security guardrails or Figure releasing intervention-rate counts; either would move the trust/deployment lane.",
+    "primary_action_label": "Open benchmark cockpit",
+    "primary_action_url": "#benchmark-compass",
+    "secondary_action_label": "Scan forecast radar",
+    "secondary_action_url": "#forecast-radar",
+    "chips": [
+      {
+        "label": "Mode",
+        "value": "Command Center",
+        "tone": "frontier"
+      },
+      {
+        "label": "Proximity",
+        "value": "66/100",
+        "tone": "frontier"
+      },
+      {
+        "label": "Confidence",
+        "value": "Medium",
+        "tone": "watch"
+      },
+      {
+        "label": "Composite",
+        "value": "Paused",
+        "tone": "caveat"
+      }
+    ]
+  },
+  "forecast_radar": [
+    {
+      "window": "24-72h",
+      "lane": "Trust layer",
+      "title": "Finance guardrails decide whether ChatGPT becomes an agent surface.",
+      "trigger": "OpenAI publishes security, permission, audit, or account-connection details for the finance preview.",
+      "read": "Would move deployment trust more than a generic product announcement.",
+      "confidence": "medium",
+      "status": "watch",
+      "tone": "watch",
+      "source_ids": [
+        "chatgpt-personal-finance"
+      ]
+    },
+    {
+      "window": "next proof",
+      "lane": "Embodied deployment",
+      "title": "Figure intervention counts are the missing robotics number.",
+      "trigger": "A credible count of human interventions, task throughput, or recovery events from the F.03 work-shift format.",
+      "read": "Would turn a compelling livestream into real reliability evidence.",
+      "confidence": "medium-high",
+      "status": "waiting on audit",
+      "tone": "caveat",
+      "source_ids": [
+        "figure-livestream",
+        "figure-hoka"
+      ]
+    },
+    {
+      "window": "next issue",
+      "lane": "Benchmark integrity",
+      "title": "One audited benchmark lane beats another synthetic dashboard score.",
+      "trigger": "A primary row with raw value, eval date, caveat, and normalization rule clear enough to add to the cockpit.",
+      "read": "Keeps the command center useful without poisoning trust.",
+      "confidence": "high",
+      "status": "operating rule",
+      "tone": "verified",
+      "source_ids": [
+        "benchmark-registry",
+        "metr-yaml",
+        "agiranker-models"
+      ]
     }
   ]
 }

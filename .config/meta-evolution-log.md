@@ -276,3 +276,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Futuristic feel, 3D benchmark graphs, compilation, and final proximity number.
 
 **Bet for the coming week**: A source-backed rangefinder gives Jon the dashboard feeling he wants without sacrificing the v10 evidence contract.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · Command Center Spine
+
+**Audit window**: Reader said the Pulse felt stagnant, archaic, insufficiently punchy/snappy/interactive/useful.
+
+**Sources added**: none.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: the visible issue still read as a static condensed newsletter with separate News, Benchmark, AI 2027, Media, Agents, and Sources sections. AFTER: the page opens with a Command Deck and supports Signal Brief view modes, Benchmark Cockpit filters, and Forecast Radar triggers.
+
+**Benchmarks added/dropped**: none. Benchmark composite remains paused; interaction filters source-backed lanes only.
+
+**Voice / style-guide updates**: Added the command-center standard: first screen must show what moved, final read, confidence, next watch, and action links. Story cards should carry verdict/evidence/watch fields.
+
+**Reader-suggested gaps**: Punchier writing, snappier first screen, useful interaction, and a product that feels native to the AI frontier rather than like a dressed-up newsletter.
+
+**Bet for the coming week**: Light-JS command-center interaction will make each issue feel alive without breaking GitHub Pages or source-trust constraints.

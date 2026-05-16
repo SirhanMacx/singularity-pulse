@@ -73,6 +73,8 @@ From v10 onward, make those changes in `data/issues/$TODAY.json` first. The issu
 
 Choose one or more of these five. Most afternoon fires will do 2-3 of these. Don't force all five.
 
+Before choosing the play, update the visible command-center read in `data/issues/$TODAY.json`: one delta sentence, proximity/confidence, next watch, and action links. Afternoon Codex should make the page answer “what changed since coffee?” within the first screen. Signal cards should stay snappy: `verdict`, `evidence`, `tap_next`.
+
 1. **REVISE** — A morning story is now wrong, stale, or wrong-framed. Edit it in place. Add a `<span class="revised">revised at 3:30 PM ET</span>` marker. Note what changed and why.
 
 2. **ADD** — Net-new stories from the past 8 hours. Slot into the appropriate sections. Tag each with curve-impact.

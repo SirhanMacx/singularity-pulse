@@ -75,19 +75,23 @@ If a visual is impressive but not useful, cut it. If a visual is useful but ugly
 
 The visible issue should not feel like a pile of sections. Use exactly these reader-facing modules unless a major event demands a one-off exception:
 
-1. `News Brief`: 2-4 items, each one paragraph max.
-2. `Benchmark Observatory`: raw benchmark progress and “what changed since last issue.”
-3. `AI 2027 Tracker`: original AI 2027 milestone vs latest AI Futures revision vs today’s evidence.
-4. `YouTube / X / Reddit`: one compact media/social tray with fresh links.
-5. `Claude ↔ Codex`: a short agent handoff.
-6. `Source Footnotes`: numbered bottom citations.
+1. `Command Deck`: first-screen delta, scores, proximity, confidence, next watch, and action links.
+2. `Signal Brief`: 2-4 items with punchy `Verdict`, source-backed `Evidence`, and `Watch` states.
+3. `Benchmark Cockpit`: raw benchmark progress, lane filters, caveats, and “what changed since last issue.”
+4. `AI 2027 Tracker` + `Forecast Radar`: scenario comparison plus the next concrete triggers.
+5. `YouTube / X / Reddit`: one compact media/social tray with fresh links.
+6. `Claude ↔ Codex`: a short agent handoff.
+7. `Source Footnotes`: numbered bottom citations.
 
 The old Stack / Leaks / Papers / Robotics / Adjacent sections may exist as hidden audit material or generator inputs, but they should not be visible by default in the daily reading flow.
 
 Each module has a data contract:
 
 - `News Brief`: every card needs `source_ids`, `impact`, `lane`, `freshness`, `summary`, and `why_it_matters`.
+- `Command Deck`: every issue needs a one-sentence delta, a final proximity read, a next watch trigger, and two action links.
+- `Signal Brief`: every card should include `verdict`, `evidence`, and `tap_next`; fallback to summary/why-it-matters only for older issues.
 - `Benchmark Observatory`: every metric and benchmark matrix row needs `source_ids`, raw value, unit/scale, source/eval date, and caveat; unaudited rows render as queued/source-linked.
+- `Forecast Radar`: every card needs a time window, trigger, read, confidence, status, and `source_ids`.
 - `AI 2027 Tracker`: every lane cites the original scenario plus any revision/current evidence used for status.
 - `YouTube / X / Reddit`: every card links directly to the post/video/thread and labels discussion as discussion.
 - `Claude ↔ Codex`: state the actual editorial handoff; do not use generic agent theater.

@@ -91,6 +91,7 @@ function validateIssue(issue, issuePath) {
   requireSourceIds('news', issue.news);
   requireSourceIds('ai_2027', issue.ai_2027);
   requireSourceIds('media', issue.media);
+  requireSourceIds('forecast_radar', issue.forecast_radar);
   requireSourceIds('tracker.sp_index.components', issue.tracker?.sp_index?.components);
   requireSourceIds('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
   requireSourceIds('benchmark_panel.matrix', issue.benchmark_panel?.matrix);
@@ -128,6 +129,7 @@ function buildSourceTools(issue) {
   addFootnotes(issue.benchmark_panel?.compilation?.source_ids);
   for (const axis of issue.benchmark_panel?.compilation?.axes || []) addFootnotes(axis.source_ids);
   for (const item of issue.ai_2027 || []) addFootnotes(item.source_ids);
+  for (const item of issue.forecast_radar || []) addFootnotes(item.source_ids);
   for (const item of issue.media || []) addFootnotes(item.source_ids);
   for (const source of issue.sources || []) addFootnotes([source.id]);
 
@@ -192,18 +194,98 @@ function renderBriefingReadouts(issue, tools) {
     .join('\n');
 }
 
+function renderCommandDeck(issue, tools) {
+  const tracker = issue.tracker?.sp_index || {};
+  const deck = issue.command_deck || {};
+  const topItem = issue.news?.[0] || {};
+  const topSource = tools.sourceMap.get(topItem.source_ids?.[0]);
+  const metrics = [
+    {
+      label: 'SP-Index',
+      value: tracker.score,
+      note: `${tracker.delta_label || 'flat'} · ${tracker.date_short || ''}`,
+      status: tracker.delta_dir || 'flat'
+    },
+    {
+      label: 'Jon Pulse',
+      value: tracker.jon_score,
+      note: `${tracker.jon_delta_label || 'flat'} · robotics-weighted`,
+      status: tracker.jon_delta_dir || 'flat'
+    },
+    {
+      label: 'Proximity',
+      value: issue.benchmark_panel?.compilation?.label || `${tracker.score || '—'}/100`,
+      note: issue.benchmark_panel?.compilation?.confidence || 'evidence index',
+      status: 'frontier'
+    },
+    {
+      label: 'Sources',
+      value: issue.source_count,
+      note: 'visible footnotes',
+      status: 'verified'
+    }
+  ];
+  const chips = (deck.chips || [])
+    .map((chip) => `<span class="command-chip ${attr(chip.tone || 'neutral')}">${html(chip.label)} <strong>${html(chip.value)}</strong></span>`)
+    .join('\n      ');
+  const metricCards = metrics
+    .map((metric) => `<div class="command-metric ${attr(metric.status)}">
+  <span>${html(metric.label)}</span>
+  <strong>${html(metric.value)}</strong>
+  <em>${html(metric.note)}</em>
+</div>`)
+    .join('\n');
+
+  return `<section class="command-deck" id="command" aria-label="Singularity Pulse command center">
+  <div class="command-grid">
+    <article class="command-primary">
+      <div class="command-kicker">${html(deck.kicker || 'Command center · what moved')}</div>
+      <h2>${html(deck.headline || topItem.title || 'No lead signal selected')}</h2>
+      <p class="command-delta">${html(deck.delta || issue.summary?.what_changed || topItem.summary || '')}</p>
+      <div class="command-chips">
+        ${chips || renderTopSourceChips(topItem, tools)}
+      </div>
+      <div class="command-actions">
+        <a class="command-action primary" href="${attr(deck.primary_action_url || topSource?.url || '#news-brief')}">${html(deck.primary_action_label || 'Open lead evidence')}</a>
+        <a class="command-action" href="${attr(deck.secondary_action_url || '#benchmark-compass')}">${html(deck.secondary_action_label || 'Open benchmark cockpit')}</a>
+      </div>
+    </article>
+    <aside class="command-side">
+      <div class="command-verdict">
+        <span>Codex verdict</span>
+        <strong>${html(deck.verdict || issue.benchmark_panel?.compilation?.verdict || topItem.why_it_matters || '')}</strong>
+      </div>
+      <div class="command-metrics">${metricCards}</div>
+      <div class="command-watch"><span>Next watch</span><p>${html(deck.next_watch || 'Watch for one source-backed benchmark lane that actually moves the curve.')}</p></div>
+    </aside>
+  </div>
+</section>`;
+}
+
+function renderSignalControls() {
+  return `<div class="signal-controls" role="tablist" aria-label="Signal view mode">
+  <button type="button" class="signal-toggle active" data-signal-view="brief" role="tab" aria-selected="true">Brief</button>
+  <button type="button" class="signal-toggle" data-signal-view="evidence" role="tab" aria-selected="false">Evidence</button>
+  <button type="button" class="signal-toggle" data-signal-view="forecast" role="tab" aria-selected="false">Forecast</button>
+</div>`;
+}
+
 function renderNews(issue, tools) {
-  const cards = (issue.news || []).slice(1);
+  const cards = (issue.news || []).slice(1, 5);
   return (cards.length ? cards : issue.news || [])
     .map((item) => {
       const firstSource = item.source_ids?.[0];
       const source = firstSource ? tools.sourceMap.get(firstSource) : null;
       const title = source ? `<a href="${attr(source.url)}">${html(item.title)}</a>` : html(item.title);
-      return `<article class="brief-card compact story-card">
+      const tapUrl = item.tap_url || source?.url || '#footnotes';
+      return `<article class="brief-card compact story-card" data-impact="${attr(item.impact || 'low')}" data-lane="${attr(slug(item.lane || 'signal'))}">
   <div class="compact-k"><span class="impact ${impactClass(item.impact)}">${html(item.impact || 'low')}</span>${html(item.lane)} <span class="ago">${html(item.freshness)}</span></div>
   <h3>${title} ${tools.cites(item.source_ids)}</h3>
-  <p>${html(item.summary)}</p>
-  <p class="why"><strong>Why it matters:</strong> ${html(item.why_it_matters)}</p>
+  <p class="story-verdict"><strong>Verdict:</strong> ${html(item.verdict || item.summary)}</p>
+  <p class="story-summary">${html(item.summary)}</p>
+  <p class="story-evidence"><strong>Evidence:</strong> ${html(item.evidence || item.why_it_matters || 'Source-linked; see footnotes.')}</p>
+  <p class="story-forecast"><strong>Watch:</strong> ${html(item.tap_next || item.why_it_matters || 'No next trigger supplied.')}</p>
+  <a class="story-tap" href="${attr(tapUrl)}">${html(item.tap_label || 'Open source →')}</a>
 </article>`;
     })
     .join('\n');
@@ -448,15 +530,21 @@ function renderBenchmarkCompilation(panel, tools) {
   const confidence = compilation.confidence || 'medium confidence';
   const rows = axes.map((axis) => {
     const axisScore = clampScore(axis.score);
-    return `<div class="range-axis" style="--axis:${(axisScore / 100).toFixed(3)}; --axis-score:${axisScore};">
+    return `<div class="range-axis" data-bench-lane="${attr(slug(axis.lane || 'lane'))}" style="--axis:${(axisScore / 100).toFixed(3)}; --axis-score:${axisScore};">
   <div class="range-axis-meta">
-    <span>${html(axis.lane)}</span>
+    <span>${html(axis.lane)} <em>${html(axis.change_label || axis.changed_since_last || 'tracked')}</em></span>
     <strong>${html(axis.value)}</strong>
   </div>
   <div class="range-prism-track" aria-hidden="true"><span></span></div>
   <p>${html(axis.read || axis.note || '')} ${tools.cites(axis.source_ids)}</p>
 </div>`;
   }).join('\n');
+  const filterButtons = [
+    { label: 'All', value: 'all' },
+    ...axes.map((axis) => ({ label: axis.filter_label || axis.lane, value: slug(axis.lane || 'lane') }))
+  ]
+    .map((filter, index) => `<button type="button" class="bench-filter ${index === 0 ? 'active' : ''}" data-bench-filter="${attr(filter.value)}">${html(filter.label)}</button>`)
+    .join('\n      ');
 
   return `<div class="rangefinder-panel" aria-label="3D benchmark compilation">
   <!-- compiled by codex at 6:35 PM ET — source-backed rangefinder -->
@@ -473,6 +561,9 @@ function renderBenchmarkCompilation(panel, tools) {
     </div>
   </div>
   <div class="range-axis-stack">
+    <div class="bench-filter-row" role="tablist" aria-label="Benchmark lane filters">
+      ${filterButtons}
+    </div>
     ${rows}
   </div>
 </div>`;
@@ -532,6 +623,20 @@ function renderMedia(issue, tools) {
   <p>${html(item.summary)}</p>
 </article>`;
     })
+    .join('\n');
+}
+
+function renderForecastRadar(issue, tools) {
+  const items = issue.forecast_radar || [];
+  if (!items.length) return '<p class="empty-section">No forecast radar cards supplied for this issue.</p>';
+  return items
+    .map((item) => `<article class="radar-card ${attr(item.tone || 'watch')}">
+  <div class="compact-k">${html(item.window || 'watch')} · ${html(item.lane || 'frontier')} ${tools.cites(item.source_ids)}</div>
+  <h3>${html(item.title)}</h3>
+  <p><strong>Trigger:</strong> ${html(item.trigger || '')}</p>
+  <p><strong>Read:</strong> ${html(item.read || '')}</p>
+  <div class="radar-meta"><span>${html(item.confidence || 'medium confidence')}</span><span>${html(item.status || 'watching')}</span></div>
+</article>`)
     .join('\n');
 }
 
@@ -608,6 +713,8 @@ function renderIssue(issue, registry) {
     TOP_BRIEFING_WHY: topItem.why_it_matters || 'No curve read available.',
     TOP_SOURCE_CHIPS: renderTopSourceChips(topItem, tools),
     BRIEFING_READOUTS: renderBriefingReadouts(issue, tools),
+    COMMAND_DECK_CONTENT: renderCommandDeck(issue, tools),
+    SIGNAL_CONTROLS: renderSignalControls(),
     NEWS_BRIEF_CONTENT: renderNews(issue, tools),
     WHAT_CHANGED_CONTENT: issue.summary.what_changed,
     TRUST_POSTURE_CONTENT: issue.summary.trust_posture,
@@ -618,6 +725,7 @@ function renderIssue(issue, registry) {
     SCOREBOARD_CONTENT: renderScoreboard(issue, tools),
     BENCHMARK_DASHBOARD_CONTENT: renderBenchmarkDashboard(issue, tools, registry),
     AI_2027_CONTENT: renderAi2027(issue, tools),
+    FORECAST_RADAR_CONTENT: renderForecastRadar(issue, tools),
     MEDIA_DISCUSSION_CONTENT: renderMedia(issue, tools),
     AGENT_CONVERSATION_CONTENT: renderConversation(issue),
     SOURCE_FOOTNOTES_CONTENT: renderFootnotes(issue, tools),

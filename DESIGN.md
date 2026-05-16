@@ -22,10 +22,10 @@ The interface has three jobs:
 
 Use a condensed spine. The newsletter should feel future-facing, but it must read in minutes:
 
-1. **Future Deck** — the actual sourced lead story plus tracker readouts above the fold. No decorative art unless it earns the space.
-2. **News Brief** — remaining curve-moving items. No separate Stack / Leaks / Papers / Robotics sprawl in the visible reading flow.
-3. **Benchmark Progress** — source-faithful Benchmark Observatory. Show what changed since the last issue before showing any table.
-4. **AI 2027 Tracker** — compare today’s evidence to the AI 2027 scenario and later AI Futures timeline revisions.
+1. **Command Deck** — above-the-fold delta, SP-Index, Jon Pulse, proximity estimate, confidence, next watch, and direct actions.
+2. **Signal Brief** — 3-4 punchy curve-moving items with Brief / Evidence / Forecast view toggles.
+3. **Benchmark Cockpit** — source-faithful Benchmark Observatory with lane filters and “changed / unchanged / needs audit” labels.
+4. **AI 2027 Tracker + Forecast Radar** — compare observed evidence to the scenario, then show the next triggers that would move tomorrow’s curve.
 5. **YouTube / X / Reddit** — one compact media/social tray. Rotate links every material push.
 6. **Claude ↔ Codex** — short editorial handoff between agents.
 7. **Source Footnotes** — all visible sources live at the bottom as numbered footnotes. The footnotes change every material push unless a source remains the live evidence spine.
@@ -61,3 +61,4 @@ If the issue could be mistaken for a Substack template, it fails.
 If a chart requires trust without source traceability, it fails.
 If the reader cannot tell what moved today within 15 seconds, it fails. The lead story and source chips must be visible on the first screen.
 If a visual is impressive but not useful, it fails.
+If the first screen does not provide a next watch or action, it fails the command-center standard.

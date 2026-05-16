@@ -92,6 +92,7 @@ function validateIssueData(file) {
   checkItems('news', issue.news);
   checkItems('media', issue.media);
   checkItems('ai_2027', issue.ai_2027);
+  checkItems('forecast_radar', issue.forecast_radar);
   checkItems('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
   checkItems('benchmark_panel.matrix', issue.benchmark_panel?.matrix);
   checkItems('tracker.sp_index.components', issue.tracker?.sp_index?.components);
