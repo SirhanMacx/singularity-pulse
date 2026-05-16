@@ -212,7 +212,7 @@ Quick recipe:
 
 ## Step 4.0a — Refresh the chart suite (v8.1 — redesigned May 14 for clarity)
 
-**Format change as of May 15 night:** the issue opens as a **Command Center**, not a static newsletter. Before writing prose, fill the command-deck fields in `data/issues/$TODAY.json`: what moved, final proximity read, confidence, next watch trigger, two action links, and a visual direction. The first screen should read as an instrument panel: one short verdict, one generated/annotated visual layer, one final number, one next proof. Then write Signal Brief cards with `verdict`, `evidence`, and `tap_next` so the renderer can expose Brief / Evidence / Forecast modes.
+**Format change as of May 15 night:** the issue is now an **Accelerando-style link dispatch**, not a benchmark dashboard. Before writing prose, fill the command-deck fields in `data/issues/$TODAY.json`: what moved, final proximity read, next watch trigger, two action links, and a slim visual direction. The first screen should be one short verdict, one generated/annotated visual layer, direct links, and one next proof. Then write Signal Brief cards with `verdict`, `evidence`, and `tap_next`; keep benchmark coverage to latest AI benchmark news plus the compact model board.
 
 **Format change as of May 14:** the SCOREBOARD section renders only **3 blocks** (was 8). The new spec is in `chart-suite.md`. Summary:
 
@@ -237,7 +237,7 @@ If you invent a new chart type today, add the CSS class to `html-template.html`,
 
 ## Step 4.0a.5 — Render Benchmark Observatory
 
-Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. Render `{{BENCHMARK_DASHBOARD_CONTENT}}` as the second visible module, immediately after News Brief. Benchmark visuals must be source-faithful: use raw leaderboard/report values, show source/date, label log scales, include a progress sentence, and do not draw trend lines, projections, or normalized composites unless the underlying formula and data source are explicit. For METR, prefer the published Time Horizon 1.1 raw data (`benchmark_results_1_1.yaml`) and plot p50/p80 values directly. If multiple benchmark families are discussed, populate `benchmark_panel.matrix` with exact source-linked cells instead of implying one amalgamated score.
+Read `.config/benchmark-dashboard.json` and update it from primary benchmark sources before writing narrative. In the visible issue, render benchmark coverage as a slim **Model Board**: latest AI benchmark news, best-model rows, direct links, source/date/caveat. Do not let benchmark visuals or tables swallow the newsletter. If a benchmark truly moves the curve, include it as one linked wire item and update `benchmark_panel.model_rankings` / `benchmark_panel.latest_news`; keep raw rows in data for audit, not as the default reading experience.
 
 Never present benchmark percentages, prediction probabilities, and SP-Index scores as the same thing. Label the scale every time. If METR reports a measurement-ceiling caveat, spell it out in the graph caption.
 

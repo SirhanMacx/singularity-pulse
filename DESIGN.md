@@ -63,3 +63,4 @@ If the reader cannot tell what moved today within 15 seconds, it fails. The lead
 If a visual is impressive but not useful, it fails.
 If the first screen does not provide a next watch or action, it fails the command-center standard.
 If the first screen reads like prose with cards instead of an instrument panel, it fails the future-newsletter standard.
+If benchmark coverage becomes the product again, it fails the Accelerando standard: keep benchmark news as one slim wire item plus a compact model board with links.

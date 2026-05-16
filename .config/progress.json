@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "last_updated": "2026-05-15T21:19:00-04:00",
+  "last_updated": "2026-05-15T21:33:00-04:00",
   "issue_count": 4,
   "_note_on_history": "All time-series 'history' arrays are seeded with SYNTHETIC backfill on v8 day 1 (May 12 2026) to give charts a visual baseline. Real data accumulates from v8 day 2 forward. Synthetic points are marked with \"synthetic\":true so charts can render them at reduced opacity if desired.",
   "benchmark_composite": {
@@ -922,10 +922,13 @@
     }
   ],
   "product_surface": {
-    "as_of": "2026-05-15T21:19:00-04:00",
-    "mode": "visual-cockpit-command-center",
-    "interaction": "light-js",
-    "generated_asset": "assets/generated/pulse-command-horizon-2026-05-15.jpg",
-    "note": "Second UI pass after computer-use visual audit: image-generated command cockpit, shorter first-screen verdict, Brief mode hides long summaries, benchmark cockpit SVG added before raw tables."
+    "as_of": "2026-05-15T21:33:00-04:00",
+    "mode": "accelerando-link-dispatch",
+    "interaction": "slim-links",
+    "generated_assets": [
+      "assets/generated/accelerando-link-horizon-2026-05-15.jpg",
+      "assets/generated/accelerando-model-rankings-2026-05-15.jpg"
+    ],
+    "note": "Reader narrowed direction: slim Accelerando-style newsletter with links, latest AI benchmark news as a wire item, and compact best-model rankings instead of benchmark sprawl."
   }
 }

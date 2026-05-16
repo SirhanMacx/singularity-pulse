@@ -630,6 +630,9 @@ function renderBenchmarkCockpitVisual(panel, tools) {
 
 function renderBenchmarkDashboard(issue, tools, registry) {
   const panel = issue.benchmark_panel || {};
+  if (issue.layout === 'accelerando' || panel.mode === 'accelerando') {
+    return renderAccelerandoModelBoard(panel, tools);
+  }
   const cards = (panel.metrics || [])
     .map((metric) => `<div class="bench-card">
   <div class="bc-k">${html(metric.label)} ${tools.cites(metric.source_ids)}</div>
@@ -659,6 +662,50 @@ ${renderBenchmarkMatrix(panel, tools)}
     <tbody>${sourceRows}</tbody>
   </table>
 </details>`;
+}
+
+function renderAccelerandoModelBoard(panel, tools) {
+  const wire = panel.latest_news || [];
+  const rankings = panel.model_rankings || [];
+  const wireCards = wire
+    .map((item) => {
+      const firstSource = tools.sourceMap.get(item.source_ids?.[0]);
+      const title = firstSource ? `<a href="${attr(firstSource.url)}">${html(item.title)}</a>` : html(item.title);
+      return `<article class="benchmark-wire-card">
+  <div class="compact-k">${html(item.label || 'benchmark wire')} ${tools.cites(item.source_ids)}</div>
+  <h3>${title}</h3>
+  <p>${html(item.summary || '')}</p>
+</article>`;
+    })
+    .join('\n');
+  const rankingRows = rankings
+    .map((row) => {
+      const firstSource = tools.sourceMap.get(row.source_ids?.[0]);
+      const model = firstSource ? `<a href="${attr(firstSource.url)}">${html(row.model)}</a>` : html(row.model);
+      return `<li class="model-rank-row">
+  <span class="rank-num">${html(row.rank)}</span>
+  <span class="rank-model">${model}<em>${html(row.lane || '')}</em></span>
+  <strong>${html(row.score || row.value || '')}</strong>
+  <span class="rank-read">${html(row.read || '')} ${tools.cites(row.source_ids)}</span>
+</li>`;
+    })
+    .join('\n');
+  return `<div class="accelerando-model-board">
+  <!-- accelerando model board by codex — slim rankings, source links intact -->
+  <figure class="model-board-art">
+    <img src="${attr(panel.rankings_asset_url || './assets/generated/accelerando-model-rankings-2026-05-15.jpg')}" alt="${attr(panel.rankings_asset_alt || 'Generated futuristic model rankings podium art')}">
+    <figcaption>${html(panel.rankings_asset_caption || 'Generated visual layer · rankings below are source-linked')}</figcaption>
+  </figure>
+  <div class="benchmark-wire">
+    <p class="chart-eyebrow">${html(panel.section_kicker || 'Benchmark wire')}</p>
+    <h3>${html(panel.section_headline || 'Latest benchmark news, not benchmark sprawl.')}</h3>
+    <p>${html(panel.section_summary || 'Keep the newest benchmark movement and a narrow model board. Cut the rest unless it changes the curve.')} ${tools.cites(panel.source_ids || [])}</p>
+    <div class="wire-grid">${wireCards}</div>
+  </div>
+  <ol class="model-ranking-list">
+    ${rankingRows}
+  </ol>
+</div>`;
 }
 
 function renderAi2027(issue, tools) {
@@ -783,6 +830,7 @@ function renderIssue(issue, registry) {
     SOURCE_LEDGER_CONTENT: renderSourceLedger(issue),
     DISAGREEMENT_CONTENT: `<div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>${html(latestClaude?.text || 'No morning frame supplied.')}</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>${html(latestCodex?.text || 'No Codex frame supplied.')}</p></div></div>`,
     SCOREBOARD_CONTENT: renderScoreboard(issue, tools),
+    BENCHMARK_SECTION_TITLE: issue.benchmark_panel?.section_title || (issue.layout === 'accelerando' ? 'Model Board' : 'Benchmark Observatory'),
     BENCHMARK_DASHBOARD_CONTENT: renderBenchmarkDashboard(issue, tools, registry),
     AI_2027_CONTENT: renderAi2027(issue, tools),
     FORECAST_RADAR_CONTENT: renderForecastRadar(issue, tools),

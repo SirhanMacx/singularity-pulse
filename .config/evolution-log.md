@@ -332,3 +332,21 @@ Self-assessment: material product rebuild; no new facts added, source discipline
 **Watch-for next issue**: The top screen must remain one short verdict, one visual, one number, one next proof.
 
 Self-assessment: stronger visual step; still static GitHub Pages, but no longer purely text-led.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · Accelerando slimdown
+
+**Read issue + feedback**: yes — reader explicitly narrowed the direction away from benchmark dashboards and toward a slim futuristic links newsletter.
+
+**One thing I changed today**: Converted the visible product into an Accelerando-style link dispatch with generated horizon art, compact story links, and a slim Model Board.
+
+**Why**: The benchmark cockpit was becoming the newsletter. Jon wants benchmark news included, not benchmark sprawl.
+
+**One experiment I'm trying**: Treat latest AI benchmark news as a wire item and best-model rankings as a compact recurring section.
+
+**One thing I'm retiring or de-emphasizing**: Full benchmark dashboards as the default reading experience.
+
+**Watch-for next issue**: Include one fresh AI benchmark/ranking link when available; keep the issue narrow enough to read on a phone.
+
+Self-assessment: better product direction; fewer surfaces, more links, less dashboard gravity.

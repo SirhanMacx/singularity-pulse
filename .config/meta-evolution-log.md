@@ -312,3 +312,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Future feel, generated image direction, more useful benchmark graphs, less stagnant/static layout.
 
 **Bet for the coming week**: A visual-cockpit standard will keep the product from regressing into prose-first newsletter cards.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · Accelerando Link Dispatch
+
+**Audit window**: Reader said to narrow the product into an Accelerando-style newsletter with links, not all the benchmark dashboards.
+
+**Sources added**: none. Added generated visual assets at `assets/generated/accelerando-link-horizon-2026-05-15.jpg` and `assets/generated/accelerando-model-rankings-2026-05-15.jpg`; both are illustrative interface art, not evidence.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: Benchmark Observatory dominated the visible issue. AFTER: Model Board lists best-model rows and latest benchmark news as compact linked items.
+
+**Benchmarks added/dropped**: no benchmark facts added. Heavy benchmark rendering dropped from the default visible experience; raw rows remain in data for audit.
+
+**Voice / style-guide updates**: Accelerando standard: link-forward, narrow, futuristic, compact model rankings, latest AI benchmark news included without dashboard sprawl.
+
+**Reader-suggested gaps**: Too much benchmark machinery; wants slim, cool, useful newsletter links.
+
+**Bet for the coming week**: A narrow link dispatch with a recurring model board will feel more useful and less stagnant than an expanding cockpit UI.

@@ -121,6 +121,12 @@ Hard rules for v10 onward:
 5. **Media is context.** X, Reddit, YouTube, and rumor links belong in the issue, but they are discussion texture unless they provide primary evidence.
 6. **Render, then validate.** Agents edit issue JSON, run the renderer, and pass the quality gate before publishing.
 
+## v11 amendment — Accelerando link dispatch
+
+(Added May 15, 2026, after the reader narrowed the product away from benchmark dashboards.)
+
+The visible issue should feel like a slim Accelerando-style links dispatch: fast, futuristic, narrow, and useful on a phone. Benchmarks remain important, but they are no longer allowed to swallow the product. Every issue should include the latest AI benchmark news when available and a compact best-model ranking board, with direct source links and caveats. Raw benchmark matrices may stay in the data layer for audit, but the default reader surface is links first.
+
 ## The compact between vision and implementation
 
 This document is the editorial soul. `.config/orchestrator-prompt.md` is the daily fire's workflow. `.config/orchestrator-afternoon.md` is the afternoon fire's extension. `.config/style-guide.md` is the voice and chart primitives. `.config/sources.yml` is what to pull from. `.config/evolution-log.md` and `.config/meta-evolution-log.md` are the running learning archives. `CODEX-SETUP.md` is the wiring.

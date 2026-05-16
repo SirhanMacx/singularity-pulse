@@ -4,7 +4,7 @@
   "issue_number": 4,
   "date_long": "May 15, 2026",
   "title": "Singularity Pulse — May 15, 2026",
-  "compiled_at": "2026-05-15T21:19:00-04:00",
+  "compiled_at": "2026-05-15T21:33:00-04:00",
   "source_count": 26,
   "agents": [
     {
@@ -41,12 +41,17 @@
       "name": "Codex",
       "class": "codex",
       "label": "Codex 9:19 PM ET visual cockpit rebuild"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "Codex 9:33 PM ET Accelerando slimdown"
     }
   ],
   "summary": {
-    "what_changed": "Second visual rebuild after live computer-use audit: the first pass still read like a text newsletter. This version adds an image-driven command cockpit, shortens the lead into a sharper frontier verdict, hides long summaries from Brief mode, and adds a 3D benchmark cockpit SVG before the raw tables.",
-    "trust_posture": "The generated/illustrative cockpit artwork is labeled as interface art and does not carry benchmark evidence. The benchmark cockpit SVG uses the existing source-backed lane scores; raw values and caveats still render below. No new factual claims were added.",
-    "priority_lane": "Command-center usability and curve movement clarity"
+    "what_changed": "Accelerando slimdown: the issue is now a narrow, links-first dispatch instead of a benchmark dashboard. It keeps the lead signal, compact link cards, a slim model board, and one benchmark-wire section for latest AI benchmark news.",
+    "trust_posture": "No new factual claims were added. Existing benchmark sources remain linked, but the heavy benchmark cockpit/METR/table stack is no longer the default reading experience. Future fires should include latest AI benchmark news as a slim link item plus model rankings, not a sprawling benchmark section.",
+    "priority_lane": "Links-first Accelerando brief and compact model rankings"
   },
   "tracker": {
     "sp_index": {
@@ -621,7 +626,97 @@
           "filter_label": "Deployment"
         }
       ]
-    }
+    },
+    "mode": "accelerando",
+    "section_title": "Model Board",
+    "section_kicker": "AI benchmark wire",
+    "section_headline": "Rankings stay. Benchmark sprawl goes.",
+    "section_summary": "Latest benchmark news gets one compact wire. Best-model rows stay source-linked and narrow.",
+    "rankings_asset_url": "./assets/generated/accelerando-model-rankings-2026-05-15.jpg",
+    "rankings_asset_alt": "Generated futuristic model ranking podium visual",
+    "rankings_asset_caption": "Generated ranking art · source-linked rows below",
+    "latest_news": [
+      {
+        "label": "latest benchmark news",
+        "title": "Agentick is the newest live benchmark lane in today’s issue.",
+        "summary": "Sequential decision-making gets one slim link because it changes the evaluation surface; it does not need a full dashboard takeover.",
+        "source_ids": [
+          "agentick-paper"
+        ]
+      },
+      {
+        "label": "rolling rankings",
+        "title": "AGI Ranker remains the compact model-board source.",
+        "summary": "Use the open model JSON for best-model rows; cite exact cells and avoid a blended score unless normalization is audited.",
+        "source_ids": [
+          "agiranker",
+          "agiranker-models"
+        ]
+      },
+      {
+        "label": "autonomy caveat",
+        "title": "METR stays as a link and caveat, not the whole newsletter.",
+        "summary": "The p50 frontier is past a workday, but p80 is 3.10h and METR warns above-16h values are unreliable.",
+        "source_ids": [
+          "metr-time-horizons",
+          "metr-yaml"
+        ]
+      }
+    ],
+    "model_rankings": [
+      {
+        "rank": "01",
+        "model": "ChatGPT 5.5",
+        "lane": "coding + reasoning cells",
+        "score": "82.6% SWE · 83.3% ARC",
+        "read": "Best current AGI Ranker cells in this issue; useful as capability pressure, not autonomy proof.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "02",
+        "model": "Claude Opus 4.7 (thinking)",
+        "lane": "coding + hard math",
+        "score": "82.0% SWE · 43.8% FrontierMath",
+        "read": "Close coding cell plus hard-math signal; AGI Ranker notes source-tier caveats.",
+        "source_ids": [
+          "agiranker",
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "03",
+        "model": "Claude Mythos Preview (early)",
+        "lane": "autonomy horizon",
+        "score": "17.41h p50 · 3.10h p80",
+        "read": "Leading METR time-horizon row, with the above-16h measurement caveat kept visible.",
+        "source_ids": [
+          "metr-time-horizons",
+          "metr-yaml"
+        ]
+      },
+      {
+        "rank": "04",
+        "model": "Gemini 3.1 Pro (preview)",
+        "lane": "agentic assistant cell",
+        "score": "46.1% GAIA",
+        "read": "Useful general-assistant benchmark cell; not a standalone curve mover.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "05",
+        "model": "GPT-5 mini",
+        "lane": "sequential agents",
+        "score": "0.309 Agentick",
+        "read": "Leader on the new Agentick lane; the benchmark itself is the important news.",
+        "source_ids": [
+          "agentick-paper"
+        ]
+      }
+    ]
   },
   "ai_2027": [
     {
@@ -764,6 +859,11 @@
       "agent": "Codex",
       "label": "Visual cockpit rebuild 9:19 PM ET",
       "text": "The live computer-use audit showed the problem: the previous rebuild still opened like a text article with metric cards. I used image generation for a stronger sci-fi cockpit direction and rebuilt the first screen around image-led hierarchy, shorter copy, and a real benchmark cockpit visual before the tables. The product bar is now: if the first screen does not feel like a frontier instrument panel, it fails."
+    },
+    {
+      "agent": "Codex",
+      "label": "Accelerando slimdown 9:33 PM ET",
+      "text": "Jon narrowed the product direction: stop trying to make a benchmark cockpit into the newsletter. I converted the visible spine into a slim Accelerando-style link dispatch: generated link-horizon art, compact story links, one model board, and a benchmark wire that keeps latest AI benchmark news without swallowing the issue."
     }
   ],
   "sources": [
@@ -1195,40 +1295,40 @@
     }
   ],
   "command_deck": {
-    "kicker": "Command center · know what moved",
-    "headline": "Agents are leaving the desk.",
-    "delta": "Codex on phones. ChatGPT in finance. Claude moving toward proactivity. Figure on shift. METR past a workday at p50. Same vector: supervised agents are becoming infrastructure.",
-    "verdict": "66/100. The frontier is live, but not runaway: p80 reliability and robot intervention rates still decide the next jump.",
-    "next_watch": "Next real move: OpenAI finance guardrails or Figure intervention counts. Those are trust/deployment proof, not vibes.",
-    "primary_action_label": "Open 3D benchmark cockpit",
-    "primary_action_url": "#benchmark-compass",
-    "secondary_action_label": "Scan forecast radar",
-    "secondary_action_url": "#forecast-radar",
+    "kicker": "Accelerando · links at curve speed",
+    "headline": "The curve, linked.",
+    "delta": "Slim feed: lead signal, four links, one model board. Benchmarks stay as news and rankings, not a dashboard thicket.",
+    "verdict": "Today’s read: 66/100. Agents are moving into phone, finance, and robot-shift surfaces; reliability proof is still the limiter.",
+    "next_watch": "From now on: include latest AI benchmark news as one slim wire item and keep model rankings narrow enough to scan on a phone.",
+    "primary_action_label": "Scan links",
+    "primary_action_url": "#news-brief",
+    "secondary_action_label": "Open model board",
+    "secondary_action_url": "#benchmark-compass",
     "chips": [
       {
-        "label": "Mode",
-        "value": "Command Center",
+        "label": "Format",
+        "value": "Accelerando",
         "tone": "frontier"
       },
       {
-        "label": "Proximity",
-        "value": "66/100",
-        "tone": "frontier"
+        "label": "Links",
+        "value": "26 sources",
+        "tone": "verified"
       },
       {
-        "label": "Confidence",
-        "value": "Medium",
+        "label": "Model board",
+        "value": "5 rows",
         "tone": "watch"
       },
       {
-        "label": "Composite",
-        "value": "Paused",
+        "label": "Benchmarks",
+        "value": "wire only",
         "tone": "caveat"
       }
     ],
-    "visual_url": "./assets/generated/pulse-command-horizon-2026-05-15.jpg",
-    "visual_alt": "Generated futuristic Singularity Pulse command center with holographic benchmark towers and a central proximity gauge",
-    "visual_caption": "Image generated by Codex for this issue · illustrative UI layer, not benchmark evidence"
+    "visual_url": "./assets/generated/accelerando-link-horizon-2026-05-15.jpg",
+    "visual_alt": "Generated slim futuristic link-horizon asset with cyan and violet acceleration lines",
+    "visual_caption": "Image generated by Codex for the Accelerando layout · visual layer, not evidence"
   },
   "forecast_radar": [
     {
@@ -1273,5 +1373,6 @@
         "agiranker-models"
       ]
     }
-  ]
+  ],
+  "layout": "accelerando"
 }

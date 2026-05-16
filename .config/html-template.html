@@ -29,7 +29,9 @@
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: radial-gradient(circle at 18% 3%, rgba(124,247,255,0.22), transparent 28rem), radial-gradient(circle at 86% 8%, rgba(192,132,252,0.18), transparent 24rem), linear-gradient(180deg, #020617 0%, #050816 52%, #020617 100%); color: var(--fg); line-height: 1.6; font-size: 17px; font-feature-settings: "ss01", "cv11"; -webkit-font-smoothing: antialiased; }
+  body.accelerando-pulse { background: radial-gradient(circle at 50% -12%, rgba(124,247,255,0.28), transparent 20rem), radial-gradient(circle at 80% 8%, rgba(192,132,252,0.15), transparent 18rem), linear-gradient(180deg, #01040d 0%, #020617 58%, #01030a 100%); }
   .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px 88px; }
+  body.accelerando-pulse .container { max-width: 900px; }
   header.masthead { border: 1px solid var(--rule); border-radius: 24px; padding: 14px 20px; margin-bottom: 20px; background: linear-gradient(135deg, rgba(8,15,35,0.78), rgba(4,8,20,0.54)); box-shadow: 0 24px 80px rgba(0,0,0,0.32); backdrop-filter: blur(18px); }
   .nav-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
   .nav-row a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
@@ -43,6 +45,10 @@
   body.condensed-pulse .masthead .pulse-name { font-size: clamp(28px, 5vw, 44px); letter-spacing: -0.06em; }
   body.condensed-pulse .masthead .date { margin-top: 2px; font-size: 12px; }
   body.condensed-pulse .toc { font-size: 11px; line-height: 1.7; }
+  body.accelerando-pulse .sticky-read { max-width: 860px; left: 50%; transform: translateX(-50%); border-radius: 999px; }
+  body.accelerando-pulse .ai-2027-watch,
+  body.accelerando-pulse .forecast-radar,
+  body.accelerando-pulse .agent-conversation { display: none; }
   body.condensed-pulse .jon-lens,
   body.condensed-pulse .design-protocol,
   body.condensed-pulse .morning-brief,
@@ -71,12 +77,16 @@
   .command-deck::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(124,247,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(124,247,255,0.07) 1px, transparent 1px); background-size: 42px 42px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 86%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 86%, transparent); opacity: 0.34; }
   .command-deck::after { content: ""; position: absolute; inset: -20% -10% auto auto; width: 44%; height: 70%; background: radial-gradient(circle, rgba(124,247,255,0.24), transparent 62%); pointer-events: none; filter: blur(18px); opacity: 0.8; }
   .command-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(280px, 0.72fr) minmax(420px, 1.04fr) minmax(250px, 0.58fr); gap: 14px; align-items: stretch; }
+  body.accelerando-pulse .command-grid { grid-template-columns: 1fr; }
   .command-kicker, .command-metric span, .command-watch span, .command-verdict span, .signal-controls, .radar-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
   .command-primary h2 { margin: 8px 0 12px; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: clamp(42px, 6vw, 74px); font-weight: 900; line-height: 0.88; letter-spacing: -0.085em; max-width: 720px; text-transform: uppercase; }
+  body.accelerando-pulse .command-primary h2 { max-width: 680px; font-size: clamp(44px, 9vw, 86px); }
   .command-delta { max-width: 780px; color: #d5e5fb; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.42; margin: 0 0 16px; }
   .command-visual { margin: 0; align-self: stretch; min-height: 100%; border: 1px solid rgba(124,247,255,0.22); border-radius: 24px; overflow: hidden; background: rgba(2,6,23,0.42); box-shadow: inset 0 0 40px rgba(124,247,255,0.08), 0 24px 70px rgba(0,0,0,0.34); position: relative; }
   .command-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 44%, rgba(2,6,23,0.72)); pointer-events: none; }
   .command-visual img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; object-position: center; display: block; filter: saturate(1.12) contrast(1.08); transform: scale(1.01); }
+  body.accelerando-pulse .command-visual { order: -1; min-height: 180px; border-radius: 22px; }
+  body.accelerando-pulse .command-visual img { min-height: 190px; max-height: 240px; }
   .command-visual figcaption { position: absolute; left: 14px; bottom: 12px; right: 150px; z-index: 2; font-family: 'JetBrains Mono', monospace; color: rgba(229,247,255,0.72); font-size: 9px; letter-spacing: 0.11em; text-transform: uppercase; line-height: 1.35; }
   .visual-prediction { position: absolute; right: 14px; bottom: 14px; z-index: 2; min-width: 116px; border: 1px solid rgba(124,247,255,0.34); border-radius: 16px; padding: 10px 11px; background: rgba(2,6,23,0.68); backdrop-filter: blur(14px); }
   .visual-prediction span { display: block; font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; }
@@ -87,6 +97,8 @@
   .command-action { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; border: 1px solid rgba(124,247,255,0.30); border-radius: 999px; padding: 9px 13px; background: rgba(2,6,23,0.46); color: var(--fg); font-weight: 800; font-size: 13px; text-decoration: none; }
   .command-action.primary { background: linear-gradient(90deg, rgba(124,247,255,0.22), rgba(192,132,252,0.18)); color: var(--fg); }
   .command-side { display: grid; gap: 10px; }
+  body.accelerando-pulse .command-side { grid-template-columns: 1fr; }
+  body.accelerando-pulse .command-metrics { display: none; }
   .command-verdict, .command-watch, .command-metric { border: 1px solid rgba(124,247,255,0.18); border-radius: 18px; background: rgba(2,6,23,0.55); padding: 13px 14px; }
   .command-verdict strong { display: block; margin-top: 6px; color: var(--fg); font-size: 15px; line-height: 1.42; }
   .command-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
@@ -95,6 +107,9 @@
   .read-mode-toggle, .signal-toggle, .bench-filter { appearance: none; border: 1px solid rgba(124,247,255,0.22); border-radius: 999px; background: rgba(2,6,23,0.62); color: var(--muted); padding: 7px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; cursor: pointer; }
   .signal-toggle.active, .bench-filter.active, .read-mode-toggle.active { color: var(--fg); border-color: rgba(124,247,255,0.52); background: rgba(124,247,255,0.14); box-shadow: 0 0 18px rgba(124,247,255,0.12); }
   body[data-signal-view="brief"] .story-summary, body[data-signal-view="brief"] .story-evidence, body[data-signal-view="brief"] .story-forecast, body[data-signal-view="evidence"] .story-forecast, body[data-signal-view="forecast"] .story-summary, body[data-signal-view="forecast"] .story-evidence { display: none; }
+  body.accelerando-pulse .signal-controls { display: none; }
+  body.accelerando-pulse .brief-grid, body.accelerando-pulse .media-grid, body.accelerando-pulse .conversation-grid { grid-template-columns: 1fr; }
+  body.accelerando-pulse .brief-card.compact { display: grid; gap: 6px; padding: 14px 15px; }
   .story-verdict { color: var(--fg) !important; font-size: 14px !important; margin-bottom: 8px !important; }
   .story-evidence, .story-forecast { color: #c9d8ec !important; margin-top: 8px !important; }
   .story-tap { display: inline-flex; margin-top: 10px; font-size: 12px; font-weight: 800; border-bottom: 0; color: var(--accent); }
@@ -114,6 +129,23 @@
   .cockpit-label { fill: #93a4bd; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
   .cockpit-small { fill: #93a4bd; font-size: 10px; letter-spacing: .18em; }
   .cockpit-score { font-family: 'Inter', sans-serif; fill: #e5f7ff; font-size: 34px; font-weight: 900; }
+  .accelerando-model-board { display: grid; grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr); gap: 16px; align-items: stretch; }
+  .model-board-art { margin: 0; border: 1px solid rgba(124,247,255,0.18); border-radius: 22px; overflow: hidden; background: rgba(2,6,23,0.54); position: relative; min-height: 100%; }
+  .model-board-art img { width: 100%; height: 100%; min-height: 270px; object-fit: cover; display: block; filter: saturate(1.1) contrast(1.04); }
+  .model-board-art figcaption { position: absolute; left: 12px; right: 12px; bottom: 10px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: rgba(229,247,255,0.7); }
+  .benchmark-wire { border: 1px solid rgba(124,247,255,0.18); border-radius: 22px; padding: 16px; background: rgba(2,6,23,0.50); }
+  .benchmark-wire h3 { margin: 4px 0 8px; font-size: clamp(24px, 4vw, 40px); line-height: 0.95; letter-spacing: -0.06em; }
+  .benchmark-wire p, .benchmark-wire-card p, .rank-read { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+  .wire-grid { display: grid; gap: 10px; margin-top: 12px; }
+  .benchmark-wire-card { padding: 11px 0 0; border-top: 1px solid rgba(124,247,255,0.13); }
+  .benchmark-wire-card h3 { margin: 4px 0 5px; font-size: 16px; line-height: 1.18; letter-spacing: -0.02em; }
+  .model-ranking-list { grid-column: 1 / -1; display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; counter-reset: rank; }
+  .model-rank-row { display: grid; grid-template-columns: 42px minmax(0, 1fr) minmax(120px, .42fr); gap: 12px; align-items: center; border: 1px solid rgba(124,247,255,0.16); border-radius: 16px; padding: 11px 12px; background: linear-gradient(90deg, rgba(124,247,255,0.07), rgba(2,6,23,0.36)); }
+  .rank-num { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-weight: 800; }
+  .rank-model { min-width: 0; font-weight: 850; line-height: 1.15; }
+  .rank-model em { display: block; margin-top: 3px; color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 10px; font-style: normal; text-transform: uppercase; letter-spacing: .1em; }
+  .model-rank-row strong { color: var(--fg); font-family: 'JetBrains Mono', monospace; font-size: 13px; text-align: right; }
+  .rank-read { grid-column: 2 / -1; }
   .pulse-section { margin: 0 0 28px; padding: 18px; border: 1px solid var(--rule); border-radius: 22px; background: linear-gradient(135deg, rgba(8,15,35,0.72), rgba(4,8,20,0.50)); box-shadow: 0 18px 70px rgba(0,0,0,0.22); }
   .pulse-section h2 { margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-size: clamp(28px, 5vw, 44px); line-height: 0.98; letter-spacing: -0.035em; }
   .section-sub { margin: -4px 0 16px; color: var(--muted); font-size: 14px; }
@@ -624,7 +656,7 @@
     .sp-index .score { font-size: 44px; }
     .container { padding: 18px 16px 60px; }
     .masthead .pulse-name { font-size: 42px; }
-    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid, .rangefinder-panel, .command-grid, .forecast-radar .radar-grid, .benchmark-cockpit-visual { grid-template-columns: 1fr; }
+    .future-deck, .future-readout, .lens-grid, .design-protocol, .brief-grid, .ai2027-grid, .media-grid, .conversation-grid, .rangefinder-panel, .command-grid, .forecast-radar .radar-grid, .benchmark-cockpit-visual, .accelerando-model-board { grid-template-columns: 1fr; }
     .command-deck { padding: 18px; border-radius: 24px; }
     body.condensed-pulse header.masthead { margin: -4px 0 12px; }
     .command-primary h2 { font-size: 42px; }
@@ -633,6 +665,9 @@
     .command-visual figcaption { right: 14px; font-size: 8px; }
     .visual-prediction { top: 12px; bottom: auto; }
     .command-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .model-rank-row { grid-template-columns: 34px 1fr; }
+    .model-rank-row strong { grid-column: 2; text-align: left; }
+    .rank-read { grid-column: 2; }
     .sp-index-pair { flex-direction: column; }
     .morning-brief, .dispute-grid, .future-grid, .watch-rail, .discourse-pulse .dp-grid, .bench-aggregate, .bench-grid { grid-template-columns: 1fr; }
     .v81-bigchart svg { min-height: 190px; }
@@ -652,16 +687,14 @@
   }
 </style>
 </head>
-<body class="condensed-pulse" data-signal-view="brief">
+<body class="condensed-pulse accelerando-pulse" data-signal-view="brief">
 <div class="container">
 
 <nav class="sticky-read" aria-label="Quick jump">
-  <a href="#command">Command</a>
-  <a href="#news-brief">Signals</a>
-  <a href="#benchmark-compass">Cockpit</a>
-  <a href="#ai-2027">AI 2027</a>
-  <a href="#forecast-radar">Forecast</a>
-  <a href="#media-discussion">Media</a>
+  <a href="#command">Pulse</a>
+  <a href="#news-brief">Links</a>
+  <a href="#benchmark-compass">Models</a>
+  <a href="#media-discussion">Stream</a>
   <a href="#footnotes">Sources</a>
 </nav>
 
@@ -675,13 +708,10 @@
   <div class="date">{{DATE_LONG}}</div>
   <div>{{AGENT_BYLINES}}</div>
   <nav class="toc" aria-label="Table of contents">
-    <a href="#command">⌁ Command</a>
-    <a href="#news-brief">🗞️ Signals</a>
-    <a href="#benchmark-compass">🧪 Cockpit</a>
-    <a href="#ai-2027">📍 AI 2027</a>
-    <a href="#forecast-radar">🔮 Forecast</a>
-    <a href="#media-discussion">📡 YouTube/X/Reddit</a>
-    <a href="#agent-conversation">🪞 Agents</a>
+    <a href="#command">⌁ Pulse</a>
+    <a href="#news-brief">🗞️ Links</a>
+    <a href="#benchmark-compass">🧪 Models</a>
+    <a href="#media-discussion">📡 Stream</a>
     <a href="#footnotes">↯ Sources</a>
   </nav>
 </header>
@@ -689,8 +719,8 @@
 {{COMMAND_DECK_CONTENT}}
 
 <section class="pulse-section news-brief-condensed" id="news-brief" aria-label="Condensed news brief">
-  <h2>Signal Brief</h2>
-  <p class="section-sub">Punchy intel cards. Toggle the lens instead of rereading the same wall of text.</p>
+  <h2>Links</h2>
+  <p class="section-sub">Four source links. One verdict each. Tap the source, move on.</p>
   {{SIGNAL_CONTROLS}}
   <div class="brief-grid">
     {{NEWS_BRIEF_CONTENT}}
@@ -773,8 +803,8 @@
 {{SCOREBOARD_CONTENT}}
 </section>
 
-<section class="benchmark-compass" id="benchmark-compass" aria-label="Benchmark Observatory">
-<h2 class="section"><span class="emoji">🧪</span> BENCHMARK OBSERVATORY</h2>
+<section class="benchmark-compass" id="benchmark-compass" aria-label="Model Board">
+<h2 class="section"><span class="emoji">🧪</span> {{BENCHMARK_SECTION_TITLE}}</h2>
 {{BENCHMARK_DASHBOARD_CONTENT}}
 </section>
 
@@ -795,8 +825,8 @@
 </section>
 
 <section class="pulse-section media-discussion" id="media-discussion" aria-label="YouTube, X, and Reddit discussion">
-  <h2>YouTube / X / Reddit</h2>
-  <p class="section-sub">One compact social/media tray. Rotate this every push; never recycle links unless the same thread is still the live discussion center.</p>
+  <h2>Link Stream</h2>
+  <p class="section-sub">Fresh media/community links. Rotate this every push; keep it short enough to scan.</p>
   <div class="media-grid">
     {{MEDIA_DISCUSSION_CONTENT}}
   </div>
