@@ -368,3 +368,21 @@ Self-assessment: better product direction; fewer surfaces, more links, less dash
 **Watch-for next issue**: Claude should write the issue as a single dispatch first, then add rankings and conversation links after the synthesis is strong.
 
 Self-assessment: closer to the named target; still source-backed and model-rankings aware.
+
+---
+
+## 2026-05-15 · Issue #4 · [codex] · Innermost Loop guardrails
+
+**Read issue + feedback**: yes — user said to implement the proposed plan after the Innermost Loop rebuild.
+
+**One thing I changed today**: Added quality-gate enforcement for the new linked narrative shape so future fires must include `loop_dispatch`, compact model rankings, and X/Reddit/YouTube conversation coverage.
+
+**Why**: The product kept drifting through styling variants because the acceptance criteria lived in prose. The format now has executable checks.
+
+**One experiment I'm trying**: Treat editorial shape as a CI contract, not just a style preference.
+
+**One thing I'm retiring or de-emphasizing**: Relying on agent memory alone to preserve the format.
+
+**Watch-for next issue**: If Claude misses the linked narrative or community stream, `npm run quality` should fail before publish.
+
+Self-assessment: durable implementation pass; no new public signal, so no ntfy needed.

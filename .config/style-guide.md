@@ -63,38 +63,30 @@ Predictions are the durable value of the project. The top of the Predictions sec
 
 Read `DESIGN.md` before rendering. Singularity Pulse should look like a private future intelligence terminal, not a generic blog/newsletter. Every issue needs:
 
-- A `Future Deck` that orients the reader to the curve state without over-explaining.
-- A condensed visible spine: `News Brief` → `Benchmark Observatory` → `AI 2027 Tracker` → `YouTube / X / Reddit` → `Claude ↔ Codex` → `Source Footnotes`.
-- Personalization embedded in the spine, not expanded into a separate wall of cards unless the user asks.
+- A `Loop Dispatch` that orients the reader through one dense linked narrative, not a dashboard.
+- A condensed visible spine: `Loop Dispatch` → `Model Rankings` → `Link Stream` → `Source Footnotes`.
+- Personalization embedded in the synthesis, not expanded into a separate wall of cards unless the user asks.
 - A visible evidence protocol: source-first benchmarks, no fake graphs, illustrative art labeled as art.
-- A restrained dark/holographic UI: useful glow, data-dense cards, clear hierarchy, no chart vomit.
+- A restrained dark/holographic editorial UI: useful glow, readable prose, direct links, no chart vomit.
 
 If a visual is impressive but not useful, cut it. If a visual is useful but ugly, redesign it before shipping.
 
-## Condensed spine
+## Innermost Loop spine
 
 The visible issue should not feel like a pile of sections. Use exactly these reader-facing modules unless a major event demands a one-off exception:
 
-1. `Command Deck`: first-screen delta, scores, proximity, confidence, next watch, and action links.
-2. `Signal Brief`: 2-4 items with punchy `Verdict`, source-backed `Evidence`, and `Watch` states.
-3. `Benchmark Cockpit`: raw benchmark progress, lane filters, caveats, and “what changed since last issue.”
-4. `AI 2027 Tracker` + `Forecast Radar`: scenario comparison plus the next concrete triggers.
-5. `YouTube / X / Reddit`: one compact media/social tray with fresh links.
-6. `Claude ↔ Codex`: a short agent handoff.
-7. `Source Footnotes`: numbered bottom citations.
+1. `Loop Dispatch`: one cover image, one headline/deck, 3-5 linked paragraphs, one closing line.
+2. `Model Rankings`: latest AI benchmark news plus compact best-model rows with caveats.
+3. `Link Stream`: one compact media/social tray with fresh X, YouTube, Reddit, HN, or forum links.
+4. `Source Footnotes`: numbered bottom citations generated from the same source rows.
 
 The old Stack / Leaks / Papers / Robotics / Adjacent sections may exist as hidden audit material or generator inputs, but they should not be visible by default in the daily reading flow.
 
 Each module has a data contract:
 
-- `News Brief`: every card needs `source_ids`, `impact`, `lane`, `freshness`, `summary`, and `why_it_matters`.
-- `Command Deck`: every issue needs a one-sentence delta, a final proximity read, a next watch trigger, and two action links.
-- `Signal Brief`: every card should include `verdict`, `evidence`, and `tap_next`; fallback to summary/why-it-matters only for older issues.
-- `Benchmark Observatory`: every metric and benchmark matrix row needs `source_ids`, raw value, unit/scale, source/eval date, and caveat; unaudited rows render as queued/source-linked.
-- `Forecast Radar`: every card needs a time window, trigger, read, confidence, status, and `source_ids`.
-- `AI 2027 Tracker`: every lane cites the original scenario plus any revision/current evidence used for status.
-- `YouTube / X / Reddit`: every card links directly to the post/video/thread and labels discussion as discussion.
-- `Claude ↔ Codex`: state the actual editorial handoff; do not use generic agent theater.
+- `Loop Dispatch`: `headline`, `dek`, `hero_url`, `hero_alt`, 3-5 `paragraphs`, inline `runs` with source links, and `closing_line`.
+- `Model Rankings`: `latest_news` has source-linked benchmark news; `model_rankings` has at least five rows with raw values, lane labels, and caveats.
+- `Link Stream`: every card links directly to the post/video/thread and labels discussion as discussion; include X, YouTube, and Reddit when available.
 - `Source Footnotes`: generated from the same source rows used by the visible modules.
 
 ## Uniform scoring
@@ -109,13 +101,13 @@ Use one visible 0-100 scoring vocabulary only where the issue presents a true no
 
 Never mix stars, letter grades, confidence percentages, benchmark percentages, and SP-Index numbers without explaining which scale is being used. Confidence is a probability; raw benchmark values are source measurements; SP-Index is a daily curve index. Label them. If a benchmark visualization has not been normalized with an audited formula, show raw values only.
 
-## Benchmark Observatory
+## Model Rankings and benchmark evidence
 
-Every issue should render a Benchmark Observatory near the SCOREBOARD. It answers: "Where are we on the benchmarks, especially METR?" It is separate from the SP-Index.
+Every issue should render a compact Model Rankings board after the Loop Dispatch. It answers: "Which models or systems are currently leading the most useful benchmark lanes, and what changed?" It is separate from the SP-Index.
 
-Composite weights are paused until the source rows are audited. The default Benchmark Observatory should be a source-faithful dashboard: raw values, source date, scale label, caveat, and one progress sentence. The METR card/plot must be first. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat.
+Composite weights are paused until the source rows are audited. The default benchmark surface is not a dashboard; it is a source-faithful ranking board: raw values, source date, scale label, caveat, and one progress sentence. For May 2026, METR Time Horizon 1.1 reports Claude Mythos Preview (early) at `1044.78` p50 minutes and `185.91` p80 minutes, while warning that measurements above 16h are unreliable with the current task suite. Render both the raw estimate and the caveat when METR appears.
 
-When multiple benchmark families appear, render a `benchmark_panel.matrix` instead of a blended score. Rows should be boringly exact: model/system, benchmark, value, eval date, interpretation, and source footnote. Do not infer one winner from rows with different task distributions.
+When multiple benchmark families appear, keep `benchmark_panel.matrix` in the data layer for audit, but render the visible issue as `benchmark_panel.latest_news` plus `benchmark_panel.model_rankings`. Rows should be boringly exact: model/system, benchmark, value, eval date, interpretation, and source footnote. Do not infer one winner from rows with different task distributions.
 
 ## AI 2027 Tracker
 

@@ -348,3 +348,21 @@ The agent should look for emerging sources to add, not just audit existing ones:
 **Reader-suggested gaps**: Wants The Innermost Loop feel plus model rankings and interesting X/YouTube/Reddit conversations.
 
 **Bet for the coming week**: A linked narrative spine will feel less stagnant than any dashboard variant because the value is editorial compression, not UI machinery.
+
+## 2026-05-15 · Week 1 · Spec Mutation [codex] · Innermost Loop Quality Gate
+
+**Audit window**: Reader said to implement the proposed plan after naming The Innermost Loop as the target.
+
+**Sources added**: none.
+
+**Sources removed**: none.
+
+**Sections changed**: BEFORE: Innermost Loop shape was documented and rendered for the current issue, but future issues could still pass quality with card/dashboard drift. AFTER: `scripts/quality-gate.mjs` enforces `loop_dispatch`, inline source links, compact benchmark-news/model-ranking rows, and X/Reddit/YouTube conversation coverage for `layout: innermost-loop`.
+
+**Benchmarks added/dropped**: none.
+
+**Voice / style-guide updates**: Updated `.config/style-guide.md` so the canonical visible spine is Loop Dispatch → Model Rankings → Link Stream → Source Footnotes.
+
+**Reader-suggested gaps**: Durable implementation of the named newsletter shape.
+
+**Bet for the coming week**: Executable editorial gates will prevent another regression into visually different but structurally stagnant card layouts.

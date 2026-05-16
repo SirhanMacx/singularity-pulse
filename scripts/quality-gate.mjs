@@ -93,9 +93,60 @@ function validateIssueData(file) {
   checkItems('media', issue.media);
   checkItems('ai_2027', issue.ai_2027);
   checkItems('forecast_radar', issue.forecast_radar);
+  checkItems('loop_dispatch.paragraphs', issue.loop_dispatch?.paragraphs);
   checkItems('benchmark_panel.metrics', issue.benchmark_panel?.metrics);
   checkItems('benchmark_panel.matrix', issue.benchmark_panel?.matrix);
+  checkItems('benchmark_panel.latest_news', issue.benchmark_panel?.latest_news);
+  checkItems('benchmark_panel.model_rankings', issue.benchmark_panel?.model_rankings);
   checkItems('tracker.sp_index.components', issue.tracker?.sp_index?.components);
+
+  function checkSourceRef(label, sourceId) {
+    if (sourceId && !sourceIds.has(sourceId)) add('error', path, `${label} references missing source ${sourceId}`);
+  }
+
+  if (issue.layout === 'innermost-loop') {
+    const dispatch = issue.loop_dispatch;
+    if (!dispatch) {
+      add('error', path, 'innermost-loop layout requires loop_dispatch');
+    } else {
+      for (const field of ['headline', 'dek', 'hero_url', 'hero_alt', 'closing_line']) {
+        if (!dispatch[field]) add('error', path, `loop_dispatch missing ${field}`);
+      }
+      if (!Array.isArray(dispatch.paragraphs) || dispatch.paragraphs.length < 3) {
+        add('error', path, 'loop_dispatch must include at least 3 linked paragraphs');
+      }
+      if (Array.isArray(dispatch.paragraphs) && dispatch.paragraphs.length > 6) {
+        add('warning', path, 'loop_dispatch has more than 6 paragraphs; check phone readability');
+      }
+      const linkedRuns = [];
+      for (const [i, paragraph] of (dispatch.paragraphs || []).entries()) {
+        if (!Array.isArray(paragraph.source_ids) || !paragraph.source_ids.length) {
+          add('error', path, `loop_dispatch.paragraphs[${i}] missing source_ids`);
+        }
+        if (!Array.isArray(paragraph.runs) || !paragraph.runs.length) {
+          add('error', path, `loop_dispatch.paragraphs[${i}] missing inline runs`);
+        }
+        for (const [j, run] of (paragraph.runs || []).entries()) {
+          if (!run.text) add('error', path, `loop_dispatch.paragraphs[${i}].runs[${j}] missing text`);
+          if (run.source_id) {
+            linkedRuns.push(run);
+            checkSourceRef(`loop_dispatch.paragraphs[${i}].runs[${j}]`, run.source_id);
+          }
+        }
+      }
+      if (linkedRuns.length < 6) add('error', path, 'loop_dispatch must include at least 6 inline source links');
+    }
+
+    const latestNews = issue.benchmark_panel?.latest_news || [];
+    const rankings = issue.benchmark_panel?.model_rankings || [];
+    if (latestNews.length < 2) add('error', path, 'innermost-loop layout requires at least 2 latest benchmark-news rows');
+    if (rankings.length < 5) add('error', path, 'innermost-loop layout requires at least 5 model ranking rows');
+
+    const platforms = new Set((issue.media || []).map((item) => String(item.platform || '').toLowerCase()));
+    for (const required of ['x', 'reddit', 'youtube']) {
+      if (!platforms.has(required)) add('error', path, `innermost-loop media stream missing ${required} item`);
+    }
+  }
 
   if (!Array.isArray(issue.benchmark_panel?.source_ids) || issue.benchmark_panel.source_ids.length < 2) {
     add('error', path, 'benchmark_panel must cite at least 2 source_ids');
@@ -177,6 +228,22 @@ for (const file of files) {
   }
   if (!/class=["'][^"']*\beditorial-disagreement\b/.test(html)) {
     add(isDryRun ? 'warning' : 'error', file, 'missing editorial disagreement block');
+  }
+
+  const dataPath = `data/issues/${date}.json`;
+  if (existsSync(join(root, dataPath))) {
+    try {
+      const issue = readJson(dataPath);
+      if (issue.layout === 'innermost-loop') {
+        if (!/class=["'][^"']*\bloop-dispatch\b/.test(html)) add('error', file, 'innermost-loop issue missing loop-dispatch surface');
+        if (!/loop-pulse/.test(html)) add('error', file, 'innermost-loop issue missing loop-pulse body class');
+        if (!/Model Rankings/.test(html)) add('error', file, 'innermost-loop issue missing Model Rankings heading');
+        if (!/Link Stream/.test(html)) add('error', file, 'innermost-loop issue missing Link Stream heading');
+        if (/Singularity Pulse command center/.test(html)) add('error', file, 'innermost-loop issue still renders command-center surface');
+      }
+    } catch (err) {
+      add('error', dataPath, `invalid JSON while checking rendered layout: ${err.message}`);
+    }
   }
 }
 
