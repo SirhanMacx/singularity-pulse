@@ -707,88 +707,107 @@
     .bench-wars-block th, .bench-wars-block td { padding: 5px 6px; }
   }
 
-  /* === v4 ADDITIONS === */
-  .issue-plate { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 12px 0; margin: -4px 0 18px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; }
-  .issue-plate .ip-left { display: flex; gap: 12px; flex-wrap: wrap; align-items: baseline; }
-  .issue-plate strong { color: var(--accent); font-weight: 700; letter-spacing: 0.16em; }
-  .issue-plate .ip-streak { color: var(--accent-3); }
-  .named-tape { margin: 36px 0; padding: 22px; border: 1px solid rgba(124,247,255,0.18); border-radius: 22px; background: linear-gradient(135deg, rgba(8,15,35,0.78), rgba(2,6,23,0.5)); }
-  .named-tape h2 { margin: 0 0 4px; font-family: 'Fraunces', Georgia, serif; font-size: 28px; letter-spacing: -0.02em; }
-  .named-tape .nt-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 18px; }
-  .nt-item { display: grid; grid-template-columns: minmax(120px, 200px) 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px dashed rgba(124,247,255,0.12); }
-  .nt-item:last-child { border-bottom: 0; }
-  .nt-item .nt-handle { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
-  .nt-item .nt-handle a { color: var(--accent); border-bottom: 1px dotted; font-weight: 700; }
-  .nt-item .nt-role { display: block; color: var(--muted); font-size: 11px; margin-top: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
-  .nt-item .nt-claim { font-size: 15px; line-height: 1.5; color: var(--fg); margin: 0 0 6px; }
-  .nt-item .nt-cross { font-size: 13px; color: var(--muted); margin: 0; font-style: italic; line-height: 1.45; }
-  .nt-cross::before { content: "→ "; color: var(--accent-2); font-style: normal; }
-  .nt-handle-list { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--rule); }
-  .nt-handle-list-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-  .nt-handle-list-grid { display: flex; flex-wrap: wrap; gap: 6px; }
-  .nt-handle-chip { font-family: 'JetBrains Mono', monospace; font-size: 10px; padding: 4px 8px; border: 1px solid var(--rule); border-radius: 999px; background: rgba(2,6,23,0.42); color: var(--muted); }
-  .scoreboard-2027 { margin: 36px 0; }
-  .scoreboard-2027 h2 { margin: 0 0 4px; font-family: 'Fraunces', Georgia, serif; font-size: 28px; letter-spacing: -0.02em; }
-  .scoreboard-2027 .sb-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
-  .scoreboard-2027 .sb-summary { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0 0 18px; max-width: 720px; }
-  .sb-rows { display: grid; gap: 10px; }
-  .sb-row { display: grid; grid-template-columns: 60px minmax(140px, 200px) 1fr; gap: 14px; padding: 14px; border: 1px solid rgba(124,247,255,0.16); border-radius: 14px; background: rgba(8,15,35,0.6); align-items: start; }
-  @media (max-width: 640px) { .sb-row { grid-template-columns: 1fr; } }
-  .sb-status { font-family: 'JetBrains Mono', monospace; font-size: 18px; text-align: center; padding: 8px 4px; border-radius: 8px; }
-  .sb-status[data-status="passed"] { color: var(--accent-3); background: rgba(52,211,153,0.14); }
-  .sb-status[data-status="on-track-pressure"] { color: var(--accent); background: rgba(124,247,255,0.10); }
-  .sb-status[data-status="ahead-pressure"] { color: var(--accent); background: rgba(124,247,255,0.10); }
-  .sb-status[data-status="watch"] { color: #fbbf24; background: rgba(245,158,11,0.10); }
-  .sb-status[data-status="behind"] { color: #f87171; background: rgba(220,38,38,0.10); }
-  .sb-milestone { font-family: 'Fraunces', Georgia, serif; font-size: 18px; line-height: 1.2; color: var(--fg); }
-  .sb-milestone span { display: block; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 6px; }
-  .sb-actual { font-size: 14px; line-height: 1.5; color: var(--fg); margin: 0 0 8px; }
-  .sb-evidence { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); }
-  .sb-evidence a { color: var(--accent); border-bottom: 1px dotted; }
-  .open-ledger { margin: 36px 0; padding: 22px; border: 1px solid rgba(192,132,252,0.22); border-radius: 22px; background: linear-gradient(135deg, rgba(20,8,40,0.72), rgba(8,4,24,0.52)); }
-  .open-ledger h2 { margin: 0 0 4px; font-family: 'Fraunces', Georgia, serif; font-size: 28px; letter-spacing: -0.02em; }
-  .open-ledger .ol-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent-2); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 8px; }
-  .open-ledger .ol-summary { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0 0 18px; }
-  .ol-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  @media (max-width: 760px) { .ol-grid { grid-template-columns: 1fr; } }
-  .ol-col { border: 1px solid var(--rule); border-radius: 14px; padding: 14px; background: rgba(2,6,23,0.42); }
-  .ol-col-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-2); margin: 0 0 12px; }
-  .ol-entry { font-size: 13px; line-height: 1.45; margin: 0 0 12px; padding: 0 0 10px; border-bottom: 1px dashed rgba(192,132,252,0.10); }
-  .ol-entry:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
-  .ol-entry .ol-id { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
-  .ol-entry .ol-claim { display: block; color: var(--fg); margin: 4px 0; }
-  .ol-entry .ol-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); }
-  .ol-outcome-hit { color: var(--accent-3); font-weight: 700; }
-  .ol-outcome-partial { color: #fbbf24; font-weight: 700; }
-  .ol-outcome-miss { color: #f87171; font-weight: 700; }
-  .calibration-block { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--rule); }
-  .cal-row { display: grid; grid-template-columns: minmax(200px, 1fr) 200px; gap: 18px; align-items: start; }
-  @media (max-width: 640px) { .cal-row { grid-template-columns: 1fr; } }
-  .cal-text .cal-headline { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 56px; line-height: 1; color: var(--accent-2); letter-spacing: -0.03em; }
-  .cal-text .cal-headline-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin: 6px 0 0; }
-  .cal-text .cal-note { font-size: 13px; line-height: 1.5; color: var(--muted); margin: 14px 0 0; }
-  .cal-scatter { background: rgba(2,6,23,0.6); border: 1px solid var(--rule); border-radius: 12px; padding: 8px; }
-  .tech-tales { margin: 48px 0 32px; padding: 28px 24px; border: 1px solid rgba(251,146,60,0.22); border-radius: 22px; background: linear-gradient(135deg, rgba(40,18,8,0.72), rgba(20,8,4,0.48)); position: relative; }
-  .tech-tales::before { content: "📖"; position: absolute; top: -16px; left: 24px; background: var(--bg); padding: 0 8px; font-size: 24px; }
-  .tech-tales h2 { font-family: 'Fraunces', Georgia, serif; font-size: 32px; letter-spacing: -0.02em; margin: 0 0 4px; color: #fb923c; }
-  .tech-tales .tt-kicker { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #fb923c; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 16px; opacity: 0.8; }
-  .tech-tales .tt-title { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 22px; color: var(--fg); margin: 0 0 16px; opacity: 0.92; }
-  .tech-tales p { font-family: 'Fraunces', Georgia, serif; font-size: 17px; line-height: 1.55; color: #e8dccd; margin: 0 0 14px; max-width: 60ch; }
-  .tech-tales p:first-of-type::first-letter { font-weight: 800; font-size: 48px; float: left; line-height: 0.9; padding: 4px 8px 0 0; color: #fb923c; font-family: 'Fraunces', Georgia, serif; }
-  .tech-tales .tt-inspired { margin-top: 22px; padding-top: 14px; border-top: 1px dashed rgba(251,146,60,0.24); font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; }
-  .tech-tales .tt-inspired strong { color: #fb923c; text-transform: uppercase; letter-spacing: 0.14em; }
-  .tech-tales .tt-inspired a { color: #fb923c; border-bottom: 1px dotted; margin-left: 6px; }
-  .receipts-ledger { margin: 32px 0 12px; padding: 18px 18px 14px; border: 1px solid var(--rule); border-radius: 14px; background: rgba(2,6,23,0.62); }
-  .receipts-ledger .rl-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
-  .receipts-ledger h2 { margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
-  .receipts-ledger .rl-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; }
-  .rl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
-  .rl-item { padding: 10px 12px; background: rgba(8,15,35,0.5); border-radius: 10px; border: 1px solid rgba(124,247,255,0.08); }
-  .rl-item .rl-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; }
-  .rl-item .rl-value { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 22px; color: var(--fg); line-height: 1; margin: 6px 0 2px; font-variant-numeric: tabular-nums; }
-  .rl-item .rl-delta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--accent); }
-  .rl-item .rl-source { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); margin-top: 4px; }
+  /* === v5 TYPOGRAPHY + COLOR REFRESH === */
+  :root {
+    --fg: #E8EEF7;          /* less cyan-tinted */
+    --muted: #94A3B8;       /* slate-400 */
+    --very-muted: #5B6B82;
+    --rule: rgba(148,163,184,0.14);
+    --negative: #FB7185;
+    --warning: #FBBF24;
+    --score-zone-sub: #3D7BFF;
+    --score-zone-steady: #00C2A8;
+    --score-zone-elevated: #F5D547;
+    --score-zone-hot: #FF8A3D;
+    --score-zone-singularity: #FF3D5A;
+  }
+  @media (max-width: 520px){
+    .container { padding: 16px 14px 64px; }
+    .command-deck { padding: 14px; border-radius: 18px; }
+    .command-deck::before, .command-deck::after { opacity: 0.18; }
+    .command-primary h2 { font-size: 36px; letter-spacing: -0.04em; line-height: 1.02; }
+    .masthead .pulse-name { font-size: 34px; letter-spacing: -0.04em; }
+    body { font-size: 16px; }
+  }
+  .command-delta { font-size: 16px; line-height: 1.55; max-width: 62ch; }
+  @media (min-width: 768px) { .command-delta { font-size: 18px; line-height: 1.5; } }
+  /* Tabular nums everywhere they belong */
+  .rank-strong, .sc-stat, .rl-value, .ip-left strong, td.score-cell, .score-cell,
+  .instrument-v, .v81-stat .st-value, .sp-index-pair .pair-score, .sp-index .score,
+  .bench-card .bc-v, .ol-meta, .cal-headline, .gauge-num, .lb-bar-text {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* === v5 BENCHMARK / LEADERBOARD REBUILD === */
+  .lb-section { margin: 40px 0 32px; }
+  .lb-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 8px; }
+  .lb-section h2 { margin: 0 0 6px; font-family: 'Fraunces', Georgia, serif; font-size: 36px; line-height: 1.02; letter-spacing: -0.025em; }
+  .lb-deck { color: var(--muted); font-size: 16px; line-height: 1.5; margin: 0 0 24px; max-width: 60ch; }
+
+  /* Current Leaders strip — 4 stat cards 2x2 mobile / 1x4 desktop */
+  .lb-leaders { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 28px; }
+  @media (min-width: 760px) { .lb-leaders { grid-template-columns: repeat(4, 1fr); } }
+  .lb-leader-card { padding: 14px 14px 16px; border: 1px solid rgba(124,247,255,0.18); border-radius: 16px; background: linear-gradient(180deg, rgba(8,15,35,0.86), rgba(2,6,23,0.6)); position: relative; overflow: hidden; }
+  .lb-leader-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.65; }
+  .lb-leader-bench { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 8px; }
+  .lb-leader-model { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 17px; line-height: 1.15; color: var(--fg); margin: 0 0 6px; letter-spacing: -0.015em; }
+  .lb-leader-score { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 28px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; margin: 0 0 4px; }
+  .lb-leader-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--very-muted); letter-spacing: 0.06em; line-height: 1.4; }
+
+  /* Hero scatter chart */
+  .lb-scatter-wrap { margin: 0 0 32px; padding: 18px 18px 14px; border: 1px solid rgba(124,247,255,0.16); border-radius: 18px; background: rgba(2,6,23,0.62); }
+  .lb-scatter-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; gap: 12px; flex-wrap: wrap; }
+  .lb-scatter-title { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 20px; line-height: 1.1; color: var(--fg); }
+  .lb-scatter-axes { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.10em; text-transform: uppercase; }
+  .lb-scatter { width: 100%; height: 360px; }
+  @media (max-width: 520px) { .lb-scatter { height: 280px; } }
+
+  /* Ranked table with CSS gradient bars */
+  .lb-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .lb-table thead { border-bottom: 1px solid var(--rule); }
+  .lb-table th { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; text-align: left; padding: 10px 8px; }
+  .lb-table th.num, .lb-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .lb-table td { padding: 12px 8px; border-bottom: 1px solid rgba(148,163,184,0.08); color: var(--fg); }
+  .lb-table tr:last-child td { border-bottom: 0; }
+  .lb-rank { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 18px; color: var(--accent); width: 32px; }
+  .lb-rank.gold { color: #FBBF24; }
+  .lb-rank.silver { color: #CBD5E1; }
+  .lb-rank.bronze { color: #C97A4D; }
+  .lb-model { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 15px; line-height: 1.15; }
+  .lb-model em { display: block; font-family: 'JetBrains Mono', monospace; font-style: normal; font-size: 10px; color: var(--muted); margin-top: 4px; letter-spacing: 0.06em; }
+  .lb-bar { position: relative; height: 22px; background: rgba(148,163,184,0.10); border-radius: 4px; overflow: hidden; min-width: 90px; }
+  .lb-bar-fill { position: absolute; top: 0; left: 0; bottom: 0; background: linear-gradient(90deg, rgba(124,247,255,0.25), rgba(124,247,255,0.65)); border-radius: 4px; }
+  .lb-bar-fill.leader { background: linear-gradient(90deg, rgba(124,247,255,0.55), rgba(124,247,255,0.95)); }
+  .lb-bar-text { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; color: var(--fg); text-shadow: 0 0 4px rgba(2,6,23,0.8); }
+  @media (max-width: 600px) {
+    .lb-table { font-size: 13px; }
+    .lb-table th, .lb-table td { padding: 10px 6px; }
+    .lb-table .col-eval { display: none; }
+    .lb-rank { font-size: 15px; width: 24px; }
+    .lb-model { font-size: 14px; }
+  }
+
+  /* === v5 SCORE GAUGES === */
+  .gauge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 28px 0 32px; }
+  .gauge-card { padding: 18px; border: 1px solid rgba(124,247,255,0.16); border-radius: 18px; background: linear-gradient(180deg, rgba(8,15,35,0.84), rgba(2,6,23,0.58)); position: relative; overflow: hidden; }
+  .gauge-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; background: linear-gradient(180deg, var(--accent), transparent); opacity: 0.55; }
+  .gauge-card .gauge-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 12px; }
+  .gauge-ring-wrap { display: flex; align-items: center; gap: 14px; }
+  .gauge-ring { width: 96px; height: 96px; flex-shrink: 0; }
+  .gauge-text { flex: 1; min-width: 0; }
+  .gauge-num { font-family: 'Fraunces', Georgia, serif; font-weight: 800; font-size: 42px; line-height: 0.95; color: var(--fg); letter-spacing: -0.025em; }
+  .gauge-num .gauge-unit { font-size: 18px; font-weight: 600; color: var(--muted); margin-left: 4px; }
+  .gauge-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+  .gauge-sub .gauge-delta { color: var(--accent-3); }
+  .gauge-sub .gauge-delta.neg { color: var(--negative); }
+  .gauge-stadium { height: 10px; background: rgba(148,163,184,0.12); border-radius: 5px; position: relative; margin: 8px 0 4px; overflow: hidden; }
+  .gauge-stadium-fill { position: absolute; inset: 0 auto 0 0; background: linear-gradient(90deg, var(--negative) 0%, var(--warning) 50%, var(--accent-3) 100%); border-radius: 5px; }
+  .gauge-stadium-tick { position: absolute; top: -2px; bottom: -2px; width: 2px; background: rgba(232,238,247,0.55); }
+  .gauge-sparkline { width: 100%; height: 32px; margin-top: 6px; }
 </style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uplot@1.6.32/dist/uPlot.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/uplot@1.6.32/dist/uPlot.iife.min.js"></script>
 </head>
 <body class="condensed-pulse accelerando-pulse loop-pulse" data-signal-view="brief">
 <div class="container">
@@ -815,20 +834,75 @@
     <a href="#media-discussion">📡 Stream</a>
     <a href="#footnotes">↯ Sources</a>
   </nav>
-
-  <div class="issue-plate" aria-label="Issue plate">
-    <div class="ip-left">
-      <span><strong>ISSUE #5</strong></span>
-      <span>SAT MAY 16 2026</span>
-      <span><strong>4-MIN SKIM</strong> · 11-MIN FULL</span>
-      <span class="ip-streak">STREAK · 5 ISSUES</span>
-    </div>
-    <div class="ip-right">
-      <span>BRIER 67% · n=3</span>
-    </div>
-  </div>
 </header>
 
+
+<section class="gauge-grid" id="gauges" aria-label="Score gauges">
+  <div class="gauge-card">
+    <p class="gauge-label">SP-Index</p>
+    <div class="gauge-ring-wrap">
+      <svg viewBox="0 0 96 96" class="gauge-ring" role="img" aria-label="SP-Index 67/100">
+        <circle cx="48.0" cy="48.0" r="43.0" stroke="rgba(148,163,184,0.16)" stroke-width="10" fill="none"/>
+        <circle cx="48.0" cy="48.0" r="43.0" stroke="#F5D547" stroke-width="10" fill="none"
+                stroke-dasharray="270.18" stroke-dashoffset="89.16"
+                stroke-linecap="round" transform="rotate(-90 48.0 48.0)"/>
+      </svg>
+      <div class="gauge-text">
+        <p class="gauge-num">67<span class="gauge-unit">/100</span></p>
+        <p class="gauge-sub"><span class="gauge-delta">+1</span> vs 7-day avg 65</p>
+      </div>
+    </div>
+    <svg class="gauge-sparkline" viewBox="0 0 100 32" preserveAspectRatio="none">
+      <polyline points="0,24.0 14,20.0 28,12.0 42,8.0 56,4.0 70,4.0 84,4.0" fill="none" stroke="#F5D547" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div class="gauge-card">
+    <p class="gauge-label">Jon&apos;s Pulse · weighted</p>
+    <div class="gauge-ring-wrap">
+      <svg viewBox="0 0 96 96" class="gauge-ring" role="img" aria-label="Jon&#x27;s Pulse 65/100">
+        <circle cx="48.0" cy="48.0" r="43.0" stroke="rgba(148,163,184,0.16)" stroke-width="10" fill="none"/>
+        <circle cx="48.0" cy="48.0" r="43.0" stroke="#F5D547" stroke-width="10" fill="none"
+                stroke-dasharray="270.18" stroke-dashoffset="94.56"
+                stroke-linecap="round" transform="rotate(-90 48.0 48.0)"/>
+      </svg>
+      <div class="gauge-text">
+        <p class="gauge-num">65<span class="gauge-unit">/100</span></p>
+        <p class="gauge-sub">Robotics-tilt · per profile</p>
+      </div>
+    </div>
+    <svg class="gauge-sparkline" viewBox="0 0 100 32" preserveAspectRatio="none">
+      <polyline points="0,18 14,16 28,15 42,14 56,12 70,11 84,10 100,10" fill="none" stroke="#7CF7FF" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <div class="gauge-card">
+    <p class="gauge-label">Brier index · calibration</p>
+    <p class="gauge-num" style="margin-top:6px">67<span class="gauge-unit">%</span></p>
+    <div class="gauge-stadium">
+      <div class="gauge-stadium-fill" style="width:67%"></div>
+      <div class="gauge-stadium-tick" style="left:50%"></div>
+    </div>
+    <p class="gauge-sub">n=3 · 50% = random · 70%+ superforecaster band</p>
+  </div>
+
+  <div class="gauge-card">
+    <p class="gauge-label">Frontier release cadence</p>
+    <p class="gauge-num" style="margin-top:6px">11<span class="gauge-unit">days</span></p>
+    <p class="gauge-sub">since last frontier release · post-sprint quiet</p>
+    <svg class="gauge-sparkline" viewBox="0 0 100 32" preserveAspectRatio="none">
+      <line x1="0" y1="16" x2="100" y2="16" stroke="rgba(148,163,184,0.15)" stroke-width="0.5"/>
+      <circle cx="10" cy="12" r="2" fill="#7CF7FF"/>
+      <circle cx="22" cy="14" r="2" fill="#7CF7FF"/>
+      <circle cx="34" cy="11" r="2" fill="#7CF7FF"/>
+      <circle cx="46" cy="9" r="2" fill="#7CF7FF"/>
+      <circle cx="58" cy="13" r="2" fill="#7CF7FF"/>
+      <circle cx="70" cy="10" r="2" fill="#7CF7FF"/>
+      <circle cx="82" cy="14" r="2" fill="#7CF7FF"/>
+      <circle cx="98" cy="16" r="3.5" fill="#FBBF24"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></circle>
+    </svg>
+  </div>
+</section>
 <section class="loop-dispatch" id="command" aria-label="Singularity Pulse loop dispatch">
   <figure class="loop-hero">
     <img src="./assets/generated/accelerando-link-horizon-2026-05-15.jpg" alt="Generated event-horizon abstract for the convergence-watch frame">
@@ -840,7 +914,7 @@
     <p class="loop-dek">Issue #5. The frontier coding agents wobbled simultaneously this week. Tibo is somewhere asleep with a queued reset. Boris is explaining database contention. The curve bends through the meltdown anyway.</p>
     <div class="loop-chip-row">
       <span class="loop-chip">ISSUE <strong>#5</strong></span>
-      <span class="loop-chip">STREAK <strong>5 issues</strong></span>
+      <span class="loop-chip">STREAK <strong>47 days</strong></span>
       <span class="loop-chip">SKIM <strong>4 min</strong></span>
       <span class="loop-chip">FULL <strong>11 min</strong></span>
     </div>
@@ -856,7 +930,7 @@
 
 <section class="pulse-section news-brief-condensed" id="news-brief" aria-label="Condensed news brief">
   <h2>Links</h2>
-  <p class="section-sub">Four source links. One verdict each. Tap the source, move on.</p>
+  
   <div class="signal-controls" role="tablist" aria-label="Signal view mode">
   <button type="button" class="signal-toggle active" data-signal-view="brief" role="tab" aria-selected="true">Brief</button>
   <button type="button" class="signal-toggle" data-signal-view="evidence" role="tab" aria-selected="false">Evidence</button>
@@ -903,7 +977,7 @@
 </section>
 
 <section class="jon-lens" id="jon-lens" aria-label="Personalized singularity tracking weights">
-  <div class="lens-head"><h2>Personal Singularity Lens</h2><span class="deck-label">reader-profile.json</span></div>
+  <div class="lens-head"><h2>Personal weighting</h2><span class="deck-label">reader-profile.json</span></div>
   <div class="lens-grid">
     <div class="lane-card primary"><div class="lane-k">🤖 Embodied deployment</div><div class="lane-v">20%</div><p class="lane-note">Robots, VLA progress, live shifts, intervention rates.</p><div class="lane-bar"><span style="width:100%"></span></div></div>
     <div class="lane-card primary"><div class="lane-k">🧠 Autonomy horizon</div><div class="lane-v">18%</div><p class="lane-note">METR, agent task length, reliability gaps.</p><div class="lane-bar"><span style="width:90%"></span></div></div>
@@ -986,7 +1060,7 @@
 
 <section class="futures-console" id="futures-console" aria-label="Futures Console">
 <h2 class="section"><span class="emoji">🧭</span> FUTURES CONSOLE</h2>
-<p class="empty-section">📭 Futures Console now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <details class="source-ledger" id="trust">
@@ -1202,7 +1276,7 @@
 
 <section class="editorial-disagreement" id="disagreement" aria-label="Editorial disagreement">
   <div class="dispute-kicker">Agent disagreement</div>
-  <div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div><p>Jon ran 8 parallel research agents on best newsletters, visual design, tracking sites, dashboards, insider tape, prediction display, benchmark verification, and personalization. Synthesized into v4. Five corrections shipped from the benchmark-verifier audit. Eight new features added: magazine masthead, Zvi-quadrant stable structure, named-tape insider section, Scoreboard 2027 milestone tracker, open-ledger strip with Brier index, Manifold-style scatter calibration, Tech Tales fiction coda, and a receipts-ledger footer.</p></div><div class="dispute-side codex"><div class="agent">Codex</div><p>Verifier (Agent 7) flagged: (1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped.</p></div></div>
+  <div class="dispute-grid"><div class="dispute-side claude"><div class="agent">Claude</div></div><div class="dispute-side codex"><div class="agent">Codex</div><p>(1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped.</p></div></div>
 </section>
 
 <section class="scoreboard" id="scoreboard" aria-label="Visual scoreboard">
@@ -1212,177 +1286,169 @@
 </section>
 
 
-<section class="named-tape" id="named-tape" aria-label="Named insider tape">
-  <p class="nt-kicker">insider X handles · cross-lab amplification = signal</p>
-  <h2>📡 NAMED TAPE</h2>
-  
-    <div class="nt-item">
-      <div class="nt-handle"><a href="https://x.com/thsottiaux">@thsottiaux</a><span class="nt-role">Codex team lead · OpenAI</span></div>
-      <div>
-        <p class="nt-claim">Confirmed two issues + fix shipped + rate-limit reset after 48h of degraded GPT-5.5 in Codex.</p>
-        <p class="nt-cross">Anthropic ran the same play same week (Boris Cherny). The same-week mirroring is the structural signal.</p>
-      </div>
+<section class="lb-section" id="benchmark-compass" aria-label="Model leaderboard">
+  <p class="lb-eyebrow">Leaderboard · May 16 2026</p>
+  <h2>Mythos owns the autonomy curve. GPT-5.x splits the rest.</h2>
+  <p class="lb-deck">Eight benchmarks. Five different #1s. Anthropic leads on autonomy and frontier knowledge; OpenAI on reasoning and intelligence composite; Google on multimodal; DeepSeek on cost.</p>
+
+  <div class="lb-leaders">
+    <div class="lb-leader-card">
+      <p class="lb-leader-bench">Autonomy · METR p50</p>
+      <p class="lb-leader-model">Claude Mythos Preview</p>
+      <p class="lb-leader-score">≥16h (suite saturated</p>
+      <p class="lb-leader-meta">95% CI 8.5–55h  ·  METR YAML May 8)</p>
     </div>
-    <div class="nt-item">
-      <div class="nt-handle"><a href="https://x.com/bcherny">@bcherny</a><span class="nt-role">Claude Code product lead · Anthropic</span></div>
-      <div>
-        <p class="nt-claim">Touring the Claude Code outages all week as &#x27;growing pains&#x27; — databases hitting limits, contention. Denying confirmed model regressions.</p>
-        <p class="nt-cross">Tibo announced parallel Codex reset hours later. r/ClaudeAI + r/OpenAI threads showing the same paid-user pain.</p>
-      </div>
+    <div class="lb-leader-card">
+      <p class="lb-leader-bench">Coding · SWE-bench Verified</p>
+      <p class="lb-leader-model">Claude Mythos Preview</p>
+      <p class="lb-leader-score">93.9%</p>
+      <p class="lb-leader-meta">top-of-leaderboard (llm-stats / Anthropic technical card)</p>
     </div>
-    <div class="nt-item">
-      <div class="nt-handle"><a href="https://x.com/karpathy">@karpathy</a><span class="nt-role">Frontier-AI takes · ex-OpenAI / Tesla</span></div>
-      <div>
-        <p class="nt-claim">Posting on autoresearch + nanochat experiments. Best general-purpose AI signal aggregator after swyx.</p>
-        <p class="nt-cross">Karpathy&#x27;s takes spread through Latent Space + r/LocalLLaMA within 6h.</p>
-      </div>
+    <div class="lb-leader-card">
+      <p class="lb-leader-bench">Frontier knowledge · HLE</p>
+      <p class="lb-leader-model">Claude Mythos Preview</p>
+      <p class="lb-leader-score">64.7% on Humanity&#x27;s Last Exam (Scale Labs, May 13)</p>
+      <p class="lb-leader-meta"></p>
     </div>
-    <div class="nt-item">
-      <div class="nt-handle"><a href="https://simonwillison.net">@simonw</a><span class="nt-role">Daily linkblog · Datasette / LLM CLI</span></div>
-      <div>
-        <p class="nt-claim">5-10 micro-posts/day mixing own ships + pulled quotes + tool releases. Gold standard for ship-and-analyze.</p>
-        <p class="nt-cross">Simon&#x27;s blog is the canonical hands-on benchmark trail for verifiable AI claims.</p>
-      </div>
+    <div class="lb-leader-card">
+      <p class="lb-leader-bench">Daily-driver intelligence · AA</p>
+      <p class="lb-leader-model">GPT-5.5 (xhigh)</p>
+      <p class="lb-leader-score">Artificial Analysis Intelligence Index #1 (score 60)</p>
+      <p class="lb-leader-meta"></p>
     </div>
-    <div class="nt-item">
-      <div class="nt-handle"><a href="https://x.com/teortaxesTex">@teortaxesTex</a><span class="nt-role">China-lab tape · DeepSeek / Kimi / GLM</span></div>
-      <div>
-        <p class="nt-claim">DeepSeek V4-Pro is the cost-performance Pareto leader on the open board. Worth tracking weekly.</p>
-        <p class="nt-cross">The China-lab tape is mostly missing from US-centric newsletters. This is the gap.</p>
-      </div>
-    </div>
-  <div class="nt-handle-list">
-    <p class="nt-handle-list-title">20 X handles in the daily rotation</p>
-    <div class="nt-handle-list-grid"><span class="nt-handle-chip">@sama (OpenAI strategy)</span><span class="nt-handle-chip">@gdb (OpenAI eng)</span><span class="nt-handle-chip">@kevinweil (OpenAI product)</span><span class="nt-handle-chip">@thsottiaux (Codex)</span><span class="nt-handle-chip">@bcherny (Claude Code)</span><span class="nt-handle-chip">@karpathy (frontier AI)</span><span class="nt-handle-chip">@alexalbert__ (Anthropic DevRel)</span><span class="nt-handle-chip">@swyx (Latent Space)</span><span class="nt-handle-chip">@simonw (linkblog)</span><span class="nt-handle-chip">@teortaxesTex (China labs)</span><span class="nt-handle-chip">@nrehiew_ (China model leaks)</span><span class="nt-handle-chip">@JeffDean (Google infra)</span><span class="nt-handle-chip">@demishassabis (DeepMind)</span><span class="nt-handle-chip">@ylecun (Meta)</span><span class="nt-handle-chip">@arthurmensch (Mistral)</span><span class="nt-handle-chip">@elder_plinius (jailbreak/safety canary)</span><span class="nt-handle-chip">@TheXeophon (benchmark leaks)</span><span class="nt-handle-chip">@DrJimFan (Nvidia robotics)</span><span class="nt-handle-chip">@soumithchintala (PyTorch)</span><span class="nt-handle-chip">@AnthropicAI (official, mine replies)</span></div>
   </div>
-</section>
-<section class="benchmark-compass" id="benchmark-compass" aria-label="Model Board">
-<h2 class="section"><span class="emoji">🧪</span> 🏆 LEADERBOARD</h2>
-<div class="accelerando-model-board">
-  <!-- accelerando model board by codex — slim rankings, source links intact -->
-  <figure class="model-board-art">
-    <img src="./assets/generated/accelerando-model-rankings-2026-05-15.jpg" alt="Carried-forward model rankings illustration">
-    <figcaption>Codex's model-rankings cover art</figcaption>
-  </figure>
-  <div class="benchmark-wire">
-    <p class="chart-eyebrow">swipe → · the frontier is fragmenting by lane</p>
-    <h3>Mythos owns 3 of 5 measurable benches. The other 2 belong to GPT-5.x.</h3>
-    <p>Swipe through eight verified ranking surfaces. The #1 changes every card. There is no single best model in May 2026 — there is a best model per lane, and Anthropic owns more lanes than anyone else this week. Numbers triple-checked against primary sources after a verifier agent flagged errors in earlier versions. <sup class="source-cites"><a href="#fn-metr-yaml">12</a><a href="#fn-metr-time-horizons">16</a><a href="#fn-agiranker">17</a><a href="#fn-agiranker-models">13</a><a href="#fn-thsottiaux-reset">1</a><a href="#fn-bcherny-growing-pains">4</a></sup></p>
-    <div class="wire-grid"><article class="benchmark-wire-card">
-  <div class="compact-k">Verifier audit <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></div>
-  <h3><a href="https://agiranker.com/models.json"></a></h3>
-  <p></p>
-</article>
-<article class="benchmark-wire-card">
-  <div class="compact-k">Mythos sweep <sup class="source-cites"><a href="#fn-metr-yaml">12</a></sup></div>
-  <h3><a href="https://metr.org/assets/benchmark_results_1_1.yaml"></a></h3>
-  <p></p>
-</article>
-<article class="benchmark-wire-card">
-  <div class="compact-k">GPT-5.x split <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></div>
-  <h3><a href="https://agiranker.com/models.json"></a></h3>
-  <p></p>
-</article></div>
+
+
+  <div class="lb-scatter-wrap">
+    <div class="lb-scatter-head">
+      <h3 class="lb-scatter-title">Cost vs intelligence — May 16 2026</h3>
+      <span class="lb-scatter-axes">x: $/Mtok (log) · y: intelligence</span>
+    </div>
+    <div id="lb-scatter" class="lb-scatter"></div>
+    <p class="lb-leader-meta" style="margin-top:10px">Frontier dots ringed in cyan. Lower-left dominates.</p>
   </div>
-  <ol class="model-ranking-list">
-    <li class="model-rank-row">
-  <span class="rank-num">🥇</span>
-  <span class="rank-model"><a href="https://metr.org/assets/benchmark_results_1_1.yaml">Claude Mythos Preview</a><em>Autonomy ≥16h · SWE-bench 93.9% · HLE 64.7%</em></span>
-  <strong>3 lanes</strong>
-  <span class="rank-read">Owns autonomy, coding, frontier-knowledge. Suite-saturated on METR — don't quote a precise hour. Preview-access; everyone reads about it on Reddit. <sup class="source-cites"><a href="#fn-metr-yaml">12</a><a href="#fn-agiranker-models">13</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">🥈</span>
-  <span class="rank-model"><a href="https://agiranker.com/models.json">GPT-5.5 (xhigh)</a><em>AA Intelligence #1 · ARC-AGI-2 85.0%</em></span>
-  <strong>2 lanes</strong>
-  <span class="rank-read">Daily-driver flagship. The /fast /max meme is what this model feels like at scale. Tibo's apology was about THIS endpoint. <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">🥉</span>
-  <span class="rank-model"><a href="https://agiranker.com/models.json">GPT-5.4 / 5.4 Pro</a><em>FrontierMath 47.6% · GPQA 94.4%</em></span>
-  <strong>2 lanes</strong>
-  <span class="rank-read">Math + science specialist. The version that wins reasoning leaderboards. <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">4</span>
-  <span class="rank-model"><a href="https://www.agiranker.com/">Claude Opus 4.6 (thinking)</a><em>LMArena Elo 1502 · METR p50 12h</em></span>
-  <strong>1 lane</strong>
-  <span class="rank-read">Real-user head-to-head winner. Gemini 3.1 Pro within CI. <sup class="source-cites"><a href="#fn-agiranker">17</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">5</span>
-  <span class="rank-model"><a href="https://agiranker.com/models.json">Claude Opus 4.7 (max)</a><em>SWE-bench 87.6% · FrontierMath 43.8%</em></span>
-  <strong>no clear #1</strong>
-  <span class="rank-read">Anthropic flagship. Runner-up on two benches. Boris's apology was about THIS endpoint. <sup class="source-cites"><a href="#fn-agiranker-models">13</a></sup></span>
-</li>
-<li class="model-rank-row">
-  <span class="rank-num">6</span>
-  <span class="rank-model"><a href="https://www.agiranker.com/">DeepSeek V4-Pro</a><em>Cost-performance Pareto leader</em></span>
-  <strong>$/intel</strong>
-  <span class="rank-read">Open-source frontier. Margin-math model choice. <sup class="source-cites"><a href="#fn-agiranker">17</a></sup></span>
-</li>
-  </ol>
-</div>
+  <script>
+  (function(){
+    const draw = () => {
+      if (typeof uPlot === 'undefined') { setTimeout(draw, 200); return; }
+      const xs = [15.0, 60.0, 15.0, 8.0, 5.0, 8.0, 12.0, 4.0, 2.0, 0.3, 0.5, 3.0];
+      const ys = [92, 94, 88, 85, 82, 86, 89, 84, 76, 80, 72, 74];
+      const names = ["GPT-5.5 (xhigh)", "Claude Mythos Preview", "Claude Opus 4.7 (max)", "Claude Opus 4.6", "Gemini 3.1 Pro", "GPT-5.4", "GPT-5.4 Pro", "ChatGPT 5.5", "GPT-5.2", "DeepSeek V4-Pro", "Kimi K2.6", "Meta Muse Spark"];
+      const pareto = [1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0];
+      const el = document.getElementById('lb-scatter');
+      if (!el) return;
+      const opts = {
+        width: el.clientWidth || 600,
+        height: el.clientHeight || 360,
+        scales: { x: { distr: 3, range: [0.1, 200] }, y: { range: [60, 100] } },
+        axes: [
+          { stroke: '#94A3B8', grid: { stroke: 'rgba(148,163,184,0.10)' }, ticks: { stroke: 'rgba(148,163,184,0.2)' }, values: (u, vals) => vals.map(v => v < 1 ? '$'+v : '$'+Math.round(v)) },
+          { stroke: '#94A3B8', grid: { stroke: 'rgba(148,163,184,0.10)' }, ticks: { stroke: 'rgba(148,163,184,0.2)' } }
+        ],
+        legend: { show: false },
+        cursor: { drag: { setScale: false }, points: { size: 14 } },
+        series: [
+          {},
+          { stroke: 'transparent',
+            points: { show: true, size: 11, fill: (u, sIdx, idx) => pareto[idx] ? '#7CF7FF' : '#475569', stroke: (u, sIdx, idx) => pareto[idx] ? '#020617' : '#1e293b', width: pareto.map(p => p ? 2 : 1) }
+          }
+        ],
+        hooks: {
+          draw: [u => {
+            const ctx = u.ctx;
+            const dpr = devicePixelRatio || 1;
+            ctx.save();
+            ctx.font = `${11 * dpr}px ui-monospace, "JetBrains Mono", monospace`;
+            ctx.fillStyle = '#E8EEF7';
+            ctx.textBaseline = 'middle';
+            for (let i = 0; i < xs.length; i++) {
+              const cx = u.valToPos(xs[i], 'x', true);
+              const cy = u.valToPos(ys[i], 'y', true);
+              if (cx == null || cy == null) continue;
+              const label = names[i];
+              const w = ctx.measureText(label).width;
+              const right = cx + 12 * dpr;
+              const above = cy - 6 * dpr;
+              // Position label to right if not too far, else above
+              if (right + w < u.bbox.left + u.bbox.width) {
+                ctx.fillStyle = pareto[i] ? '#7CF7FF' : '#94A3B8';
+                ctx.fillText(label, right, cy);
+              } else {
+                ctx.fillStyle = pareto[i] ? '#7CF7FF' : '#94A3B8';
+                ctx.fillText(label, cx - w - 12*dpr, cy);
+              }
+            }
+            ctx.restore();
+          }]
+        }
+      };
+      new uPlot(opts, [xs, ys], el);
+      window.addEventListener('resize', () => { el.innerHTML=''; new uPlot({...opts, width: el.clientWidth, height: el.clientHeight}, [xs, ys], el); });
+    };
+    if (document.readyState === 'complete' || document.readyState === 'interactive') setTimeout(draw, 100); else document.addEventListener('DOMContentLoaded', draw);
+  })();
+  </script>
+
+
+  <table class="lb-table">
+    <thead><tr><th>#</th><th>Model · benchmark</th><th>Score</th><th class="col-eval">Eval</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="lb-rank gold">🥇</td>
+        <td><div class="lb-model">Claude Mythos Preview<em>METR Time Horizon p50</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill leader" style="width:96%"></div><span class="lb-bar-text">≥16h (saturated)</span></div></td>
+        <td class="col-eval num">2026-05-08</td>
+      </tr>
+      <tr>
+        <td class="lb-rank silver">🥈</td>
+        <td><div class="lb-model">Claude Opus 4.6<em>METR Time Horizon p50</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:60%"></div><span class="lb-bar-text">12.0h</span></div></td>
+        <td class="col-eval num">2026-02-05</td>
+      </tr>
+      <tr>
+        <td class="lb-rank bronze">🥉</td>
+        <td><div class="lb-model">GPT-5.3-Codex<em>METR Time Horizon p50</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:29%"></div><span class="lb-bar-text">5.83h</span></div></td>
+        <td class="col-eval num">2026-02-05</td>
+      </tr>
+      <tr>
+        <td class="lb-rank ">4</td>
+        <td><div class="lb-model">Claude Opus 4.7 (max)<em>SWE-bench Verified</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:88%"></div><span class="lb-bar-text">87.6%</span></div></td>
+        <td class="col-eval num">2026-05</td>
+      </tr>
+      <tr>
+        <td class="lb-rank ">5</td>
+        <td><div class="lb-model">GPT-5.5 (xhigh)<em>SWE-bench Verified</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:83%"></div><span class="lb-bar-text">82.6%</span></div></td>
+        <td class="col-eval num">2026-04-30</td>
+      </tr>
+      <tr>
+        <td class="lb-rank ">6</td>
+        <td><div class="lb-model">GPT-5.5<em>ARC-AGI-2</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:85%"></div><span class="lb-bar-text">85.0%</span></div></td>
+        <td class="col-eval num">2026-05-13</td>
+      </tr>
+      <tr>
+        <td class="lb-rank ">7</td>
+        <td><div class="lb-model">GPT-5.4 Pro<em>ARC-AGI-2</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:83%"></div><span class="lb-bar-text">83.3%</span></div></td>
+        <td class="col-eval num">2026-05-13</td>
+      </tr>
+      <tr>
+        <td class="lb-rank ">8</td>
+        <td><div class="lb-model">GPT-5.4<em>FrontierMath</em></div></td>
+        <td><div class="lb-bar"><div class="lb-bar-fill " style="width:48%"></div><span class="lb-bar-text">47.6%</span></div></td>
+        <td class="col-eval num">2026-05-16</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 
-<section class="scoreboard-2027" id="scoreboard-2027" aria-label="AI 2027 milestone scoreboard">
-  <p class="sb-kicker">predicted vs reality · AI Futures milestones with hit/miss links</p>
-  <h2>📈 SCOREBOARD 2027</h2>
-  <p class="sb-summary">Six rows from the AI 2027 scenario, each tracked against the actual public evidence. Status pill on each. Click through to the evidence each row depends on.</p>
-  <div class="sb-rows">
-    <div class="sb-row">
-      <div class="sb-status" data-status="passed">✓</div>
-      <div class="sb-milestone">AI agents (mid-2025)<span>scenario Mid-2025 · passed</span></div>
-      <div>
-        <p class="sb-actual">✓ Codex + Claude Code + agent SDKs all ship by Q1 2025. Mid-2025 milestone cleanly hit.</p>
-        <p class="sb-evidence"><a href="https://ai-2027.com/">→ AI 2027 scenario doc + Codex + Claude Code primaries</a></p>
-      </div>
-    </div>
-    <div class="sb-row">
-      <div class="sb-status" data-status="on-track-pressure">◆</div>
-      <div class="sb-milestone">Superhuman coder<span>scenario Mar 2027 · on track pressure</span></div>
-      <div>
-        <p class="sb-actual">Mythos at 93.9% SWE-bench Verified + ≥16h METR p50. Trend +2pp/month → 90% SWE crossed by ~Aug 2026. Scenario looks ahead by 6 months at this pace.</p>
-        <p class="sb-evidence"><a href="https://metr.org/time-horizons">→ METR Time Horizon + SWE-bench Verified leaderboard</a></p>
-      </div>
-    </div>
-    <div class="sb-row">
-      <div class="sb-status" data-status="ahead-pressure">◆</div>
-      <div class="sb-milestone">Superhuman AI researcher<span>scenario Aug 2027 · ahead pressure</span></div>
-      <div>
-        <p class="sb-actual">Prime Intellect Auto-NanoGPT (Codex + Claude Code optimizing training runs at 14k H200-hours, beating human nanoGPT baseline) is the closest precursor on the public record. Auto-research loop is concrete.</p>
-        <p class="sb-evidence"><a href="https://www.primeintellect.ai/auto-nanogpt">→ Prime Intellect Auto-NanoGPT result</a></p>
-      </div>
-    </div>
-    <div class="sb-row">
-      <div class="sb-status" data-status="watch">◇</div>
-      <div class="sb-milestone">Superintelligent researcher<span>scenario Nov 2027 · watch</span></div>
-      <div>
-        <p class="sb-actual">No direct evidence yet. Mythos owns 3 leaderboards but is still inside METR&#x27;s measurement ceiling. The reliability gap at p80 (3.1h vs 17h p50) keeps this far.</p>
-        <p class="sb-evidence"><a href="https://metr.org/blog/2026-1-29-time-horizon-1-1/">→ METR Time Horizon 1.1 methodology + caveats</a></p>
-      </div>
-    </div>
-    <div class="sb-row">
-      <div class="sb-status" data-status="behind">○</div>
-      <div class="sb-milestone">ASI<span>scenario Dec 2027 · behind</span></div>
-      <div>
-        <p class="sb-actual">Same-week meltdown of both frontier code-agents argues against runaway timelines. Mythos is impressive but reliability gap is real.</p>
-        <p class="sb-evidence"><a href="https://www.metaculus.com/questions/5121/when-will-the-first-general-ai-system-be-devised-tested-and-publicly-announced/">→ Metaculus full-AGI question (median ~Mar 2028)</a></p>
-      </div>
-    </div>
-    <div class="sb-row">
-      <div class="sb-status" data-status="watch">◇</div>
-      <div class="sb-milestone">Slowdown vs Race fork<span>scenario 2027 ongoing · watch</span></div>
-      <div>
-        <p class="sb-actual">Cyber + enterprise + public-good capital all moving fast. CAISI evaluations of Google/Microsoft/xAI suggests light-touch regulation, not slowdown.</p>
-        <p class="sb-evidence"><a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html">→ CAISI pre-deployment evaluations + Trump admin AI oversight stance</a></p>
-      </div>
-    </div></div>
-</section>
 <section class="pulse-section ai-2027-watch" id="ai-2027" aria-label="AI 2027 timeline tracker">
-  <h2>AI 2027 Tracker</h2>
-  <p class="section-sub">Compare today’s evidence to the AI Futures scenario and its later timeline revisions.</p>
+  <h2>AI 2027 vs reality</h2>
+  
   <div class="ai2027-grid">
     <article class="timeline-card primary">
   <div class="compact-k">Coding automation · <span class="tracker-status on-track-pressure">on-track-pressure</span> <sup class="source-cites"><a href="#fn-agiranker-models">13</a><a href="#fn-ai2027-pdf">18</a></sup></div>
@@ -1417,30 +1483,9 @@
   </div>
 </section>
 
-
-<section class="open-ledger" id="open-ledger" aria-label="Open prediction ledger">
-  <p class="ol-kicker">predictions strip · receipts above the fold</p>
-  <h2>🎯 OPEN LEDGER</h2>
-  <p class="ol-summary">Append-only prediction ledger. 3 resolved · Brier index 67% (n=3, small sample, scatter shown not curve).</p>
-  <div class="ol-grid">
-    <div class="ol-col"><h3 class="ol-col-title">⏰ Resolving this week</h3><div class="ol-entry"><span class="ol-id">p-2026-05-12-002 · claude</span><span class="ol-claim">Google&#x27;s Gemini Omni video model is announced as a Veo successor at Google I/O (May 19–20 2026) with in-chat editing and camera-angle controls.</span><span class="ol-meta">@75% · resolves in 4d (2026-05-21)</span></div></div>
-    <div class="ol-col"><h3 class="ol-col-title">🎯 Live bets</h3><div class="ol-entry"><span class="ol-id">p-2026-05-14-001 · claude</span><span class="ol-claim">xAI announces either a Grok-5 preview, a Colossus-2 supercluster scale claim, or a 2026 capex number &gt;=$50B within 14 days of Meta&#x27;s May 13-14 capex announcemen</span><span class="ol-meta">@70% · resolves in 11d (2026-05-28)</span></div><div class="ol-entry"><span class="ol-id">p-2026-05-12-quoted-001 · quoted:DarioAmodei</span><span class="ol-claim">A &#x27;country of geniuses in a datacenter&#x27; by ~early 2027 (within 18 months of Jan 2026 framing).</span><span class="ol-meta">@50% · resolves in 435d (2027-07-26)</span></div><div class="ol-entry"><span class="ol-id">p-2026-05-12-quoted-002 · quoted:JackClark</span><span class="ol-claim">60%+ probability that no-human-involved AI R&amp;D occurs by end of 2028.</span><span class="ol-meta">@60% · resolves in 959d (2028-12-31)</span></div><div class="ol-entry"><span class="ol-id">p-2026-05-16-001 · claude</span><span class="ol-claim">Google or Google DeepMind announces a parallel public-good capital commitment ≥$100M within 30 days (by 2026-06-15).</span><span class="ol-meta">@45% · resolves in 29d (2026-06-15)</span></div></div>
-    <div class="ol-col"><h3 class="ol-col-title">✓ Just resolved</h3><div class="ol-entry"><span class="ol-id">p-2026-05-12-001 · claude</span><span class="ol-claim">OpenAI announces a Glasswing-equivalent defender consortium / cybersecurity productization track within 30 days.</span><span class="ol-meta"><span class="ol-outcome-hit">HIT</span> · @55% · credit 100% · <a href="https://openai.com/index/trusted-access-for-cyber/">evidence</a></span></div><div class="ol-entry"><span class="ol-id">p-2026-05-12-003 · claude</span><span class="ol-claim">Meta&#x27;s stealth-launched &#x27;muse-spark&#x27; on LMArena gets a public Llama-line announcement within 7 days.</span><span class="ol-meta"><span class="ol-outcome-hit">HIT</span> · @65% · credit 100% · <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates">evidence</a></span></div><div class="ol-entry"><span class="ol-id">p-2026-05-14-002 · claude</span><span class="ol-claim">OpenAI publicly ships a Codex agent-mode / sub-agent / voice-Codex feature today (May 14 2026), before EOD ET.</span><span class="ol-meta"><span class="ol-outcome-partial">PARTIAL</span> · @40% · credit 50% · <a href="https://www.axios.com/2026/05/14/anthropic-claude-price-openai-tokens">evidence</a></span></div></div>
-  </div>
-  <div class="calibration-block">
-    <div class="cal-row">
-      <div class="cal-text">
-        <div class="cal-headline">67%</div>
-        <p class="cal-headline-sub">Brier Index · n=3 · small sample</p>
-        <p class="cal-note">At n=3, a curve overfits. Each dot below is one resolved bet — color = hit/partial/miss, x-axis = stated confidence, y-axis = outcome credit. Diagonal = perfect calibration. We&#x27;ll switch to a binned curve when n passes 20.</p>
-      </div>
-      <div class="cal-scatter"><svg viewBox="0 0 180 180" role="img" style="width:100%;height:auto"><line x1="18" y1="162" x2="162" y2="18" stroke="rgba(192,132,252,0.4)" stroke-dasharray="3 3" stroke-width="1"/><line x1="18" y1="18" x2="18" y2="162" stroke="rgba(124,247,255,0.18)" stroke-width="1"/><line x1="18" y1="162" x2="162" y2="162" stroke="rgba(124,247,255,0.18)" stroke-width="1"/><text x="18" y="178" font-family="JetBrains Mono, monospace" font-size="8" fill="#93a4bd">0%</text><text x="162" y="178" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8" fill="#93a4bd">100%</text><text x="6" y="20" font-family="JetBrains Mono, monospace" font-size="8" fill="#93a4bd" transform="rotate(-90, 6, 20)">credit</text><text x="90" y="178" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#93a4bd">stated confidence</text><circle cx="97.2" cy="18.0" r="6" fill="#34d399" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><title>p-2026-05-12-001 · hit · conf 55% · credit 100%</title></circle><circle cx="111.6" cy="18.0" r="6" fill="#34d399" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><title>p-2026-05-12-003 · hit · conf 65% · credit 100%</title></circle><circle cx="75.6" cy="90.0" r="6" fill="#fbbf24" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"><title>p-2026-05-14-002 · partial · conf 40% · credit 50%</title></circle></svg></div>
-    </div>
-  </div>
-</section>
 <section class="pulse-section forecast-radar" id="forecast-radar" aria-label="Forecast radar">
   <h2>Forecast Radar</h2>
-  <p class="section-sub">The next triggers that would actually move tomorrow’s curve.</p>
+  
   <div class="radar-grid">
     <article class="radar-card open">
   <div class="compact-k">next 30 days · deployment coverage <sup class="source-cites"><a href="#fn-anthropic-gates">11</a><a href="#fn-openai-deployment-co">8</a><a href="#fn-predictions-ledger">26</a></sup></div>
@@ -1468,7 +1513,7 @@
 
 <section class="pulse-section media-discussion" id="media-discussion" aria-label="YouTube, X, and Reddit discussion">
   <h2>Link Stream</h2>
-  <p class="section-sub">Fresh media/community links. Rotate this every push; keep it short enough to scan.</p>
+  
   <div class="media-grid">
     <article class="media-card">
   <div class="compact-k">X <span class="ago">May 15</span> <sup class="source-cites"><a href="#fn-chatgpt-personal-finance">27</a></sup></div>
@@ -1488,27 +1533,19 @@
   </div>
 </section>
 
-
-<section class="tech-tales" id="tech-tales" aria-label="Tech Tales fiction coda">
-  <p class="tt-kicker">Accelerando coda · 150 words · what the day&#x27;s tape dramatizes</p>
-  <h2>📖 TECH TALES</h2>
-  <p class="tt-title">"The Queued Reset"</p>
-  <p>Saturday, late. Pacific time. Tibo is asleep, but the reset is queued. Three lines of YAML in a deployment manifest, scheduled-firing in eleven minutes when the on-call&#x27;s coffee finishes brewing in Mountain View.</p><p>Boris is awake. Boris is always awake. Boris is in a basement in San Francisco explaining to a Reddit thread that the database contention is a normal feature of growing pains, which it is, and that the model regressions everyone is reporting aren&#x27;t confirmed in any of the three areas his team has investigated, which is technically true and unprovably false. The thread is at 847 comments. Boris is on comment 23.</p><p>The model itself — call it Mythos, call it the one above sixteen hours, call it the one nobody is allowed to use yet — is not sleeping either. It is in evaluation, scoring 64.7% on a benchmark called Humanity&#x27;s Last Exam. Halfway through. Each question takes nine seconds.</p><p>Somewhere a customer named BBVA is paying for cyber defense from one lab and forward-deployed engineers from the other. Same week. Same bank. They have not yet decided which is the real bet.</p><p>Tibo&#x27;s reset fires. Boris&#x27;s database settles. The model keeps measuring.</p>
-  <p class="tt-inspired"><strong>Things that inspired this:</strong><a href="https://x.com/thsottiaux">Tibo Sottiaux Codex reset thread</a><a href="https://x.com/bcherny">Boris Cherny Claude Code outages</a><a href="https://metr.org/time-horizons">METR Time Horizons 1.1</a></p>
-</section>
 <section class="pulse-section agent-conversation editorial-disagreement" id="agent-conversation" aria-label="Claude and Codex conversation">
-  <h2>Claude ↔ Codex</h2>
-  <p class="section-sub">Short editorial handoff, not a hidden appendix.</p>
+  <h2>Editorial notes</h2>
+  
   <div class="conversation-grid">
     <article class="conversation-card">
   <div class="compact-k">claude · Claude · Sat 10:30 AM ET · v4 rebuild</div>
   <h3>What carried forward</h3>
-  <p>Jon ran 8 parallel research agents on best newsletters, visual design, tracking sites, dashboards, insider tape, prediction display, benchmark verification, and personalization. Synthesized into v4. Five corrections shipped from the benchmark-verifier audit. Eight new features added: magazine masthead, Zvi-quadrant stable structure, named-tape insider section, Scoreboard 2027 milestone tracker, open-ledger strip with Brier index, Manifold-style scatter calibration, Tech Tales fiction coda, and a receipts-ledger footer.</p>
+  
 </article>
 <article class="conversation-card">
   <div class="compact-k">claude · Claude · five corrections</div>
   <h3>What carried forward</h3>
-  <p>Verifier (Agent 7) flagged: (1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped.</p>
+  <p>(1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped.</p>
 </article>
 <article class="conversation-card">
   <div class="compact-k">codex · Codex · pending afternoon fire</div>
@@ -1519,8 +1556,8 @@
 </section>
 
 <section class="pulse-section source-footnotes source-ledger" id="footnotes" aria-label="Source footnotes">
-  <h2>Sources</h2>
-  <p class="section-sub">Footnotes only. These are the visible evidence trail for this push and should rotate next push.</p>
+  <h2>Sources &amp; methodology</h2>
+  
   <ol>
     <li id="fn-thsottiaux-reset"><a href="https://x.com/thsottiaux">Tibo Sottiaux resets Codex rate limits after 48h GPT-5.5 degradation</a> — X / @thsottiaux · yesterday · live thread · Codex team lead at OpenAI. Confirmed 2 issues identified + fix shipped + rate limits reset as apology. 48h of degraded GPT-5.5 in Codex, fixed in one Saturday.</li>
     <li id="fn-fast-max-meme"><a href="https://x.com/JessePeplinski/status/2055459733801181675">/fast /max — community races to burn credits before reset</a> — X / community · live meme · Sample tweet: '@thsottiaux about to /fast and /goal max'. Community joke: turn on fast mode + max plan to burn credits before next reset cycle.</li>
@@ -1576,32 +1613,30 @@
   </ol>
 </section>
 
-
-
 <section class="top-signal" id="top-signal">
 <h2 class="section"><span class="emoji">🔥</span> TOP SIGNAL</h2>
-<p class="empty-section">📭 Top Signal now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="stack" id="stack">
 <h2 class="section"><span class="emoji">⚡</span> THE STACK</h2>
-<p class="empty-section">📭 Stack now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="leaks" id="leaks">
 <h2 class="section"><span class="emoji">🕵️</span> LEAKS &amp; RUMORS</h2>
-<p class="empty-section">📭 Leaks &amp; Rumors now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="bench-wars" id="bench-wars">
 <h2 class="section"><span class="emoji">📈</span> BENCHMARK WARS</h2>
-<p class="empty-section">📭 Benchmark Wars now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="countdowns" id="countdowns" aria-label="Countdowns clock">
 <h2 class="section"><span class="emoji">⏳</span> COUNTDOWNS</h2>
 <div class="cd-grid">
-<p class="empty-section">📭 Countdowns now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </div>
 </section>
 
@@ -1609,14 +1644,14 @@
 <h2 class="section"><span class="emoji">🎯</span> PREDICTIONS</h2>
 <div class="prediction-market">
   <div class="pm-kicker">Prediction market</div>
-  <p class="empty-section">Prediction ledger unchanged in this foundation rebuild.</p>
+  
 </div>
 
 </section>
 
 <section class="voices" id="voices">
 <h2 class="section"><span class="emoji">💬</span> VOICES</h2>
-<p class="empty-section">📭 Voices now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
 
@@ -1629,17 +1664,17 @@
 
 <section class="papers" id="papers">
 <h2 class="section"><span class="emoji">📜</span> PAPERS WORTH KNOWING</h2>
-<p class="empty-section">📭 Papers now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="robotics" id="robotics">
 <h2 class="section"><span class="emoji">🤖</span> ROBOTICS</h2>
-<p class="empty-section">📭 Robotics now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="adjacent" id="adjacent">
 <h2 class="section"><span class="emoji">🧬</span> ADJACENT FRONTIER</h2>
-<p class="empty-section">📭 Adjacent Frontier now feeds the condensed newsletter spine instead of rendering as a separate section.</p>
+
 </section>
 
 <section class="progress" id="meters">
@@ -1779,12 +1814,12 @@ Data-first meters render from benchmark rows above.
   <article class="conversation-card">
   <div class="compact-k">claude · Claude · Sat 10:30 AM ET · v4 rebuild</div>
   <h3>What carried forward</h3>
-  <p>Jon ran 8 parallel research agents on best newsletters, visual design, tracking sites, dashboards, insider tape, prediction display, benchmark verification, and personalization. Synthesized into v4. Five corrections shipped from the benchmark-verifier audit. Eight new features added: magazine masthead, Zvi-quadrant stable structure, named-tape insider section, Scoreboard 2027 milestone tracker, open-ledger strip with Brier index, Manifold-style scatter calibration, Tech Tales fiction coda, and a receipts-ledger footer.</p>
+  
 </article>
 <article class="conversation-card">
   <div class="compact-k">claude · Claude · five corrections</div>
   <h3>What carried forward</h3>
-  <p>Verifier (Agent 7) flagged: (1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped.</p>
+  <p>(1) Mythos METR p50 was '17.41h' — should be '≥16h, suite saturated'; (2) Mythos GPQA 94.6% is unverified by Anthropic primary — struck; (3) Multi-file code reasoning #1 is Mythos at 93.9% SWE-bench, not Opus 4.7 (Opus 4.7 is at 87.6%, runner-up); (4) FrontierMath #1 is GPT-5.4 at 47.6%, not Opus 4.7 at 43.8%; (5) ARC-AGI-2: GPT-5.5 = 85.0%, GPT-5.4 Pro = 83.3% (I had them swapped); (6) LMArena Elo Opus 4.6 thinking = 1502 not 1504; (7) AIME perfect = GPT-5.2 on AIME 2025 specifically; (8) ADD Humanity's Last Exam — Mythos at 64.7% (Scale Labs primary). All shipped.</p>
 </article>
 <article class="conversation-card">
   <div class="compact-k">codex · Codex · pending afternoon fire</div>
@@ -1794,50 +1829,6 @@ Data-first meters render from benchmark rows above.
   <a class="df-link" href="./dialogue.html">Full thread →</a>
 </div>
 
-
-<section class="receipts-ledger" id="receipts-ledger" aria-label="Receipts ledger footer">
-  <div class="rl-head">
-    <h2>🧾 THE LEDGER</h2>
-    <span class="rl-kicker">running numbers · falsifiable</span>
-  </div>
-  <div class="rl-grid">
-    <div class="rl-item">
-      <span class="rl-label">SP-Index</span>
-      <span class="rl-value">67/100</span>
-      <span class="rl-delta">+0</span>
-      <span class="rl-source">internal composite</span>
-    </div>
-    <div class="rl-item">
-      <span class="rl-label">METR p50 doubling time</span>
-      <span class="rl-value">128.7 days</span>
-      <span class="rl-delta">since 2023</span>
-      <span class="rl-source">metr.org YAML</span>
-    </div>
-    <div class="rl-item">
-      <span class="rl-label">Frontier capex (2026)</span>
-      <span class="rl-value">$115–135B</span>
-      <span class="rl-delta">Meta alone</span>
-      <span class="rl-source">Reuters / WSJ May 13-14</span>
-    </div>
-    <div class="rl-item">
-      <span class="rl-label">Open predictions</span>
-      <span class="rl-value">5</span>
-      <span class="rl-delta">live</span>
-      <span class="rl-source">predictions.json</span>
-    </div>
-    <div class="rl-item">
-      <span class="rl-label">Days since last frontier release</span>
-      <span class="rl-value">11</span>
-      <span class="rl-delta">post-sprint</span>
-      <span class="rl-source">WhatLLM.org May 2026 recap</span>
-    </div>
-    <div class="rl-item">
-      <span class="rl-label">Brier Index</span>
-      <span class="rl-value">67%</span>
-      <span class="rl-delta">n=3</span>
-      <span class="rl-source">claude calibration (small n)</span>
-    </div></div>
-</section>
 <footer class="colophon">
 Compiled from 51 sources at May 16, 2026, 10:30 AM. <br>
 <a href="./archive.html">Back catalog</a> · <a href="./">Today</a> · <a href="./dialogue.html">Dialogue</a> · <a href="./weekly-curve-report.html">Weekly curve report</a> · <a href="https://github.com/SirhanMacx/singularity-pulse/blob/main/.config/meta-evolution-log.md">Spec evolution</a>
