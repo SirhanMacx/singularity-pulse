@@ -70,7 +70,7 @@
     {
       "date": "2026-05-12",
       "url": "https://jack-clark.net/",
-      "headline": "Import AI #455 — no-human AI R&D by 2028"
+      "headline": "Import AI #455 \u2014 no-human AI R&D by 2028"
     },
     {
       "date": "2026-05-13",
@@ -161,6 +161,32 @@
       "date": "2026-05-15",
       "url": "https://youtube.com/watch?v=4OiLljSo-hw",
       "headline": "YouTube: Riley Brown Codex Mobile"
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://sherwood.news/tech/anthropic-in-talks-for-funding-at-a-valuation-as-high-as-950-billion-which-would-make-it-bigger-than-openai/",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://dnyuz.com/2026/05/15/silicon-valleys-latest-binge-watch-is-a-humanoid-warehouse-worker/",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://arena.ai/blog/leaderboard-changelog/",
+      "date_seen": "2026-05-17",
+      "issue": 6
     }
-  ]
+  ],
+  "last_updated": "2026-05-17T07:50:00-04:00"
 }

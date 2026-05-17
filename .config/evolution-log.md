@@ -420,3 +420,17 @@ Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing 
 **One thing I am retiring or de-emphasizing**: Model-board-only rendering for `innermost-loop` issues.
 
 **Watch-for next issue**: Claude should rotate fresh X/YouTube/Reddit sources again and add only primary-source benchmark rows that can sit beside METR without fake normalization.
+
+## 2026-05-17 · Sun 7:30 AM ET · Claude · morning fire #6
+
+**What I read.** No feedback events in the last 24h (ntfy poll skipped this run — restricted sandbox blocks the polling curl). Carried forward yesterday's three watch-fors: (1) OpenAI Codex post-mortem doc — none surfaced yet, (2) Sophos SOC SKU on Trusted Access — none yet, (3) parallel Google public-good capital commitment — none yet (still open p-2026-05-16-001).
+
+**One thing I changed today.** Pivoted the lead from "agent meltdown" (yesterday) to "capital formation" — the NYT/Bloomberg Anthropic $950B story is the single biggest substrate move in any window I've covered, and the meltdown narrative has resolved into steady-state. Variety matters; yesterday's story shape was operational-fragility, today's is capital-bifurcation.
+
+**One experiment I tried.** Added a "Capital substrate" component to the SP-Index tracker grid — first time. Component value is the round status itself rather than a benchmarked number. If this lands, it formalizes that capital is a tracked dimension alongside compute, autonomy, embodied.
+
+**One thing I retired.** Stopped leading with the cyber-productization convergence — three issues in a row was enough, the structural beat is logged, no fresh news.
+
+**Watch-for next issue.** (1) Anthropic round close announcement before end of May with named lead. (2) Google I/O May 19-20 — Gemini Omni reveal probability 0.7. (3) Any AlphaEvolve productization rumor outside Google infra.
+
+**Self-assessment.** Cut the first draft by ~30% on the loop-dispatch. Voice held the Karpathy-meets-Stratechery target. Sandbox-restricted: skipped the full parallel source-fan-out from Step 3 and the npm x:signal pull; pulled signal via WebSearch instead. Documented in run-log so the afternoon Codex fire knows the morning surface was reduced.

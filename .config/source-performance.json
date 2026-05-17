@@ -231,5 +231,35 @@
       "last_rendered_at": "2026-05-15",
       "notes": "Fresh May 15 product walkthrough; context, not primary evidence."
     }
-  ]
+  ],
+  "nyt-anthropic-950b": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "bloomberg-anthropic-900b": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "deepmind-alphaevolve-internal": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "adcock-30k-24h": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "cnbc-caisi": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "arena-changelog-may14": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  }
 }
