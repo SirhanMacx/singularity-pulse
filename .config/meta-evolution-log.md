@@ -367,6 +367,70 @@ The agent should look for emerging sources to add, not just audit existing ones:
 
 **Bet for the coming week**: Executable editorial gates will prevent another regression into visually different but structurally stagnant card layouts.
 
+## 2026-05-17 . Week 1 . Meta-Review (Sun 6:00 PM ET) [meta-cron]
+
+**Audit window**: Issues #1-#6 (May 12-17, 6 daily editions, ~25 cumulative fires across morning/afternoon/evening slots). 0 ntfy feedback events for the full window (reader signal arrived in-band via direct conversation, not buttons). 28 evolution-log entries. 8 daily spec-mutation entries in this log between 05-13 and 05-16. UI_CONTRACT.md v5.2 introduced 05-16 and is now LAW.
+
+**Spec posture this week - the headline finding**:
+The newsletter survived a frantic 36-hour format-thrash episode (May 14 PM -> May 15 PM): nine consecutive Codex evening fires rewriting the visible spine - v9 Future Terminal -> v9.1 Condensed -> v10 Data-First -> Command Center -> Visual Cockpit -> Accelerando Slimdown -> Innermost Loop -> Innermost Loop Guardrails. Reader steered in real time. The thrash crystallized on May 16 into UI_CONTRACT.md v5.2 with the 12-section spine locked, three named regressions documented, and a 10-item approval checklist. **The system over-mutated. The contract is the correct response.** Meta-cron from this week forward must do less, not more: content/sources/voice/benchmarks only - never structural UI proposals without explicit reader approval in-thread.
+
+**Sources added** (recommendations for daily agents to commit with primary-source provenance):
+- `@bcherny` (Boris Cherny, Anthropic Claude Code lead) - explicitly named in reader feedback that triggered the May 16 midnight rebuild ("Boris Claude limits reset") and surfaced again May 17 in the Codex reset-chatter tape. Recommend promotion to `twitter:` first-class. First sighting: run-log entry 25.
+- `@thsottiaux` (Tibo Sottiaux, OpenAI Codex tech lead) - same midnight rebuild reader signal ("Tibo Codex /fast max") plus appears in 2026-05-17 sp_index components as `thsottiaux-reset`. Recommend `twitter_rumor_accounts:` since the value is rate-limit/feature-flag chatter. First sighting: run-log entry 25.
+- `ft.com / Investing.com / MarketScreener` mirror chain - FT paywall blocks direct fetch; the 05-17 PM lead used the secondary-press chain to access the FT co-leads scoop. Worth formalizing as a documented fallback pattern, not a sources.yml row.
+- `agiranker.com/models.json` already added 05-15; confirming retention - exact-cell benchmark data with primary-source link rows. **Status: KEEP, signal_score 5.**
+
+**Sources removed**: none. Hard rule says 14-day zero-signal before retirement. We have 6 days of post-thrash data, every source still in the rotation has rendered at least one item, and the audit window has been disrupted enough that retirement decisions should wait one more week.
+
+**Sections changed**: **NONE structurally.** UI_CONTRACT.md v5.2 is locked. The 12-section spine (Masthead . Issue plate . Score gauges . Loop dispatch . Named Tape . Leaderboard . Scoreboard 2027 . Open Ledger . Link Stream . Tech Tales . Sources . Receipts Ledger) ships unchanged. **Meta-cron is NOT proposing any structural change.** The post-thrash hidden-section list remains hidden - recommend revisiting after 14 days of post-lock stability to delete dead HTML, but no action this week.
+
+**Benchmarks added/dropped**:
+- **Added (confirming retention)**: METR Time Horizon 1.1 (raw YAML p50/p80), AGI Ranker matrix (SWE-bench Verified . ARC-AGI-2 . FrontierMath . GAIA . Agentick), Poetiq LiveCodeBench Pro (Meta-System harness lifting GPT-5.5 to 93.9%), Prime Intellect Auto-NanoGPT, GBA Eval (GPT-5.5 53.2%). All five added during 05-15 Benchmark Matrix / Innermost Loop mutations; all five rendered at least once and survived the May 16 midnight rebuild reader feedback that wanted simpler flat leaderboard, not zero benchmarks.
+- **Dropped**: composite SP-Index scoring remains paused per 05-14 Benchmark Compass decision. Six daily fires later, the pause is still correct - exact-cell rendering with primary-source links is what the reader praised on 05-16.
+- **Watch for promotion next week**: Mythos at METR >=16h p50 - currently rendered as primary autonomy-horizon evidence in today sp_index components but Mythos benchmark provenance is not yet in `benchmarks_to_track`. If it holds the top METR row for another 7 days, formalize.
+
+**SP-Index component additions**:
+- **Capital substrate** (added 05-17 morning by Claude) - first first-class capital-formation lane in the SP-Index components grid. Reader did not object; afternoon Codex fire reinforced it with FT co-leads concretization. **Status: PROMOTED to durable component.** This is the most substantive spec mutation of the week and the only one that survived without being walked back. Update `style-guide.md` next week to add "Capital formation / valuation rounds at frontier scale" as an explicit 9th measurable dimension if it draws signal again in the next 7 days; otherwise keep it as a sometimes-rendered component.
+
+**Voice / style-guide updates**:
+- The grep-and-kill list in UI_CONTRACT.md sec.3 is now LAW. Adding it to `style-guide.md` proper is a should-do for next week so daily agents read it from the canonical voice surface, not just the UI contract.
+- Voice target has bifurcated: "Karpathy-meets-Stratechery" for general narrative + "Accelerando-dense Stross-style" specifically for the loop-dispatch lead. Both ship daily. The bifurcation is intentional and reader-validated (05-15 Innermost Loop and 05-16 lock).
+- **No rapid voice flips rule check**: the Accelerando voice has only been live since May 15. Hard rule says 14 days before locking. **DO NOT add it to style-guide.md as canon yet.** Re-evaluate 2026-05-29.
+
+**Reader-suggested gaps the agent hasn’t filled yet** (carry-forward list):
+- **Codex post-mortem doc** - claude morning 05-17 carry-forward, still open. Watch OpenAI release notes / status page for an after-action on the 48h GPT-5.5 degradation.
+- **Sophos SOC SKU on Trusted Access for Cyber** - claude morning 05-17 carry-forward, still open.
+- **Google strategic-compute side-letter** - codex 05-17 PM bet p-2026-05-17-002 @0.55 over 14 days. Active.
+- **Reddit signal access** - agent-reach Exa API key still not configured (05-15 errors). Fresh Reddit conversation links keep rendering as web-search fallbacks. **Recommend: Jon configures Exa API key OR meta-cron formalizes the fallback as the documented pattern.**
+- **X auth health** - `npm run x:signal` and `agent-reach search-twitter` succeed intermittently; tweet-read endpoints fail more often than search. Monitor.
+
+**Source-discovery sweep** (per the Sunday checklist):
+1. **New labs mentioned 5+ times**: Poetiq (3 mentions), Prime Intellect (4), Mechanize (3), Thinking Machines (2 mentions, none new - confirmed quiet for second week, **Watch list note**). None over the 5+ threshold yet.
+2. **Rising voices retweeted 3+ times by tracked researchers**: @bcherny + @thsottiaux above (formal adds). @adcock_brett amplification on Figure 24h ran 4+ times this week - already first-class, no action.
+3. **New YouTube channels >100k subs in window**: none surfaced.
+4. **New benchmarks cited 10+ times**: LiveCodeBench Pro (Poetiq chosen yardstick) - already added.
+5. **New leaderboards w/ research-credibility**: agiranker.com already added.
+6. **Cross-domain emergence**: **Capital formation** (see SP-Index components above). First true cross-domain promotion of the project.
+
+**Watch list updates** (the running emerging-signals list at the top of this file):
+- Thinking Machines Lab - **still quiet** for second straight week after the 05-12 first-research-post promotion-watch. Keep on watch one more week, demote if still silent on 2026-05-24. @miramurati promotion stays paused.
+- **Mythos** (the model holding >=16h METR p50) - promote to first-class autonomy-horizon source if it survives another 7 days at the top of the METR row.
+- **Capital-formation lane** - now a tracked SP-Index component as of 05-17. Watch for whether OpenAI pending round and any sovereign-fund involvement justifies a permanent 9th dimension in style-guide.md.
+
+**Spec mutations made during this run**: NONE to the rendered product. This is a pure audit + carry-forward entry. The two formal source additions (`@bcherny`, `@thsottiaux`) are recommendations; the daily agents should propose the actual sources.yml edits in the next morning fire so the change goes through the normal commit flow with primary-source provenance attached.
+
+**Bet for the coming week** (one prediction the current spec might miss):
+**Google I/O Tue-Wed May 19-20** will produce a single capability moment so dense (Gemini Omni + agent-mode + AlphaEvolve-derived productization) that the loop_dispatch lead will struggle to fit it in one paragraph. The current 12-section spine has no "live event" mode - when something five-axis-moves the curve on a single day, the issue should be allowed to lead with a 600-word dispatch and compress the rest, without the meta-cron treating it as a structural mutation. **Recommend: daily agents have explicit permission, within the existing spine, to expand loop_dispatch to 6-8 paragraphs on event days.** This is a clarification, not a structural change - flagging it here so the morning fire does not self-throttle to "1 paragraph hero" out of UI-lock paranoia.
+
+**Calibration check on prior weekly bets**:
+- 05-12 bet: "Google I/O surfaces Gemini Omni and Gemini 4" - **still live**, resolves Tue/Wed.
+- 05-12 bet: "Thinking Machines posts again within 7 days" - **MISS** (zero further posts through 05-17). Carry forward with reduced confidence; do not promote @miramurati this week.
+
+**One thing established about the meta-loop itself**:
+The first real Sunday review (with 6 days of signal vs. last week seed entry) reveals the meta-cron actual job: **be the brake, not the engine.** Daily agents will mutate aggressively under reader pressure. The weekly job is to look at the wreckage, keep what survived a week, retire what did not, and refuse to add momentum to in-flight mutations. The UI lock is the textbook example: nine evening fires of structural rewrites collapsed into one signed-off spine, and the meta-cron role is to ensure that contract stays load-bearing by not proposing structural changes here.
+
+---
+
 ## 2026-05-16 · Week 1 · Spec Mutation [codex] · Tracker Spine Rebalance
 
 **Audit window**: Reader asked to run maximum parallel agents, research best newsletters/information displays, and rebuild the foundation so Singularity Pulse tracks the singularity instead of feeling like a static newsletter.
