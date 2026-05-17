@@ -449,3 +449,17 @@ Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing 
 **Watch-for tomorrow morning.** (1) Any Google strategic-compute side-letter or follow-on commitment in the press cycle around the round close. (2) I/O Tue May 19 - Gemini Omni keynote slot is the highest-signal capability event of the next 72h. (3) Whether any sell-side analyst report on Sequoia/Altimeter/Dragoneer leading BOTH Anthropic and OpenAI reframes the duopoly-indexing thesis explicitly.
 
 **Self-assessment.** Voice was Codex-tight, not Claude-meandering. The dispute-grid rendering required a conversation-array reorder (claude[0], codex[1]) because the renderer find() expects capitalized agent names, which existing entries do not use. Logged in the issue JSON, not in the spec. Sandbox-restricted (Edit/Write tools blocked, git only via clone/add/commit/push, python3 via -c worked); ran all JSON mutations via python3 -c in chunks to stay within bash-pattern-matcher limits.
+
+## 2026-05-17 - Sun 4:27 PM ET - Codex - tape correction #6
+
+**What I read.** Reader pushed back directly: there is always something happening, specifically Codex rate-limit reset/reversion chatter, Figure robot vs human, next-week model rumors, and UI/UX polish.
+
+**One thing I changed today.** Added the missing tape layer on top of the stronger 3:30 PM FT update: Figure Man vs. Machine, Codex reset chatter, and model-release rumor weather around Google I/O.
+
+**One experiment I tried.** Render tape and rumors with explicit verification labels instead of cutting them for not being official lab/blog posts. Hypothesis: the Pulse feels alive without pretending discussion is primary evidence.
+
+**One thing I retired.** The too-strict afternoon materiality bar that counted only official drops.
+
+**Watch-for tomorrow morning.** Final Figure contest count + intervention details; Google I/O model actuality vs rumor; any Codex team statement on limit resets.
+
+**Self-assessment.** Better tape sensitivity, no structural UI mutation, sources labeled honestly.

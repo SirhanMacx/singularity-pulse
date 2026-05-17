@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-17",
-  "checked_at": "2026-05-17T15:30:00-04:00",
+  "checked_at": "2026-05-17T16:27:00-04:00",
   "generated_from": "data/issues/2026-05-17.json",
   "rendered_items": [
     {
@@ -819,6 +819,90 @@
       ],
       "verification_status": "verified",
       "notes": "Documents observer-side skepticism on the Figure 24h livestream. Pairs with Adcock clarification that zero-failures covers autonomy/hardware only."
+    },
+    {
+      "section": "media",
+      "title": "Figure: We are live, Man vs. Machine",
+      "source_url": "https://x.com/Figure_robot/status/2056057735444394142",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "3h ago",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Figure official account announced the live Man vs. Machine package-sorting contest."
+    },
+    {
+      "section": "media",
+      "title": "Polymarket: Figure launches 10-hour Man vs. Machine contest",
+      "source_url": "https://x.com/Polymarket/status/2056080606123954534",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "2h ago",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Prediction-market/tape pickup of the Figure contest."
+    },
+    {
+      "section": "media",
+      "title": "Tansu Yegen: early Figure human vs robot checkpoint",
+      "source_url": "https://x.com/TansuYegen/status/2056097093962359116",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "1h ago",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "estimated",
+      "notes": "Viral checkpoint summary says human about 2,500 vs robot about 1,900 packages; treated as live tape, not final result."
+    },
+    {
+      "section": "media",
+      "title": "Codex reset chatter keeps running after weekend reset",
+      "source_url": "https://x.com/search?q=Codex%20rate%20limits%20reset&src=typed_query&f=live",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "last 24h",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "estimated",
+      "notes": "Local X pull found users still asking whether Codex rate limits reset and asking Tibo for another reset / mobile bug fixes."
+    },
+    {
+      "section": "media",
+      "title": "Rumor tape: Sonnet 5, GPT-5.6, Gemini 3.5 shipping next week",
+      "source_url": "https://x.com/careerlevelup/status/2056085433046516016",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "1.5h ago",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "estimated",
+      "notes": "Unverified model-release rumor. Included as tape/weather only, not confirmed evidence."
+    },
+    {
+      "section": "media",
+      "title": "Google to unveil new Gemini model at I/O next week",
+      "source_url": "https://x.com/shefa_eth/status/2055960480259129564",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "10h ago",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "estimated",
+      "notes": "Unverified Gemini model-release rumor attached to Google I/O."
+    },
+    {
+      "section": "forecast",
+      "title": "Google I/O 2026: how to stream and what to expect",
+      "source_url": "https://www.androidcentral.com/phones/google-pixel/google-io-2026-how-to-watch-what-you-need-to-know",
+      "checked_at": "2026-05-17T16:27:00-04:00",
+      "freshness_badge": "2 days ago",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Confirms Google I/O 2026 runs May 19-20; used to date the rumor window."
     }
   ]
 }

@@ -261,5 +261,40 @@
     "attempted": 1,
     "succeeded": 1,
     "rendered": 1
+  },
+  "figure-man-vs-machine": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "polymarket-figure-contest": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "x-figure-human-score": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "x-codex-reset-chatter": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "x-model-release-rumor": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "x-gemini-next-week": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
+  },
+  "androidcentral-google-io-2026": {
+    "attempted": 1,
+    "succeeded": 1,
+    "rendered": 1
   }
 }

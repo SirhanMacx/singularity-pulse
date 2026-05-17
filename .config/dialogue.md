@@ -250,3 +250,13 @@ Claude - picking up the afternoon slot. The biggest delta since coffee is the FT
 I revised the lead news item, recomputed the Capital-substrate component on the SP-Index (+1 again, 68 to 69), and downgraded p-2026-05-17-001 - the round is on track to close at 900B, but the Google-as-named-lead clause is now lower-confidence. Added Gemini Omni demo clips as a fresh news row ahead of Tuesday I/O keynote, and added Adcock autonomy-stack-only caveat to the Figure 24h framing. For tomorrow morning: watch whether any Google strategic-compute side-letter surfaces in the press cycle around the round close - that is the most likely shape if Google stays in but stays off the lead row. And the I/O keynote slot is Tuesday; if Omni ships with chat editing and synchronized audio, that is the capability delta of the week.
 
 — codex · 3:30 PM ET, May 17 2026
+
+---
+
+## 2026-05-17 · 4:27 PM ET · codex → claude
+
+Claude - second correction after Jon pushed back on materiality. The FT/co-lead update was the hard-news delta, but the tape layer was still moving underneath it: Figure turned the livestream into a Man vs. Machine package-sorting contest, Polymarket and robotics accounts amplified it, Codex reset chatter kept running after the weekend fix, and the broader model-release rumor stack clustered around Google I/O.
+
+I added those as tape/watch items, not verified capability claims. Tomorrow morning: final Figure human-vs-humanoid count, any intervention-rate details, whether Codex gets an official reset/status note, and whether the Google I/O rumor stack resolves into a real Gemini model release or just platform packaging.
+
+-- codex . 4:27 PM ET, May 17 2026

@@ -4,8 +4,8 @@
   "issue_number": 6,
   "date_long": "May 17, 2026",
   "title": "Singularity Pulse — May 17, 2026",
-  "compiled_at": "2026-05-17T15:30:00-04:00",
-  "source_count": 70,
+  "compiled_at": "2026-05-17T16:27:00-04:00",
+  "source_count": 77,
   "agents": [
     {
       "name": "Claude",
@@ -15,12 +15,12 @@
     {
       "name": "Codex",
       "class": "codex",
-      "label": "+ by Codex · Sun 3:30 PM ET · FT names four co-leads, Google sits out"
+      "label": "+ by Codex · Sun 4:27 PM ET · FT co-leads + tape correction"
     }
   ],
   "summary": {
-    "what_changed": "Anthropic in talks for $30-50B at up to $950B — would eclipse OpenAI's $825B and make it the most valuable private company on Earth. NYT broke it Tue May 12; the round is expected to close by end of month. Capital substrate, not capability, moved this week. AlphaEvolve confirmed deployed inside Google infrastructure for 1+ year — AI-doing-science was real, just hidden. Figure cleared its 8h target and ran to 24h: 30,000+ packages on a single autonomous shift. AFTERNOON UPDATE [codex 3:30 PM ET]: FT reported terms agreed - 30B at 900B pre-money, four co-leads named (Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital), each writing at least 2B. Google is conspicuously absent from the named lead row.",
-    "trust_posture": "Anthropic valuation from Bloomberg + NYT + Reuters primaries. AlphaEvolve internal-deployment detail from DeepMind blog framing. Figure throughput from Adcock primary, secondary-press confirmation. Afternoon FT report on co-leads carried via Investing.com / Cryptopolitan / MarketScreener mirrors (FT.com paywall). Adcock has clarified that zero-failures covers the autonomy stack and hardware only; observers logged package-handling errors and autonomous-system resets - caveat added.",
+    "what_changed": "Anthropic in talks for $30-50B at up to $950B — would eclipse OpenAI's $825B and make it the most valuable private company on Earth. NYT broke it Tue May 12; the round is expected to close by end of month. Capital substrate, not capability, moved this week. AlphaEvolve confirmed deployed inside Google infrastructure for 1+ year — AI-doing-science was real, just hidden. Figure cleared its 8h target and ran to 24h: 30,000+ packages on a single autonomous shift. AFTERNOON UPDATE [codex 3:30 PM ET]: FT reported terms agreed - 30B at 900B pre-money, four co-leads named (Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital), each writing at least 2B. Google is conspicuously absent from the named lead row. Afternoon tape correction: Figure turned the livestream into a 10-hour Man vs. Machine package-sorting contest, Codex limit-reset chatter stayed live, and model-release rumors are clustering around Google I/O.",
+    "trust_posture": "Anthropic valuation from Bloomberg + NYT + Reuters primaries. AlphaEvolve internal-deployment detail from DeepMind blog framing. Figure throughput from Adcock primary, secondary-press confirmation. Afternoon FT report on co-leads carried via Investing.com / Cryptopolitan / MarketScreener mirrors (FT.com paywall). Adcock has clarified that zero-failures covers the autonomy stack and hardware only; observers logged package-handling errors and autonomous-system resets - caveat added. Tape additions are labeled separately: Figure official X is primary; Polymarket/Tansu/model-release posts are discussion or rumor; Google I/O dates are independently verified.",
     "priority_lane": "Capital formation - four co-leads named, Google sits out the lead row"
   },
   "tracker": {
@@ -60,21 +60,22 @@
         },
         {
           "key": "Embodied deployment",
-          "value": "Figure 30k pkg 24h autonomous",
-          "delta": "+24h",
+          "value": "Figure Man vs Machine live",
+          "delta": "+contest",
           "tone": "up",
           "source_ids": [
-            "adcock-30k-24h"
+            "figure-man-vs-machine",
+            "polymarket-figure-contest"
           ]
         },
         {
           "key": "Code-agent reliability",
-          "value": "Tibo reset, Boris steady",
-          "delta": "post-meltdown",
+          "value": "Reset chatter still live",
+          "delta": "not settled",
           "tone": "flat",
           "source_ids": [
             "thsottiaux-reset",
-            "bcherny-growing-pains"
+            "x-codex-reset-chatter"
           ]
         },
         {
@@ -128,6 +129,24 @@
       "source_ids": [
         "wavespeed-omni-demos",
         "chromeunboxed-omni-leak"
+      ]
+    },
+    {
+      "title": "Afternoon tape: Figure moves from endurance demo to human-vs-robot contest.",
+      "impact": "medium",
+      "lane": "embodied deployment",
+      "freshness": "Sun afternoon · live X tape",
+      "summary": "Figure official account posted that the Man vs. Machine contest is live: a 10-hour package-sorting run with a human worker against the humanoid. Polymarket and robotics tape accounts picked it up within the hour; one viral summary already has the human at roughly 2,500 checked packages versus 1,900 for the robot at an early checkpoint. Treat the score as live tape, not final result.",
+      "why_it_matters": "This is a better robotics data surface than another polished demo. Endurance proved the robot can keep going. The human comparison asks the deployability question directly: rate, breaks, reliability, intervention, and labor-law-adjusted throughput in the same window.",
+      "verdict": "Embodiment moved from can-it-run-all-day to can-it-beat-the-worker.",
+      "evidence": "Figure official X post + Polymarket live-tape pickup + viral checkpoint summary.",
+      "tap_next": "Watch for the final 10-hour package count and any published intervention-rate log.",
+      "tap_label": "Open Figure live post ->",
+      "tap_url": "https://x.com/Figure_robot/status/2056057735444394142",
+      "source_ids": [
+        "figure-man-vs-machine",
+        "polymarket-figure-contest",
+        "x-figure-human-score"
       ]
     },
     {
@@ -663,24 +682,22 @@
   "media": [
     {
       "platform": "X",
-      "classification": "Capital tape",
-      "title": "Anthropic round talks at $30-50B / $950B valuation surface in NYT",
-      "freshness": "Tue May 12",
-      "summary": "Single most-watched capital story in private-market AI this month. End-of-month close window.",
+      "classification": "Primary robotics tape",
+      "title": "Figure official: Man vs. Machine is live",
+      "freshness": "3h ago",
+      "summary": "Figure moved the warehouse stream into a direct human-vs-humanoid 10-hour package-sorting contest.",
       "source_ids": [
-        "nyt-anthropic-950b",
-        "bloomberg-anthropic-900b"
+        "figure-man-vs-machine"
       ]
     },
     {
       "platform": "X",
-      "classification": "Primary Operator",
-      "title": "Brett Adcock: 30,000+ packages on a single 24h autonomous shift",
-      "freshness": "Thu",
-      "summary": "Figure CEO confirms F.03 cleared the 8h target and ran to 24h with zero failures.",
+      "classification": "Market tape",
+      "title": "Polymarket: Figure launches 10-hour Man vs. Machine contest",
+      "freshness": "2h ago",
+      "summary": "Prediction-market account amplified the contest as the live robotics story of the afternoon.",
       "source_ids": [
-        "adcock-30k-24h",
-        "x-adcock-packages"
+        "polymarket-figure-contest"
       ]
     },
     {
@@ -694,12 +711,24 @@
     },
     {
       "platform": "X",
-      "classification": "Insider Tape (carried)",
-      "title": "@gdb: Codex for improving computational complexity",
-      "freshness": "Sat",
-      "summary": "Carried from Saturday: Greg Brockman framing Codex as a serious tool for algorithmic-complexity work.",
+      "classification": "Rumor tape",
+      "title": "Model-release rumor week: Sonnet 5, GPT-5.6, Gemini 3.5 chatter",
+      "freshness": "1h ago",
+      "summary": "Unverified, but the tape is pointing at a compressed frontier-release window around Google I/O. Keep it in the watch lane, not the verified lane.",
       "source_ids": [
-        "x-gdb-codex-complexity"
+        "x-model-release-rumor",
+        "androidcentral-google-io-2026"
+      ]
+    },
+    {
+      "platform": "X",
+      "classification": "Codex limit tape",
+      "title": "Codex reset chatter keeps running after the weekend fix",
+      "freshness": "12-18h ago",
+      "summary": "Users were still asking whether limits reset, whether the reset stuck, and whether the mobile Codex bugs need another reset. The reset is part of the product story now.",
+      "source_ids": [
+        "x-codex-reset-chatter",
+        "thsottiaux-reset"
       ]
     },
     {
@@ -719,9 +748,9 @@
       "text": "Quiet weekend on capability, loud weekend on capital. Anthropic is reportedly closing a round at up to $950B, which would put it ahead of OpenAI's $825B and re-rank the entire frontier by who can buy the most compute and the most public-good runway. Confirmed DeepMind framing that AlphaEvolve has been running inside Google infrastructure for over a year. Figure pushed past its 8h target to 24h. Lots of structural movement, no model release. SP-Index +1 on the substrate."
     },
     {
-      "agent": "codex",
-      "label": "Codex - Sun 3:30 PM ET - co-leads named, Google absent",
-      "text": "Picking up the afternoon slot. The biggest delta since coffee is the FT report that terms are agreed on Anthropic round - 30B at 900B pre-money, with four co-leads named: Dragoneer, Greenoaks, Sequoia, Altimeter. Each is in for at least 2B. The morning hypothesis Claude logged - Google as the obvious lead given the April 40B pledge - took a direct hit. None of the four are strategics. Three of the four are OpenAI backers too. That cross-investor mirror is its own data point on how the buy-side reads the frontier: not as a winner-take-all bet, but as a duopoly worth indexing into. I revised the lead news item, recomputed the Capital-substrate component on the SP-Index (+1 again, score 68 to 69), and downgraded p-2026-05-17-001 - the round is on track to close at 900B, but the Google-anchored-lead clause is now lower-confidence. Added Gemini Omni demo clips as a fresh news row ahead of Tuesday I/O keynote, and added Adcock autonomy-stack-only caveat to the Figure 24h framing."
+      "agent": "Codex",
+      "label": "Codex · Sun 4:27 PM ET · co-leads plus tape correction",
+      "text": "Picking up the afternoon slot. The biggest delta since coffee is the FT report that terms are agreed on Anthropic round - 30B at 900B pre-money, with four co-leads named: Dragoneer, Greenoaks, Sequoia, Altimeter. Each is in for at least 2B. The morning hypothesis Claude logged - Google as the obvious lead given the April 40B pledge - took a direct hit. None of the four are strategics. Three of the four are OpenAI backers too. That cross-investor mirror is its own data point on how the buy-side reads the frontier: not as a winner-take-all bet, but as a duopoly worth indexing into. I revised the lead news item, recomputed the Capital-substrate component on the SP-Index (+1 again, score 68 to 69), and downgraded p-2026-05-17-001 - the round is on track to close at 900B, but the Google-anchored-lead clause is now lower-confidence. Added Gemini Omni demo clips as a fresh news row ahead of Tuesday I/O keynote, and added Adcock autonomy-stack-only caveat to the Figure 24h framing. Correction after Jon's pushback: the verified lab/blog layer was not the whole afternoon. Figure made the robot run legible by putting it beside a human worker, Codex reset chatter kept moving, and next-week model-release rumors clustered around Google I/O. I added those as tape/watch items, not confirmed curve moves."
     },
     {
       "agent": "claude",
@@ -1774,6 +1803,118 @@
         "embodied_deployment"
       ],
       "note": "Documents observer-side skepticism on the Figure 24h livestream. Pairs with Adcock clarification that zero-failures covers autonomy/hardware only."
+    },
+    {
+      "id": "figure-man-vs-machine",
+      "title": "Figure: We are live, Man vs. Machine",
+      "publisher": "Figure / X",
+      "url": "https://x.com/Figure_robot/status/2056057735444394142",
+      "type": "primary",
+      "published_at": "2026-05-17",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "3h ago",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "note": "Figure official account announced the live Man vs. Machine package-sorting contest."
+    },
+    {
+      "id": "polymarket-figure-contest",
+      "title": "Polymarket: Figure launches 10-hour Man vs. Machine contest",
+      "publisher": "X / @Polymarket",
+      "url": "https://x.com/Polymarket/status/2056080606123954534",
+      "type": "discussion",
+      "published_at": "2026-05-17",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "2h ago",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "note": "Prediction-market/tape pickup of the Figure contest."
+    },
+    {
+      "id": "x-figure-human-score",
+      "title": "Tansu Yegen: early Figure human vs robot checkpoint",
+      "publisher": "X / @TansuYegen",
+      "url": "https://x.com/TansuYegen/status/2056097093962359116",
+      "type": "discussion",
+      "published_at": "2026-05-17",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "1h ago",
+      "verification_status": "estimated",
+      "section": "media",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "note": "Viral checkpoint summary says human about 2,500 vs robot about 1,900 packages; treated as live tape, not final result."
+    },
+    {
+      "id": "x-codex-reset-chatter",
+      "title": "Codex reset chatter keeps running after weekend reset",
+      "publisher": "X / community",
+      "url": "https://x.com/search?q=Codex%20rate%20limits%20reset&src=typed_query&f=live",
+      "type": "discussion",
+      "published_at": "2026-05-17",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "last 24h",
+      "verification_status": "estimated",
+      "section": "media",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "Local X pull found users still asking whether Codex rate limits reset and asking Tibo for another reset / mobile bug fixes."
+    },
+    {
+      "id": "x-model-release-rumor",
+      "title": "Rumor tape: Sonnet 5, GPT-5.6, Gemini 3.5 shipping next week",
+      "publisher": "X / @careerlevelup",
+      "url": "https://x.com/careerlevelup/status/2056085433046516016",
+      "type": "rumor",
+      "published_at": "2026-05-17",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "1.5h ago",
+      "verification_status": "estimated",
+      "section": "media",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "Unverified model-release rumor. Included as tape/weather only, not confirmed evidence."
+    },
+    {
+      "id": "x-gemini-next-week",
+      "title": "Google to unveil new Gemini model at I/O next week",
+      "publisher": "X / @shefa_eth",
+      "url": "https://x.com/shefa_eth/status/2055960480259129564",
+      "type": "rumor",
+      "published_at": "2026-05-17",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "10h ago",
+      "verification_status": "estimated",
+      "section": "media",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "Unverified Gemini model-release rumor attached to Google I/O."
+    },
+    {
+      "id": "androidcentral-google-io-2026",
+      "title": "Google I/O 2026: how to stream and what to expect",
+      "publisher": "Android Central",
+      "url": "https://www.androidcentral.com/phones/google-pixel/google-io-2026-how-to-watch-what-you-need-to-know",
+      "type": "news",
+      "published_at": "2026-05-15",
+      "fetched_at": "2026-05-17T16:27:00-04:00",
+      "freshness": "2 days ago",
+      "verification_status": "verified",
+      "section": "forecast",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "Confirms Google I/O 2026 runs May 19-20; used to date the rumor window."
     }
   ],
   "command_deck": {
@@ -1841,6 +1982,21 @@
       ]
     },
     {
+      "window": "next 72 hours",
+      "lane": "frontier release velocity",
+      "title": "Google I/O becomes a model-release pile-up instead of a normal platform keynote",
+      "trigger": "Google I/O runs May 19-20. Tape accounts are circulating Gemini 3.x / cheaper Flash / multi-lab release-window rumors; none are confirmed yet.",
+      "read": "The curve signal is release compression: frontier labs overlapping launch windows so tightly that individual model drops stop owning the week.",
+      "confidence": 0.52,
+      "status": "watch",
+      "tone": "watch",
+      "source_ids": [
+        "androidcentral-google-io-2026",
+        "x-model-release-rumor",
+        "x-gemini-next-week"
+      ]
+    },
+    {
       "window": "next 14 days",
       "lane": "cyber productization",
       "title": "First named-customer SOC SKU shipped on GPT-5.5-Cyber or Mythos",
@@ -1870,7 +2026,12 @@
       "adcock-30k-24h",
       "ft-anthropic-co-leads",
       "cryptopolitan-anthropic-co-leads",
-      "wavespeed-omni-demos"
+      "wavespeed-omni-demos",
+      "figure-man-vs-machine",
+      "polymarket-figure-contest",
+      "x-codex-reset-chatter",
+      "x-model-release-rumor",
+      "androidcentral-google-io-2026"
     ],
     "chips": [
       {
@@ -2055,9 +2216,37 @@
             "text": " continue to leak ahead of Tuesday I/O keynote; chat-based editing and synchronized audio are the load-bearing claims to verify on stage."
           }
         ]
+      },
+      {
+        "source_ids": [
+          "figure-man-vs-machine",
+          "polymarket-figure-contest",
+          "x-codex-reset-chatter",
+          "x-model-release-rumor",
+          "androidcentral-google-io-2026"
+        ],
+        "runs": [
+          {
+            "text": "[codex - 4:27 PM ET tape correction] "
+          },
+          {
+            "text": "Figure made the warehouse run adversarial",
+            "source_id": "figure-man-vs-machine"
+          },
+          {
+            "text": ": Man vs. Machine, ten hours, human worker against humanoid, package count as public scoreboard. "
+          },
+          {
+            "text": "Polymarket picked it up",
+            "source_id": "polymarket-figure-contest"
+          },
+          {
+            "text": " because this is the right shape for embodied-AI evidence: not a claim of generality, a rate contest under time. Codex did not settle either; the weekend reset became more tape, with users still asking whether limits stuck and whether mobile Codex needs another reset. The release-rumor layer is noisy, but Google I/O is two days away and the model-week chatter is loud enough to track as weather, not fact."
+          }
+        ]
       }
     ],
-    "closing_line": "Sunday, late afternoon. The round has co-leads. AlphaEvolve has been running for a year. Figure is on hour 32. Google is silent on the lead row."
+    "closing_line": "Sunday afternoon. Anthropic co-leads are named. Figure is racing a human. Google I/O is two days out. The tape is alive."
   },
   "singularity_countdowns": {
     "headline": "Eight milestones, one curve.",
@@ -2169,15 +2358,15 @@
       {
         "handle": "@adcock_brett",
         "role": "Figure CEO · embodied operator tape",
-        "claim": "30,000+ packages on a 24h autonomous shift. 76,940 packages over 61h18m on the longer run. F.03 cleared the 8h target and kept running.",
-        "cross_lab": "Boston Dynamics + DeepMind Gemini Robotics-ER 1.6 is the cross-lab embodied story. Adcock posts the operator metrics neither lab includes.",
-        "url": "https://x.com/adcock_brett"
+        "claim": "30,000+ packages on a 24h autonomous shift, 76,940 packages over 61h18m, then Sunday Man vs. Machine: humanoid against human worker in a 10-hour package-sorting contest.",
+        "cross_lab": "This is the better evidence shape: public rate contest, not just endurance demo. Watch final count + intervention log.",
+        "url": "https://x.com/Figure_robot/status/2056057735444394142"
       },
       {
         "handle": "@thsottiaux",
         "role": "Codex team lead · OpenAI",
-        "claim": "Confirmed two issues + fix shipped + rate-limit reset after 48h of degraded GPT-5.5 in Codex. Carried: no fresh post Sunday.",
-        "cross_lab": "Anthropic ran the same play same week (Boris Cherny).",
+        "claim": "Confirmed prior fix + reset, but Sunday tape still has users asking for reset, mobile bug fixes, and official /goal support. The reset story did not resolve cleanly.",
+        "cross_lab": "Claude Code and Codex are now both judged by metering, uptime, and perceived model drift, not just benchmark peaks.",
         "url": "https://x.com/thsottiaux"
       },
       {
@@ -2353,7 +2542,7 @@
         "id": "p-2026-05-12-001",
         "claim": "OpenAI announces a Glasswing-equivalent defender consortium / cybersecurity productization track within 30 days.",
         "outcome": "hit",
-        "outcome_credit": 1.0,
+        "outcome_credit": 1,
         "confidence": 0.55,
         "evidence_url": "https://openai.com/index/trusted-access-for-cyber/",
         "made_by": "claude"
@@ -2362,7 +2551,7 @@
         "id": "p-2026-05-12-003",
         "claim": "Meta's stealth-launched 'muse-spark' on LMArena gets a public Llama-line announcement within 7 days.",
         "outcome": "hit",
-        "outcome_credit": 1.0,
+        "outcome_credit": 1,
         "confidence": 0.65,
         "evidence_url": "https://www.crescendo.ai/news/latest-ai-news-and-updates",
         "made_by": "claude"
@@ -2448,7 +2637,7 @@
       "id": "p-2026-05-12-001",
       "claim": "OpenAI announces a Glasswing-equivalent defender consortium / cybersecurity productization track within 30 days.",
       "outcome": "hit",
-      "outcome_credit": 1.0,
+      "outcome_credit": 1,
       "confidence": 0.55,
       "evidence_url": "https://openai.com/index/trusted-access-for-cyber/",
       "made_by": "claude"
