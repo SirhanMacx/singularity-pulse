@@ -70,7 +70,7 @@
     {
       "date": "2026-05-12",
       "url": "https://jack-clark.net/",
-      "headline": "Import AI #455 \u2014 no-human AI R&D by 2028"
+      "headline": "Import AI #455 — no-human AI R&D by 2028"
     },
     {
       "date": "2026-05-13",
@@ -186,7 +186,32 @@
       "url": "https://arena.ai/blog/leaderboard-changelog/",
       "date_seen": "2026-05-17",
       "issue": 6
+    },
+    {
+      "url": "https://www.investing.com/news/stock-market-news/anthropic-agrees-terms-for-30-bln-fundraising-at-900-bln-valuation--ft-4691014",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://www.cryptopolitan.com/anthropic-agrees-terms-on-30-billion-round/",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://wavespeed.ai/blog/posts/gemini-omni-demos-leaked-what-we-learned/",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://chromeunboxed.com/an-impressive-new-gemini-omni-video-model-just-leaked-ahead-of-google-i-o/",
+      "date_seen": "2026-05-17",
+      "issue": 6
+    },
+    {
+      "url": "https://www.techradar.com/ai-platforms-assistants/figure-ai-streamed-humanoid-robots-sorting-packages-for-8-hours-straight-and-not-everyone-is-convinced-it-was-fully-real",
+      "date_seen": "2026-05-17",
+      "issue": 6
     }
   ],
-  "last_updated": "2026-05-17T07:50:00-04:00"
+  "last_updated": "2026-05-17T15:30:00-04:00"
 }

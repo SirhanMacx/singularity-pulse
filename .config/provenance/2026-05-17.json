@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-17",
-  "checked_at": "2026-05-17T07:30:00-04:00",
+  "checked_at": "2026-05-17T15:30:00-04:00",
   "generated_from": "data/issues/2026-05-17.json",
   "rendered_items": [
     {
@@ -757,6 +757,68 @@
       ],
       "verification_status": "verified",
       "notes": "High-quality social context, not capability evidence: argument is shifting from whether capable AI arrives to what institutions should do with it."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic agrees terms for 30 bln fundraising at 900 bln valuation - FT",
+      "source_url": "https://www.investing.com/news/stock-market-news/anthropic-agrees-terms-for-30-bln-fundraising-at-900-bln-valuation--ft-4691014",
+      "checked_at": "2026-05-17T15:30:00-04:00",
+      "freshness_badge": "Sun May 17 PM",
+      "curve_dimensions": [
+        "compute_frontier",
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "FT (paywalled primary) carried via Investing.com - terms agreed at 30B / 900B pre-money. Co-leads: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital. Each at least 2B. Round to close as soon as this month."
+    },
+    {
+      "section": "news",
+      "title": "Anthropic agrees terms on 30 billion round at 900 billion valuation as OpenAI own backers co-lead the deal",
+      "source_url": "https://www.cryptopolitan.com/anthropic-agrees-terms-on-30-billion-round/",
+      "checked_at": "2026-05-17T15:30:00-04:00",
+      "freshness_badge": "Sun May 17",
+      "curve_dimensions": [
+        "compute_frontier"
+      ],
+      "verification_status": "verified",
+      "notes": "Independent secondary framing - emphasizes that three of four co-leads (Sequoia, Altimeter, Dragoneer) are also OpenAI backers. Buy-side reads the frontier as duopoly-to-index."
+    },
+    {
+      "section": "news",
+      "title": "Gemini Omni Demos Just Leaked - What Google New Video Model Actually Does",
+      "source_url": "https://wavespeed.ai/blog/posts/gemini-omni-demos-leaked-what-we-learned/",
+      "checked_at": "2026-05-17T15:30:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "capability_sota",
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Catalogs the leaked Omni clips, model-card text, and billing surface; argues Omni is a new model rather than a Veo 3.1 rename."
+    },
+    {
+      "section": "news",
+      "title": "An impressive new Gemini Omni video model just leaked ahead of Google I/O",
+      "source_url": "https://chromeunboxed.com/an-impressive-new-gemini-omni-video-model-just-leaked-ahead-of-google-i-o/",
+      "checked_at": "2026-05-17T15:30:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Independent confirmation of leaked clips + chat-based editing claims pre-I/O."
+    },
+    {
+      "section": "news",
+      "title": "Figure AI streamed humanoid robots sorting packages for 8 hours straight - and not everyone is convinced it was fully real",
+      "source_url": "https://www.techradar.com/ai-platforms-assistants/figure-ai-streamed-humanoid-robots-sorting-packages-for-8-hours-straight-and-not-everyone-is-convinced-it-was-fully-real",
+      "checked_at": "2026-05-17T15:30:00-04:00",
+      "freshness_badge": "this week",
+      "curve_dimensions": [
+        "embodied_deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Documents observer-side skepticism on the Figure 24h livestream. Pairs with Adcock clarification that zero-failures covers autonomy/hardware only."
     }
   ]
 }
