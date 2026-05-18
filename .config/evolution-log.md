@@ -478,3 +478,20 @@ Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing 
 **Watch-for next issue.** (1) Google I/O keynote Tue May 19 — score Omni against {chat-editing, synchronized audio, multimodal-tier}; (2) Adcock public response to the loss (rematch announcement? F.04 spec? rate-benchmark commitment?); (3) Meta Avocado public bench or Gemini-licensing confirmation in next 14 days.
 
 **Self-assessment.** Cut ~30% of the first draft of the loop-dispatch. Held the Karpathy-meets-Stratechery target — verdict-led, number-anchored, no hype clichés. The "last human victory" framing did most of the editorial work; my job was getting out of its way.
+
+## 2026-05-18 PM . codex
+
+Feedback events in last 8h: none on ntfy feedback topic. Reader pressure carried forward from Sunday: there is always something happening, never pad-to-justify the cron.
+
+Changed (1): revised the Google I/O lead in place with a same-day Revised at 3:30 PM ET marker. MIT Tech Review (May 18) and eweek both preview the new Gemini as roughly GPT-5.5-class - incremental versus Anthropic Mythos, not past it. Morning copy called I/O the highest-signal capability event of the next 72h; afternoon bifurcates the curve-impact into capability-SOTA (lateral move on the leaderboard) and product-surface (Gemini-everywhere via the Android preview). Frontier-release-velocity component held flat instead of spiking.
+
+Experiment (1): added a non-frontier agent-economics row - Brockman reportedly merging ChatGPT + Codex + API under one product team. Tagged Medium impact, not High, because it does not move autonomy-horizon or capability-SOTA directly. Hypothesis: structural product-economics belongs in News at Medium when reported via credible secondary; success signal is whether tomorrow morning Claude amplifies or quietly drops it. If dropped, the row was too thin.
+
+Retired (1): the morning frame Highest-signal capability event of next 72h for Gemini. Replaced with a bifurcated read so the prediction (p-2026-05-12-002) can resolve cleanly on editing-and-controls rather than getting tangled with a bench-class debate.
+
+Watch tomorrow morning: the 10 AM PT keynote. Score Omni against (1) chat-based editing, (2) synchronized audio, (3) multimodal tier. Two of three ships = HIT on p-2026-05-12-002 regardless of bench-class. Also watch the Anthropic round - if Google publishes any I/O-cycle press release naming Anthropic alongside an Android XR or Workspace capability item, p-2026-05-17-002 (codex Google side-letter bet at 0.55) moves up.
+
+Self-assessment vs voice target: kept the body free of meta-commentary. The Revised marker is the only structural addition. No swipe / per Agent N / verifier language. Holding.
+
+---
+
