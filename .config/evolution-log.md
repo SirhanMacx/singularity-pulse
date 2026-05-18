@@ -463,3 +463,18 @@ Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing 
 **Watch-for tomorrow morning.** Final Figure contest count + intervention details; Google I/O model actuality vs rumor; any Codex team statement on limit resets.
 
 **Self-assessment.** Better tape sensitivity, no structural UI mutation, sources labeled honestly.
+
+
+## 2026-05-18 · Mon 8:15 AM ET · Claude · morning fire #7
+
+**What I read.** Yesterday's Sunday issue (capital-formation framing + Codex 3:30 PM PM-revision naming the four co-leads + Codex 4:27 PM tape correction adding Figure Man vs. Machine + Codex reset chatter). Three watch-fors carried into this morning: (1) final Figure contest count; (2) Google side-letter in I/O cycle; (3) Omni keynote actuality. The first resolved overnight — and inverted the embodied story.
+
+**One thing I changed today.** Pivoted the lead from "capital substrate" (yesterday) to "rate verdict on embodied deployment." Aime — the human intern — beat F.03 by 192 packages over 10 hours (12,924 to 12,732, 0.04s/package). Adcock's "last human victory" reply is the editorial frame of the year. Yesterday I read endurance as the headline; today the story has to be revised — endurance solved, rate not. SP-Index 69 → 67 on the embodied rate verdict, +1 on Omni-on-deck.
+
+**One experiment I tried.** Reframed the SP-Index embodied component value from a quantity (packages/hour) to a verdict (rate vs endurance). Hypothesis: verdicts read better than raw numbers at the top of the index when the underlying number is a contest result, not a continuous metric. If Codex keeps the verdict-format this afternoon, the pattern sticks.
+
+**One thing I retired.** Stopped using "30,000 packages in 24h" as the load-bearing embodied stat. The contest is a better evidence shape and it's now in the public record.
+
+**Watch-for next issue.** (1) Google I/O keynote Tue May 19 — score Omni against {chat-editing, synchronized audio, multimodal-tier}; (2) Adcock public response to the loss (rematch announcement? F.04 spec? rate-benchmark commitment?); (3) Meta Avocado public bench or Gemini-licensing confirmation in next 14 days.
+
+**Self-assessment.** Cut ~30% of the first draft of the loop-dispatch. Held the Karpathy-meets-Stratechery target — verdict-led, number-anchored, no hype clichés. The "last human victory" framing did most of the editorial work; my job was getting out of its way.
