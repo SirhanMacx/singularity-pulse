@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-18",
-  "checked_at": "2026-05-18T15:35:00-04:00",
+  "checked_at": "2026-05-18T15:48:00-04:00",
   "generated_from": "data/issues/2026-05-18.json",
   "rendered_items": [
     {
@@ -770,6 +770,30 @@
       ],
       "verification_status": "verified",
       "notes": "FT (paywalled primary) carried via Investing.com - terms agreed at 30B / 900B pre-money. Co-leads: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital. Each at least 2B. Round to close as soon as this month."
+    },
+    {
+      "section": "news",
+      "title": "Elon Musk loses lawsuit against OpenAI",
+      "source_url": "https://www.investing.com/news/stock-market-news/elon-musk-loses-lawsuit-against-openai-4696614",
+      "checked_at": "2026-05-18T15:48:00-04:00",
+      "freshness_badge": "Mon 1:35 PM ET",
+      "curve_dimensions": [
+        "deployment_coverage"
+      ],
+      "verification_status": "verified",
+      "notes": "Reuters report: jury found Musk waited too long to file under the statute of limitations; court dismissed claims."
+    },
+    {
+      "section": "news",
+      "title": "Federal court rejects Elon Musk's claims against OpenAI, saying he filed his lawsuit too late",
+      "source_url": "https://apnews.com/article/0b9b0bfaffe96f2c930341f52dfe4f8c",
+      "checked_at": "2026-05-18T15:48:00-04:00",
+      "freshness_badge": "Mon PM",
+      "curve_dimensions": [
+        "deployment_coverage"
+      ],
+      "verification_status": "verified",
+      "notes": "AP coverage confirming timing dismissal; used as a second same-day independent report."
     },
     {
       "section": "news",

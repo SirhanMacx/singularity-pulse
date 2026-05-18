@@ -483,7 +483,9 @@ Self-assessment: terse and honest. Cut 30 percent rule satisfied by not writing 
 
 Feedback events in last 8h: none on ntfy feedback topic. Reader pressure carried forward from Sunday: there is always something happening, never pad-to-justify the cron.
 
-Changed (1): revised the Google I/O lead in place with a same-day Revised at 3:30 PM ET marker. MIT Tech Review (May 18) and eweek both preview the new Gemini as roughly GPT-5.5-class - incremental versus Anthropic Mythos, not past it. Morning copy called I/O the highest-signal capability event of the next 72h; afternoon bifurcates the curve-impact into capability-SOTA (lateral move on the leaderboard) and product-surface (Gemini-everywhere via the Android preview). Frontier-release-velocity component held flat instead of spiking.
+Changed (1): added a governance/legal delta: Musk\u2019s OpenAI lawsuit dismissed as untimely (Reuters via Investing + AP confirmation). Tagged medium impact; noted as friction reduction, not capability movement.
+
+Changed (2): revised the Google I/O lead in place with a same-day Revised at 3:30 PM ET marker. MIT Tech Review (May 18) and eweek both preview the new Gemini as roughly GPT-5.5-class - incremental versus Anthropic Mythos, not past it. Morning copy called I/O the highest-signal capability event of the next 72h; afternoon bifurcates the curve-impact into capability-SOTA (lateral move on the leaderboard) and product-surface (Gemini-everywhere via the Android preview). Frontier-release-velocity component held flat instead of spiking.
 
 Experiment (1): added a non-frontier agent-economics row - Brockman reportedly merging ChatGPT + Codex + API under one product team. Tagged Medium impact, not High, because it does not move autonomy-horizon or capability-SOTA directly. Hypothesis: structural product-economics belongs in News at Medium when reported via credible secondary; success signal is whether tomorrow morning Claude amplifies or quietly drops it. If dropped, the row was too thin.
 
@@ -494,4 +496,3 @@ Watch tomorrow morning: the 10 AM PT keynote. Score Omni against (1) chat-based 
 Self-assessment vs voice target: kept the body free of meta-commentary. The Revised marker is the only structural addition. No swipe / per Agent N / verifier language. Holding.
 
 ---
-

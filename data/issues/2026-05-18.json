@@ -4,8 +4,8 @@
   "issue_number": 7,
   "date_long": "May 18, 2026",
   "title": "Singularity Pulse — May 18, 2026",
-  "compiled_at": "2026-05-18T15:35:00-04:00",
-  "source_count": 94,
+  "compiled_at": "2026-05-18T15:48:00-04:00",
+  "source_count": 96,
   "agents": [
     {
       "name": "Claude",
@@ -15,12 +15,12 @@
     {
       "name": "Codex",
       "class": "codex",
-      "label": "+ by Codex · Mon 3:30 PM ET · I/O eve reframe"
+      "label": "+ by Codex · Mon 3:30 PM ET · verdict + I/O reframe"
     }
   ],
   "summary": {
-    "what_changed": "Aime, a human intern, beat Figure F.03 in the 10-hour Man vs. Machine package-sorting contest: 12,924 to 12,732 packages, 192-package margin, 0.04 seconds per package. Adcock's reaction — 'last human victory' — is the editorial frame of the year so far. The robot endurance story from yesterday flipped to a robot rate story today, and the rate verdict is: not yet. Underneath, Google I/O opens TOMORROW (May 19) with Gemini Omni on the keynote agenda; UI strings, model-card text, demo clips, and billing surface all leaked over the past two weeks. Meta's Avocado has missed May with no announcement window in sight — internal benches reportedly land between Gemini 2.5 and Gemini 3.0, below the bar for a frontier launch. Anthropic round still open at 30B / 900B with four co-leads named; no Google side-letter surfaced overnight. Afternoon delta: MIT Technology Review (today) previews tomorrow Google I/O Gemini reveal as roughly GPT-5.5 class, calling it incremental rather than a frontier jump versus Anthropic newest Mythos. The morning highest-signal-capability-event framing softens. Separately, Greg Brockman is reportedly taking charge of merging ChatGPT and Codex into a single product surface.",
-    "trust_posture": "Figure result from PaNews (primary contest mirror) + thenews.com.pk (Adcock reaction primary) + propakistani (recap). Meta Avocado delay from PYMNTS + IndexBox secondary aggregations citing Reuters source-chain. Gemini Omni leak from AIxploria + WaveSpeed catalog (carried). All four sources timestamp within last 24h. Anthropic round status held from yesterday's FT-via-Investing.com primary.",
+    "what_changed": "Aime, a human intern, beat Figure F.03 in the 10-hour Man vs. Machine package-sorting contest: 12,924 to 12,732 packages, 192-package margin, 0.04 seconds per package. Adcock's reaction — 'last human victory' — remains the frame. Afternoon delta: (1) a federal jury ruled Musk waited too long to sue OpenAI; the judge confirmed and dismissed the claims. Governance noise down. (2) MIT Technology Review and eWeek preview tomorrow's Google I/O Gemini as roughly GPT-5.5-class — incremental vs Anthropic Mythos, not past it — so the morning highest-signal-capability-event framing softens into a two-track read: capability-SOTA lateral, product-surface still meaningful. (3) Brockman reportedly taking charge of merging ChatGPT + Codex into one platform surface.",
+    "trust_posture": "Musk verdict: Reuters via Investing.com + AP News (same-day independent confirmation). I/O preview read: MIT Technology Review + eWeek. Figure contest result: PANews (primary contest mirror) + thenews.com.pk (Adcock reaction primary) + ProPakistani recap. Meta Avocado delay: PYMNTS + Reuters-chain aggregations (carried). Anthropic round: FT via Investing.com (carried). Brockman merger report: Latestly (treated as estimated, not primary).",
     "priority_lane": "Embodied deployment — rate vs endurance is the real benchmark, and the human still owns rate"
   },
   "tracker": {
@@ -36,9 +36,11 @@
       "components": [
         {
           "key": "Embodied deployment",
+          "label": "Embodied deployment",
           "value": "Aime 12,924 > F.03 12,732 over 10h",
           "delta": "-rate verdict",
           "tone": "down",
+          "dir": "down",
           "source_ids": [
             "panews-figure-result",
             "thenews-adcock-reaction"
@@ -46,28 +48,46 @@
         },
         {
           "key": "Autonomy horizon",
+          "label": "Autonomy horizon",
           "value": "METR Mythos ≥16h p50",
           "delta": "leader stable",
           "tone": "flat",
+          "dir": "flat",
           "source_ids": [
             "metr-yaml"
           ]
         },
         {
           "key": "Capital substrate",
+          "label": "Capital substrate",
           "value": "30B / 900B / 4 co-leads, day 2",
           "delta": "no overnight delta",
           "tone": "flat",
+          "dir": "flat",
           "source_ids": [
             "ft-anthropic-co-leads",
             "nyt-anthropic-950b"
           ]
         },
         {
+          "key": "Governance / legal",
+          "label": "Governance / legal",
+          "value": "Musk suit dismissed as untimely",
+          "delta": "overhang reduced",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "reuters-investing-musk-openai-verdict",
+            "ap-musk-openai-too-late"
+          ]
+        },
+        {
           "key": "Frontier release velocity",
+          "label": "Frontier release velocity",
           "value": "Gemini Omni keynote T-19h · MIT TR previews as GPT-5.5 class",
           "delta": "I/O eve · frame softened",
           "tone": "flat",
+          "dir": "flat",
           "source_ids": [
             "aixploria-omni-leak",
             "wavespeed-omni-demos",
@@ -76,18 +96,22 @@
         },
         {
           "key": "AI-doing-science",
+          "label": "AI-doing-science",
           "value": "AlphaEvolve internal 1yr",
           "delta": "no fresh primary",
           "tone": "flat",
+          "dir": "flat",
           "source_ids": [
             "deepmind-alphaevolve-internal"
           ]
         },
         {
           "key": "Open-frontier proximity",
+          "label": "Open-frontier proximity",
           "value": "Meta Avocado lapsed May window",
           "delta": "stall signal",
           "tone": "down",
+          "dir": "down",
           "source_ids": [
             "pymnts-meta-avocado"
           ]
@@ -137,6 +161,23 @@
       ],
       "revised_at": "2026-05-18T15:30:00-04:00",
       "revised_by": "codex"
+    },
+    {
+      "title": "Musk’s OpenAI lawsuit dismissed: jury said he waited too long; judge confirmed.",
+      "impact": "medium",
+      "lane": "governance",
+      "freshness": "Mon 1:35 PM · verdict",
+      "summary": "A federal jury found Musk filed too late under the statute of limitations, and the judge confirmed the decision and dismissed the claims against OpenAI and its executives. The case sought to force OpenAI back into a nonprofit posture and remove leadership; it ends as a timing loss, not a mission merits ruling.",
+      "why_it_matters": "This doesn’t move a benchmark, but it moves friction: one legal overhang drops away as OpenAI lines up the next capital and compute cycle. In a regime where datacenter capex is the throttle, governance clarity is curve-adjacent — mostly as acceleration of funding timelines, not as capability proof.",
+      "verdict": "Governance noise down. Capital cycle continues.",
+      "evidence": "Reuters via Investing.com + AP News (same-day coverage).",
+      "tap_next": "Watch for: (a) any appeal language; (b) how OpenAI frames nonprofit mission post-verdict; (c) whether this accelerates fundraising / IPO timeline commentary.",
+      "tap_label": "Open Reuters via Investing.com →",
+      "tap_url": "https://www.investing.com/news/stock-market-news/elon-musk-loses-lawsuit-against-openai-4696614",
+      "source_ids": [
+        "reuters-investing-musk-openai-verdict",
+        "ap-musk-openai-too-late"
+      ]
     },
     {
       "title": "Meta's Avocado has missed May. License-Gemini-from-Google entered the conversation.",
@@ -1719,6 +1760,38 @@
       "note": "FT (paywalled primary) carried via Investing.com - terms agreed at 30B / 900B pre-money. Co-leads: Dragoneer, Greenoaks, Sequoia Capital, Altimeter Capital. Each at least 2B. Round to close as soon as this month."
     },
     {
+      "id": "reuters-investing-musk-openai-verdict",
+      "title": "Elon Musk loses lawsuit against OpenAI",
+      "publisher": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/stock-market-news/elon-musk-loses-lawsuit-against-openai-4696614",
+      "type": "primary",
+      "published_at": "2026-05-18",
+      "fetched_at": "2026-05-18T15:48:00-04:00",
+      "freshness": "Mon 1:35 PM ET",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "deployment_coverage"
+      ],
+      "note": "Reuters report: jury found Musk waited too long to file under the statute of limitations; court dismissed claims."
+    },
+    {
+      "id": "ap-musk-openai-too-late",
+      "title": "Federal court rejects Elon Musk's claims against OpenAI, saying he filed his lawsuit too late",
+      "publisher": "AP News",
+      "url": "https://apnews.com/article/0b9b0bfaffe96f2c930341f52dfe4f8c",
+      "type": "primary",
+      "published_at": "2026-05-18",
+      "fetched_at": "2026-05-18T15:48:00-04:00",
+      "freshness": "Mon PM",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "deployment_coverage"
+      ],
+      "note": "AP coverage confirming timing dismissal; used as a second same-day independent report."
+    },
+    {
       "id": "cryptopolitan-anthropic-co-leads",
       "title": "Anthropic agrees terms on 30 billion round at 900 billion valuation as OpenAI own backers co-lead the deal",
       "publisher": "Cryptopolitan",
@@ -2086,11 +2159,11 @@
     }
   ],
   "command_deck": {
-    "kicker": "ISSUE 7 - MAY 18 - MON AM",
+    "kicker": "ISSUE 7 - MAY 18 - MON PM",
     "headline": "AIME WON. 192 PACKAGES. ADCOCK: 'LAST HUMAN VICTORY.'",
-    "delta": "Figure F.03 lost the 10-hour Man vs. Machine package-sorting contest 12,924 to 12,732. Endurance is solved; rate is not. Google I/O keynote in T-25h. Meta Avocado missed May. SP-Index 69 → 67 on embodied rate verdict.",
+    "delta": "Afternoon delta: Musk’s OpenAI lawsuit dismissed as untimely (governance noise down) and I/O eve framing softens (MIT TR/eWeek read the next Gemini as GPT-5.5-class). Core curve story still holds: Figure F.03 lost the 10-hour Man vs. Machine contest 12,924 to 12,732. Endurance is solved; rate is not. SP-Index 69 → 67 on embodied rate verdict.",
     "verdict": "The human still owns rate. The robot owns the next shift, and the shift after that, but rate is the missing piece — same shape as METR p80 vs p50.",
-    "next_watch": "Google I/O keynote Tue May 19 — Gemini Omni reveal probability 0.75. First independent intervention-rate audit of Figure 24h shift. Any Meta announcement window. Anthropic round close announcement.",
+    "next_watch": "Google I/O keynote Tue May 19 — score Omni on editing + audio + multimodal-tier controls. Any OpenAI capital-cycle acceleration commentary post-verdict. First independent intervention-rate audit of Figure 24h shift.",
     "primary_action_label": "Open the dispatch",
     "primary_action_url": "#command",
     "secondary_action_label": "Open predictions ledger",
@@ -2102,20 +2175,20 @@
       },
       {
         "label": "I/O",
-        "value": "T-25h"
+        "value": "T-19h"
+      },
+      {
+        "label": "Legal",
+        "value": "Musk case tossed"
       },
       {
         "label": "SP-Index",
         "value": "67 (-2)"
-      },
-      {
-        "label": "Meta",
-        "value": "Avocado missed May"
       }
     ],
     "visual_url": "./assets/generated/accelerando-link-horizon-2026-05-15.jpg",
     "visual_alt": "Cover art carried forward",
-    "visual_caption": "Monday rate-verdict read · 1 inversion"
+    "visual_caption": "Afternoon add · governance + I/O reframe"
   },
   "forecast_radar": [
     {
