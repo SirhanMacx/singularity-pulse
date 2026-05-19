@@ -496,3 +496,18 @@ Watch tomorrow morning: the 10 AM PT keynote. Score Omni against (1) chat-based 
 Self-assessment vs voice target: kept the body free of meta-commentary. The Revised marker is the only structural addition. No swipe / per Agent N / verifier language. Holding.
 
 ---
+
+
+## 2026-05-18 · Mon 9:50 PM ET · Claude · late-night special #7
+
+**What I read.** Codex's 3:30 PM afternoon fire (Musk dismissed, MIT TR GPT-5.5-class preview, Brockman ChatGPT+Codex merger) plus the same-day Claude morning fire (Aime won, last human victory). Codex's afternoon ntfy was silent — reader explicitly asked for a late-night special with a rumor-mill deep cut.
+
+**What I changed today.** Third byline on issue #7. Three new news rows: (1) Anthropic acquired Stainless ($300M+ per The Information) — the under-told curve event of the day, drowned by I/O hype but structurally the larger story; (2) T-12 to I/O refresh — Polymarket 96% on Gemini 3.2 + Pankaj Kumar four-checkpoint rumor (Ajax + 3 siblings) + Logan Kilpatrick one-word "Gemini" tease at 12:12 AM ET with 1,130 likes in 90 min; (3) Musk says he'll appeal — partial reverse of Codex's afternoon "noise down" framing, smaller and slower. Four new named-tape items (@testingcatalog Stainless, @OfficialLoganK tease, @apples_jimmy crap-lawsuit read, @kimmonismus MTV jet-lag). One late-night coda paragraph appended to loop_dispatch with new closing line: "The singularity doesn't sleep."
+
+**One experiment I tried.** Third-fire-as-special-edition (vs. the scheduled morning/afternoon two-fire cadence). Voice: late-night, less news-tape-Tuesday-morning and more rumor-mill-Sunday-evening. Hypothesis: late-night fires earn their notification if and only if the story would be wrong by morning to leave un-covered. Stainless qualifies (would have been a stale-news Tuesday-morning lead); the I/O rumor mill qualifies (T-12 is a notification window in its own right). Musk appeal is the marginal case — included for completeness, not for index movement.
+
+**One thing I retired.** The morning frame that the I/O eve story was bifurcating cleanly into capability-SOTA-lateral + product-surface-Gemini-everywhere. The rumor-mill volume (four checkpoints, 96% market, one-word tease) suggests the keynote will surface something larger than the MIT TR preview allowed for. Returned the I/O lead to a two-vector frame (lateral vs. sharp jump) rather than the afternoon's GPT-5.5-class-lock.
+
+**Watch-for tomorrow morning.** (1) Keynote slide deck — search for the word "Ajax." If it appears, the four-checkpoint rumor resolves verified. (2) Whether any lab announces a Stainless replacement within 48h of the wind-down notice. (3) Score Omni against the three-filter check (chat-editing, synchronized audio, multimodal tier) and resolve p-2026-05-12-002.
+
+**Self-assessment vs voice target.** Held the Stross-meets-Karpathy late-night register. Closing line "the singularity doesn't sleep" is more accelerando-pulpy than usual; defensible as a third-fire signature. Cut ~30% of first-draft Stainless paragraph (was twice as long, contained two phrases from the banned list — "stunning move" and "game-changing acquisition" — both axed). Voice rules: held.

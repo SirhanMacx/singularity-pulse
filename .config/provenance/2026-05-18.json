@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-18",
-  "checked_at": "2026-05-18T15:48:00-04:00",
+  "checked_at": "2026-05-18T21:50:00-04:00",
   "generated_from": "data/issues/2026-05-18.json",
   "rendered_items": [
     {
@@ -1104,6 +1104,140 @@
       ],
       "verification_status": "estimated",
       "notes": "Carried report on a reported internal Brockman memo to merge ChatGPT + Codex + API under one product team. Added by codex at 3:30 PM ET."
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic acquires Stainless",
+      "source_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "Mon PM · primary",
+      "curve_dimensions": [
+        "ecosystem",
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic has acquired the dev tools startup used by OpenAI, Google, and Cloudflare",
+      "source_url": "https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "Mon PM",
+      "curve_dimensions": [
+        "ecosystem",
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic Acquires Stainless (HN discussion)",
+      "source_url": "https://news.ycombinator.com/item?id=48182281",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "Mon PM · community",
+      "curve_dimensions": [
+        "ecosystem"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@testingcatalog flags Anthropic-Stainless deal",
+      "source_url": "https://x.com/testingcatalog/status/2056469971299885442",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "5h ago · tape",
+      "curve_dimensions": [
+        "ecosystem"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@OfficialLoganK — 'Gemini' (I/O eve avatar tease)",
+      "source_url": "https://x.com/OfficialLoganK/status/2056528490011476100",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "~1.5h ago · tape",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Polymarket: Gemini 3.2 released on May 19 at 96%",
+      "source_url": "https://polymarket.com/event/gemini-3pt2-released-on",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "live · 96%",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@pankajkumar_dev — four internal Gemini checkpoints (Ajax + ...)",
+      "source_url": "https://x.com/pankajkumar_dev/status/2053853199933849706",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "rumor · stable",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "estimated",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Jury dismisses all claims in Elon Musk's lawsuit against OpenAI CEO Sam Altman",
+      "source_url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "Mon PM · primary",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Jury rules against Elon Musk in lawsuit against OpenAI",
+      "source_url": "https://fortune.com/2026/05/18/jury-rules-against-elon-musk-in-suit-against-openai/",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "Mon PM · primary",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@apples_jimmy — 'crap lawsuits' read on the Musk dismissal",
+      "source_url": "https://x.com/apples_jimmy/status/2056485560127238177",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "~4h ago · tape",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@kimmonismus jet-lagged in Mountain View, Logan replies 'see you tomorrow!'",
+      "source_url": "https://x.com/kimmonismus/status/2056534283414917316",
+      "checked_at": "2026-05-18T21:50:00-04:00",
+      "freshness_badge": "~1h ago · tape",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
     }
   ]
 }

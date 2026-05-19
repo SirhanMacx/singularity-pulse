@@ -70,7 +70,7 @@
     {
       "date": "2026-05-12",
       "url": "https://jack-clark.net/",
-      "headline": "Import AI #455 — no-human AI R&D by 2028"
+      "headline": "Import AI #455 \u2014 no-human AI R&D by 2028"
     },
     {
       "date": "2026-05-13",
@@ -231,7 +231,57 @@
       "date": "2026-05-17",
       "url": "https://www.androidcentral.com/phones/google-pixel/google-io-2026-how-to-watch-what-you-need-to-know",
       "headline": "Google I/O May 19-20 confirmed window"
+    },
+    {
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=48182281",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://x.com/testingcatalog/status/2056469971299885442",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://x.com/OfficialLoganK/status/2056528490011476100",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://polymarket.com/event/gemini-3pt2-released-on",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://fortune.com/2026/05/18/jury-rules-against-elon-musk-in-suit-against-openai/",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://x.com/apples_jimmy/status/2056485560127238177",
+      "date_seen": "2026-05-18",
+      "issue": 7
+    },
+    {
+      "url": "https://x.com/kimmonismus/status/2056534283414917316",
+      "date_seen": "2026-05-18",
+      "issue": 7
     }
   ],
-  "last_updated": "2026-05-17T16:27:00-04:00"
+  "last_updated": "2026-05-18T21:50:00-04:00"
 }
