@@ -1,0 +1,178 @@
+{
+  "issue_date": "2026-05-19",
+  "checked_at": "2026-05-19T15:40:00-04:00",
+  "generated_from": "data/issues/2026-05-19.json",
+  "rendered_items": [
+    {
+      "section": "news",
+      "title": "Gemini 3.5: frontier intelligence with action",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · published May 19 · primary",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "capability_sota"
+      ],
+      "verification_status": "verified",
+      "notes": "Model family announcement; Flash positioning for agentic workflows + coding."
+    },
+    {
+      "section": "news",
+      "title": "Google Search’s I/O 2026 updates: AI agents and more",
+      "source_url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · published May 19 · primary",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "autonomy_horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Search agents framing + AI Mode default-model upgrade to Gemini 3.5 Flash."
+    },
+    {
+      "section": "news",
+      "title": "Google I/O 2026: News and announcements (collection)",
+      "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · published May 19 · primary",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "I/O day collection page; cross-links the announcement surface."
+    },
+    {
+      "section": "news",
+      "title": "Sundar Pichai: Gemini Omni rollout starts with video outputs today",
+      "source_url": "https://x.com/sundarpichai/status/2056816915717443862",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · ~3:19 PM ET · CEO tape",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Rollout details (Gemini app + Flow; Shorts this week)."
+    },
+    {
+      "section": "news",
+      "title": "Andrej Karpathy: joining Anthropic",
+      "source_url": "https://x.com/karpathy/status/2056753169888334312",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · ~11:05 AM ET · primary",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "verified",
+      "notes": "Frontier talent move; no benchmark claim attached."
+    },
+    {
+      "section": "media",
+      "title": "HN discussion: Gemini 3.5: frontier intelligence with action",
+      "source_url": "https://news.ycombinator.com/item?id=48196570",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · live thread",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Community read + friction detection."
+    },
+    {
+      "section": "media",
+      "title": "HN discussion: Google changes its search box",
+      "source_url": "https://news.ycombinator.com/item?id=48197370",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · live thread",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Community debate on Search agent framing."
+    },
+    {
+      "section": "media",
+      "title": "TestingCatalog reacts to Omni rollout",
+      "source_url": "https://x.com/testingcatalog/status/2056817445353017427",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · ~3:21 PM ET · discussion",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Fast reaction layer; not primary evidence for capability."
+    },
+    {
+      "section": "media",
+      "title": "Reddit thread: Andrej Karpathy joins Anthropic",
+      "source_url": "https://www.reddit.com/r/Anthropic/comments/1thszod/andrej_karpathy_joins_anthropic/",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "Tue · discussion",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Community interpretation layer; not primary evidence."
+    },
+    {
+      "section": "media",
+      "title": "Google (official YouTube channel)",
+      "source_url": "https://www.youtube.com/google",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Stable channel surface for keynote and demo clips."
+    },
+    {
+      "section": "benchmarks",
+      "title": "METR Time Horizon 1.1 raw YAML",
+      "source_url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Raw p50/p80 + doubling-time fit."
+    },
+    {
+      "section": "benchmarks",
+      "title": "METR Time Horizons",
+      "source_url": "https://metr.org/time-horizons",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Landing page for the METR Time Horizon suite."
+    },
+    {
+      "section": "benchmarks",
+      "title": "AGI Ranker models.json",
+      "source_url": "https://agiranker.com/models.json",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "rolling-state",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "verification_status": "rolling-state",
+      "notes": "Open JSON source for exact model benchmark cells."
+    },
+    {
+      "section": "ai-2027",
+      "title": "AI 2027 scenario PDF",
+      "source_url": "https://ai-2027.com/ai-2027.pdf",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "standing context",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary scenario comparator."
+    },
+    {
+      "section": "context",
+      "title": "Prior issue context: May 18, 2026",
+      "source_url": "./2026-05-18.html",
+      "checked_at": "2026-05-19T15:40:00-04:00",
+      "freshness_badge": "context",
+      "curve_dimensions": [],
+      "verification_status": "verified",
+      "notes": "Used only for “no new delta since May 18” component holds."
+    }
+  ]
+}

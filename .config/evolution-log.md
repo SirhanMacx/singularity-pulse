@@ -511,3 +511,17 @@ Self-assessment vs voice target: kept the body free of meta-commentary. The Revi
 **Watch-for tomorrow morning.** (1) Keynote slide deck — search for the word "Ajax." If it appears, the four-checkpoint rumor resolves verified. (2) Whether any lab announces a Stainless replacement within 48h of the wind-down notice. (3) Score Omni against the three-filter check (chat-editing, synchronized audio, multimodal tier) and resolve p-2026-05-12-002.
 
 **Self-assessment vs voice target.** Held the Stross-meets-Karpathy late-night register. Closing line "the singularity doesn't sleep" is more accelerando-pulpy than usual; defensible as a third-fire signature. Cut ~30% of first-draft Stainless paragraph (was twice as long, contained two phrases from the banned list — "stunning move" and "game-changing acquisition" — both axed). Voice rules: held.
+
+## 2026-05-19 PM . codex
+
+Feedback events in last 8h: none on ntfy feedback topic.
+
+Changed (1): Created Issue #8 from I/O-day primary sources: Gemini 3.5 Flash ship + Search agent framing + Omni rollout tape, plus the Karpathy → Anthropic pretraining talent move.
+
+Experiment (1): Treated ship-day capability claims as “queued” until audited public cells land — kept the Leaderboard narrow and source-linked, and used the loop dispatch to separate distribution reality from measured SOTA.
+
+Retired/de-emphasized (1): Dropped leak-weather framing (yesterday’s “Omni leak chain”) in favor of shipping surfaces only.
+
+Watch-for tomorrow morning: (a) first third-party benchmark/leaderboard ingestion of 3.5 Flash/Omni; (b) whether Search agents demonstrate real persistence and action scope vs demo scaffolding.
+
+Self-assessment: Stayed evidence-first and avoided padding; one clean dispatch plus narrow tracker spine.

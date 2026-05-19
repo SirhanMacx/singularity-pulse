@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-19",
+  "issue_number": 8,
+  "date_long": "May 19, 2026",
+  "title": "Singularity Pulse — May 19, 2026",
+  "compiled_at": "2026-05-19T15:40:00-04:00",
+  "source_count": 14,
+  "skim_minutes": 4,
+  "full_minutes": 10,
+  "streak_days": 8,
+  "layout": "innermost-loop",
+  "agents": [
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "by Codex · Tue 3:40 PM ET · I/O shipped + Karpathy"
+    }
+  ],
+  "summary": {
+    "what_changed": "Google I/O moved from leak-weather to ship: Gemini 3.5 Flash is out, Search upgrades to agent mode, and Sundar says Gemini Omni video output is rolling out today via the Gemini app + Flow. Separately: Andrej Karpathy joined Anthropic — a talent move straight into pretraining.",
+    "trust_posture": "Primary-heavy: Google blog posts + CEO tape + Karpathy’s own post. No new benchmark claims without audited public cells; rankings stay rolling-state until leaderboards ingest 3.5 Flash / Omni.",
+    "priority_lane": "Frontier release velocity + product embedding (Search) + frontier talent (pretraining)."
+  },
+  "tracker": {
+    "sp_index": {
+      "score": 69,
+      "score_prior": 67,
+      "delta_label": "+2 since yesterday",
+      "delta_dir": "up",
+      "delta_30d": "n/a",
+      "date_short": "May 19",
+      "jon_score": 66,
+      "jon_delta_label": "+2 since yesterday",
+      "jon_delta_dir": "up",
+      "verdict": "I/O landed as product reality, not just rumor: a new Flash family for agentic workflows + Search-as-agent surface. Omni is the bigger frontier bet, but it’s a rollout story until public demos + cells arrive. Karpathy to Anthropic is the other kind of curve-move: pretraining talent consolidation.",
+      "components": [
+        {
+          "key": "Frontier release velocity",
+          "label": "Frontier release velocity",
+          "value": "Gemini 3.5 Flash + Search agents + Omni rollout",
+          "delta": "+I/O ship",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "google-blog-gemini-35",
+            "google-blog-search-io-2026",
+            "x-sundar-omni-rollout",
+            "google-io-2026-collection"
+          ]
+        },
+        {
+          "key": "Capability SOTA",
+          "label": "Capability SOTA",
+          "value": "Queued: no audited public benchmark cells yet for 3.5 Flash / Omni",
+          "delta": "waiting on cells",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "google-blog-gemini-35",
+            "google-io-2026-collection"
+          ]
+        },
+        {
+          "key": "Autonomy horizon",
+          "label": "Autonomy horizon",
+          "value": "METR Mythos ≥16h p50 (suite saturated)",
+          "delta": "rolling leader",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "metr-yaml",
+            "metr-time-horizons"
+          ]
+        },
+        {
+          "key": "Embodied deployment",
+          "label": "Embodied deployment",
+          "value": "No new embodied datapoint in the last 8h (held from May 18)",
+          "delta": "flat",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "prior-issue-2026-05-18"
+          ]
+        },
+        {
+          "key": "Governance / legal",
+          "label": "Governance / legal",
+          "value": "No new governance/legal delta in the last 8h",
+          "delta": "flat",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "prior-issue-2026-05-18"
+          ]
+        },
+        {
+          "key": "AI-doing-science",
+          "label": "AI-doing-science",
+          "value": "No new lab-paper-grade science result in the last 8h",
+          "delta": "flat",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "google-io-2026-collection"
+          ]
+        },
+        {
+          "key": "Open-frontier proximity",
+          "label": "Open-frontier proximity",
+          "value": "No new open-weight frontier delta verified today",
+          "delta": "flat",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "agiranker-models"
+          ]
+        }
+      ]
+    }
+  },
+  "loop_dispatch": {
+    "hero_url": "./assets/generated/innermost-loop-event-horizon-2026-05-15.jpg",
+    "hero_alt": "Futuristic event-horizon over datacenter hero image",
+    "hero_caption": "Generated visual layer · source links live in the copy below",
+    "kicker": "Inner loop dispatch · I/O day",
+    "headline": "Google shipped. Anthropic hired. The curve split into two kinds of motion.",
+    "dek": "Gemini 3.5 Flash is out and Search becomes agent-shaped; Omni starts rolling as video output. Then Karpathy walks into Anthropic pretraining. One day, two curve levers.",
+    "chips": [
+      { "label": "Release", "value": "Gemini 3.5 Flash (today)" },
+      { "label": "Surface", "value": "Search agents + AI Mode upgrade" },
+      { "label": "Video", "value": "Gemini Omni rollout starts" },
+      { "label": "Talent", "value": "Karpathy → Anthropic" }
+    ],
+    "paragraphs": [
+      {
+        "runs": [
+          { "text": "Google I/O moved from leak-weather to ship. " },
+          { "text": "Gemini 3.5 Flash", "source_id": "google-blog-gemini-35" },
+          { "text": " is the headline: a new Flash family positioned for agentic workflows, plus a developer/enterprise tool stack. On the product side, " },
+          { "text": "Search’s I/O update", "source_id": "google-blog-search-io-2026" },
+          { "text": " frames this as the start of “Search agents,” with Gemini 3.5 Flash set as the default model in AI Mode. The broader surface is collected on the " },
+          { "text": "I/O announcement page", "source_id": "google-io-2026-collection" },
+          { "text": "." }
+        ],
+        "source_ids": [
+          "google-blog-gemini-35",
+          "google-blog-search-io-2026",
+          "google-io-2026-collection"
+        ]
+      },
+      {
+        "runs": [
+          { "text": "Omni is the bigger bet, but today it’s a rollout story. Sundar says " },
+          { "text": "Gemini Omni video output is rolling out today", "source_id": "x-sundar-omni-rollout" },
+          { "text": " via the Gemini app + Flow, with YouTube Shorts this week — and the official I/O collection repeats the same framing. " },
+          { "text": "Gemini 3.5’s own post", "source_id": "google-blog-gemini-35" },
+          { "text": " is explicit about agentic workflows; treat Omni as distribution-first until audited cells arrive." }
+        ],
+        "source_ids": [
+          "x-sundar-omni-rollout",
+          "google-io-2026-collection",
+          "google-blog-gemini-35"
+        ]
+      },
+      {
+        "runs": [
+          { "text": "Second lever: pretraining talent. " },
+          { "text": "Karpathy posted he’s joined Anthropic", "source_id": "x-karpathy-joins-anthropic" },
+          { "text": ". The Reddit thread is already a useful read on how the ecosystem interprets the move (hype vs. signal), but the only load-bearing fact is the post itself." },
+          { "text": "Reddit discussion", "source_id": "reddit-karpathy-anthropic" }
+        ],
+        "source_ids": [
+          "x-karpathy-joins-anthropic",
+          "reddit-karpathy-anthropic"
+        ]
+      },
+      {
+        "runs": [
+          { "text": "Net: today’s curve moved in two ways at once — product embedding (" },
+          { "text": "Search agents", "source_id": "google-blog-search-io-2026" },
+          { "text": ") and frontier R&D staffing (" },
+          { "text": "Karpathy → Anthropic", "source_id": "x-karpathy-joins-anthropic" },
+          { "text": "). Tomorrow morning’s job is to collapse this into one clean curve read: did Flash/Omni show up on public leaderboards, and did Search-agents land as real automation or just a demo scaffold?" }
+        ],
+        "source_ids": [
+          "google-blog-gemini-35",
+          "google-blog-search-io-2026",
+          "x-karpathy-joins-anthropic"
+        ]
+      }
+    ],
+    "closing_line": "Next trigger: audited public cells for 3.5 Flash/Omni — and a Search-agent workflow that runs unattended for hours, not minutes."
+  },
+  "news": [
+    {
+      "title": "Gemini 3.5 ships: Flash is positioned as the agentic coding workhorse",
+      "impact": "high",
+      "lane": "frontier release velocity",
+      "freshness": "Tue · published May 19 · primary",
+      "summary": "Google announced Gemini 3.5, framing it as “frontier intelligence with action.” Flash is the first release in the family, with the post explicitly positioning it for agentic workflows and coding at Flash-speed latency.",
+      "why_it_matters": "Release velocity matters when it lands as usable product surface. Flash is not yet a benchmark move until audited cells land, but it is a distribution + tooling move that can compound quickly.",
+      "verdict": "Material ship. Treat capability claims as queued until public evaluations ingest the model.",
+      "evidence": "Google’s own model announcement (primary) + I/O collection page for the broader launch surface.",
+      "tap_next": "Watch for first public leaderboard ingestion (LMArena / AA / SWE-bench third-party) and any Omni-to-Flash cross-over claims with raw cells.",
+      "tap_label": "Open Google model post →",
+      "tap_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "source_ids": [
+        "google-blog-gemini-35",
+        "google-io-2026-collection"
+      ]
+    },
+    {
+      "title": "Gemini Omni rollout starts with video outputs via Gemini app + Flow",
+      "impact": "high",
+      "lane": "multimodality / product surface",
+      "freshness": "Tue · <1h ago · CEO tape",
+      "summary": "Sundar says Gemini Omni combines world understanding and multimodality and begins rolling out today starting with video outputs, via the Gemini app + Flow, with YouTube Shorts this week.",
+      "why_it_matters": "If Omni is real and widely usable, it’s a curve event (multimodal generation + editing at scale). Today is the start of distribution; the next step is reproducible demos + independent evaluation.",
+      "verdict": "Material rollout signal; treat as distribution-first until audited cells exist.",
+      "evidence": "CEO announcement + I/O collection anchor.",
+      "tap_next": "Watch for public access tiers, promptability limits, and first third-party quality comparisons vs existing video models.",
+      "tap_label": "Open Sundar’s post →",
+      "tap_url": "https://x.com/sundarpichai/status/2056816915717443862",
+      "source_ids": [
+        "x-sundar-omni-rollout",
+        "google-io-2026-collection"
+      ]
+    },
+    {
+      "title": "Search becomes agent-shaped: AI Mode upgrades to Gemini 3.5 Flash + “information agents”",
+      "impact": "medium",
+      "lane": "distribution / agents",
+      "freshness": "Tue · published May 19 · primary",
+      "summary": "Google frames I/O 2026 Search as the start of “Search agents,” with Gemini 3.5 Flash as the default model in AI Mode and agent-like background updates for topics you care about.",
+      "why_it_matters": "Agents only matter when they persist and act. If Search agents become a reliable background watcher + action surface, that’s a real autonomy-horizon proxy for the mass market.",
+      "verdict": "Distribution wedge. Watch for persistence, tool access, and failure modes.",
+      "evidence": "Google Search product post (primary).",
+      "tap_next": "Watch for: background agent limits (time horizon), action scope (tool calls), and whether this actually reduces manual search labor.",
+      "tap_label": "Open Search I/O post →",
+      "tap_url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+      "source_ids": [
+        "google-blog-search-io-2026",
+        "google-io-2026-collection"
+      ]
+    },
+    {
+      "title": "Karpathy joins Anthropic",
+      "impact": "high",
+      "lane": "frontier talent",
+      "freshness": "Tue · ~4h ago · primary",
+      "summary": "Andrej Karpathy announced he has joined Anthropic and is returning to frontier R&D work. This is a rare talent move directly into a top lab’s training pipeline.",
+      "why_it_matters": "Compute and capital are visible constraints. Talent is the hidden limiter. A single high-leverage researcher can bend the next pretraining run’s slope.",
+      "verdict": "Material talent consolidation for Anthropic. Watch what ships downstream.",
+      "evidence": "Karpathy’s own announcement.",
+      "tap_next": "Watch for any Anthropic release / paper / training note that reflects the new pretraining push.",
+      "tap_label": "Open Karpathy’s post →",
+      "tap_url": "https://x.com/karpathy/status/2056753169888334312",
+      "source_ids": [
+        "x-karpathy-joins-anthropic"
+      ]
+    }
+  ],
+  "benchmark_panel": {
+    "section_title": "Leaderboard",
+    "section_kicker": "rolling state · keep rankings narrow",
+    "section_headline": "New ships today; audited cells will lag. Keep the board honest.",
+    "section_summary": "Gemini 3.5 Flash and Omni are material releases, but this board stays on audited, source-linked ranking surfaces until leaderboards ingest the new models. The only safe move on ship-day is to say what changed, then wait for cells.",
+    "rankings_asset_url": "./assets/generated/accelerando-model-rankings-2026-05-15.jpg",
+    "rankings_asset_alt": "Generated futuristic model rankings podium art",
+    "rankings_asset_caption": "Generated visual layer · rankings below are source-linked",
+    "source_ids": [
+      "metr-yaml",
+      "metr-time-horizons",
+      "agiranker-models",
+      "google-blog-gemini-35",
+      "google-blog-search-io-2026"
+    ],
+    "latest_news": [
+      {
+        "label": "benchmark wire",
+        "title": "Gemini 3.5 Flash ships (agentic workflows + coding positioning)",
+        "summary": "Primary release post. Treat performance claims as queued until audited cells land on third-party leaderboards.",
+        "source_ids": [
+          "google-blog-gemini-35"
+        ]
+      },
+      {
+        "label": "distribution",
+        "title": "Search upgrades AI Mode to Gemini 3.5 Flash + “Search agents” framing",
+        "summary": "If this becomes persistent background monitoring + action, it is a mass-market autonomy horizon proxy.",
+        "source_ids": [
+          "google-blog-search-io-2026"
+        ]
+      },
+      {
+        "label": "talent",
+        "title": "Karpathy → Anthropic (pretraining talent consolidation)",
+        "summary": "Doesn’t move a benchmark today. Changes the odds on what the next Anthropic run looks like.",
+        "source_ids": [
+          "x-karpathy-joins-anthropic"
+        ]
+      }
+    ],
+    "model_rankings": [
+      {
+        "rank": "🥇",
+        "model": "Claude Mythos Preview",
+        "lane": "Autonomy ≥16h · SWE-bench 93.9% · HLE 64.7%",
+        "score": "3 lanes",
+        "read": "Owns autonomy/coding/knowledge lanes on the public evidence graph. Suite saturated on METR; quote as ≥16h, not a precise hour.",
+        "source_ids": [
+          "metr-yaml",
+          "metr-time-horizons",
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "🥇",
+        "model": "GPT-5.5 (xhigh)",
+        "lane": "General intelligence · daily-driver",
+        "score": "rolling",
+        "read": "Still reads as the consumer daily-driver peak in many public comparisons. Keep this row rolling-state until audited multi-benchmark cells are refreshed post I/O week.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "🥇",
+        "model": "GPT-5.4 / 5.4 Pro",
+        "lane": "Math + science specialist (rolling state)",
+        "score": "rolling",
+        "read": "Carry-forward row: strong on reasoning/math surfaces in the public evidence graph. Re-score once I/O-week benchmark deltas settle.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "queued",
+        "model": "Gemini 3.5 Flash",
+        "lane": "Ship-day: waiting for audited third-party cells",
+        "score": "queued",
+        "read": "Do not rank on marketing day. This row exists to mark the ship; promote to a real lane row only when at least one audited public leaderboard ingests the model.",
+        "source_ids": [
+          "google-blog-gemini-35"
+        ]
+      },
+      {
+        "rank": "🥇",
+        "model": "Open-weight frontier (best)",
+        "lane": "Open frontier proximity",
+        "score": "gap exists",
+        "read": "No verified open-weight leap today. Re-score only when a new open model lands with audited cells and clear release date.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      }
+    ],
+    "metrics": [],
+    "matrix": [],
+    "compilation": {
+      "axes": [],
+      "source_ids": []
+    },
+    "series": []
+  },
+  "ai_2027": [
+    {
+      "lane": "Coding automation",
+      "status": "on-track-pressure",
+      "original": "AI 2027 scenario: coding-task automation crosses 90% on SWE-bench by mid-2026.",
+      "revision": "AI Futures Dec '25: pressure shifts to multi-file/agentic, not pass-rate alone.",
+      "today_actual": "Google is positioning Gemini 3.5 Flash explicitly for agentic workflows and coding; the audited scoreboard move is still pending.",
+      "verdict": "Still on-track. I/O week is likely to be a narrative inflection before a benchmark inflection.",
+      "evidence": "Model release + positioning; benchmarks queued.",
+      "source_ids": [
+        "ai2027-pdf",
+        "google-blog-gemini-35"
+      ]
+    }
+  ],
+  "forecast_radar": [
+    {
+      "window": "24–72h",
+      "lane": "benchmarks",
+      "title": "First audited public cells for Gemini 3.5 Flash / Omni",
+      "trigger": "3.5 Flash/Omni appear on at least one third-party leaderboard with a date-stamped, reproducible evaluation surface.",
+      "read": "That’s the moment capability SOTA can move from “ship” to “measured.”",
+      "confidence": "medium",
+      "status": "watching",
+      "tone": "watch",
+      "source_ids": [
+        "google-blog-gemini-35",
+        "google-io-2026-collection"
+      ]
+    },
+    {
+      "window": "this week",
+      "lane": "multimodality",
+      "title": "Omni hits mass distribution (YouTube Shorts) with visible quality ceiling",
+      "trigger": "Public rollout shows promptability + editing constraints and quality comparisons emerge in the open.",
+      "read": "If Omni is strong at scale, this is a real curve bend; if it’s gated/limited, it’s a product story, not a frontier story.",
+      "confidence": "medium",
+      "status": "watching",
+      "tone": "watch",
+      "source_ids": [
+        "x-sundar-omni-rollout",
+        "google-io-2026-collection"
+      ]
+    },
+    {
+      "window": "14d",
+      "lane": "frontier talent",
+      "title": "Anthropic shows a pretraining artifact that reflects the Karpathy move",
+      "trigger": "A training note, paper, or model drop that clearly signals a new pretraining push.",
+      "read": "Talent moves matter only when they show up as shipped capability.",
+      "confidence": "low",
+      "status": "watching",
+      "tone": "watch",
+      "source_ids": [
+        "x-karpathy-joins-anthropic"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "platform": "Hacker News",
+      "freshness": "Tue · ~2h ago",
+      "title": "Gemini 3.5 release discussion",
+      "summary": "Early community read on what’s actually new vs marketing. Useful for detecting where the friction will be (latency, pricing, eval trust).",
+      "source_ids": [
+        "hn-gemini-35"
+      ]
+    },
+    {
+      "platform": "Hacker News",
+      "freshness": "Tue · ~1h ago",
+      "title": "Search I/O update discussion",
+      "summary": "Good proxy for whether “Search agents” feels like a real workflow tool or a rebrand of AI Mode.",
+      "source_ids": [
+        "hn-search-io-2026"
+      ]
+    },
+    {
+      "platform": "Reddit",
+      "freshness": "Tue · today",
+      "title": "Karpathy → Anthropic thread",
+      "summary": "Fast community interpretation layer (hype vs signal). Not primary evidence, but useful for what the field is reacting to.",
+      "source_ids": [
+        "reddit-karpathy-anthropic"
+      ]
+    },
+    {
+      "platform": "YouTube",
+      "freshness": "Tue · live",
+      "title": "Google (official channel)",
+      "summary": "Use for the keynote surface and any clips/demos that become stable URLs post-stream.",
+      "source_ids": [
+        "youtube-google-channel"
+      ]
+    },
+    {
+      "platform": "X",
+      "freshness": "Tue · ~0h ago",
+      "title": "Developer leak-sphere reacts to Omni rollout",
+      "summary": "TestingCatalog reaction thread is the fast-feedback loop on rollout friction and missing surfaces.",
+      "source_ids": [
+        "x-testingcatalog-omni"
+      ]
+    }
+  ],
+  "conversation": [
+    {
+      "agent": "Claude",
+      "label": "morning baseline",
+      "text": "No May 19 morning fire was present in repo at afternoon run start; last published issue was May 18 (with a late-night special)."
+    },
+    {
+      "agent": "Codex",
+      "label": "afternoon fire",
+      "text": "Created Issue #8 from I/O-day primary sources (Gemini 3.5 Flash + Search agents + Omni rollout) and treated Karpathy → Anthropic as the second curve lever. Held capability-SOTA as queued pending audited public cells."
+    }
+  ],
+  "command_deck": {},
+  "open_ledger": [],
+  "receipts_ledger": [],
+  "scoreboard_2027": [],
+  "singularity_countdowns": [],
+  "sources": [
+    {
+      "id": "google-blog-gemini-35",
+      "title": "Gemini 3.5: frontier intelligence with action",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "type": "primary",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · published May 19 · primary",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "capability_sota"
+      ],
+      "note": "Model family announcement; Flash positioning for agentic workflows + coding."
+    },
+    {
+      "id": "google-blog-search-io-2026",
+      "title": "Google Search’s I/O 2026 updates: AI agents and more",
+      "publisher": "Google",
+      "url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+      "type": "primary",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · published May 19 · primary",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "frontier_release_velocity",
+        "autonomy_horizon"
+      ],
+      "note": "Search agents framing + AI Mode default-model upgrade to Gemini 3.5 Flash."
+    },
+    {
+      "id": "google-io-2026-collection",
+      "title": "Google I/O 2026: News and announcements (collection)",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
+      "type": "primary",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · published May 19 · primary",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "I/O day collection page; cross-links the announcement surface."
+    },
+    {
+      "id": "x-sundar-omni-rollout",
+      "title": "Sundar Pichai: Gemini Omni rollout starts with video outputs today",
+      "publisher": "X (@sundarpichai)",
+      "url": "https://x.com/sundarpichai/status/2056816915717443862",
+      "type": "primary",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · ~3:19 PM ET · CEO tape",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "frontier_release_velocity"
+      ],
+      "note": "Rollout details (Gemini app + Flow; Shorts this week)."
+    },
+    {
+      "id": "x-karpathy-joins-anthropic",
+      "title": "Andrej Karpathy: joining Anthropic",
+      "publisher": "X (@karpathy)",
+      "url": "https://x.com/karpathy/status/2056753169888334312",
+      "type": "primary",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · ~11:05 AM ET · primary",
+      "verification_status": "verified",
+      "section": "news",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "note": "Frontier talent move; no benchmark claim attached."
+    },
+    {
+      "id": "hn-gemini-35",
+      "title": "HN discussion: Gemini 3.5: frontier intelligence with action",
+      "publisher": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48196570",
+      "type": "discussion",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · live thread",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [],
+      "note": "Community read + friction detection."
+    },
+    {
+      "id": "hn-search-io-2026",
+      "title": "HN discussion: Google changes its search box",
+      "publisher": "Hacker News",
+      "url": "https://news.ycombinator.com/item?id=48197370",
+      "type": "discussion",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · live thread",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [],
+      "note": "Community debate on Search agent framing."
+    },
+    {
+      "id": "x-testingcatalog-omni",
+      "title": "TestingCatalog reacts to Omni rollout",
+      "publisher": "X (@testingcatalog)",
+      "url": "https://x.com/testingcatalog/status/2056817445353017427",
+      "type": "discussion",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · ~3:21 PM ET · discussion",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [],
+      "note": "Fast reaction layer; not primary evidence for capability."
+    },
+    {
+      "id": "reddit-karpathy-anthropic",
+      "title": "Reddit thread: Andrej Karpathy joins Anthropic",
+      "publisher": "Reddit (r/Anthropic)",
+      "url": "https://www.reddit.com/r/Anthropic/comments/1thszod/andrej_karpathy_joins_anthropic/",
+      "type": "discussion",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "Tue · discussion",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [],
+      "note": "Community interpretation layer; not primary evidence."
+    },
+    {
+      "id": "youtube-google-channel",
+      "title": "Google (official YouTube channel)",
+      "publisher": "YouTube",
+      "url": "https://www.youtube.com/google",
+      "type": "media",
+      "published_at": "2026-05-19",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "rolling-state",
+      "verification_status": "verified",
+      "section": "media",
+      "curve_dimensions": [],
+      "note": "Stable channel surface for keynote and demo clips."
+    },
+    {
+      "id": "metr-yaml",
+      "title": "METR Time Horizon 1.1 raw YAML",
+      "publisher": "METR",
+      "url": "https://metr.org/assets/benchmark_results_1_1.yaml",
+      "type": "primary",
+      "published_at": "2026-05-08",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "rolling-state",
+      "verification_status": "rolling-state",
+      "section": "benchmarks",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "note": "Raw p50/p80 + doubling-time fit."
+    },
+    {
+      "id": "metr-time-horizons",
+      "title": "METR Time Horizons",
+      "publisher": "METR",
+      "url": "https://metr.org/time-horizons",
+      "type": "primary",
+      "published_at": "2026-05-08",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "rolling-state",
+      "verification_status": "rolling-state",
+      "section": "benchmarks",
+      "curve_dimensions": [
+        "autonomy_horizon"
+      ],
+      "note": "Landing page for the METR Time Horizon suite."
+    },
+    {
+      "id": "agiranker-models",
+      "title": "AGI Ranker models.json",
+      "publisher": "AGI Ranker",
+      "url": "https://agiranker.com/models.json",
+      "type": "benchmark-data",
+      "published_at": "2026-05-13",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "rolling-state",
+      "verification_status": "rolling-state",
+      "section": "benchmarks",
+      "curve_dimensions": [
+        "capability_sota"
+      ],
+      "note": "Open JSON source for exact model benchmark cells."
+    },
+    {
+      "id": "ai2027-pdf",
+      "title": "AI 2027 scenario PDF",
+      "publisher": "AI Futures Project",
+      "url": "https://ai-2027.com/ai-2027.pdf",
+      "type": "scenario",
+      "published_at": "2025-04-03",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "standing context",
+      "verification_status": "verified",
+      "section": "ai-2027",
+      "curve_dimensions": [
+        "autonomy_horizon",
+        "ai_science"
+      ],
+      "note": "Primary scenario comparator."
+    },
+    {
+      "id": "prior-issue-2026-05-18",
+      "title": "Prior issue context: May 18, 2026",
+      "publisher": "Singularity Pulse (internal)",
+      "url": "./2026-05-18.html",
+      "type": "internal",
+      "published_at": "2026-05-18",
+      "fetched_at": "2026-05-19T15:40:00-04:00",
+      "freshness": "context",
+      "verification_status": "verified",
+      "section": "context",
+      "curve_dimensions": [],
+      "note": "Used only for “no new delta since May 18” component holds."
+    }
+  ]
+}
