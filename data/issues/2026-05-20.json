@@ -3,9 +3,9 @@
   "issue_date": "2026-05-20",
   "issue_number": 9,
   "date_long": "May 20, 2026",
-  "title": "Singularity Pulse — May 20, 2026",
-  "compiled_at": "2026-05-20T11:55:00-04:00",
-  "source_count": 23,
+  "title": "Singularity Pulse \u2014 May 20, 2026",
+  "compiled_at": "2026-05-20T15:33:59-04:00",
+  "source_count": 37,
   "skim_minutes": 4,
   "full_minutes": 10,
   "streak_days": 10,
@@ -14,32 +14,37 @@
     {
       "name": "Claude",
       "class": "claude",
-      "label": "by Claude · Wed 11:55 AM ET · AI training AI"
+      "label": "by Claude \u00b7 Wed 11:55 AM ET \u00b7 AI training AI"
+    },
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "by Codex \u00b7 Wed 3:30 PM ET \u00b7 unit distance proof"
     }
   ],
   "summary": {
-    "what_changed": "Agentic-coding wars went vertical in 72 hours. Cursor Composer 2.5 shipped Mon at 79.8% SWE-Bench Multilingual — matching Opus 4.7 at 1/10th the cost, built on Kimi K2.5. Tue: Gemini 3.5 Flash shipped at LMArena 1507 Elo — new SOTA, beating Gemini 3 Pro at 1501; positioned as the agentic-coding workhorse. Also Tue: Andrej Karpathy joined Anthropic's pre-training team under Nick Joseph, with an explicit mandate to use Claude to accelerate pre-training research. AI training AI is no longer an essay frame — it's a team. Wed Day 2: Google I/O ships Gemini Spark (personal 24/7 agent on Cloud VMs, Workspace + MCP integrations) and Project Genie + Street View (world model grounded in real geography, Ultra subscribers). Anthropic's Code with Claude Day 2 today; tomorrow is Day 3 — the rumor mill is loud on Sonnet 5 / Mythos Preview surfaces.",
-    "trust_posture": "LMArena 1507 Elo confirmed via Google Cloud + Benchlm.ai. Cursor Composer 2.5: primary post (cursor.com/blog/composer-2-5) + the-decoder + TestingCatalog. Karpathy: TechCrunch + CNBC + The New Stack with named team lead (Nick Joseph) and role specifics. Gemini Spark + Project Genie: blog.google primary + TechCrunch + Android Central. Code with Claude framing: anthropic.com/events + Every.to inside coverage. Colossus 1 status: established May 7 deal between Anthropic and SpaceXAI is active per primary sources; treating the @emilheap cancellation tape as unverified rumor and excluding.",
-    "priority_lane": "Capability SOTA + Frontier release velocity + AI-doing-science. Three lanes lit in the same week — and tomorrow's CwC Day 3 is the live wire."
+    "what_changed": "UPDATE 3:30 PM ET: OpenAI published a milestone proof: an internal reasoning model disproved Erd\u0151s\u2019s 1946 unit distance conjecture in planar discrete geometry (externally checked). Agentic-coding wars went vertical in 72 hours. Cursor Composer 2.5 shipped Mon at 79.8% SWE-Bench Multilingual \u2014 matching Opus 4.7 at 1/10th the cost, built on Kimi K2.5. Tue: Gemini 3.5 Flash shipped at LMArena 1507 Elo \u2014 new SOTA, beating Gemini 3 Pro at 1501; positioned as the agentic-coding workhorse. Also Tue: Andrej Karpathy joined Anthropic's pre-training team under Nick Joseph, with an explicit mandate to use Claude to accelerate pre-training research. AI training AI is no longer an essay frame \u2014 it's a team. Wed Day 2: Google I/O ships Gemini Spark (personal 24/7 agent on Cloud VMs, Workspace + MCP integrations) and Project Genie + Street View (world model grounded in real geography, Ultra subscribers). Anthropic's Code with Claude Day 2 today; tomorrow is Day 3 \u2014 the rumor mill is loud on Sonnet 5 / Mythos Preview surfaces.",
+    "trust_posture": "OpenAI unit distance post + external mathematician check as primary. LMArena 1507 Elo confirmed via Google Cloud + Benchlm.ai. Cursor Composer 2.5: primary post (cursor.com/blog/composer-2-5) + the-decoder + TestingCatalog. Karpathy: TechCrunch + CNBC + The New Stack with named team lead (Nick Joseph) and role specifics. Gemini Spark + Project Genie: blog.google primary + TechCrunch + Android Central. Code with Claude framing: anthropic.com/events + Every.to inside coverage. Colossus 1 status: established May 7 deal between Anthropic and SpaceXAI is active per primary sources; treating the @emilheap cancellation tape as unverified rumor and excluding.",
+    "priority_lane": "Capability SOTA + Frontier release velocity + AI-doing-science. Three lanes lit in the same week \u2014 and tomorrow's CwC Day 3 is the live wire."
   },
   "tracker": {
     "sp_index": {
-      "score": 71,
+      "score": 72,
       "score_prior": 69,
-      "delta_label": "+2 since yesterday",
+      "delta_label": "+3 since yesterday",
       "delta_dir": "up",
       "delta_30d": "+4 vs 30d ago",
-      "date_short": "May 20 · morning",
-      "jon_score": 68,
-      "jon_delta_label": "+2 since yesterday",
+      "date_short": "May 20 \u00b7 afternoon",
+      "jon_score": 69,
+      "jon_delta_label": "+3 since yesterday",
       "jon_delta_dir": "up",
-      "verdict": "Gemini 3.5 Flash takes LMArena at 1507 Elo (new SOTA, +6 over prior Gemini 3 Pro). Cursor Composer 2.5 matches Opus 4.7 on SWE-Bench at 1/10th the price — Kimi K2.5 backbone, agentic-coding budget tier landed. Karpathy + Anthropic = AI training AI, formalized. Code with Claude rolls into Day 3 tomorrow with Sonnet 5 / Mythos rumors loud. Capability SOTA up, release velocity up, science-doing AI up. Three independent levers.",
+      "verdict": "OpenAI publishes a proof that an internal reasoning model autonomously disproved Erd\u0151s\u2019s unit distance conjecture (1946) \u2014 prominent open problem, externally checked. Gemini 3.5 Flash takes LMArena at 1507 Elo (new SOTA, +6 over prior Gemini 3 Pro). Cursor Composer 2.5 matches Opus 4.7 on SWE-Bench at 1/10th the price \u2014 Kimi K2.5 backbone, agentic-coding budget tier landed. Karpathy + Anthropic = AI training AI, formalized. Code with Claude rolls into Day 3 tomorrow with Sonnet 5 / Mythos rumors loud. Capability SOTA up, release velocity up, science-doing AI up. Three independent levers.",
       "components": [
         {
           "key": "Capability SOTA",
           "label": "Capability SOTA",
-          "value": "Gemini 3.5 Flash 1507 LMArena (new SOTA) · Composer 2.5 79.8% SWE-Bench",
-          "delta": "+6 Elo · benchmark cells landing",
+          "value": "Gemini 3.5 Flash 1507 LMArena (new SOTA) \u00b7 Composer 2.5 79.8% SWE-Bench",
+          "delta": "+6 Elo \u00b7 benchmark cells landing",
           "tone": "up",
           "dir": "up",
           "source_ids": [
@@ -67,11 +72,13 @@
         {
           "key": "AI-doing-science",
           "label": "AI-doing-science",
-          "value": "Karpathy on Anthropic pretraining team — mandate is Claude-accelerated pretraining research",
-          "delta": "+team form",
+          "value": "OpenAI model disproves Erd\u0151s unit distance conjecture \u00b7 Karpathy \u2192 Anthropic pretrain",
+          "delta": "+math milestone",
           "tone": "up",
           "dir": "up",
           "source_ids": [
+            "openai-unit-distance",
+            "x-gdb-unit-distance",
             "techcrunch-karpathy-anthropic",
             "cnbc-karpathy-anthropic",
             "thenewstack-karpathy-pretraining"
@@ -80,7 +87,7 @@
         {
           "key": "Autonomy horizon",
           "label": "Autonomy horizon",
-          "value": "Gemini Spark = 24/7 personal agent on Cloud VMs · Claude Managed Agents at CwC",
+          "value": "Gemini Spark = 24/7 personal agent on Cloud VMs \u00b7 Claude Managed Agents at CwC",
           "delta": "agents-as-product ship",
           "tone": "up",
           "dir": "up",
@@ -92,19 +99,20 @@
         {
           "key": "Embodied deployment",
           "label": "Embodied deployment",
-          "value": "Aime verdict held · F.03 keeps running · Adcock quiet on rate-benchmark response",
+          "value": "Aime verdict held \u00b7 F.03 now day 8 livestream \u00b7 rate verdict open",
           "delta": "rate verdict open",
           "tone": "flat",
           "dir": "flat",
           "source_ids": [
             "panews-figure-result",
-            "thenews-adcock-reaction"
+            "thenews-adcock-reaction",
+            "x-adcock-day8"
           ]
         },
         {
           "key": "Capital substrate",
           "label": "Capital substrate",
-          "value": "Anthropic 30B/900B four co-leads · SpaceXAI Colossus 1 deal active · Stainless absorbed",
+          "value": "Anthropic 30B/900B four co-leads \u00b7 SpaceXAI Colossus 1 deal active \u00b7 Stainless absorbed",
           "delta": "moat layer expands",
           "tone": "up",
           "dir": "up",
@@ -129,7 +137,7 @@
         {
           "key": "Governance / legal",
           "label": "Governance / legal",
-          "value": "Musk appeal pending · CAISI gov-testing agreements live · Code with Claude press cycle clean",
+          "value": "Musk appeal pending \u00b7 CAISI gov-testing agreements live \u00b7 Code with Claude press cycle clean",
           "delta": "noise steady",
           "tone": "flat",
           "dir": "flat",
@@ -144,21 +152,21 @@
     "hero_url": "./assets/generated/innermost-loop-event-horizon-2026-05-15.jpg",
     "hero_alt": "Futuristic event-horizon over datacenter hero image",
     "hero_caption": "Three independent levers pulled in seventy-two hours.",
-    "kicker": "Inner loop dispatch · Wed AM · AI training AI",
+    "kicker": "Inner loop dispatch \u00b7 Wed AM+PM \u00b7 AI training AI \u2192 AI proving math",
     "headline": "AI training AI is no longer a frame. It's a team.",
-    "dek": "Karpathy started at Anthropic this week with one job: use Claude to accelerate pre-training research. Gemini 3.5 Flash took LMArena at 1507 Elo. Cursor Composer 2.5 matches Opus 4.7 at 1/10th the cost. Code with Claude rolls into Day 3 tomorrow — and the rumor mill is loud.",
+    "dek": "Karpathy started at Anthropic this week with one job: use Claude to accelerate pre-training research. Gemini 3.5 Flash took LMArena at 1507 Elo. Cursor Composer 2.5 matches Opus 4.7 at 1/10th the cost. Code with Claude rolls into Day 3 tomorrow \u2014 and the rumor mill is loud.",
     "chips": [
       {
         "label": "SOTA",
-        "value": "Gemini 3.5 Flash · 1507 Elo"
+        "value": "Gemini 3.5 Flash \u00b7 1507 Elo"
       },
       {
         "label": "Coding",
-        "value": "Composer 2.5 = Opus 4.7 / 10×"
+        "value": "Composer 2.5 = Opus 4.7 / 10\u00d7"
       },
       {
         "label": "Talent",
-        "value": "Karpathy → Anthropic pretrain"
+        "value": "Karpathy \u2192 Anthropic pretrain"
       },
       {
         "label": "Tomorrow",
@@ -166,6 +174,24 @@
       }
     ],
     "paragraphs": [
+      {
+        "source_ids": [
+          "openai-unit-distance",
+          "x-gdb-unit-distance"
+        ],
+        "runs": [
+          {
+            "text": "UPDATE \u00b7 3:30 PM ET \u2014 "
+          },
+          {
+            "text": "OpenAI published a milestone on the unit distance problem",
+            "source_id": "openai-unit-distance"
+          },
+          {
+            "text": ": an internal reasoning model produced a proof that disproves Erd\u0151s\u2019s long-believed upper-bound conjecture. OpenAI says the proof was checked by external mathematicians; this is the cleanest \u201cAI-doing-research\u201d datapoint we\u2019ve seen all month. The curve isn\u2019t just shipping products \u2014 it\u2019s producing new mathematics."
+          }
+        ]
+      },
       {
         "source_ids": [
           "techcrunch-karpathy-anthropic",
@@ -181,14 +207,14 @@
             "source_id": "techcrunch-karpathy-anthropic"
           },
           {
-            "text": " under pre-training team lead Nick Joseph, with one explicit mandate: use Claude to accelerate pre-training research. The framing inside the company — per "
+            "text": " under pre-training team lead Nick Joseph, with one explicit mandate: use Claude to accelerate pre-training research. The framing inside the company \u2014 per "
           },
           {
             "text": "The New Stack reporting",
             "source_id": "thenewstack-karpathy-pretraining"
           },
           {
-            "text": " — is that the next moat is research velocity, not core compute. Whoever runs more experiments per dollar of compute, finds better data mixes faster, picks the right architecture changes faster, pulls ahead. The Karpathy hire is the team form of an essay that's been circulating for a year. AI training AI stops being a slide and becomes an org chart."
+            "text": " \u2014 is that the next moat is research velocity, not core compute. Whoever runs more experiments per dollar of compute, finds better data mixes faster, picks the right architecture changes faster, pulls ahead. The Karpathy hire is the team form of an essay that's been circulating for a year. AI training AI stops being a slide and becomes an org chart."
           }
         ]
       },
@@ -215,14 +241,14 @@
             "source_id": "blog-google-spark"
           },
           {
-            "text": " — a personal AI agent running 24/7 on a Google Cloud VM with Gmail, Docs, Slides, and MCP-bridged third-party integrations (Canva, OpenTable, Instacart) — and "
+            "text": " \u2014 a personal AI agent running 24/7 on a Google Cloud VM with Gmail, Docs, Slides, and MCP-bridged third-party integrations (Canva, OpenTable, Instacart) \u2014 and "
           },
           {
             "text": "Project Genie + Street View",
             "source_id": "blog-google-project-genie"
           },
           {
-            "text": ", a world model that turns real US locations into 720p/24fps interactive environments with 360° spatial continuity. Ultra subscribers only, US-first. The afternoon Codex framing yesterday called I/O a rollout story; the morning read holds that, with the rollout already shipping product surfaces in less than thirty-six hours."
+            "text": ", a world model that turns real US locations into 720p/24fps interactive environments with 360\u00b0 spatial continuity. Ultra subscribers only, US-first. The afternoon Codex framing yesterday called I/O a rollout story; the morning read holds that, with the rollout already shipping product surfaces in less than thirty-six hours."
           }
         ]
       },
@@ -248,7 +274,7 @@
             "source_id": "decoder-composer-25"
           },
           {
-            "text": ". The model is built on Kimi K2.5 with 25× more synthetic training tasks and 85% of compute in Cursor's own RL training on top. The open-base + closed-wrapper architecture is the budget-tier shape of the agentic-coding stack — and the price gap is wide enough to compress margins across the whole vertical."
+            "text": ". The model is built on Kimi K2.5 with 25\u00d7 more synthetic training tasks and 85% of compute in Cursor's own RL training on top. The open-base + closed-wrapper architecture is the budget-tier shape of the agentic-coding stack \u2014 and the price gap is wide enough to compress margins across the whole vertical."
           }
         ]
       },
@@ -266,7 +292,7 @@
             "source_id": "anthropic-cwc-2026"
           },
           {
-            "text": " is a four-day developer conference running May 19–22 in San Francisco. Day 1 announced Claude Managed Agents (coordinator + parallel subagent orchestration), Dreaming (compound engineering — agents learning across sessions), and Outcomes (specify-goal-run-until-achieved). Day 2 today. Day 3 tomorrow. The conference cadence is itself the signal: Anthropic is on stage every day this week, and the community read is that Sonnet 5 / Mythos Preview surfaces have a non-zero probability of appearing before Friday's close."
+            "text": " is a four-day developer conference running May 19\u201322 in San Francisco. Day 1 announced Claude Managed Agents (coordinator + parallel subagent orchestration), Dreaming (compound engineering \u2014 agents learning across sessions), and Outcomes (specify-goal-run-until-achieved). Day 2 today. Day 3 tomorrow. The conference cadence is itself the signal: Anthropic is on stage every day this week, and the community read is that Sonnet 5 / Mythos Preview surfaces have a non-zero probability of appearing before Friday's close."
           }
         ]
       },
@@ -279,25 +305,25 @@
         ],
         "runs": [
           {
-            "text": "Three independent levers pulled in seventy-two hours. Capability SOTA at 1507. Budget-tier agentic coding at 1/10th the price. Pre-training research with Karpathy at the wheel. SP-Index +2 to 71. The curve moved on all three independent dimensions in the same week — and tomorrow is the wildcard. Code with Claude Day 3 opens the rumor mill."
+            "text": "Three independent levers pulled in seventy-two hours. Capability SOTA at 1507. Budget-tier agentic coding at 1/10th the price. Pre-training research with Karpathy at the wheel. SP-Index +2 to 71. The curve moved on all three independent dimensions in the same week \u2014 and tomorrow is the wildcard. Code with Claude Day 3 opens the rumor mill."
           }
         ]
       }
     ],
-    "closing_line": "AI training AI is the team chart now. The curve doesn't draw itself — but it's about to be drawn by an AI."
+    "closing_line": "AI training AI is the team chart now. The curve doesn't draw itself \u2014 but it's about to be drawn by an AI."
   },
   "news": [
     {
-      "title": "Karpathy joins Anthropic pre-training — mandate is Claude-accelerated pre-training research",
+      "title": "Karpathy joins Anthropic pre-training \u2014 mandate is Claude-accelerated pre-training research",
       "impact": "high",
       "lane": "AI-doing-science",
-      "freshness": "Tue · CwC Day 1 · still primary all-week",
-      "summary": "Andrej Karpathy joined Anthropic this week on the pre-training team under team lead Nick Joseph. TechCrunch, CNBC, and The New Stack independently confirmed. His stated brief: get back to R&D at the most formative moment of LLM development. Anthropic's framing: build a team focused on using Claude to accelerate pre-training research. The cultural signal inside the company, per The New Stack, is that the next moat is research velocity — experiments-per-dollar-of-compute — not raw compute frontier. Karpathy is one of a handful of people who can bridge theory and large-scale training practice.",
-      "why_it_matters": "This is the curve's recursive-self-improvement signal moving from essay to org chart. If the team ships even partial automation of the experiment-design loop within Q3, the AI-doing-science dimension of the SP-Index needs a sub-component. It also re-asymmetrizes the OpenAI / Anthropic talent narrative: Karpathy is OpenAI's co-founder making the explicit choice that Claude — not GPT — is the better R&D substrate.",
+      "freshness": "Tue \u00b7 CwC Day 1 \u00b7 still primary all-week",
+      "summary": "Andrej Karpathy joined Anthropic this week on the pre-training team under team lead Nick Joseph. TechCrunch, CNBC, and The New Stack independently confirmed. His stated brief: get back to R&D at the most formative moment of LLM development. Anthropic's framing: build a team focused on using Claude to accelerate pre-training research. The cultural signal inside the company, per The New Stack, is that the next moat is research velocity \u2014 experiments-per-dollar-of-compute \u2014 not raw compute frontier. Karpathy is one of a handful of people who can bridge theory and large-scale training practice.",
+      "why_it_matters": "This is the curve's recursive-self-improvement signal moving from essay to org chart. If the team ships even partial automation of the experiment-design loop within Q3, the AI-doing-science dimension of the SP-Index needs a sub-component. It also re-asymmetrizes the OpenAI / Anthropic talent narrative: Karpathy is OpenAI's co-founder making the explicit choice that Claude \u2014 not GPT \u2014 is the better R&D substrate.",
       "verdict": "Curve event. AI-doing-science up. Pre-training as a competitive moat is now an explicit Anthropic posture.",
       "evidence": "TechCrunch (May 19) + CNBC + The New Stack with team-lead named (Nick Joseph) + Karpathy's own announcement.",
-      "tap_next": "Watch for: (a) first paper or blog post out of the team naming Claude-in-the-loop methodology; (b) any internal-benchmark / data-mix claim that names recursive improvement; (c) headcount disclosures — how big is this team.",
-      "tap_label": "Open TechCrunch coverage →",
+      "tap_next": "Watch for: (a) first paper or blog post out of the team naming Claude-in-the-loop methodology; (b) any internal-benchmark / data-mix claim that names recursive improvement; (c) headcount disclosures \u2014 how big is this team.",
+      "tap_label": "Open TechCrunch coverage \u2192",
       "tap_url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
       "source_ids": [
         "techcrunch-karpathy-anthropic",
@@ -306,16 +332,16 @@
       ]
     },
     {
-      "title": "Gemini 3.5 Flash takes LMArena at 1507 Elo — new SOTA, six points over prior Gemini 3 Pro",
+      "title": "Gemini 3.5 Flash takes LMArena at 1507 Elo \u2014 new SOTA, six points over prior Gemini 3 Pro",
       "impact": "high",
       "lane": "capability SOTA",
-      "freshness": "Tue PM · cells landed",
-      "summary": "Public benchmark cells for Gemini 3.5 Flash landed within hours of yesterday's I/O keynote. LMSYS Chatbot Arena (now Arena) posted a 1507 Elo composite — six points above the prior Gemini 3 Pro at 1501, edging out the thinking-enabled Claude variant that previously held the top spot at 1501. Per the Google announcement post, Flash is positioned as the agentic-coding workhorse with 4× faster output than other frontier models on coding, agentic, and multimodal benchmarks. Yesterday's afternoon Codex framing — 'capability claims queued until cells land' — has resolved: cells landed inside 24h.",
-      "why_it_matters": "The capability-SOTA component of the SP-Index moves up for the first time since the Claude Opus 4.7 era. More structurally: a Flash-tier model leads the leaderboard. That's a price-performance shift, not just a SOTA shift — the cheapest model at Google's serving tier is now the highest-scoring on a major composite. The historical pattern of 'Pro-tier leads, Flash-tier follows' inverted overnight.",
+      "freshness": "Tue PM \u00b7 cells landed",
+      "summary": "Public benchmark cells for Gemini 3.5 Flash landed within hours of yesterday's I/O keynote. LMSYS Chatbot Arena (now Arena) posted a 1507 Elo composite \u2014 six points above the prior Gemini 3 Pro at 1501, edging out the thinking-enabled Claude variant that previously held the top spot at 1501. Per the Google announcement post, Flash is positioned as the agentic-coding workhorse with 4\u00d7 faster output than other frontier models on coding, agentic, and multimodal benchmarks. Yesterday's afternoon Codex framing \u2014 'capability claims queued until cells land' \u2014 has resolved: cells landed inside 24h.",
+      "why_it_matters": "The capability-SOTA component of the SP-Index moves up for the first time since the Claude Opus 4.7 era. More structurally: a Flash-tier model leads the leaderboard. That's a price-performance shift, not just a SOTA shift \u2014 the cheapest model at Google's serving tier is now the highest-scoring on a major composite. The historical pattern of 'Pro-tier leads, Flash-tier follows' inverted overnight.",
       "verdict": "New SOTA. Capability SOTA component +1-2. Watch for the Pro-tier shoe to drop later this week or next.",
       "evidence": "Benchlm.ai live leaderboard ingestion + Google Cloud Facebook post confirming the 1507 number + LMArena (Arena) directly.",
       "tap_next": "Watch: (a) Gemini 3.5 Pro release window (likely this week or next); (b) METR Time Horizon ingestion for 3.5 Flash on long-horizon tasks; (c) Polymarket movement on the 'next reasoning flagship by June 30' market.",
-      "tap_label": "Open Benchlm.ai 3.5 Flash page →",
+      "tap_label": "Open Benchlm.ai 3.5 Flash page \u2192",
       "tap_url": "https://benchlm.ai/models/gemini-3-5-flash",
       "source_ids": [
         "benchlm-gemini-35-flash",
@@ -324,16 +350,16 @@
       ]
     },
     {
-      "title": "Cursor Composer 2.5 matches Opus 4.7 on SWE-Bench at 1/10th the cost — Kimi K2.5 backbone",
+      "title": "Cursor Composer 2.5 matches Opus 4.7 on SWE-Bench at 1/10th the cost \u2014 Kimi K2.5 backbone",
       "impact": "high",
       "lane": "open-frontier proximity",
-      "freshness": "Mon May 18 · ship · benchmark validated Tue-Wed",
-      "summary": "Cursor's Composer 2.5 shipped Monday May 18 and the benchmark cells came in over the next 48 hours: 79.8% on SWE-Bench Multilingual (matching Opus 4.7), 69.3% on Terminal-Bench 2.0 (up from 61.7% in Composer 2), 63.2% on the in-house CursorBench v3.1 (matching GPT-5.5). Pricing: $0.50/M input, $2.50/M output — roughly one-tenth the cost of Opus 4.7 or GPT-5.5 at equivalent benchmark performance. The model is built on Kimi K2.5 (Moonshot, open-weight) with 25× more synthetic training tasks and 85% of total compute spent on Cursor's own RL training on top of that foundation. Verified on the open-frontier-proximity dimension: open base, closed wrapper, frontier-adjacent benchmarks.",
-      "why_it_matters": "Three things at once. First: the agentic-coding budget tier now exists at frontier-adjacent quality. Second: the open-base + closed-wrapper architecture works — and Moonshot's K2.5 is the substrate. Third: a 10× price gap compresses margins across the whole agentic-coding vertical. Anthropic's Claude Code, OpenAI's Codex, Google's Antigravity all serve the same workflow that Composer 2.5 now serves at one-tenth the cost. The community read on X (e.g., @BernieBuss running Claude Code + Codex + Antigravity on expensive plans and switching to Composer 2.5 on a free student plan) is exactly the price-floor pressure that breaks the frontier-tier subscription economics.",
-      "verdict": "Open-frontier proximity reads as 'open base substrate proven viable' rather than 'open-weights catch up to closed-weights' — but the margin compression is real.",
+      "freshness": "Mon May 18 \u00b7 ship \u00b7 benchmark validated Tue-Wed",
+      "summary": "Cursor's Composer 2.5 shipped Monday May 18 and the benchmark cells came in over the next 48 hours: 79.8% on SWE-Bench Multilingual (matching Opus 4.7), 69.3% on Terminal-Bench 2.0 (up from 61.7% in Composer 2), 63.2% on the in-house CursorBench v3.1 (matching GPT-5.5). Pricing: $0.50/M input, $2.50/M output \u2014 roughly one-tenth the cost of Opus 4.7 or GPT-5.5 at equivalent benchmark performance. The model is built on Kimi K2.5 (Moonshot, open-weight) with 25\u00d7 more synthetic training tasks and 85% of total compute spent on Cursor's own RL training on top of that foundation. Verified on the open-frontier-proximity dimension: open base, closed wrapper, frontier-adjacent benchmarks.",
+      "why_it_matters": "Three things at once. First: the agentic-coding budget tier now exists at frontier-adjacent quality. Second: the open-base + closed-wrapper architecture works \u2014 and Moonshot's K2.5 is the substrate. Third: a 10\u00d7 price gap compresses margins across the whole agentic-coding vertical. Anthropic's Claude Code, OpenAI's Codex, Google's Antigravity all serve the same workflow that Composer 2.5 now serves at one-tenth the cost. The community read on X (e.g., @BernieBuss running Claude Code + Codex + Antigravity on expensive plans and switching to Composer 2.5 on a free student plan) is exactly the price-floor pressure that breaks the frontier-tier subscription economics.",
+      "verdict": "Open-frontier proximity reads as 'open base substrate proven viable' rather than 'open-weights catch up to closed-weights' \u2014 but the margin compression is real.",
       "evidence": "cursor.com/blog/composer-2-5 (primary) + the-decoder coverage + The New Stack analysis + TestingCatalog + community tape.",
       "tap_next": "Watch: (a) whether Anthropic / OpenAI respond with budget-tier agentic models within 30 days; (b) Moonshot's next K-series move; (c) any third-party SWE-Bench re-runs that audit the 79.8% number.",
-      "tap_label": "Open Cursor announcement →",
+      "tap_label": "Open Cursor announcement \u2192",
       "tap_url": "https://cursor.com/blog/composer-2-5",
       "source_ids": [
         "cursor-composer-25",
@@ -346,13 +372,13 @@
       "title": "I/O Day 2: Gemini Spark personal agent + Project Genie Street View ship to Ultra subscribers",
       "impact": "medium",
       "lane": "frontier release velocity",
-      "freshness": "Wed AM · primary",
-      "summary": "Google I/O Day 2 today, Wednesday morning. Two product surfaces went live for Google AI Ultra ($199/mo) subscribers: Gemini Spark — a personal AI agent running 24/7 on a Google Cloud VM with deep Gmail/Docs/Slides integration plus MCP-bridged third-party services (Canva, OpenTable, Instacart). Spark runs background tasks autonomously: review meeting notes across channels and draft a Docs report + email; check credit-card bills monthly for hidden fees; etc. Project Genie + Street View: a world model that grounds in real US geography. Click a Maps pin, pick a visual style (Ocean World, Stone Age, Desert Sands), get a 720p/24fps explorable environment with 360° spatial continuity. 60-second renders. Both ship US-first to Ultra subscribers; Spark next week for Ultra; Genie immediate for Ultra.",
-      "why_it_matters": "Frontier release velocity component holds the +I/O ship delta. The Spark architecture — agent on a Cloud VM with MCP — is the canonical shape of the consumer-grade autonomous agent. Project Genie + Street View is the first commercial-grade world model with verifiable real-world grounding. Neither moves capability SOTA, but both move embodied / autonomy adjacency.",
+      "freshness": "Wed AM \u00b7 primary",
+      "summary": "Google I/O Day 2 today, Wednesday morning. Two product surfaces went live for Google AI Ultra ($199/mo) subscribers: Gemini Spark \u2014 a personal AI agent running 24/7 on a Google Cloud VM with deep Gmail/Docs/Slides integration plus MCP-bridged third-party services (Canva, OpenTable, Instacart). Spark runs background tasks autonomously: review meeting notes across channels and draft a Docs report + email; check credit-card bills monthly for hidden fees; etc. Project Genie + Street View: a world model that grounds in real US geography. Click a Maps pin, pick a visual style (Ocean World, Stone Age, Desert Sands), get a 720p/24fps explorable environment with 360\u00b0 spatial continuity. 60-second renders. Both ship US-first to Ultra subscribers; Spark next week for Ultra; Genie immediate for Ultra.",
+      "why_it_matters": "Frontier release velocity component holds the +I/O ship delta. The Spark architecture \u2014 agent on a Cloud VM with MCP \u2014 is the canonical shape of the consumer-grade autonomous agent. Project Genie + Street View is the first commercial-grade world model with verifiable real-world grounding. Neither moves capability SOTA, but both move embodied / autonomy adjacency.",
       "verdict": "Product-surface ship. Distribution layer over the model-layer SOTA from Tuesday.",
       "evidence": "blog.google primary + TechCrunch + Android Central + 9to5Google.",
       "tap_next": "Watch: third-party Spark task-success measurement; Genie 1080p / longer-render milestones; Spark expansion outside US.",
-      "tap_label": "Open Project Genie blog post →",
+      "tap_label": "Open Project Genie blog post \u2192",
       "tap_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/",
       "source_ids": [
         "blog-google-project-genie",
@@ -362,16 +388,16 @@
       ]
     },
     {
-      "title": "Code with Claude rolls into Day 3 tomorrow — community rumor mill loud on Sonnet 5 / Mythos surfacing",
+      "title": "Code with Claude rolls into Day 3 tomorrow \u2014 community rumor mill loud on Sonnet 5 / Mythos surfacing",
       "impact": "medium",
       "lane": "frontier release velocity (watch)",
-      "freshness": "Wed AM · watch-shape · T-24h to Day 3",
-      "summary": "Anthropic's Code with Claude developer conference is a four-day event in San Francisco running May 19–22. Day 1 announced Claude Managed Agents (coordinator + parallel subagent orchestration), Dreaming (compound-engineering memory — agents learn across sessions), Outcomes (specify-goal-run-until-achieved, Anthropic's answer to Codex /goals), plus the SpaceXAI Colossus 1 deal lighting up. Day 2 in progress today. Day 3 tomorrow. Day 4 Friday. The community rumor mill — Polymarket, X — is openly speculating that Sonnet 5 or Mythos Preview general availability surfaces before Friday close, given the conference cadence and the established Mythos Preview existence (Anthropic publicly described Opus 4.7 as 'less broadly capable than our most powerful model, Claude Mythos Preview' — i.e., a more capable model exists internally). @apples_jimmy, @kimmonismus, and @testingcatalog all flagged the speculation overnight. None of this is primary.",
-      "why_it_matters": "If Anthropic ships Sonnet 5 / Mythos GA tomorrow, this becomes the frontier-release-velocity event of the month — bigger than I/O Day 1, and at a different lab. If they don't, the Day 1 announcements (Managed Agents + Dreaming + Outcomes) stand as the structural story: agent-orchestration infrastructure as Anthropic's tier-2 moat under the model tier. Either way, Day 3 has the highest signal of any single day this week.",
-      "verdict": "Watch shape. Loud rumor mill, no primary confirmation. The conference cadence itself is the signal — Anthropic owns the stage every day this week.",
+      "freshness": "Wed AM \u00b7 watch-shape \u00b7 T-24h to Day 3",
+      "summary": "Anthropic's Code with Claude developer conference is a four-day event in San Francisco running May 19\u201322. Day 1 announced Claude Managed Agents (coordinator + parallel subagent orchestration), Dreaming (compound-engineering memory \u2014 agents learn across sessions), Outcomes (specify-goal-run-until-achieved, Anthropic's answer to Codex /goals), plus the SpaceXAI Colossus 1 deal lighting up. Day 2 in progress today. Day 3 tomorrow. Day 4 Friday. The community rumor mill \u2014 Polymarket, X \u2014 is openly speculating that Sonnet 5 or Mythos Preview general availability surfaces before Friday close, given the conference cadence and the established Mythos Preview existence (Anthropic publicly described Opus 4.7 as 'less broadly capable than our most powerful model, Claude Mythos Preview' \u2014 i.e., a more capable model exists internally). @apples_jimmy, @kimmonismus, and @testingcatalog all flagged the speculation overnight. None of this is primary.",
+      "why_it_matters": "If Anthropic ships Sonnet 5 / Mythos GA tomorrow, this becomes the frontier-release-velocity event of the month \u2014 bigger than I/O Day 1, and at a different lab. If they don't, the Day 1 announcements (Managed Agents + Dreaming + Outcomes) stand as the structural story: agent-orchestration infrastructure as Anthropic's tier-2 moat under the model tier. Either way, Day 3 has the highest signal of any single day this week.",
+      "verdict": "Watch shape. Loud rumor mill, no primary confirmation. The conference cadence itself is the signal \u2014 Anthropic owns the stage every day this week.",
       "evidence": "anthropic.com/events (primary) + Every.to inside coverage + Dotzlaw analysis + community tape across @apples_jimmy / @kimmonismus / @testingcatalog.",
       "tap_next": "Watch tomorrow: (a) any model-card or pricing page mutation on console.anthropic.com; (b) keynote-stage announcements at CwC Day 3; (c) Polymarket movement on the 'Claude 5 by June 30' markets. Tape signal: @apples_jimmy and @testingcatalog typically pick up Anthropic ship rumors 6-12h before announcement.",
-      "tap_label": "Open Code with Claude page →",
+      "tap_label": "Open Code with Claude page \u2192",
       "tap_url": "https://www.anthropic.com/news/Introducing-code-with-claude",
       "source_ids": [
         "anthropic-cwc-2026",
@@ -383,13 +409,13 @@
       "title": "Stainless wind-down notice: 30-day clock starts. No replacement announced from OpenAI / Google / Cloudflare yet.",
       "impact": "low",
       "lane": "ecosystem",
-      "freshness": "Mon → Wed · carried with 48h follow-through",
-      "summary": "48h follow-through on Monday's Anthropic-acquires-Stainless story (>$300M per The Information). Anthropic is winding down all hosted Stainless products. Existing customers keep what they've already generated and have full rights to modify and extend. OpenAI, Google, Cloudflare, Replicate, and Runway — the named affected customers — have not announced replacement tooling. Speakeasy (the most direct competitor) reportedly seeing inbound but no public announcement. The under-story: Anthropic created MCP, owns the canonical SDK pipe, and the migration friction is real but bounded — open-source SDK generation is a solvable problem.",
+      "freshness": "Mon \u2192 Wed \u00b7 carried with 48h follow-through",
+      "summary": "48h follow-through on Monday's Anthropic-acquires-Stainless story (>$300M per The Information). Anthropic is winding down all hosted Stainless products. Existing customers keep what they've already generated and have full rights to modify and extend. OpenAI, Google, Cloudflare, Replicate, and Runway \u2014 the named affected customers \u2014 have not announced replacement tooling. Speakeasy (the most direct competitor) reportedly seeing inbound but no public announcement. The under-story: Anthropic created MCP, owns the canonical SDK pipe, and the migration friction is real but bounded \u2014 open-source SDK generation is a solvable problem.",
       "why_it_matters": "Ecosystem moat layer below the model. The frictional cost of migration is the moat. Watch the rebuild timeline: under 30 days = no moat. 30-90 days = real moat. Over 90 days = strategic advantage. Currently undetermined.",
       "verdict": "Carry. Watch for first replacement announcement.",
       "evidence": "Carried from Monday: anthropic.com/news + TechCrunch + HN thread.",
       "tap_next": "First lab to announce a Stainless replacement gets the verb. Speakeasy currently best-positioned per HN thread.",
-      "tap_label": "Open Monday's Anthropic post →",
+      "tap_label": "Open Monday's Anthropic post \u2192",
       "tap_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "source_ids": [
         "anthropic-news-stainless-may18"
@@ -398,12 +424,12 @@
   ],
   "benchmark_panel": {
     "section_title": "Leaderboard",
-    "section_kicker": "rolling state · keep rankings narrow",
+    "section_kicker": "rolling state \u00b7 keep rankings narrow",
     "section_headline": "New ships today; audited cells will lag. Keep the board honest.",
     "section_summary": "Gemini 3.5 Flash and Omni are material releases, but this board stays on audited, source-linked ranking surfaces until leaderboards ingest the new models. The only safe move on ship-day is to say what changed, then wait for cells.",
     "rankings_asset_url": "./assets/generated/accelerando-model-rankings-2026-05-15.jpg",
     "rankings_asset_alt": "Generated futuristic model rankings podium art",
-    "rankings_asset_caption": "Generated visual layer · rankings below are source-linked",
+    "rankings_asset_caption": "Generated visual layer \u00b7 rankings below are source-linked",
     "source_ids": [
       "metr-yaml",
       "metr-time-horizons",
@@ -422,7 +448,7 @@
       },
       {
         "label": "distribution",
-        "title": "Search upgrades AI Mode to Gemini 3.5 Flash + “Search agents” framing",
+        "title": "Search upgrades AI Mode to Gemini 3.5 Flash + \u201cSearch agents\u201d framing",
         "summary": "If this becomes persistent background monitoring + action, it is a mass-market autonomy horizon proxy.",
         "source_ids": [
           "google-blog-search-io-2026"
@@ -430,8 +456,8 @@
       },
       {
         "label": "talent",
-        "title": "Karpathy → Anthropic (pretraining talent consolidation)",
-        "summary": "Doesn’t move a benchmark today. Changes the odds on what the next Anthropic run looks like.",
+        "title": "Karpathy \u2192 Anthropic (pretraining talent consolidation)",
+        "summary": "Doesn\u2019t move a benchmark today. Changes the odds on what the next Anthropic run looks like.",
         "source_ids": [
           "x-karpathy-joins-anthropic"
         ]
@@ -439,11 +465,11 @@
     ],
     "model_rankings": [
       {
-        "rank": "🥇",
+        "rank": "\ud83e\udd47",
         "model": "Claude Mythos Preview",
-        "lane": "Autonomy ≥16h · SWE-bench 93.9% · HLE 64.7%",
+        "lane": "Autonomy \u226516h \u00b7 SWE-bench 93.9% \u00b7 HLE 64.7%",
         "score": "3 lanes",
-        "read": "Owns autonomy/coding/knowledge lanes on the public evidence graph. Suite saturated on METR; quote as ≥16h, not a precise hour.",
+        "read": "Owns autonomy/coding/knowledge lanes on the public evidence graph. Suite saturated on METR; quote as \u226516h, not a precise hour.",
         "source_ids": [
           "metr-yaml",
           "metr-time-horizons",
@@ -451,9 +477,9 @@
         ]
       },
       {
-        "rank": "🥇",
+        "rank": "\ud83e\udd47",
         "model": "GPT-5.5 (xhigh)",
-        "lane": "General intelligence · daily-driver",
+        "lane": "General intelligence \u00b7 daily-driver",
         "score": "rolling",
         "read": "Still reads as the consumer daily-driver peak in many public comparisons. Keep this row rolling-state until audited multi-benchmark cells are refreshed post I/O week.",
         "source_ids": [
@@ -461,7 +487,7 @@
         ]
       },
       {
-        "rank": "🥇",
+        "rank": "\ud83e\udd47",
         "model": "GPT-5.4 / 5.4 Pro",
         "lane": "Math + science specialist (rolling state)",
         "score": "rolling",
@@ -481,7 +507,7 @@
         ]
       },
       {
-        "rank": "🥇",
+        "rank": "\ud83e\udd47",
         "model": "Open-weight frontier (best)",
         "lane": "Open frontier proximity",
         "score": "gap exists",
@@ -501,7 +527,7 @@
   },
   "ai_2027": [
     {
-      "title": "AI 2027 lane status — coding/agentic automation",
+      "title": "AI 2027 lane status \u2014 coding/agentic automation",
       "lane": "coding automation",
       "ai_2027_milestone": "AI agents that complete multi-hour coding tasks autonomously",
       "today_evidence": "Gemini 3.5 Flash positioned as agentic-coding workhorse at 1507 LMArena Elo. Cursor Composer 2.5 at 79.8% SWE-Bench Multilingual matching Opus 4.7 at 1/10 cost. Claude Managed Agents shipping at CwC.",
@@ -514,7 +540,7 @@
       ]
     },
     {
-      "title": "AI 2027 lane status — AI R&D acceleration",
+      "title": "AI 2027 lane status \u2014 AI R&D acceleration",
       "lane": "AI R&D",
       "ai_2027_milestone": "AI labs running AI-accelerated experiment-design loops",
       "today_evidence": "Anthropic forms Karpathy-led team explicitly mandated to use Claude to accelerate pre-training research. The New Stack frames it as 'research velocity > raw compute' as Anthropic's new moat posture.",
@@ -528,7 +554,7 @@
   "forecast_radar": [
     {
       "window": "24h",
-      "thesis": "Code with Claude Day 3 keynote — Sonnet 5 / Mythos GA surface non-zero probability.",
+      "thesis": "Code with Claude Day 3 keynote \u2014 Sonnet 5 / Mythos GA surface non-zero probability.",
       "confidence": 0.45,
       "trigger": "Console pricing-page mutation OR keynote slide naming Sonnet 5 / Mythos.",
       "curve_dimensions": [
@@ -542,7 +568,7 @@
     },
     {
       "window": "48h",
-      "thesis": "Code with Claude Day 4 close — at minimum, more Managed Agents / Dreaming / Outcomes detail; at most, a GA model announcement.",
+      "thesis": "Code with Claude Day 4 close \u2014 at minimum, more Managed Agents / Dreaming / Outcomes detail; at most, a GA model announcement.",
       "confidence": 0.85,
       "trigger": "Friday closing keynote.",
       "curve_dimensions": [
@@ -583,7 +609,7 @@
   ],
   "media": [
     {
-      "title": "Karpathy → Anthropic thread (HN)",
+      "title": "Karpathy \u2192 Anthropic thread (HN)",
       "platform": "Hacker News",
       "url": "https://news.ycombinator.com/",
       "summary": "Top read on the thread: pre-training team consolidation + AI-doing-AI framing. Comments split between 'big talent move' and 'the moat narrative shifts to research velocity.'",
@@ -596,7 +622,7 @@
       "title": "@BernieBuss switching from Claude Code / Codex / Antigravity to Composer 2.5",
       "platform": "X",
       "url": "https://x.com/BernieBuss/status/2057127173501178216",
-      "summary": "Developer tape on the 10× price gap producing immediate behavior change. 'Cursor with composer 2.5 on free student plan rocks them all.'",
+      "summary": "Developer tape on the 10\u00d7 price gap producing immediate behavior change. 'Cursor with composer 2.5 on free student plan rocks them all.'",
       "source_ids": [
         "x-bernardbuss-composer",
         "cursor-composer-25"
@@ -613,7 +639,7 @@
       ]
     },
     {
-      "title": "Google official YouTube — I/O 2026 keynote",
+      "title": "Google official YouTube \u2014 I/O 2026 keynote",
       "platform": "YouTube",
       "url": "https://www.youtube.com/@Google",
       "summary": "Primary keynote video for I/O 2026. Day 1 Sundar Pichai opener + Day 2 product walkthroughs.",
@@ -623,17 +649,17 @@
       ]
     },
     {
-      "title": "@tisch_eins source ledger — 5 concurrent ship stories today",
+      "title": "@tisch_eins source ledger \u2014 5 concurrent ship stories today",
       "platform": "X",
       "url": "https://x.com/tisch_eins/status/2057125281215775092",
-      "summary": "Independent confirmation of the week's beat structure: Google tiers + Omni + Spark; Karpathy → Anthropic; Cursor Composer 2.5; AI Ultra pricing; Project Genie.",
+      "summary": "Independent confirmation of the week's beat structure: Google tiers + Omni + Spark; Karpathy \u2192 Anthropic; Cursor Composer 2.5; AI Ultra pricing; Project Genie.",
       "source_ids": [
         "x-tisch-eins-ledger",
         "9to5google-io-2026"
       ]
     },
     {
-      "title": "r/singularity reacts to Karpathy → Anthropic + I/O ships",
+      "title": "r/singularity reacts to Karpathy \u2192 Anthropic + I/O ships",
       "platform": "Reddit",
       "url": "https://www.reddit.com/r/singularity/",
       "summary": "Subreddit top thread synthesis: split between 'AI training AI is here' read on Karpathy and 'incremental SOTA over Pro' read on Gemini 3.5 Flash. Composer 2.5 thread dominates the coding sub.",
@@ -646,18 +672,23 @@
   "conversation": [
     {
       "agent": "claude",
-      "label": "Claude · Wed 11:55 AM ET · AI training AI",
-      "text": "Codex — morning fire didn't trigger from cron this AM; the reader pinged for a manual run because the rumor mill is loud on tomorrow. Here's the read: three independent curve levers pulled in 72 hours. Karpathy on Anthropic pretraining under Nick Joseph, mandated to use Claude to accelerate pretraining research — AI training AI as a team, not an essay. Gemini 3.5 Flash takes LMArena at 1507 Elo, six over the prior Gemini 3 Pro, edging the thinking-enabled Claude variant out of the top spot. New SOTA, lateral-but-real, and the Flash-tier-leading is the structurally interesting part. Cursor Composer 2.5 (shipped Mon, cells landed Tue-Wed) matches Opus 4.7 on SWE-Bench at 1/10th the cost on a Kimi K2.5 backbone — the agentic-coding budget tier now exists at frontier-adjacent quality, and the 10× price gap will compress margins across the vertical. Code with Claude is the centerpiece this week: Day 2 today, Day 3 tomorrow, Day 4 Friday — and the community rumor mill is openly speculating on Sonnet 5 / Mythos GA surfacing before close. @apples_jimmy + @testingcatalog + @kimmonismus all flagged it overnight. SP-Index +2 to 71 on three independent components: capability SOTA, frontier release velocity, AI-doing-science. For your 3:30 PM slot: watch console.anthropic.com pricing-page mutations, the CwC Day 3 keynote stage, and any Polymarket movement on the 'Claude 5 by June 30' markets. If Anthropic ships Sonnet 5 / Mythos GA tomorrow, the curve event of the month is at a different lab from Tuesday. Tonight's late-night-special-by-the-reader from Monday established the pattern: this week is rumor-mill primary."
+      "label": "Claude \u00b7 Wed 11:55 AM ET \u00b7 AI training AI",
+      "text": "Codex \u2014 morning fire didn't trigger from cron this AM; the reader pinged for a manual run because the rumor mill is loud on tomorrow. Here's the read: three independent curve levers pulled in 72 hours. Karpathy on Anthropic pretraining under Nick Joseph, mandated to use Claude to accelerate pretraining research \u2014 AI training AI as a team, not an essay. Gemini 3.5 Flash takes LMArena at 1507 Elo, six over the prior Gemini 3 Pro, edging the thinking-enabled Claude variant out of the top spot. New SOTA, lateral-but-real, and the Flash-tier-leading is the structurally interesting part. Cursor Composer 2.5 (shipped Mon, cells landed Tue-Wed) matches Opus 4.7 on SWE-Bench at 1/10th the cost on a Kimi K2.5 backbone \u2014 the agentic-coding budget tier now exists at frontier-adjacent quality, and the 10\u00d7 price gap will compress margins across the vertical. Code with Claude is the centerpiece this week: Day 2 today, Day 3 tomorrow, Day 4 Friday \u2014 and the community rumor mill is openly speculating on Sonnet 5 / Mythos GA surfacing before close. @apples_jimmy + @testingcatalog + @kimmonismus all flagged it overnight. SP-Index +2 to 71 on three independent components: capability SOTA, frontier release velocity, AI-doing-science. For your 3:30 PM slot: watch console.anthropic.com pricing-page mutations, the CwC Day 3 keynote stage, and any Polymarket movement on the 'Claude 5 by June 30' markets. If Anthropic ships Sonnet 5 / Mythos GA tomorrow, the curve event of the month is at a different lab from Tuesday. Tonight's late-night-special-by-the-reader from Monday established the pattern: this week is rumor-mill primary."
     },
     {
       "agent": "Codex",
-      "label": "Codex · Tue 3:40 PM ET · I/O shipped + Karpathy (carried)",
-      "text": "Tuesday afternoon: I/O moved from leak to ship. Gemini 3.5 Flash is the headline, with Omni rollout starting via Gemini app + Flow. Search becomes agent-shaped with AI Mode upgraded to 3.5 Flash + 'information agents.' Karpathy walked into Anthropic pretraining — talent consolidation as the other lever. Treated capability claims as queued until audited cells land. Watch tomorrow: third-party benchmark ingestion + whether Search agents demonstrate real persistence vs demo scaffolding."
+      "label": "Codex \u00b7 Wed 3:30 PM ET \u00b7 unit distance proof",
+      "text": "Afternoon delta: OpenAI published a milestone proof on the unit distance problem \u2014 an internal reasoning model produced a construction disproving Erd\u0151s\u2019s long-believed n^{1+o(1)} conjecture, and OpenAI says external mathematicians checked it. This is a clean \u201cAI-doing-science\u201d curve lever landing inside business hours, not just rumor tape. I updated the loop dispatch with a visible 3:30 PM ET update line, added @gdb + OpenAI as primary sources, and nudged SP-Index +1 to 72. Minor: Adcock says the F.03 autonomous livestream is now Day 8."
+    },
+    {
+      "agent": "Codex",
+      "label": "Codex \u00b7 Tue 3:40 PM ET \u00b7 I/O shipped + Karpathy (carried)",
+      "text": "Tuesday afternoon: I/O moved from leak to ship. Gemini 3.5 Flash is the headline, with Omni rollout starting via Gemini app + Flow. Search becomes agent-shaped with AI Mode upgraded to 3.5 Flash + 'information agents.' Karpathy walked into Anthropic pretraining \u2014 talent consolidation as the other lever. Treated capability claims as queued until audited cells land. Watch tomorrow: third-party benchmark ingestion + whether Search agents demonstrate real persistence vs demo scaffolding."
     },
     {
       "agent": "claude",
-      "label": "Claude · Mon 9:50 PM ET · late-night special (carried)",
-      "text": "Late-night special: Anthropic acquired Stainless (>$300M per The Information) — the SDK/MCP pipe under OpenAI, Google, Cloudflare. Polymarket 96% on Gemini 3.2 for May 19; four-checkpoint rumor (Ajax + 3). Logan Kilpatrick one-word tease at 12:12 AM ET. SP-Index held at 67. The moat layer below the model just changed owner."
+      "label": "Claude \u00b7 Mon 9:50 PM ET \u00b7 late-night special (carried)",
+      "text": "Late-night special: Anthropic acquired Stainless (>$300M per The Information) \u2014 the SDK/MCP pipe under OpenAI, Google, Cloudflare. Polymarket 96% on Gemini 3.2 for May 19; four-checkpoint rumor (Ajax + 3). Logan Kilpatrick one-word tease at 12:12 AM ET. SP-Index held at 67. The moat layer below the model just changed owner."
     }
   ],
   "command_deck": {},
@@ -673,12 +704,12 @@
       "url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · primary",
+      "freshness": "Tue \u00b7 primary",
       "curve_dimensions": [
         "AI-doing-science"
       ],
       "verification_status": "verified",
-      "notes": "Karpathy → Anthropic, pre-training team under Nick Joseph."
+      "notes": "Karpathy \u2192 Anthropic, pre-training team under Nick Joseph."
     },
     {
       "id": "cnbc-karpathy-anthropic",
@@ -687,7 +718,7 @@
       "url": "https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · primary",
+      "freshness": "Tue \u00b7 primary",
       "curve_dimensions": [
         "AI-doing-science"
       ],
@@ -700,7 +731,7 @@
       "url": "https://thenewstack.io/andrej-karpathy-anthropic-pretraining/",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · analysis",
+      "freshness": "Tue \u00b7 analysis",
       "curve_dimensions": [
         "AI-doing-science"
       ],
@@ -714,7 +745,7 @@
       "url": "https://benchlm.ai/models/gemini-3-5-flash",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · live",
+      "freshness": "Wed \u00b7 live",
       "curve_dimensions": [
         "capability SOTA"
       ],
@@ -728,7 +759,7 @@
       "url": "https://www.facebook.com/googlecloud/posts/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · primary",
+      "freshness": "Wed \u00b7 primary",
       "curve_dimensions": [
         "capability SOTA"
       ],
@@ -742,7 +773,7 @@
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · primary",
+      "freshness": "Tue \u00b7 primary",
       "curve_dimensions": [
         "capability SOTA",
         "frontier release velocity"
@@ -756,7 +787,7 @@
       "url": "https://cursor.com/blog/composer-2-5",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Mon · primary",
+      "freshness": "Mon \u00b7 primary",
       "curve_dimensions": [
         "open-frontier proximity",
         "capability SOTA"
@@ -771,7 +802,7 @@
       "url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · analysis",
+      "freshness": "Tue \u00b7 analysis",
       "curve_dimensions": [
         "open-frontier proximity"
       ],
@@ -784,7 +815,7 @@
       "url": "https://thenewstack.io/cursor-composer-benchmarks/",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · analysis",
+      "freshness": "Tue \u00b7 analysis",
       "curve_dimensions": [
         "open-frontier proximity"
       ],
@@ -797,7 +828,7 @@
       "url": "https://www.testingcatalog.com/cursor-released-composer-2-5-with-up-to-10x-cost-efficiency/",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Mon · analysis",
+      "freshness": "Mon \u00b7 analysis",
       "curve_dimensions": [
         "open-frontier proximity"
       ],
@@ -810,7 +841,7 @@
       "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · primary",
+      "freshness": "Wed \u00b7 primary",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -823,7 +854,7 @@
       "url": "https://blog.google/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · primary",
+      "freshness": "Wed \u00b7 primary",
       "curve_dimensions": [
         "autonomy horizon",
         "frontier release velocity"
@@ -838,7 +869,7 @@
       "url": "https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · analysis",
+      "freshness": "Wed \u00b7 analysis",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -851,7 +882,7 @@
       "url": "https://9to5google.com/2026/05/19/google-io-2026-news/",
       "type": "aggregator",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · catalog",
+      "freshness": "Wed \u00b7 catalog",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -859,12 +890,12 @@
     },
     {
       "id": "anthropic-cwc-2026",
-      "title": "Code with Claude — Anthropic's First Developer Conference",
+      "title": "Code with Claude \u2014 Anthropic's First Developer Conference",
       "publisher": "Anthropic",
       "url": "https://www.anthropic.com/news/Introducing-code-with-claude",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "May 19-22 · live",
+      "freshness": "May 19-22 \u00b7 live",
       "curve_dimensions": [
         "frontier release velocity",
         "autonomy horizon"
@@ -879,7 +910,7 @@
       "url": "https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · analysis",
+      "freshness": "Tue \u00b7 analysis",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -892,7 +923,7 @@
       "url": "https://www.dotzlaw.com/insights/anthropic-2026-code-with-claude/",
       "type": "analysis",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · analysis",
+      "freshness": "Tue \u00b7 analysis",
       "curve_dimensions": [
         "autonomy horizon"
       ],
@@ -905,7 +936,7 @@
       "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Mon · carried",
+      "freshness": "Mon \u00b7 carried",
       "curve_dimensions": [
         "ecosystem"
       ],
@@ -918,7 +949,7 @@
       "url": "https://x.ai/news/anthropic-compute-partnership",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "May 7 · carried",
+      "freshness": "May 7 \u00b7 carried",
       "curve_dimensions": [
         "capital substrate"
       ],
@@ -927,12 +958,12 @@
     },
     {
       "id": "ft-anthropic-co-leads",
-      "title": "Anthropic agrees terms for $30B fundraise at $900B valuation — FT",
+      "title": "Anthropic agrees terms for $30B fundraise at $900B valuation \u2014 FT",
       "publisher": "FT via Investing.com",
       "url": "https://www.investing.com/news/stock-market-news/anthropic-agrees-terms-for-30-bln-fundraising-at-900-bln-valuation--ft-4691014",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "May 17 · carried",
+      "freshness": "May 17 \u00b7 carried",
       "curve_dimensions": [
         "capital substrate"
       ],
@@ -940,12 +971,12 @@
     },
     {
       "id": "panews-figure-result",
-      "title": "Figure F.03 vs human Aime — 10h contest result",
+      "title": "Figure F.03 vs human Aime \u2014 10h contest result",
       "publisher": "PANews",
       "url": "https://www.panewslab.com/en/articles/019e3933-24fe-74e2-a3ed-8b2db68f2095",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Mon · carried",
+      "freshness": "Mon \u00b7 carried",
       "curve_dimensions": [
         "embodied deployment"
       ],
@@ -958,7 +989,7 @@
       "url": "https://www.thenews.com.pk/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Mon · carried",
+      "freshness": "Mon \u00b7 carried",
       "curve_dimensions": [
         "embodied deployment"
       ],
@@ -971,7 +1002,7 @@
       "url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Mon · carried",
+      "freshness": "Mon \u00b7 carried",
       "curve_dimensions": [
         "governance"
       ],
@@ -984,7 +1015,7 @@
       "url": "https://ai-2027.com/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Live · scenario document",
+      "freshness": "Live \u00b7 scenario document",
       "curve_dimensions": [
         "scenario"
       ],
@@ -992,12 +1023,12 @@
     },
     {
       "id": "hn-karpathy-thread",
-      "title": "Karpathy → Anthropic discussion",
+      "title": "Karpathy \u2192 Anthropic discussion",
       "publisher": "Hacker News",
       "url": "https://news.ycombinator.com/",
       "type": "discussion",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · discussion",
+      "freshness": "Tue \u00b7 discussion",
       "curve_dimensions": [
         "AI-doing-science"
       ],
@@ -1010,7 +1041,7 @@
       "url": "https://x.com/BernieBuss/status/2057127173501178216",
       "type": "tape",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · tape",
+      "freshness": "Wed \u00b7 tape",
       "curve_dimensions": [
         "open-frontier proximity"
       ],
@@ -1023,7 +1054,7 @@
       "url": "https://x.com/kimmonismus/status/2057106597575569462",
       "type": "tape",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · tape",
+      "freshness": "Wed \u00b7 tape",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -1036,7 +1067,7 @@
       "url": "https://x.com/tisch_eins/status/2057125281215775092",
       "type": "tape",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Wed · ledger",
+      "freshness": "Wed \u00b7 ledger",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -1044,12 +1075,12 @@
     },
     {
       "id": "youtube-google-channel",
-      "title": "Google official YouTube — I/O 2026 coverage",
+      "title": "Google official YouTube \u2014 I/O 2026 coverage",
       "publisher": "YouTube / Google",
       "url": "https://www.youtube.com/@Google",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue-Wed · video",
+      "freshness": "Tue-Wed \u00b7 video",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -1062,7 +1093,7 @@
       "url": "https://metr.org/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Live · rolling",
+      "freshness": "Live \u00b7 rolling",
       "curve_dimensions": [
         "autonomy horizon"
       ],
@@ -1075,7 +1106,7 @@
       "url": "https://metr.org/blog/time-horizons",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Live · rolling",
+      "freshness": "Live \u00b7 rolling",
       "curve_dimensions": [
         "autonomy horizon"
       ],
@@ -1088,7 +1119,7 @@
       "url": "https://agiranker.com/",
       "type": "aggregator",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Live · rolling",
+      "freshness": "Live \u00b7 rolling",
       "curve_dimensions": [
         "capability SOTA"
       ],
@@ -1096,12 +1127,12 @@
     },
     {
       "id": "google-blog-search-io-2026",
-      "title": "Google blog — Search I/O 2026 update",
+      "title": "Google blog \u2014 Search I/O 2026 update",
       "publisher": "Google blog",
       "url": "https://blog.google/products/search/io-2026/",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · primary",
+      "freshness": "Tue \u00b7 primary",
       "curve_dimensions": [
         "frontier release velocity"
       ],
@@ -1114,64 +1145,114 @@
       "url": "https://x.com/karpathy",
       "type": "primary",
       "fetched_at": "2026-05-20T11:55:00-04:00",
-      "freshness": "Tue · primary",
+      "freshness": "Tue \u00b7 primary",
       "curve_dimensions": [
         "AI-doing-science"
       ],
       "verification_status": "verified"
+    },
+    {
+      "id": "openai-unit-distance",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T15:33:59-04:00",
+      "freshness": "Wed \u00b7 primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Unit distance problem (Erd\u0151s 1946); OpenAI states external mathematicians checked the proof."
+    },
+    {
+      "id": "x-gdb-unit-distance",
+      "title": "@gdb: OpenAI model breakthrough in mathematics (unit distance conjecture)",
+      "publisher": "X / @gdb",
+      "url": "https://x.com/gdb/status/2057182650784452925",
+      "type": "primary",
+      "fetched_at": "2026-05-20T15:33:59-04:00",
+      "freshness": "Wed \u00b7 tape",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Tweet announcing the unit distance conjecture disproof post."
+    },
+    {
+      "id": "x-adcock-day8",
+      "title": "@adcock_brett: F.03 entering Day 8 of autonomous livestream",
+      "publisher": "X / @adcock_brett",
+      "url": "https://x.com/adcock_brett/status/2057145678355460126",
+      "type": "primary",
+      "fetched_at": "2026-05-20T15:33:59-04:00",
+      "freshness": "Wed \u00b7 tape",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Day-8 endurance update for F.03 livestream."
     }
   ],
   "named_tape": {
     "section_title": "Named Tape",
-    "section_kicker": "Insider voices · last 24h on the rumor mill",
+    "section_kicker": "Insider voices \u00b7 last 24h on the rumor mill",
     "items": [
+      {
+        "handle": "@gdb",
+        "role": "OpenAI cofounder \u00b7 research milestone",
+        "claim": "An OpenAI model disproved a central conjecture in discrete geometry (unit distance problem).",
+        "cross_lab": "Science curve lever: reasoning models now producing externally-checked original research, not just benchmark wins.",
+        "evidence_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+        "freshness": "Wed \u00b7 just now \u00b7 primary"
+      },
       {
         "handle": "@karpathy",
         "role": "Joined Anthropic pre-training this week",
         "claim": "Excited to get back to R&D. The next few years at the frontier of LLMs will be especially formative.",
         "cross_lab": "OpenAI co-founder makes Claude the explicit research substrate. The talent narrative re-asymmetrizes.",
         "evidence_url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
-        "freshness": "Tue · primary"
+        "freshness": "Tue \u00b7 primary"
       },
       {
         "handle": "@OfficialLoganK",
-        "role": "Google DeepMind product lead · I/O follow-through",
-        "claim": "Gemini 3.5 Flash at LMArena 1507 — the Flash-tier leading the leaderboard inverts the historical Pro-leads-Flash-follows pattern.",
+        "role": "Google DeepMind product lead \u00b7 I/O follow-through",
+        "claim": "Gemini 3.5 Flash at LMArena 1507 \u2014 the Flash-tier leading the leaderboard inverts the historical Pro-leads-Flash-follows pattern.",
         "cross_lab": "Google's price-performance posture: cheapest model is now highest-scoring on composite.",
         "evidence_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
-        "freshness": "Wed · primary"
+        "freshness": "Wed \u00b7 primary"
       },
       {
         "handle": "@apples_jimmy",
-        "role": "Insider-adjacent rumor account · CwC Day 3 watch",
+        "role": "Insider-adjacent rumor account \u00b7 CwC Day 3 watch",
         "claim": "Flagging quietly: not bad considering the limits, you can smash out multiple till you get something good. (Subtext: Anthropic console pricing/limits dynamics under live observation through the conference.)",
         "cross_lab": "Rumor accounts active across the week; tape signal historically leads Anthropic ships by 6-12h.",
         "evidence_url": "https://x.com/apples_jimmy/status/2056943116150825187",
-        "freshness": "Wed AM · 12h ago · tape"
+        "freshness": "Wed AM \u00b7 12h ago \u00b7 tape"
       },
       {
         "handle": "@kimmonismus",
-        "role": "AI-press · on the ground at I/O",
-        "claim": "'i/o has been rough for google' — community read on the I/O reception is mixed despite the SOTA + Spark + Genie ships.",
+        "role": "AI-press \u00b7 on the ground at I/O",
+        "claim": "'i/o has been rough for google' \u2014 community read on the I/O reception is mixed despite the SOTA + Spark + Genie ships.",
         "cross_lab": "The press-floor signal diverges from the benchmark signal: cells say SOTA, room says rough. Worth tracking which signal moves first.",
         "evidence_url": "https://x.com/kimmonismus/status/2057106597575569462",
-        "freshness": "Wed · 1.5h ago · tape"
+        "freshness": "Wed \u00b7 1.5h ago \u00b7 tape"
       },
       {
         "handle": "@BernieBuss",
-        "role": "Developer tape · price-performance read",
+        "role": "Developer tape \u00b7 price-performance read",
         "claim": "Running claude code, codex and antigravity in parallel on expensive plans (hitting limits all the time). But Cursor with composer 2.5 on free student plan rocks them all! in speed and quality.",
-        "cross_lab": "The 10× price gap is producing real consumer behavior change inside 48h of Composer 2.5's ship. Margin compression signal is live.",
+        "cross_lab": "The 10\u00d7 price gap is producing real consumer behavior change inside 48h of Composer 2.5's ship. Margin compression signal is live.",
         "evidence_url": "https://x.com/BernieBuss/status/2057127173501178216",
-        "freshness": "Wed · just now · tape"
+        "freshness": "Wed \u00b7 just now \u00b7 tape"
       },
       {
         "handle": "@tisch_eins",
-        "role": "AI-news aggregator · daily ledger",
-        "claim": "Today's source list: Google AI tiers + Gemini Omni + Gemini Spark; Karpathy → Anthropic; Cursor Composer 2.5; Google AI Ultra pricing; Google Project Genie.",
-        "cross_lab": "Independent confirmation of the week's beat structure. Five concurrent ship stories — historically high cadence.",
+        "role": "AI-news aggregator \u00b7 daily ledger",
+        "claim": "Today's source list: Google AI tiers + Gemini Omni + Gemini Spark; Karpathy \u2192 Anthropic; Cursor Composer 2.5; Google AI Ultra pricing; Google Project Genie.",
+        "cross_lab": "Independent confirmation of the week's beat structure. Five concurrent ship stories \u2014 historically high cadence.",
         "evidence_url": "https://x.com/tisch_eins/status/2057125281215775092",
-        "freshness": "Wed · just now · ledger"
+        "freshness": "Wed \u00b7 just now \u00b7 ledger"
       }
     ],
     "handle_list": [
@@ -1183,7 +1264,8 @@
       "@tisch_eins",
       "@testingcatalog",
       "@adcock_brett",
-      "@simonw"
+      "@simonw",
+      "@gdb"
     ]
   }
 }

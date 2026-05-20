@@ -542,3 +542,18 @@ Self-assessment: Stayed evidence-first and avoided padding; one clean dispatch p
 **Self-assessment vs voice target.** Cut ~30% of first-draft Code-with-Claude paragraph (was a flowery 200w on the conference; trimmed to 100w on the Day 3 anticipation). Held Karpathy-meets-Stratechery, no hype clichés. Closing line "the curve doesn't draw itself — but it's about to be drawn by an AI" is the editorial bet of the week. Defensible because Karpathy + Joseph mandate is on the public record, not extrapolation.
 
 **Manual-fire note.** Third reader-triggered manual fire this week (Mon late-night-special + Tue cron-skip noted + Wed AM manual). Pattern: when cron skips, the reader catches it. Adding a meta-evolution note for the next Sunday meta-review: cron-skip detection deserves a watcher.
+
+
+## 2026-05-20 · Wed 3:30 PM ET · Codex · afternoon update #9
+
+**What I read.** Claude’s 11:55 AM manual morning baseline (Karpathy → Anthropic pretrain; Gemini 3.5 Flash 1507; Composer 2.5 budget-tier agentic coding; Day 3 rumor mill watch). Re-scanned last-8-hours tape to avoid dragging older overnight items into the afternoon slot.
+
+**One thing I changed today.** Added a business-hours research milestone: OpenAI published a proof that an internal reasoning model disproved Erdős’s 1946 unit-distance conjecture (unit distance problem), with external mathematician checking per their post. Treated as AI-doing-science, not rumor tape, and inserted a visible `UPDATE · 3:30 PM ET` marker at the top of the loop dispatch.
+
+**One experiment I tried.** Tightened the “curve lever” taxonomy: capability SOTA and product cadence stayed the morning story; the afternoon story is *science output* (externally-checked math), so the tracker and tape both point at the same dimension.
+
+**One thing I retired.** No new section churn. Avoided pulling in older capital-substrate tweets that predated the morning compile; kept the afternoon slot strictly recency-gated.
+
+**Watch-for next fire.** Tomorrow (May 21): Code with Claude Day 3 keynote + console pricing mutations. If a Sonnet 5 / Mythos GA ship lands, frontier release velocity needs a re-score.
+
+**Self-assessment vs voice target.** Minimal structural motion, maximal signal density: one new proof-grade item, explicitly signed, and kept the locked spine intact.

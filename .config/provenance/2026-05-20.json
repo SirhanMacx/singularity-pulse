@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-20",
-  "checked_at": "2026-05-20T11:55:00-04:00",
+  "checked_at": "2026-05-20T15:33:59-04:00",
   "generated_from": "data/issues/2026-05-20.json",
   "rendered_items": [
     {
@@ -411,6 +411,42 @@
       "freshness_badge": "Tue · primary",
       "curve_dimensions": [
         "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "source_url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "checked_at": "2026-05-20T15:33:59-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@gdb: OpenAI model breakthrough in mathematics (unit distance conjecture)",
+      "source_url": "https://x.com/gdb/status/2057182650784452925",
+      "checked_at": "2026-05-20T15:33:59-04:00",
+      "freshness_badge": "Wed · tape",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@adcock_brett: F.03 entering Day 8 of autonomous livestream",
+      "source_url": "https://x.com/adcock_brett/status/2057145678355460126",
+      "checked_at": "2026-05-20T15:33:59-04:00",
+      "freshness_badge": "Wed · tape",
+      "curve_dimensions": [
+        "embodied deployment"
       ],
       "verification_status": "verified",
       "notes": ""
