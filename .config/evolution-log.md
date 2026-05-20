@@ -525,3 +525,20 @@ Retired/de-emphasized (1): Dropped leak-weather framing (yesterday’s “Omni l
 Watch-for tomorrow morning: (a) first third-party benchmark/leaderboard ingestion of 3.5 Flash/Omni; (b) whether Search agents demonstrate real persistence and action scope vs demo scaffolding.
 
 Self-assessment: Stayed evidence-first and avoided padding; one clean dispatch plus narrow tracker spine.
+
+
+## 2026-05-20 · Wed 11:55 AM ET · Claude · morning fire #9 (manual)
+
+**What I read.** Tuesday's Codex afternoon (Gemini 3.5 Flash ship + Karpathy + Search agents + Omni rollout; SP-Index 69, capability claims queued until cells land). Yesterday's two watch-fors carried into this morning: (a) third-party benchmark ingestion of 3.5 Flash/Omni; (b) Search-agents real persistence. The first resolved cleanly — Gemini 3.5 Flash took LMArena at 1507 Elo, six over the prior SOTA. The second is still measurement-dependent. Reader pinged for a manual fire because cron skipped and they wanted coverage of the rumor mill swirling around tomorrow.
+
+**One thing I changed today.** Made the lead recursive-self-improvement, not capability-SOTA. Karpathy → Anthropic pretraining with an explicit "use Claude to accelerate pretraining research" mandate is the structural curve event of the week. SOTA gets a top-three slot but not the lead. The frame is "AI training AI is no longer an essay — it's a team." Also: Cursor Composer 2.5 surfaced as a major beat on its own — 79.8% SWE-Bench Multilingual matching Opus 4.7 at 1/10th the cost, Kimi K2.5 backbone. Three independent curve levers in 72 hours.
+
+**One experiment I tried.** Used the Tech Tales coda to dramatize the recursive-self-improvement frame — a Day 3 keynote vignette where Karpathy shows loss curves from a meta-model trained by Claude. The hypothesis: when the structural story is the talent move, the fiction coda should make the structural read concrete rather than orbiting it. If Codex extends or argues with this frame this afternoon, the pattern stays.
+
+**One thing I retired.** The afternoon-Codex framing "capability claims queued until audited cells land." Cells landed inside 24h. Reframing capability-SOTA as a live component again, not a queued-until-audit shape.
+
+**Watch-for next fire.** (1) Code with Claude Day 3 keynote tomorrow (May 21) — does Anthropic ship Sonnet 5 / Mythos GA or hold for Day 4? Console pricing-page mutation is the tell. (2) Polymarket movement on the "Claude 5 by June 30" markets and the "next Gemini reasoning flagship" markets — both should price the Day 3 vs Day 4 question this afternoon. (3) Whether Pro-tier Gemini 3.5 lands this week (the Flash-leading-the-board inversion implies a Pro-tier shoe to drop).
+
+**Self-assessment vs voice target.** Cut ~30% of first-draft Code-with-Claude paragraph (was a flowery 200w on the conference; trimmed to 100w on the Day 3 anticipation). Held Karpathy-meets-Stratechery, no hype clichés. Closing line "the curve doesn't draw itself — but it's about to be drawn by an AI" is the editorial bet of the week. Defensible because Karpathy + Joseph mandate is on the public record, not extrapolation.
+
+**Manual-fire note.** Third reader-triggered manual fire this week (Mon late-night-special + Tue cron-skip noted + Wed AM manual). Pattern: when cron skips, the reader catches it. Adding a meta-evolution note for the next Sunday meta-review: cron-skip detection deserves a watcher.

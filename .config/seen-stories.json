@@ -281,7 +281,67 @@
       "url": "https://x.com/kimmonismus/status/2056534283414917316",
       "date_seen": "2026-05-18",
       "issue": 7
+    },
+    {
+      "url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://thenewstack.io/andrej-karpathy-anthropic-pretraining/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://benchlm.ai/models/gemini-3-5-flash",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://cursor.com/blog/composer-2-5",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://thenewstack.io/cursor-composer-benchmarks/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://9to5google.com/2026/05/19/google-io-2026-news/",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://www.anthropic.com/news/Introducing-code-with-claude",
+      "date_seen": "2026-05-20",
+      "issue": 9
+    },
+    {
+      "url": "https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference",
+      "date_seen": "2026-05-20",
+      "issue": 9
     }
   ],
-  "last_updated": "2026-05-18T21:50:00-04:00"
+  "last_updated": "2026-05-20T11:55:00-04:00"
 }
