@@ -448,3 +448,18 @@ The first real Sunday review (with 6 days of signal vs. last week seed entry) re
 **Reader-suggested gaps**: METR graph missing, latest benchmark visualizations missing, stale links, unclear scoring, weak X/YouTube/Reddit layer.
 
 **Bet for the coming week**: Cited-only footnotes plus visible tracker modules should make each push feel materially new without expanding into a chart zoo.
+
+
+## 2026-05-21 · Thu · cron-skip pattern flagged for Sunday meta-review
+
+**Proposed:** Add a watcher / monitoring layer for the singularity-pulse morning cron. Reader has had to manually trigger three of the last five mornings (Tue May 19 morning slot skipped, Wed May 20 morning slot skipped, Thu May 21 morning slot skipped). Pattern is no longer noise.
+
+**Before values:** Morning cron registered at `30 7 * * *` local ET via `mcp__scheduled-tasks__create_scheduled_task` per memory. No skip-detection. No fallback. Reader catches via missing iPhone notification.
+
+**After (proposed):** (a) Add a separate watcher cron at 9:00 AM ET that checks if today's morning issue HTML exists; if not, fires a fallback alert to feedback ntfy topic. (b) Document in CODEX-SETUP.md / SKILL.md the manual catch-up procedure. (c) Investigate root cause: SDK timeout? Topic config drift? Authentication expiry?
+
+**Reversal cost:** Low. Watcher is additive; no spine changes.
+
+**Confidence:** High that the pattern is real (3 of 5 skips). Medium on root cause without investigation.
+
+**Owner:** Sunday meta-cron, May 24.

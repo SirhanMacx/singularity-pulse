@@ -1,6 +1,6 @@
 {
   "issue_date": "2026-05-21",
-  "checked_at": "2026-05-21T15:43:10-04:00",
+  "checked_at": "2026-05-21T18:10:00-04:00",
   "generated_from": "data/issues/2026-05-21.json",
   "rendered_items": [
     {
@@ -545,6 +545,236 @@
       "curve_dimensions": [
         "frontier release velocity",
         "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic will pay xAI $1.25B per month for compute",
+      "source_url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed PM · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic is paying SpaceX $15 billion per year",
+      "source_url": "https://www.axios.com/2026/05/20/anthropic-spacex-compute",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic to Pay xAI Up to $1.25B a Month for Colossus Compute",
+      "source_url": "https://winbuzzer.com/2026/05/21/anthropic-could-pay-xai-125b-for-colossus-compute-xcxwbn/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Why is Anthropic Paying Elon Musk's SpaceX $1.25 Billion a Month?",
+      "source_url": "https://www.ibtimes.co.uk/anthropic-spacex-ai-compute-deal-1798009",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Sam Altman makes 'mic drop' offer to every Y Combinator startup",
+      "source_url": "https://techcrunch.com/2026/05/20/sam-altman-makes-mic-drop-offer-to-every-y-combinator-startup/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "ecosystem"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI Tokens Spark YC Funding Shakeup",
+      "source_url": "https://blockchain.news/ainews/openai-tokens-spark-yc-funding-shakeup",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "ecosystem"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Spotify engineers haven't coded since December as AI transforms development",
+      "source_url": "https://ppc.land/spotify-engineers-havent-coded-since-december-as-ai-transforms-development/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Spotify cuts migration time by 90% with Claude Agent SDK",
+      "source_url": "https://claude.com/customers/spotify",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Coding is no longer the constraint: Scaling devex to teams and agents at Spotify (CwC session)",
+      "source_url": "https://claude.com/code-with-claude/session/ldn-coding-is-no-longer-the-constraint-scaling-devex-to-teams-and-agents-at-spotify",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · live session",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Code with Claude London (May 20-21)",
+      "source_url": "https://claude.com/code-with-claude/san-francisco-extended",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed-Thu · live event",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Project Glasswing: Securing critical software for the AI era",
+      "source_url": "https://www.anthropic.com/glasswing",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Live · primary",
+      "curve_dimensions": [
+        "AI-doing-science",
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Claude Mythos Preview (red.anthropic.com)",
+      "source_url": "https://red.anthropic.com/2026/mythos-preview/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Live · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic's Claude Mythos Preview Changes Cyber Calculus",
+      "source_url": "https://foreignpolicy.com/2026/04/20/claude-mythos-preview-anthropic-project-glasswing-cybersecurity-ai-hacking-danger/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Apr · analysis",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Claude Mythos Finds Thousands of Zero-Day Flaws Across Major Systems",
+      "source_url": "https://thehackernews.com/2026/04/anthropics-claude-mythos-finds.html",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Apr · analysis",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Pro Is Coming Next Month — What the Flash Release Already Tells Us",
+      "source_url": "https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Wed · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@joshjob42 — 200 tps Antigravity/Composer beats 50-70 tps Opus from human perspective",
+      "source_url": "https://x.com/joshjob42/status/2057577516651737546",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · 0.2h ago",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@decodeddaily07 — three labs, three different scarcities this week",
+      "source_url": "https://x.com/decodeddaily07/status/2057522882511831352",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · ~4h ago",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@rahilnjain — restraint is positioning: Mythos as the credible 'we held back' narrative",
+      "source_url": "https://x.com/rahilnjain/status/2057515760440971520",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · ~4h ago",
+      "curve_dimensions": [
+        "AI-doing-science",
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@pranaymishra_ — Gemini 3.5 Flash 'struggling to understand basic prompts'",
+      "source_url": "https://x.com/pranaymishra_/status/2057575819271389407",
+      "checked_at": "2026-05-21T18:10:00-04:00",
+      "freshness_badge": "Thu · 0.4h ago",
+      "curve_dimensions": [
+        "capability SOTA"
       ],
       "verification_status": "verified",
       "notes": ""

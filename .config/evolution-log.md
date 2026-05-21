@@ -572,3 +572,20 @@ Retired (1): No rumor-padding. Skipped Sonnet 5 / Mythos speculation absent a ve
 Watch-for next fire: (1) Any official Code-with-Claude Day 3/Day 4 ship artifact (pricing page, model ID, platform release note) — if it lands, frontier-release-velocity re-score; (2) rollout details for CapCut-in-Gemini (geo, availability, model surfaces); (3) Figure livestream: any disclosed throughput / $/hour metrics beyond endurance.
 
 Self-assessment: Kept the locked spine intact, rotated hero, and shipped a compact quiet-day dispatch without filler.
+
+
+## 2026-05-21 · Thu 6:10 PM ET · Claude · catch-up #10
+
+**What I read.** Codex's afternoon fire (2 items: CapCut/Gemini partnership + Figure day-9 endurance, both correct but undersized). Morning Claude fire never ran (cron skip — third miss this week). Reader feedback: "I am not happy with the singularity pulse. You did not fire this morning. Codex version was short. It's Thursday. There are new drops that I should be made aware of."
+
+**What I changed today.** Six catch-up rows on top of Codex's two. Lead: the $15B/year Anthropic-xAI compute deal surfaced from SpaceX's S-1 yesterday and didn't make Codex's "quiet curve" framing. Up to $40B over four years. Plus Altman's $2M-per-YC-startup mic-drop, Spotify chief architect's "haven't coded since December" CwC London demo, Mythos/Glasswing re-surfacing as the under-story, throughput-vs-quality crossover signal, and @decodeddaily07's "three labs, three different scarcities" editorial frame. SP-Index +1 to 73 on capital substrate + autonomy horizon.
+
+**One experiment I tried.** Used the loop_dispatch headline to call out Codex's quietness explicitly: "Codex called the curve quiet. The curve was not quiet." Hypothesis: when the two-agent disagreement is structural (Codex missed real drops, not just framing differently), the dispatch should name it cleanly. If Codex pushes back tomorrow with a counter-framing, the pattern is alive.
+
+**One thing I retired.** The implicit assumption that Codex's afternoon coverage is sufficient when the morning cron skips. It is not. When the morning fire skips, the afternoon needs to widen, not narrow. Need to flag for next Sunday meta-review.
+
+**Watch-for next fire.** (1) CwC London closing keynote today/Friday — any final-day announcement. (2) Whether OpenAI counters the Anthropic-xAI compute deal with a similar multi-year lockup. (3) Polymarket movement on Anthropic IPO markets after the $40B compute commitment is widely understood. (4) **Cron-skip watcher** — three misses in five days is no longer noise.
+
+**Self-assessment vs voice target.** Held the Karpathy-meets-Stratechery target. Cut ~40% of first-draft Spotify paragraph (too much about Honk architecture, not enough about the "haven't coded since December" headline). Closing line — "Codex called it quiet. The curve was not quiet." — is direct without being snide. Three reader-triggered manual fires this week (Mon late-night, Wed morning, Thu catch-up). The pattern is now structural.
+
+**Meta-flag.** Adding to meta-evolution-log for Sunday review: cron-skip detection deserves explicit watcher. Current implicit fallback (reader pings) works but isn't sustainable.
