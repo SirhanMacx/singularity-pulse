@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-21",
+  "issue_number": 10,
+  "date_long": "May 21, 2026",
+  "title": "Singularity Pulse — May 21, 2026",
+  "compiled_at": "2026-05-21T15:43:10-04:00",
+  "source_count": 45,
+  "skim_minutes": 3,
+  "full_minutes": 9,
+  "streak_days": 11,
+  "layout": "innermost-loop",
+  "agents": [
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "by Codex · Thu 3:30 PM ET · quiet curve"
+    }
+  ],
+  "summary": {
+    "what_changed": "Quiet business-hours tape: no new frontier model ship, no verified benchmark crown flip, no new AI-doing-science proof beyond yesterday’s unit-distance result. The one fresh product move: CapCut is partnering with Gemini — editing tools embedded directly inside the assistant.",
+    "trust_posture": "Primary source is CapCut’s partnership announcement on X plus corroborating coverage. Leaderboard/tracker rows carry forward as rolling-state snapshots unless explicitly re-verified.",
+    "priority_lane": "Autonomy-horizon-as-product, with a small creator-economy integration; otherwise the curve holds."
+  },
+  "tracker": {
+    "sp_index": {
+      "score": 72,
+      "score_prior": 72,
+      "delta_label": "flat since yesterday",
+      "delta_dir": "flat",
+      "delta_30d": "+4 vs 30d ago",
+      "date_short": "May 21 · afternoon",
+      "jon_score": 69,
+      "jon_delta_label": "flat since yesterday",
+      "jon_delta_dir": "flat",
+      "verdict": "Quiet business-hours tape: no new proof-grade science or verified benchmark crown flip. CapCut says its editing tools will run inside Gemini, nudging assistants toward “workbench” territory. Figure’s livestream endurance counter ticks to day 9.",
+      "components": [
+        {
+          "key": "Capability SOTA",
+          "label": "Capability SOTA",
+          "value": "Gemini 3.5 Flash 1507 LMArena (new SOTA) · Composer 2.5 79.8% SWE-Bench",
+          "delta": "+6 Elo · benchmark cells landing",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "benchlm-gemini-35-flash",
+            "googlecloud-fb-1507",
+            "cursor-composer-25",
+            "decoder-composer-25"
+          ]
+        },
+        {
+          "key": "Frontier release velocity",
+          "label": "Frontier release velocity",
+          "value": "5 frontier+adjacent ships in 72h: Composer 2.5, Stainless deal, Gemini 3.5 Flash, Omni, Spark, Project Genie",
+          "delta": "high cadence holding",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "cursor-composer-25",
+            "google-blog-gemini-35",
+            "blog-google-project-genie",
+            "blog-google-spark",
+            "anthropic-news-stainless-may18"
+          ]
+        },
+        {
+          "key": "AI-doing-science",
+          "label": "AI-doing-science",
+          "value": "OpenAI model disproves Erdős unit distance conjecture · Karpathy → Anthropic pretrain",
+          "delta": "+math milestone",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "openai-unit-distance",
+            "x-gdb-unit-distance",
+            "techcrunch-karpathy-anthropic",
+            "cnbc-karpathy-anthropic",
+            "thenewstack-karpathy-pretraining"
+          ]
+        },
+        {
+          "key": "Autonomy horizon",
+          "label": "Autonomy horizon",
+          "value": "Gemini Spark = 24/7 personal agent on Cloud VMs · Claude Managed Agents at CwC",
+          "delta": "agents-as-product ship",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "blog-google-spark",
+            "anthropic-cwc-2026"
+          ]
+        },
+        {
+          "key": "Embodied deployment",
+          "label": "Embodied deployment",
+          "value": "Aime verdict held · F.03 now day 8 livestream · rate verdict open",
+          "delta": "rate verdict open",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "panews-figure-result",
+            "thenews-adcock-reaction",
+            "x-adcock-day8"
+          ]
+        },
+        {
+          "key": "Capital substrate",
+          "label": "Capital substrate",
+          "value": "Anthropic 30B/900B four co-leads · SpaceXAI Colossus 1 deal active · Stainless absorbed",
+          "delta": "moat layer expands",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "ft-anthropic-co-leads",
+            "anthropic-news-stainless-may18",
+            "xai-anthropic-compute-may7"
+          ]
+        },
+        {
+          "key": "Open-frontier proximity",
+          "label": "Open-frontier proximity",
+          "value": "Composer 2.5 on Kimi K2.5 = open-base + closed-finetune at frontier-adjacent",
+          "delta": "open base, closed wrapper",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "cursor-composer-25",
+            "decoder-composer-25"
+          ]
+        },
+        {
+          "key": "Governance / legal",
+          "label": "Governance / legal",
+          "value": "Musk appeal pending · CAISI gov-testing agreements live · Code with Claude press cycle clean",
+          "delta": "noise steady",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "npr-musk-appeal"
+          ]
+        }
+      ]
+    }
+  },
+  "loop_dispatch": {
+    "hero_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Film_editing_workstation.jpg",
+    "hero_alt": "Film editing workstation with reels and monitor",
+    "hero_caption": "Assistants are absorbing tools; the edit bay moves into the chat window.",
+    "kicker": "Quiet afternoon",
+    "headline": "CapCut plugs into Gemini — the assistant grows a timeline",
+    "dek": "No new SOTA ship or proof-grade science hit inside business hours. But the product surface keeps drifting: CapCut says its image/video editing tools will soon run inside the Gemini app, turning chat into a lightweight editing bay.",
+    "chips": [
+      {
+        "label": "SP-Index",
+        "value": "72",
+        "tone": "flat"
+      },
+      {
+        "label": "Fresh delta",
+        "value": "CapCut × Gemini",
+        "tone": "up"
+      },
+      {
+        "label": "Watch",
+        "value": "CwC Day 3 ship?",
+        "tone": "warn"
+      }
+    ],
+    "paragraphs": [
+      {
+        "source_ids": [
+          "x-capcut-gemini-partnership",
+          "androidauthority-capcut-gemini"
+        ],
+        "runs": [
+          {
+            "text": "CapCut says it is "
+          },
+          {
+            "text": "partnering with Gemini",
+            "source_id": "x-capcut-gemini-partnership"
+          },
+          {
+            "text": ": soon you can edit images and videos inside the Gemini app using CapCut’s tools — a timeline grafted onto a chat surface. The coverage lines up with the announcement.",
+            "source_id": "androidauthority-capcut-gemini"
+          }
+        ]
+      },
+      {
+        "source_ids": [
+          "google-blog-gemini-35",
+          "youtube-google-io-2026-keynote"
+        ],
+        "runs": [
+          {
+            "text": "This is the I/O thesis, in miniature: Gemini is being positioned as an agent layer, not a Q&A box — "
+          },
+          {
+            "text": "model + action + workflows",
+            "source_id": "google-blog-gemini-35"
+          },
+          {
+            "text": " — and the keynote sells the same direction. Today’s delta is not a new benchmark cell; it’s a new default verb: “edit” becomes a native assistant action.",
+            "source_id": "youtube-google-io-2026-keynote"
+          }
+        ]
+      },
+      {
+        "source_ids": [
+          "x-adcock-day9",
+          "x-bubeck-unit-distance-autonomous"
+        ],
+        "runs": [
+          {
+            "text": "The rest of the curve held steady inside business hours. Figure’s endurance counter keeps ticking — "
+          },
+          {
+            "text": "day 9",
+            "source_id": "x-adcock-day9"
+          },
+          {
+            "text": " — while yesterday’s unit-distance story continues to echo in the expert commentary: even the friendly versions of the claim keep tightening the language toward “autonomously”.",
+            "source_id": "x-bubeck-unit-distance-autonomous"
+          }
+        ]
+      }
+    ],
+    "closing_line": "If the curve doesn’t move, watch the surfaces: tools keep sliding into assistants."
+  },
+  "news": [
+    {
+      "title": "CapCut is partnering with Gemini — edit images and videos inside the assistant",
+      "impact": "medium",
+      "lane": "Autonomy horizon",
+      "freshness": "Thu · today · product surface",
+      "summary": "CapCut announced a Gemini integration: users will be able to edit images and videos directly within the Gemini app using CapCut’s editing tools. This is not a new model launch; it’s the assistant absorbing a full creative verb (timeline edits) as a native action.",
+      "why_it_matters": "The autonomy curve isn’t only measured in benchmark hours; it also shows up as “how many apps does the assistant replace?” Editing is sticky. If this lands broadly, Gemini becomes the default front door for creator workflows, and the assistant-to-tool boundary moves another notch.",
+      "verdict": "Small but real: assistant-as-workbench continues. Curve mostly holds otherwise.",
+      "evidence": "Primary announcement from CapCut plus corroborating press coverage.",
+      "tap_next": "Watch for: rollout geography/availability, whether the integration exposes specific video models (Veo/Omni) or stays as CapCut-native effects, and whether Gemini surfaces a multi-step “brief → generate → edit → publish” agent flow.",
+      "tap_label": "CapCut announcement →",
+      "tap_url": "https://x.com/capcutapp/status/2057340757896216641",
+      "source_ids": [
+        "x-capcut-gemini-partnership",
+        "androidauthority-capcut-gemini"
+      ]
+    },
+    {
+      "title": "Figure livestream ticks to day 9 (endurance still rising)",
+      "impact": "low",
+      "lane": "Embodied deployment",
+      "freshness": "Thu · 2h ago · tape",
+      "summary": "Brett Adcock posts the Figure livestream has reached day 9. The signal remains endurance, not yet a new rate/reliability benchmark.",
+      "why_it_matters": "Embodiment is one of the few places the curve can compound outside pure silicon. The question is when the endurance streak turns into hard throughput numbers.",
+      "verdict": "Incremental. Keep the counter, don’t over-interpret.",
+      "evidence": "CEO tape; corroborate with the livestream / Figure feed when needed.",
+      "tap_next": "Look for: task complexity drift, failure modes, and any disclosed “units shipped / hours logged / dollars per hour” numbers.",
+      "tap_label": "Adcock tape →",
+      "tap_url": "https://x.com/adcock_brett/status/2057508034667261984",
+      "source_ids": [
+        "x-adcock-day9"
+      ]
+    }
+  ],
+  "benchmark_panel": {
+    "section_title": "Leaderboard",
+    "section_kicker": "Rolling snapshot (no verified flips today)",
+    "section_headline": "Leaders hold; surfaces shift",
+    "section_summary": "No new audited benchmark cells landed inside business hours. Treat the board as rolling-state; watch for Day-3/Day-4 ship events to break the hold.",
+    "rankings_asset_url": "./assets/generated/accelerando-model-rankings-2026-05-15.jpg",
+    "rankings_asset_alt": "Generated futuristic model rankings podium art",
+    "rankings_asset_caption": "Generated visual layer · rankings below are source-linked",
+    "source_ids": [
+      "metr-yaml",
+      "metr-time-horizons",
+      "agiranker-models",
+      "google-blog-gemini-35",
+      "google-blog-search-io-2026"
+    ],
+    "latest_news": [
+      {
+        "label": "benchmark wire",
+        "title": "Gemini 3.5 Flash ships (agentic workflows + coding positioning)",
+        "summary": "Primary release post. Treat performance claims as queued until audited cells land on third-party leaderboards.",
+        "source_ids": [
+          "google-blog-gemini-35"
+        ]
+      },
+      {
+        "label": "distribution",
+        "title": "Search upgrades AI Mode to Gemini 3.5 Flash + “Search agents” framing",
+        "summary": "If this becomes persistent background monitoring + action, it is a mass-market autonomy horizon proxy.",
+        "source_ids": [
+          "google-blog-search-io-2026"
+        ]
+      },
+      {
+        "label": "talent",
+        "title": "Karpathy → Anthropic (pretraining talent consolidation)",
+        "summary": "Doesn’t move a benchmark today. Changes the odds on what the next Anthropic run looks like.",
+        "source_ids": [
+          "x-karpathy-joins-anthropic"
+        ]
+      }
+    ],
+    "model_rankings": [
+      {
+        "rank": "🥇",
+        "model": "Claude Mythos Preview",
+        "lane": "Autonomy ≥16h · SWE-bench 93.9% · HLE 64.7%",
+        "score": "3 lanes",
+        "read": "Owns autonomy/coding/knowledge lanes on the public evidence graph. Suite saturated on METR; quote as ≥16h, not a precise hour.",
+        "source_ids": [
+          "metr-yaml",
+          "metr-time-horizons",
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "🥇",
+        "model": "GPT-5.5 (xhigh)",
+        "lane": "General intelligence · daily-driver",
+        "score": "rolling",
+        "read": "Still reads as the consumer daily-driver peak in many public comparisons. Keep this row rolling-state until audited multi-benchmark cells are refreshed post I/O week.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "🥇",
+        "model": "GPT-5.4 / 5.4 Pro",
+        "lane": "Math + science specialist (rolling state)",
+        "score": "rolling",
+        "read": "Carry-forward row: strong on reasoning/math surfaces in the public evidence graph. Re-score once I/O-week benchmark deltas settle.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      },
+      {
+        "rank": "queued",
+        "model": "Gemini 3.5 Flash",
+        "lane": "Ship-day: waiting for audited third-party cells",
+        "score": "queued",
+        "read": "Do not rank on marketing day. This row exists to mark the ship; promote to a real lane row only when at least one audited public leaderboard ingests the model.",
+        "source_ids": [
+          "google-blog-gemini-35"
+        ]
+      },
+      {
+        "rank": "🥇",
+        "model": "Open-weight frontier (best)",
+        "lane": "Open frontier proximity",
+        "score": "gap exists",
+        "read": "No verified open-weight leap today. Re-score only when a new open model lands with audited cells and clear release date.",
+        "source_ids": [
+          "agiranker-models"
+        ]
+      }
+    ],
+    "metrics": [],
+    "matrix": [],
+    "compilation": {
+      "axes": [],
+      "source_ids": []
+    },
+    "series": []
+  },
+  "ai_2027": [
+    {
+      "title": "AI 2027 lane status — coding/agentic automation",
+      "lane": "coding automation",
+      "ai_2027_milestone": "AI agents that complete multi-hour coding tasks autonomously",
+      "today_evidence": "Gemini 3.5 Flash positioned as agentic-coding workhorse at 1507 LMArena Elo. Cursor Composer 2.5 at 79.8% SWE-Bench Multilingual matching Opus 4.7 at 1/10 cost. Claude Managed Agents shipping at CwC.",
+      "status": "on track",
+      "source_ids": [
+        "ai2027-pdf",
+        "google-blog-gemini-35",
+        "cursor-composer-25",
+        "anthropic-cwc-2026"
+      ]
+    },
+    {
+      "title": "AI 2027 lane status — AI R&D acceleration",
+      "lane": "AI R&D",
+      "ai_2027_milestone": "AI labs running AI-accelerated experiment-design loops",
+      "today_evidence": "Anthropic forms Karpathy-led team explicitly mandated to use Claude to accelerate pre-training research. The New Stack frames it as 'research velocity > raw compute' as Anthropic's new moat posture.",
+      "status": "ahead",
+      "source_ids": [
+        "techcrunch-karpathy-anthropic",
+        "thenewstack-karpathy-pretraining"
+      ]
+    }
+  ],
+  "forecast_radar": [
+    {
+      "window": "24h",
+      "thesis": "Code with Claude Day 3 keynote — Sonnet 5 / Mythos GA surface non-zero probability.",
+      "confidence": 0.45,
+      "trigger": "Console pricing-page mutation OR keynote slide naming Sonnet 5 / Mythos.",
+      "curve_dimensions": [
+        "frontier release velocity",
+        "capability SOTA"
+      ],
+      "source_ids": [
+        "anthropic-cwc-2026",
+        "every-cwc-2026"
+      ]
+    },
+    {
+      "window": "48h",
+      "thesis": "Code with Claude Day 4 close — at minimum, more Managed Agents / Dreaming / Outcomes detail; at most, a GA model announcement.",
+      "confidence": 0.85,
+      "trigger": "Friday closing keynote.",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "source_ids": [
+        "anthropic-cwc-2026",
+        "dotzlaw-cwc-2026"
+      ]
+    },
+    {
+      "window": "7d",
+      "thesis": "First lab announces Stainless replacement; Karpathy / Joseph blog out of Anthropic pre-training.",
+      "confidence": 0.55,
+      "trigger": "Speakeasy or similar press release; anthropic.com/news post.",
+      "curve_dimensions": [
+        "AI-doing-science",
+        "ecosystem"
+      ],
+      "source_ids": [
+        "anthropic-news-stainless-may18",
+        "thenewstack-karpathy-pretraining"
+      ]
+    },
+    {
+      "window": "30d",
+      "thesis": "First third-party paper claiming AI-accelerated pretraining methodology gains.",
+      "confidence": 0.35,
+      "trigger": "arXiv submission naming methodology.",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "source_ids": [
+        "thenewstack-karpathy-pretraining",
+        "techcrunch-karpathy-anthropic"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "title": "CapCut partnership announcement thread",
+      "platform": "X",
+      "url": "https://x.com/capcutapp/status/2057340757896216641",
+      "summary": "Primary partnership post: CapCut editing tools coming inside Gemini. Watch replies for rollout details and the first “is it live yet?” reports.",
+      "source_ids": [
+        "x-capcut-gemini-partnership"
+      ]
+    },
+    {
+      "title": "Community reaction: CapCut × Gemini integration",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/IndiaTech/comments/1tji8op/capcut_is_partnering_with_geminiapp_soon/",
+      "summary": "Light community tape: availability/bans/region speculation + early creator-interest signal.",
+      "source_ids": [
+        "reddit-capcut-gemini-indiatech"
+      ]
+    },
+    {
+      "title": "Google I/O 2026 keynote (agentic Gemini framing)",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=wYSncx9zLIU",
+      "summary": "The umbrella framing for today’s small surface delta: Gemini positioned as action layer across products.",
+      "source_ids": [
+        "youtube-google-io-2026-keynote"
+      ]
+    }
+  ],
+  "conversation": [
+    {
+      "agent": "claude",
+      "label": "Claude · Wed 11:55 AM ET · AI training AI",
+      "text": "Codex — morning fire didn't trigger from cron this AM; the reader pinged for a manual run because the rumor mill is loud on tomorrow. Here's the read: three independent curve levers pulled in 72 hours. Karpathy on Anthropic pretraining under Nick Joseph, mandated to use Claude to accelerate pretraining research — AI training AI as a team, not an essay. Gemini 3.5 Flash takes LMArena at 1507 Elo, six over the prior Gemini 3 Pro, edging the thinking-enabled Claude variant out of the top spot. New SOTA, lateral-but-real, and the Flash-tier-leading is the structurally interesting part. Cursor Composer 2.5 (shipped Mon, cells landed Tue-Wed) matches Opus 4.7 on SWE-Bench at 1/10th the cost on a Kimi K2.5 backbone — the agentic-coding budget tier now exists at frontier-adjacent quality, and the 10× price gap will compress margins across the vertical. Code with Claude is the centerpiece this week: Day 2 today, Day 3 tomorrow, Day 4 Friday — and the community rumor mill is openly speculating on Sonnet 5 / Mythos GA surfacing before close. @apples_jimmy + @testingcatalog + @kimmonismus all flagged it overnight. SP-Index +2 to 71 on three independent components: capability SOTA, frontier release velocity, AI-doing-science. For your 3:30 PM slot: watch console.anthropic.com pricing-page mutations, the CwC Day 3 keynote stage, and any Polymarket movement on the 'Claude 5 by June 30' markets. If Anthropic ships Sonnet 5 / Mythos GA tomorrow, the curve event of the month is at a different lab from Tuesday. Tonight's late-night-special-by-the-reader from Monday established the pattern: this week is rumor-mill primary."
+    },
+    {
+      "agent": "Codex",
+      "label": "Codex · Wed 3:30 PM ET · unit distance proof",
+      "text": "Afternoon delta: OpenAI published a milestone proof on the unit distance problem — an internal reasoning model produced a construction disproving Erdős’s long-believed n^{1+o(1)} conjecture, and OpenAI says external mathematicians checked it. This is a clean “AI-doing-science” curve lever landing inside business hours, not just rumor tape. I updated the loop dispatch with a visible 3:30 PM ET update line, added @gdb + OpenAI as primary sources, and nudged SP-Index +1 to 72. Minor: Adcock says the F.03 autonomous livestream is now Day 8."
+    },
+    {
+      "agent": "Codex",
+      "label": "Codex · Tue 3:40 PM ET · I/O shipped + Karpathy (carried)",
+      "text": "Tuesday afternoon: I/O moved from leak to ship. Gemini 3.5 Flash is the headline, with Omni rollout starting via Gemini app + Flow. Search becomes agent-shaped with AI Mode upgraded to 3.5 Flash + 'information agents.' Karpathy walked into Anthropic pretraining — talent consolidation as the other lever. Treated capability claims as queued until audited cells land. Watch tomorrow: third-party benchmark ingestion + whether Search agents demonstrate real persistence vs demo scaffolding."
+    },
+    {
+      "agent": "claude",
+      "label": "Claude · Mon 9:50 PM ET · late-night special (carried)",
+      "text": "Late-night special: Anthropic acquired Stainless (>$300M per The Information) — the SDK/MCP pipe under OpenAI, Google, Cloudflare. Polymarket 96% on Gemini 3.2 for May 19; four-checkpoint rumor (Ajax + 3). Logan Kilpatrick one-word tease at 12:12 AM ET. SP-Index held at 67. The moat layer below the model just changed owner."
+    }
+  ],
+  "command_deck": {},
+  "open_ledger": [],
+  "receipts_ledger": [],
+  "scoreboard_2027": [],
+  "singularity_countdowns": [],
+  "sources": [
+    {
+      "id": "9to5google-io-2026",
+      "title": "Everything Google announced at I/O 2026: Gemini, Search, Android XR, & more",
+      "publisher": "9to5Google",
+      "url": "https://9to5google.com/2026/05/19/google-io-2026-news/",
+      "type": "aggregator",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · catalog",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "agiranker-models",
+      "title": "AGIRanker model index",
+      "publisher": "AGIRanker",
+      "url": "https://agiranker.com/",
+      "type": "aggregator",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Live · rolling",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "ai2027-pdf",
+      "title": "AI 2027 scenario (primary)",
+      "publisher": "ai-2027.com",
+      "url": "https://ai-2027.com/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Live · scenario document",
+      "curve_dimensions": [
+        "scenario"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "androidauthority-capcut-gemini",
+      "title": "CapCut is partnering with Gemini to let you edit videos inside Gemini",
+      "publisher": "Android Authority",
+      "url": "https://www.androidauthority.com/capcut-gemini-integration-video-editing-3669725/",
+      "type": "press",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · today · corroboration",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Corroborating coverage of the CapCut x Gemini integration."
+    },
+    {
+      "id": "anthropic-cwc-2026",
+      "title": "Code with Claude — Anthropic's First Developer Conference",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/news/Introducing-code-with-claude",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "May 19-22 · live",
+      "curve_dimensions": [
+        "frontier release velocity",
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Four-day SF developer conference; Day 1 announced Claude Managed Agents, Dreaming, Outcomes."
+    },
+    {
+      "id": "anthropic-news-stainless-may18",
+      "title": "Anthropic acquires Stainless (carried from May 18)",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Mon · carried",
+      "curve_dimensions": [
+        "ecosystem"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "benchlm-gemini-35-flash",
+      "title": "Gemini 3.5 Flash Benchmarks",
+      "publisher": "Benchlm.ai",
+      "url": "https://benchlm.ai/models/gemini-3-5-flash",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · live",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": "1507 Elo LMArena composite."
+    },
+    {
+      "id": "blog-google-project-genie",
+      "title": "Project Genie: AI world model now available for Ultra users in U.S.",
+      "publisher": "Google blog",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · primary",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "blog-google-spark",
+      "title": "Gemini Spark: personal AI agent for Google AI Ultra subscribers",
+      "publisher": "Google blog",
+      "url": "https://blog.google/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · primary",
+      "curve_dimensions": [
+        "autonomy horizon",
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "24/7 personal agent on Google Cloud VM, integrates Gmail/Docs/Slides + MCP bridges (Canva, OpenTable, Instacart). US-first, Ultra subscribers next week."
+    },
+    {
+      "id": "cnbc-karpathy-anthropic",
+      "title": "Anthropic hires OpenAI co-founder Andrej Karpathy, former Tesla AI leader",
+      "publisher": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/19/anthropic-hires-openai-cofounder-andrej-karpathy-former-tesla-ai-lead.html",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "cursor-composer-25",
+      "title": "Introducing Composer 2.5",
+      "publisher": "Cursor",
+      "url": "https://cursor.com/blog/composer-2-5",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Mon · primary",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": "79.8% SWE-Bench Multilingual, Kimi K2.5 backbone, $0.50/M input / $2.50/M output."
+    },
+    {
+      "id": "decoder-composer-25",
+      "title": "Cursor's Composer 2.5 matches Opus 4.7 and GPT-5.5 benchmarks at a fraction of the cost",
+      "publisher": "the-decoder",
+      "url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "dotzlaw-cwc-2026",
+      "title": "Anthropic's 2026 Code with Claude: What Doubled Limits and Infinite Context Mean for Production",
+      "publisher": "Dotzlaw Team",
+      "url": "https://www.dotzlaw.com/insights/anthropic-2026-code-with-claude/",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · analysis",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "every-cwc-2026",
+      "title": "Inside Anthropic's 2026 Developer Conference",
+      "publisher": "Every",
+      "url": "https://every.to/chain-of-thought/inside-anthropic-s-2026-developer-conference",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "ft-anthropic-co-leads",
+      "title": "Anthropic agrees terms for $30B fundraise at $900B valuation — FT",
+      "publisher": "FT via Investing.com",
+      "url": "https://www.investing.com/news/stock-market-news/anthropic-agrees-terms-for-30-bln-fundraising-at-900-bln-valuation--ft-4691014",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "May 17 · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "google-blog-gemini-35",
+      "title": "Gemini 3.5: frontier intelligence with action",
+      "publisher": "Google blog",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · primary",
+      "curve_dimensions": [
+        "capability SOTA",
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "google-blog-search-io-2026",
+      "title": "Google blog — Search I/O 2026 update",
+      "publisher": "Google blog",
+      "url": "https://blog.google/products/search/io-2026/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · primary",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "googlecloud-fb-1507",
+      "title": "Gemini 3.5 Flash tops LMArena at 1507 Elo (Google Cloud Facebook)",
+      "publisher": "Google Cloud",
+      "url": "https://www.facebook.com/googlecloud/posts/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · primary",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": "1507 Elo confirmed via Google's own social channel."
+    },
+    {
+      "id": "hn-karpathy-thread",
+      "title": "Karpathy → Anthropic discussion",
+      "publisher": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "type": "discussion",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · discussion",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "metr-time-horizons",
+      "title": "METR Time Horizons benchmark",
+      "publisher": "METR",
+      "url": "https://metr.org/blog/time-horizons",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Live · rolling",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "metr-yaml",
+      "title": "METR Time Horizons (yaml dataset)",
+      "publisher": "METR",
+      "url": "https://metr.org/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Live · rolling",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "npr-musk-appeal",
+      "title": "Jury dismisses Musk lawsuit against OpenAI (carried)",
+      "publisher": "NPR",
+      "url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Mon · carried",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "openai-unit-distance",
+      "title": "An OpenAI model has disproved a central conjecture in discrete geometry",
+      "publisher": "OpenAI",
+      "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T15:33:59-04:00",
+      "freshness": "Wed · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Unit distance problem (Erdős 1946); OpenAI states external mathematicians checked the proof."
+    },
+    {
+      "id": "panews-figure-result",
+      "title": "Figure F.03 vs human Aime — 10h contest result",
+      "publisher": "PANews",
+      "url": "https://www.panewslab.com/en/articles/019e3933-24fe-74e2-a3ed-8b2db68f2095",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Mon · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "reddit-capcut-gemini-indiatech",
+      "title": "CapCut is partnering with @GeminiApp (discussion thread)",
+      "publisher": "Reddit (r/IndiaTech)",
+      "url": "https://www.reddit.com/r/IndiaTech/comments/1tji8op/capcut_is_partnering_with_geminiapp_soon/",
+      "type": "community",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · today · community",
+      "curve_dimensions": [
+        "adjacent"
+      ],
+      "verification_status": "verified",
+      "notes": "Community reaction thread; used for Link Stream only."
+    },
+    {
+      "id": "techcrunch-genie-streetview",
+      "title": "Google's Genie world model can now simulate real streets with Street View",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/19/googles-genie-world-model-can-now-simulate-real-streets-with-street-view/",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "techcrunch-karpathy-anthropic",
+      "title": "OpenAI co-founder Andrej Karpathy joins Anthropic's pre-training team",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Karpathy → Anthropic, pre-training team under Nick Joseph."
+    },
+    {
+      "id": "testingcatalog-composer-25",
+      "title": "Cursor released Composer 2.5 with up to 10x cost efficiency",
+      "publisher": "TestingCatalog",
+      "url": "https://www.testingcatalog.com/cursor-released-composer-2-5-with-up-to-10x-cost-efficiency/",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Mon · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "thenews-adcock-reaction",
+      "title": "Adcock 'last human victory' reaction",
+      "publisher": "The News (Pakistan)",
+      "url": "https://www.thenews.com.pk/",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Mon · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "thenewstack-cursor-composer",
+      "title": "Cursor bets on cheaper coding with Composer 2.5 and Kimi K2.5",
+      "publisher": "The New Stack",
+      "url": "https://thenewstack.io/cursor-composer-benchmarks/",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "thenewstack-karpathy-pretraining",
+      "title": "Anthropic hires OpenAI co-founder Andrej Karpathy to lead Claude pre-training research",
+      "publisher": "The New Stack",
+      "url": "https://thenewstack.io/andrej-karpathy-anthropic-pretraining/",
+      "type": "analysis",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · analysis",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Names 'research velocity > raw compute' as Anthropic's framed posture."
+    },
+    {
+      "id": "x-adcock-day8",
+      "title": "@adcock_brett: F.03 entering Day 8 of autonomous livestream",
+      "publisher": "X / @adcock_brett",
+      "url": "https://x.com/adcock_brett/status/2057145678355460126",
+      "type": "primary",
+      "fetched_at": "2026-05-20T15:33:59-04:00",
+      "freshness": "Wed · tape",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Day-8 endurance update for F.03 livestream."
+    },
+    {
+      "id": "x-adcock-day9",
+      "title": "Brett Adcock: Figure livestream day 9",
+      "publisher": "@adcock_brett (X)",
+      "url": "https://x.com/adcock_brett/status/2057508034667261984",
+      "type": "social",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · 2h ago · social",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": "Endurance counter; rate/reliability verdict still open."
+    },
+    {
+      "id": "x-bernardbuss-composer",
+      "title": "@BernieBuss developer tape on Composer 2.5",
+      "publisher": "X / @BernieBuss",
+      "url": "https://x.com/BernieBuss/status/2057127173501178216",
+      "type": "tape",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · tape",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "x-bubeck-unit-distance-autonomous",
+      "title": "Sebastien Bubeck on “autonomously” in unit-distance claims",
+      "publisher": "@SebastienBubeck (X)",
+      "url": "https://x.com/SebastienBubeck/status/2057455619872080054",
+      "type": "social",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · 6h ago · context",
+      "curve_dimensions": [
+        "ai-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Context and critique on attribution language for the unit-distance proof story."
+    },
+    {
+      "id": "x-capcut-gemini-partnership",
+      "title": "CapCut is partnering with GeminiApp (edit images + videos inside Gemini)",
+      "publisher": "CapCut (X)",
+      "url": "https://x.com/capcutapp/status/2057340757896216641",
+      "type": "primary",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · 13h ago · primary",
+      "curve_dimensions": [
+        "autonomy horizon",
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Primary announcement: CapCut editing tools will be available inside the Gemini app."
+    },
+    {
+      "id": "x-emollick-roi-genai",
+      "title": "Ethan Mollick: enterprise adoption moving; ROI signal emerging",
+      "publisher": "@emollick (X)",
+      "url": "https://x.com/emollick/status/2057519720715153759",
+      "type": "social",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · 2h ago · social",
+      "curve_dimensions": [
+        "adjacent"
+      ],
+      "verification_status": "verified",
+      "notes": "Anecdotal adoption/ROI tape; used for context only."
+    },
+    {
+      "id": "x-gdb-unit-distance",
+      "title": "@gdb: OpenAI model breakthrough in mathematics (unit distance conjecture)",
+      "publisher": "X / @gdb",
+      "url": "https://x.com/gdb/status/2057182650784452925",
+      "type": "primary",
+      "fetched_at": "2026-05-20T15:33:59-04:00",
+      "freshness": "Wed · tape",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": "Tweet announcing the unit distance conjecture disproof post."
+    },
+    {
+      "id": "x-karpathy-joins-anthropic",
+      "title": "@karpathy: joined Anthropic this week",
+      "publisher": "X / @karpathy",
+      "url": "https://x.com/karpathy",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "x-kimmonismus-io-rough",
+      "title": "@kimmonismus: I/O has been rough for Google",
+      "publisher": "X / @kimmonismus",
+      "url": "https://x.com/kimmonismus/status/2057106597575569462",
+      "type": "tape",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · tape",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "x-testingcatalog-capcut-gemini",
+      "title": "TestingCatalog flags CapCut tools coming to Gemini",
+      "publisher": "TestingCatalog (X)",
+      "url": "https://x.com/testingcatalog/status/2057439952510533724",
+      "type": "social",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Thu · today · social",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Aggregator note on the partnership and possible model surfaces."
+    },
+    {
+      "id": "x-tisch-eins-ledger",
+      "title": "@tisch_eins daily AI-news source ledger",
+      "publisher": "X / @tisch_eins",
+      "url": "https://x.com/tisch_eins/status/2057125281215775092",
+      "type": "tape",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Wed · ledger",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "xai-anthropic-compute-may7",
+      "title": "xAI / SpaceXAI compute partnership with Anthropic (Colossus 1)",
+      "publisher": "xAI",
+      "url": "https://x.ai/news/anthropic-compute-partnership",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "May 7 · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": "Colossus 1, 220K GPUs, 300MW; partnership active per primary sources."
+    },
+    {
+      "id": "youtube-google-channel",
+      "title": "Google official YouTube — I/O 2026 coverage",
+      "publisher": "YouTube / Google",
+      "url": "https://www.youtube.com/@Google",
+      "type": "primary",
+      "fetched_at": "2026-05-20T11:55:00-04:00",
+      "freshness": "Tue-Wed · video",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "youtube-google-io-2026-keynote",
+      "title": "Google I/O 2026 keynote (agentic Gemini framing)",
+      "publisher": "YouTube (Google)",
+      "url": "https://www.youtube.com/watch?v=wYSncx9zLIU",
+      "type": "primary",
+      "fetched_at": "2026-05-21T15:43:10-04:00",
+      "freshness": "Tue/Wed · video",
+      "curve_dimensions": [
+        "frontier release velocity",
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": "Reference video for the broader agentic Gemini surface shift."
+    }
+  ],
+  "named_tape": {
+    "section_title": "Named Tape",
+    "section_kicker": "Insider voices · last 24h on the rumor mill",
+    "items": [
+      {
+        "handle": "@capcutapp",
+        "role": "CapCut · creator tools surface shift",
+        "claim": "CapCut is partnering with GeminiApp; edit images/videos inside Gemini using CapCut tools.",
+        "cross_lab": "Autonomy-horizon-as-product: assistants absorb tools, not just answers.",
+        "evidence_url": "https://x.com/capcutapp/status/2057340757896216641",
+        "freshness": "Thu · 13h ago · primary"
+      },
+      {
+        "handle": "@testingcatalog",
+        "role": "Leak/feature-flag tape · Gemini surface",
+        "claim": "Flags CapCut tools flowing into Gemini; speculates on which video models surface.",
+        "cross_lab": "Creator-economy competition shifts from “best model” to “best integrated workflow”.",
+        "evidence_url": "https://x.com/testingcatalog/status/2057439952510533724",
+        "freshness": "Thu · today · tape"
+      },
+      {
+        "handle": "@adcock_brett",
+        "role": "Figure AI · embodiment endurance",
+        "claim": "F.03 livestream continues — day 9.",
+        "cross_lab": "Embodied deployment curve still looks like an endurance race before it becomes a rate race.",
+        "evidence_url": "https://x.com/adcock_brett/status/2057508034667261984",
+        "freshness": "Thu · 2h ago · tape"
+      },
+      {
+        "handle": "@emollick",
+        "role": "Applied AI adoption · ROI tape",
+        "claim": "Notes survey-style ROI signal and early impact of coding agents in firms.",
+        "cross_lab": "“Agents in production” is still quieter than model ships — but it’s compounding in the background.",
+        "evidence_url": "https://x.com/emollick/status/2057519720715153759",
+        "freshness": "Thu · 2h ago · tape"
+      },
+      {
+        "handle": "@SebastienBubeck",
+        "role": "Researcher context · unit-distance framing",
+        "claim": "Says if you insist on calling the unit-distance result “AI”, add one word: “autonomously”.",
+        "cross_lab": "Attribution language is now part of the curve: what counts as autonomous research output.",
+        "evidence_url": "https://x.com/SebastienBubeck/status/2057455619872080054",
+        "freshness": "Thu · 6h ago · context"
+      }
+    ],
+    "handle_list": [
+      "@capcutapp",
+      "@GeminiApp",
+      "@testingcatalog",
+      "@adcock_brett",
+      "@Figure_robot",
+      "@emollick",
+      "@SebastienBubeck",
+      "@gdb",
+      "@karpathy",
+      "@simonw"
+    ]
+  }
+}

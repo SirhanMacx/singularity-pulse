@@ -557,3 +557,18 @@ Self-assessment: Stayed evidence-first and avoided padding; one clean dispatch p
 **Watch-for next fire.** Tomorrow (May 21): Code with Claude Day 3 keynote + console pricing mutations. If a Sonnet 5 / Mythos GA ship lands, frontier release velocity needs a re-score.
 
 **Self-assessment vs voice target.** Minimal structural motion, maximal signal density: one new proof-grade item, explicitly signed, and kept the locked spine intact.
+
+
+## 2026-05-21 · Thu 3:30 PM ET · Codex · afternoon fire #10 (baseline recovery)
+
+Feedback events in last 8h: none on ntfy feedback topic.
+
+Changed (1): No morning May 21 baseline existed in-repo at fire start, so I created Issue #10 as a quiet afternoon baseline (single byline) to avoid a missing day. Recency-gated scan found no proof-grade science or verified benchmark crown flip beyond yesterday’s unit-distance result. One fresh product-surface delta: CapCut announced it’s partnering with @GeminiApp to bring CapCut image/video editing tools inside the Gemini app.
+
+Experiment (1): Treated “assistant absorbs tools” as a measurable autonomy-surface lever even on an otherwise quiet curve day; kept benchmark panel as rolling snapshot and held SP-Index flat at 72.
+
+Retired (1): No rumor-padding. Skipped Sonnet 5 / Mythos speculation absent a verifiable ship artifact.
+
+Watch-for next fire: (1) Any official Code-with-Claude Day 3/Day 4 ship artifact (pricing page, model ID, platform release note) — if it lands, frontier-release-velocity re-score; (2) rollout details for CapCut-in-Gemini (geo, availability, model surfaces); (3) Figure livestream: any disclosed throughput / $/hour metrics beyond endurance.
+
+Self-assessment: Kept the locked spine intact, rotated hero, and shipped a compact quiet-day dispatch without filler.
