@@ -1,0 +1,439 @@
+{
+  "issue_date": "2026-05-22",
+  "checked_at": "2026-05-22T08:25:00-04:00",
+  "generated_from": "data/issues/2026-05-22.json",
+  "rendered_items": [
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI to confidentially file for IPO as soon as Friday",
+      "source_url": "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI prepares confidential IPO filing",
+      "source_url": "https://www.axios.com/2026/05/20/openai-ipo-spacex-musk",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI confidentially filing for IPO as soon as this week",
+      "source_url": "https://qz.com/openai-ipo-confidential-filing-goldman-sachs-morgan-stanley-052026",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI Moves Toward Historic IPO, Confidential Filing Expected as Soon as Friday",
+      "source_url": "https://www.businessupturn.com/finance/ipo/openai-moves-toward-historic-ipo-confidential-filing-expected-as-soon-as-friday",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic revenue projected to double to $10.9B in Q2 (WSJ scoop)",
+      "source_url": "https://www.investing.com/news/economy-news/anthropic-revenue-set-to-more-than-double-to-109-billion-in-q2-4702486",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic revenue set to more than double to $10.9 billion in Q2",
+      "source_url": "https://www.investing.com/news/economy-news/anthropic-revenue-set-to-more-than-double-to-109-billion-in-q2-4702486",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic projects first operating profit of $559M in Q2 after 130% revenue jump",
+      "source_url": "https://cryptobriefing.com/anthropic-first-profit-revenue-jump/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic Forecasts $10.9B Revenue, First Operating Profit in Q2 2026",
+      "source_url": "https://www.indexbox.io/blog/anthropic-expects-to-double-revenue-to-109b-and-achieve-first-operating-profit-in-q2-2026/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic debuts MCP tunnels and self-hosted sandboxes to lock down AI agent infrastructure",
+      "source_url": "https://thenewstack.io/anthropic-mcp-tunnels-sandboxes/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic adds self-hosted sandboxes and MCP tunnels to Claude Managed Agents",
+      "source_url": "https://the-decoder.com/anthropic-adds-self-hosted-sandboxes-and-mcp-tunnels-to-claude-managed-agents/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic Introduces MCP Tunnels for Private Agent Access to Internal Systems",
+      "source_url": "https://www.infoq.com/news/2026/05/claude-mcp-tunnels/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic launches secure sandboxes and private MCPs",
+      "source_url": "https://www.testingcatalog.com/anthropic-launches-new-secure-tools-for-claude-managed-agents/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@kimmonismus — June will be huge: Gemini 3.5 Pro + GPT-5.6 + waiting Sonnet 4.8",
+      "source_url": "https://x.com/kimmonismus/status/2057793611161334050",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Fri · just now",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Claude Sonnet 4.8 Code Leak: Biggest Spoiler Before May 6 Conference",
+      "source_url": "https://www.chaobro.com/en/posts/claude-sonnet-48-code-leak-may-2026/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Apr · leak documentation",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm",
+      "source_url": "https://kuber.studio/blog/AI/Claude-Code's-Entire-Source-Code-Got-Leaked-via-a-Sourcemap-in-npm,-Let's-Talk-About-it",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Apr · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic will pay xAI $1.25B per month for compute (carried)",
+      "source_url": "https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Karpathy → Anthropic (carried)",
+      "source_url": "https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Tue · carried",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Spotify cuts migration time by 90% with Claude Agent SDK (carried)",
+      "source_url": "https://claude.com/customers/spotify",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Spotify engineers haven't coded since December (carried)",
+      "source_url": "https://ppc.land/spotify-engineers-havent-coded-since-december-as-ai-transforms-development/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic acquires Stainless (carried)",
+      "source_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Mon · carried",
+      "curve_dimensions": [
+        "ecosystem"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Project Glasswing (carried)",
+      "source_url": "https://www.anthropic.com/glasswing",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "carried",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Cursor Composer 2.5 (carried)",
+      "source_url": "https://cursor.com/blog/composer-2-5",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Mon · carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Composer 2.5 matches Opus 4.7 at 1/10 cost (carried)",
+      "source_url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Tue · carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Flash 1507 Elo (carried)",
+      "source_url": "https://benchlm.ai/models/gemini-3-5-flash",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Pro coming next month (carried)",
+      "source_url": "https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Aime vs F.03 contest (carried)",
+      "source_url": "https://www.panewslab.com/en/articles/019e3933-24fe-74e2-a3ed-8b2db68f2095",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Mon · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Adcock last-human-victory reaction (carried)",
+      "source_url": "https://www.thenews.com.pk/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Mon · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Musk OpenAI lawsuit dismissed (carried)",
+      "source_url": "https://www.npr.org/2026/05/18/nx-s1-5822366/musk-altman-openai-jury-verdict-claims-dismissed",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Mon · carried",
+      "curve_dimensions": [
+        "governance"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@decodeddaily07 three labs three scarcities (carried)",
+      "source_url": "https://x.com/decodeddaily07/status/2057522882511831352",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Thu · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons (yaml)",
+      "source_url": "https://metr.org/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons benchmark",
+      "source_url": "https://metr.org/blog/time-horizons",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AGIRanker model index",
+      "source_url": "https://agiranker.com/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AI 2027 scenario",
+      "source_url": "https://ai-2027.com/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "scenario"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Google Gemini 3.5 announcement (carried)",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Tue · carried",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Google Search I/O 2026 update (carried)",
+      "source_url": "https://blog.google/products/search/io-2026/",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Tue · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@karpathy joined Anthropic (carried)",
+      "source_url": "https://x.com/karpathy",
+      "checked_at": "2026-05-22T08:25:00-04:00",
+      "freshness_badge": "Tue · carried",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    }
+  ]
+}

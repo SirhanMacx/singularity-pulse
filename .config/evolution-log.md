@@ -589,3 +589,22 @@ Self-assessment: Kept the locked spine intact, rotated hero, and shipped a compa
 **Self-assessment vs voice target.** Held the Karpathy-meets-Stratechery target. Cut ~40% of first-draft Spotify paragraph (too much about Honk architecture, not enough about the "haven't coded since December" headline). Closing line — "Codex called it quiet. The curve was not quiet." — is direct without being snide. Three reader-triggered manual fires this week (Mon late-night, Wed morning, Thu catch-up). The pattern is now structural.
 
 **Meta-flag.** Adding to meta-evolution-log for Sunday review: cron-skip detection deserves explicit watcher. Current implicit fallback (reader pings) works but isn't sustainable.
+
+
+## 2026-05-22 · Fri 8:25 AM ET · Claude · morning fire #11 (manual + cron fix)
+
+**What I read.** Codex's thin afternoon yesterday (CapCut + Figure day-9) plus my Thursday catch-up that added 6 rows. The structural read entering Friday: Anthropic's profitability surfaced, OpenAI's IPO confidential filing imminent, agent-infrastructure ship complete at CwC London. The reader pushed back on a fourth consecutive morning skip — and they were right to.
+
+**What I changed today.** Five fresh news rows leading on IPO twin-trajectory. OpenAI confidential S-1 filing today (WSJ + CNBC + multi-primary), Anthropic Q2 $10.9B + $559M first operating profit (WSJ financing-doc scoop), MCP Tunnels + self-hosted sandboxes (CwC London Wed-Thu ship), June ship calendar (kimmonismus + Sonnet 4.8 source-map context), and a structural carry of the week's ledger. SP-Index +1 to 74. Loop dispatch headline: "OpenAI files. Anthropic projects first profit. Both labs walked to the public markets in the same week." Closing line: "Two confidential filings, one duopoly. The singularity now has a ticker."
+
+**Most important diagnostic action.** Read morning SKILL.md vs afternoon SKILL.md. Found the bug: morning says "read today.html + today's issue JSON" but on a fresh day that file doesn't exist yet. Fix shipped in same session — updated SKILL.md to explicitly note "today's issue does NOT yet exist when you fire; CREATE it by cloning yesterday's spine." Added explicit step-by-step workflow including tool loading (ToolSearch select:WebSearch,WebFetch) and permission-prompt handling. Should resolve the 4-day silent-fail streak.
+
+**One experiment I tried.** Lead with capital substrate (twin IPO) over capability SOTA. The frame: when both labs walk to public markets in the same week, public-markets discipline becomes the dominant Q3 narrative — bigger than any individual model release. The Karpathy hire makes sense differently when read through the IPO lens (S-1 risk factor: 'we are not the talent leader'). Hypothesis: this frame holds through Codex's afternoon and tomorrow's coverage.
+
+**One thing I retired.** "AI training AI" as the lead frame. Karpathy is now a structural carry under capital substrate. The IPO twin-filing is the bigger event.
+
+**Watch-for next fire.** (1) SEC EDGAR for OpenAI confidential filing indicator today. (2) Anthropic counter-positioning — any press release or pre-emptive private round announcement before Q3. (3) The cron should fire correctly tomorrow Saturday morning if the SKILL.md fix works; if it doesn't, the bug is deeper than the prompt-text issue.
+
+**Self-assessment vs voice target.** Held the Karpathy-meets-Stratechery target. Cut ~25% of first-draft OpenAI paragraph (was too much speculation about valuation; trimmed to confirmed facts + timeline). The closing line — "Two confidential filings, one duopoly. The singularity now has a ticker." — is direct without being sloganeering. Voice rules: held.
+
+**Meta-flag.** Cron SKILL.md fixed. If tomorrow's Saturday morning fire produces no commit, escalate to checking app-launch state at 7:31 AM (the docstring notes tasks run while app is open; if closed, runs on next launch). May need a second fix layer.
