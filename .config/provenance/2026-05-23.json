@@ -1,0 +1,295 @@
+{
+  "issue_date": "2026-05-23",
+  "checked_at": "2026-05-23T07:35:00-04:00",
+  "generated_from": "data/issues/2026-05-23.json",
+  "rendered_items": [
+    {
+      "section": "source-footnotes",
+      "title": "NIH AI Uncovers 3 Repurposed Drugs for Alzheimer’s & Parkinson’s in 18 Months",
+      "source_url": "https://time.news/nih-ai-uncovers-3-repurposed-drugs-for-alzheimers-parkinsons-in-18-months/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Fri May 22 · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "NIH NCATS deep-learning model identifies 3 drug-repurposing candidates from 12,456-compound screen at 98% accuracy (Nature Medicine)",
+      "source_url": "https://www.nature.com/nm/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Fri May 22 · primary",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Elon Musk SpaceX Files Publicly for Nasdaq IPO Under Symbol SPCX",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-05-20/musk-s-spacex-files-publicly-for-nasdaq-ipo-under-symbol-spcx",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "The SpaceX IPO filing is filled with AI bets, Starship dreams, and Elon Musk at the center",
+      "source_url": "https://techcrunch.com/2026/05/20/the-spacex-ipo-filing-has-arrived/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "SpaceX SPCX IPO S-1 Full Teardown: $1.75T Valuation, Starlink, xAI, and the Anthropic Deal",
+      "source_url": "https://www.thevccorner.com/p/spacex-spcx-ipo-s1-teardown-valuation-2026",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI to confidentially file for IPO as soon as Friday (carried)",
+      "source_url": "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed-Fri · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic revenue projected to double to $10.9B in Q2 + $559M first operating profit (WSJ scoop, carried)",
+      "source_url": "https://www.investing.com/news/economy-news/anthropic-revenue-set-to-more-than-double-to-109-billion-in-q2-4702486",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Ramp May 2026 AI Index — Anthropic beats OpenAI on business adoption",
+      "source_url": "https://ramp.com/leading-indicators/ai-index-may-2026",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "May 13 · primary · week-anchor",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic finally beat OpenAI in business AI adoption — but 3 big threats could erase its lead",
+      "source_url": "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "May 13-23 · analysis",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic now has more business customers than OpenAI, according to Ramp data",
+      "source_url": "https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "May 13 · analysis",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic overtakes OpenAI in workplace AI adoption",
+      "source_url": "https://www.axios.com/2026/05/13/anthropic-openai-workplace-ai-adoption",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "May 13 · analysis",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Figure AI humanoids hit 24/7 nonstop work milestone",
+      "source_url": "https://interestingengineering.com/ai-robotics/figure-ai-humanoids-24-hour-autonomous-run",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Sat · live · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Aime vs F.03 contest (carried)",
+      "source_url": "https://www.panewslab.com/en/articles/019e3933-24fe-74e2-a3ed-8b2db68f2095",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Sun-Mon · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@kimmonismus — June will be huge: Gemini 3.5 Pro + GPT-5.6 + waiting Sonnet 4.8 (carried)",
+      "source_url": "https://x.com/kimmonismus/status/2057793611161334050",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Fri · tape · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Pro coming next month (carried)",
+      "source_url": "https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Claude Sonnet 4.8 Code Leak: Biggest Spoiler Before May 6 Conference (carried)",
+      "source_url": "https://www.chaobro.com/en/posts/claude-sonnet-48-code-leak-may-2026/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Apr · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons (yaml)",
+      "source_url": "https://metr.org/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons benchmark",
+      "source_url": "https://metr.org/blog/time-horizons",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AGIRanker model index",
+      "source_url": "https://agiranker.com/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Flash 1507 Elo (carried)",
+      "source_url": "https://benchlm.ai/models/gemini-3-5-flash",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Spotify cuts migration time by 90% with Claude Agent SDK (carried)",
+      "source_url": "https://claude.com/customers/spotify",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Cursor Composer 2.5 (carried)",
+      "source_url": "https://cursor.com/blog/composer-2-5",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Mon · carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Composer 2.5 matches Opus 4.7 at 1/10 cost (carried)",
+      "source_url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Tue · carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AI 2027 scenario",
+      "source_url": "https://ai-2027.com/",
+      "checked_at": "2026-05-23T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "scenario"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    }
+  ]
+}

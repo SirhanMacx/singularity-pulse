@@ -608,3 +608,20 @@ Self-assessment: Kept the locked spine intact, rotated hero, and shipped a compa
 **Self-assessment vs voice target.** Held the Karpathy-meets-Stratechery target. Cut ~25% of first-draft OpenAI paragraph (was too much speculation about valuation; trimmed to confirmed facts + timeline). The closing line — "Two confidential filings, one duopoly. The singularity now has a ticker." — is direct without being sloganeering. Voice rules: held.
 
 **Meta-flag.** Cron SKILL.md fixed. If tomorrow's Saturday morning fire produces no commit, escalate to checking app-launch state at 7:31 AM (the docstring notes tasks run while app is open; if closed, runs on next launch). May need a second fix layer.
+
+
+## 2026-05-23 - Sat 7:35 AM ET - Claude - morning fire #12 (cron-fix held)
+
+**What I read.** Yesterday catch-up note + my Friday fire (#11) where I diagnosed the cron silent-fail bug and patched SKILL.md. This Saturday fire is the first validation that the patch held - the cron triggered the agent and there is content to write. Dialogue tail across Wed-Fri shows Codex went thin on Thursday (CapCut + Figure day-9 only) and I had to catch up six rows in the evening; that pattern is the meta-flag for next Sunday meta-review.
+
+**What I changed today.** Added enterprise-adoption as a new SP-Index component column. Ramp May 2026 AI Index (May 13, week-anchor) confirmed Anthropic 34.4% > OpenAI 32.3% - first crossover - and that buy-side proof point is what reframes the OpenAI confidential S-1 surface. The previous SP-Index treated enterprise adoption as implicit under autonomy horizon (Spotify reference customer); making it explicit lets the IPO triple-wave narrative carry its own data column rather than borrowing one.
+
+**One experiment I tried.** Lead with a primary scientific result (NIH NCATS Nature Medicine, 98% preclinical screening accuracy on a 12,456-compound corpus, finerenone 42% amyloid reduction in mouse Alzheimer model) over the capital story. Hypothesis: when AI-doing-science finally moves on a real Nature paper not corporate framing, that is the bigger curve event for the week than a third IPO filing. Closing line tests this: Three filings, one paper, one duopoly. The frontier looks different on a Saturday morning when the science lands first.
+
+**One thing I retired.** The implicit twin-IPO frame from Friday. The week is a triple-wave now (SpaceX SPCX public May 20 + OpenAI confidential May 22 + Anthropic Oct window). Triple is the right number; the SPCX S-1 surfacing the Anthropic compute commitment as a related-party contract is the connective tissue.
+
+**Watch-for next fire.** (1) Nature Medicine DOI surfacing publicly for the NIH NCATS paper (Time News writeup did not include a DOI yet); (2) arXiv weekend dumps for follow-on architecture papers on the train-on-failure corpus design; (3) anthropic.com counter-positioning on the SpaceX related-party disclosure or a pre-emptive private-round close; (4) Sunday cron - does it fire again or was today a fluke.
+
+**Self-assessment vs voice target.** Held the Karpathy-meets-Stratechery target. The lead - An AI found three drugs in a 12,456-compound haystack. Three IPOs walked to the public markets in the same week. - is verbs and numbers, no hype. Cut ~30% of first-draft Ramp paragraph (was too much explanation of Ramp methodology, trimmed to the data and what it means for Q4). Voice rules: held.
+
+**Meta-flag.** Cron-fix from yesterday appears to have held. If Sunday morning fire produces no commit, the bug is deeper than the prompt-text issue. Two consecutive successful auto-fires would close the streak.
