@@ -1,0 +1,337 @@
+{
+  "issue_date": "2026-05-25",
+  "checked_at": "2026-05-25T07:35:00-04:00",
+  "generated_from": "data/issues/2026-05-25.json",
+  "rendered_items": [
+    {
+      "section": "source-footnotes",
+      "title": "Jack Clark: AI will help win a Nobel within 12 months — Oxford Institute for Ethics in AI keynote",
+      "source_url": "https://www.resultsense.com/news/2026-05-21-jack-clark-anthropic-ai-nobel-prize-prediction/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Thu-Fri May 21-22 · primary",
+      "curve_dimensions": [
+        "editorial substrate",
+        "AI-doing-science",
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic In Talks to Raise $30 Billion at $900 Billion Valuation",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Tue May 12 · primary · confirmed cycle May 21-22",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Sources: Anthropic potential $900B+ valuation round could happen within 2 weeks",
+      "source_url": "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Apr 30 → May 12-22 · sourced",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic eyes a $900b valuation in a potential $50b round",
+      "source_url": "https://thenextweb.com/news/anthropic-900-billion-valuation-funding-round",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "SpaceX (SPCX) IPO: Live updates",
+      "source_url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 → weekend updates · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "SpaceX Roadshow as Early as June, OpenAI and Anthropic IPOs in Second Half, Three Giants May Drain 2026 AI IPO Demand",
+      "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261764312-spacex-openai-anthropic-ipo-musk-ai-valuation-retail-investors-tradingkey",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May · desk analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Blast Off: SpaceX finally files IPO prospectus, reveals revenue is up — but losses are too",
+      "source_url": "https://fortune.com/2026/05/20/spacex-finally-files-ipo-prospectus-reveals-revenue-is-up-but-losses-are-too/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI to confidentially file for IPO as soon as Friday (carried)",
+      "source_url": "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Wed-Fri · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Ramp May 2026 AI Index — Anthropic beats OpenAI on business adoption",
+      "source_url": "https://ramp.com/leading-indicators/ai-index-may-2026",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May 13 · primary · week-anchor",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Figure F.03 DAY 9 LIVESTREAM — Final Broadcast (YouTube)",
+      "source_url": "https://www.youtube.com/watch?v=DL0C8irAWKo",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Sat-Sun May 23-24 · livestream archive",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Figure AI humanoid robots sort 88,000 packages in 72 hours during nonstop livestream",
+      "source_url": "https://oodaloop.com/briefs/technology/figure-ais-humanoid-robots-sort-88000-packages-in-72-hours-during-nonstop-livestream/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May · primary",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Figure AI humanoids hit 24/7 nonstop work milestone (carried)",
+      "source_url": "https://interestingengineering.com/ai-robotics/figure-ai-humanoids-24-hour-autonomous-run",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Meta cuts 8,000 jobs in sweeping global layoffs",
+      "source_url": "https://www.aljazeera.com/economy/2026/5/20/meta-cuts-8000-jobs-in-sweeping-global-layoffs",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 · primary",
+      "curve_dimensions": [
+        "labor substrate",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Meta cuts 8,000 jobs amid record $56B quarterly revenue as Zuckerberg bets $145 billion on AI infrastructure",
+      "source_url": "https://thenextweb.com/news/meta-layoffs-8000-zuckerberg-ai-reality-may-2026",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May 20-21 · analysis",
+      "curve_dimensions": [
+        "labor substrate",
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Meta AI overhaul triggers 8,000 layoffs as Zuckerberg promises no more company-wide cuts in 2026",
+      "source_url": "https://www.storyboard18.com/digital/metas-ai-overhaul-triggers-8000-layoffs-as-zuckerberg-promises-no-more-company-wide-cuts-in-2026-99066.htm",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "May 21 · analysis",
+      "curve_dimensions": [
+        "labor substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "LMArena Leaderboard Changelog — Gemini 3.5 Flash added May 19",
+      "source_url": "https://arena.ai/blog/leaderboard-changelog/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Tue May 19 · primary",
+      "curve_dimensions": [
+        "capability SOTA",
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Google debuts new AI models, personal AI agents in effort to keep pace with OpenAI and Anthropic",
+      "source_url": "https://www.cnbc.com/2026/05/19/google-ai-ultra-gemini-spark-omni.html",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Tue May 19 · primary",
+      "curve_dimensions": [
+        "frontier release velocity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "NIH AI Uncovers 3 Repurposed Drugs for Alzheimer and Parkinson in 18 Months (carried)",
+      "source_url": "https://time.news/nih-ai-uncovers-3-repurposed-drugs-for-alzheimers-parkinsons-in-18-months/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Fri May 22 · primary · carried",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "NIH NCATS Nature Medicine: 3 drug-repurposing candidates at 98% screening accuracy (carried)",
+      "source_url": "https://www.nature.com/nm/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Fri May 22 · primary · carried",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@kimmonismus — June ship calendar (carried)",
+      "source_url": "https://x.com/kimmonismus/status/2057793611161334050",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Fri · tape · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Pro coming next month (carried)",
+      "source_url": "https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Wed · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Cursor Composer 2.5 (carried)",
+      "source_url": "https://cursor.com/blog/composer-2-5",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Composer 2.5 matches Opus 4.7 at 1/10 cost (carried)",
+      "source_url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons (yaml)",
+      "source_url": "https://metr.org/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons benchmark",
+      "source_url": "https://metr.org/blog/time-horizons",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AGIRanker model index",
+      "source_url": "https://agiranker.com/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AI 2027 scenario",
+      "source_url": "https://ai-2027.com/",
+      "checked_at": "2026-05-25T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "scenario"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    }
+  ]
+}

@@ -70,7 +70,7 @@
     {
       "date": "2026-05-12",
       "url": "https://jack-clark.net/",
-      "headline": "Import AI #455 \u2014 no-human AI R&D by 2028"
+      "headline": "Import AI #455 — no-human AI R&D by 2028"
     },
     {
       "date": "2026-05-13",
@@ -466,6 +466,36 @@
       "date": "2026-05-23",
       "url": "https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead",
       "headline": "Anthropic beats OpenAI in business adoption"
+    },
+    {
+      "url": "https://www.resultsense.com/news/2026-05-21-jack-clark-anthropic-ai-nobel-prize-prediction/",
+      "date": "2026-05-25",
+      "issue": 13
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation",
+      "date": "2026-05-25",
+      "issue": 13
+    },
+    {
+      "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+      "date": "2026-05-25",
+      "issue": 13
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=DL0C8irAWKo",
+      "date": "2026-05-25",
+      "issue": 13
+    },
+    {
+      "url": "https://www.aljazeera.com/economy/2026/5/20/meta-cuts-8000-jobs-in-sweeping-global-layoffs",
+      "date": "2026-05-25",
+      "issue": 13
+    },
+    {
+      "url": "https://arena.ai/blog/leaderboard-changelog/",
+      "date": "2026-05-25",
+      "issue": 13
     }
   ],
   "last_updated": "2026-05-22T08:25:00-04:00"
