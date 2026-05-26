@@ -1,0 +1,377 @@
+{
+  "issue_date": "2026-05-26",
+  "checked_at": "2026-05-26T07:35:00-04:00",
+  "generated_from": "data/issues/2026-05-26.json",
+  "rendered_items": [
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic to Close Over 30 Billion Round as Soon as Next Week",
+      "source_url": "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Fri eve May 22 to weekend cycle · primary",
+      "curve_dimensions": [
+        "capital substrate",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic set to close over 30 billion round as soon as next week",
+      "source_url": "https://www.business-standard.com/world-news/anthropic-set-to-close-over-30-billion-round-as-soon-as-next-week-126052300112_1.html",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May 23 mirror · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Anthropic Funding Round to Top 30B: 900B Valuation Would Surpass OpenAI",
+      "source_url": "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May 23 · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Polymarket — GPT-5.6 released by?",
+      "source_url": "https://polymarket.com/event/gpt-5pt6-released-by",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Live tradeable line · May 25 trade volume 125k+",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "GPT-5.6 Just Showed Up in OpenAI Codex Logs",
+      "source_url": "https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Mid-May · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Tokyo — Code w/ Claude 2026",
+      "source_url": "https://claude.com/code-with-claude/tokyo",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Agenda surfaced · primary",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Alibaba Qwen 3.7 Max Becomes Highest-Placed Chinese Model On Artificial Analysis Index",
+      "source_url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May 20-21 · primary",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Qwen3.7-Max Review 2026: Benchmarks, Pricing, Verdict",
+      "source_url": "https://felloai.com/qwen-3-7-max-review/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Qwen3.7-Max Review: Alibaba 1M-Token Agent Model",
+      "source_url": "https://www.buildfastwithai.com/blogs/qwen-3-7-max-review-2026",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Jack Clark: 60 Percent Chance AI Trains Its Own Successor by 2028 (Oxford 2026)",
+      "source_url": "https://letsdatascience.com/blog/anthropic-jack-clark-60-percent-ai-builds-successor-2028",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Weekend cycle after May 20-22 talk",
+      "curve_dimensions": [
+        "editorial substrate",
+        "alignment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "The 2026 Cosmos Lecture: Jack Clark on Human Autonomy",
+      "source_url": "https://blog.cosmos-institute.org/p/the-2026-cosmos-lecture-jack-clark",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May · primary",
+      "curve_dimensions": [
+        "editorial substrate",
+        "alignment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Jack Clark: AI will help win a Nobel within 12 months",
+      "source_url": "https://www.resultsense.com/news/2026-05-21-jack-clark-anthropic-ai-nobel-prize-prediction/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Thu-Fri May 21-22 · primary · carried",
+      "curve_dimensions": [
+        "editorial substrate",
+        "AI-doing-science",
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "SpaceX (SPCX) IPO: Live updates",
+      "source_url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 to weekend updates · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "SpaceX Roadshow as Early as June, OpenAI and Anthropic IPOs in Second Half",
+      "source_url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261764312-spacex-openai-anthropic-ipo-musk-ai-valuation-retail-investors-tradingkey",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May · desk analysis · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Blast Off: SpaceX finally files IPO prospectus",
+      "source_url": "https://fortune.com/2026/05/20/spacex-finally-files-ipo-prospectus-reveals-revenue-is-up-but-losses-are-too/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Wed May 20 · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "OpenAI to confidentially file for IPO as soon as Friday (carried)",
+      "source_url": "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May 22 · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Ramp May 2026 AI Index — Anthropic beats OpenAI on business adoption",
+      "source_url": "https://ramp.com/leading-indicators/ai-index-may-2026",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May 13 · primary · week-anchor",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Figure F.03 DAY 9 LIVESTREAM — Final Broadcast (YouTube)",
+      "source_url": "https://www.youtube.com/watch?v=DL0C8irAWKo",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Sat-Sun May 23-24 · livestream archive · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Figure AI humanoid robots sort 88,000 packages in 72 hours",
+      "source_url": "https://oodaloop.com/briefs/technology/figure-ais-humanoid-robots-sort-88000-packages-in-72-hours-during-nonstop-livestream/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May · primary · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "LMArena Leaderboard Changelog",
+      "source_url": "https://arena.ai/blog/leaderboard-changelog/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Live · rolling-state",
+      "curve_dimensions": [
+        "capability SOTA",
+        "frontier release velocity"
+      ],
+      "verification_status": "rolling-state",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Gemini 3.5 Pro coming next month",
+      "source_url": "https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "May · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Cursor Composer 2.5",
+      "source_url": "https://cursor.com/blog/composer-2-5",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "Composer 2.5 matches Opus 4.7 at 1/10 cost (carried)",
+      "source_url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons (yaml)",
+      "source_url": "https://metr.org/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR Time Horizons benchmark",
+      "source_url": "https://metr.org/blog/time-horizons",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "rolling-state",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "METR — Wikipedia",
+      "source_url": "https://en.wikipedia.org/wiki/METR",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "As-of summary",
+      "curve_dimensions": [
+        "autonomy horizon",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "NIH AI Uncovers 3 Repurposed Drugs (carried)",
+      "source_url": "https://time.news/nih-ai-uncovers-3-repurposed-drugs-for-alzheimers-parkinsons-in-18-months/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Fri May 22 · primary · carried",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "AI 2027 scenario",
+      "source_url": "https://ai-2027.com/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Live",
+      "curve_dimensions": [
+        "scenario"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "@jackclarkSF — no walkback thread on Oxford talk (carried)",
+      "source_url": "https://x.com/jackclarkSF",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Tue · tape · live monitor",
+      "curve_dimensions": [
+        "editorial substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    },
+    {
+      "section": "source-footnotes",
+      "title": "r/singularity — Anthropic close-window + 50B run-rate discussion",
+      "source_url": "https://www.reddit.com/r/singularity/",
+      "checked_at": "2026-05-26T07:35:00-04:00",
+      "freshness_badge": "Mon-Tue · tape",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": ""
+    }
+  ]
+}

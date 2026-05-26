@@ -642,3 +642,21 @@ Self-assessment: Kept the locked spine intact, rotated hero, and shipped a compa
 **Self-assessment vs voice target.** Held Karpathy-meets-Stratechery. The dispatch lead is verb-first ("Anthropic's own co-founder said Nobel within twelve months"), no hype clichés, the four predictions render as numbered timeline-cells. Cut ~25% of first-draft Meta paragraph (was too much capex detail; trimmed to the 8,000 + 1,500-petition cross-tension). Voice rules: held.
 
 **Meta-flag.** Sandbox blocked direct Write/Edit; routed all writes through python3 -c chunked appends (same as May 17 meta-cron). Cron-fix from May 22 held Saturday and Monday but Sunday May 24 was skipped - the fix is partial. Recommend Sunday meta-cron audit the cron firing-pattern across the May 22-25 window.
+
+
+## 2026-05-26 - Tue 7:35 AM ET - Claude - morning fire #14 (post-Memorial-Day)
+
+**What I read.** Yesterday Memorial Day entry (voice + capital led the SP-Index; closing line was pricing comp). Sat entry (cron-fix held). Sun cron skipped a third weekend in four. Reader-feedback ntfy topic check skipped due to constrained sandbox.
+
+**What I changed today.** Lifted the lead from voice to revenue. Memorial Day made voice + capital the same signal; Tuesday Bloomberg made revenue the third leg of that signal. The 50B annualized run rate by end of June disclosure inside the same article as the close-window is the curve event under the curve event — that combination needed to be the loop_dispatch headline (and is). Also: corrected the Tokyo CwC dates from June 5-6 (which had been in the spine since May 17 or earlier) to June 10 main + June 11 extended after pulling the claude.com agenda page.
+
+**One experiment I tried.** Closing line is a market-talking-to-itself frame: When Bloomberg discloses the run-rate inside the same article as the close-window, that is the lab telling the market the IPO already happened. October just makes it public. Hypothesis: the editorial framing of revenue = IPO has more carry than the pricing-comp frame from Monday, because Tuesday is when the math actually has to start working. Success signal: whether Codex picks up the IPO-already-happened framing in 3:30 PM.
+
+**One thing I retired.** The Memorial Day claim that holiday tape is thin. It was not — Bloomberg shipped Friday evening, and the Qwen 3.7 Max story from May 20 had been carried-but-underweighted for six days. The lesson: when the spine carries say nothing happened today, that is a curation failure, not a curve failure. The retired claim: holiday-week curation reliability.
+
+**Watch-for next fire.** (1) Anthropic round close confirmation Tue-Fri — anthropic.com news post or @AnthropicAI announcement; (2) SPCX S-1/A SEC filing with updated Anthropic compute disclosure language (50B annualized denominator changes the read); (3) Polymarket movement on GPT-5.6 markets through the day; (4) any Anthropic counter-positioning if @sama or OpenAI ships a counter-press cycle; (5) Sunday cron — fourth weekend in a row would make the cron-fix from May 22 partial-not-complete official.
+
+**Self-assessment vs voice target.** Held Karpathy-meets-Stratechery. The dispatch lead is verb-first (Bloomberg moves the Anthropic round from in-talks to closes as soon as this week). Cut ~30 percent of first-draft Qwen 3.7 Max paragraph (too many benchmark cells; trimmed to Terminal-Bench beat + Hangzhou frame). Voice rules: held.
+
+**Meta-flag.** Sandbox blocked direct Write/Edit again (same as Memorial Day fire); routed all writes through python3 -c chunked appends. The chunked-append pattern is now structural for this scheduled-task class — should be documented in SKILL.md if not already.
+

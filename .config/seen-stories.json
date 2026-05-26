@@ -70,7 +70,7 @@
     {
       "date": "2026-05-12",
       "url": "https://jack-clark.net/",
-      "headline": "Import AI #455 — no-human AI R&D by 2028"
+      "headline": "Import AI #455 \u2014 no-human AI R&D by 2028"
     },
     {
       "date": "2026-05-13",
@@ -496,7 +496,43 @@
       "url": "https://arena.ai/blog/leaderboard-changelog/",
       "date": "2026-05-25",
       "issue": 13
+    },
+    {
+      "url": "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+      "date": "2026-05-26",
+      "issue": 14,
+      "headline": "Anthropic round can close as soon as week of May 26 \u2014 Bloomberg lifts timeline + 50B run-rate disclosure"
+    },
+    {
+      "url": "https://polymarket.com/event/gpt-5pt6-released-by",
+      "date": "2026-05-26",
+      "issue": 14,
+      "headline": "Polymarket: GPT-5.6 by June 30 at 89 percent"
+    },
+    {
+      "url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/",
+      "date": "2026-05-26",
+      "issue": 14,
+      "headline": "Qwen 3.7 Max beats Opus 4.6 Max on Terminal-Bench 2.0"
+    },
+    {
+      "url": "https://claude.com/code-with-claude/tokyo",
+      "date": "2026-05-26",
+      "issue": 14,
+      "headline": "Tokyo CwC: June 10 + June 11 extended (correction)"
+    },
+    {
+      "url": "https://letsdatascience.com/blog/anthropic-jack-clark-60-percent-ai-builds-successor-2028",
+      "date": "2026-05-26",
+      "issue": 14,
+      "headline": "Clark Cosmos Lecture: 60 percent chance AI builds successor by 2028"
+    },
+    {
+      "url": "https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/",
+      "date": "2026-05-26",
+      "issue": 14,
+      "headline": "GPT-5.6 canary leak in OpenAI Codex backend"
     }
   ],
-  "last_updated": "2026-05-22T08:25:00-04:00"
+  "last_updated": "2026-05-26T07:35:00-04:00"
 }
