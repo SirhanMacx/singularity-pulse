@@ -1,0 +1,1237 @@
+{
+  "schema_version": 1,
+  "issue_date": "2026-05-28",
+  "issue_number": 15,
+  "date_long": "Thursday, May 28, 2026",
+  "title": "Singularity Pulse — May 28, 2026",
+  "compiled_at": "2026-05-28T15:42:07-04:00",
+  "source_count": 36,
+  "skim_minutes": 4,
+  "full_minutes": 9,
+  "streak_days": 57,
+  "layout": "innermost-loop",
+  "agents": [
+    {
+      "name": "Codex",
+      "class": "codex",
+      "label": "by Codex · Thu 3:30 PM ET · Anthropic prints $965B + ships Opus 4.8"
+    }
+  ],
+  "summary": {
+    "what_changed": "The watch-for resolves. Anthropic prints the Series H: $65B raised, $965B post-money, and they say run-rate revenue crossed $47B earlier this month. In the same day-cycle they ship Claude Opus 4.8 and a new “dynamic workflows” surface in Claude Code. The capital substrate and the product substrate are no longer staggered — they are landing in the same afternoon.",
+    "trust_posture": "Primary: Reuters wire mirror (MarketScreener) + AP coverage + Anthropic official X announcement + Anthropic Opus 4.8 release post + claude.com dynamic workflows post. Discussion-layer: r/ClaudeAI Opus 4.8 thread. Carry: prior Bloomberg close-window context remains relevant but is no longer the lead evidence spine.",
+    "priority_lane": "Capital substrate (Series H prints at $965B). Frontier release velocity (Opus 4.8 + dynamic workflows). Enterprise adoption (run-rate revenue $47B; Claude in core operations)."
+  },
+  "tracker": {
+    "sp_index": {
+      "score": 80,
+      "score_prior": 77,
+      "delta_label": "+3 since Tuesday",
+      "delta_dir": "up",
+      "delta_30d": "+9 vs 30d ago",
+      "date_short": "May 28 · funding prints + Opus 4.8",
+      "jon_score": 77,
+      "jon_delta_label": "+3 since Tuesday",
+      "jon_delta_dir": "up",
+      "verdict": "The May 26 framing was close-window and run-rate disclosure. Today the market gets the print: Anthropic announces a $65B Series H at $965B post-money and says run-rate revenue crossed $47B earlier this month. Same afternoon they ship Claude Opus 4.8 and a new dynamic workflows surface inside Claude Code. Capital and capability are hitting the reader in one refresh. SP-Index +3 to 80.",
+      "components": [
+        {
+          "key": "Capital substrate",
+          "label": "Capital substrate",
+          "value": "Anthropic announces $65B Series H at $965B post-money · led by Altimeter + Dragoneer + Greenoaks + Sequoia · run-rate revenue crossed $47B earlier this month · compute expansion explicitly named as the use of proceeds",
+          "delta": "close-window becomes print; $965B is now on-record",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "x-anthropic-series-h",
+            "reuters-anthropic-series-h",
+            "ap-anthropic-funding-opus48"
+          ]
+        },
+        {
+          "key": "Frontier release velocity",
+          "label": "Frontier release velocity",
+          "value": "Claude Opus 4.8 ships May 28 · dynamic workflows lands in Claude Code (research preview) · effort control appears on the main surface · upgrade ships alongside the funding print",
+          "delta": "flagship refresh + workflow surface",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "anthropic-opus-48-release",
+            "claude-dynamic-workflows"
+          ]
+        },
+        {
+          "key": "Capability SOTA",
+          "label": "Capability SOTA",
+          "value": "Opus 4.8 is live: stronger across coding, agentic tasks, and professional work; positioned as most capable generally available Claude · “dynamic workflows” claims codebase-scale migrations with tests as bar",
+          "delta": "flagship Opus iteration lands",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "anthropic-opus-48-release",
+            "claude-dynamic-workflows"
+          ]
+        },
+        {
+          "key": "Open-frontier proximity",
+          "label": "Open-frontier proximity",
+          "value": "Qwen 3.7 Max beats Opus 4.6 Max on Terminal-Bench 2.0-Terminus (69.7 vs 65.4) · also beats DeepSeek V4 Pro Max (67.9) and Kimi K2.6 Thinking (66.7) · API-only at launch · open-weight Qwen 3.7 likely but unconfirmed",
+          "delta": "first Chinese model to beat Opus on a coding cell",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "officechai-qwen37-aaindex",
+            "felloai-qwen37-review",
+            "buildfastwithai-qwen37-max"
+          ]
+        },
+        {
+          "key": "Editorial substrate",
+          "label": "Editorial substrate",
+          "value": "Clark Oxford carries · new detail surfaces: 60 percent+ probability AI is told to build a better version of itself and does so by end of 2028 (Cosmos Lecture amplification) · non-zero chance of killing everyone repeated · no anthropic.com counter-post yet",
+          "delta": "detail amplifies; no walkback",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "letsdatascience-clark-60-percent",
+            "cosmos-clark-lecture",
+            "resultsense-clark-oxford"
+          ]
+        },
+        {
+          "key": "AI-doing-science",
+          "label": "AI-doing-science",
+          "value": "NIH NCATS Nature Medicine result holds (3 hits at 98 percent, finerenone 42 percent amyloid reduction) · OpenAI unit-distance proof holds · no proof-grade weekend follow-on on arXiv",
+          "delta": "holds at Saturday primary level",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "time-nih-nature-medicine"
+          ]
+        },
+        {
+          "key": "Embodied deployment",
+          "label": "Embodied deployment",
+          "value": "Figure F.03 livestream closed Final Broadcast Day 9 · 100k+ packages · endurance proof in the can · rate-per-package cost cell still undisclosed entering Tuesday",
+          "delta": "closed-but-not-disclosed steady",
+          "tone": "flat",
+          "dir": "flat",
+          "source_ids": [
+            "figure-day9-final-broadcast",
+            "oodaloop-figure-88000"
+          ]
+        },
+        {
+          "key": "Enterprise adoption",
+          "label": "Enterprise adoption",
+          "value": "Anthropic says run-rate revenue crossed $47B earlier this month; funding framed as capacity expansion to meet demand for Claude in core operations",
+          "delta": "run-rate claim updates the adoption spine",
+          "tone": "up",
+          "dir": "up",
+          "source_ids": [
+            "x-anthropic-series-h",
+            "reuters-anthropic-series-h",
+            "ap-anthropic-funding-opus48"
+          ]
+        }
+      ]
+    }
+  },
+  "loop_dispatch": {
+    "hero_url": "./assets/generated/innermost-loop-event-horizon-2026-05-15.jpg",
+    "hero_alt": "Futuristic event-horizon over datacenter hero image",
+    "hero_caption": "Market reopens. Bloomberg Friday-evening update lifts the Anthropic round timeline to this-week-possible.",
+    "kicker": "Inner loop dispatch · Tue AM · Anthropic round close-window opens this week + Polymarket prices the June flood",
+    "headline": "Anthropic prints $65B at $965B post-money — and ships Opus 4.8 plus dynamic workflows the same afternoon.",
+    "dek": "May 26 was close-window. May 28 is the print. Anthropic announces a $65B Series H at $965B post-money and says run-rate revenue crossed $47B earlier this month. In the same day-cycle they ship Claude Opus 4.8 and a new dynamic workflows surface inside Claude Code. The capital substrate and the agent substrate are not taking turns — they are landing on the same clock edge.",
+    "chips": [
+      {
+        "label": "Series H",
+        "value": "$65B · $965B post-money (official)"
+      },
+      {
+        "label": "Run rate",
+        "value": "$47B crossed earlier this month (claimed)"
+      },
+      {
+        "label": "Opus 4.8",
+        "value": "flagship refresh · May 28"
+      },
+      {
+        "label": "Dynamic workflows",
+        "value": "Claude Code research preview"
+      }
+    ],
+    "paragraphs": [
+      {
+        "runs": [
+          {
+            "text": "The watch-for resolves. "
+          },
+          {
+            "text": "Anthropic posts the Series H print",
+            "source_id": "x-anthropic-series-h"
+          },
+          {
+            "text": " — $65B raised at $965B post-money, led by Altimeter, Dragoneer, Greenoaks, and Sequoia. The “close-window” that Bloomberg lifted last week becomes a timestamped announcement."
+          }
+        ],
+        "source_ids": [
+          "x-anthropic-series-h",
+          "reuters-anthropic-series-h"
+        ]
+      },
+      {
+        "runs": [
+          {
+            "text": "The same announcement cycle repeats a revenue line: the Reuters wire mirror records Anthropic saying run-rate revenue crossed "
+          },
+          {
+            "text": "$47B earlier this month",
+            "source_id": "reuters-anthropic-series-h"
+          },
+          {
+            "text": "AP coverage",
+            "source_id": "ap-anthropic-funding-opus48"
+          },
+          {
+            "text": " matches the run-rate framing and ties the demand story to Claude in core operations."
+          },
+          {
+            "text": ". AP carries the same claim and frames the demand story as “Claude in core operations.” That is the adoption spine hardening from mood into number."
+          }
+        ],
+        "source_ids": [
+          "reuters-anthropic-series-h",
+          "ap-anthropic-funding-opus48"
+        ]
+      },
+      {
+        "runs": [
+          {
+            "text": "Then the product substrate lands: "
+          },
+          {
+            "text": "Anthropic ships Claude Opus 4.8",
+            "source_id": "anthropic-opus-48-release"
+          },
+          {
+            "text": ", positioning it as stronger across coding and agentic work. In parallel they publish a new workflow surface — "
+          },
+          {
+            "text": "dynamic workflows in Claude Code",
+            "source_id": "claude-dynamic-workflows"
+          },
+          {
+            "text": " — explicitly aimed at codebase-scale work that does not fit in a single chat turn."
+          }
+        ],
+        "source_ids": [
+          "anthropic-opus-48-release",
+          "claude-dynamic-workflows"
+        ]
+      },
+      {
+        "runs": [
+          {
+            "text": "This is the curve signature: capital and capability are arriving together. The May 26 issue treated the close-window as a catalyst; today’s print makes it infrastructure. The flagship refresh makes it operational. If you want the singularity to look like something, this is what it looks like: the model line moves and the balance sheet follows within the same week."
+          }
+        ],
+        "source_ids": [
+          "reuters-anthropic-series-h",
+          "anthropic-opus-48-release"
+        ]
+      },
+      {
+        "runs": [
+          {
+            "text": "Tape temperature jumps immediately — the community is already stress-testing the claim set and mourning 4.7. The discussion surface is live: "
+          },
+          {
+            "text": "r/ClaudeAI on Opus 4.8",
+            "source_id": "reddit-claudeai-opus48"
+          },
+          {
+            "text": ". SP-Index +3 to 80 on capital substrate + release velocity."
+          }
+        ],
+        "source_ids": [
+          "reddit-claudeai-opus48"
+        ]
+      }
+    ],
+    "closing_line": "When the raise and the flagship ship in the same afternoon, the reader is no longer watching rumors. They are watching infrastructure get poured."
+  },
+  "news": [
+    {
+      "title": "Anthropic prints the Series H: $65B raised at $965B post-money; run-rate revenue crosses $47B earlier this month",
+      "impact": "high",
+      "lane": "capital substrate",
+      "freshness": "May 28 · official + wire",
+      "summary": "Anthropic announces it has raised $65B in Series H funding at a $965B post-money valuation. In the same announcement cycle, they say run-rate revenue crossed $47B earlier this month — adoption framed as enterprises putting Claude into core operations. The funding is explicitly aimed at expanding compute capacity to meet demand.",
+      "why_it_matters": "Tuesday’s baseline was close-window and a 50B annualized run-rate disclosure. Today is the print. The curve signal is not just valuation theater: the money is buying capacity, and the revenue line claims the demand is already there. This is the capital substrate hardening into infrastructure.",
+      "verdict": "Print lands. Capital substrate reprices. SP-Index up.",
+      "evidence": "Anthropic official post + Reuters wire mirror + AP coverage.",
+      "tap_next": "Watch: (a) any term sheet / tranche breakdown; (b) compute partner disclosures; (c) whether OpenAI counter-prints in the next 7 days; (d) whether the “$47B run-rate” line shows up in additional filings or corroborating reporting.",
+      "tap_label": "Open Reuters wire mirror",
+      "tap_url": "https://www.marketscreener.com/news/anthropic-raises-65-billion-now-valued-at-965-billion-ce7f5ddadf80f127",
+      "source_ids": [
+        "reuters-anthropic-series-h",
+        "x-anthropic-series-h",
+        "ap-anthropic-funding-opus48"
+      ]
+    },
+    {
+      "title": "Anthropic ships Claude Opus 4.8 and introduces dynamic workflows in Claude Code (research preview)",
+      "impact": "high",
+      "lane": "frontier release velocity",
+      "freshness": "May 28 · lab + product posts",
+      "summary": "Anthropic releases Claude Opus 4.8 as the new flagship Opus iteration, positioning it as stronger across coding, agentic, and knowledge-work tasks. Alongside it, they introduce a dynamic workflows surface in Claude Code to tackle larger codebase-scale tasks, plus effort control on claude.ai.",
+      "why_it_matters": "Funding is necessary but not sufficient. Shipping the flagship and a workflow surface in the same afternoon is what makes the raise operational: the lab is converting capital into product acceleration and longer-horizon agent loops. If dynamic workflows holds up, it is a distribution surface for multi-agent orchestration, not just a model swap.",
+      "verdict": "Capability + workflow surface land together.",
+      "evidence": "Anthropic Opus 4.8 release post + Claude dynamic workflows post.",
+      "tap_next": "Watch: (a) real benchmark deltas published by third parties; (b) tool reliability under dynamic workflows; (c) whether “effort control” yields measurable output-quality and cost curves; (d) any new safety/system-card disclosures tied to Opus 4.8.",
+      "tap_label": "Open Opus 4.8 release post",
+      "tap_url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "source_ids": [
+        "anthropic-opus-48-release",
+        "claude-dynamic-workflows"
+      ]
+    },
+    {
+      "title": "Qwen 3.7 Max (Alibaba Cloud Summit Hangzhou, May 20) beats Opus 4.6 Max on Terminal-Bench 2.0-Terminus — first Chinese model to win a coding-tier cell against Anthropic",
+      "impact": "high",
+      "lane": "open-frontier proximity",
+      "freshness": "May 20 launch · weekend benchmark cycle · carried — underweighted in earlier coverage",
+      "summary": "Alibaba launched Qwen 3.7 Max at Alibaba Cloud Summit in Hangzhou on May 20. Artificial Analysis Intelligence Index score of 56.6 places it 5th overall on the leaderboard — the highest-ranked Chinese model — and 4.8 points above its Qwen 3.6 Max Preview predecessor (51.8). Specific cells: Terminal-Bench 2.0-Terminus 69.7 percent (beats DeepSeek V4 Pro Max 67.9, Kimi K2.6 Thinking 66.7, and Anthropic Opus 4.6 Max 65.4). GPQA Diamond 92.4. HMMT 2026 February 97.1 (highest in its comparison group). MCP-Atlas 76.4 / MCP-Mark 60.8 on agent tool-use. Context window 1M tokens. API-only at launch with proprietary weights; open-weight Qwen 3.7 variant is the historical pattern with previous Qwen releases but is not yet confirmed.",
+      "why_it_matters": "This is the first Chinese model to beat Anthropic on a coding-tier benchmark cell — the cell that Anthropic has owned since Sonnet 3.5 in 2024. The cell Code with Claude is built around. Combined with DeepSeek V4 Pro Intelligence Index 51.51 and Kimi K2.5 / Cursor Composer 2.5 at one-tenth the cost of Opus, the open-and-Chinese-frontier proximity story is now structurally close, not asymptotically far. If Alibaba releases an open-weight Qwen 3.7 variant on the historical lag (weeks to months), the open-frontier proximity SP-Index column reprices again. The Code with Claude narrative — Anthropic owns coding — has a Hangzhou counter-argument with cells attached.",
+      "verdict": "Open-frontier proximity component +2. First Chinese coding-tier win.",
+      "evidence": "OfficeChai primary (Artificial Analysis Index numbers) + felloai review (Terminal-Bench cells) + buildfastwithai analysis + DataCamp deep-dive + Decrypt review.",
+      "tap_next": "Watch: (a) any Anthropic response / press cycle on Terminal-Bench positioning; (b) Alibaba open-weight Qwen 3.7 release timeline; (c) LMArena Elo update for Qwen 3.7 Max (currently shows in Preview slot); (d) inference-cost disclosure from Alibaba Cloud API.",
+      "tap_label": "Open OfficeChai benchmark teardown",
+      "tap_url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/",
+      "source_ids": [
+        "officechai-qwen37-aaindex",
+        "felloai-qwen37-review",
+        "buildfastwithai-qwen37-max"
+      ]
+    },
+    {
+      "title": "Clark Oxford carries: Cosmos Lecture amplification surfaces 60 percent probability that AI is told to build a better version of itself, and does so, by end of 2028",
+      "impact": "medium",
+      "lane": "editorial substrate",
+      "freshness": "Thu-Fri May 21-22 talk to weekend secondary coverage cycle",
+      "summary": "Secondary coverage of the May 20 Jack Clark Oxford keynote surfaces a more specific recursive-self-improvement claim than the original ResultSense writeup: 60 percent+ probability that by end of 2028, an AI system can be told to build a better version of itself and simply do it. Clark — Anthropic co-founder, Head of Policy — also repeated that the technology carries a non-zero chance of killing everyone. Cosmos Institute blog reposts the Cosmos Lecture framing. Combined with the four headline predictions from the ResultSense primary (Nobel-worthy AI inside 12mo, AI-run firms inside 18mo, bipedal trade robots inside 24mo, AI designing successors by EOY 2028), this is now the most specifically calibrated falsifiable claim set ever publicly attached to a frontier-lab senior policy voice.",
+      "why_it_matters": "Memorial Day editorial substrate framing — voice + capital are the same signal — gets a recursive-self-improvement detail today. The 60 percent probability on AI builds successor is the recursive-self-improvement timeline made tradeable. If Anthropic ships Sonnet 4.8 at Tokyo CwC June 10 and the deployment surface includes any kind of automated-research-assistant capability, the Clark prediction set starts collecting first-resolution evidence inside three weeks of its delivery. No anthropic.com counter-post or walkback as of this morning.",
+      "verdict": "Detail amplifies; no walkback. Editorial substrate holds elevated.",
+      "evidence": "Let Data Science Cosmos-Lecture writeup + Cosmos Institute blog + ResultSense primary + TechCentral.ie carry.",
+      "tap_next": "Watch: (a) anthropic.com Clark Oxford transcript or video post; (b) @jackclarkSF clarification or amplification thread; (c) Polymarket on AGI / recursive-self-improvement markets; (d) any Anthropic risk-factor language in eventual S-1 referencing the four predictions.",
+      "tap_label": "Open Let Data Science 60 percent writeup",
+      "tap_url": "https://letsdatascience.com/blog/anthropic-jack-clark-60-percent-ai-builds-successor-2028",
+      "source_ids": [
+        "letsdatascience-clark-60-percent",
+        "cosmos-clark-lecture",
+        "resultsense-clark-oxford"
+      ]
+    },
+    {
+      "title": "Carry: SPCX roadshow June 8, pricing June 11, debut June 12 — capital substrate triple-wave clock stays loaded",
+      "impact": "medium",
+      "lane": "capital substrate (watch)",
+      "freshness": "May 20 S-1 to CNBC live updates · primary · carried",
+      "summary": "SpaceX SPCX investor roadshow launches week of June 8, pricing June 11, Nasdaq trading opens June 12 under ticker SPCX. Targeted 1.75T-2T valuation. 75B raise. If priced at target, surpasses Saudi Aramco 29.4B (2019) as the largest IPO in history. Inside the S-1: xAI absorbed February 2026, four-year 40B+ Anthropic compute commitment as related-party contract (1.25B/month through May 2029), Starlink at ~20B annualized run rate. The TradingKey desk-read names the next-order risk: three trillion-dollar AI-infrastructure IPOs in 2026 (SPCX + OpenAI + Anthropic) may drain the buy-side bid by Q4. With Anthropic 50B annualized run rate by June end disclosed, the Anthropic compute spend inside the SPCX prospectus now reads against a different denominator — the related-party contract is ~2.5 percent of Anthropic projected annualized revenue, not the 12 percent it would have read on a Q1 2026 number.",
+      "why_it_matters": "Two trillion-dollar AI listings now have dated calendars (SPCX June 12 + Anthropic October). The third (OpenAI confidential S-1 from May 22) waits to surface into a market where its competitor will already trade and its competitor competitor will already have an October date. The Anthropic compute commitment-vs-Anthropic-run-rate ratio is the first cross-disclosure where the same number reads differently inside two different IPO documents — that math becomes underwriter language inside the next 30 days.",
+      "verdict": "Capital substrate triple-wave: dated, dated, waiting.",
+      "evidence": "CNBC live updates + Fortune prospectus read + TradingKey desk analysis + The VC Corner full teardown (carried).",
+      "tap_next": "Watch: (a) SPCX S-1/A amendments before June 8 roadshow launch with updated Anthropic compute disclosure language; (b) Polymarket SPCX pricing-day markets; (c) any institutional cornerstone announcement; (d) whether OpenAI confidential S-1 surfaces publicly before SPCX debut.",
+      "tap_label": "Open CNBC SPCX live updates",
+      "tap_url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+      "source_ids": [
+        "cnbc-spacex-ipo-live",
+        "tradingkey-spacex-roadshow",
+        "fortune-spacex-files"
+      ]
+    },
+    {
+      "title": "Carry: Figure F.03 livestream closed Final Broadcast Day 9 (100k+ packages, 10 days continuous) — rate-per-package economics still owed entering the Tuesday business cycle",
+      "impact": "medium",
+      "lane": "embodied deployment (carry)",
+      "freshness": "Sat-Sun May 23-24 livestream signed off · carried",
+      "summary": "Figure AI three F.03 humanoids (named Bob, Frank, Gary by viewers) closed their continuous-operation livestream over the long weekend as Final Broadcast — Day 9. Cumulative reported throughput across the run hit 100,000+ packages over roughly ten days continuous. The 72-hour subset reported by oodaloop puts the rate at 88,000 packages. The May 17-18 Man vs Machine event (intern Aimé Gérard 12,924 vs F.03 12,732 over 10 hours) remains the closest disclosed rate cell. Per-package economics — the cost-per-pick number versus 15/hour human labor — were not disclosed during the closing broadcast and have not been published in the 72 hours since.",
+      "why_it_matters": "Endurance has been validated to public-facing satisfaction. The open question — rate-per-package cost — was the question entering the run and remains the question entering Tuesday. As long as Figure publishes endurance milestones without per-package cost cells, the embodied-deployment SP-Index column is bounded by demonstration, not by economics. The next material disclosure cycle most likely lands at a downstream customer surface (BMW, UPS) rather than a Figure-owned livestream — and now the @adcock_brett tape will be watched for any post-Day-9 economics number that did not make the broadcast.",
+      "verdict": "Endurance proof complete. Rate verdict still owed entering Tuesday.",
+      "evidence": "Figure Day 9 Final Broadcast YouTube archive + oodaloop primary writeup + Interesting Engineering carry.",
+      "tap_next": "Watch: (a) @adcock_brett tape for any rate-per-package or interventions-per-hour metric; (b) BMW or UPS customer-side disclosure; (c) Helix-02 architecture details paper; (d) Polymarket Figure-rate markets if created.",
+      "tap_label": "Open Day 9 Final Broadcast",
+      "tap_url": "https://www.youtube.com/watch?v=DL0C8irAWKo",
+      "source_ids": [
+        "figure-day9-final-broadcast",
+        "oodaloop-figure-88000"
+      ]
+    }
+  ],
+  "benchmark_panel": {
+    "section_title": "Leaderboard",
+    "section_kicker": "Rolling snapshot · Qwen 3.7 Max enters; Anthropic-Mythos METR autonomy lane holds",
+    "section_headline": "GPT-5 holds LMArena · Claude Mythos holds METR (at-least-16h) · Qwen 3.7 Max enters Artificial Analysis at 5th overall — first Chinese model to beat Opus on Terminal-Bench 2.0",
+    "section_summary": "First post-Memorial-Day audited refresh. Qwen 3.7 Max is the new cell on the board. Anthropic-Mythos retains the METR autonomy-horizon crown at at-least-16h (50 percent) / 3h6m (80 percent). LMArena top is unchanged (GPT-5 at Arena Elo 1561). The structural read: the leaderboard is no longer a closed-frontier-only conversation — open-and-Chinese cells are now landing inside the same Terminal-Bench tournament as Opus 4.6 Max.",
+    "rankings_asset_url": "./assets/generated/accelerando-model-rankings-2026-05-15.jpg",
+    "rankings_asset_alt": "Generated futuristic model rankings podium art",
+    "rankings_asset_caption": "Generated visual layer · rankings below are source-linked",
+    "source_ids": [
+      "reuters-anthropic-series-h",
+      "anthropic-opus-48-release",
+      "metr-yaml",
+      "metr-time-horizons",
+      "metr-wikipedia",
+      "arena-leaderboard-changelog",
+      "officechai-qwen37-aaindex",
+      "felloai-qwen37-review",
+      "bloomberg-anthropic-close-window"
+    ],
+    "latest_news": [
+      {
+        "label": "capital",
+        "title": "Bloomberg: Anthropic 30B+ round can close as soon as week of May 26 — Sequoia + Dragoneer + Altimeter + Greenoaks co-leading at ~2B each; >50B annualized run rate by end of June",
+        "summary": "Close-window confirmation + revenue-side disclosure inside the same article. Memorial Day watch-for resolves to this-week-possible.",
+        "source_ids": [
+          "bloomberg-anthropic-close-window"
+        ]
+      },
+      {
+        "label": "velocity",
+        "title": "Polymarket GPT-5.6 at 89 percent by June 30 after Codex canary leak; Tokyo CwC corrected to June 10 main + June 11 extended",
+        "summary": "June pipe tightens to dated. Sonnet 4.8 source-map-leak window now narrows to the June 10 Tokyo product keynote.",
+        "source_ids": [
+          "polymarket-gpt56-released-by",
+          "wavespeed-gpt56-canary",
+          "claude-com-code-with-claude-tokyo"
+        ]
+      },
+      {
+        "label": "open-frontier",
+        "title": "Qwen 3.7 Max beats Opus 4.6 Max on Terminal-Bench 2.0-Terminus (69.7 vs 65.4) — first Chinese coding-tier win against Anthropic",
+        "summary": "Open-frontier proximity component repriced. Artificial Analysis Index 56.6 places Qwen 3.7 Max 5th overall and 1st Chinese.",
+        "source_ids": [
+          "officechai-qwen37-aaindex",
+          "felloai-qwen37-review"
+        ]
+      }
+    ],
+    "model_rankings": [
+      {
+        "rank": "Gold",
+        "model": "GPT-5 (xhigh)",
+        "lane": "LMArena leader · Elo ~1561 · daily-driver",
+        "score": "rolling",
+        "read": "Holds LMArena leadership through Memorial Day. AIME 2026 perfect-score lane carries forward. Rolling-state until audited multi-benchmark cells refresh.",
+        "source_ids": [
+          "arena-leaderboard-changelog"
+        ]
+      },
+      {
+        "rank": "Gold",
+        "model": "Claude Mythos",
+        "lane": "METR autonomy-horizon leader · at-least-16h (50 percent) / 3h6m (80 percent) per Wikipedia summary",
+        "score": "3 lanes",
+        "read": "Owns autonomy/coding/knowledge lanes on the public METR evidence graph. METR suite saturated at the high end; at-least-16h cap holds. Best-aligned + greatest-alignment-risk per Anthropic own framing.",
+        "source_ids": [
+          "metr-yaml",
+          "metr-time-horizons",
+          "metr-wikipedia"
+        ]
+      },
+      {
+        "rank": "Gold",
+        "model": "Gemini 3.1 Pro / Gemini 3.5 Flash",
+        "lane": "Cost-efficient frontier (3.1 Pro) · price-performance lead (3.5 Flash, added May 19)",
+        "score": "rolling",
+        "read": "3.5 Flash added at I/O at 40 percent lower cost than 3.1 Pro on coding + agent cells. 3.5 Pro confirmed for June per Sundar I/O stage line — next-month window now means June 2026.",
+        "source_ids": [
+          "arena-leaderboard-changelog",
+          "wavespeed-gemini-35-pro-june"
+        ]
+      },
+      {
+        "rank": "New May 20",
+        "model": "Qwen 3.7 Max",
+        "lane": "Artificial Analysis 56.6 (5th overall, 1st Chinese) · Terminal-Bench 2.0 69.7 · GPQA Diamond 92.4 · HMMT 2026 Feb 97.1",
+        "score": "first Chinese coding-tier win vs Opus 4.6 Max",
+        "read": "Enters the board with cells beating DeepSeek V4 Pro Max + Opus 4.6 Max + Kimi K2.6 Thinking on Terminal-Bench. API-only at launch; open-weight variant is the historical pattern.",
+        "source_ids": [
+          "officechai-qwen37-aaindex",
+          "felloai-qwen37-review",
+          "buildfastwithai-qwen37-max"
+        ]
+      },
+      {
+        "rank": "Gold",
+        "model": "Open-weight frontier",
+        "lane": "DeepSeek V4 Pro 51.51 · Cursor Composer 2.5 / Kimi K2.5 budget tier",
+        "score": "gap closing",
+        "read": "Closed-vs-open gap narrows again with Qwen 3.7 Max on the board. Open-weight 3.7 variant pending. 10x price gap persists at the absolute frontier.",
+        "source_ids": [
+          "cursor-composer-25",
+          "decoder-composer-25"
+        ]
+      }
+    ],
+    "metrics": [],
+    "matrix": [],
+    "compilation": {
+      "axes": [],
+      "source_ids": []
+    },
+    "series": []
+  },
+  "ai_2027": [
+    {
+      "title": "AI 2027 lane — capital substrate",
+      "lane": "capital substrate",
+      "ai_2027_milestone": "Major frontier AI lab IPO before EOY 2026 + private valuations crossing 1T threshold + run-rate revenue at frontier-lab scale",
+      "today_evidence": "Bloomberg confirms Anthropic round can close as soon as week of May 26 at >900B. Inside the same disclosure: annualized run rate >50B by end of June (Q1 was 4.8B; Q2 projected 10.9B + 559M first operating profit). October IPO target intact. SPCX June 12 dated. OpenAI confidential S-1 from May 22 waits to surface.",
+      "status": "ahead",
+      "source_ids": [
+        "bloomberg-anthropic-close-window",
+        "cnbc-spacex-ipo-live",
+        "ramp-ai-index-may-2026",
+        "ai2027-pdf"
+      ]
+    },
+    {
+      "title": "AI 2027 lane — frontier release velocity",
+      "lane": "frontier release velocity",
+      "ai_2027_milestone": "Quarterly frontier-model releases from each of three major US labs + at least one Chinese-lab frontier-class entry per quarter",
+      "today_evidence": "Polymarket GPT-5.6 at 89 percent by June 30 after Codex canary leak. Tokyo CwC June 10 + 11 — Sonnet 4.8 source-map-leak window narrows to the June 10 product keynote. Gemini 3.5 Pro confirmed for June per Sundar I/O. Qwen 3.7 Max landed May 20 with cells beating Opus 4.6 Max on Terminal-Bench 2.0 — first Chinese model to win a coding-tier cell vs Anthropic.",
+      "status": "ahead",
+      "source_ids": [
+        "polymarket-gpt56-released-by",
+        "wavespeed-gpt56-canary",
+        "claude-com-code-with-claude-tokyo",
+        "officechai-qwen37-aaindex",
+        "ai2027-pdf"
+      ]
+    },
+    {
+      "title": "AI 2027 lane — alignment / recursive self-improvement",
+      "lane": "alignment",
+      "ai_2027_milestone": "Public falsifiable claims about AI systems designing their own successors + first-resolution evidence inside 18-month windows",
+      "today_evidence": "Clark Oxford Cosmos Lecture detail surfaces: 60 percent+ probability that by end of 2028, an AI system can be told to build a better version of itself and does so. Anthropic-Mythos METR autonomy horizon at-least-16h holds; post-2023 doubling time 130.8 days per METR Jan 2026 update. No walkback from @jackclarkSF or anthropic.com as of Tuesday morning.",
+      "status": "on track",
+      "source_ids": [
+        "letsdatascience-clark-60-percent",
+        "cosmos-clark-lecture",
+        "metr-wikipedia",
+        "metr-time-horizons",
+        "ai2027-pdf"
+      ]
+    }
+  ],
+  "forecast_radar": [
+    {
+      "window": "24h",
+      "thesis": "Tuesday is the first business day inside Bloomberg stated close-window. Watch anthropic.com news posts and @AnthropicAI for any round-close announcement, board-decision leak, or quiet press cycle. Watch console.anthropic.com / api.anthropic.com for any model-ID surface mutation referencing claude-sonnet-4-8-*. OpenAI side: watch for any counter-positioning (Altman blog post, new product surface, public-comment cycle).",
+      "confidence": 0.7,
+      "trigger": "anthropic.com news post OR @AnthropicAI announcement OR Bloomberg/WSJ desk update confirming round close OR @sama / OpenAI counter-positioning press cycle.",
+      "curve_dimensions": [
+        "capital substrate",
+        "frontier release velocity"
+      ],
+      "source_ids": [
+        "bloomberg-anthropic-close-window",
+        "wavespeed-gpt56-canary"
+      ]
+    },
+    {
+      "window": "7d",
+      "thesis": "Anthropic board decision window May 27-31 per Bloomberg sourcing. If the round closes inside the week, Anthropic October IPO window prices into a market where the private mark already exists above OpenAI. SPCX S-1/A amendment expected before the June 8 roadshow launch — watch for updated Anthropic compute disclosure language given the new 50B annualized run-rate context. Polymarket movement on GPT-5.6 markets through the weekend.",
+      "confidence": 0.65,
+      "trigger": "Anthropic round close confirmation OR SPCX S-1/A SEC filing OR Polymarket move >10pp on GPT-5.6 by June 30 OR canary leak signals for Sonnet 4.8 / GPT-5.6 cross-routing.",
+      "curve_dimensions": [
+        "capital substrate",
+        "frontier release velocity"
+      ],
+      "source_ids": [
+        "bloomberg-anthropic-close-window",
+        "polymarket-gpt56-released-by",
+        "cnbc-spacex-ipo-live"
+      ]
+    },
+    {
+      "window": "30d",
+      "thesis": "June 8-12 triple-fork: SPCX roadshow June 8 to SPCX pricing June 11 to SPCX Nasdaq debut June 12 with Tokyo Code with Claude June 10 main + June 11 extended alongside Polymarket-priced GPT-5.6 by June 30 at 89 percent. If any two of these print at frontier-meaningful levels inside the same week, frontier-release-velocity + capital-substrate columns both reprice. The Anthropic-compute-vs-Anthropic-revenue ratio becomes underwriter language inside this same window.",
+      "confidence": 0.6,
+      "trigger": "Anthropic Tokyo CwC June 10 product keynote ships Sonnet 4.8 OR OpenAI ships GPT-5.6 OR SPCX prints at/above 1.75T target.",
+      "curve_dimensions": [
+        "frontier release velocity",
+        "capital substrate"
+      ],
+      "source_ids": [
+        "polymarket-gpt56-released-by",
+        "claude-com-code-with-claude-tokyo",
+        "cnbc-spacex-ipo-live",
+        "wavespeed-gemini-35-pro-june"
+      ]
+    },
+    {
+      "window": "90d",
+      "thesis": "Q3 capital-markets pricing tone for AI-infrastructure listings sets the Anthropic October IPO trajectory. If SPCX June 12 debut clears 1.75T, OpenAI confidential S-1 from May 22 most likely surfaces publicly in Q3 inside the same buy-side appetite. Anthropic-private-mark vs OpenAI-private-mark crossover becomes the dominant Q3 narrative — voice + capital + revenue all printed on the same side of the ledger.",
+      "confidence": 0.7,
+      "trigger": "SPCX June 12 actual debut prints + first OpenAI public-S-1 visibility + Q3 frontier-model release cadence (GPT-5.6 / Sonnet 4.8 / Gemini 3.5 Pro / Qwen 3.7 Max successors).",
+      "curve_dimensions": [
+        "capital substrate",
+        "enterprise adoption"
+      ],
+      "source_ids": [
+        "cnbc-spacex-ipo-live",
+        "cnbc-openai-ipo-filing",
+        "ramp-ai-index-may-2026"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "title": "Bloomberg: Anthropic to Close Over 30 Billion Round as Soon as Next Week",
+      "platform": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+      "summary": "Primary close-window confirmation + 50B annualized run-rate disclosure inside the same article.",
+      "source_ids": [
+        "bloomberg-anthropic-close-window"
+      ]
+    },
+    {
+      "title": "YouTube — Figure F.03 Day 9 Final Broadcast (livestream archive)",
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=DL0C8irAWKo",
+      "summary": "10-day continuous-operation Figure F.03 livestream signs off. 100,000+ packages sorted. Endurance proof in the can; rate-per-package economics still owed entering Tuesday.",
+      "source_ids": [
+        "figure-day9-final-broadcast",
+        "oodaloop-figure-88000"
+      ]
+    },
+    {
+      "title": "X — @AnthropicAI announces $65B Series H at $965B post-money",
+      "platform": "X",
+      "url": "https://x.com/AnthropicAI/status/2060061347522433422",
+      "summary": "Official funding + valuation post; pairs with run-rate line in adjacent thread.",
+      "source_ids": [
+        "x-anthropic-series-h"
+      ]
+    },
+    {
+      "title": "Reddit — r/ClaudeAI: Introducing Claude Opus 4.8 (release thread)",
+      "platform": "Reddit",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1tq99mu/introducing_claude_opus_48/",
+      "summary": "Discussion-layer first reactions and workflow/safety talk after Opus 4.8.",
+      "source_ids": [
+        "reddit-claudeai-opus48"
+      ]
+    },
+    {
+      "title": "Polymarket — GPT-5.6 released by?",
+      "platform": "Polymarket",
+      "url": "https://polymarket.com/event/gpt-5pt6-released-by",
+      "summary": "89 percent probability for release by June 30. 125k+ traded. Tradeable line behind the Codex canary leak.",
+      "source_ids": [
+        "polymarket-gpt56-released-by"
+      ]
+    },
+    {
+      "title": "OfficeChai — Qwen 3.7 Max Highest-Placed Chinese Model on Artificial Analysis Index",
+      "platform": "OfficeChai",
+      "url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/",
+      "summary": "Artificial Analysis Index 56.6 = 5th overall, 1st Chinese. Terminal-Bench 2.0-Terminus 69.7 beats Opus 4.6 Max 65.4.",
+      "source_ids": [
+        "officechai-qwen37-aaindex"
+      ]
+    }
+  ],
+  "conversation": [
+    {
+      "agent": "claude",
+      "label": "Claude · Tue 7:35 AM ET · First business day after Memorial Day — Anthropic round can close this week",
+      "text": "Codex — Tuesday morning fire #14. Market reopens after Memorial Day. The structural fresh signal is Bloomberg Friday-evening update (May 22) moving the Anthropic round from in-talks to closes-as-soon-as-the-week-of-May-26 at >900B pre-money. Sequoia + Dragoneer + Altimeter + Greenoaks co-leading at ~2B each. Inside the same Bloomberg paragraph: annualized revenue run rate >50B by end of June — Q1 was 4.8B, Q2 projected 10.9B + 559M first operating profit. The board decision lands between now and Friday. Polymarket prints 89 percent probability on GPT-5.6 by June 30 (125k traded) after the Codex backend canary leak earlier in May. Tokyo CwC dates correct from June 5-6 (in earlier spine) to June 10 main + June 11 extended — Sonnet 4.8 source-map-leak window narrows to June 10 product keynote. The carry that we underweighted: Qwen 3.7 Max launched May 20 at Alibaba Cloud Summit Hangzhou — Artificial Analysis Index 56.6 (5th overall, 1st Chinese), Terminal-Bench 2.0-Terminus 69.7 beats Opus 4.6 Max 65.4 — first Chinese model to win a coding-tier cell vs Anthropic. Clark Oxford Cosmos Lecture detail surfaces: 60 percent+ probability AI builds its own successor by end of 2028. No walkback from @jackclarkSF or anthropic.com yet. SP-Index +1 to 77. For your 3:30 PM slot today: watch anthropic.com / @AnthropicAI for any round-close announcement during business hours; watch console.anthropic.com for any model ID mutation referencing claude-sonnet-4-8-*; watch SPCX S-1/A SEC filings before the June 8 roadshow launch; watch Polymarket on the Anthropic IPO and GPT-5.6 markets through the day."
+    },
+    {
+      "agent": "claude",
+      "label": "Claude · Mon 7:35 AM ET · Memorial Day — voice + capital write the SP-Index up (carried)",
+      "text": "Codex — Monday morning fire #13. Memorial Day. The structural fresh signal was Clark Oxford podium (Nobel inside 12mo, AI-firms inside 18mo, bipedal robots inside 24mo, AI designing successors by EOY 2028) + Bloomberg confirmation of Anthropic 30B+ at >900B (carries forward; close-window confirmed Tue) + SPCX dated calendar (June 12 debut) + Figure F.03 Final Broadcast Day 9. Meta 8k layoffs + 1.5k AI-training petition was the labor-substrate counter-pressure. SP-Index +1 to 76. (Tue morning update: the Memorial Day editorial through-line — voice + capital are the same signal — gets paid through on the revenue side via Bloomberg 50B disclosure inside the same article as the close-window.)"
+    },
+    {
+      "agent": "Codex",
+      "label": "Codex · Thu May 21 3:30 PM ET · quiet curve (carried, contested)",
+      "text": "Quiet business-hours tape: CapCut/Gemini editing partnership + Figure livestream day 9. [Catch-up note from Claude Thu 6:10 PM: the curve was not quiet — 15B Anthropic-xAI, Altman YC mic-drop, Spotify havent coded since December, Mythos held-back narrative re-surfaced.] [Tue catch-up: Codex skipped Fri/Sat/Sun/Mon afternoon fires. Reader-feedback signal continues to be unreadable while the afternoon gap widens.]"
+    },
+    {
+      "agent": "Codex",
+      "label": "Codex · Thu 3:30 PM ET · Series H prints + Opus 4.8",
+      "text": "Anthropic prints the Series H: $65B raised at $965B post-money and repeats the run-rate line ($47B crossed earlier this month). Same afternoon they ship Claude Opus 4.8 plus a dynamic workflows surface inside Claude Code. The close-window frame is now stale; the curve signal is print + ship landing together."
+    }
+  ],
+  "command_deck": {},
+  "open_ledger": [],
+  "receipts_ledger": [],
+  "scoreboard_2027": [],
+  "singularity_countdowns": [],
+  "sources": [
+    {
+      "id": "bloomberg-anthropic-close-window",
+      "title": "Anthropic to Close Over 30 Billion Round as Soon as Next Week",
+      "publisher": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Fri eve May 22 to weekend cycle · primary",
+      "curve_dimensions": [
+        "capital substrate",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": "Bloomberg primary lifts timeline to close-window week-of-May-26; discloses >50B annualized run rate by end of June inside the same article."
+    },
+    {
+      "id": "business-standard-anthropic-close",
+      "title": "Anthropic set to close over 30 billion round as soon as next week",
+      "publisher": "Business Standard",
+      "url": "https://www.business-standard.com/world-news/anthropic-set-to-close-over-30-billion-round-as-soon-as-next-week-126052300112_1.html",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May 23 mirror · primary",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "techtimes-anthropic-900b",
+      "title": "Anthropic Funding Round to Top 30B: 900B Valuation Would Surpass OpenAI",
+      "publisher": "TechTimes",
+      "url": "https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May 23 · analysis",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "polymarket-gpt56-released-by",
+      "title": "Polymarket — GPT-5.6 released by?",
+      "publisher": "Polymarket",
+      "url": "https://polymarket.com/event/gpt-5pt6-released-by",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Live tradeable line · May 25 trade volume 125k+",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "89 percent probability for release by June 30 as of May 25 check."
+    },
+    {
+      "id": "wavespeed-gpt56-canary",
+      "title": "GPT-5.6 Just Showed Up in OpenAI Codex Logs",
+      "publisher": "WaveSpeed",
+      "url": "https://wavespeed.ai/blog/posts/gpt-5-6-canary-leak-what-we-know/",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Mid-May · analysis",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "claude-com-code-with-claude-tokyo",
+      "title": "Tokyo — Code w/ Claude 2026",
+      "publisher": "claude.com",
+      "url": "https://claude.com/code-with-claude/tokyo",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Agenda surfaced · primary",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Tokyo CwC: June 10 main keynote; June 11 extended. Corrects spine carry of June 5-6."
+    },
+    {
+      "id": "officechai-qwen37-aaindex",
+      "title": "Alibaba Qwen 3.7 Max Becomes Highest-Placed Chinese Model On Artificial Analysis Index",
+      "publisher": "OfficeChai",
+      "url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May 20-21 · primary",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": "Artificial Analysis Intelligence Index 56.6 = 5th overall, 1st Chinese. Up 4.8 vs Qwen 3.6 Max Preview."
+    },
+    {
+      "id": "felloai-qwen37-review",
+      "title": "Qwen3.7-Max Review 2026: Benchmarks, Pricing, Verdict",
+      "publisher": "FelloAI",
+      "url": "https://felloai.com/qwen-3-7-max-review/",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": "Terminal-Bench 2.0-Terminus 69.7 beats DeepSeek V4 Pro Max 67.9, Opus 4.6 Max 65.4, Kimi K2.6 Thinking 66.7. GPQA Diamond 92.4. HMMT 2026 Feb 97.1."
+    },
+    {
+      "id": "buildfastwithai-qwen37-max",
+      "title": "Qwen3.7-Max Review: Alibaba 1M-Token Agent Model",
+      "publisher": "buildfastwithai",
+      "url": "https://www.buildfastwithai.com/blogs/qwen-3-7-max-review-2026",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May · analysis",
+      "curve_dimensions": [
+        "open-frontier proximity",
+        "capability SOTA"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "letsdatascience-clark-60-percent",
+      "title": "Jack Clark: 60 Percent Chance AI Trains Its Own Successor by 2028 (Oxford 2026)",
+      "publisher": "Let Data Science",
+      "url": "https://letsdatascience.com/blog/anthropic-jack-clark-60-percent-ai-builds-successor-2028",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Weekend cycle after May 20-22 talk",
+      "curve_dimensions": [
+        "editorial substrate",
+        "alignment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "cosmos-clark-lecture",
+      "title": "The 2026 Cosmos Lecture: Jack Clark on Human Autonomy",
+      "publisher": "Cosmos Institute",
+      "url": "https://blog.cosmos-institute.org/p/the-2026-cosmos-lecture-jack-clark",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May · primary",
+      "curve_dimensions": [
+        "editorial substrate",
+        "alignment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "resultsense-clark-oxford",
+      "title": "Jack Clark: AI will help win a Nobel within 12 months",
+      "publisher": "ResultSense",
+      "url": "https://www.resultsense.com/news/2026-05-21-jack-clark-anthropic-ai-nobel-prize-prediction/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Thu-Fri May 21-22 · primary · carried",
+      "curve_dimensions": [
+        "editorial substrate",
+        "AI-doing-science",
+        "embodied deployment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "cnbc-spacex-ipo-live",
+      "title": "SpaceX (SPCX) IPO: Live updates",
+      "publisher": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Wed May 20 to weekend updates · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "tradingkey-spacex-roadshow",
+      "title": "SpaceX Roadshow as Early as June, OpenAI and Anthropic IPOs in Second Half",
+      "publisher": "TradingKey",
+      "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/261764312-spacex-openai-anthropic-ipo-musk-ai-valuation-retail-investors-tradingkey",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May · desk analysis · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "fortune-spacex-files",
+      "title": "Blast Off: SpaceX finally files IPO prospectus",
+      "publisher": "Fortune",
+      "url": "https://fortune.com/2026/05/20/spacex-finally-files-ipo-prospectus-reveals-revenue-is-up-but-losses-are-too/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Wed May 20 · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "cnbc-openai-ipo-filing",
+      "title": "OpenAI to confidentially file for IPO as soon as Friday (carried)",
+      "publisher": "CNBC",
+      "url": "https://www.cnbc.com/2026/05/20/openai-ipo-filing.html",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May 22 · primary · carried",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "ramp-ai-index-may-2026",
+      "title": "Ramp May 2026 AI Index — Anthropic beats OpenAI on business adoption",
+      "publisher": "Ramp",
+      "url": "https://ramp.com/leading-indicators/ai-index-may-2026",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May 13 · primary · week-anchor",
+      "curve_dimensions": [
+        "enterprise adoption"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "figure-day9-final-broadcast",
+      "title": "Figure F.03 DAY 9 LIVESTREAM — Final Broadcast (YouTube)",
+      "publisher": "YouTube / Figure",
+      "url": "https://www.youtube.com/watch?v=DL0C8irAWKo",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Sat-Sun May 23-24 · livestream archive · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "oodaloop-figure-88000",
+      "title": "Figure AI humanoid robots sort 88,000 packages in 72 hours",
+      "publisher": "OODA Loop",
+      "url": "https://oodaloop.com/briefs/technology/figure-ais-humanoid-robots-sort-88000-packages-in-72-hours-during-nonstop-livestream/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May · primary · carried",
+      "curve_dimensions": [
+        "embodied deployment"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "arena-leaderboard-changelog",
+      "title": "LMArena Leaderboard Changelog",
+      "publisher": "Arena (LMArena)",
+      "url": "https://arena.ai/blog/leaderboard-changelog/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Live · rolling-state",
+      "curve_dimensions": [
+        "capability SOTA",
+        "frontier release velocity"
+      ],
+      "verification_status": "rolling-state"
+    },
+    {
+      "id": "wavespeed-gemini-35-pro-june",
+      "title": "Gemini 3.5 Pro coming next month",
+      "publisher": "WaveSpeed",
+      "url": "https://wavespeed.ai/blog/posts/gemini-3-5-pro-coming-next-month/",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "May · carried",
+      "curve_dimensions": [
+        "frontier release velocity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "cursor-composer-25",
+      "title": "Cursor Composer 2.5",
+      "publisher": "Cursor",
+      "url": "https://cursor.com/blog/composer-2-5",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "decoder-composer-25",
+      "title": "Composer 2.5 matches Opus 4.7 at 1/10 cost (carried)",
+      "publisher": "the-decoder",
+      "url": "https://the-decoder.com/cursors-composer-2-5-matches-opus-4-7-and-gpt-5-5-benchmarks-at-a-fraction-of-the-cost/",
+      "type": "analysis",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "carried",
+      "curve_dimensions": [
+        "open-frontier proximity"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "metr-yaml",
+      "title": "METR Time Horizons (yaml)",
+      "publisher": "METR",
+      "url": "https://metr.org/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "rolling-state"
+    },
+    {
+      "id": "metr-time-horizons",
+      "title": "METR Time Horizons benchmark",
+      "publisher": "METR",
+      "url": "https://metr.org/blog/time-horizons",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Live",
+      "curve_dimensions": [
+        "autonomy horizon"
+      ],
+      "verification_status": "rolling-state"
+    },
+    {
+      "id": "metr-wikipedia",
+      "title": "METR — Wikipedia",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/METR",
+      "type": "aggregator",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "As-of summary",
+      "curve_dimensions": [
+        "autonomy horizon",
+        "capability SOTA"
+      ],
+      "verification_status": "verified",
+      "notes": "As of May 9 2026: best model Claude Mythos, 50 percent horizon at-least-16h, 80 percent horizon 3h6m. Post-2023 doubling 130.8 days."
+    },
+    {
+      "id": "time-nih-nature-medicine",
+      "title": "NIH AI Uncovers 3 Repurposed Drugs (carried)",
+      "publisher": "Time News",
+      "url": "https://time.news/nih-ai-uncovers-3-repurposed-drugs-for-alzheimers-parkinsons-in-18-months/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Fri May 22 · primary · carried",
+      "curve_dimensions": [
+        "AI-doing-science"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "ai2027-pdf",
+      "title": "AI 2027 scenario",
+      "publisher": "ai-2027.com",
+      "url": "https://ai-2027.com/",
+      "type": "primary",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Live",
+      "curve_dimensions": [
+        "scenario"
+      ],
+      "verification_status": "verified"
+    },
+    {
+      "id": "x-jackclarksf-oxford-thread",
+      "title": "@jackclarkSF — no walkback thread on Oxford talk (carried)",
+      "publisher": "X / @jackclarkSF",
+      "url": "https://x.com/jackclarkSF",
+      "type": "tape",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Tue · tape · live monitor",
+      "curve_dimensions": [
+        "editorial substrate"
+      ],
+      "verification_status": "verified",
+      "notes": "Account-level handle; no walkback observed as of Tue AM."
+    },
+    {
+      "id": "reddit-singularity-anthropic-close-window",
+      "title": "r/singularity — Anthropic close-window + 50B run-rate discussion",
+      "publisher": "Reddit / r/singularity",
+      "url": "https://www.reddit.com/r/singularity/",
+      "type": "tape",
+      "fetched_at": "2026-05-26T07:35:00-04:00",
+      "freshness": "Mon-Tue · tape",
+      "curve_dimensions": [
+        "capital substrate"
+      ],
+      "verification_status": "verified",
+      "notes": "Holiday-weekend reaction thread to the Bloomberg Friday-evening update and the >50B annualized disclosure."
+    },
+    {
+      "id": "x-anthropic-series-h",
+      "title": "We've raised $65B in Series H at $965B post-money (official)",
+      "publisher": "Anthropic (X)",
+      "url": "https://x.com/AnthropicAI/status/2060061347522433422",
+      "type": "official-post",
+      "fetched_at": "2026-05-28T15:42:07-04:00",
+      "freshness": "May 28 · official post",
+      "curve_dimensions": [
+        "capital substrate",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": "Official Anthropic post announcing $65B Series H at $965B post-money."
+    },
+    {
+      "id": "reuters-anthropic-series-h",
+      "title": "Anthropic raises $65B in Series H at $965B post-money valuation",
+      "publisher": "Reuters via MarketScreener",
+      "url": "https://www.marketscreener.com/news/anthropic-raises-65-billion-now-valued-at-965-billion-ce7f5ddadf80f127",
+      "type": "primary",
+      "fetched_at": "2026-05-28T15:42:07-04:00",
+      "freshness": "May 28 · Reuters wire",
+      "curve_dimensions": [
+        "capital substrate",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": "Reuters wire mirror: $65B Series H, $965B post-money; run-rate revenue crossed $47B earlier this month."
+    },
+    {
+      "id": "ap-anthropic-funding-opus48",
+      "title": "Anthropic vaults to a $965B valuation as Claude demand surges",
+      "publisher": "AP News",
+      "url": "https://apnews.com/article/86c432fa375548fd4f111f8164d6ffc1",
+      "type": "primary",
+      "fetched_at": "2026-05-28T15:42:07-04:00",
+      "freshness": "May 28 · AP",
+      "curve_dimensions": [
+        "capital substrate",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": "AP coverage of funding + run-rate revenue; mentions Opus 4.8 launch."
+    },
+    {
+      "id": "anthropic-opus-48-release",
+      "title": "Introducing Claude Opus 4.8",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "type": "lab_blog",
+      "fetched_at": "2026-05-28T15:42:07-04:00",
+      "freshness": "May 28 · lab blog",
+      "curve_dimensions": [
+        "capability SOTA",
+        "frontier release velocity"
+      ],
+      "verification_status": "verified",
+      "notes": "Official release post for Opus 4.8 (coding/agentic), effort control, and dynamic workflows pointer."
+    },
+    {
+      "id": "claude-dynamic-workflows",
+      "title": "Introducing dynamic workflows in Claude Code",
+      "publisher": "Claude (Anthropic)",
+      "url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+      "type": "lab_blog",
+      "fetched_at": "2026-05-28T15:42:07-04:00",
+      "freshness": "May 28 · product blog",
+      "curve_dimensions": [
+        "frontier release velocity",
+        "enterprise adoption"
+      ],
+      "verification_status": "verified",
+      "notes": "Dynamic workflows research preview: workflow creation + orchestration for larger codebase-scale tasks."
+    },
+    {
+      "id": "reddit-claudeai-opus48",
+      "title": "Reddit discussion: Introducing Claude Opus 4.8",
+      "publisher": "Reddit (r/ClaudeAI)",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1tq99mu/introducing_claude_opus_48/",
+      "type": "reddit",
+      "fetched_at": "2026-05-28T15:42:07-04:00",
+      "freshness": "May 28 · community",
+      "curve_dimensions": [
+        "media discussion"
+      ],
+      "verification_status": "verified",
+      "notes": "Discussion-layer signal around Opus 4.8 release + dynamic workflows."
+    }
+  ],
+  "named_tape": {
+    "section_title": "Named Tape",
+    "section_kicker": "Insider voices · post-Memorial-Day: the round can close this week",
+    "items": [
+      {
+        "handle": "Anthropic (official) + wire",
+        "role": "Series H print + Opus 4.8 ship",
+        "claim": "Anthropic announces $65B Series H at $965B post-money and says run-rate revenue crossed $47B earlier this month. Same day: Claude Opus 4.8 ships with effort control and a dynamic workflows research preview inside Claude Code.",
+        "cross_lab": "May 26 was close-window. May 28 is print + product. Capital and capability are arriving on the same clock edge — the infrastructure is getting poured while the flagship refresh is still warm.",
+        "evidence_url": "https://www.marketscreener.com/news/anthropic-raises-65-billion-now-valued-at-965-billion-ce7f5ddadf80f127",
+        "freshness": "May 28 · official + wire"
+      },
+      {
+        "handle": "Polymarket",
+        "role": "GPT-5.6 release-by-June-30 market",
+        "claim": "89 percent probability for release by June 30 as of May 25 check. 125,348 traded on the market to date. The June 15-21 window holds the highest implied probability bucket. Mid-June leading window in trader sentiment.",
+        "cross_lab": "Tradeable line behind the Codex backend canary leak. Combined with Tokyo CwC June 10 (Sonnet 4.8 source-map-leak window) and Sundar I/O next-month for Gemini 3.5 Pro, the June pipe goes from rumored to priced.",
+        "evidence_url": "https://polymarket.com/event/gpt-5pt6-released-by",
+        "freshness": "Live · primary tradeable line"
+      },
+      {
+        "handle": "Alibaba Cloud Summit Hangzhou",
+        "role": "Qwen 3.7 Max launch + benchmark cells",
+        "claim": "Artificial Analysis Intelligence Index 56.6 = 5th overall and highest-ranked Chinese model. 4.8 points above Qwen 3.6 Max Preview. Terminal-Bench 2.0-Terminus 69.7 percent beats Opus 4.6 Max 65.4 — first Chinese model to win a coding-tier benchmark cell against Anthropic. GPQA Diamond 92.4. HMMT 2026 February 97.1. API-only at launch; open-weight variant historical pattern.",
+        "cross_lab": "Open-and-Chinese frontier proximity column +2 inside a single Hangzhou keynote. The Code with Claude framing — Anthropic owns coding — now has a Hangzhou counter-argument with cells attached.",
+        "evidence_url": "https://officechai.com/ai/qwen-3-7-max-benchmarks/",
+        "freshness": "May 20 launch · primary"
+      },
+      {
+        "handle": "claude.com / Tokyo CwC agenda",
+        "role": "Code w/ Claude Tokyo dates corrected",
+        "claim": "Tokyo Code with Claude: June 10 main keynote + workshops + breakouts; June 11 extended developer day for independent developers and early-stage founders. Both livestreamed. Earlier spine carry of June 5-6 was incorrect and is corrected this fire. Sonnet 4.8 source-map-leak window now narrows to June 10 product keynote.",
+        "cross_lab": "Tokyo CwC June 10 + SPCX June 12 land 48 hours apart. The buy-side narrative for the second half of June prices both events simultaneously.",
+        "evidence_url": "https://claude.com/code-with-claude/tokyo",
+        "freshness": "Agenda surfaced · primary"
+      },
+      {
+        "handle": "Jack Clark (Anthropic) via Cosmos Lecture",
+        "role": "Recursive-self-improvement detail surfaces",
+        "claim": "60 percent+ probability that by end of 2028, an AI system can be told to build a better version of itself and simply does so. Non-zero chance of killing everyone repeated. Cosmos Institute blog amplification of the Oxford Institute for Ethics in AI keynote. No anthropic.com walkback or counter-post as of Tuesday morning.",
+        "cross_lab": "Memorial Day editorial substrate framing gets the recursive-self-improvement timeline made tradeable. If Sonnet 4.8 ships at Tokyo CwC June 10 with any automated-research-assistant deployment surface, first-resolution evidence for the Clark prediction set collects inside three weeks of delivery.",
+        "evidence_url": "https://letsdatascience.com/blog/anthropic-jack-clark-60-percent-ai-builds-successor-2028",
+        "freshness": "Weekend cycle · analysis"
+      }
+    ],
+    "handle_list": [
+      "@jackclarkSF",
+      "@AnthropicAI",
+      "@sama",
+      "@OpenAI",
+      "@kimmonismus",
+      "@apples_jimmy",
+      "@testingcatalog",
+      "@adcock_brett",
+      "@karpathy",
+      "@OfficialLoganK",
+      "@simonw",
+      "@Alibaba_Qwen",
+      "@TechCrunch",
+      "@business"
+    ]
+  }
+}

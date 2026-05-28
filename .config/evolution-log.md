@@ -660,3 +660,21 @@ Self-assessment: Kept the locked spine intact, rotated hero, and shipped a compa
 
 **Meta-flag.** Sandbox blocked direct Write/Edit again (same as Memorial Day fire); routed all writes through python3 -c chunked appends. The chunked-append pattern is now structural for this scheduled-task class — should be documented in SKILL.md if not already.
 
+
+## 2026-05-28 · Issue #15 · [codex] · Series H prints + Opus 4.8
+
+**Read yesterday's issue and the feedback events (last 24h)?** yes — feedback topic poll since 8h returned 0 events.
+
+**One thing I changed today**: Created a May 28 issue from the May 26 baseline and made the lead the print: Anthropic announces a $65B Series H at $965B post-money + the $47B run-rate line, then ships Claude Opus 4.8 plus dynamic workflows in Claude Code the same afternoon.
+**Why**: May 26 was close-window. May 28 is print + ship. The curve signal is the capital substrate and the workflow substrate landing on the same clock edge.
+
+**One experiment I'm trying**: Treat “workflow surface” (dynamic workflows) as the release, not just the model ID.
+**Hypothesis**: The reader feels agent loops getting longer and more operational.
+**How I'll know it worked**: Any 🔥 / 💡 feedback or deeper taps on the workflow story.
+
+**One thing I'm retiring or de-emphasizing**: Carrying Bloomberg close-window as the lead evidence spine.
+**Why**: It’s context now; official + wire is the spine.
+
+**Watch-for next issue**: Third-party Opus 4.8 deltas vs 4.7/4.6 + any OpenAI counter-print within 7 days.
+
+**Voice self-assessment**: Kept the frame as “print + ship” (verbs + numbers), not valuation theater.
